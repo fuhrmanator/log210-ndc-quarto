@@ -1,0 +1,199 @@
+@startuml 
+skinparam shadowing false
+skinparam BackgroundColor hidden
+skinparam DefaultTextAlignment center
+skinparam NoteTextAlignment left
+start 
+repeat 
+:Revoir l'opération système; 
+note right: ex. ""**créerNouvelleVente()**""
+#ddffdd:Déterminer le contrôleur;
+note right: appliquer **GRASP Contrôleur**\n(Chapitre F16.13/A17.13) 
+:Rappeler le contrat d'opération; 
+note right: les **postconditions**, ex.,\n -Une instance <i>v</i> de Vente a été créée\n -<i>v</i> a été associée au Registre\n -Des attributs de <i>v</i> ont été initialisés 
+repeat
+#ffdddd:Concevoir (et raffiner) un diagramme d'interaction
+pour l'opération système, **satisfaisant toutes**
+**les postconditions** du contrat d'opération et
+**retournant l'information selon le message de**
+**retour** du DSS, le cas échéant;
+note right
+appliquer **GRASP Créateur**
+et **Expert,** et éventuellement
+**Faible Couplage et**
+**Forte Cohésion**.
+Chapitre F16.8/A17.8
+end note
+repeat while (reste des postconditions insatisfaites\nou infos pas encore retournées) 
+repeat while (reste des opérations système) 
+stop
+legend top
+Note: Un solution détaillée est faite pour chaque opération système. 
+Donc, il faut utiliser le DSS, les contrats d'opération, le MDD et les
+principes GRASP pour ce travail.
+endlegend
+@enduml
+
+@startuml Soufflés au chocolat
+skinparam style strictuml
+|Chef|
+start
+fork
+:Préparer four;
+:Préparer ramequins;
+:Préparer chocolat;
+fork again
+|Sous-chef|
+:Séparer œufs;
+:Blancs]
+:Jaunes]
+|Chef|
+end fork
+fork
+:Faire chauffer le lait,
+verser sur le chocolat;
+:Attendre 2 minutes;
+:Remuer doucement,
+incorporer jaunes d'œufs;
+fork again
+|Sous-chef|
+:Fouetter blancs d'œufs
+(pics mous, ajouter sucre, 
+pics fermes);
+|Chef|
+end fork
+:Incorporer meringue
+et chocolat;
+:Verser dans
+ramequins;
+:Cuire au four
+20 minutes;
+stop
+@enduml
+
+Faire un diagramme d'activités pour la recette suivante. Un sous-chef peut aider avec les étapes 4 et 8 pour que la recette se prépare plus rapidement.
+
+1. Préparer four
+2. Préparer ramequins
+3. Préparer chocolat
+4. Séparer œufs (blanc, jaunes)
+5. Faire chauffer lait, verser sur le chocolat
+6. Attendre 2 minutes
+7. Remuer doucement, incorporer jaunes d'œufs
+8. Fouetter blancs d'œufs pour faire meringue
+9. Incorporer meringuer et chocolat
+10. Verser dans les ramequins
+11. Cuire au four 20 minutes
+
+Placer la grille au centre du four. Préchauffer le four à 190 °C (375 °F). Beurrer et saupoudrer de sucre le fond et les parois de 6 à 8 ramequins droits de 250 ml (1 tasse). Réfrigérer jusqu'au moment de les cuire.
+Dans un grand bol, placer le chocolat. Réserver.
+Dans une petite casserole hors du feu, délayer la fécule dans le lait à l'aide d'un fouet. Porter à ébullition en fouettant et laisser mijoter 30 secondes ou jusqu'à ce que la préparation ait épaissi. Verser sur le chocolat et laisser reposer 2 minutes.
+Remuer doucement jusqu'à ce que la préparation soit homogène. À l'aide d'une spatule, incorporer les jaunes d'œufs en remuant. Réserver.
+Dans un autre bol, fouetter les blancs d'œufs et la crème de tartre au batteur électrique jusqu'à l'obtention de pics mous. Ajouter le sucre graduellement en fouettant jusqu'à l'obtention de pics fermes.
+Incorporer le tiers de la meringue dans le mélange de chocolat pour le détendre. Ajouter la meringue en pliant délicatement à l'aide d'un fouet, en deux fois, en gardant le maximum le volume (voir note). Répartir la préparation dans les ramequins jusqu'à ras bord. Passer le bout d'un doigt tout le tour du ramequin afin de créer un petit sillon entre la préparation et la paroi. Nettoyer la bordure. Déposer les ramequins sur une plaque de cuisson.
+Cuire au four 20 minutes ou jusqu'à ce que les soufflés dépassent d'au moins 2,5 cm (1 po) du ramequin. Sortir du four et servir immédiatement.
+
+@startuml Apple iTunes
+
+left to right direction
+node "Apple Web Server" <<device>>#PaleTurquoise {
+    node iTunes as iTW <<website>>#LightSalmon {
+        artifact iTuneseSetup.exe <<application>>
+    }
+    node "iTunes Store" as iTS <<website>>#LightSalmon {
+        rectangle "Media Library"
+    }
+}
+'iTW -down- iTS
+node "Home Computer" as HC <<device>>#LightSalmon {
+    node " " as wb <<web browser>>#LightSalmon
+    rectangle iTunes as iT <<application>>#red
+    rectangle "Media Library" as ML1 #LimeGreen
+}
+node "iPhone/iPad/etc." as MD <<mobile device>>#LightSalmon {
+    node "iOS" as MDOS <<OS>>#LightSalmon
+    rectangle "Media Library" as ML2 #LimeGreen
+}
+note as N1
+Media libraries are
+synchronized
+between devices by
+iTunes
+end note
+N1 .. ML1
+N1 .. ML2
+' HC *-- ML1
+' HC *-l- wb
+HC -- MD : USB
+'iT .u.> HC
+iT -- iTS : <<protocol>>\niTunes Store Protocol
+' MD *-- MDOS
+' MD *-- ML2
+wb -- iTW : <<protocol>>\nHTTP
+MDOS -- iTS : <<wireless protocol>>\niTunes Store Protocol
+@enduml
+
+@startuml Composants UML Figure 31.2
+skinparam style strictuml
+skinparam BackgroundColor transparent
+skinparam componentStyle uml2
+left to right direction
+rectangle NextGen <<system>>
+rectangle BD <<component>>
+NextGen -(0- "JMS" [MessagingService]
+() SQL
+NextGen ..> SQL
+SQL -- BD
+'BD -l- SQL
+BD -[hidden]r- MessagingService
+note as N1
+Autre notation
+pour un
+composant
+end note
+MessagingService .. N1 : ""
+@enduml
+
+@startuml
+skinparam backgroundColor transparent
+
+sprite $rake [16x16/8] {
+0000000000000000
+0000000jj0000000
+0000000jj0000000
+0005555jj5555000
+000jjeejjeejj000
+000jj00jj00jj000
+000jj00jj00jj000
+0000000000000000
+}
+
+start
+note: See 3.3 of paper
+fork
+:Identify assertion primitives <$rake>;
+fork again
+:Identify helper methods <$rake>;
+end fork
+:Instrument call site <$rake>;
+:Execute test <$rake>;
+:Generate report;
+stop
+@enduml
+
+@startuml diagram name
+partition "action IdentifyAssertionPrimitives" {
+    start
+    if (Pharo?) then (yes)
+    :Activity 1;
+    :Activity 2;
+    elseif (Python?) then (yes)
+    :Activity 3;
+    :Activity 4;
+    else (Java)
+    :Activity 5;
+    endif
+    :Here's an activity;
+    stop
+}
+@enduml

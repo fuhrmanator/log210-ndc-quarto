@@ -1,0 +1,5 @@
+# Préface {.unnumbered}
+
+Ce manuel a été produit par le logiciel Quarto.
+
+Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.

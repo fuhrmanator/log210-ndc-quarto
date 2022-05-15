@@ -1,0 +1,88 @@
+project:
+  type: book
+  # language: _language.yml
+
+lang: fr
+
+book:
+  title: "Analyse et conception de logiciels"
+  author: 
+    - "Christopher Fuhrman"
+    - "Yvan Ross"
+  subtitle: "![nuage de mots](images/LOG210wordle_ordre_alph.png){width=70%}"
+  date: "2022-05-06"
+  chapters:
+    - index.qmd
+    - AnalyseConception.qmd
+    - Besoins.qmd
+    - MDD.qmd
+    - references.qmd
+  # repo-actions: [source, issue]
+
+bibliography: references.bib
+
+
+format:
+  html:
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            rel="stylesheet"/>
+    # include-in-header:
+    #   - font-awesome.html
+    # https://quarto.org/docs/output-formats/html-themes.html#overview
+    # theme: cosmo
+    # needed for inline plantuml/graphviz figures
+    # self-contained: true
+    link-external-icon: true
+    
+
+  pdf:
+    # has to be latexmk for .plantuml plugin to work (not sure why, see )
+    pdf-engine: latexmk
+    documentclass: scrbook
+    lof: true
+    lot: true
+    geometry:
+      - top=30mm
+      - left=20mm
+      - heightrounded
+    fontfamily: libertinus
+    fontfamilyoptions: 
+      - osf
+      - p
+      - tt=false
+    fontsize: 11pt
+    monofont: libertinus-mono
+    colorlinks: true
+    header-includes: 
+    # - \input{glyphtounicode}
+    # - \pdfgentounicode=1
+    # - \usepackage[style=french]{csquotes}
+    # - \usepackage{fontawesome5}
+    # - \usepackage{fontawesome}
+    # - \usepackage{tcolorbox}
+    # - \newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
+    # - \renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
+    # - \usepackage{longtable,booktabs}
+    # Use courrier for monospace? https://tex.stackexchange.com/a/142319/17868
+    # - \usepackage{courier}
+    # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
+    - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
+    - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
+    # # Float control
+    # - \usepackage{float}
+    # - \floatplacement{figure}{htbp}
+    # # Allow changing font size of code blocks, using \small right before the code fence, for example 
+    # # https://stackoverflow.com/a/47492620/1168342
+    # - \usepackage{setspace}
+
+# filters must be run in the proper order here
+filters:
+  - filters/diagram-generator.lua
+  - quarto
+
+javaPath: C:/Program Files/Java/jdk-17.0.2/bin/java.exe
+plantumlPath: G:/My Drive/PlantUML/plantuml.jar
+dotPath: C:/Program Files/Graphviz/bin/dot.exe
+
+log-level: debug

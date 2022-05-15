@@ -1,0 +1,5 @@
+@startuml
+skinparam style strictuml
+hide empty members
+C "9" o-[#orange,dashed]-o "8:10" D : Sharts
+@enduml
