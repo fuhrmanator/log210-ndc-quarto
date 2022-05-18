@@ -26,13 +26,13 @@ format:
   html:
     header-includes: |
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            rel="stylesheet"/>
+            rel="stylesheet" data-external="1"/>
     # include-in-header:
     #   - font-awesome.html
     # https://quarto.org/docs/output-formats/html-themes.html#overview
     # theme: cosmo
     # needed for inline plantuml/graphviz figures
-    # self-contained: true
+    self-contained: true
     link-external-icon: true
     
 
@@ -81,8 +81,14 @@ filters:
   - filters/diagram-generator.lua
   - quarto
 
-javaPath: C:/Program Files/Java/jdk-17.0.2/bin/java.exe
-plantumlPath: G:/My Drive/PlantUML/plantuml.jar
-dotPath: C:/Program Files/Graphviz/bin/dot.exe
+#
+# Note: If JAVA_HOME, PLANTUML and DOT system variables are correctly set 
+# (and the tools they point to are installed), 
+# you should not need the following meta data variables
+#
+
+# javaPath: C:/Program Files/Java/jdk1.8.0_331/bin/java.exe
+# plantumlPath: G:/My Drive/PlantUML/plantuml.jar
+# dotPath: C:/Program Files/Graphviz/bin/dot.exe
 
 log-level: debug
