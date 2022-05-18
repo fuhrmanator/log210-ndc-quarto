@@ -19,7 +19,7 @@ Il y a trois stratégies pour identifier les classes conceptuelles:
 
 Catégorie | Exemples
 :----------|:----------
-**Transactions métier**: Elles sont essentielles, commencez l'analyse par les transactions. | *Vente*, *Attaque*, *Réservation*, *Inscription*, *EmpruntVélo*
+**Transactions d'affaire**: Elles sont essentielles, commencez l'analyse par les transactions. | *Vente*, *Attaque*, *Réservation*, *Inscription*, *EmpruntVélo*
 **Lignes d'une transaction**: Éléments compris dans une transaction. |  *LigneArticles*, *ExemplaireLivre*, *GroupeCours*
 **Produit ou service lié à une transaction ou une ligne de transaction**: Pour quel concept sont faites des transactions?  |*Article*, *Vélo*, *Vol*, *Livre*, *Cours*
 **Où la transaction est-elle enregistrée?** | *Caisse*, *GrandLivre*, *ManifesteDeVol*
