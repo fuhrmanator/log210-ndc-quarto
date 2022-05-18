@@ -69,13 +69,15 @@ Voici des points importants:
 Pensez à la **mémorabilité** d'une association dans le contexte du logiciel à développer. Par exemple, considérez les associations de la @fig-MDD-jeu-de-risk:
   - Il existe une association entre `Joueur` et `Pays`, car il est important de savoir quel joueur contrôle quel pays dans le jeu de Risk.
   - Il n'y a pas d'association entre `JeuRisk` et `Attaque`, même si les attaques font partie du jeu. Il n'est pas essentiel de mémoriser l'historique de toutes les attaques réalisées dans le jeu.
-- Il y a des associations dérivées de la liste des associations courantes. Voir le tableau @Tableau_associations_courantes.
+- Il y a des associations dérivées de la liste des associations courantes. Voir le @tbl-associations-courantes.
 - En UML les associations sont représentées par des lignes entre classes.
   - Elles sont nommées (avec un verbe commençant par une lettre majuscule).
   - Des noms simples comme "A", "Utilise", "Possède", "Contient", etc. sont généralement des choix médiocres, car ils n'aident pas notre compréhension du domaine. Essayez de trouver des noms plus riches, si possible.
   - Une flèche (triangle) de "sens de lecture" optionnelle indique la direction dans laquelle lire l'association. Si la flèche est absente, on lit l'association de gauche à droite ou de haut en bas.
   - Les extrémités des associations ont une expression de la multiplicité indiquant une relation numérique entre les instances des classes.
-  Vous pouvez en trouver plusieurs exemples dans la figure @fig-MDD-jeu-de-risk.
+  Vous pouvez en trouver plusieurs exemples dans la @fig-MDD-jeu-de-risk.
+
+: Extrait du tableau 9.2 \faBook (liste d'associations courantes). {#tbl-associations-courantes}
 
 **Catégorie** | **Exemple**
 :----------|:----------
@@ -108,8 +110,6 @@ Pensez à la **mémorabilité** d'une association dans le contexte du logiciel �
 **A est voisin de B**| *Article -- Article* \
 *Case -- Case* \
 *Ville -- Ville*
-
-: Extrait du tableau 9.2 \faBook (liste d'associations courantes).{#Tableau_associations_courantes}
 
 ## Exemple de MDD pour le jeu de Risk
 
@@ -169,10 +169,24 @@ Joueur "1" -- "1,2,3" Dé : Jette >
 Les attributs dérivés sont expliqués en détail dans la section 9.16 \faBook. 
 Il s'agit des attributs qui sont calculés à partir d'autres informations reliées à la classe.
 Ils sont indiqués par le symbole **`/`** devant leur nom.
-L'exemple à la @MDD-attribut-derive s'applique à la règle du jeu de Risk spécifiant qu'un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé `/nbPaysOccupés` qui est calculé selon le nombre de Pays contrôlés par le joueur.
+L'exemple à la @fig-MDD-attribut-derive s'applique à la règle du jeu de Risk spécifiant qu'un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé `/nbPaysOccupés` qui est calculé selon le nombre de Pays contrôlés par le joueur.
 
+```{.plantuml #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé et sa valeur sera calculée selon le nombre de pays de l'association. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLB1QW8n4BtdAmOlsnRKUXKHYvHYArIwjZt7xEY6pKvaac2b-46zzm_yiSvQeM9123E4UNdlpKn68MgEgNOgL9RMcdKD8MuTIcHhpYeBRQeL-qI5ySupHDOKf8GKLGQnj07aQ2Wr5HksCIB1qbC4I_1kgV2ReB8_kWANEhdO84ZN24ziG_DaCX-hR5vYGF2nH0xWlAzWnQWFLFdR0rpLkXAJYL5qSPj9jYJDE8U5Q3BSJQVmcj-_v2VYqBkzlcGWw5KJwABB2LNmw1EJFXtDEUgZCWNaXkqwNYAReGo9mmdHwUmY9rJ1Q5b7JvMsGC1w7RTGOxreNXcdGsZCO6BuL03aQ-X3BgkZbLm7XpNr5oxXi4kBcTw6PsFIUlyL16Of3he7n53jZbmDv3_JJXqrMhqMjDkIEfsRrY-u3sDfXlVVOdAeHaY5_9aV)"}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+class Joueur {
+  nom : String
+  <color:blue>/nbPaysOccupés : int</color>
+}
+class Pays {
+  nom : String
+}
+Joueur "1" -- "1..*" Pays : Contrôle >
+@enduml
+```
 
-\newpage
 ## Classes de "description" et de catalogues
 
 Deux catégories de classes conceptuelles qui vont de pair sont les *descriptions d'entités* et les *catalogues* qui agrègent les descriptions.
@@ -185,12 +199,66 @@ Alors une classe Cours (qui joue le rôle de description) sert pour spécifier l
 - La suppression d'instances de "X" entraîne la perte de l'information qui doit être mémorisée, mais a été incorrectement associée à l'entité en question.
 - La classe de description réduit la duplication des informations.
 
-La @MDD-CoursGroupeCoursDescription présente une classe de description pour le contexte de cours et groupe-cours.
+La @fig-MDD-CoursGroupeCoursDescription présente une classe de description pour le contexte de cours et groupe-cours.
 
+```{.plantuml #fig-MDD-CoursGroupeCoursDescription caption="Cours joue le rôle de description d'entités (les groupes-cours)."}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+class "GroupeCours" as GC {
+  numéro : Entier
+  trimestre : Trimestre
+  ...
+}
+class "Cours" as C #ddffdd {
+  nom : Texte
+  nbCrédits : Entier
+  ...
+}
+class "Catalogue\nCours" as CP #ddffdd
+C "1" -- "*" GC : Décrit >
+C "1" -- "*" C : Est-préalable >
+CP "1" - "*" C : Répertorie >
+note bottom of C
+Classe de <<description>>. Une instance de Cours peut exister 
+indépendamment de l'existence d'un GroupeCours qu'elle décrit 
+(par exemple, avant qu'un cours soit donné la première fois).
+Elle réduit également la duplication des informations (le nom et 
+le nombre de crédits ne sont pas stockés dans chaque GroupeCours).
+end note
+@enduml
+```
 
 ::: {.callout-warning}
-Attention de ne pas faire l'erreur naïve d'utiliser une classe de description simplement pour "décrire" une autre classe. Voir la @MDD-ErreurDescription pour un exemple.
+Attention de ne pas faire l'erreur naïve d'utiliser une classe de description simplement pour "décrire" une autre classe. Voir la @fig-MDD-ErreurDescription pour un exemple.
 :::
+
+```{.plantuml #fig-MDD-ErreurDescription caption="Erreur fréquente en LOG210 - utiliser une classe de description sans justification."}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+class "Client" as GC {
+}
+class "Description\nClient" as C #ffdddd {
+  nom : Texte
+  identifiant : IDClient
+  ...
+}
+class "Catalogue\nClients" as CP #ffdddd
+C "1" -- "1" GC : Décrit >
+CP "1" -r- "*" C : Répertorie >
+note bottom of C
+😩 Mauvaise classe de <<description>>. Il n'est pas nécessaire 
+d'avoir cette classe, car les clients sont décrits dans leur 
+propre classe Client. Si un client n'existe pas, il n'a pas de
+sens dans le MDD. Les informations ne seraient pas dupliquées 
+s'il n'y avait pas cette classe (chaque client a un nom et un
+identifiant unique).
+end note
+@enduml
+```
 
 ## Classes d'association
 
@@ -204,7 +272,7 @@ Il pourrait être utile d'avoir une classe d'association dans un MDD si:
 - la durée de vie des instances de la classe d'association dépend de l'association;
 - il y a une association *N*-*N* entre deux concepts et des informations liées a l'association elle-même.
 
-Dans l'exemple à la @MDD-classe-association, voici pourquoi il y a une classe d'association Occupation. 
+Dans l'exemple à la @fig-MDD-classe-association, voici pourquoi il y a une classe d'association Occupation. 
 Lorsqu'un Joueur contrôle un Pays, il doit y avoir des armées dans ce dernier. 
 Le MDD pourrait avoir un attribut `nbRégiments` dans la classe Pays. 
 Cependant, l'attribut `nbRégiments` est lié à l'association entre le Joueur et le Pays qu'il contrôle, alors on décide d'utiliser une classe d'association. 
@@ -215,6 +283,24 @@ Alors, la durée de vie de cette instance dépend de l'association.
 
 Voir le livre obligatoire pour plus d'exemples.
 
+```{.plantuml #fig-MDD-classe-association caption="Classe d'association dans le MDD Jeu de Risk. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VPBFIWD13CRl0xv3wALLRB5N3r8f8bL1wVhddCwckyFEP4fc5YtY0tdt3NmnirPm4ImCayFtI_9bChEKKN8Rl4cDumqA1aXvwqblSRPJ3dhI2crJIMovjD57WIp8IINYV626a6kNG0z2ZLm-YykP6DQHCpY69yTbV4uA_XOiQOsjpnt260YknQKkPt4_L-w-faGGSqsImCVOG2M4tyMAnqiO1MpKQ2kadMaxrEXO1_AUIkqgS7vp0m_5nRBejOVfoM5_fByE4bRTnVjzBhY1gzWAez_BlJIsXCAAs-Izt1tfKqdg6-i_OPQMJBAeUvcQsfK453Pv2u72IjECzPXIPuXQWLS3m370AHIwGwxCsuz-XzlqltfhRRl1x2BlcDNoyxroGLUR57QSbVpfC9WEO3pMC9aS3NPbJs6kiyZdXreyCwCTUFoj7S9aqgjkPiIb_gil)"}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+class Joueur {
+  nom : String
+}
+class Pays {
+  nom : String
+}
+class Occupation {
+  nbRégiments : int
+}
+Joueur "1" -- "1..*" Pays : Contrôle >
+(Joueur, Pays) .. Occupation
+@enduml
+```
 
 ## Affinement du MDD
 
@@ -224,13 +310,13 @@ Bien que la matière soit présentée plus tard dans le livre, ce sont des chose
 
 Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus haut:
 
-- Composition, par exemple, la classe Continent qui groupe les Pays dans la @MDD-jeu-de-risk. Larman propose d'utiliser la composition lorsque:
+- Composition, par exemple, la classe Continent qui groupe les Pays dans la @fig-MDD-jeu-de-risk. Larman propose d'utiliser la composition lorsque:
   - la durée de vie du composant est limitée à celle du composite (lorsqu'un objet Continent est instancié ça doit grouper des instances de Pays pour être cohérent), il existe une dépendance création-suppression de la partie avec le tout (ça ne fait pas de sens de supprimer un objet Pays d'une instance de Continent dans le jeu de Risk).
   - il existe un assemblage logique ou physique évident entre le tout est les parties (on ne peut construire un Continent sans les Pays).
   - certaines propriétés du composite, comme son emplacement, s'étendent aux composants.
   - les opérations que l'on peut appliquer au composite, telles que destruction, déplacement et enregistrement, se propagent aux composants.
 - Généralisation/spécialisation, voir le livre pour les exemples et les directives, notamment la règle des 100% (conformité à la définition) et la règle "est-un" (appartenance à l'ensemble).
-- Attribut dérivé, par exemple, `/nbPaysOccupés` dans la classe Joueur est un attribut dérivé de l'association entre Joueur et Pays (@MDD-attribut-derive).
+- Attribut dérivé, par exemple, `/nbPaysOccupés` dans la classe Joueur est un attribut dérivé de l'association entre Joueur et Pays (@fig-MDD-attribut-derive).
 - Hiérarchies dans un MDD et héritage dans l'implémentation
 - Noms de rôles
 - Organisation des classes conceptuelles en Packages (surtout lorsque le MDD contient un nombre important de classes conceptuelles)
