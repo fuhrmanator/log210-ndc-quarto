@@ -2,7 +2,7 @@
 
 Voici le descriptif du cours, selon le plan de cours:
 
-::: {.callout-note icon="false" appearance="minimal"}
+::: {.callout-note icon="false" appearance="simple"}
 À la suite de ce cours, l'étudiant sera en mesure:
 
 - de maîtriser et appliquer des patrons de conception logicielle;

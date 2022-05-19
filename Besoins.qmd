@@ -4,14 +4,14 @@ Un exemple d'une exigence d'un système pourrait être qu'il doit afficher le no
 Il s'agit d'une exigence de fonctionnalité.
 Si cette information doit être actualisée toutes les 2 secondes, alors il s'agit d'une exigence sur *la qualité de la performance* du système.
 Pour les qualités d'un système comme la performance, on peut les appeler *exigences non fonctionnelles*, car elles ne sont pas les fonctionnalités.
-Il y a beaucoup d'exemples d'exigences non fonctionnelles, par exemple sur [Wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement#Examples)\ \faWikipediaW.
+Il y a beaucoup d'exemples d'exigences non fonctionnelles, par exemple sur [Wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement#Examples)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
 
 ![Besoins non fonctionnels?](images/RamasserBesoins.jpg){#fig-besoins width="60%"}
 
 ## FURPS+
 
-Le chapitre 5\ \faBook\ traite le sujet des besoins et leur évolution.
-FURPS+ est un modèle (avec un acronyme) pour classer les exigences (besoins) d'un logiciel. Voici un résumé, mais la section 5.4\ \faBook\ explique en détail:
+Le chapitre 5\ \faBook<i class="fa-solid fa-book"></i>\ traite le sujet des besoins et leur évolution.
+FURPS+ est un modèle (avec un acronyme) pour classer les exigences (besoins) d'un logiciel. Voici un résumé, mais la section 5.4\ \faBook<i class="fa-solid fa-book"></i>\ explique en détail:
 
 - **Fonctionnalité** (*Functionality*). Ce sont les exigences exprimées souvent par les cas d'utilisation, par exemple, *Traiter une vente*. La sécurité est aussi considérée dans ce volet.
 - **Aptitude à l'utilisation** (*Usability*). Convivialité - les facteurs humains du logiciel, par exemple le nombre de clics que ça prend pour réaliser une fonctionnalité, à quel point une interface est facile à comprendre par un utilisateur, etc.
