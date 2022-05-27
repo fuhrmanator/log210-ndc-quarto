@@ -23,6 +23,10 @@ bibliography: references.bib
 
 
 format:
+
+  epub: 
+    epub-cover-image: "images/LOG210wordle_ordre_alph.png"
+
   html:
     header-includes: |
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
