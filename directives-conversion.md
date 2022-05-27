@@ -1,9 +1,12 @@
 # Directives pour convertir [le manuel en pandoc](https://github.com/fuhrmanator/log210-notes-de-cours)
 
+Il vaut mieux avancer avec les petits pas (un chapitre à la fois).
+
 Pour un chapitre X.md dans https://github.com/fuhrmanator/log210-notes-de-cours/tree/master/src/chapters:
 
 1. Copier `X.md` dans la racine de ce projet, mais avec le nom `X.qmd`
-1. Pour une figure en PlantUML, il faut changer plusieurs lignes: 
+2. Ajouter `X.qmd` dans le fichier `_quarto.yml` à la section `chapters:` (dans le bon ordre).
+3. Pour une figure en PlantUML, il faut changer plusieurs lignes: 
    1. La caption doit avoir le "label" (étiquette) juste après `.plantuml` et avant `caption=`.
    1. Les étiquettes doivent commencer avec `fig-`.
    1. S'il y a une ligne `!include ../forme.pumlinclude` dans le diagramme PlantUML, elle doit être changée à `!include ecriture.pumlinclude` parce que ce fichier a été déplacé et renommé. **Ce changement peut se faire avec l'outil de Chercher et Remplacer dans VSCode.**
