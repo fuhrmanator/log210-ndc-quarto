@@ -1,6 +1,7 @@
 # Directives pour convertir [le manuel en pandoc](https://github.com/fuhrmanator/log210-notes-de-cours)
 
-Il vaut mieux avancer avec les petits pas (un chapitre à la fois).
+- Il vaut mieux avancer avec les petits pas (un chapitre à la fois).
+- Faire des PR pour les ajouts au repo
 
 Pour un chapitre X.md dans https://github.com/fuhrmanator/log210-notes-de-cours/tree/master/src/chapters:
 
