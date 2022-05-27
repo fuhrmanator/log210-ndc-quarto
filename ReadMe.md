@@ -9,3 +9,8 @@ Pour construire le livre:
 - installer Quarto (<https://quarto.org>)
 - installer l'extension Quarto dans VSCode
 - Quarto: Render Project (commande dans VSCode)
+  - Sinon, dans un terminal CMD.exe (Windows) dans le répertoire du projet:
+    ```
+    quarto render --preview pdf
+    ```
+    On peut remplacer `pdf` par `html` (pour la représentation web) ou `epub` pour une forme .epub
