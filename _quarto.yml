@@ -5,17 +5,25 @@ project:
 lang: fr
 
 book:
-  title: "Analyse et conception de logiciels"
+
+  #cover-image: images/LOG210wordle_ordre_alph.png
+  #subtitle: "![nuage de mots](images/LOG210wordle_ordre_alph.png){width=70%}"
+  title: "LOG210 Analyse et conception de logiciels"
+  
+  subtitle: "Notes de cours"
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
-  subtitle: "![nuage de mots](images/LOG210wordle_ordre_alph.png){width=70%}"
   date: "2022-05-06"
   chapters:
     - index.qmd
     - AnalyseConception.qmd
     - Besoins.qmd
+    - CasUtilisation.qmd
     - MDD.qmd
+    - DSS.qmd
+    - GRASP.qmd
+    - DetteTechnique.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
