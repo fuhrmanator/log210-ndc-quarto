@@ -22,6 +22,7 @@ book:
     - CasUtilisation.qmd
     - MDD.qmd
     - DSS.qmd
+    - GRASP.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
