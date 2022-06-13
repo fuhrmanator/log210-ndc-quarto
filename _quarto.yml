@@ -21,6 +21,7 @@ book:
     - Besoins.qmd
     - CasUtilisation.qmd
     - MDD.qmd
+    - DSS.qmd
     - references.qmd
   # repo-actions: [source, issue]
 

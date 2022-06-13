@@ -1,4 +1,4 @@
-  # Besoins (exigences)
+# Besoins (exigences)
 
 Un exemple d'une exigence d'un système pourrait être qu'il doit afficher le nombre d'utilisateurs dans un forum de discussion en ligne.
 Il s'agit d'une exigence de fonctionnalité.
