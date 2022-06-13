@@ -21,9 +21,6 @@ book:
     - Besoins.qmd
     - CasUtilisation.qmd
     - MDD.qmd
-    - DSS.qmd
-    - GRASP.qmd
-    - DetteTechnique.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
