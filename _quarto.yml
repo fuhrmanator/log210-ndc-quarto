@@ -23,6 +23,7 @@ book:
     - MDD.qmd
     - DSS.qmd
     - GRASP.qmd
+    - DetteTechnique.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
@@ -89,6 +90,7 @@ format:
 
 # filters must be run in the proper order here
 filters:
+  - filters/pandoc-quotes.lua
   - filters/diagram-generator.lua
   - quarto
 
