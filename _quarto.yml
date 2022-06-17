@@ -73,9 +73,9 @@ format:
     # - \usepackage{fontawesome5}
     # - \usepackage{fontawesome}
     # - \usepackage{tcolorbox}
+    - \usepackage{colortbl}
     # - \newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
     # - \renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
-    # - \usepackage{longtable,booktabs}
     # Use courrier for monospace? https://tex.stackexchange.com/a/142319/17868
     # - \usepackage{courier}
     # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
