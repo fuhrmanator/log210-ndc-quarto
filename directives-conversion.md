@@ -24,5 +24,11 @@ Pour un chapitre X.md dans https://github.com/fuhrmanator/log210-notes-de-cours/
    !include ecriture.pumlinclude
    ```
    Notez que si on ouble de changer ces choses, **la génération du document va geler**, car Quarto ne traite pas bien des erreurs de l'extension PlantUML. 
-1. Pour une figure avec une image (ex. `![nom](images/monImage.png)`) ou table, il faut changer les étiquettes aussi `fig-yyy` ou `tab-yyy`) 
+1. Pour une figure avec une image (ex. `![nom](images/monImage.png)`) ou table, il faut changer les étiquettes aussi `fig-yyy` ou `tbl-yyy`)
 1. Pour les références croisées `la figure \ref{label}`, il faut faire `la @fig-label` (ou `le @tab-label`). Notez que le mot `figure` ou `tableau` est dans le texte généré par Quarto dans le `@fig-yyy`).
+2. Il y a aussi `\nameref{...}` pour faire référence au **nom** d'une section, p. ex. "Spectre de la conception". Malheureusement, quarto ne supporte pas ça. 
+Élément | Étiquette
+:-------|:----------
+Figure  | `fig-`
+Tableau | `tbl-`
+Section | `sec-`
