@@ -19,12 +19,12 @@ Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonct
 C'est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes.
 Une fois que vous avez l'habitude à utiliser les GRASP, vous serez encore rapide avec votre développement, mais en plus votre design sera meilleur sur le plan de la maintenabilité.
 
-## Spectre de la conception {#SpectreDeLaConception}
+## Spectre de la conception {#sec-SpectreDeLaConception}
 
 Neal Ford [-@Ford2009] a [proposé](https://www.ibm.com/developerworks/library/j-eaed1/index.html) la notion d'effort pour la conception qu'il a nommée le "Spectre de la conception".
-La figure\ \ref{Spectre_conception} illustre le principe.
+La @fig-SpectreConception illustre le principe.
 
-```{.plantuml #fig_SpectreConception  caption="Spectre de la conception, adapté de Neal Ford. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV)" }
+```{.plantuml #fig-SpectreConception  caption="Spectre de la conception, adapté de Neal Ford. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV)" }
 @startuml
 !include ecriture.pumlinclude
 scale 1.2
@@ -68,7 +68,7 @@ Le seul but est de faire du code qui marche pour montrer une idée intéressante
 Au fait, dans certains contextes d'entreprise (par exemple une entreprise en démarrage qui a seulement six mois de financement), c'est une situation similaire.
 Si une solution de ["produit minimum viable" (MVP en anglais)](https://en.wikipedia.org/wiki/Minimum_viable_product)\ \faWikipediaW n'existe pas à la fin de la période de financement, l'entreprise n'existera plus, car il n'y aura pas une deuxième période de financement.
 Si la compagnie est financée pour une deuxième période, la conception du code pourrait avoir besoin de beaucoup de soins, car elle a été négligée.
-Cette négligence à la conception (pour la maintenabilité) est aussi nommée la \hyperref[DetteTechnique]{dette technique}.
+Cette négligence à la conception (pour la maintenabilité) est aussi nommée la [dette technique](#sec-DetteTechnique).
 
 À l'autre extrémité du spectre, c'est beaucoup d'effort dépensé sur la conception, que l'on nomme "Cascade pure".
 Dans le cycle de vie en cascade, on met un temps fixe, par exemple plusieurs mois, à étudier la conception.
@@ -87,7 +87,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 
 \newpage
 
-## Tableau des principes GRASP {#GRASPTable}
+## Tableau des principes GRASP {#tbl-GRASPTable}
 
 Voici un extrait du livre du cours, **UML 2 et les design patterns** de Craig Larman.
 
@@ -149,8 +149,8 @@ Voici un extrait du livre du cours, **UML 2 et les design patterns** de Craig La
 
 Les principes GRASP sont utilisés dans les réalisations de cas d'utilisation (RDCU). 
 On s'en sert pour annoter les décisions de conception, pour rendre explicites (documenter) les choix. 
-Voir la section \nameref{sec:RDCU} pour plus d'informations.
+Voir la section [Réalisations de cas d’utilisation (RDCU)](#sec-RDCU) pour plus d'informations.
 
 ## GRASP et Patterns GoF
 
-On peut voir les principes GRASP comme des généralisations (principes de base) des patterns GoF. Voir la section \nameref{sec:GRASP-GoF} pour plus d'informations.
+On peut voir les principes GRASP comme des généralisations (principes de base) des patterns GoF. Voir la section [Décortiquer les patterns GoF avec GRASP](#sec-GRASP-GoF) pour plus d'informations.
