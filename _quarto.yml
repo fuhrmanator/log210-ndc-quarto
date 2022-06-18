@@ -28,6 +28,7 @@ book:
     - DSS.qmd
     - GRASP.qmd
     - DetteTechnique.qmd
+    - Contrats.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
