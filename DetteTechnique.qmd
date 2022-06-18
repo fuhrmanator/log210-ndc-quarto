@@ -56,7 +56,7 @@ Fowler a également [abordé le sujet de la dette](https://martinfowler.com/blik
 > \   
 > La dette imprudente pourrait aussi être délibérée. Une équipe peut connaître les bonnes pratiques de conception, voire être capable de les mettre en pratique, mais décide finalement d'aller "à la va-vite" parce qu'elle pense qu'elle ne peut pas se permettre le temps nécessaire pour écrire du code propre.
 
-La dette peut être classifiée dans un quadrant comme dans la @tbl-DetteQuadrant proposé par Fowler. Selon lui, la dette dont Ward Cunningham a parlé dans sa vidéo peut être classifiée comme "prudente et involontaire". Fowler remarque que selon son expérience, la dette "imprudente et délibérée" est rarement rentable.
+La dette peut être classifiée dans un quadrant comme dans le @tbl-DetteQuadrant proposé par Fowler. Selon lui, la dette dont Ward Cunningham a parlé dans sa vidéo peut être classifiée comme "prudente et involontaire". Fowler remarque que selon son expérience, la dette "imprudente et délibérée" est rarement rentable.
 
 : Classification de la dette selon Fowler (2009) {#tbl-DetteQuadrant}
 
