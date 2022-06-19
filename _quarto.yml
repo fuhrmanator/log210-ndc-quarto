@@ -30,6 +30,7 @@ book:
     - DetteTechnique.qmd
     - Contrats.qmd
     - RDCU.qmd
+    - TDD.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
