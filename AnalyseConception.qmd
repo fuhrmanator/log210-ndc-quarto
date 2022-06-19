@@ -153,7 +153,7 @@ Elle se compose des parties du logiciel qui sont nécessairement des problèmes 
 N'importe quel logiciel qui tente de résoudre ces problèmes aura une manifestation de cette complexité dans son implémentation.
 Exemple: un logiciel qui aide à faire des déclarations de revenus aura une complexité inhérente due à la complexité des lois fiscales qui spécifient comment doit être préparée une déclaration.
 
-### Complexité circonstancielle (provenant des choix de conception) {#ComplexiteCirc}
+### Complexité circonstancielle (provenant des choix de conception) {#sec-ComplexiteCirc}
 
 Les choix que font les ingénieur.e.s dans un projet peuvent amener de la complexité circonstancielle.
 En tant qu'ingénieur.e.s, nous avons un devoir de contrôler cette forme de complexité, par exemple en prenant soin avec un choix de cadriciel Web ou d'architecture logicielle.

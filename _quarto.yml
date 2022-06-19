@@ -29,6 +29,7 @@ book:
     - GRASP.qmd
     - DetteTechnique.qmd
     - Contrats.qmd
+    - RDCU.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
