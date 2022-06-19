@@ -4,7 +4,7 @@ Craig Larman a proposé les GRASP pour faciliter la compréhension des forces es
 
 ## Exemple avec Adaptateur
 
-Le chapitre A26/F23\ \faBook\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (figure\ \ref{Fig23-1} tirée du livre de Larman, Figure A26.3/F23.3).
+Le chapitre A26/F23\ \faBook<i class="fa-solid fa-book"></i>\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (figure\ \ref{Fig23-1} tirée du livre de Larman, Figure A26.3/F23.3).
 
 ![Le pattern Adaptateur.](images/Fig23.1.png "Figure A26.1/F23.1 du livre de Larman"){#Fig23-1}
 

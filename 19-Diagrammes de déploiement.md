@@ -1,6 +1,6 @@
 # Diagrammes de déploiement et de composants
 
-Ce chapitre\ \faIcon{truck-loading} contient des informations sur les diagrammes de déploiement et de composants en UML. Les détails se trouvent dans le chapitre F31/A37\ \faBook.
+Ce chapitre\ \faIcon{truck-loading} contient des informations sur les diagrammes de déploiement et de composants en UML. Les détails se trouvent dans le chapitre F31/A37\ \faBook<i class="fa-solid fa-book"></i>.
 
 ## Diagrammes de déploiement
 

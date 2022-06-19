@@ -1,6 +1,6 @@
 # Contrats d'opération
 
-Les contrats d'opération sont le sujet du chapitre 11\ \faBook.
+Les contrats d'opération sont le sujet du chapitre 11\ \faBook<i class="fa-solid fa-book"></i>.
 Voici les points importants pour le cours:
 
 - On ne spécifie pas les préconditions dans les contrats.
@@ -63,7 +63,7 @@ Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du 
 - TODO: Handle the change of Occupation?
 
 <!-- Draw.io svg contient du texte en SVG 1.1 qui pose problème. Alors j'exporte manuellement en PDF avec l'outil draw.io sur le web. -->
-![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets)](images/MDD-Risk-contrats.export_as.advanced.drawio.pdf){#fig-MDD-risk-objets}
+![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets)](images/MDD-Risk-contrats.drawio.svg){#fig-MDD-risk-objets}
 
 ## Feuille de référence
 

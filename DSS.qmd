@@ -1,7 +1,7 @@
 # Diagrammes de séquence système (DSS)
 
 Un diagramme de séquence système (DSS) est un diagramme UML (diagramme de séquence) limité à un acteur (provenant du scénario d'un cas d'utilisation) et le Système.
-Les DSS sont expliqués en détail dans le chapitre 10\ \faBook, mais voici des points importants pour LOG210:
+Les DSS sont expliqués en détail dans le chapitre 10\ \faBook<i class="fa-solid fa-book"></i>, mais voici des points importants pour LOG210:
 
 - Le DSS a toujours un titre.
 - L'acteur est indiqué dans la notation par un bonhomme et est représenté comme une *instance* de la classe du bonhomme, comme `:Joueur` dans la @fig-dssattaquerunpays (le ":" signifie une instance).
@@ -126,7 +126,7 @@ Utilisez un autre DSS (ou plusieurs) ayant le nom des scénarios alternatifs si 
 Il n'est pas conseillé de passer des *objets du domaine* comme argument, puisque c'est la couche présentation qui invoque l'opération système.
 La couche présentation n'est pas censée manipuler directement les objets dans la couche domaine, sinon elle empiète sur les responsabilités de la couche domaine.
 
-Une solution pour réduire le nombre d'arguments sans utiliser un objet du domaine est d'appliquer un @Refactoring pour le *smell* nommé *Long Parameter List*, par exemple [Introduce Parameter Object](https://refactoring.com/catalog/introduceParameterObject.html).
+Une solution pour réduire le nombre d'arguments sans utiliser un objet du domaine est d'appliquer un [réusinage](#Refactoring) pour le *smell* nommé *Long Parameter List*, par exemple [Introduce Parameter Object](https://refactoring.com/catalog/introduceParameterObject.html).
 Notez que l'objet de paramètres que vous introduisez n'est pas un objet (classe) du domaine!
 La distinction est importante, car la logique d'affaires demeure dans la couche domaine.
 En TypeScript, une fonction peut être définie avec un objet de paramètre. Cet exemple montre même comment on peut "déstructurer" l'objet pour déclarer les variables utilisées dans la fonction:

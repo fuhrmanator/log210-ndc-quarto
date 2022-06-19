@@ -346,4 +346,4 @@ Il peut y avoir des concepts dans un domaine qui ne sont pas dans la base de don
 
 > *N'excluez donc pas une classe simplement parce que les spécifications n'indiquent pas un besoin évident de mémoriser les informations la concernant (un critère courant pour la modélisation des données quand on conçoit des bases de données relationnelles mais qui n'a pas cours en modélisation d'un domaine), ou parce que la classe conceptuelle ne possède pas d'attributs. Il est légal d'avoir une classe conceptuelle sans attribut, ou une classe conceptuelle qui joue un rôle exclusivement comportementale dans le domaine.*
 
-Vous pouvez aussi lire [cette question](https://stackoverflow.com/q/3507671/1168342) \faStackOverflow.
+Vous pouvez aussi lire [cette question](https://stackoverflow.com/q/3507671/1168342) \faStackOverflow<i class="fa-brands fa-stack-overflow"></i>.

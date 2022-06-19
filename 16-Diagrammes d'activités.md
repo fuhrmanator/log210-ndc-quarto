@@ -1,6 +1,6 @@
 # Diagrammes d'activités
 
-Ce chapitre contient des informations sur les diagrammes d'activités en UML. Les détails se trouvent dans le chapitre F25/A28\ \faBook.
+Ce chapitre contient des informations sur les diagrammes d'activités en UML. Les détails se trouvent dans le chapitre F25/A28\ \faBook<i class="fa-solid fa-book"></i>.
 
 > Les diagrammes d'activités servent à modéliser des processus d'affaires (de métier), des enchaînements d'activités (workflows), des flots de données et des algorithmes complexes.
 
@@ -43,7 +43,7 @@ note right : Fin
 
 ## Diagrammes de flot de données (DFD)
 
-Pour la modélisation de flot de données, il existe une notation pour les [diagrammes de flots de données (DFD)](https://fr.wikipedia.org/wiki/Diagramme_de_flux_de_donn%C3%A9es)\ \faWikipediaW.
+Pour la modélisation de flot de données, il existe une notation pour les [diagrammes de flots de données (DFD)](https://fr.wikipedia.org/wiki/Diagramme_de_flux_de_donn%C3%A9es)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
 Il ne s'agit pas de l'UML, mais cette notation est encore utilisée (depuis les années 1970).
 
 Un exemple de diagramme d'activité utilisé dans le cadre du cours de LOG210 est dans la figure\ \ref{GitHubClassroomActivities}. Ce diagramme qui explique comment GitHub Classrooms permet à l'étudiant qui accepte un devoir (*assignment* en anglais) sur GitHub Classrooms de choisir son identité universitaire, mais seulement si l'enseignant a téléversé la liste de classe *avant* d'envoyer les invitations aux étudiants.
