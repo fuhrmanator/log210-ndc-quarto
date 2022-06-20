@@ -71,7 +71,7 @@ Les activités de réusinage sont expliquées dans la section [Réusinage (Refac
 
 Pour apprendre à faire du développement piloté par les tests (et pour apprendre les cadriciels supportant l'automatisation des tests), il existe une activité nommée "kata TDD".
 *Kata* est un terme japonais désignant une séquence de techniques réalisée dans le vide dans les arts martiaux japonais.
-[En voici une vidéo](https://www.youtube.com/watch?v=DmPk_A-RU50)\ \faYouTube<i class="fa-brands fa-youtube"></i>.
+[En voici une vidéo](https://www.youtube.com/watch?v=DmPk_A-RU50)\ \faYoutube<i class="fa-brands fa-youtube"></i>.
 C'est un outil de transmission de techniques et de principes de combat.
 
 ![Étudiante de karaté faisant le kata *Basai Dai* (photo ["Karate"](https://www.flickr.com/photos/the-consortium/4507180302/) [(CC BY-SA 2.0)](https://creativecommons.org/licenses/by-sa/2.0/) par [The Consortium](https://www.flickr.com/people/the-consortium/)).](images/karate.jpg){#fig-KataBasaiDai width=40%}

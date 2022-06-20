@@ -17,7 +17,7 @@ Dans LOG210, on exploite l'outil PlantUML pour faire beaucoup de modèles. C'est
 - il s'occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est complexe);
 - il est populaire (utilisé par des ingénieurs chez Google pour documenter Android, Pay, etc.);
 - il existe plusieurs supports pour les outils de documentation:
-  - extension [PlantUML pour VisualStudio Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) (figure\ \ref{PlantUMLVSCode}) avec [tutoriel](https://www.youtube.com/watch?v=xkwJ9GwgZJU)\ \faYouTube<i class="fa-brands fa-youtube"></i>;
+  - extension [PlantUML pour VisualStudio Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) (figure\ \ref{PlantUMLVSCode}) avec [tutoriel](https://www.youtube.com/watch?v=xkwJ9GwgZJU)\ \faYoutube<i class="fa-brands fa-youtube"></i>;
   - extension [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&hl=en) pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l'ÉTS (figure\ \ref{PlantUMLGizmo})
 
 ![L'extension PlantUML pour VisualStudio Code.](images/PlantUMLVSCode.png){#PlantUMLVSCode}
