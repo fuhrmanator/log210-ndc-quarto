@@ -31,6 +31,7 @@ book:
     - Contrats.qmd
     - RDCU.qmd
     - TDD.qmd
+    - Réusinage.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
