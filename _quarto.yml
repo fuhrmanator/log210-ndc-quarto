@@ -33,6 +33,7 @@ book:
     - TDD.qmd
     - Réusinage.qmd
     - TravailEquipe.qmd
+    - Outils-UML.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
