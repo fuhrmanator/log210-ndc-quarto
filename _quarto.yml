@@ -35,6 +35,7 @@ book:
     - TravailEquipe.qmd
     - Outils-UML.qmd
     - GRASP-GoF.qmd
+    - Fiabilité.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
