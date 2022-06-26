@@ -39,6 +39,7 @@ book:
     - Diagrammes d'activités.qmd
     - Diagrammes d'états.qmd
     - ConceptionPackages.qmd
+    - Diagrammes de déploiement.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
