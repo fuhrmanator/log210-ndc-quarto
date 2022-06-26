@@ -1,5 +1,5 @@
 
-# Laboratoires {#Laboratoires}
+# Laboratoires {#sec-Laboratoires}
 
 Ce chapitre contient des informations sur le volet technique des laboratoires.
 
@@ -90,7 +90,7 @@ Tout ce qui n'est pas converti en `false` (expliqué ci-dessus) est converti en 
 C'est souvent un piège en JavaScript quand on considère les variables qui peuvent avoir une valeur numérique.
 Par exemple, si on fait `if (maVariable)` pour tester si une variable est définie, si la variable est définie et a sa valeur est `0`, la condition sera `false`.
 
-## Évaluer les contributions des membres de l'équipe {#ContributionsEquipe}
+## Évaluer les contributions des membres de l'équipe {#sec-ContributionsEquipe}
 
 Il existe un outil nommé `gitinspector` qui peut indiquer le niveau d'implication des membres de l'équipe dans un projet sur GitHub. Étant donné que LOG210 utilise un squelette avec les tests, les fichiers `src` de TypeScript, les modèles PlantUML et le README.md, il est possible d'utiliser `gitinspector` pour voir des rapports de contribution sur chacun des volets.
 
@@ -131,9 +131,9 @@ Les fichiers `.html` sont créés pour les contributions `Test`, `Modèles`, `Do
 1. Le nombre de soumissions par auteur (activité git)
 2. Le nombre de lignes par auteur encore présentes et intactes dans la version HEAD
 
-Vous pouvez voir un exemple du rapport à la figure\ \ref{GitinspectorOutput}.
+Vous pouvez voir un exemple du rapport à la @fig-GitinspectorOutput.
 
-![Exemple de rapport généré par `gitinspector`.](images/gitinspector_output.png){#GitinspectorOutput}
+![Exemple de rapport généré par `gitinspector`.](images/gitinspector_output.png){#fig-GitinspectorOutput}
 
 ### Faire le bilan de la contribution de chacun
 
@@ -141,12 +141,12 @@ Après l'évaluation à la fin de chaque itération, il est important de consid�
 Il est normal d'avoir un écart entre le travail prévu et le travail effectué. 
 Un des objectifs du bilan est d'essayer d'expliquer les gros écarts et de corriger ou mitiger les problèmes.
 
-Par exemple, on peut voir à la figure\ \ref{GitinspectorOutput} que les deux coéquipiers Anne et Justin ont fait une contribution beaucoup plus importante que les autres coéquipiers Francis et Mélanie. 
+Par exemple, on peut voir à la @fig-GitinspectorOutput que les deux coéquipiers Anne et Justin ont fait une contribution beaucoup plus importante que les autres coéquipiers Francis et Mélanie. 
 Dans le bilan de l'itération, **on doit indiquer explicitement ce fait, même avec des pourcentages**. 
 
 > Une phrase vague comme "certains ont travaillé plus que d'autres" est une formulation diplomatique, mais elle n'est pas assez explicite et n'est pas une résolution proactive du problème le cas échéant.
 
-### Proposer des solutions si besoin {#solution_problemes_equipes}
+### Proposer des solutions si besoin {#sec-solution_problemes_equipes}
 
 Une inégalité importante dans les contributions est un signal d'alarme. On doit agir, mais on commence par poser des questions, par exemple:
 
@@ -161,7 +161,7 @@ Une personne exclue de cette manière va probablement abandonner le cours et vou
 - Est-ce que certains coéquipiers travaillent excessivement, sans donner la chance aux autres de contribuer?
 N'oubliez pas que les laboratoires sont une manière d'apprendre à pratiquer la matière du cours. 
 Laisser un ou deux coéquipiers faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l'examen final pour ceux qui ont moins contribué).
-Il y a aussi un risque sur le plan de la \nameref{Bus_Factor}, surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il travaille trop.
+Il y a aussi un risque sur le plan de la [Redondance des compétences dans l’équipe (Bus Factor)](#sec-Bus_Factor), surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il travaille trop.
 - Est-ce que tout le monde utilise un moyen de communiquer de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n'est pas l'outil idéal pour coordonner un travail en équipe.
 - etc.
 

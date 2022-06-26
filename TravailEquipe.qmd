@@ -156,4 +156,4 @@ Considérez les volets HRC lorsque vous vous trouvez dans une des situations sui
 Vous devez en parler avec votre équipe. 
 Si la situation ne s'améliore pas, vous devez en parler avec les chargés de laboratoire et l'enseignant.
 
-Pour mieux évaluer le travail de chacun dans l'équipe au laboratoire, il y a des conseils dans la section [Évaluer les contributions des membres de l’équipe](sec-ContributionsEquipe).
+Pour mieux évaluer le travail de chacun dans l'équipe au laboratoire, il y a des conseils dans la section [Évaluer les contributions des membres de l’équipe](#sec-ContributionsEquipe).
