@@ -36,6 +36,7 @@ book:
     - Outils-UML.qmd
     - GRASP-GoF.qmd
     - Fiabilité.qmd
+    - Diagrammes d'activités.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
