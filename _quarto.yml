@@ -38,6 +38,7 @@ book:
     - Fiabilité.qmd
     - Diagrammes d'activités.qmd
     - Diagrammes d'états.qmd
+    - ConceptionPackages.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
