@@ -37,6 +37,7 @@ book:
     - GRASP-GoF.qmd
     - Fiabilité.qmd
     - Diagrammes d'activités.qmd
+    - Diagrammes d'états.qmd
     - references.qmd
   # repo-actions: [source, issue]
 

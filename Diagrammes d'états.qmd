@@ -21,9 +21,9 @@ Les points importants:
 - Les transitions peuvent avoir des *actions* et des *conditions de garde*
 - Dans la notation, il y a également la possibilité de faire les *états imbriqués*
 
-La figure\ \ref{DiagrammeEtat} est un exemple tiré du livre du cours et fait en PlantUML.
+La @fig-DiagrammeEtat est un exemple tiré du livre du cours et fait en PlantUML.
 
-```{.plantuml caption="Diagramme d'états (figure A29.3/F25.10\ \faBook<i class="fa-solid fa-book"></i>). [(PlantUML)](http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF)" #DiagrammeEtat }
+```{.plantuml #fig-DiagrammeEtat  caption="Diagramme d'états (figure A29.3/F25.10\ \faBook). [(PlantUML)](http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF)" }
 @startuml
 skinparam style strictuml
 skinparam backgroundcolor transparent
