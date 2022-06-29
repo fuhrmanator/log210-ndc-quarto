@@ -66,7 +66,7 @@ Mais vous savez aussi que le code qui est produit lors d'un hackathon ne sera pa
 Le seul but est de faire du code qui marche pour montrer une idée intéressante.
 
 Au fait, dans certains contextes d'entreprise (par exemple une entreprise en démarrage qui a seulement six mois de financement), c'est une situation similaire.
-Si une solution de ["produit minimum viable" (MVP en anglais)](https://en.wikipedia.org/wiki/Minimum_viable_product)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i> n'existe pas à la fin de la période de financement, l'entreprise n'existera plus, car il n'y aura pas une deuxième période de financement.
+Si une solution de ["produit minimum viable" (MVP en anglais)](https://en.wikipedia.org/wiki/Minimum_viable_product)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>\ n'existe pas à la fin de la période de financement, l'entreprise n'existera plus, car il n'y aura pas une deuxième période de financement.
 Si la compagnie est financée pour une deuxième période, la conception du code pourrait avoir besoin de beaucoup de soins, car elle a été négligée.
 Cette négligence à la conception (pour la maintenabilité) est aussi nommée la [dette technique](#sec-DetteTechnique).
 
@@ -97,11 +97,11 @@ Voici un extrait du livre du cours, **UML 2 et les design patterns** de Craig La
 | Expert en     | Un principe général de conception d'objets et d'affectation des responsabilités.\label{tab_GRASPExpert} \newline |
 | information   |  |
 |*F16.11/A17.11*| Affecter une responsabilité à l'expert – la classe qui possède les informations nécessaires pour s'en acquitter. \newline |
-| \faBook<i class="fa-solid fa-book"></i>       | |
+| \faBook\ <i class="fa-solid fa-book"></i>       | |
 +-------------+--------------------------------------------------------+
 | Créateur      | Qui crée? \label{tab_GRASPCreateur} (Notez que Fabrique Concrète est une solution de rechange courante.) \newline\newline Affectez à la classe B la responsabilité de créer une instance de la classe A si l'une des assertions suivantes est vraie: |
 |*F16.10/A17.10*| |
-| \faBook<i class="fa-solid fa-book"></i>       | 1. B contient A |
+| \faBook <i class="fa-solid fa-book"></i>       | 1. B contient A |
 |               | 2. B agrège A |
 |               | 3. B a les données pour initialiser A |
 |               | 4. B enregistre A |
