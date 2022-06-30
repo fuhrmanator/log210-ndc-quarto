@@ -91,6 +91,12 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 
 Voici un extrait du livre du cours, **UML 2 et les design patterns** de Craig Larman.
 
+| Pattern       | Description                                           |
+|:--------------|:------------------------------------------------------|
+| Expert en information\newline<br>*F16.11/A17.11* \faBook<i class="fa-solid fa-book"></i>   | Un principe général de conception d'objets et d'affectation des responsabilités.\label{tab_GRASPExpert} \newline\newline Affecter une responsabilité à l'expert – la classe qui possède les informations nécessaires pour s'en acquitter. \newline<br>|
+| Créateur\newline<br>*F16.10/A17.10* \faBook <i class="fa-solid fa-book"></i> | Qui crée? \label{tab_GRASPCreateur} (Notez que Fabrique Concrète est une solution de rechange courante.) \newline\newline Affectez à la classe B la responsabilité de créer une instance de la classe A si l'une des assertions suivantes est vraie:\newline<br>\ 1. B contient A\newline<br>\ 2. B agrège A\newline<br>\ 3. B a les données pour initialiser A\newline<br>\ 4. B enregistre A\newline<br>\ 5. B utilise étroitement A \newline<br>|
+
+
 +---------------+--------------------------------------------------------------------------------+
 | Pattern       | Description                                           |
 +===============+================================================================================+
