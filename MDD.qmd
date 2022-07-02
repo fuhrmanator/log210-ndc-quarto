@@ -221,7 +221,7 @@ C "1" -- "*" GC : Décrit >
 C "1" -- "*" C : Est-préalable >
 CP "1" - "*" C : Répertorie >
 note bottom of C
-Classe de <<description>>. Une instance de Cours peut exister 
+Classe de « description ». Une instance de Cours peut exister 
 indépendamment de l'existence d'un GroupeCours qu'elle décrit 
 (par exemple, avant qu'un cours soit donné la première fois).
 Elle réduit également la duplication des informations (le nom et 
@@ -250,7 +250,7 @@ class "Catalogue\nClients" as CP #ffdddd
 C "1" -- "1" GC : Décrit >
 CP "1" -r- "*" C : Répertorie >
 note bottom of C
-😩 Mauvaise classe de <<description>>. Il n'est pas nécessaire 
+<:frowning_face:> Mauvaise classe de « description ». Il n'est pas nécessaire 
 d'avoir cette classe, car les clients sont décrits dans leur 
 propre classe Client. Si un client n'existe pas, il n'a pas de
 sens dans le MDD. Les informations ne seraient pas dupliquées 
