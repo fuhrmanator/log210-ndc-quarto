@@ -73,6 +73,7 @@ format:
   pdf:
     # has to be latexmk for .plantuml plugin to work (not sure why, see )
     pdf-engine: latexmk
+    cite-method: biblatex
     documentclass: scrbook
     lof: true
     lot: true
@@ -117,6 +118,7 @@ format:
     # - \usepackage{setspace}
     # - \usepackage{hyperref}
     # - \usepackage[hyperpageref]{backref}
+    - \PassOptionsToPackage{backref=true,backend=biber,style=authoryear}{biblatex}
 
 # filters must be run in the proper order here
 filters:
