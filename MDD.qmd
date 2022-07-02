@@ -15,7 +15,7 @@ Il y a trois stratégies pour identifier les classes conceptuelles:
 
 ### Catégories pour identifier des classes conceptuelles
 
-:Extrait du tableau 9.1
+:Extrait du tableau 9.1 \faBook<i class="fa-solid fa-book"></i>
 
 Catégorie | Exemples
 :----------|:----------
