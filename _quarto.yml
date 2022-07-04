@@ -47,8 +47,8 @@ book:
 bibliography: references.bib
 citations-hover: true
 citation-location: document
-citecolor: blue
-# citeproc: true
+link-citations: true # pandoc setting
+# citeproc: true # causes quarto to hang
 # latex-auto-install: true
 latex-auto-mk: true
 
@@ -73,10 +73,14 @@ format:
   pdf:
     # has to be latexmk for .plantuml plugin to work (not sure why, see )
     pdf-engine: latexmk
-    cite-method: biblatex
+    colorlinks: true
+    linkcolor: Blue
+    urlcolor: Maroon
+    #citecolor: Orange  # not really used when `link-citations: true`
+    #cite-method: biblatex
     documentclass: scrbook
-    lof: true
-    lot: true
+    # lof: true
+    # lot: true
     toc: true
     toc-depth: 2
     highlight-style: github
@@ -92,7 +96,6 @@ format:
     fontsize: 11pt
     # monofont: libertinus-mono
     # monofont: cm
-    colorlinks: true
     header-includes: 
     # - \input{glyphtounicode}
     # - \pdfgentounicode=1
@@ -118,7 +121,7 @@ format:
     # - \usepackage{setspace}
     # - \usepackage{hyperref}
     # - \usepackage[hyperpageref]{backref}
-    - \PassOptionsToPackage{backref=true,backend=biber,style=authoryear}{biblatex}
+    #- \PassOptionsToPackage{backref=true,backend=biber,style=authoryear}{biblatex}
 
 # filters must be run in the proper order here
 filters:
@@ -135,5 +138,3 @@ filters:
 # javaPath: C:/Program Files/Java/jdk1.8.0_331/bin/java.exe
 # plantumlPath: G:/My Drive/PlantUML/plantuml.jar
 # dotPath: C:/Program Files/Graphviz/bin/dot.exe
-
-log-level: debug
