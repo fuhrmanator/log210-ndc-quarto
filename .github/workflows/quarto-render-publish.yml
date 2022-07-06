@@ -37,9 +37,9 @@ jobs:
 
       # PlantUML jar
       - name: wget
-      uses: wei/wget@v1
-      with:
-        args: -O plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2022.6/plantuml-1.2022.6.jar
+        uses: wei/wget@v1
+        with:
+          args: -O plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2022.6/plantuml-1.2022.6.jar
 
       # PLANTUML environment variable
       - name: Set PLANTUML environment
