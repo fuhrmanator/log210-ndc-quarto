@@ -31,6 +31,20 @@ jobs:
 
       # add software dependencies here
 
+      # Java for PlantUML
+      - name: Get Java
+        uses: actions/checkout@v3
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '11'
+      
+      - name: Check env for java
+        run: echo "The JAVA_HOME is set to $JAVA_HOME"
+
+      # PlantUML jar
+      
+
       # To publish to Netlify, RStudio Connect, or GitHub Pages, uncomment
       # the appropriate block below
       
