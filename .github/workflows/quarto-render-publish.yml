@@ -23,17 +23,10 @@ jobs:
           # uncomment below and fill to pin a version
           # version: 0.9.600
       
-      # Render
-      - name: Render to HTML
-        uses: quarto-dev/quarto-actions/render@v2
-        with:
-          to: html
-
       # add software dependencies here
 
       # Java for PlantUML
       - name: Get Java
-        uses: actions/checkout@v3
         uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
@@ -43,23 +36,14 @@ jobs:
         run: echo "The JAVA_HOME is set to $JAVA_HOME"
 
       # PlantUML jar
-      
 
-      # To publish to Netlify, RStudio Connect, or GitHub Pages, uncomment
-      # the appropriate block below
-      
-      # - name: Publish to Netlify (and render)
-      #   uses: quarto-dev/quarto-actions/publish@v2
-      #   with:
-      #     target: netlify
-      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        
-      # - name: Publish to RStudio Connect (and render)
-      #   uses: quarto-dev/quarto-actions/publish@v2
-      #   with:
-      #     target: connect
-      #     CONNECT_SERVER: enter-the-server-url-here
-      #     CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }} 
+
+      # Render
+      - name: Render to HTML
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
+
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
