@@ -51,6 +51,7 @@ link-citations: true # pandoc setting
 # citeproc: true # causes quarto to hang
 # latex-auto-install: true
 latex-auto-mk: true
+link-external-icon: true
 
 format:
 
@@ -66,8 +67,7 @@ format:
     # https://quarto.org/docs/output-formats/html-themes.html#overview
     # theme: cosmo
     # needed for inline plantuml/graphviz figures
-    self-contained: true
-    link-external-icon: true
+    # self-contained: true
     
 
   pdf:
