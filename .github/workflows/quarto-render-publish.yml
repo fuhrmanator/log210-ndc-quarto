@@ -24,54 +24,33 @@ jobs:
       
       # add software dependencies here
 
-      # Java for PlantUML
-      - name: Get Java
+      - name: Install java (for PlantUML)
         uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
 
-      # - name: Install TeXLive
-      #   # Actually pick a version, do not point on master, or the build won't be reproducible
-      #   uses: DanySK/setup-texlive-action@master
-      #   with:
-      #     requirements-file: .github/texlive/requirements.txt
       - name: Install rsvg-convert, latexmk, TeXLive
         run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra
 
-      # PlantUML jar
       - name: wget PlantUML.jar
         uses: wei/wget@v1
         with:
           args: -O plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2022.6/plantuml-1.2022.6.jar
 
-      # PLANTUML environment variable
       - name: Set PLANTUML environment
         run: export PLANTUML=./plantuml.jar
 
-      # GraphViz install
       - name: install Graphviz
         uses: tlylt/install-graphviz@v1
 
-      # xkcd font
       - name: Install xkcd font
         run: mkdir -p /usr/share/fonts/TTF && cp xkcd-font/xkcd-script.ttf /usr/share/fonts/TTF && export JAVA_FONTS="/usr/share/fonts/TTF"
 
-      # # Render
-      # - name: Render to HTML
-      #   uses: quarto-dev/quarto-actions/render@v2
-      #   with:
-      #     to: html
-
-      # Publish
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
-          # # use location from render above
-          # path: _book/
-          # # don't re-render
-          # render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
       

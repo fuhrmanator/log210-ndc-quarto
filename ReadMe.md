@@ -1,6 +1,6 @@
 # Manuel du livre de LOG210 dans Quarto
 
-Pour construire le livre:
+Pour construire le manuel localement:
 
 - installer PlantUML et configurer les variables d'environnement (JAVA_HOME et PLANTUML) selon [ces directives](https://github.com/pandoc/lua-filters/tree/master/diagram-generator#plantuml)
 - installer la police [xkcd script](https://github.com/ipython/xkcd-font/tree/master/xkcd-script/font)
@@ -14,3 +14,9 @@ Pour construire le livre:
     quarto render --preview pdf
     ```
     On peut remplacer `pdf` par `html` (pour la représentation web) ou `epub` pour une forme .epub
+
+Versions construites avec GitHub actions:
+
+- [Site web](https://fuhrmanator.github.io/log210-ndc-quarto/)
+- [PDF](https://fuhrmanator.github.io/log210-ndc-quarto/LOG210-Analyse-et-conception-de-logiciels.pdf)
+- [EPUB](https://fuhrmanator.github.io/log210-ndc-quarto/LOG210-Analyse-et-conception-de-logiciels.epub)

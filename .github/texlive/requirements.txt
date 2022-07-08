@@ -1,2 +1,0 @@
-texlive
-texlive-fonts-extra
