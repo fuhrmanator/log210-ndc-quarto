@@ -30,9 +30,13 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
-      
-      - name: Check env for java
-        run: echo "The JAVA_HOME is set to $JAVA_HOME"
+
+      - name: Install TeXLive
+        # Actually pick a version, do not point on master, or the build won't be reproducible
+        uses: DanySK/setup-texlive-action@master
+
+      - name: Install rsvg-convert
+        run: apt-get install -y -q librsvg2-bin
 
       # PlantUML jar
       - name: wget PlantUML.jar
