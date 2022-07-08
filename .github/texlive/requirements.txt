@@ -1,3 +1,2 @@
 texlive
 texlive-fonts-extra
-texlive-cascadia-code
