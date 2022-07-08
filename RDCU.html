@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 9&nbsp; Réalisations de cas d’utilisation (RDCU)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./TDD.html" rel="next">
+<link href="./Contrats.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#spécifier-le-contrôleur" id="toc-spécifier-le-contrôleur" class="nav-link active" data-scroll-target="#spécifier-le-contrôleur"> <span class="header-section-number">9.1</span> Spécifier le contrôleur</a></li>
+  <li><a href="#satisfaire-les-postconditions" id="toc-satisfaire-les-postconditions" class="nav-link" data-scroll-target="#satisfaire-les-postconditions"> <span class="header-section-number">9.2</span> Satisfaire les postconditions</a>
+  <ul class="collapse">
+  <li><a href="#créer-une-instance" id="toc-créer-une-instance" class="nav-link" data-scroll-target="#créer-une-instance"> <span class="header-section-number">9.2.1</span> Créer une instance</a></li>
+  <li><a href="#former-une-association" id="toc-former-une-association" class="nav-link" data-scroll-target="#former-une-association"> <span class="header-section-number">9.2.2</span> Former une association</a></li>
+  <li><a href="#modifier-un-attribut" id="toc-modifier-un-attribut" class="nav-link" data-scroll-target="#modifier-un-attribut"> <span class="header-section-number">9.2.3</span> Modifier un attribut</a></li>
+  </ul></li>
+  <li><a href="#sec-Visibilite" id="toc-sec-Visibilite" class="nav-link" data-scroll-target="#sec-Visibilite"> <span class="header-section-number">9.3</span> Visibilité</a></li>
+  <li><a href="#sec-TransformerIDenObjets" id="toc-sec-TransformerIDenObjets" class="nav-link" data-scroll-target="#sec-TransformerIDenObjets"> <span class="header-section-number">9.4</span> Transformer identifiants en objets</a></li>
+  <li><a href="#sec-UtilisationMap" id="toc-sec-UtilisationMap" class="nav-link" data-scroll-target="#sec-UtilisationMap"> <span class="header-section-number">9.5</span> Utilisation de tableau associatif (<code>Map&lt;clé, objet&gt;</code>)</a></li>
+  <li><a href="#sec-RDCU_Demarrer" id="toc-sec-RDCU_Demarrer" class="nav-link" data-scroll-target="#sec-RDCU_Demarrer"> <span class="header-section-number">9.6</span> RDCU pour l’initialisation, le scénario Démarrer</a></li>
+  <li><a href="#réduire-le-décalage-des-représentations" id="toc-réduire-le-décalage-des-représentations" class="nav-link" data-scroll-target="#réduire-le-décalage-des-représentations"> <span class="header-section-number">9.7</span> Réduire le décalage des représentations</a></li>
+  <li><a href="#sec-FaireSoiMeme" id="toc-sec-FaireSoiMeme" class="nav-link" data-scroll-target="#sec-FaireSoiMeme"> <span class="header-section-number">9.8</span> Pattern «&nbsp;Faire soi-même&nbsp;»</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-RDCU" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Les réalisations de cas d’utilisation (RDCU) sont le sujet du chapitre F17/A18&nbsp;<i class="fa-solid fa-book"></i>. Voici les points importants pour le cours:</p>
+<ul>
+<li>Une RDCU est une synthèse des informations spécifiées dans le MDD, le DSS et les contrats d’opération. Elle sert à esquisser une solution (qui n’est pas encore codée) afin de rendre plus explicite l’activité impliquant des choix de conception. Si vous n’avez pas bien compris les autres éléments (MDD, DSS, etc.), il est difficile de réussir les RDCU dans le cours. Il est normal de ne pas tout comprendre au début, alors posez les questions si vous ne comprenez pas.</li>
+<li>De manière générale, toute bonne RDCU doit faire les choses suivantes:
+<ul>
+<li>spécifier un contrôleur (pour la première opération système dans un DSS, qui sera le même pour le reste des opérations dans le DSS);</li>
+<li>satisfaire les postconditions du contrat d’opération correspondant;</li>
+<li>rechercher les informations qui sont éventuellement rendues à l’acteur dans le DSS.</li>
+</ul></li>
+<li>Il s’agit d’un diagramme de séquence en UML. Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique la notation de manière agile:
+<ul>
+<li>Il n’est pas nécessaire de faire les boîtes d’activation, car ça prend du temps à les faire correctement lorsqu’on dessine à la main un diagramme.</li>
+<li>On doit se servir des annotations pour documenter les choix (GRASP).</li>
+<li>On dessine à la main des diagrammes puisqu’on peut faire ça en équipe à un tableau blanc. Mais aussi, à l’examen vous devez faire des diagrammes à la main.</li>
+<li>Au lieu d’un message pointillé indiquant le retour d’une valeur à la fin de l’exécution d’une méthode, on utilise l’affectation sur le message (comme dans la programmation), par exemple <code>c = getClient(...)</code> à la <a href="#fig-RDCU_ID_en_objets">figure&nbsp;<span>9.4</span></a></li>
+</ul></li>
+<li>Le livre présente quelques RDCU qui sont des <em>diagrammes de communication</em>. Cette notation n’est pas utilisée dans le cours, car elle est plus complexe à utiliser et elle est comparable à la notation des diagrammes de séquence.</li>
+<li>Faire des RDCU est plus agile que coder, car dans un diagramme on peut voir le flux de plusieurs messages à travers plusieurs classes. Dans une solution codée, il serait nécessaire d’ouvrir plusieurs fichiers afin de voir le code de chaque méthode (message) et on ne peut pas voir toute la dynamique de la même manière. Faire des changements à un diagramme (avant de le coder) est en principe plus facile que changer le code source. On peut également se servir des structures (<code>List</code>, <code>Array</code>, <code>Map</code>, etc.) dans un diagramme, avant que celles-ci ne soient créées.</li>
+<li>Faire des RDCU est une activité créative. Un diagramme dynamique en UML peut avoir une mauvaise logique, car il s’agit d’un dessin. <em>Le codage dans un langage de programmation est la seule manière de valider une RDCU</em>. Évidemment, la programmation prend beaucoup plus de temps et n’est pas insignifiante. Faire une RDCU est comme faire un <em>plan</em> pour un bâtiment, tandis que faire de la programmation est comme <em>construire</em> le bâtiment. Si un plan contient des erreurs de conception, on va les savoir lors de la construction. Alors, votre RDCU sera en doute jusqu’à ce que vous la traduisiez en code exécuté et testé.</li>
+</ul>
+<p>Tout le processus de proposer une solution (RDCU) peut être visualisé comme un diagramme d’activités, comme dans la <a href="#fig-RDCU_Aide_Memoire">figure&nbsp;<span>9.1</span></a>.</p>
+<div id="fig-RDCU_Aide_Memoire" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="RDCU_files/mediabag/fd512181692a23b1fbcc158477d2ba4f9dff6bb3.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 9.1: Aide mémoire pour faire une RDCU. L’étape en rouge nécessite beaucoup de pratique, selon la complexité des postconditions. Vous pouvez vous attendre à ne pas la réussir du premier coup. <a href="http://www.plantuml.com/plantuml/uml/TLHDJnin4BtxLqp3WMILBaALMXGG8YLjLQb55RGzSJ7hsOsBrtOzTg3_gBdt7-mVwtYJG8BWubtPy_7clMUVKPGXfjQ0s7-bRMMIGYZBWzg55alF1-jDGRVQUXba2pINojrfsq0j3MsVl9VLRHDSikhS6HTWhfL2knKmmrec4x_ZVPmQtTWMROIA5mnRKHSkucw8mJgA7Yg8W1ubVoUNk70wWDbtlbi66RMpG7yeTdzRF0PXkGe4tSpZ1F2-XC6WAAhGBJ5SkBH0O_1dRZmS5SLW8FQKgckb9hDkoM1QRP4h8rJEnj3zCvZ2yKx5gVT6_quSLHIVBgTNt-3yCRGehktmV2wzZW7Xu-7Ryl3DmVJm7Nz66RZq7irM0nv7RKtn1FmN96xY7KKELZf7K56Cyr3ZQmklVrW4RPaTMo6SwDF5oO4-1TQndmyay4ZT4lBiF7tEU0ZQd4aYLsa-1PdW4XjD33n7phYtZ37ecnGfrtn8PTphP6qPapIQkYLjv15xcKtcarcfLZeDCKAGTPsf7K6oeBHiMEuMUNYTBI2hF9lmBhsWwfXv8DwYMcgI322w597944LX6EbJZa2bPma6Z9mHaDE3pNKC0yYMNxT3mokBqoAHR1WVzYrM2QkoiwkhSQ-V9AQXcdTBhhDj4V6CGrW16Nj_Z45iTZ_SUmmnRnN5vncW1NVp2sEMM62iIjWnqb7leoE1La5kjhaETtFDQ8O1AMQyJxd81baJnuHTMvSWJynXZ1zjvRZycWzs0OtWnRgFBDA3BXnEqNbXiCcuyc--mnF8rYHdKa-hOhj8RKos6PU37WlqQbTpoKp1CvAN86PieJ5emmaf0jTYgwqkpre4seXCEoht-doTCQNv0I7X0xzbsdFuYlXLPmJEN32kCdEwca2SyS9ltty0">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<section id="spécifier-le-contrôleur" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="spécifier-le-contrôleur"><span class="header-section-number">9.1</span> Spécifier le contrôleur</h2>
+<p>Pour commencer une RDCU, on spécifie le contrôleur selon GRASP. Dans les travaux pour le cours, vous devez indiquer <em>pourquoi vous avez choisi telle classe pour être le contrôleur</em>. Ce n’est pas un choix arbitraire. Référez-vous à la définition dans .</p>
+<p>Pour initialiser les liens entre la couche présentation et les contrôleurs GRASP, Larman vous propose de le faire dans la <a href="#sec-RDCU_Demarrer">RDCU pour l’initialisation, le scénario Démarrer</a>.</p>
+</section>
+<section id="satisfaire-les-postconditions" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="satisfaire-les-postconditions"><span class="header-section-number">9.2</span> Satisfaire les postconditions</h2>
+<section id="créer-une-instance" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="créer-une-instance"><span class="header-section-number">9.2.1</span> Créer une instance</h3>
+<p>Certaines postconditions concernent la création d’une instance. Dans votre RDCU, vous devez respecter le GRASP Créateur. Référez-vous à la définition dans le .</p>
+<blockquote class="blockquote">
+<p>Une erreur potentielle est de donner la responsabilité de créer à un contrôleur, puisqu’<em>il a les données pour initialiser</em> l’objet. Bien que ce soit justifiable par le principe GRASP Créateur, il vaut mieux favoriser une classe qui <em>agrège</em> l’objet à créer, le cas échéant.</p>
+</blockquote>
+</section>
+<section id="former-une-association" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="former-une-association"><span class="header-section-number">9.2.2</span> Former une association</h3>
+<p>Pour les postconditions où il faut former une association entre un objet <em>a</em> et <em>b</em>, il y a plusieurs façons de faire.</p>
+<ul>
+<li>S’il y a une agrégation entre les objets, il s’agit probablement d’une méthode <code>add()</code> sur l’objet qui agrège.</li>
+<li>S’il y a une association simple, il faut considérer la navigabilité de l’association. Est-ce qu’il faut pouvoir retrouver l’objet <em>a</em> à partir de l’objet <em>b</em> ou vice-versa? Il s’agira d’une méthode <code>setB(b)</code> sur l’objet <code>a</code> (pour trouver <em>b</em> à partir de <em>a</em>), etc.</li>
+<li>S’il faut former une association entre un objet et un autre «&nbsp;sur une base de correspondance avec&nbsp;» un identifiant passé comme argument, alors il faut repérer le bon objet d’abord. Voir la section <a href="#sec-TransformerIDenObjets">Transformer identifiants en objets</a>.</li>
+</ul>
+<p>Dans la plupart des cas, la justification GRASP pour former une association est Expert, défini dans le . Il faut faire attention à la <a href="#sec-Visibilite">visibilité</a>&nbsp;<i class="fa-solid fa-low-vision"></i>.</p>
+</section>
+<section id="modifier-un-attribut" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="modifier-un-attribut"><span class="header-section-number">9.2.3</span> Modifier un attribut</h3>
+<p>Pour les postconditions où il faut modifier un attribut, c’est assez évident. Il suffit de suivre le principe GRASP Expert, défini dans le . Très souvent, c’est une méthode <code>setX(valeur)</code> où <code>X</code> correspond à l’attribut qui sera modifié à <code>valeur</code>. Attention à la <a href="#sec-Visibilite">visibilité</a>&nbsp;<i class="fa-solid fa-low-vision"></i>.</p>
+<p>Lorsque l’attribut d’un objet doit être modifié juste après la création de ce dernier, ça peut se faire dans le constructeur, comme on voit dans la <a href="#fig-RDCU_Constructeur_Modification">figure&nbsp;<span>9.2</span></a>.</p>
+<div id="fig-RDCU_Constructeur_Modification" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="RDCU_files/mediabag/cbfc06db4c11f44daa599dbe09bfbb2c93c0b3f4.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 9.2: Combiner la création d’instance et une modification de son attribut dans un constructeur. <a href="http://www.plantuml.com/plantuml/uml/VL9DRy8m3BrNuZzON833fg7TEA0XD4riJ48hsyvUQjgegTCvhXZ_VYuxhEA053aVxyL-Vib3KXJjcf2bsdEBWWqaFGMoADxro6W0VQ6hIuaT5ow6AA22d0mYrb4s0Qry0Xi85N9n5AzA38V82fxXqtCHZyc8_maBEc0NjASmDWGlubD_PxDV6szVKIA8Mf4a237MK0hXELd-yGJJ1ciJsWbPPJfDRFPi3OL0XLKLM6sty9u_lkM3yZ2_cmrRkbIGiEm3NzUvuHgUOoUCuIhlftO5v4vygrTvEpAh90s53IrKwIXB3krTvhVtmxUYxuxOqIkbNlWg-98Xq44pmzKxtwAPFrxi0YfXDmPCq5vWQqnq1bnc7hUPwpqcsxLmiro2WmNy7KqvDhECk80pxy5MzZz-0G00">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-Visibilite" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="sec-Visibilite"><span class="header-section-number">9.3</span> Visibilité</h2>
+<p>Dans tous les cas, si un message est envoyé à un objet, ce dernier doit être <em>visible</em> à l’objet qui lui envoie le message. Régler les problèmes de visibilité nécessite de la créativité. Il est difficile à enseigner cette démarche, mais les points suivants peuvent aider:</p>
+<ul>
+<li>Pour un objet racine (par exemple <code>Université</code>) il peut s’agir d’un objet Singleton, qui aura une visibilité globale. C’est-à-dire que n’importe quel objet pourrait lui envoyer un message. Cependant, les objets Singleton posent des problèmes de conception, notamment pour les tests. Il vaut mieux éviter ce choix, si possible.<br>
+Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur stackoverflow</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</li>
+<li>Sinon, il faudra que l’objet émetteur ait une référence de l’objet récepteur. Par exemple dans la <a href="#fig-RDCU_Visibilite1">figure&nbsp;<span>9.3</span></a>, la référence à <em>b</em> peut être:
+<ul>
+<li>stockée comme un attribut de <em>a</em>,</li>
+<li>passée comme un argument dans un message antérieur, ou</li>
+<li>affectée dans une variable locale de la méthode où <code>unMessage()</code> sera envoyé.</li>
+</ul></li>
+</ul>
+<p>Pour plus de détails, voir le chapitre sur la Visibilité (F18/A19)&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<div id="fig-RDCU_Visibilite1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="RDCU_files/mediabag/5a02bd00d07d220d9b5436872f7a47bf4456da1b.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 9.3: L’objet <em>b</em> doit être visible à l’objet <em>a</em> si <em>a</em> veut lui envoyer un message. <a href="http://www.plantuml.com/plantuml/uml/VLB1JiCm3BrNsZzOksmSg9YuxO3M8eG6Gq9imDbBlJPgwWmdqTZVumua2eT9aIFxlTZFTXOXeiJKkIoqblSes468HqTgnPeU6GsWBPgs5f-uCjvvWIZ8GI7YECec41iRG0z2WrmTnCP833lF4Ip3k-NA7u8IVnDMjCFaOazXx0WUnOR-pN9pgxnDGu70nuOaWFE-XLe8JydMR_SmxR1LeKb8AzDnehTbRSWvghIgGB5QmUlwxcKzA0-pgujXI_yL1Anxm-TrBhc51v-4qPtbVRQcWhKHkuzdUS-aev8m53OSOPH4MJ2eUvdbryDTqKSYDlH4eHTUE5ipEDh5JF5eZTsZ3d-Cys8C6A3u6zxEorEup2vle80vv7cU5Q1EgKxYdwpJYwpiWz_uWhZIR_45">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<p>Pour initialiser les références nécessaires pour la bonne visibilité, Larman vous propose de faire ça dans la <a href="#sec-RDCU_Demarrer">RDCU pour l’initialisation, le scénario Démarrer</a>.</p>
+</section>
+<section id="sec-TransformerIDenObjets" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="sec-TransformerIDenObjets"><span class="header-section-number">9.4</span> Transformer identifiants en objets</h2>
+<p>La directive d’utiliser les types primitifs pour les opérations système nous mène à un problème récurrent dans les RDCU : transformer un identifiant (souvent de type <code>String</code> ou <code>int</code>) en objet. Larman vous propose un idiome (pas vraiment un patron) nommé <strong>Transformer identifiant en objet</strong> qui sert à repérer la référence d’un objet qui correspond à l’identifiant.</p>
+<p>Il y a un exemple à la <a href="#fig-RDCU_ID_en_objets">figure&nbsp;<span>9.4</span></a> provenant du chapitre sur <strong>l’Application des patterns GoF (Figure 23.18)</strong>&nbsp;<i class="fa-solid fa-book"></i>. Un autre exemple du livre du cours est l’identifiant <code>codeArticle</code> transformé en objet <code>DescriptionProduit</code> par la méthode<br>
+<code>CatalogueProduits.getDescProduit(codeArticle:String):DescriptionProduit</code>.</p>
+<div id="fig-RDCU_ID_en_objets" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="RDCU_files/mediabag/7b412f643ba2f19cab7a36ef0a282687ab747097.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 9.4: Un identifiant <code>idClient:String</code> est transformé en objet <code>c:Client</code>, qui est ensuite envoyé à la Vente en cours. <a href="http://www.plantuml.com/plantuml/uml/VLB1Qjn03BqRyWyYboGBBTsheIKX2MNRB0GxJI-zJCQAhNgisKho9ldxohk4ke4i33CmxytJqzESgmMnSKY5ziIR8640jPU4lWl52JcQGGyXzgtaaPkOKnOm2QmE8TjHSGBMaOAl05tWvad831aUCniGmq_Y9Z-f4_y9DlWOncGJXSE0y5r8fpUhkqldtNMe2Daw58MKSm-jODY9rVTVuNG8lHiT1RqolfpuIUmDfOIDLnMukBc17_LrLS_Am_BJsRobjmuqjDF6Xtskk8TlUHGEwI3lkOyDr55eOmTvj-XHYSwDpICq6R7G67mkou_B-QpmpuWSSOqw6Rz8r3947mTAuGoZI9lWyH-N5ROUhU0n18Ng3RWERL3Y7RR-7zkMzvFS3jeM7xv01QNdGqfocSYXMu-Xme4KJwdPNvqL5JXpxSm8dw55sz_F29mDGQZjh8GQKsQuVjwW6A3zuiKYeSBg2hpr_F0RJHUBlUJs_UAnVDK-Hsxyu_u5">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<p>La <a href="#sec-UtilisationMap"><span>Section&nbsp;9.5</span></a> explique comment implémenter la transformation avec un tableau associatif.</p>
+</section>
+<section id="sec-UtilisationMap" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="sec-UtilisationMap"><span class="header-section-number">9.5</span> Utilisation de tableau associatif (<code>Map&lt;clé, objet&gt;</code>)</h2>
+<p>Pour <em>transformer un ID en objets</em>, il est pratique d’utiliser un <a href="https://fr.wikipedia.org/wiki/Tableau_associatif">tableau associatif (aussi appelé dictionnaire ou map en anglais)</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>. L’exemple du livre du cours concerne le problème de repérer une <code>Case</code> Monopoly à partir de son nom (<code>String</code>). C’est la figure A17.7/F17.7&nbsp;<i class="fa-solid fa-book"></i>. Voir les détails dans le livre.</p>
+<p>Notez que les exemples du livre ne montrent qu’un seul <em>type</em> dans le tableau associatif, par exemple <code>Map&lt;Case&gt;</code>, tandis que normalement il faut spécifier aussi le type de la clé, par exemple <code>Map&lt;String, Case&gt;</code>.</p>
+<p>Un tableau associatif fournit une méthode <code>get</code> ou <code>find</code> pour rechercher un objet à partir de sa clé (son identifiant). La <a href="#fig-Map_Case_Monopoly">figure&nbsp;<span>9.5</span></a> en est un exemple.</p>
+<div id="fig-Map_Case_Monopoly" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="RDCU_files/mediabag/d5dfca4ee80872f0e04d6b8ac40129fbaa257c0b.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 9.5: Exemple de l’utilisation de tableau associatif pour trouver une Case Monopoly à partir de son nom. <a href="http://www.plantuml.com/plantuml/uml/VLBBQjn04BmB_0-DBsj3OhpN9J4s9WI_G4IRvE9BPzIM1erwvEcUEFuZvplsnz8Z6wBai21QYAgfggdMkIWcpMEePF0yOS8HH9y3sKpU5UHW0Vr0DtGfPcvT33619cGnY5WFgXLexmNiGUYHswVaLOdX8RA2P_ZkkOrFOiI_WYqzO0vQA8mZmKtoKivSRI-Dj-r92ABsb0H2Z0DqYN0MQxvzXgCH1mkQ4vapFQ_ixTak50ArvfhWulOMlZQVlZGBUrYV7Y-lz7y2mQuCtf_pYWUuZZanXhsyNuDheN79JxgNLvDLbMGPR5cXfaoLEBIzh4_MortHOoPsT4TIWby4tp4uMmUboXZgdP_GwZ_Sr06LC1y22jJ_OkuEftlUsFpGsDQvUtU9GcSpTQpUdq4D6n3u21rfGOuuZiSLHoL8lklLq3Trm2xjNgn0ZLd9TaPop-M802bCKMJtqX9aXjaIVv834mCNHol1XTtlasfLmvjboVNgkftbPg5gXiS2ls9p6liiQ7LEtDe_-mS0">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<p>Dans la section suivante, l’initialisation des éléments utilisés dans les RDCU (comme des tableaux associatifs) est expliquée.</p>
+</section>
+<section id="sec-RDCU_Demarrer" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="sec-RDCU_Demarrer"><span class="header-section-number">9.6</span> RDCU pour l’initialisation, le scénario Démarrer</h2>
+<p>Le lancement de l’application correspond à la RDCU «&nbsp;Démarrer&nbsp;». La section <strong>Initialisation et cas d’utilisation Démarrer</strong> (F17.4, p.345) ou <strong>Initialization and the ‹Start Up› Use Case</strong> (A18.4, p.274)&nbsp;<i class="fa-solid fa-book"></i>&nbsp;traite ce sujet important. C’est dans cette conception où il faut mettre en place tous les éléments importants pour les hypothèses faites dans les autres RDCU, par exemple les classes de collection (Map), les références pour la visibilité, l’initialisation des contrôleurs, etc.</p>
+<p>Voici quelques points importants:</p>
+<ul>
+<li>Le lancement d’une application dépend du langage de programmation et du système d’exploitation.</li>
+<li>À chaque nouvelle RDCU, on doit possiblement actualiser la RDCU «&nbsp;Démarrer&nbsp;» pour tenir compte des hypothèses faites dans la dernière RDCU. Elle est assez «&nbsp;instable&nbsp;» pour cette raison. Larman recommande de faire sa conception en dernier lieu.</li>
+<li>Il faut choisir l’objet du domaine initial, qui est souvent l’objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses «&nbsp;enfants&nbsp;» directs, puis chaque enfant aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu de Risk à la <a href="MDD.html#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>, <code>JeuRisk</code> pourrait être l’objet racine, qui devra créer l’objet <code>PlateauRisk</code> et les cinq instances de <code>Dé</code>. L’objet <code>PlateauRisk</code>, lors de son initialisation, pourra instancier les 42 objets <code>Pays</code> et les six objets <code>Continent</code>, en passant à chaque <code>Continent</code> leurs objets <code>Pays</code> lors de son initialisation. Si <code>PlateauRisk</code> fournit une méthode <code>getPays(nom)</code> qui dépend d’un tableau associatif selon <a href="#sec-TransformerIDenObjets">Transformer identifiants en objets</a>, alors c’est dans l’initialisation de cette classe où l’instance de <code>Map&lt;String,Pays&gt;</code> sera créée.</li>
+<li>Selon l’application, les objets peuvent être chargés en mémoire à partir d’un système de persistance, par exemple une base de données ou un fichier. Pour l’exemple de Risk, <code>PlateauRisk</code> pourrait charger, à partir d’un fichier JSON, des données pour initialiser toutes les instances de <code>Pays</code>. Pour une application d’inscription de cours à l’université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d’une base de données. Une base de données amène un lot d’avantages et d’inconvénients, et elle n’est pas toujours nécessaire. Dans LOG210, on n’aborde pas le problème de base de données (c’est le sujet d’un autre cours).</li>
+</ul>
+<div id="fig-DemarrerRisk" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="RDCU_files/mediabag/be266878c024393c3a08d83016a81606f8c3211b.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 9.6: Exemple de l’initialisation partielle du jeu de Risk. <a href="http://www.plantuml.com/plantuml/uml/ZLLDJzj04BrRuZ-Ck2H88Ig7NYoAG6bLGQ4WGji3uR3i3lR6zknsTqrBVr7pE_B7EdPYnvYF8aKRP-VDcpTlHiwX3yA5iiWZdscomea2V7Z8aK-dPHNPweHkXSmIPqfIqkJ6GN22F8UGmbOqW91g3_mHa0fIlvmE0Gdk30NG13yqAVFBCt13gF1Eb7ce82GAX2zE-ohd-6h2kAiKFO89AJeFkJ4P90v5JJRz_Xc6XSXOQEcGA-F3WByrSKDvZeghEZWwFOLlqq-Nqqvvs7ktqssfhy2Bf3heTPt7bC69AHs9_5NSxqmgc4gdRNWLTu5ibVDTOLqBWokHqwNWmUoDzxh3mfybaiGpz9Noermd19BdWIvYHD1IMy7-RyVdjtCCPqBJDWWFfWnUA-nXJh2yr3wh4VC-mSVbeWwetlr5BWAAJQBj9qwuIqsigGxBnr4RNuW7lqhiHSw4dL7Cv_wKbv6IqOmgx44DBY9PxG9MEjVDmExkmG7_XXXMiOWC0vnEqX33kZT07o0VcCeDS4Aoi8XNouBUVzzGgeX9QZB5N6gvyDVw1ZuyOZNtwBZMICN0gc7YbWkEbMv6JI6HkELVNYRsBK9IrGBRfW9xr9ImVRqDitN_fUvOtp0NaLqJ5ynRUVYSSEj6HOyzxhAr5JhkrzxNx8tePgx-w1vb5RvcbsOaK-4IT9CduSuyE7soWa6El5E6QBb0FoCrAFcLeMMgENGoFV_AxvLDeMPKJqkFlVw3ZGcoDK6svWwVaQjlncIA4Op7uvt7xiWtkTEskD8rtt--Xkthiwq-MmsfdT3mvVph-OjQxPkqrWDOJQ_Q3A7KqEwiB-JcejtKzk6Gd_X_u1y0">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="réduire-le-décalage-des-représentations" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="réduire-le-décalage-des-représentations"><span class="header-section-number">9.7</span> Réduire le décalage des représentations</h2>
+<p>Le principe du <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a> est la différence entre la modélisation (la représentation) du problème (du domaine) et la modélisation de la solution. Lorsqu’on fait l’ébauche d’une RDCU, on peut réduire le décalage des représentations principalement en s’inspirant des classes conceptuelles (du modèle du domaine) pour proposer des classes logicielles dans la solution décrite dans la RDCU. Plus une solution ressemble à la description du problème, plus elle sera facile à comprendre.</p>
+<blockquote class="blockquote">
+<p>Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n’ayant aucun lien avec le modèle du domaine. Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine. Il faut vérifier avec une personne expérimentée (l’architecte du projet si possible) que l’application du pattern est justifiée, qu’elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées. Chaque fois qu’on propose des classes logicielles qui n’ont pas de liens avec la représentation du problème du domaine, on <em>augmente le décalage des représentations</em> et on rend la solution un peu plus difficile à comprendre. C’est aussi une forme de <a href="AnalyseConception.html#sec-ComplexiteCirc">Complexité circonstancielle (provenant des choix de conception)</a>. Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels. Il est très difficile, même pour les experts en conception, de trouver un bon équilibre entre toutes les forces: la maintenabilité, la simplicité, les fonctionnalités, etc. Vous pouvez en lire plus dans <a href="https://stackoverflow.com/a/18702842/1168342">cette réponse sur StackOverflow</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</p>
+</blockquote>
+</section>
+<section id="sec-FaireSoiMeme" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="sec-FaireSoiMeme"><span class="header-section-number">9.8</span> Pattern «&nbsp;Faire soi-même&nbsp;»</h2>
+<p>Dans la section F30.8/A33.7&nbsp;<i class="fa-solid fa-book"></i>, Larman mentionne le pattern «&nbsp;Faire soi-même&nbsp;» de Peter Coad <span class="citation" data-cites="coad97a">(<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span> qui permet de réduire le <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a>, même s’il ne représente pas exactement la réalité des objets (voir la <a href="#fig-main_des">figure&nbsp;<span>9.7</span></a>):</p>
+<blockquote class="blockquote">
+<p><strong>Faire soi-même</strong>: «&nbsp;Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction&nbsp;»</p>
+</blockquote>
+<div id="fig-main_des" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/flickr_aerust_hand_of_chance.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 9.7: Dans la vraie vie, les dés sont lancés par une main (<a href="https://www.flickr.com/photos/aerust/9590772048/">«&nbsp;Hand of chance&nbsp;»</a> <a href="https://creativecommons.org/licenses/by/2.0/">(CC BY 2.0)</a> par <a href="https://www.flickr.com/people/aerust/">Alexandra E Rust</a>).</figcaption><p></p>
+</figure>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-coad97a" class="csl-entry" role="doc-biblioentry">
+Coad, Peter. 1997. <em>Object <span>Models</span>: <span>Strategies</span>, <span>Patterns</span>, and <span>Applications</span></em>. 2nd Revised ed. edition. <span>Upper Saddle River, N.J</span>: <span>Pearson Technology Group</span>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Contrats.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./TDD.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

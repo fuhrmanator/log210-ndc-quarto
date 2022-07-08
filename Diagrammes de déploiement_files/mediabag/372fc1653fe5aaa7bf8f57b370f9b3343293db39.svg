@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="653px" preserveAspectRatio="none" style="width:1155px;height:653px;background:#FFFFFF;" version="1.1" viewBox="0 0 1155 653" width="1155px" zoomAndPan="magnify"><defs/><g><!--MD5=[0c66e72a6fdf26ca31f48edd7abc94ce]
+cluster Apple Web Server--><g id="cluster_Apple Web Server"><polygon fill="#AFEEEE" points="870,16,880,6,1138,6,1138,446,1128,456,870,456,870,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1128" x2="1138" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="870" x2="1128" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="1128" x2="1128" y1="16" y2="456"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="64" x="968" y="31.9951">«device»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="143" x="928.5" y="48.292">Apple Web Server</text></g><!--MD5=[26052e9c019f88957908c6792eb0578c]
+cluster iTW--><g id="cluster_iTW"><polygon fill="#FFA07A" points="902,88,912,78,1106,78,1106,231,1096,241,902,241,902,88" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1096" x2="1106" y1="88" y2="78"/><line style="stroke:#181818;stroke-width:1.0;" x1="902" x2="1096" y1="88" y2="88"/><line style="stroke:#181818;stroke-width:1.0;" x1="1096" x2="1096" y1="88" y2="241"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="71" x="964.5" y="103.9951">«website»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="973.5" y="120.292">iTunes</text></g><!--MD5=[150c6e6063e4bcd3089a67876cebe34d]
+cluster iTS--><g id="cluster_iTS"><polygon fill="#FFA07A" points="915.5,291,925.5,281,1092.5,281,1092.5,414,1082.5,424,915.5,424,915.5,291" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1082.5" x2="1092.5" y1="291" y2="281"/><line style="stroke:#181818;stroke-width:1.0;" x1="915.5" x2="1082.5" y1="291" y2="291"/><line style="stroke:#181818;stroke-width:1.0;" x1="1082.5" x2="1082.5" y1="291" y2="424"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="71" x="964.5" y="306.9951">«website»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="101" x="949.5" y="323.292">iTunes Store</text></g><!--MD5=[3bb3c26011a900458e6e129ce4506cc0]
+cluster HC--><g id="cluster_HC"><polygon fill="#FFA07A" points="207,164,217,154,411,154,411,457,401,467,207,467,207,164" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="401" x2="411" y1="164" y2="154"/><line style="stroke:#181818;stroke-width:1.0;" x1="207" x2="401" y1="164" y2="164"/><line style="stroke:#181818;stroke-width:1.0;" x1="401" x2="401" y1="164" y2="467"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="64" x="273" y="179.9951">«device»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="128" x="241" y="196.292">Home Computer</text></g><!--MD5=[5811b25a55944475dd63195b77327fcf]
+cluster MD--><g id="cluster_MD"><polygon fill="#FFA07A" points="489,404,499,394,692,394,692,626,682,636,489,636,489,404" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="682" x2="692" y1="404" y2="394"/><line style="stroke:#181818;stroke-width:1.0;" x1="489" x2="682" y1="404" y2="404"/><line style="stroke:#181818;stroke-width:1.0;" x1="682" x2="682" y1="404" y2="636"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="114" x="529.5" y="419.9951">«mobile device»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127" x="523" y="436.292">iPhone/iPad/etc.</text></g><!--MD5=[168a53d818c6a1178540cd923bd9aef1]
+entity iTuneseSetup.exe--><g id="elem_iTuneseSetup.exe"><rect fill="#F1F1F1" height="55.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="156" x="926" y="142"/><polygon fill="#F1F1F1" points="1065,147,1065,161,1077,161,1077,153,1071,147,1065,147" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="1071" x2="1071" y1="147" y2="153"/><line style="stroke:#181818;stroke-width:0.5;" x1="1077" x2="1071" y1="153" y2="153"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="92" x="953" y="167.9951">«application»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="936" y="184.292">iTuneseSetup.exe</text></g><!--MD5=[179788470a8aff7c66bc088ac16c3958]
+entity Media Library--><g id="elem_Media Library"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="949.5" y="345"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="959.5" y="367.9951">Media Library</text></g><!--MD5=[cc6593c7725ff0aed46a7b076a6ae0ec]
+entity wb--><g id="elem_wb"><polygon fill="#FFA07A" points="236,228,246,218,382,218,382,254.2969,372,264.2969,236,264.2969,236,228" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="372" x2="382" y1="228" y2="218"/><line style="stroke:#181818;stroke-width:0.5;" x1="236" x2="372" y1="228" y2="228"/><line style="stroke:#181818;stroke-width:0.5;" x1="372" x2="372" y1="228" y2="264.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="106" x="251" y="250.9951">«web browser»</text></g><!--MD5=[686e85796b441ac30743a46b3a198feb]
+entity iT--><g id="elem_iT"><rect fill="#FF0000" height="52.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="112" x="253" y="299.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="92" x="263" y="322.4951">«application»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="285.5" y="338.792">iTunes</text></g><!--MD5=[8e94227e8949fb09569a9347976a54a0]
+entity ML1--><g id="elem_ML1"><rect fill="#32CD32" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="254.5" y="388"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="264.5" y="410.9951">Media Library</text></g><!--MD5=[cd867fbea90289f1d940f296e4758e7e]
+entity MDOS--><g id="elem_MDOS"><polygon fill="#FFA07A" points="551.5,487.5,561.5,477.5,629.5,477.5,629.5,530.0938,619.5,540.0938,551.5,540.0938,551.5,487.5" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="619.5" x2="629.5" y1="487.5" y2="477.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="551.5" x2="619.5" y1="487.5" y2="487.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="619.5" x2="619.5" y1="487.5" y2="540.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="38" x="566.5" y="510.4951">«OS»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="574" y="526.792">iOS</text></g><!--MD5=[6c7eef7b00c1b270a46fece4fa1edf4a]
+entity ML2--><g id="elem_ML2"><rect fill="#32CD32" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="536" y="576"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="546" y="598.9951">Media Library</text></g><g id="elem_N1"><path d="M6,493.5 L6,564.0313 L152,564.0313 L152,503.5 L142,493.5 L6,493.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M142,493.5 L142,503.5 L152,503.5 L142,493.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="12" y="510.5669">Media libraries are</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="12" y="525.6997">synchronized</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="12" y="540.8325">between devices by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="12" y="555.9653">iTunes</text></g><!--MD5=[0e4de8fb3a36651fdce8ff388019daed]
+link N1 to ML1--><g id="link_N1_ML1"><path d="M109.85,493.15 C130.37,470.91 159.52,443.68 191,428 C210.52,418.28 233.82,412.83 254.47,409.79 " fill="none" id="N1-ML1" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[d181fc5edc414a57f8bdcaaf81538a52]
+link N1 to ML2--><g id="link_N1_ML2"><path d="M152.19,538.21 C255.68,551.41 443.87,575.42 535.91,587.16 " fill="none" id="N1-ML2" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[057bf042cab822e62a1d1d5450331ca8]
+link HC to MD--><g id="link_HC_MD"><path d="M411.5109,452.8273 C415.6638,452.5747 419.8655,452.3191 424.0997,452.0615 C432.568,451.5463 441.1666,451.0231 449.765,450.5 C458.3634,449.9769 466.9618,449.4538 475.4299,448.9385 C479.6639,448.6809 483.8654,448.4253 488.018,448.1727 C488.2776,448.1569 488.5369,448.1411 488.7961,448.1253 " fill="none" id="HC-MD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="436" y="446.0669">USB</text></g><!--MD5=[e8cf868d6ce6b08077fe18f25b2a5b73]
+link iT to iTS--><g id="link_iT_iTS"><path d="M365.25,333.18 C446.695,343.755 604.2875,364.22 742.43,382.16 C776.9656,386.645 810.2856,390.9722 840.8963,394.9476 C856.2016,396.9353 870.8296,398.835 884.5936,400.6226 C891.4755,401.5163 898.1415,402.3821 904.5681,403.2167 C907.7814,403.634 910.9349,404.0436 914.0256,404.445 " fill="none" id="iT-iTS" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="556.5" y="329.0669">«protocol»</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="522.5" y="344.1997">iTunes Store Protocol</text></g><!--MD5=[b313425349e1e71fbdc3244b7ba8d655]
+link wb to iTW--><g id="link_wb_iTW"><path d="M382.2,240.17 C470.255,239.15 623.7275,237.3775 756.04,235.85 C789.1181,235.4681 820.8738,235.1016 849.9541,234.7659 C864.4943,234.5981 878.3656,234.438 891.3991,234.2875 C894.6574,234.2499 897.8634,234.2129 901.0144,234.1765 " fill="none" id="wb-iTW" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="556.5" y="218.0669">«protocol»</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="574.5" y="233.1997">HTTP</text></g><!--MD5=[be83e7c0c87979d0240f77e6b346c479]
+link MDOS to iTS--><g id="link_MDOS_iTS"><path d="M629.84,500.33 C680.52,488.88 772.755,468.035 852.8413,449.935 C892.8844,440.885 929.8903,432.5213 957.1461,426.3613 C960.5531,425.5913 963.8077,424.8557 966.8969,424.1575 " fill="none" id="MDOS-iTS" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="724" y="433.0669">«wireless protocol»</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="717" y="448.1997">iTunes Store Protocol</text></g><!--MD5=[69dd71aeaa9c70c1c5367ece45a774ff]
+@startuml
+left to right direction
+node "Apple Web Server" <<device>>#PaleTurquoise {
+    node iTunes as iTW <<website>>#LightSalmon {
+        artifact iTuneseSetup.exe <<application>>
+    }
+    node "iTunes Store" as iTS <<website>>#LightSalmon {
+        rectangle "Media Library"
+    }
+}
+'iTW -down- iTS
+node "Home Computer" as HC <<device>>#LightSalmon {
+    node " " as wb <<web browser>>#LightSalmon
+    rectangle iTunes as iT <<application>>#red
+    rectangle "Media Library" as ML1 #LimeGreen
+}
+node "iPhone/iPad/etc." as MD <<mobile device>>#LightSalmon {
+    node "iOS" as MDOS <<OS>>#LightSalmon
+    rectangle "Media Library" as ML2 #LimeGreen
+}
+note as N1
+Media libraries are
+synchronized
+between devices by
+iTunes
+end note
+N1 .. ML1
+N1 .. ML2
+' HC *- - ML1
+' HC *-l- wb
+HC - - MD : USB
+'iT .u.> HC
+iT - - iTS : <<protocol>>\niTunes Store Protocol
+' MD *- - MDOS
+' MD *- - ML2
+wb - - iTW : <<protocol>>\nHTTP
+MDOS - - iTS : <<wireless protocol>>\niTunes Store Protocol
+@enduml
+
+@startuml
+left to right direction
+node "Apple Web Server" <<device>>#PaleTurquoise {
+    node iTunes as iTW <<website>>#LightSalmon {
+        artifact iTuneseSetup.exe <<application>>
+    }
+    node "iTunes Store" as iTS <<website>>#LightSalmon {
+        rectangle "Media Library"
+    }
+}
+node "Home Computer" as HC <<device>>#LightSalmon {
+    node " " as wb <<web browser>>#LightSalmon
+    rectangle iTunes as iT <<application>>#red
+    rectangle "Media Library" as ML1 #LimeGreen
+}
+node "iPhone/iPad/etc." as MD <<mobile device>>#LightSalmon {
+    node "iOS" as MDOS <<OS>>#LightSalmon
+    rectangle "Media Library" as ML2 #LimeGreen
+}
+note as N1
+Media libraries are
+synchronized
+between devices by
+iTunes
+end note
+N1 .. ML1
+N1 .. ML2
+HC - - MD : USB
+iT - - iTS : <<protocol>>\niTunes Store Protocol
+wb - - iTW : <<protocol>>\nHTTP
+MDOS - - iTS : <<wireless protocol>>\niTunes Store Protocol
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

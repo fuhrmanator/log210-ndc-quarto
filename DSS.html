@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 5&nbsp; Diagrammes de séquence système (DSS)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./GRASP.html" rel="next">
+<link href="./MDD.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#exemple-dss-pour-attaquer-un-pays" id="toc-exemple-dss-pour-attaquer-un-pays" class="nav-link active" data-scroll-target="#exemple-dss-pour-attaquer-un-pays"> <span class="header-section-number">5.1</span> Exemple: DSS pour Attaquer un pays</a></li>
+  <li><a href="#les-dss-font-abstraction-de-la-couche-présentation" id="toc-les-dss-font-abstraction-de-la-couche-présentation" class="nav-link" data-scroll-target="#les-dss-font-abstraction-de-la-couche-présentation"> <span class="header-section-number">5.2</span> Les DSS font abstraction de la couche présentation</a></li>
+  <li><a href="#faq-dss" id="toc-faq-dss" class="nav-link" data-scroll-target="#faq-dss"> <span class="header-section-number">5.3</span> FAQ DSS</a>
+  <ul class="collapse">
+  <li><a href="#faut-il-une-opération-système-après-une-boucle" id="toc-faut-il-une-opération-système-après-une-boucle" class="nav-link" data-scroll-target="#faut-il-une-opération-système-après-une-boucle"> <span class="header-section-number">5.3.1</span> Faut-il une opération système après une boucle?</a></li>
+  <li><a href="#comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" id="toc-comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" class="nav-link" data-scroll-target="#comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs"> <span class="header-section-number">5.3.2</span> Comment faire si un cas d’utilisation a des <em>scénarios alternatifs</em>?</a></li>
+  <li><a href="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" id="toc-est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="nav-link" data-scroll-target="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"> <span class="header-section-number">5.3.3</span> Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type primitif)?</a></li>
+  <li><a href="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" id="toc-ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" class="nav-link" data-scroll-target="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp"> <span class="header-section-number">5.3.4</span> Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page web au contrôleur GRASP?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Un diagramme de séquence système (DSS) est un diagramme UML (diagramme de séquence) limité à un acteur (provenant du scénario d’un cas d’utilisation) et le Système. Les DSS sont expliqués en détail dans le chapitre 10&nbsp;<i class="fa-solid fa-book"></i>, mais voici des points importants pour LOG210:</p>
+<ul>
+<li>Le DSS a toujours un titre.</li>
+<li>L’acteur est indiqué dans la notation par un bonhomme et est représenté comme une <em>instance</em> de la classe du bonhomme, comme <code>:Joueur</code> dans la <a href="#fig-dssattaquerunpays">figure&nbsp;<span>5.1</span></a> (le «&nbsp;:&nbsp;» signifie une instance).</li>
+<li>Le Système est un objet (une instance <code>:Système</code>) et n’est jamais détaillé plus.</li>
+<li>Le but du DSS est de définir des opérations système (Application Programming Interface) du système; il s’agit d’une conception de haut niveau.</li>
+<li>Le côté acteur du DSS n’est pas un acteur tout seul, mais une couche logicielle de présentation, comme une interface graphique ou un logiciel qui peut reconnaître la parole. Cette couche reconnaît des gestes de l’acteur (par exemple un clic sur un bouton dans l’interface, une demande «&nbsp;Hé Siri&nbsp;», etc.) et envoie une opération système.</li>
+<li>Puisque la couche présentation reçoit des informations des êtres humains, <em>les opérations système ont des arguments de type primitif</em>. Il est difficile pour un utilisateur de spécifier une référence (pointeur en mémoire) à un objet. Alors, on peut donner le nom (de type <code>String</code>) d’un morceau de musique à jouer, ou spécifier une quantité (de type <code>Integer</code>).</li>
+<li>Puisque les types des arguments sont importants, on les spécifie dans les opérations système du DSS.</li>
+<li>Un message de retour (ligne pointillée avec flèche ouverte) vers l’acteur représente la communication des informations précises, par exemple les valeurs des dés dans l’attaque. Puisque la couche présentation a beaucoup de moyens pour afficher ces informations, <em>on ne va pas spécifier les messages de retour comme des méthodes</em>.</li>
+</ul>
+<section id="exemple-dss-pour-attaquer-un-pays" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="exemple-dss-pour-attaquer-un-pays"><span class="header-section-number">5.1</span> Exemple: DSS pour Attaquer un pays</h2>
+<p>La <a href="#fig-dssattaquerunpays">figure&nbsp;<span>5.1</span></a> est un exemple de DSS pour le cas d’utilisation <em>Attaquer un pays</em>. Vous pouvez noter tous les détails (titre, arguments, types).</p>
+<div id="fig-dssattaquerunpays" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="DSS_files/mediabag/484ba24a092b01c9db531e10416af2036101d9df.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 5.1: Diagramme de séquence système pour <em>Attaquer un pays</em>. <a href="http://www.plantuml.com/plantuml/uml/VLFBRjj03BmBo3yGlZW6uhP1RuPXn6YA8cqA557INd9XLhIyi4Ifv2uI_r7r7VgnSkFOKN8me1V4uN268rreG0cnhZBTU6vHi0ODsuhiAjwboicWz81kKqeJkN1DrGW4GLOh4OUJR0nXxHNiG5WZ5u_YGo26LSC1FCCVpqNpg0Py9IneXR4A2S9O4_mGhwddwlQBuMxNf0HDM9CeL4spWL88dydotz_WjCQD2Or2DfcsOxjxDaDLHOLD5LXUNyDT_lKc7uo7yq-JeQNt2XJBTE7ZEgzu0z-RA8pLKTpJnXMGE_5jE8hxHROgqQ6muGg3HChKeULo_k7pC2lw6uaT_IHDmfULBncSnK6I1HyCVvddq9fIcFl5CWGql41aQ76hyuz-aQ4BjghHpEnGb16WWikCFNZdMxJeHhDygw7_LzDpKJCtNIZCeEYx6aL8NcXF4-NkERND8BTFYCkpUqw5oxvR4QkDE5GccMNQcX85qrjxxhizDp8tPkj0pGytVLVwsfoz6U4vJDxtx2UzQTgzB8PTy_bqclgaxzIomA0MIphZ4rIOcFGi5LyOe2Kfei8z5mJL60ygA40HqpRs_cphpZprdLltdI4o6vm-ttQlTEVsrTqakp28_Ml_0G00">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="les-dss-font-abstraction-de-la-couche-présentation" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="les-dss-font-abstraction-de-la-couche-présentation"><span class="header-section-number">5.2</span> Les DSS font abstraction de la couche présentation</h2>
+<p>Le but du DSS est de se concentrer sur l’API (les opérations système) de la solution. Dans ce sens, c’est une conception de haut niveau. Le «&nbsp;Système&nbsp;» est modélisé comme une boîte noire. Par exemple, dans la <a href="#fig-dssabstraction">figure&nbsp;<span>5.2</span></a> il y a l’acteur, le Système et une opération système. On ne rentre pas dans les détails, bien qu’ils existent et sont importants.</p>
+<div id="fig-dssabstraction" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="DSS_files/mediabag/eb9823db1dfd91cba17cff167ed0bab725004e07.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 5.2: Une opération système dans un DSS. C’est une abstraction. <a href="http://www.plantuml.com/plantuml/uml/VLB1IWD13Bqlz1z2Bwq7YyLR3z8Y8ce5SQkUusniXvtDr2HBxH_fT_J7pFRYug4mP0xl9Nd9ormDnTec5Lf7tg9W0shxH1ubXWuPzA1t3FLQSijLo2aBc22hGyGsA4PWcwZW3s63NEqacX73HsQ3oF0MkSexTU9VmOe-i4tMKHWRWWU9skNShQwTjzgG4cJRa2Yad6jO2-6nMFbw2-C6QnVQ2dbdse_yZ-m3fKILTnLOB9VmKjuybxtsCBquwu_qNu7YkWjyMkSTrt2VMs5C9tbVTQYW31AtTfBtHBugqRwm_WfDMYeqeFiodLpslQBFbZZG8sadV97YcY6u7IG51lCT36UkareP0Yg4mjCiXhX5zsGuA_TgX--6Zg0MuVnAOGRLuQT14PA56NhzyMGoEIlcn9MVmoy0">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<p>Plus tard, lorsque c’est le moment d’implémenter le code, les détails importants seront à respecter. Il faut faire attention aux principes de la séparation des couches présentation et domaine. Par exemple, la <a href="#fig-dssdetails">figure&nbsp;<span>5.3</span></a> rentre dans les détails de ce qui se passe réellement dans une opération système quand la solution fonctionne avec un service web:</p>
+<ul>
+<li>D’abord, l’acteur clique sur un bouton;</li>
+<li>Ce clic se transforme en service REST;</li>
+<li>Un routeur transforme l’appel REST en une opération système envoyée à un contrôleur GRASP. Notez que c’est un <strong>objet du domaine qui reçoit l’opération système</strong> – c’est l’essence du principe GRASP Contrôleur;</li>
+<li>Le contrôleur GRASP dirige la suite, selon la solution proposée dans la réalisation de cas d’utilisation (RDCU).</li>
+</ul>
+<div id="fig-dssdetails" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="DSS_files/mediabag/122ed6c9ff93382f2cb279199094957fb35d8697.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 5.3: Une opération système est envoyée par la couche présentation et elle est reçue dans la couche domaine par son contrôleur GRASP. Ceci est un exemple avec un navigateur web, mais d’autres possibilités existent pour la couche présentation. <a href="http://www.plantuml.com/plantuml/uml/VLJ1RXen4Bslb7yOqKC2Ig6ebmf5gm29qgH9YrZIN7ePx06SDVPsx4r8lwYvzm_uiSwksdH1LQILlVAyUU_DZENJ495ZkRP9o8qha74D8JvPafMDgY87ZT0SLRvaNpgjlFKCaT452P6B1yaXn9K981_22fr-P1CZELXu5y4uk3DE-ySWm7-4cXPOsbX17Au9Fh49LSxbR2ousOe2WOyhuW3M-noMJ5YJPLylu6YDkHWjcKIPdWvbDquAifQqg38Chw_XDZkVPWrvwBzhDqlQTn1mMItkTP-NBeShNx93-ofkaoiDcM9Jn5Tn4v9MSMWQQxOmSab9K2XpwNVVDsT5tqjoYcueLCQ7rYmTA1a7SGCbQpJA5EZY1BKsRYbT-0_Bo6z6dZNnU7-w2Qee9ws154qbjm03t2Tplu7Ms9TgHL3mzZa84gFnhWLlj5uij4uQqf8zAcEief8zXvEJp_XWbXY5y8xcQGfxwAalurynhk1Uq_ccOAarJHDo6iJ0ZWdjrsWSrVALWJt2Aogd9kGreHB2iRIVjx-iY5nCXzb4M7SIkjrkZGqlOlVmDXNh0r3MICyucSj1Aku6y74scy35-UoRws5XUW_zdju-hv6PU1WZ2hedV8dpKQxq0t6TL9V8zQojx4T_ocid_CAhQOUaIN0CQW1VYkqprrs7y1JYzgTS9r5U66VaHoO8PrbMyqdD0-XqJeBvGOF-XtIF-KZijJkTH5NG8D1Tk-guFWnaHSaYJC_6jycfD4RUYDy0">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<div class="callout-warning callout callout-style-simple">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>La <a href="#fig-dssdetails">figure&nbsp;<span>5.3</span></a> est à titre d’information seulement. Un DSS ne rentre pas dans tous ces détails.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="faq-dss" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="faq-dss"><span class="header-section-number">5.3</span> FAQ DSS</h2>
+<section id="faut-il-une-opération-système-après-une-boucle" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="faut-il-une-opération-système-après-une-boucle"><span class="header-section-number">5.3.1</span> Faut-il une opération système après une boucle?</h3>
+<blockquote class="blockquote">
+<p>Dans l’exemple pour <em>Attaquer un pays</em>, à l’extérieur de la boucle il y a une opération système <code>terminerAttaque</code>. Est-ce obligatoire d’avoir une opération système après une boucle?</p>
+</blockquote>
+<p>L’opération système <code>terminerAttaque</code> sert pour signaler la fin de la boucle. Le système saura que l’acteur ne veut plus répéter les actions dans la boucle. Mais elle permet aussi de faire des calculs concernant ce qui s’est passé dans la boucle, p.&nbsp;ex. pour déterminer qui contrôle quel pays après les attaques.</p>
+<p>Cependant, si vous avez une boucle pour indiquer la possibilité de répéter une action (p.&nbsp;ex. ajouter des produits dans un système d’inventaire) et vous n’avez pas besoin de faire un calcul à la fin, alors une opération système pour terminer une telle boucle n’est pas nécessaire (surtout avec une application web).</p>
+</section>
+<section id="comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs"><span class="header-section-number">5.3.2</span> Comment faire si un cas d’utilisation a des <em>scénarios alternatifs</em>?</h3>
+<blockquote class="blockquote">
+<p>Fait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs <code>opt</code> et <code>alt</code>) pour montrer des flots différents dans le même DSS?</p>
+</blockquote>
+<p>Un objectif de faire un DSS est de <strong>définir les opérations système</strong>. Donc, on peut se poser la question suivante: les scénarios alternatifs impliquent-ils une ou plusieurs opérations système n’ayant pas encore été définies? Si la réponse est non, on peut ignorer les scénarios alternatifs dans le DSS. Par contre, si la réponse est oui, il est essentiel de définir ces opérations système dans un DSS. Quant au choix de faire des DSS séparés ou d’utiliser la notation UML pour montrer les flots différents sur le même DSS, ça dépend de la complexité de la logique des flots. Un DSS devrait être <em>facile à comprendre</em>. C’est à vous de juger si votre DSS avec des <code>opt</code> ou <code>alt</code> est assez simple ou fait du <em>spaghetti</em>. Utilisez un autre DSS (ou plusieurs) ayant le nom des scénarios alternatifs si cela vous semble plus clair.</p>
+</section>
+<section id="est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"><span class="header-section-number">5.3.3</span> Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type primitif)?</h3>
+<blockquote class="blockquote">
+<p>Puisqu’une opération système doit avoir seulement des arguments de type primitif, j’ai plusieurs opérations système avec de nombreux (plus que 5) arguments. Pourquoi il n’est pas permis de passer des objets comme argument?</p>
+</blockquote>
+<p>Il n’est pas conseillé de passer des <em>objets du domaine</em> comme argument, puisque c’est la couche présentation qui invoque l’opération système. La couche présentation n’est pas censée manipuler directement les objets dans la couche domaine, sinon elle empiète sur les responsabilités de la couche domaine.</p>
+<p>Une solution pour réduire le nombre d’arguments sans utiliser un objet du domaine est d’appliquer un <a href="#Refactoring">réusinage</a> pour le <em>smell</em> nommé <em>Long Parameter List</em>, par exemple <a href="https://refactoring.com/catalog/introduceParameterObject.html">Introduce Parameter Object</a>. Notez que l’objet de paramètres que vous introduisez n’est pas un objet (classe) du domaine! La distinction est importante, car la logique d’affaires demeure dans la couche domaine. En TypeScript, une fonction peut être définie avec un objet de paramètre. Cet exemple montre même comment on peut «&nbsp;déstructurer&nbsp;» l’objet pour déclarer les variables utilisées dans la fonction:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// inspiré de https://leanpub.com/essentialtypescript/read</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">compteARebours</span>({ initial<span class="op">:</span> <span class="dt">number</span><span class="op">,</span> final<span class="op">:</span> final <span class="op">=</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                          increment<span class="op">:</span> increment <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> initial<span class="op">:</span> actuel }) {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> (actuel <span class="op">&gt;=</span> final) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(actuel)<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        actuel <span class="op">-=</span> increment</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">compteARebours</span>({ initial<span class="op">:</span> <span class="dv">20</span> })<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">compteARebours</span>({ initial<span class="op">:</span> <span class="dv">20</span><span class="op">,</span> increment<span class="op">:</span> <span class="dv">2</span><span class="op">,</span> final<span class="op">:</span> <span class="dv">4</span> })<span class="op">;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp"><span class="header-section-number">5.3.4</span> Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page web au contrôleur GRASP?</h3>
+<blockquote class="blockquote">
+<p>Décortiquer toutes les informations dans un formulaire web est compliqué, puis on doit passer tout ça à un contrôleur GRASP comme des arguments de type primitif. Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page web au contrôleur GRASP et le laisser faire le décorticage?</p>
+</blockquote>
+<p>Dans un sens ça serait plus simple (pour le code de la couche présentation). Cependant, nous voulons séparer les couches pour favoriser le remplacement de la couche présentation, par exemple à travers une application iOS ou Android.</p>
+<p>Si vous mettez la logique de la couche présentation (décortiquer un formulaire web) dans la couche domaine (le contrôleur GRASP), ça ne respecte pas les responsabilités des couches. Imaginez un tel contrôleur GRASP si vous aviez trois types d’application frontale (navigateur web, application iOS et application Android). Le contrôleur GRASP recevra des représentations de «&nbsp;formulaire&nbsp;» de chaque couche présentation différente. En passant, l’objet <code>body</code> n’a rien à voir avec une interface Android! Ce pauvre contrôleur serait obligé de connaître alors toutes les trois formes (web, iOS, Android) et ainsi sa cohésion sera beaucoup plus faible. Pour respecter les responsabilités, on laisse la couche présentation faire le décorticage et construire une opération système selon l’API définie dans le DSS. Cela simplifie aussi le contrôleur GRASP.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./MDD.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./GRASP.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

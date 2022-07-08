@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 8&nbsp; Contrats d’opération</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./RDCU.html" rel="next">
+<link href="./DetteTechnique.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#quest-ce-quun-contrat-dopération" id="toc-quest-ce-quun-contrat-dopération" class="nav-link active" data-scroll-target="#quest-ce-quun-contrat-dopération"> <span class="header-section-number">8.1</span> Qu’est-ce qu’un contrat d’opération</a></li>
+  <li><a href="#exemple-contrats-dopération-pour-attaquer-un-pays" id="toc-exemple-contrats-dopération-pour-attaquer-un-pays" class="nav-link" data-scroll-target="#exemple-contrats-dopération-pour-attaquer-un-pays"> <span class="header-section-number">8.2</span> Exemple: Contrats d’opération pour Attaquer un pays</a>
+  <ul class="collapse">
+  <li><a href="#attaquer-un-pays" id="toc-attaquer-un-pays" class="nav-link" data-scroll-target="#attaquer-un-pays"> <span class="header-section-number">8.2.1</span> Attaquer un pays</a></li>
+  </ul></li>
+  <li><a href="#feuille-de-référence" id="toc-feuille-de-référence" class="nav-link" data-scroll-target="#feuille-de-référence"> <span class="header-section-number">8.3</span> Feuille de référence</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Les contrats d’opération sont le sujet du chapitre 11&nbsp;<i class="fa-solid fa-book"></i>. Voici les points importants pour le cours:</p>
+<ul>
+<li>On ne spécifie pas les préconditions dans les contrats.</li>
+<li>Un contrat d’opération correspond à une opération système provenant d’un DSS.</li>
+<li>Ne pas confondre les postconditions d’un contrat d’opération et d’un cas d’utilisation. Ce sont deux choses différentes.</li>
+<li>Une postcondition décrit les modifications de l’état des objets dans le modèle du domaine après une opération système.</li>
+<li>Le vocabulaire pour les postconditions provient du modèle du domaine. Il s’agit des noms de classes, d’attributs et d’associations qu’on trouve dans le MDD.</li>
+<li>Chaque postcondition doit avoir la bonne forme:
+<ul>
+<li>création (ou suppression) d’instances;</li>
+<li>modification des valeurs des attributs;</li>
+<li>formation (ou rupture) d’associations.</li>
+</ul></li>
+<li>En rédigeant les contrats, il est normal de découvrir dans le modèle du domaine des incohérences ou des éléments manquants. Il <em>faut</em> les corriger (il faut changer le MDD), car cela fait partie d’un processus itératif et évolutif.</li>
+</ul>
+<section id="quest-ce-quun-contrat-dopération" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="quest-ce-quun-contrat-dopération"><span class="header-section-number">8.1</span> Qu’est-ce qu’un contrat d’opération</h2>
+<p>Un contrat d’opération est un document décrivant ce qui est arrivé après l’exécution d’une opération système. Cette description est présentée sous forme de postconditions utilisant le vocabulaire du modèle du domaine.</p>
+<p>Le MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente) mais aussi des <em>instances</em> de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clients qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque client.</p>
+<p>Dans la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter Vente</em>. Elle correspond au moment où le caissier démarre une nouvelle vente pour un client. Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec le passé composé en français): «&nbsp;une instance <em>v</em> de Vente a été créée&nbsp;».</p>
+<p>Un contrat d’opération permet de spécifier tous les changements dans le MDD qui doivent avoir lieu lors de l’opération système. Les postconditions du contrat saisissent l’évolution du MDD.</p>
+<div id="fig-ContratExempleCreerNouvelleVente" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/SurvolContrats.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 8.1: Pendant l’opération système <code>créerNouvelleVente</code>, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exemple-contrats-dopération-pour-attaquer-un-pays" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="exemple-contrats-dopération-pour-attaquer-un-pays"><span class="header-section-number">8.2</span> Exemple: Contrats d’opération pour Attaquer un pays</h2>
+<p>Voir la <a href="#fig-MDD-risk-objets">figure&nbsp;<span>8.2</span></a> pour les changements dans les objets du modèle du domaine correspondant aux postconditions.</p>
+<section id="attaquer-un-pays" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="attaquer-un-pays"><span class="header-section-number">8.2.1</span> Attaquer un pays</h3>
+<section id="opération-démarrerattaquepaysattaquantstring-paysdéfenseurstring" class="level4" data-number="8.2.1.1">
+<h4 data-number="8.2.1.1" class="anchored" data-anchor-id="opération-démarrerattaquepaysattaquantstring-paysdéfenseurstring"><span class="header-section-number">8.2.1.1</span> Opération: <code>démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)</code></h4>
+<section id="postconditions" class="level5" data-number="8.2.1.1.1">
+<h5 data-number="8.2.1.1.1" class="anchored" data-anchor-id="postconditions"><span class="header-section-number">8.2.1.1.1</span> Postconditions</h5>
+<ul>
+<li>une nouvelle instance <em>a</em> de Attaque a été créée</li>
+<li><em>a</em> a été associée au Pays sur une base de correspondance avec paysAttaquant</li>
+<li><em>a</em> a été associée au Pays sur une base de correspondance avec paysDéfenseur</li>
+</ul>
+</section>
+</section>
+<section id="opération-annoncerattaquenbrégimentsattaquantint" class="level4" data-number="8.2.1.2">
+<h4 data-number="8.2.1.2" class="anchored" data-anchor-id="opération-annoncerattaquenbrégimentsattaquantint"><span class="header-section-number">8.2.1.2</span> Opération: <code>annoncerAttaque(nbRégimentsAttaquant:int)</code></h4>
+<section id="postconditions-1" class="level5" data-number="8.2.1.2.1">
+<h5 data-number="8.2.1.2.1" class="anchored" data-anchor-id="postconditions-1"><span class="header-section-number">8.2.1.2.1</span> Postconditions</h5>
+<ul>
+<li>a.nbAttaquant est devenu nbRégimentsAttaquant</li>
+</ul>
+</section>
+</section>
+<section id="opération-annoncerdéfensenbrégimentsdéfendantint" class="level4" data-number="8.2.1.3">
+<h4 data-number="8.2.1.3" class="anchored" data-anchor-id="opération-annoncerdéfensenbrégimentsdéfendantint"><span class="header-section-number">8.2.1.3</span> Opération: <code>annoncerDéfense(nbRégimentsDéfendant:int)</code></h4>
+<section id="postconditions-2" class="level5" data-number="8.2.1.3.1">
+<h5 data-number="8.2.1.3.1" class="anchored" data-anchor-id="postconditions-2"><span class="header-section-number">8.2.1.3.1</span> Postconditions</h5>
+<ul>
+<li>a.nbDéfendant est devenu nbRégimentsDéfendant</li>
+<li>L’attribut valeur des d1 à d5 est devenue un nombre entier aléatoire entre 1 et 6</li>
+<li>Occupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysAttaquant.</li>
+<li>Occupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysDéfendant.</li>
+</ul>
+</section>
+</section>
+<section id="opération-terminerattaque" class="level4" data-number="8.2.1.4">
+<h4 data-number="8.2.1.4" class="anchored" data-anchor-id="opération-terminerattaque"><span class="header-section-number">8.2.1.4</span> Opération: <code>terminerAttaque()</code></h4>
+<section id="postconditions-3" class="level5" data-number="8.2.1.4.1">
+<h5 data-number="8.2.1.4.1" class="anchored" data-anchor-id="postconditions-3"><span class="header-section-number">8.2.1.4.1</span> Postconditions</h5>
+<ul>
+<li>TODO: Handle the change of Occupation?</li>
+</ul>
+<!-- Draw.io svg contient du texte en SVG 1.1 qui pose problème. Alors j'exporte manuellement en PDF avec l'outil draw.io sur le web. -->
+<div id="fig-MDD-risk-objets" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/MDD-Risk-contrats.drawio.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 8.2: Les postconditions décrivent la manipulation d’objets dans un MDD (la partie inférieure ici est un diagramme d’objets)</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="feuille-de-référence" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="feuille-de-référence"><span class="header-section-number">8.3</span> Feuille de référence</h2>
+<p>Pour faire des contrats, voici une démarche générale:</p>
+<ol type="1">
+<li>Faire un contrat pour chaque opération système</li>
+<li>Regarder toujours le MDD (vocabulaire du domaine)</li>
+<li>Rappeler les formes de postconditions
+<ol type="a">
+<li>créer/supprimer instance</li>
+<li>former/briser association</li>
+<li>modifier attributs</li>
+</ol></li>
+<li>Ne rien oublier. Marquer le MDD ou dessiner un diagramme d’objets, comme à la <a href="#fig-MDD-risk-objets">figure&nbsp;<span>8.2</span></a> si nécessaire.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./DetteTechnique.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./RDCU.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 12&nbsp; Développement de logiciel en équipe</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Outils-UML.html" rel="next">
+<link href="./Réusinage.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#humilité-respect-confiance" id="toc-humilité-respect-confiance" class="nav-link active" data-scroll-target="#humilité-respect-confiance"> <span class="header-section-number">12.1</span> Humilité, Respect, Confiance</a>
+  <ul class="collapse">
+  <li><a href="#humilité" id="toc-humilité" class="nav-link" data-scroll-target="#humilité"> <span class="header-section-number">12.1.1</span> Humilité</a></li>
+  <li><a href="#respect" id="toc-respect" class="nav-link" data-scroll-target="#respect"> <span class="header-section-number">12.1.2</span> Respect</a></li>
+  <li><a href="#confiance" id="toc-confiance" class="nav-link" data-scroll-target="#confiance"> <span class="header-section-number">12.1.3</span> Confiance</a></li>
+  </ul></li>
+  <li><a href="#sec-Bus_Factor" id="toc-sec-Bus_Factor" class="nav-link" data-scroll-target="#sec-Bus_Factor"> <span class="header-section-number">12.2</span> Redondance des compétences dans l’équipe (Bus Factor)</a></li>
+  <li><a href="#mentorat" id="toc-mentorat" class="nav-link" data-scroll-target="#mentorat"> <span class="header-section-number">12.3</span> Mentorat</a></li>
+  <li><a href="#scénarios" id="toc-scénarios" class="nav-link" data-scroll-target="#scénarios"> <span class="header-section-number">12.4</span> Scénarios</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Le développement de logiciels se fait souvent en équipe. Cependant, il y a des défis pour travailler en équipe. Souvent, avant l’université on apprend comment s’organiser en équipe, faire des rencontres, répartir le travail, planifier, etc. Pourtant, il y a d’autres défis dans ce travail, des défis sur le plan humain. C’est le sujet du livre «&nbsp;Team Geek&nbsp;» <span class="citation" data-cites="fitzpatrick_team_2012">(<a href="references.html#ref-fitzpatrick_team_2012" role="doc-biblioref">2012</a>)</span> écrit par Brian W. Fitzpatrick (anciennement de Google) et Ben Collins-Sussman (Subversion, Google).</p>
+<p>Aujourd’hui, la demande pour le talent en technologies de l’information est importante. Les technologies évoluent constamment et le temps que vous investissez pour maîtriser une technologie est important. Pourtant, il y a des risques avec certains investissements de temps à long terme. Par exemple, qui développe du code encore pour <a href="https://fr.wikipedia.org/wiki/Adobe_Flash">Flash</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>? Cette technologie est maintenant désuète et ça ne sert à rien de mentionner cette compétence sur un CV.</p>
+<p>La bonne nouvelle est qu’une «&nbsp;technologie&nbsp;» ne changera jamais: le comportement humain. Donc, il est toujours rentable d’investir du temps pour mieux maîtriser cet aspect du développement. Les entreprises en technologies de l’information sont toujours à la recherche de développeurs qui ont également des compétences générales («&nbsp;soft skills&nbsp;»).</p>
+<p>Les auteurs de «&nbsp;Team Geek&nbsp;» abordent les problèmes dus aux tendances comportementales chez les développeurs. Par exemple, une personne n’a pas toujours envie de montrer son code source à ses coéquipiers pour plusieurs raisons:</p>
+<ul>
+<li>Son code n’est pas fini.</li>
+<li>Elle a peur d’être jugée.</li>
+<li>Elle a peur que quelqu’un vole son idée.</li>
+</ul>
+<p>Dans tous ces cas, il s’agit de l’insécurité et c’est tout à fait normal. Par contre, ce genre de comportement augmente certains risques dans le développement:</p>
+<ul>
+<li>de faire des erreurs dans la conception initiale;</li>
+<li>de «&nbsp;réinventer la roue&nbsp;»;</li>
+<li>de terminer le travail plus tard que son compétiteur, qui, lui, a collaboré avec son équipe.</li>
+</ul>
+<p>Les auteurs le disent et c’est un fait: si nous sommes tous plus ou moins compétents sur le plan technique, ce qui fera la différence importante dans une carrière est notre habileté à collaborer avec les autres.</p>
+<div id="fig-HRC_venn" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/HRC_venn.svg" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 12.1: Pratiquement tout conflit social est dû à un manque d’humilité, de respect ou de confiance.</figcaption><p></p>
+</figure>
+</div>
+<section id="humilité-respect-confiance" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="humilité-respect-confiance"><span class="header-section-number">12.1</span> Humilité, Respect, Confiance</h2>
+<p>L’humilité, le respect et la confiance (voir la <a href="#fig-HRC_venn">figure&nbsp;<span>12.1</span></a>) sont les qualités de base pour le bon travail en équipe. Cette section présente ces aspects en détail.</p>
+<section id="humilité" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="humilité"><span class="header-section-number">12.1.1</span> Humilité</h3>
+<p>Voici la définition d’<em>humilité</em> selon Antidote:</p>
+<blockquote class="blockquote">
+<p><em>Disposition à s’abaisser volontairement, par sentiment de sa propre faiblesse.</em></p>
+</blockquote>
+<p>Une personne humble pense ainsi:</p>
+<ul>
+<li>Je ne suis pas le centre de l’univers.</li>
+<li>Je ne suis ni omniscient ni infaillible.</li>
+<li>Je suis ouvert à m’améliorer.</li>
+</ul>
+<blockquote class="blockquote">
+<p>L’humilité ne veut pas dire «&nbsp;je n’ai pas de valeur&nbsp;» ou «&nbsp;j’accepte d’être mal traité.e par les autres&nbsp;». Voir la section <a href="Laboratoires.html#sec-solution_problemes_equipes">Proposer des solutions si besoin</a>.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/flickr_diamondduste_center.jpg" class="img-fluid figure-img" width="200"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Éviter d’être le <a href="https://www.flickr.com/photos/diamondduste/466060240/">«&nbsp;Centre de l’univers&nbsp;»</a> (<a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>) par <a href="https://www.flickr.com/people/diamondduste/">Diamondduste</a>.</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/flickr_smkybear_missing.jpg" class="img-fluid figure-img" width="200"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><a href="https://www.flickr.com/photos/smkybear/2705041322/">«&nbsp;Missing&nbsp;»</a> (<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>) par <a href="https://www.flickr.com/people/smkybear/">smkybear</a>.</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-moi_inf_equipe" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="TravailEquipe_files/mediabag/7b6530da5555667ee232bbd53d08a43c92a7f51b.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 12.2: Un coéquipier humble va accepter une décision prise par l’équipe, même s’il n’était pas en accord à 100%. <a href="http://www.plantuml.com/plantuml/uml/JO_1IWH134Jl_HLXFIpCHIzUP1aMFViHcUxqJfZkT9jaq1L_mE_onvn1aArJKQyegBCvgg-rX2DqZWiWv2OEBE0pGMfn8JqQsDMSQh25fQDYXKGPr-9xMR0IV2mnWKNbxZSjfUWebqBFJHFfIojDmHN5DaxYOUP4GBNx5IhLYTJ-eiWQ2zqisOoflRDS86Cn2l_BS3WPVzBJuyCu33_VRojtWX5U6m_3wNv7um7kSfusVKtJRiAP96sVVm40">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<p>Quelques exemples concrets d’humilité dans le développement:</p>
+<ul>
+<li>Un coéquipier débutant en JavaScript, git, etc. va le reconnaître et va même faire des exercices sur Internet pour s’améliorer.</li>
+<li>Un coéquipier (même le chef d’équipe) qui a pris une mauvaise décision (technique ou autre) va l’avouer. Il sait que les autres ne sont pas là pour l’attaquer (ils le respectent).</li>
+<li>Un coéquipier va travailler fort pour que <em>son équipe</em> réussisse.</li>
+<li>Un coéquipier qui reçoit une critique ne va pas la prendre personnellement. Il sait que la qualité de son code n’équivaut pas à son estime de soi. (Cela n’est pas toujours facile!)</li>
+</ul>
+</section>
+<section id="respect" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="respect"><span class="header-section-number">12.1.2</span> Respect</h3>
+<p>Une personne démontrant du respect pense ainsi:</p>
+<ul>
+<li>Je me soucie des gens avec qui je travaille.</li>
+<li>Je les traite comme des êtres humains.</li>
+<li>J’ai de l’estime pour leurs capacités et leurs réalisations.</li>
+</ul>
+</section>
+<section id="confiance" class="level3" data-number="12.1.3">
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="confiance"><span class="header-section-number">12.1.3</span> Confiance</h3>
+<p>Une personne démontrant la confiance pense ainsi:</p>
+<ul>
+<li>Je crois que les autres coéquipiers sont compétents et qu’ils feront la bonne chose.</li>
+<li>Je suis à l’aise lorsqu’ils prennent le volant, le cas échéant.</li>
+</ul>
+<p>Le dernier point peut être extrêmement difficile si vous avez déjà été déçu par une personne incompétente à qui vous avez délégué une tâche.</p>
+</section>
+</section>
+<section id="sec-Bus_Factor" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="sec-Bus_Factor"><span class="header-section-number">12.2</span> Redondance des compétences dans l’équipe (Bus Factor)</h2>
+<p>Pour qu’une équipe soit robuste, il faut une redondance des compétences. Sinon, la perte d’un coéquipier (pour une raison quelconque) peut engendrer de graves conséquences, voire arrêter carrément le développement. Ce principe a été nommé en anglais <em>Bus factor</em>. C’est le nombre minimum de coéquipiers à perdre (heurtés par un bus) pour arrêter le projet par manque de personnel bien informé ou compétent. Par exemple, dans un projet de stage, si c’est vous qui écrivez tout le code, alors c’est un <em>bus factor</em> de 1. Si vous n’êtes plus présent, le projet s’arrête.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/BusFactorTeamGeek.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><em>Facteur de bus</em> (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné. <span class="citation" data-cites="fitzpatrick_team_2012">(<a href="references.html#ref-fitzpatrick_team_2012" role="doc-biblioref">Fitzpatrick et Collins-Sussman 2012</a>)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Un coéquipier peut être absent (ou moins disponible) pour des raisons moins graves, par exemple, il part en vacances, il tombe malade, il prend un congé parental, il change d’emploi, ou il abandonne le cours. Cherchez à répartir les responsabilités dans l’équipe afin d’avoir un <em>bus factor</em> d’au moins 2. Partagez des compétences pour maintenir une équipe robuste. Vous pouvez également garder votre solution <em>simple</em> et garder la documentation de votre conception à jour.</p>
+<blockquote class="blockquote">
+<p>Si un coéquipier quitte en cours de la session, il n’est pas facile de maintenir le même rythme. Cependant, les enseignants et les chargés de laboratoire de LOG210 s’attendront à ce que vous ayez pensé à un plan B avant de perdre le coéquipier. Au moins un autre coéquipier doit être au courant de ce que faisait l’ancien coéquipier, pour que le projet ne soit pas complètement arrêté.</p>
+</blockquote>
+</section>
+<section id="mentorat" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="mentorat"><span class="header-section-number">12.3</span> Mentorat</h2>
+<p>En LOG210, ça peut être l’enseignant qui décide la composition des équipes. Ça veut dire que forcément certains coéquipiers ont plus d’expérience et de facilité à faire certaines tâches que d’autres. Les équipes doivent composer avec cette diversité. C’est une approche pédagogique reconnue par les experts.</p>
+<p>Selon TeamGeek:</p>
+<blockquote class="blockquote">
+<p>Si vous avez déjà un bon bagage en programmation, ça peut être pénible de voir un coéquipier moins expérimenté tente un travail qui lui prendra beaucoup de temps lorsque vous savez que ça vous prendra juste quelques minutes. Apprendre à quelqu’un comment faire une tâche et lui donner l’occasion d’évoluer tout seul est un défi au début, mais cela est une caractéristique importante du leadership.</p>
+</blockquote>
+<p>Si les plus forts n’aident pas les autres, ils risquent de les éloigner de l’équipe et de se trouver seuls sur le plan des contributions techniques. Voir la section sur la <a href="#sec-Bus_Factor">Redondance des compétences dans l’équipe (Bus Factor)</a>.</p>
+<p>Encadrer un coéquipier au début de la session peut prendre beaucoup de temps. Mais, si la personne devient plus autonome, c’est un gain pour toute l’équipe. Cela augmente également le <em>bus factor</em>.</p>
+<p>Voici quelques conseils pour le mentorat:</p>
+<ul>
+<li>avoir les compétences sur un plan technique;</li>
+<li>être capable d’expliquer des choses à quelqu’un d’autre;</li>
+<li>savoir combien d’aide à donner à la personne encadrée.</li>
+</ul>
+<p>Selon TeamGeek, le dernier point est important parce que si vous donnez trop d’informations, la personne peut vous ignorer plutôt que vous dire gentiment qu’elle a compris.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://farm8.static.flickr.com/7459/10081683216_2b02836f82_b.jpg" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Encadrer les coéquipiers est une habileté à mettre sur son CV <a href="https://www.flickr.com/photos/24498081@N06/10081683216/">«&nbsp;CultureTECH BT Monster Dojo&nbsp;»</a> (<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>) par <a href="https://www.flickr.com/people/24498081@N06/">connor2nz</a>.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="scénarios" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="scénarios"><span class="header-section-number">12.4</span> Scénarios</h2>
+<p>Considérez les volets HRC lorsque vous vous trouvez dans une des situations suivantes:</p>
+<ul>
+<li>un coéquipier se trouve à être le seul à faire de la programmation.
+<ul>
+<li>il ne fait plus confiance à ses coéquipiers, car leur code est trop bogué.</li>
+<li>il n’a pas la patience pour accommoder les coéquipiers moins expérimentés.</li>
+<li>il croit que les autres auraient dû apprendre mieux à programmer dans les cours préalables.</li>
+</ul></li>
+<li>un coéquipier dit qu’il a «&nbsp;fait ses 3 heures de contribution&nbsp;» chaque dimanche chez lui et que ça devrait suffire pour sa partie (il a un emploi et n’a pas beaucoup de temps disponible pour l’équipe d’un laboratoire).</li>
+<li>un ou deux membres d’une équipe abandonnent le cours après l’examen intra, à cause du double-seuil du cours.</li>
+<li>un coéquipier suit cinq (!) cours en même temps et n’a pas le temps adéquat pour travailler correctement dans LOG210.</li>
+<li>plusieurs coéquipiers sont «&nbsp;expérimentés&nbsp;» mais ils ont de la difficulté à s’entendre sur la direction du projet.</li>
+<li>l’équipe n’est pas cohésive; chacun fait avancer sa partie, mais le code ne fonctionne pas ensemble.</li>
+</ul>
+<p>Vous devez en parler avec votre équipe. Si la situation ne s’améliore pas, vous devez en parler avec les chargés de laboratoire et l’enseignant.</p>
+<p>Pour mieux évaluer le travail de chacun dans l’équipe au laboratoire, il y a des conseils dans la section <a href="Laboratoires.html#sec-ContributionsEquipe">Évaluer les contributions des membres de l’équipe</a>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-fitzpatrick_team_2012" class="csl-entry" role="doc-biblioentry">
+Fitzpatrick, Brian W., et Ben Collins-Sussman. 2012. <em>Team <span>Geek</span>: <span>A</span> <span>Software</span> <span>Developer</span>’s <span>Guide</span> to <span>Working</span> <span>Well</span> with <span>Others</span></em>. 1 edition. Sebastopol. CA: O’Reilly Media.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Réusinage.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Outils-UML.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

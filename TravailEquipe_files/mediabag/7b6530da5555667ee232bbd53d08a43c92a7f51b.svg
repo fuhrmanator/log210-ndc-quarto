@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="110px" preserveAspectRatio="none" style="width:323px;height:110px;background:#FFFFFF;" version="1.1" viewBox="0 0 323 110" width="323px" zoomAndPan="magnify"><defs><linearGradient id="g1xoi5e7twfz6d0" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#FFBBBB"/><stop offset="100%" stop-color="#BBFFBB"/></linearGradient></defs><g><!--MD5=[de1cbe15bb054690ab873994702c1a53]
+entity <size:50>**Équipe > Moi**</size>--><g id="elem_&lt;size:50&gt;**Équipe &gt; Moi**&lt;/size&gt;"><rect fill="url(#g1xoi5e7twfz6d0)" height="89.4508" rx="2.5" ry="2.5" style="stroke:#00000000;stroke-width:0.5;" width="302" x="7" y="7"/><text fill="#000000" font-family="xkcd script" font-size="50" font-weight="bold" lengthAdjust="spacing" textLength="282" x="17" y="71.4976">Équipe &gt; Moi</text></g><!--MD5=[bc99aaf0df4e1c04b70c0c155f0b78a1]
+@startuml
+' pick a font in the docker's system
+skinparam defaultfontname xkcd script
+skinparam rectangleBorderColor transparent
+hide empty members
+hide circle
+skinparam shadowing false
+rectangle "<size:50>**Équipe > Moi**</size>" #ffbbbb|bbffbb
+@enduml
+
+@startuml
+skinparam defaultfontname xkcd script
+skinparam rectangleBorderColor transparent
+hide empty members
+hide circle
+skinparam shadowing false
+rectangle "<size:50>**Équipe > Moi**</size>" #ffbbbb|bbffbb
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

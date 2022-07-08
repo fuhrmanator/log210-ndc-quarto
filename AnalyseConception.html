@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 1&nbsp; Analyse et conception de logiciels</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Besoins.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#livre-obligatoire" id="toc-livre-obligatoire" class="nav-link active" data-scroll-target="#livre-obligatoire"> <span class="header-section-number">1.1</span> Livre obligatoire</a></li>
+  <li><a href="#analyse-vs-conception" id="toc-analyse-vs-conception" class="nav-link" data-scroll-target="#analyse-vs-conception"> <span class="header-section-number">1.2</span> Analyse vs Conception</a></li>
+  <li><a href="#sec-DecalageRepresentations" id="toc-sec-DecalageRepresentations" class="nav-link" data-scroll-target="#sec-DecalageRepresentations"> <span class="header-section-number">1.3</span> Décalage des représentations</a></li>
+  <li><a href="#la-complexité-et-ses-sources" id="toc-la-complexité-et-ses-sources" class="nav-link" data-scroll-target="#la-complexité-et-ses-sources"> <span class="header-section-number">1.4</span> La complexité et ses sources</a>
+  <ul class="collapse">
+  <li><a href="#complexité-inhérente-provenant-du-problème" id="toc-complexité-inhérente-provenant-du-problème" class="nav-link" data-scroll-target="#complexité-inhérente-provenant-du-problème"> <span class="header-section-number">1.4.1</span> Complexité inhérente (provenant du problème)</a></li>
+  <li><a href="#sec-ComplexiteCirc" id="toc-sec-ComplexiteCirc" class="nav-link" data-scroll-target="#sec-ComplexiteCirc"> <span class="header-section-number">1.4.2</span> Complexité circonstancielle (provenant des choix de conception)</a></li>
+  <li><a href="#complexité-environnementale-provenant-de-lenvironnement-dexécution" id="toc-complexité-environnementale-provenant-de-lenvironnement-dexécution" class="nav-link" data-scroll-target="#complexité-environnementale-provenant-de-lenvironnement-dexécution"> <span class="header-section-number">1.4.3</span> Complexité environnementale (provenant de l’environnement d’exécution)</a></li>
+  </ul></li>
+  <li><a href="#survol-de-la-méthodologie" id="toc-survol-de-la-méthodologie" class="nav-link" data-scroll-target="#survol-de-la-méthodologie"> <span class="header-section-number">1.5</span> Survol de la méthodologie</a></li>
+  <li><a href="#développement-itératif-évolutif-et-agile" id="toc-développement-itératif-évolutif-et-agile" class="nav-link" data-scroll-target="#développement-itératif-évolutif-et-agile"> <span class="header-section-number">1.6</span> Développement itératif, évolutif et agile</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Voici le descriptif du cours, selon le plan de cours:</p>
+<div class="callout-important callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>À la suite de ce cours, l’étudiant sera en mesure:</p>
+<ul>
+<li>de maîtriser et appliquer des patrons de conception logicielle;</li>
+<li>de concevoir un logiciel orienté objet en appliquant un ensemble de principes et des méthodes heuristiques de génie logiciel;</li>
+<li>de réaliser un logiciel en suivant un processus itératif et évolutif incluant les activités d’analyse et de conception par objets.</li>
+</ul>
+<p>Méthodes et techniques de modélisation orientés objet, langage de modélisation, cas d’utilisation, analyse orientée objet, modèle du domaine, conception et programmation orientées objet, principes GRASP, patrons de conception, processus itératif et évolutif.</p>
+<p>Séances de laboratoire axées sur l’application des notions d’analyse, de conception et de programmation orientées objet vues en classe. Mise en œuvre d’un modèle d’objet à partir d’une spécification de logiciel et à l’aide d’un langage orienté objet contemporain. Conception d’applications utilisant les outils UML ainsi que des techniques et des outils utiles au génie logiciel, tels qu’un environnement de développement intégré, la compilation automatique et les tests automatiques.</p>
+</div>
+</div>
+</div>
+<section id="livre-obligatoire" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="livre-obligatoire"><span class="header-section-number">1.1</span> Livre obligatoire</h2>
+<p>Le livre obligatoire <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005</a>)</span> pour ce cours est indiqué dans le plan de cours. <strong>Le présent document n’est pas un substitut pour le livre obligatoire.</strong></p>
+<p>Les références au livre obligatoire sont indiquées par l’icône du livre&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<p>Le livre est disponible en français et en anglais, cependant les chapitres ne sont pas toujours les mêmes. Donc, il est parfois nécessaire d’indiquer la référence avec <strong>F</strong> et <strong>A</strong> pour la langue. Par exemple, <strong>F16.10/A17.10</strong> indique la section <strong>16.10 du livre en français</strong> et la section <strong>17.10 du livre en anglais.</strong></p>
+<p>Toutes les références sont données pour la 3<sup>e</sup> édition du livre. Si vous avez une autre édition, les chapitres ne sont pas toujours les mêmes et vous devez chercher le sujet dans la table des matières.</p>
+</section>
+<section id="analyse-vs-conception" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="analyse-vs-conception"><span class="header-section-number">1.2</span> Analyse vs Conception</h2>
+<p>Ce sujet est abordé en détail dans le chapitre 1&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<p>L’<strong>analyse</strong> met l’accent sur une investigation du problème et des besoins plutôt que sur la recherche d’une solution.</p>
+<p>La <strong>conception</strong> sous-entend l’élaboration d’une solution conceptuelle répondant aux besoins plutôt que la mise en œuvre de cette solution.</p>
+<div id="fig-mddDes" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="AnalyseConception_files/mediabag/2d335c997771f728c20e5ce302e24bfe2726bb62.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.1: Diagramme de <em>classes conceptuelles</em> décrivant le <em>problème</em> d’un jeu de dés (adapté du Jeu de dés du Ch. 1 de Larman). Ceci est élaboré lors d’une activité d’analyse.</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-ddcDes" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="AnalyseConception_files/mediabag/476d2316f69e72b57010140f061f7b3a9d7704f0.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.2: Diagramme de <em>classes logicielles</em> décrivant une <em>solution</em> au problème du jeu de dés. La conception s’inspire du modèle du problème, afin de faciliter sa compréhension.</figcaption><p></p>
+</figure>
+</div>
+<p>Imaginez un jeu qui est joué dans la vraie vie avec deux dés à six faces. Ensuite, on veut construire un logiciel pour ce jeu et donc on peut spécifier la règle du jeu, dont un de nombreux besoins est de générer un nombre aléatoire entre 1 et 6 (comme un dé à six faces). On peut aussi modéliser ce besoin (un élément du problème) par une classe conceptuelle <code>Dé</code> ayant un attribut <code>face</code> dont sa valeur est un type <code>int</code>. Les personnes travaillant sur un projet vont facilement comprendre ce modèle, car les gens comprennent les objets qui représentent des aspects de la vraie vie.</p>
+<p>Dans LOG210 une modélisation orientée objet est utilisée et pour l’analyse (classes conceptuelles décrivant le problème et les besoins comme à la <a href="#fig-mddDes">figure&nbsp;<span>1.1</span></a>) et pour la conception (classes logicielles proposant une solution dont sa représentation est proche de la modélisation du problème comme à la <a href="#fig-ddcDes">figure&nbsp;<span>1.2</span></a>).</p>
+</section>
+<section id="sec-DecalageRepresentations" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sec-DecalageRepresentations"><span class="header-section-number">1.3</span> Décalage des représentations</h2>
+<p>Vous avez sûrement remarqué que le modèle du problème (<a href="#fig-mddDes">figure&nbsp;<span>1.1</span></a>) ressemble beaucoup au modèle de la solution (<a href="#fig-ddcDes">figure&nbsp;<span>1.2</span></a>) pour notre exemple de jeu de dés. Cependant, il y a des différences, car une solution comporte des détails sur la dynamique du jeu qui sera codée. Le modèle du problème et le modèle de la solution ne sont pas identiques.</p>
+<div class="callout-tip callout callout-style-simple">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Imaginez une autre solution n’ayant qu’une seule classe <code>Jeu</code> contenant toute la logique du jeu. Avez-vous déjà codé une solution simple comme ça? C’est un bon design au départ, car c’est simple. Mais au fur et à mesure que vous codez la logique du jeu, bien que ça fonctionne parfaitement, la classe <code>Jeu</code> grossit et devient difficile à comprendre. <!-- Par exemple, on voit une méthode `brasser()` dans la classe `Dé` qui montre que ce sera la responsabilité de cette classe de changer sa valeur quand ça sera le bon moment. --></p>
+</div>
+</div>
+</div>
+<p>Une caractéristique souhaitable d’un design est qu’il soit facile à comprendre et à valider par rapport au problème qu’il est censé résoudre. <!-- Dans un modèle d'analyse, on décompose le problème en concepts.
+On comprend plus facilement les éléments dans ce modèle. --> Plus une solution (conception) ressemble à une description (modèle d’analyse) du problème, plus elle est facile à comprendre et à valider. La différence entre la représentation d’un problème et la représentation de sa solution s’appelle le <em>décalage des représentations</em>. C’est un terme complexe pour un principe très intuitif. Méfiez-vous des classes importantes dont leur nom est difficile à tracer au problème. Elles vont rendre votre solution plus difficile à comprendre. Pour des explications de Larman, lisez la section 9.3&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<p>L’exemple du jeu est trivial, puisque le problème est relativement simple. Réduire le décalage des représentations est un principe très important surtout lorsque le problème à résoudre est complexe.</p>
+</section>
+<section id="la-complexité-et-ses-sources" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="la-complexité-et-ses-sources"><span class="header-section-number">1.4</span> La complexité et ses sources</h2>
+<p>Un.e ingénieur.e logiciel est constamment dans une bataille avec un adversaire dont le nom est la complexité. Mais qu’est-ce que la complexité? La&nbsp;<a href="#fig-complexity">figure&nbsp;<span>1.3</span></a> est une image de la complexité. Reconnaissez-vous le domaine d’où vient cette image?</p>
+<p>Voici une définition de la complexité:</p>
+<blockquote class="blockquote">
+<p><strong>Complexité</strong>: Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.</p>
+</blockquote>
+<div id="fig-complexity" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/flickr_lytfyre_complexity.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.3: <a href="https://www.flickr.com/photos/lytfyre/6489338411/">«&nbsp;Complexity&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/lytfyre/">lytfyre</a>.</figcaption><p></p>
+</figure>
+</div>
+<p>En voici quelques exemples en développement de logiciels:</p>
+<ul>
+<li>Un <em>problème</em> peut être complexe, par exemple le domaine des lois fiscales pour lequel des logiciels existent pour aider les gens à faire des déclarations de revenus.</li>
+<li>Un <em>projet logiciel</em> peut être complexe, avec plusieurs packages, chacun ayant beaucoup de classes, etc.</li>
+<li>Un cadre d’applications (cadriciel, <em>framework</em>) est toujours complexe. Par exemple un framework comme Angular ou React pour développer un <em>front-end</em> (application frontale), car l’interaction entre l’utilisateur et une application (possiblement répartie dans le nuage) nécessite beaucoup de fonctionnalités supportées par le cadriciel.</li>
+<li>Un <em>algorithme</em> peut être complexe, par exemple, l’algorithme de <a href="https://fr.wikipedia.org/wiki/Tri_de_Shell">tri de Shell</a> est plus complexe qu’un simple algorithme de <a href="https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles">tri à bulles</a>. Notez que la complexité d’un algorithme peut parfois apporter des gains de performance, mais coder, déboguer et maintenir une implémentation d’un algorithme complexe sera plus coûteux.</li>
+<li>Un <em>patron de conception</em> peut être complexe, par exemple, les patrons Visiteur, Décorateur, Médiateur, etc. Un patron définit des rôles et parfois des classes et du code supplémentaires à créer. Le tout doit s’intégrer dans un design existant (qui est possiblement déjà complexe).</li>
+<li>Un <em>environnement</em> peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l’environnement sans fil, des écrans tactiles, la pile limitée, etc.</li>
+</ul>
+<p>La <a href="#fig-complexitySources">figure&nbsp;<span>1.4</span></a> présente les sources de complexité ainsi que leurs noms qu’on va utiliser dans le cours:</p>
+<section id="complexité-inhérente-provenant-du-problème" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="complexité-inhérente-provenant-du-problème"><span class="header-section-number">1.4.1</span> Complexité inhérente (provenant du problème)</h3>
+<p>La complexité inhérente est au sein du problème que résout un logiciel. Elle est souvent <em>visible</em> à l’utilisateur du logiciel. Elle se compose des parties du logiciel qui sont nécessairement des problèmes difficiles. N’importe quel logiciel qui tente de résoudre ces problèmes aura une manifestation de cette complexité dans son implémentation. Exemple: un logiciel qui aide à faire des déclarations de revenus aura une complexité inhérente due à la complexité des lois fiscales qui spécifient comment doit être préparée une déclaration.</p>
+</section>
+<section id="sec-ComplexiteCirc" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-ComplexiteCirc"><span class="header-section-number">1.4.2</span> Complexité circonstancielle (provenant des choix de conception)</h3>
+<p>Les choix que font les ingénieur.e.s dans un projet peuvent amener de la complexité circonstancielle. En tant qu’ingénieur.e.s, nous avons un devoir de contrôler cette forme de complexité, par exemple en prenant soin avec un choix de cadriciel Web ou d’architecture logicielle. La complexité circonstancielle peut aussi être due à des contraintes imposées sur la conception, comme une utilisation obligatoire d’une vieille base de données ou d’une bibliothèque logicielle héritée, d’un langage de programmation, etc. La complexité circonstancielle (aussi appelée accidentelle) peut être gérée avec des technologies, par exemple les débogueurs, les patrons de conception (un Adaptateur pour les bases de données différentes), etc.</p>
+</section>
+<section id="complexité-environnementale-provenant-de-lenvironnement-dexécution" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="complexité-environnementale-provenant-de-lenvironnement-dexécution"><span class="header-section-number">1.4.3</span> Complexité environnementale (provenant de l’environnement d’exécution)</h3>
+<p>Cette forme de complexité comprend des aspects d’une solution qui ne sont pas sous le contrôle des ingénieur.e.s. Dans un environnement d’exécution, il y a des dimensions comme le ramasse-miettes (<em>garbage collection</em>), l’ordonnancement des fils d’exécution (<em>threads</em>) sur un serveur, l’utilisation de <em>containers</em> (à la Docker), etc. qui peuvent affecter la qualité d’un logiciel. Les ingénieur.e.s doivent gérer ces formes de complexité, mais il n’y a pas beaucoup de stratégies évidentes face aux technologies qui évoluent très vite.</p>
+<div id="fig-complexitySources" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="AnalyseConception_files/mediabag/8e372c0627ae720f539208d176039b96756be4d0.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.4: Sources de complexité.</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="survol-de-la-méthodologie" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="survol-de-la-méthodologie"><span class="header-section-number">1.5</span> Survol de la méthodologie</h2>
+<p>La <a href="#fig-SurvolMethodologie">figure&nbsp;<span>1.5</span></a> présente la méthode d’analyse et de conception enseignée dans le cours. C’est une adaptation de plusieurs figures présentées dans le livre du cours.</p>
+<div id="fig-SurvolMethodologie" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/FigA.1-avec-contrats.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.5: Survol de la méthodologie.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="développement-itératif-évolutif-et-agile" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="développement-itératif-évolutif-et-agile"><span class="header-section-number">1.6</span> Développement itératif, évolutif et agile</h2>
+<p>Le chapitre 2 du livre&nbsp;<i class="fa-solid fa-book"></i>&nbsp;définit un processus itératif et adaptatif ainsi que les concepts fondamentaux du Processus Unifié.</p>
+<p>Les points importants sont les suivants:</p>
+<ul>
+<li>Le développement itératif et évolutif implique de programmer et de tester précocement un système partiel selon des cycles répétitifs.</li>
+<li>Un cycle est nommé une itération et dure un temps fixe (par exemple, 3 semaines) comprenant les activités d’analyse, de conception, de programmation et de test, ainsi qu’une démonstration pour solliciter des rétroactions du client (voir la <a href="#fig-DevIteratifIncremental">figure&nbsp;<span>1.6</span></a>).</li>
+<li>La durée d’une itération est limitée dans le temps (<em>timeboxed</em> en anglais), de 2 à 6 semaines. Il n’est pas permis d’ajouter du temps à la durée d’une itération si le projet avance plus lentement que prévu, car cela impliquerait un retard de la rétroaction du client. Si le respect des délais semble compromis, on supprime plutôt des tâches ou des spécifications et on les inclut dans l’itération suivante.</li>
+<li>Les premières itérations peuvent sembler chaotiques, car elles sont loin de la «&nbsp;bonne voie&nbsp;». Avec la rétroaction du client et l’adaptation, le système à développer converge vers une solution appropriée (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.7</span></a>).</li>
+<li>Il y a plusieurs avantages du développement itératif et incrémental:
+<ul>
+<li>moins d’échecs, amélioration de la productivité et de la qualité;</li>
+<li>gestion précoce des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.)</li>
+<li>progrès immédiatement visibles;</li>
+<li>rétroaction, implication des utilisateurs et adaptations précoces;</li>
+<li>complexité gérée (par itération);</li>
+<li>possibilité d’exploiter méthodiquement les leçons tirées d’une itération.</li>
+</ul></li>
+<li>Dans une itération, la modélisation avec l’UML se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n’est pas triviale (voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.8</span></a>).</li>
+</ul>
+<div id="fig-DevIteratifIncremental" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/A2.1.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.6: Le développement itératif et incrémental (Figure 2.1 du livre).</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-StabiliteDansLesIterations" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/F2.2.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.7: Rétroaction et adaptation itératives convergent vers le système souhaité (Figure 2.2 du livre).</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-AnalyseConceptionDansLesIterations" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/F2.4.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.8: Analyse et conception évolutives, majoritairement effectuées dans les premières itérations (Figure 2.4 du livre).</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-IteratifEvolutif" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/iteratif-evolutif.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.9: Processus itératif et évolutif.</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-nuageDeMots" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/LOG210wordle_ordre_alph.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1.10: Nuage de mots importants du plan de cours de LOG210.</figcaption><p></p>
+</figure>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Préface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Besoins.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

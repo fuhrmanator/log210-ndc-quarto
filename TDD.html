@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 10&nbsp; Développement piloté par les tests</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Réusinage.html" rel="next">
+<link href="./RDCU.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#kata-tdd" id="toc-kata-tdd" class="nav-link active" data-scroll-target="#kata-tdd"> <span class="header-section-number">10.1</span> Kata TDD</a>
+  <ul class="collapse">
+  <li><a href="#exemple-de-kata-tdd-fizzbuzz" id="toc-exemple-de-kata-tdd-fizzbuzz" class="nav-link" data-scroll-target="#exemple-de-kata-tdd-fizzbuzz"> <span class="header-section-number">10.1.1</span> Exemple de Kata TDD FizzBuzz</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-TDD" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Si on écrivait des logiciels pouvant se tester automatiquement? Le développement piloté par les tests (anglais <em>test-driven development, TDD</em>) est une pratique populaire et intéressante. Il s’agit d’écrire des logiciels avec un composant d’autovalidation (des tests automatisés). Mais, écrire beaucoup de tests n’est pas toujours une tâche agréable pour des développeurs. Historiquement, si on attend la fin d’un projet pour écrire des tests, il ne reste plus beaucoup de temps et l’équipe laisse tomber les tests. Pour pallier ce problème, le développement piloté par les tests propose de travailler <strong>en petits pas</strong>. C’est-à-dire écrire un test simple (en premier), puis écrire la partie du logiciel pour passer le test de manière simple (le plus simple). Ça fait moins de codage entre les validations et c’est possiblement même plus stimulant pour les développeurs.</p>
+<p>Ainsi, il y a toujours des tests pour les fonctionnalités et le développement se fait en petits incréments qui sont validés par les tests. Faire les <em>petits pas</em> réduit le risque associé à de gros changements dans un logiciel sans validation intermédiaire. Au fur et à mesure qu’on développe un logiciel, on développe également quelques tests de ce dernier. Puisque les tests sont automatiques, ils sont aussi faciles à exécuter que le compilateur.</p>
+<p>Il y a une discipline imposée dans le TDD qui nécessite d’écrire un <em>test en premier</em>, c’est-à-dire <em>avant</em> d’écrire le code. La démarche est illustrée par la <a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>. Beaucoup d’outils (IDE) favorisent ce genre de développement. Nous pouvons écrire un test qui appelle à une fonction qui n’existe pas encore et l’IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour même. Un puriste du TDD insistera sur le fait que le test soit écrit toujours en premier! Cette discipline est parfois culturelle.</p>
+<p>Plusieurs chercheurs ont mené des expériences, par exemple <span class="citation" data-cites="Karac_TDD_2018">Karac et Turhan (<a href="references.html#ref-Karac_TDD_2018" role="doc-biblioref">2018</a>)</span>, pour voir si <em>tester en premier</em> avait un vrai bénéfice. Les résultats de leurs analyses n’ont pas toujours montré que c’est le cas (ce genre d’expérience est difficile de faire, en partie parce qu’il n’y a pas beaucoup de développeurs en industrie qui le pratiquent). Les chercheurs ont trouvé que faire un petit test <em>après</em> avoir écrit le code a aussi un bénéfice sur le plan de la qualité. Dans tous les cas, des chercheurs ont trouvé que le fait de travailler en <em>petits pas</em> apporte <em>toujours</em> un avantage sur le plan de la qualité. Travailler en <em>petits pas</em> est utile, même sans faire du TDD de manière dogmatique.</p>
+<p>Sachez qu’il existe beaucoup d’intergiciels (anglais <em>frameworks</em>) pour faciliter l’exécution automatique des tests réalisés dans le cadre du TDD. Pour Java il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements. En ce qui concerne le squelette pour le laboratoire de LOG210, il s’agit de <a href="https://jestjs.io/">Jest</a>. <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). --></p>
+<p>L’exécution de tests peut être même faite à chaque commit du code dans un dépôt comme GitHub. Le squelette de LOG210 utilise <a href="https://travis-ci.org/">Travis</a> pour cela. Cependant, pour un dépôt privé, Travis nécessite un compte payant.</p>
+<p>Il est possible de mesurer la <a href="https://fr.wikipedia.org/wiki/Couverture_de_code">couverture de code</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>&nbsp;atteinte par les tests (mais ce sujet commence à sortir du cadre de la matière du cours). Le squelette utilise <a href="https://coveralls.io/">Coveralls</a> pour ce faire.</p>
+<div id="fig-TDD_states" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="TDD_files/mediabag/711196cbeb61faf5000cee14ada59fe1670a8b48.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 10.1: États du développement piloté par les tests. <a href="http://www.plantuml.com/plantuml/uml/RLJDQXin4BxhAGONwgJ43eLIYZ5B4fj0BgKqII_T7kJToLf4AsqraerxwhLlqTxgv_2Rz4awqgx_WY_BelbclX_DxXLvwNoejPYh4W7hng-WH2gSQhooHj2pCerqiWRoAutyTAf83VlAlPSURwmhqKsijWvcMXRFBm6trlYsl9mhZwVAzubYPdLvigf-8Bnz_x9qxPnT7jRxUy0KdsJGFbO_oXgXTu-LHNYyWvieiIVwNdcctFpYIGHbW7ApNg2sJOCr6W-DqjPlri3ZG2E1H_8aAFB2Pnig14dGkmvGMsKeDy4aI6usws9k0_RWbSEoQ_Y2pYVyWmsCtStBMIqHqp6wSeYcmt-Iz32TfevnaPBZMHcV0X_dvk1iJEnzzEv3Ddxjvw6U3KgxDDduCY4o7hj2hUrIV7tp3GPELNC_o3hz8vYupHfTRemD2vGXDr6KQAi3ny2aUyGXyLOuXCAMo99jSF0a-Q2JxvAPCpeVKsYoVp__Z2_ZYqZT0tr0c9lJb2ronzVvIubajv49Wk702wyMYYzbQs-NH8laDURfWPIH5NPQVhTQjXqT4rDjCpvs1oHDUpT2OuMcX89l1vqu7lTug0QEUC7qkPlNXc8hiLiePE2G16z8u-nCR_xoFie55j3jp10cs32NDFw2cxI41eCNqZcru72_1znl831pjpFGw4207fJcwmYbawAmt5Dn3t_8Up8QYkERkTE90VOC_KuAa5KUQgbZ6cpjJCKtunNpHGCpMmKy7y8qnbH4QtG1ra17p3hR6FbxIiv4ZB1DKbpnWtyV_m40">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<p>Les activités de réusinage sont expliquées dans la section <a href="Réusinage.html">Réusinage (Refactorisation)</a>.</p>
+<section id="kata-tdd" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="kata-tdd"><span class="header-section-number">10.1</span> Kata TDD</h2>
+<p>Pour apprendre à faire du développement piloté par les tests (et pour apprendre les cadriciels supportant l’automatisation des tests), il existe une activité nommée «&nbsp;kata TDD&nbsp;». <em>Kata</em> est un terme japonais désignant une séquence de techniques réalisée dans le vide dans les arts martiaux japonais. <a href="https://www.youtube.com/watch?v=DmPk_A-RU50">En voici une vidéo</a>&nbsp;<i class="fa-brands fa-youtube"></i>. C’est un outil de transmission de techniques et de principes de combat.</p>
+<div id="fig-KataBasaiDai" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/karate.jpg" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 10.2: Étudiante de karaté faisant le kata <em>Basai Dai</em> (photo <a href="https://www.flickr.com/photos/the-consortium/4507180302/">«&nbsp;Karate&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/the-consortium/">The Consortium</a>).</figcaption><p></p>
+</figure>
+</div>
+<p>Alors, le «&nbsp;kata TDD&nbsp;» a été proposé par Dave Thomas et le but est de développer la fluidité avec le développement piloté par les tests. Un kata TDD se pratique avec un IDE (environnement de développement logiciel) et un support pour les tests (par exemple JUnit). Pratiquer le même kata peut améliorer votre habileté de programmation. On peut pratiquer le même kata dans un langage différent ou avec un IDE ou environnement de test différent. Le kata vous permet d’avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour test et pour l’application, API de l’environnement de test, etc.).</p>
+<p>En plus, les activités de réusinage sont normalement intégrées dans un kata. Le fait de travailler en <em>petits pas</em> peut faire en sorte que la dette technique s’accumule. Les IDE facilitent l’application des activités de réusinage. Un langage fortement typé comme Java permet d’avoir plus de fonctionnalités automatisées de réusinage dans un IDE qu’un langage dynamique comme JavaScript ou Python. Une activité de base de réusinage est le renommage d’une variable ou d’une fonction. Le réusinage rend le code plus facile à comprendre et à maintenir.</p>
+<section id="exemple-de-kata-tdd-fizzbuzz" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="exemple-de-kata-tdd-fizzbuzz"><span class="header-section-number">10.1.1</span> Exemple de Kata TDD FizzBuzz</h3>
+<p>L’inspiration de cet exercice vient de <a href="http://codingdojo.org/kata/FizzBuzz/">codingdojo.org</a>.</p>
+<p>Dans cet exercice, il faut écrire par le développement piloté par les tests un programme qui imprime les nombres de 1 à 100. Mais pour les multiples de trois, il faut imprimer <code>Fizz</code> au lieu du nombre et pour les multiples de cinq, il faut imprimer <code>Buzz</code>. Pour les nombres étant des multiples de trois et de cinq il faut imprimer <code>FizzBuzz</code>. Voici un exemple des sorties:</p>
+<pre><code>1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+... etc. jusqu'à 100</code></pre>
+<section id="préalables" class="level4" data-number="10.1.1.1">
+<h4 data-number="10.1.1.1" class="anchored" data-anchor-id="préalables"><span class="header-section-number">10.1.1.1</span> Préalables</h4>
+<p>Il faut installer un IDE qui supporte les activités de réusinage (refactorings) comme VisualStudio Code, Eclipse, IntelliJ, etc. puis un framework de test (JUnit, Mocha/Chai, jest, unittest, etc.). Pour un exemple qui fonctionne en TypeScript, vous pouvez cloner le code à <a href="https://github.com/fuhrmanator/kata_jest_ts_fizzbuzz">ce dépôt</a>.</p>
+</section>
+<section id="déroulement" class="level4" data-number="10.1.1.2">
+<h4 data-number="10.1.1.2" class="anchored" data-anchor-id="déroulement"><span class="header-section-number">10.1.1.2</span> Déroulement</h4>
+<p>Cet exercice peut se faire individuellement ou en équipe de deux. En équipe, une personne écrit le test et l’autre écrit le code pour passer le test (c’est la variante ping-pong). Chacun réfléchit aux activités de réusinage éventuelles lorsque le projet est dans l’état vert (<a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>). Les membres de l’équipe peuvent changer de rôle (testeur, codeur) après un certain nombre d’étapes, ou après avoir terminé le kata entier.</p>
+<p>Pour respecter la philosophie de <em>petits pas,</em> il vaut mieux:</p>
+<ul>
+<li>ne lire que l’étape courante;</li>
+<li>ne travailler que sur l’étape courante;</li>
+<li>ne faire que les tests avec les entrées valides.</li>
+</ul>
+</section>
+<section id="kata-pour-fizzbuzz" class="level4" data-number="10.1.1.3">
+<h4 data-number="10.1.1.3" class="anchored" data-anchor-id="kata-pour-fizzbuzz"><span class="header-section-number">10.1.1.3</span> Kata pour FizzBuzz</h4>
+<p>Les étapes sont simples et précises. Il s’agit de créer une classe ayant une méthode acceptant un entier et retournant une valeur selon les exigences de FizzBuzz décrite plus haut.</p>
+<ol type="1">
+<li><p>Un argument de 1 retourne <code>1</code>.</p></li>
+<li><p>Un argument de 2 retourne <code>2</code></p></li>
+<li><p>Un argument de 3 retourne <code>Fizz</code></p></li>
+<li><p>Un argument de 6 retourne <code>Fizz</code></p></li>
+<li><p>Un argument de 5 retourne <code>Buzz</code></p></li>
+<li><p>Un argument de 10 retourne <code>Buzz</code></p></li>
+<li><p>Un argument de 15 retourne <code>FizzBuzz</code></p></li>
+<li><p>Un argument de 30 retourne <code>FizzBuzz</code></p></li>
+<li><p>Supporter des exigences qui évoluent. Attention aux conflits dans les exigences:</p>
+<ol type="a">
+<li>Il faut imprimer Fizz au lieu du nombre si le nombre est un multiple de 3 ou contient un 3 (ex. 13 → <code>Fizz</code>).</li>
+<li>Il faut imprimer Buzz au lieu du nombre si le nombre est un multiple de 5 ou contient un 5 (ex. 59 → <code>Fizz</code>).</li>
+<li>Il faut imprimer FizzBuzz si le nombre est un multiple de 5 et de 3 ou contient un 5 et un 3 (ex. 53 → <code>FizzBuzz</code>).</li>
+</ol></li>
+</ol>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-Karac_TDD_2018" class="csl-entry" role="doc-biblioentry">
+Karac, I., et B. Turhan. 2018. <span>«&nbsp;What Do We (Really) Know about Test-Driven Development?&nbsp;»</span> <em>IEEE Software</em> 35 (4): 81‑85. <a href="https://doi.org/10.1109/MS.2018.2801554">https://doi.org/10.1109/MS.2018.2801554</a>.
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./RDCU.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Réusinage.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

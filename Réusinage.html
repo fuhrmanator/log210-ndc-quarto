@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 11&nbsp; Réusinage (Refactorisation)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./TravailEquipe.html" rel="next">
+<link href="./TDD.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"> <span class="header-section-number">11.1</span> Introduction</a></li>
+  <li><a href="#symptômes-de-la-mauvaise-conception---code-smells" id="toc-symptômes-de-la-mauvaise-conception---code-smells" class="nav-link" data-scroll-target="#symptômes-de-la-mauvaise-conception---code-smells"> <span class="header-section-number">11.2</span> Symptômes de la mauvaise conception - Code smells</a></li>
+  <li><a href="#automatisation-du-réusinage-par-les-ide" id="toc-automatisation-du-réusinage-par-les-ide" class="nav-link" data-scroll-target="#automatisation-du-réusinage-par-les-ide"> <span class="header-section-number">11.3</span> Automatisation du réusinage par les IDE</a></li>
+  <li><a href="#impropriété" id="toc-impropriété" class="nav-link" data-scroll-target="#impropriété"> <span class="header-section-number">11.4</span> Impropriété</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Refactoring" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">11.1</span> Introduction</h2>
+<p>Considérez l’histoire suivante, provenant de la 2e édition du livre <em>Refactoring</em> de <span class="citation" data-cites="Fowl18a">Fowler (<a href="references.html#ref-Fowl18a" role="doc-biblioref">2018</a>)</span>:</p>
+<blockquote class="blockquote">
+<p>Il était une fois, un consultant qui a rendu visite à un projet de développement afin de regarder une partie du code qui avait été écrit. En parcourant la hiérarchie des classes au centre du système, le consultant l’a trouvée plutôt désordonnée. Les classes de niveau supérieur ont émis certaines hypothèses sur la façon dont les classes fonctionneraient, hypothèses incorporées dans le code hérité. Ce code n’était pas cohérent avec toutes les sous-classes, cependant, et a été redéfini à beaucoup d’endroits. De légères modifications à la superclasse auraient considérablement réduit la nécessité de la redéfinir. À d’autres endroits, l’intention de la superclasse n’avait pas été bien comprise et le comportement présent dans la superclasse était dupliqué. Dans d’autres endroits encore, plusieurs sous-classes ont fait la même chose avec du code qui pouvait clairement être déplacé dans la hiérarchie. Le consultant a recommandé à la direction du projet que le code soit examiné et nettoyé, mais la direction du projet n’était pas enthousiaste. Le code semblait fonctionner et il y avait des contraintes sur l’emploi du temps considérables. Les gestionnaires ont dit qu’ils y parviendraient ultérieurement. Le consultant a également montré ce qui se passait aux programmeurs travaillant sur la hiérarchie. Les programmeurs étaient enthousiastes et ont vu le problème. Ils savaient que ce n’était pas vraiment de leur faute; parfois, l’évaluation par une autre personne est nécessaire pour détecter le problème. Les programmeurs ont donc passé un jour ou deux à nettoyer la hiérarchie. Une fois terminés, ils avaient supprimé la moitié du code de la hiérarchie sans réduire sa fonctionnalité. Ils étaient satisfaits du résultat et ont constaté qu’il était devenu plus rapide et plus facile d’ajouter de nouvelles classes et d’utiliser les classes dans le reste du système. La direction du projet n’était pas contente. L’échéancier était serré et il y avait beaucoup de travail à faire. Ces deux programmeurs avaient passé deux jours à effectuer un travail qui n’ajoutait rien aux nombreuses fonctionnalités que le système devait offrir en quelques mois. L’ancien code avait très bien fonctionné. Oui, la conception était un peu plus «&nbsp;pure&nbsp;» et un peu plus «&nbsp;propre&nbsp;». Mais le projet devait expédier du code qui fonctionnait, pas du code qui plairait à un universitaire. Le consultant a suggéré qu’un nettoyage similaire soit effectué sur d’autres parties centrales du système, ce qui pourrait interrompre le projet pendant une semaine ou deux. Tout cela était pour rendre le code plus beau, pas pour lui faire faire ce qu’il ne faisait pas déjà.</p>
+</blockquote>
+<p>Cette histoire est un bon exemple des deux forces constamment en jeu lors d’un développement de logiciel. D’un côté, on veut que le code fonctionne (pour satisfaire les fonctionnalités) et d’un autre côté, on veut que la conception soit acceptable puisqu’il y a d’autres exigences sur un logiciel telles que la maintenabilité, l’extensibilité, etc. La section sur le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a> aborde cette dynamique.</p>
+<p>Le réusinage (anglais <em>refactoring</em>) est, selon Fowler, «&nbsp;l’amélioration de la conception du code après avoir écrit celui-ci&nbsp;». Il s’agit de retravailler le code source de façon à en améliorer la lisibilité ou la structure, sans en modifier le fonctionnement. C’est une manière de gérer la dette technique, car grâce au réusinage on peut transformer du code chaotique (écrit peut-être par les gens en mode «&nbsp;hacking cowboy&nbsp;») en code bien structuré. De plus, beaucoup d’IDE supportent l’automatisation d’activités de réusinage, rendant le processus plus facile et robuste. Probablement vous avez déjà «&nbsp;renommé&nbsp;» une variable dans le code source, à travers un menu «&nbsp;R efactoring&nbsp;».</p>
+<p>Le réusinage est une activité intégrale du <a href="TDD.html">Développement piloté par les tests</a>.</p>
+</section>
+<section id="symptômes-de-la-mauvaise-conception---code-smells" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="symptômes-de-la-mauvaise-conception---code-smells"><span class="header-section-number">11.2</span> Symptômes de la mauvaise conception - Code smells</h2>
+<p>En anglais, le terme «&nbsp;Code smell&nbsp;» a été proposé par Fowler pour les symptômes d’une mauvaise conception. Le but est de savoir à quel moment il faut affecter des activités de réusinage.</p>
+<p>Par exemple, le premier «&nbsp;smell&nbsp;» dans son livre est «&nbsp;Mysterious Name&nbsp;». Il apparaît lorsqu’on voit une variable ou une méthode dont le nom est incohérent avec son utilisation. Cela arrive puisqu’il n’est pas toujours facile de trouver un bon nom au moment où on est en train d’écrire du code. Plutôt que de rester bloqué sur le choix, on met un nom arbitraire (ou peut-être par naïveté on se trompe carrément de nom). Alors, si vous observez ce problème (smell) dans un logiciel, vous n’avez qu’à appliquer l’activité de réusinage nommée <a href="https://refactoring.com/catalog/changeFunctionDeclaration.html">Change Function Declaration</a>, <a href="https://refactoring.com/catalog/renameField.html">Rename Field</a> ou <a href="https://refactoring.com/catalog/renameVariable.html">Rename Variable</a>, selon le cas.</p>
+<p>Un autre exemple serait que vous avez un programme assez complexe, mais avec seulement une ou deux classes. Ces classes ont beaucoup d’attributs et de méthodes. Alors, ce «&nbsp;smell&nbsp;» s’appelle «&nbsp;Large class&nbsp;» et la solution est d’appliquer des activités de réusinage <a href="https://refactoring.com/catalog/extractClass.html">Extract Class</a>, ou éventuellement <a href="https://refactoring.com/catalog/extractSuperclass.html">Extract Superclass</a> ou <a href="https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html">Replace Type Code with Subclasses</a>. Avec un IDE dominant et un langage populaire, vous aurez probablement des fonctionnalités pour supporter l’automatisation de ces activités de réusinage.</p>
+<p>Certaines activités traitent des sujets avancés en conception, mais c’est très intéressant pour ceux qui aiment le bon design. Voici la liste complète des «&nbsp;smells&nbsp;» ainsi que les activités de réusinage à appliquer (voir le catalogue sur le site web https://refactoring.com/catalog/ pour les détails).</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Symptôme de mauvaise conception («&nbsp;Smell&nbsp;»)</th>
+<th style="text-align: left;">Activités de réusinage à appliquer éventuellement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mysterious Name</td>
+<td style="text-align: left;"><a href="https://refactoring.com/catalog/changeFunctionDeclaration.html">Change Function Declaration</a>, <a href="https://refactoring.com/catalog/renameVariable.html">Rename Variable</a>, <a href="https://refactoring.com/catalog/renameField.html">Rename Field</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Duplicated Code</td>
+<td style="text-align: left;">Extract Function, Slide Statements, Pull Up Method</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Long Function</td>
+<td style="text-align: left;">Extract Function, Replace Temp with Query, Introduce Parameter Object, Preserve Whole Object, Replace Function with Command, Decompose Conditional, Replace Conditional with Polymorphism, Split Loop</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Long Parameter List</td>
+<td style="text-align: left;">Replace Parameter with Query, Preserve Whole Object, Introduce Parameter Object, Remove Flag Argument, Combine Functions into Class</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Global Data</td>
+<td style="text-align: left;">Encapsulate Variable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mutable Data</td>
+<td style="text-align: left;">Encapsulate Variable, Split Variable, Slide Statements, Extract Function, Separate Query from Modifier, Remove Setting Method, Replace Derived Variable with Query, Use Combine Functions into Class, Combine functions into Transform, Change Reference to Value</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Divergent Change</td>
+<td style="text-align: left;">Split Phase, Move Function, Extract Function, Extract Class</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Shotgun Surgery</td>
+<td style="text-align: left;">Move Function, Move Field, Combine Functions into Class, Combine Functions into Transform, Split Phase, Inline Function, Inline Class</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Feature Envy</td>
+<td style="text-align: left;">Move Function, Extract Function</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Data Clumps</td>
+<td style="text-align: left;">Extract Class, Introduce Parameter Object, Preserve Whole Object</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Primitive Obsession</td>
+<td style="text-align: left;">Replace Primitive with Object, Type Code with Subclasses, Replace Conditional with Polymorphism, Extract Class, Introduce Parameter Object</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Repeated Switches</td>
+<td style="text-align: left;">Replace Conditional with Polymorphism</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Loops</td>
+<td style="text-align: left;">Replace Loop with Pipeline</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lazy Element</td>
+<td style="text-align: left;">Inline Function, Inline Class, Collapse Hierarchy</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Speculative Generality</td>
+<td style="text-align: left;">Collapse Hierarchy, Inline Function, Inline Class, Change Function Declaration, Remove Dead Code</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Temporary Field</td>
+<td style="text-align: left;">Extract Class, Move Function, Introduce Special Case</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Message Chains</td>
+<td style="text-align: left;">Hide Delegate, Extract Function, Move Function</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Middle Man</td>
+<td style="text-align: left;">Remove Middle Man, Inline Function, Replace Superclass with Delegate, Replace Subclass with Delegate</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Insider Trading</td>
+<td style="text-align: left;">Move Function, Move Field, Hide Delegate, Replace Subclass with Delegate, Replace Superclass with Delegate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Large Class</td>
+<td style="text-align: left;">Extract Class, Extract Superclass, Replace Type Code with Subclasses</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Alternative Classes withDifferent Interfaces</td>
+<td style="text-align: left;">Change Function Declaration, Move Function, Extract Superclass</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Data Class</td>
+<td style="text-align: left;">Encapsulate Record, Remove Setting Method, Move Function, Extract Function, Split Phase</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Refused Bequest</td>
+<td style="text-align: left;">Push Down Method, Push Down Field, Replace Subclass with Delegate, Replace Superclass with Delegate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comments</td>
+<td style="text-align: left;">Extract Function, Change Function Declaration, Introduce Assertion</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="automatisation-du-réusinage-par-les-ide" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="automatisation-du-réusinage-par-les-ide"><span class="header-section-number">11.3</span> Automatisation du réusinage par les IDE</h2>
+<p>À la <strong>section F19.2/A22.2</strong> du livre du cours, le sujet de réusinage est abordé. Il y a plusieurs exemples de base détaillés qui sont automatisés par les IDE dominants tels que Eclipse, IntelliJ IDEA, JetBrains PyCharm, Visual Studio Code, etc. Il se peut que dans un avenir proche le réusinage (l’amélioration du design) devienne une activité réalisée par des algorithmes d’intelligence artificielle.</p>
+<p>Pour plus d’activités de réusinage, il y a le catalogue du site <a href="https://refactoring.com/catalog/">refactoring.com</a>.</p>
+<p>Voir <a href="https://code.visualstudio.com/docs/editor/refactoring">cette page web pour savoir comment les activités de réusinage sont faites dans Visual Studio Code</a>. D’autres automatisations sont implémentées par des extensions.</p>
+</section>
+<section id="impropriété" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="impropriété"><span class="header-section-number">11.4</span> Impropriété</h2>
+<p>Si quelqu’un dit que son code est cassé pendant plusieurs jours parce qu’il fait du réusinage, ce n’est pas la bonne utilisation du terme <a href="https://martinfowler.com/bliki/RefactoringMalapropism.html">selon Martin Fowler</a>. Il s’agit de la <em>restructuration</em> dans ce cas.</p>
+<p>Le réusinage est basé sur les petites transformations qui ne changent pas le comportement du logiciel.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-Fowl18a" class="csl-entry" role="doc-biblioentry">
+Fowler, Martin. 2018. <em>Refactoring: Improving the Design of Existing Code</em>. 2 edition. Boston: Addison-Wesley Professional.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./TDD.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./TravailEquipe.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

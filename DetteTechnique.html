@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 7&nbsp; Dette technique</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Contrats.html" rel="next">
+<link href="./GRASP.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#origine" id="toc-origine" class="nav-link active" data-scroll-target="#origine"> <span class="header-section-number">7.1</span> Origine</a></li>
+  <li><a href="#nuances-de-la-dette-technique" id="toc-nuances-de-la-dette-technique" class="nav-link" data-scroll-target="#nuances-de-la-dette-technique"> <span class="header-section-number">7.2</span> Nuances de la dette technique</a></li>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé"> <span class="header-section-number">7.3</span> Résumé</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-DetteTechnique" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Ce chapitre contient des informations sur le concept de la <a href="https://fr.wikipedia.org/wiki/Dette_technique">dette technique</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>, qui n’est pas un sujet abordé explicitement par le livre du cours.</p>
+<p>Pour rajouter une nouvelle fonctionnalité à un système, les développeurs ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le «&nbsp;hacking cowboy&nbsp;» sur le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur. L’autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir. Comment prendre la décision? La <em>dette technique</em> est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.</p>
+<div id="fig-FowlerDesignStaminaHypothesis" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/FowlerPseuoGraphFunctionaltyTime.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 7.1: «&nbsp;Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.&nbsp;» <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler 2007</a>)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Martin Fowler <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">2007</a>)</span> a posé la question «&nbsp;Est-ce que ça vaut la peine de faire du bon design?&nbsp;» – peut-on en faire moins pour développer plus vite? Il a proposé un pseudographique comparant la fonctionnalité cumulative (élément difficile à mesurer) avec le temps (voir la <a href="#fig-FowlerDesignStaminaHypothesis">figure&nbsp;<span>7.1</span></a>). Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que des mois. Mais il avoue que c’est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d’évaluer ce qu’est un bon design. Le graphe sert à illustrer le principe qu’à un certain moment, ignorer une conception va nuire à la performance des développeurs en ce qui concerne les nouvelles fonctionnalités.</p>
+<p>Voici une courte définition complémentaire de la dette technique <span class="citation" data-cites="avge16a">(<a href="references.html#ref-avge16a" role="doc-biblioref">Avgeriou et al. 2016</a>)</span>:</p>
+<blockquote class="blockquote">
+<p>Un ensemble de constructions ou de mises en œuvre de conception qui sont utiles à court terme, mais qui mettent en place un contexte technique qui peut rendre les changements futurs plus coûteux ou impossibles.</p>
+</blockquote>
+<section id="origine" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="origine"><span class="header-section-number">7.1</span> Origine</h2>
+<p>La dette technique est une forme de risque qui peut apporter des bénéfices ou des pertes. Tout dépend de la quantité d’intérêt à payer. L’inventeur du wiki, Ward Cunningham, a utilisé la métaphore de la dette dans un projet de développement de logiciel de gestion de portefeuille réalisé dans une variante du langage Smalltalk:</p>
+<blockquote class="blockquote">
+<p>Un autre piège plus sérieux est l’échec à consolider [un design]. Bien que le code non raffiné puisse fonctionner correctement et être totalement acceptable pour le client, des quantités excessives de ce genre de code rendront le programme impossible à maîtriser, ce qui entraînera une surspécialisation des programmeurs et, finalement, un produit inflexible. Livrer du code non raffiné équivaut à s’endetter. Une petite dette accélère le développement tant qu’elle est remboursée rapidement avec une réécriture. [Le paradigme des] objets rend le coût de cette transaction tolérable. Le danger survient lorsque la dette n’est pas remboursée. Chaque minute passée sur un code qui n’est pas tout à fait correct compte comme un intérêt sur cette dette. Des organisations entières peuvent être bloquées par l’endettement d’une implémentation non consolidée, orientée objet ou autre.</p>
+</blockquote>
+<div id="fig-TechnicalDebtGoogleTrends" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/TechnicalDebtGoogleTrends.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 7.2: Tendances Google (trends.google.com) pour le terme «&nbsp;dette technique&nbsp;» (anglais <em>technical debt</em>)</figcaption><p></p>
+</figure>
+</div>
+<p>Comme c’est une métaphore puissante, beaucoup de développeurs l’utilisent et c’est un terme avec une certaine popularité (voir à la <a href="#fig-TechnicalDebtGoogleTrends">figure&nbsp;<span>7.2</span></a>). Dans une <a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">vidéo</a> plus récente, Cunningham a rappelé que l’origine de la métaphore s’inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement «&nbsp;mal écrit&nbsp;»:</p>
+<blockquote class="blockquote">
+<p>L’explication que j’ai donnée à mon patron, et c’était un logiciel financier, était une analogie financière que j’ai appelée «&nbsp;la métaphore de la dette&nbsp;». Et cela veut dire que si nous ne parvenions pas à aligner notre programme sur ce que nous considérions alors comme la bonne façon de penser à nos objets financiers, alors nous allions continuellement trébucher sur ce désaccord et cela nous ralentirait, comme payer des intérêts sur un prêt.<br>
+&nbsp;<br>
+[…]<br>
+&nbsp;<br>
+Beaucoup de gens (au moins des blogueurs) ont expliqué la métaphore de la dette et l’ont confondue, je pense, avec l’idée que vous pourriez écrire mal le code avec l’intention de faire du bon travail plus tard et de penser que c’était la principale source de dette. Je ne suis jamais favorable à l’écriture médiocre du code, mais je suis en faveur de l’écriture de code pour refléter votre compréhension actuelle d’un problème, même si cette compréhension est partielle.</p>
+</blockquote>
+</section>
+<section id="nuances-de-la-dette-technique" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="nuances-de-la-dette-technique"><span class="header-section-number">7.2</span> Nuances de la dette technique</h2>
+<p>Fowler a également <a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html">abordé le sujet de la dette</a>, notamment à propos de la distinction entre du code «&nbsp;mal écrit&nbsp;» et les compromis de conception faits avec une intention d’accélérer le développement:</p>
+<blockquote class="blockquote">
+<p>Je pense que la métaphore de la dette fonctionne bien dans les deux cas - la différence est dans la nature de la dette. Le code mal écrit est une dette imprudente qui se traduit par des paiements d’intérêts paralysants ou une longue période de remboursement du principal. Il y a quelques projets où nous avons pris en charge une base de code avec une dette élevée et avons trouvé la métaphore très utile pour discuter avec l’administration de notre client de comment l’aborder.<br>
+&nbsp;<br>
+La métaphore de la dette nous rappelle les choix que nous pouvons faire avec les anomalies de conception. La dette prudente qui a permis de compléter une version du logiciel ne vaut peut-être pas la peine d’être remboursée si les paiements d’intérêts sont suffisamment faibles, par exemple si les anomalies sont dans une partie rarement touchée de la base de code.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>La distinction utile n’est donc pas entre dette ou non-dette, mais entre <strong>dette prudente et imprudente</strong>.<br>
+&nbsp;<br>
+[…] Il y a aussi une différence entre la <strong>dette délibérée et involontaire</strong>. L’exemple de la dette prudente est délibéré parce que l’équipe sait qu’elle s’endette et réfléchit donc à la question de savoir si le bénéfice de livrer plus tôt une version du logiciel est supérieur au coût de son remboursement. Une équipe ignorante des pratiques de conception prend sa dette imprudente sans même constater à quel point elle s’endette.<br>
+&nbsp;<br>
+La dette imprudente pourrait aussi être délibérée. Une équipe peut connaître les bonnes pratiques de conception, voire être capable de les mettre en pratique, mais décide finalement d’aller «&nbsp;à la va-vite&nbsp;» parce qu’elle pense qu’elle ne peut pas se permettre le temps nécessaire pour écrire du code propre.</p>
+</blockquote>
+<p>La dette peut être classifiée dans un quadrant comme dans le <a href="#tbl-DetteQuadrant">tableau&nbsp;<span>7.1</span></a> proposé par Fowler. Selon lui, la dette dont Ward Cunningham a parlé dans sa vidéo peut être classifiée comme «&nbsp;prudente et involontaire&nbsp;». Fowler remarque que selon son expérience, la dette «&nbsp;imprudente et délibérée&nbsp;» est rarement rentable.</p>
+<div id="tbl-DetteQuadrant" class="anchored">
+<table class="table">
+<caption>Tableau 7.1: Classification de la dette selon Fowler (2009)</caption>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 44%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Dette</strong></th>
+<th style="text-align: left;"><strong>Imprudente</strong></th>
+<th style="text-align: left;"><strong>Prudente</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Délibérée</td>
+<td style="text-align: left;">«&nbsp;<em>On n’a pas le temps pour la conception!</em>&nbsp;» Cette forme de dette est rarement rentable.</td>
+<td style="text-align: left;">«&nbsp;<em>Il faut livrer maintenant puis en assumer les conséquences.</em>&nbsp;» Exemple: La dette est due à une partie limitée du code.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Involontaire</td>
+<td style="text-align: left;">«&nbsp;<em>C’est quoi la séparation en couches?</em>&nbsp;» Il s’agit de l’ignorance de bonnes pratiques.</td>
+<td style="text-align: left;">«&nbsp;<em>Maintenant on sait comment on aurait dû le faire.</em>&nbsp;» C’est tenter une solution malgré une compréhension limitée du problème.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="résumé" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="résumé"><span class="header-section-number">7.3</span> Résumé</h2>
+<ul>
+<li>Il n’est pas toujours possible de faire une conception facile à utiliser et à modifier (sans dette technique), puisque certaines choses sont impossibles à prévoir surtout dans une application avec beaucoup de complexité.</li>
+<li>Ignorer complètement le design en faisant du «&nbsp;hacking cowboy&nbsp;» peut apporter un avantage à court terme pour valider des hypothèses rapidement, par exemple dans un contexte d’entreprise en démarrage sans beaucoup de financement, ou un concours de programmation. Cependant, le code produit dans ce genre de contexte aura des problèmes importants (la dette technique) à long terme.</li>
+<li>La dette technique peut aussi être due à l’incompétence (l’ignorance de bonnes pratiques comme la séparation des couches).</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-avge16a" class="csl-entry" role="doc-biblioentry">
+Avgeriou, Paris, Philippe Kruchten, Ipek Ozkaya, et Carolyn Seaman. 2016. <span>«&nbsp;<span>Managing Technical Debt in Software Engineering (Dagstuhl Seminar 16162)</span>&nbsp;»</span>. Édité par Paris Avgeriou, Philippe Kruchten, Ipek Ozkaya, et Carolyn Seaman. <em>Dagstuhl Reports</em> 6 (4): 110‑38. <a href="https://doi.org/10.4230/DagRep.6.4.110">https://doi.org/10.4230/DagRep.6.4.110</a>.
+</div>
+<div id="ref-fowl07a" class="csl-entry" role="doc-biblioentry">
+Fowler, Martin. 2007. <span>«&nbsp;Bliki: <span>DesignStaminaHypothesis</span>&nbsp;»</span>. <em>martinfowler.com</em>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./GRASP.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Contrats.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

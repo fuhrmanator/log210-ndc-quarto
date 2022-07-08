@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.658">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOG210 Analyse et conception de logiciels - 14&nbsp; Décortiquer les patterns GoF avec GRASP</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Fiabilité.html" rel="next">
+<link href="./Outils-UML.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#exemple-avec-adaptateur" id="toc-exemple-avec-adaptateur" class="nav-link active" data-scroll-target="#exemple-avec-adaptateur"> <span class="header-section-number">14.1</span> Exemple avec Adaptateur</a></li>
+  <li><a href="#imaginer-le-code-sans-le-pattern-gof" id="toc-imaginer-le-code-sans-le-pattern-gof" class="nav-link" data-scroll-target="#imaginer-le-code-sans-le-pattern-gof"> <span class="header-section-number">14.2</span> Imaginer le code sans le pattern GoF</a></li>
+  <li><a href="#identifier-les-grasp-dans-les-gof" id="toc-identifier-les-grasp-dans-les-gof" class="nav-link" data-scroll-target="#identifier-les-grasp-dans-les-gof"> <span class="header-section-number">14.3</span> Identifier les GRASP dans les GoF</a>
+  <ul class="collapse">
+  <li><a href="#polymorphisme" id="toc-polymorphisme" class="nav-link" data-scroll-target="#polymorphisme"> <span class="header-section-number">14.3.1</span> Polymorphisme</a></li>
+  <li><a href="#fabrication-pure" id="toc-fabrication-pure" class="nav-link" data-scroll-target="#fabrication-pure"> <span class="header-section-number">14.3.2</span> Fabrication pure</a></li>
+  <li><a href="#indirection" id="toc-indirection" class="nav-link" data-scroll-target="#indirection"> <span class="header-section-number">14.3.3</span> Indirection</a></li>
+  <li><a href="#protection-des-variations" id="toc-protection-des-variations" class="nav-link" data-scroll-target="#protection-des-variations"> <span class="header-section-number">14.3.4</span> Protection des variations</a></li>
+  </ul></li>
+  <li><a href="#grasp-et-réusinage" id="toc-grasp-et-réusinage" class="nav-link" data-scroll-target="#grasp-et-réusinage"> <span class="header-section-number">14.4</span> GRASP et réusinage</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-GRASP-GoF" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée-objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C’est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF.</p>
+<section id="exemple-avec-adaptateur" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="exemple-avec-adaptateur"><span class="header-section-number">14.1</span> Exemple avec Adaptateur</h2>
+<p>Le chapitre A26/F23&nbsp;<i class="fa-solid fa-book"></i>&nbsp;présente l’exemple du pattern Adaptateur pour les calculateurs de taxes (<a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> tirée du livre de Larman, Figure A26.3/F23.3).</p>
+<div id="fig-Fig23_1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<figure class="figure">
+<img src="images/Fig23.1.png" title="Figure A26.1/F23.1 du livre de Larman" class="img-fluid figure-img">
+</figure>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 14.1: Le pattern Adaptateur.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="imaginer-le-code-sans-le-pattern-gof" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="imaginer-le-code-sans-le-pattern-gof"><span class="header-section-number">14.2</span> Imaginer le code sans le pattern GoF</h2>
+<p>Chaque principe GRASP est défini avec un énoncé d’un problème de conception et une solution pour le résoudre. Pourtant, beaucoup d’exemples dans le livre de LOG210 sont des patterns déjà appliqués (et le problème initial n’est pas toujours expliqué en détail).</p>
+<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on serait obligé de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme ceci:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* calculateurTaxes est le nom du calculateur utilisé actuellement */</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span><span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"GoodAsGoldTaxPro"</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour intéragir avec le calculateur */</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span><span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"TaxMaster"</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour intéragir avec le calculateur */</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="co">/* ainsi de suite pour chacun des calculateurs */</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* ... */</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pour supporter un nouveau calculateur de taxes, il faudrait coder une nouvelle branche dans le bloc de <code>if/then</code>. Ça nuirait à la lisibilité du code et la méthode qui contient tout ce code deviendrait de plus en plus longue. Même si on faisait une méthode pour encapsuler le code de chaque branche, ça ferait toujours augmenter les responsabilités de la classe Vente. Elle est responsable de connaître tous les détails (l’API distinct et immuable) de chaque calculateur de taxe externe, puisqu’elle communique directement (il y a du couplage) à ces derniers.</p>
+<p>Le pattern Adaptateur comprend les principes GRASP Faible couplage, Forte cohésion, Polymorphisme, Indirection, Fabrication pure et Protection des variations. La <a href="#fig-Fig23_3">figure&nbsp;<span>14.2</span></a> (tirée du livre de Larman, Figure A26.3/F23.3) démontre la relation entre ces principes dans le cas d’Adaptateur.</p>
+<div id="fig-Fig23_3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<figure class="figure">
+<img src="images/Fig23.3.png" title="Figure A26.3/F23.3 du livre de Larman" class="img-fluid figure-img">
+</figure>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 14.2: Adaptateur et principes GRASP.</figcaption><p></p>
+</figure>
+</div>
+<p>On peut donc voir le pattern adaptateur comme <em>une spécialisation</em> de plusieurs principes GRASP:</p>
+<ul>
+<li>Polymorphisme</li>
+<li>Indirection</li>
+<li>Fabrication pure</li>
+<li>Faible couplage</li>
+<li>Forte cohésion</li>
+<li>Protection des variations</li>
+</ul>
+<p>Êtes-vous en mesure d’expliquer dans ce contexte comment Adaptateur est relié à ces principes? C’est-à-dire, pouvez-vous identifier les GRASP dans le pattern Adaptateur?</p>
+</section>
+<section id="identifier-les-grasp-dans-les-gof" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="identifier-les-grasp-dans-les-gof"><span class="header-section-number">14.3</span> Identifier les GRASP dans les GoF</h2>
+<p>Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d’imaginer le problème qui pourrait exister et comment le principe (et le pattern GoF) résout le problème.</p>
+<p>Référez-vous à la <a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> du pattern Adaptateur pour les sections suivantes.</p>
+<section id="polymorphisme" class="level3" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="polymorphisme"><span class="header-section-number">14.3.1</span> Polymorphisme</h3>
+<blockquote class="blockquote">
+<p><strong>Problème:</strong> Qui est responsable quand le comportement varie selon le type?<br>
+<strong>Solution:</strong> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types pour lesquels le comportement varie.</p>
+</blockquote>
+<p>Le «&nbsp;comportement qui varie&nbsp;» est la manière d’adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode <code>getTaxes()</code>. Alors, cette «&nbsp;responsabilité&nbsp;» est affectée au type interface <code>IAdaptateurCalculTaxes</code> (et ces implémentations) dans l’opération polymorphe <code>getTaxes()</code>.</p>
+</section>
+<section id="fabrication-pure" class="level3" data-number="14.3.2">
+<h3 data-number="14.3.2" class="anchored" data-anchor-id="fabrication-pure"><span class="header-section-number">14.3.2</span> Fabrication pure</h3>
+<blockquote class="blockquote">
+<p><strong>Problème:</strong> En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte cohésion?<br>
+<strong>Solution:</strong> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine - une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p>
+</blockquote>
+<p>La Fabrication pure est la classe «&nbsp;comportementale et artificielle&nbsp;» qui est la hiérarchie <code>IAdaptateurCalculTaxes</code> (comprenant chaque adaptateur concret). Elle est comportementale puisqu’elle ne fait qu’adapter des appels. Elle est artificielle puisqu’elle ne représente pas un élément dans le modèle du domaine.</p>
+<p>L’ensemble des adaptateurs concrets ont des «&nbsp;responsabilités cohésives&nbsp;» qui sont la manière d’adapter la méthode <code>getTaxes()</code> aux méthodes (immuables) des calculateurs de taxes externes. Elles ne font que ça. La cohésion est augmentée aussi dans la classe Vente qui n’a plus la responsabilité de s’adapter aux calculateurs de taxes externes. C’est le travail qui a été donné aux adaptateurs concrets.</p>
+<p>Le couplage est diminué, car la classe Vente n’est plus couplée directement aux calculateurs de taxes externes. La réutilisation des calculateurs est facilitée, car la classe Vente ne doit plus être modifiée si l’on veut utiliser un autre calculateur externe. Il suffit de créer un adaptateur pour ce dernier.</p>
+</section>
+<section id="indirection" class="level3" data-number="14.3.3">
+<h3 data-number="14.3.3" class="anchored" data-anchor-id="indirection"><span class="header-section-number">14.3.3</span> Indirection</h3>
+<blockquote class="blockquote">
+<p><strong>Problème:</strong> Comment affecter les responsabilités pour éviter le couplage direct?<br>
+<strong>Solution:</strong> Pour éviter le couplage direct, affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services.</p>
+</blockquote>
+<p>Le «&nbsp;couplage direct&nbsp;» qui est évité est le couplage entre la classe Vente et les calculateurs de taxes externes. Le pattern Adaptateur (général) cherche à découpler le Client des classes nommées Adaptee, car chaque Adaptee a une API différente pour le même genre de «&nbsp;service&nbsp;». Alors, la responsabilité de s’adapter aux services différents est affectée à la hiérarchie de «&nbsp;classes intermédiaires&nbsp;», soit l’interface type IAdaptateurCalculTaxes et ses implémentations.</p>
+</section>
+<section id="protection-des-variations" class="level3" data-number="14.3.4">
+<h3 data-number="14.3.4" class="anchored" data-anchor-id="protection-des-variations"><span class="header-section-number">14.3.4</span> Protection des variations</h3>
+<blockquote class="blockquote">
+<p><strong>Problème:</strong> Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les autres?<br>
+<strong>Solution:</strong> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p>
+</blockquote>
+<p>Les «&nbsp;variations ou l’instabilité&nbsp;» sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs du projet (ce sont des modules externes ayant chacun une API différente). Quant à «&nbsp;l’impact négatif sur les autres&nbsp;», il s’agit des modifications que les développeurs auraient à faire sur la classe Vente chaque fois que l’on décide de supporter un autre calculateur de taxes (ou si l’API de ce dernier évolue).</p>
+<p>Quant aux «&nbsp;responsabilités&nbsp;» à affecter, c’est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de «&nbsp;l’interface stable&nbsp;», il s’agit de la méthode <code>getTaxes()</code> qui ne changera jamais. Elle est définie dans le type-interface IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API).</p>
+</section>
+</section>
+<section id="grasp-et-réusinage" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="grasp-et-réusinage"><span class="header-section-number">14.4</span> GRASP et réusinage</h2>
+<p>Il y a des liens entre les GRASP et les activités de <a href="Réusinage.html">Réusinage (Refactorisation)</a>. Alors, un IDE qui automatise les <em>refactorings</em> peut vous aider à appliquer certains GRASP.</p>
+<ul>
+<li>GRASP Polymorphisme est relié à <a href="https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html">Replace Type Code with Subclasses</a> et <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html">Replace conditional with polymorphism</a> – attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (<code>switch</code>) répétées à plusieurs endroits dans le code.</li>
+<li>GRASP Fabrication pure est relié à <a href="https://refactoring.com/catalog/extractClass.html">Extract class</a>.</li>
+<li>GRASP Indirection est relié à <a href="https://refactoring.com/catalog/extractFunction.html">Extract function</a> et <a href="https://refactoring.com/catalog/moveFunction.html">Move function</a>.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Outils-UML.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Fiabilité.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

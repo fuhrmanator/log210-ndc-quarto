@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="387px" preserveAspectRatio="none" style="width:645px;height:387px;background:#FFFFFF;" version="1.1" viewBox="0 0 645 387" width="645px" zoomAndPan="magnify"><defs/><g><rect fill="#FF0000" height="65.875" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="91" x="129.5" y="37.2734"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="81" x="134.5" y="57.125">Au moins</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="65" x="142.5" y="75.75">un test</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="65" x="142.5" y="94.375">échoue</text><rect fill="#008000" height="65.875" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="88" x="373" y="37.2734"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="43" x="395.5" y="57.125">Tous</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="78" x="378" y="75.75">les tests</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="71" x="381.5" y="94.375">passent</text><rect fill="#FFFF00" height="60.625" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="85" x="374.5" y="183.2734"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="75" x="379.5" y="203.125">Pas TDD</text><path d="M401,206.8984 L401,222.8984 L405,222.8984 L405,206.8984 L401,206.8984 M409,206.8984 L409,222.8984 C410.12,222.8984 411.12,223.2584 411.88,224.0184 C412.64,224.7784 416.48,232.4984 417,233.5384 C417.52,234.5784 418.56,235.0984 419.64,234.7784 C420.68,234.4584 421.24,233.3384 420.88,232.2584 C420.56,231.2184 419,225.8984 419,224.8984 C419,223.8984 419.88,222.8984 421,222.8984 L427,222.8984 C428.12,222.8984 429,222.0184 429,220.8984 C429,219.7784 424.88,208.1384 424.88,208.1384 C424.56,207.4184 423.84,206.8984 423,206.8984 L409,206.8984 " fill="#FF0000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/><ellipse cx="16" cy="70.2734" fill="#222222" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><!--MD5=[1a59c7f6df8481c56a7ef6a685f090c4]
+link *start to Rouge--><g id="link_*start_Rouge"><path d="M26.43,70.2734 C45.99,70.2734 89.34,70.2734 124.19,70.2734 " fill="none" id="*start-to-Rouge" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="129.26,70.2734,120.26,66.2734,124.26,70.2734,120.26,74.2734,129.26,70.2734" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="43" x="56.25" y="26.125">Créer</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="67" x="44.25" y="44.75">nouveau</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="30" x="62.75" y="63.375">test</text></g><!--MD5=[225968ad8b5d07bd11168a671cfc4882]
+link Rouge to Vert--><g id="link_Rouge_Vert"><path d="M220.52,70.2734 C262.49,70.2734 324.63,70.2734 367.75,70.2734 " fill="none" id="Rouge-to-Vert" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="372.91,70.2734,363.91,66.2734,367.91,70.2734,363.91,74.2734,372.91,70.2734" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="88" x="252.75" y="23.125">Écrire code</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="76" x="258.75" y="41.75">pour faire</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="109" x="238.75" y="62.8828">passer test(s)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="347.75" y="57.5903">‡</text></g><!--MD5=[a457bc01392046f2809774e6aff8375f]
+reverse link Rouge to Vert--><g id="link_Rouge_Vert"><path d="M204.84,107.5934 C220.09,123.6834 240.1,140.7334 262.25,149.2734 C276.56,154.7834 316.97,154.8534 331.25,149.2734 C355.01,139.9934 376.15,120.7134 391.5,103.5234 " fill="none" id="Rouge-backto-Vert" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="201.06,103.5334,204.2598,112.848,204.465,107.1949,210.1181,107.4,201.06,103.5334" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="5" x="294.25" y="89.125"> </text><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="43" x="275.25" y="107.75">Créer</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="67" x="263.25" y="126.375">nouveau</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="30" x="281.75" y="145">test</text></g><!--MD5=[30e98dbec254e049169f7efa29786e02]
+link Vert to Vert--><g id="link_Vert_Vert"><path d="M461.27,56.9134 C480.02,55.9034 496,60.3634 496,70.2734 C496,79.2534 482.88,83.7534 466.46,83.7734 " fill="none" id="Vert-to-Vert" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="461.27,83.6334,470.1639,87.8641,466.2683,83.7623,470.3701,79.8668,461.27,83.6334" style="stroke:#181818;stroke-width:1.0;"/><text fill="#008000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="130" x="502" y="65.625">Faire une activité</text><text fill="#008000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="100" x="513.5" y="86.7578">de réusinage</text><text fill="#008000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="613.5" y="81.4653">†</text></g><!--MD5=[d28d1e13e76e2eeb62326f2a527a2c12]
+link Vert to PasTDD--><g id="link_Vert_PasTDD"><path d="M417,103.3834 C417,125.6734 417,155.3334 417,178.1534 " fill="none" id="Vert-to-PasTDD" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="417,183.2034,421,174.2034,417,178.2034,413,174.2034,417,183.2034" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="16" lengthAdjust="spacing" textLength="165" x="418" y="149.125">Écrire code sans test</text></g><rect fill="#DDDDDD" height="114.7969" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.0;" width="367" x="132" y="256.8984"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="6" x="138" y="273.1089">†</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="349" x="144" y="278.4014">Une activité de réusinage n'est pas censée causer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="334" x="138" y="294.6982">un problème avec un test. Cependant, cela peut</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="326" x="138" y="310.9951">arriver que les tests ne passent plus et il faudra</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165" x="138" y="327.292">corriger des problèmes.</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="6" x="138" y="340.8042">‡</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="334" x="144" y="346.0967">Il peut arriver qu'un test soit mal codé (il contient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="355" x="138" y="362.3936">un bogue). Dans ce cas, on corrige le code du test.</text><!--MD5=[e0bee9525107e1f885f2c88195f4f1e7]
+@startuml
+hide empty description
+skinparam style strictuml
+skinparam StateBorderColor black
+skinparam StateFontColor white
+skinparam StateFontStyle bold
+skinparam StateFontSize 16
+skinparam StateArrowFontSize 16
+'title États du développement piloté par les tests
+state Rouge as "Au moins\nun test\néchoue" #red
+state Vert as "Tous\nles tests\npassent" #green
+state PasTDD as "<color red>Pas TDD\n<color red><size:48><&thumb-down></color>" #yellow
+[*] -right-> Rouge : Créer\nnouveau\ntest
+Rouge -r-> Vert : Écrire code\npour faire\npasser test(s)<sup>‡</sup>
+Vert -l-> Rouge : \nCréer\nnouveau\ntest
+Vert -> Vert : <color green>Faire une activité</color>\n<color green>de réusinage<sup>†</sup></color>
+Vert - ->  PasTDD : Écrire code sans test
+legend center
+<sup>†</sup>Une activité de réusinage n'est pas censée causer
+un problème avec un test. Cependant, cela peut
+arriver que les tests ne passent plus et il faudra
+corriger des problèmes.
+<sup>‡</sup>Il peut arriver qu'un test soit mal codé (il contient
+un bogue). Dans ce cas, on corrige le code du test.
+end legend
+@enduml
+
+@startuml
+hide empty description
+skinparam style strictuml
+skinparam StateBorderColor black
+skinparam StateFontColor white
+skinparam StateFontStyle bold
+skinparam StateFontSize 16
+skinparam StateArrowFontSize 16
+state Rouge as "Au moins\nun test\néchoue" #red
+state Vert as "Tous\nles tests\npassent" #green
+state PasTDD as "<color red>Pas TDD\n<color red><size:48><&thumb-down></color>" #yellow
+[*] -right-> Rouge : Créer\nnouveau\ntest
+Rouge -r-> Vert : Écrire code\npour faire\npasser test(s)<sup>‡</sup>
+Vert -l-> Rouge : \nCréer\nnouveau\ntest
+Vert -> Vert : <color green>Faire une activité</color>\n<color green>de réusinage<sup>†</sup></color>
+Vert - ->  PasTDD : Écrire code sans test
+legend center
+<sup>†</sup>Une activité de réusinage n'est pas censée causer
+un problème avec un test. Cependant, cela peut
+arriver que les tests ne passent plus et il faudra
+corriger des problèmes.
+<sup>‡</sup>Il peut arriver qu'un test soit mal codé (il contient
+un bogue). Dans ce cas, on corrige le code du test.
+end legend
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
