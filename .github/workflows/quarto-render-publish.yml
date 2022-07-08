@@ -31,13 +31,13 @@ jobs:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
 
-      - name: Install TeXLive
-        # Actually pick a version, do not point on master, or the build won't be reproducible
-        uses: DanySK/setup-texlive-action@master
-        with:
-          requirements-file: .github/texlive/requirements.txt
-      - name: Install rsvg-convert, latexmk
-        run: sudo apt-get install -y -q librsvg2-bin latexmk
+      # - name: Install TeXLive
+      #   # Actually pick a version, do not point on master, or the build won't be reproducible
+      #   uses: DanySK/setup-texlive-action@master
+      #   with:
+      #     requirements-file: .github/texlive/requirements.txt
+      - name: Install rsvg-convert, latexmk, TeXLive
+        run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra
 
       # PlantUML jar
       - name: wget PlantUML.jar
