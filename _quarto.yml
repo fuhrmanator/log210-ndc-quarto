@@ -41,12 +41,12 @@ book:
     - ConceptionPackages.qmd
     - Diagrammes de déploiement.qmd
     - Laboratoires.qmd
-    #- references.qmd
+    - references.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib
 citations-hover: true
-citation-location: margin
+citation-location: document
 link-citations: true # pandoc setting
 # citeproc: true # causes quarto to hang
 # latex-auto-install: true
