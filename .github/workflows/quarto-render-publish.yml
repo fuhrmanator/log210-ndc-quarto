@@ -34,8 +34,8 @@ jobs:
       - name: Install TeXLive
         # Actually pick a version, do not point on master, or the build won't be reproducible
         uses: DanySK/setup-texlive-action@master
-          with:
-            requirements-file: .github/texlive/requirements.txt
+        with:
+          requirements-file: .github/texlive/requirements.txt
       - name: Install rsvg-convert, latexmk
         run: sudo apt-get install -y -q librsvg2-bin latexmk
 
