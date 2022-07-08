@@ -1,26 +1,57 @@
 project:
   type: book
-  # language: _language.yml
+  language: _language.yml   # customized, "tableau" plutôt que "table", etc.
+
+crossref:
+  fig-prefix: figure     # (default is "Figure")
+  tbl-prefix: tableau    # (default is "Table")
 
 lang: fr
 
 book:
-  title: "Analyse et conception de logiciels"
+
+  #cover-image: images/LOG210wordle_ordre_alph.png
+  subtitle: "![nuage de mots](images/LOG210wordle_ordre_alph.png){width=70%}"
+  title: "LOG210 Analyse et conception de logiciels"
+  
+  #subtitle: "Notes de cours"
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
-  subtitle: "![nuage de mots](images/LOG210wordle_ordre_alph.png){width=70%}"
   date: "2022-05-06"
   chapters:
     - index.qmd
     - AnalyseConception.qmd
     - Besoins.qmd
+    - CasUtilisation.qmd
     - MDD.qmd
+    - DSS.qmd
+    - GRASP.qmd
+    - DetteTechnique.qmd
+    - Contrats.qmd
+    - RDCU.qmd
+    - TDD.qmd
+    - Réusinage.qmd
+    - TravailEquipe.qmd
+    - Outils-UML.qmd
+    - GRASP-GoF.qmd
+    - Fiabilité.qmd
+    - Diagrammes d'activités.qmd
+    - Diagrammes d'états.qmd
+    - ConceptionPackages.qmd
+    - Diagrammes de déploiement.qmd
+    - Laboratoires.qmd
     - references.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib
-
+citations-hover: true
+citation-location: document
+link-citations: true # pandoc setting
+# citeproc: true # causes quarto to hang
+# latex-auto-install: true
+latex-auto-mk: true
+link-external-icon: true
 
 format:
 
@@ -36,16 +67,23 @@ format:
     # https://quarto.org/docs/output-formats/html-themes.html#overview
     # theme: cosmo
     # needed for inline plantuml/graphviz figures
-    self-contained: true
-    link-external-icon: true
+    # self-contained: true
     
 
   pdf:
     # has to be latexmk for .plantuml plugin to work (not sure why, see )
     pdf-engine: latexmk
+    colorlinks: true
+    linkcolor: Blue
+    urlcolor: Maroon
+    #citecolor: Orange  # not really used when `link-citations: true`
+    #cite-method: biblatex
     documentclass: scrbook
-    lof: true
-    lot: true
+    # lof: true
+    # lot: true
+    toc: true
+    toc-depth: 2
+    highlight-style: github
     geometry:
       - top=30mm
       - left=20mm
@@ -56,8 +94,8 @@ format:
       - p
       - tt=false
     fontsize: 11pt
-    monofont: libertinus-mono
-    colorlinks: true
+    # monofont: libertinus-mono
+    # monofont: cm
     header-includes: 
     # - \input{glyphtounicode}
     # - \pdfgentounicode=1
@@ -65,11 +103,13 @@ format:
     # - \usepackage{fontawesome5}
     # - \usepackage{fontawesome}
     # - \usepackage{tcolorbox}
+    - \usepackage{colortbl}
     # - \newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
     # - \renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
-    # - \usepackage{longtable,booktabs}
     # Use courrier for monospace? https://tex.stackexchange.com/a/142319/17868
-    # - \usepackage{courier}
+#    - \usepackage{inconsolata}
+#    - \usepackage[scaled]{beramono}
+    - \usepackage[scaled=.8]{cascadia-code}
     # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
     - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
     - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
@@ -79,9 +119,13 @@ format:
     # # Allow changing font size of code blocks, using \small right before the code fence, for example 
     # # https://stackoverflow.com/a/47492620/1168342
     # - \usepackage{setspace}
+    # - \usepackage{hyperref}
+    # - \usepackage[hyperpageref]{backref}
+    #- \PassOptionsToPackage{backref=true,backend=biber,style=authoryear}{biblatex}
 
 # filters must be run in the proper order here
 filters:
+  - filters/pandoc-quotes.lua
   - filters/diagram-generator.lua
   - quarto
 
@@ -94,5 +138,3 @@ filters:
 # javaPath: C:/Program Files/Java/jdk1.8.0_331/bin/java.exe
 # plantumlPath: G:/My Drive/PlantUML/plantuml.jar
 # dotPath: C:/Program Files/Graphviz/bin/dot.exe
-
-log-level: debug

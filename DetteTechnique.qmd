@@ -1,16 +1,16 @@
-# Dette technique {#DetteTechnique}
+# Dette technique {#sec-DetteTechnique}
 
-Ce chapitre contient des informations sur le concept de la [dette technique](https://fr.wikipedia.org/wiki/Dette_technique)\ \faWikipediaW, qui n'est pas un sujet abordé explicitement par le livre du cours.
+Ce chapitre contient des informations sur le concept de la [dette technique](https://fr.wikipedia.org/wiki/Dette_technique)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>, qui n'est pas un sujet abordé explicitement par le livre du cours.
 
-Pour rajouter une nouvelle fonctionnalité à un système, les développeurs ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le "hacking cowboy" sur le \nameref{SpectreDeLaConception}), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur.
+Pour rajouter une nouvelle fonctionnalité à un système, les développeurs ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le "hacking cowboy" sur le [Spectre de la conception](#sec-SpectreDeLaConception)), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur.
 L'autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir.
 Comment prendre la décision?
 La *dette technique* est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.
 
-!["Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l'un avec une bonne conception et l'autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu'il s'agisse de conception initiale ou de techniques agiles. Comme aucun effort n'est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ." [@fowl07a]](images/FowlerPseuoGraphFunctionaltyTime.svg){#FowlerDesignStaminaHypothesis}
+!["Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l'un avec une bonne conception et l'autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu'il s'agisse de conception initiale ou de techniques agiles. Comme aucun effort n'est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ." [@fowl07a]](images/FowlerPseuoGraphFunctionaltyTime.svg){#fig-FowlerDesignStaminaHypothesis}
 
 Martin Fowler [-@fowl07a] a posé la question "Est-ce que ça vaut la peine de faire du bon design?" -- peut-on en faire moins pour développer plus vite?
-Il a proposé un pseudographique comparant la fonctionnalité cumulative (élément difficile à mesurer) avec le temps (voir la figure\ \ref{FowlerDesignStaminaHypothesis}).
+Il a proposé un pseudographique comparant la fonctionnalité cumulative (élément difficile à mesurer) avec le temps (voir la @fig-FowlerDesignStaminaHypothesis).
 Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que des mois.
 Mais il avoue que c'est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d'évaluer ce qu'est un bon design.
 Le graphe sert à illustrer le principe qu'à un certain moment, ignorer une conception va nuire à la performance des développeurs en ce qui concerne les nouvelles fonctionnalités.
@@ -32,9 +32,9 @@ La dette technique est une forme de risque qui peut apporter des bénéfices ou 
 > Chaque minute passée sur un code qui n'est pas tout à fait correct compte comme un intérêt sur cette dette. 
 > Des organisations entières peuvent être bloquées par l'endettement d'une implémentation non consolidée, orientée objet ou autre.
 
-![Tendances Google (trends.google.com) pour le terme "dette technique" (anglais *technical debt*)](images/TechnicalDebtGoogleTrends.svg){#TechnicalDebtGoogleTrends}
+![Tendances Google (trends.google.com) pour le terme "dette technique" (anglais *technical debt*)](images/TechnicalDebtGoogleTrends.svg){#fig-TechnicalDebtGoogleTrends}
 
-Comme c'est une métaphore puissante, beaucoup de développeurs l'utilisent et c'est un terme avec une certaine popularité (voir à la figure\ \ref{TechnicalDebtGoogleTrends}). Dans une [vidéo](https://www.youtube.com/watch?v=pqeJFYwnkjE) plus récente, Cunningham a rappelé que l'origine de la métaphore s'inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement "mal écrit":
+Comme c'est une métaphore puissante, beaucoup de développeurs l'utilisent et c'est un terme avec une certaine popularité (voir à la @fig-TechnicalDebtGoogleTrends). Dans une [vidéo](https://www.youtube.com/watch?v=pqeJFYwnkjE) plus récente, Cunningham a rappelé que l'origine de la métaphore s'inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement "mal écrit":
 
 > L'explication que j'ai donnée à mon patron, et c'était un logiciel financier, était une analogie financière que j'ai appelée "la métaphore de la dette". Et cela veut dire que si nous ne parvenions pas à aligner notre programme sur ce que nous considérions alors comme la bonne façon de penser à nos objets financiers, alors nous allions continuellement trébucher sur ce désaccord et cela nous ralentirait, comme payer des intérêts sur un prêt.  
 > \   
@@ -56,14 +56,15 @@ Fowler a également [abordé le sujet de la dette](https://martinfowler.com/blik
 > \   
 > La dette imprudente pourrait aussi être délibérée. Une équipe peut connaître les bonnes pratiques de conception, voire être capable de les mettre en pratique, mais décide finalement d'aller "à la va-vite" parce qu'elle pense qu'elle ne peut pas se permettre le temps nécessaire pour écrire du code propre.
 
-La dette peut être classifiée dans un quadrant comme dans le tableau\ \ref{tab:DetteQuadrant} proposé par Fowler. Selon lui, la dette dont Ward Cunningham a parlé dans sa vidéo peut être classifiée comme "prudente et involontaire". Fowler remarque que selon son expérience, la dette "imprudente et délibérée" est rarement rentable.
+La dette peut être classifiée dans un quadrant comme dans le @tbl-DetteQuadrant proposé par Fowler. Selon lui, la dette dont Ward Cunningham a parlé dans sa vidéo peut être classifiée comme "prudente et involontaire". Fowler remarque que selon son expérience, la dette "imprudente et délibérée" est rarement rentable.
 
-: Classification de la dette selon Fowler (2009)\label{tab:DetteQuadrant}
+: Classification de la dette selon Fowler (2009) {#tbl-DetteQuadrant}
 
 **Dette** | \cellcolor{red!15}**Imprudente** | \cellcolor{green!15}**Prudente**
 :--|:----------|:----------
 Délibérée | \cellcolor{red!15}"*On n'a pas le temps pour la conception!*" \newline Cette forme de dette est rarement rentable.  |  \cellcolor{green!15}"*Il faut livrer maintenant puis en assumer les conséquences.*" \newline Exemple: La dette est due à une partie limitée du code.
 Involontaire | \cellcolor{red!15}"*C'est quoi la séparation en couches?*" \newline Il s'agit de l'ignorance de bonnes pratiques. | \cellcolor{green!15}"*Maintenant on sait comment on aurait dû le faire.*" \newline C'est tenter une solution malgré une compréhension limitée du problème.
+
 
 ## Résumé
 

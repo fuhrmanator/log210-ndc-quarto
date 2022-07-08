@@ -1,4 +1,4 @@
-# Réusinage (Refactorisation) {#Refactoring}
+# Réusinage (Refactorisation) {#sec-Refactoring}
 
 ## Introduction
 
@@ -31,11 +31,11 @@ Mais le projet devait expédier du code qui fonctionnait, pas du code qui plaira
 Le consultant a suggéré qu'un nettoyage similaire soit effectué sur d'autres parties centrales du système, ce qui pourrait interrompre le projet pendant une semaine ou deux.
 Tout cela était pour rendre le code plus beau, pas pour lui faire faire ce qu'il ne faisait pas déjà.
 
-Cette histoire est un bon exemple des deux forces constamment en jeu lors d'un développement de logiciel. D'un côté, on veut que le code fonctionne (pour satisfaire les fonctionnalités) et d'un autre côté, on veut que la conception soit acceptable puisqu'il y a d'autres exigences sur un logiciel telles que la maintenabilité, l'extensibilité, etc. La section sur le \nameref{SpectreDeLaConception} aborde cette dynamique.
+Cette histoire est un bon exemple des deux forces constamment en jeu lors d'un développement de logiciel. D'un côté, on veut que le code fonctionne (pour satisfaire les fonctionnalités) et d'un autre côté, on veut que la conception soit acceptable puisqu'il y a d'autres exigences sur un logiciel telles que la maintenabilité, l'extensibilité, etc. La section sur le [Spectre de la conception](#sec-SpectreDeLaConception) aborde cette dynamique.
 
-Le réusinage (anglais *refactoring*) est, selon Fowler, "l'amélioration de la conception du code après avoir écrit celui-ci". Il s'agit de retravailler le code source de façon à en améliorer la lisibilité ou la structure, sans en modifier le fonctionnement. C'est une manière de gérer la dette technique, car grâce au réusinage on peut transformer du code chaotique (écrit peut-être par les gens en mode "hacking cowboy") en code bien structuré. De plus, beaucoup d'IDE supportent l'automatisation d'activités de réusinage, rendant le processus plus facile et robuste. Probablement vous avez déjà "renommé" une variable dans le code source, à travers un menu "Refactoring".
+Le réusinage (anglais *refactoring*) est, selon Fowler, "l'amélioration de la conception du code après avoir écrit celui-ci". Il s'agit de retravailler le code source de façon à en améliorer la lisibilité ou la structure, sans en modifier le fonctionnement. C'est une manière de gérer la dette technique, car grâce au réusinage on peut transformer du code chaotique (écrit peut-être par les gens en mode "hacking cowboy") en code bien structuré. De plus, beaucoup d'IDE supportent l'automatisation d'activités de réusinage, rendant le processus plus facile et robuste. Probablement vous avez déjà "renommé" une variable dans le code source, à travers un menu "R   efactoring".
 
-Le réusinage est une activité intégrale du \nameref{TDD}.
+Le réusinage est une activité intégrale du [Développement piloté par les tests](#sec-TDD).
 
 ## Symptômes de la mauvaise conception - Code smells
 
