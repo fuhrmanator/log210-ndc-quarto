@@ -50,7 +50,7 @@ jobs:
 
       # xkcd font
       - name: Install xkcd font
-        run: mkdir -p /usr/share/fonts/TTF && cp xkcdfont/xkcd-script.ttf /usr/share/fonts/TTF && export JAVA_FONTS="/usr/share/fonts/TTF"
+        run: mkdir -p /usr/share/fonts/TTF && cp xkcd-font/xkcd-script.ttf /usr/share/fonts/TTF && export JAVA_FONTS="/usr/share/fonts/TTF"
 
       # Render
       - name: Render to HTML
