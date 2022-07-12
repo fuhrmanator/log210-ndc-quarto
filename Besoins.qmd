@@ -6,7 +6,7 @@ Si cette information doit être actualisée toutes les 2 secondes, alors il s'ag
 Pour les qualités d'un système comme la performance, on peut les appeler *exigences non fonctionnelles*, car elles ne sont pas les fonctionnalités.
 Il y a beaucoup d'exemples d'exigences non fonctionnelles, par exemple sur [Wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement#Examples)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
 
-![Besoins non fonctionnels?](images/RamasserBesoins.jpg){#fig-besoins width="60%"}
+![Ramasser les besoins non fonctionnels? "[Dog Clean Up](https://thenounproject.com/icon/dog-clean-up-21489/)" de [Luis Prado](https://thenounproject.com/Luis), utilisé selon [CC0](https://creativecommons.org/publicdomain/zero/1.0/)](images/Pick-up-after-dog-1540480672.svg){#fig-besoins width="60%"}
 
 ## FURPS+
 
