@@ -68,6 +68,7 @@ principes GRASP pour ce travail.
 endlegend
 @enduml
 ```
+
 ## Spécifier le contrôleur
 
 Pour commencer une RDCU, on spécifie le contrôleur selon GRASP. 

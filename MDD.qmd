@@ -50,11 +50,11 @@ Voici des points importants:
 
 - *Le type d'un attribut est important et il faut les spécifier dans un MDD*, même si dans le livre du cours il y a plusieurs exemples sans type.
 - On ne se soucie pas de la visibilité des attributs dans un MDD.
-- Faites attention à l'attribut qui devrait être une classe. Si on ne pense pas un attribut *X* en termes alphanumériques dans le monde réel, alors il s'agit probablement d'une classe conceptuelle. Voir la section 9.12 \faBook<i class="fa-solid fa-book"></i>.
-- De la même manière, faites attention aux informations qui sont mieux modélisées par des associations, par exemple dans la @fig-MDD-jeu-de-risk la classe `Pays` n'a pas un *attribut* `joueur:Joueur` (qui contrôle le Pays), mais elle a plutôt une *association* avec la classe `Joueur` et un verbe `contrôle`.
+- Faites attention à la confusion des attributs et des classes. Si on ne pense pas un concept *X* en termes alphanumériques dans le monde réel, alors il s'agit probablement d'une classe conceptuelle. Par exemple, dans le monde réel, une université n'est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12 \faBook<i class="fa-solid fa-book"></i>.
+- De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple dans la @fig-MDD-jeu-de-risk la classe `Pays` n'a pas un *attribut* `joueur:Joueur` (qui contrôle le Pays); elle a plutôt une *association* avec la classe `Joueur` et un verbe `contrôle`.
 
 ::: {.callout-warning appearance="simple"}
-Il est vrai que dans un langage de programmation comme Java, les associations doivent être les attributs dans les classes. Cependant, dans un modèle du domaine on cherche à éviter des attributs si une association peut mieux décrire la relation. La relation relie visuellement les deux classes et elle est décrite avec un verbe.
+Il est vrai que dans un langage de programmation comme Java, les associations doivent être les attributs dans les classes, car il s'agit des classes *logicielles*. Cependant, dans un modèle du domaine nous évitons des attributs si une association peut mieux décrire la relation. La relation relie visuellement les deux classes conceptuelles et elle est décrite avec un verbe.
 :::
 
 ## Associations
