@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.15">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -235,7 +235,7 @@ ul.task-list{list-style: none;}
 <div id="fig-besoins" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/Pick-up-after-dog-1540480672.svg" class="img-fluid figure-img" style="width:60.0%"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.1: Ramasser les besoins non fonctionnels? «&nbsp;<a href="https://thenounproject.com/icon/dog-clean-up-21489/">Dog Clean Up</a>&nbsp;» de <a href="https://thenounproject.com/Luis">Luis Prado</a>, utilisé selon <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 2.1: Ramasser les besoins non fonctionnels? «&nbsp;<a href="https://thenounproject.com/icon/dog-clean-up-21489/">Dog Clean Up</a>&nbsp;» de <a href="https://thenounproject.com/Luis">Luis Prado</a>, utilisé selon <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></figcaption><p></p>
 </figure>
 </div>
 <section id="furps" class="level2" data-number="2.1">
@@ -274,7 +274,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const icon = "";

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.15">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -300,7 +300,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/OfficeLensWhiteBoard.jpg" class="img-fluid figure-img" width="200"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Office Lens peut détecter le cadre d’un dessin sur un tableau blanc ou papier et le transformer.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Office Lens peut détecter le cadre d’un dessin sur un tableau blanc ou papier et le transformer.</figcaption><p></p>
 </figure>
 </div>
 <blockquote class="blockquote">
@@ -321,7 +321,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-PlantUMLVSCode" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/PlantUMLVSCode.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 13.1: L’extension PlantUML pour VisualStudio Code.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 13.1: L’extension PlantUML pour VisualStudio Code.</figcaption><p></p>
 </figure>
 </div>
 <p>Pour un débutant, le langage PlantUML peut sembler plus compliqué qu’utiliser un outil graphique comme Lucidchart. Cependant, pour beaucoup de diagrammes (comme les diagrammes de séquence), ça peut être plus long à créer ou à modifier. Bien que ces outils aient des gabarits ou des modes «&nbsp;UML&nbsp;», ceux-ci ne sont pas toujours conviviaux ou complets. C’est souvent juste des objets groupés et le vrai sens de la notation UML n’est pas considéré.</p>
@@ -361,19 +361,19 @@ La clé est en fait une représentation compressée du code source.</li>
 <div id="fig-PlantUMLGizmo" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/PlantUMLGizmoSlides.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 13.2: PlantUML Gizmo pour Google Docs et Google Slides.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 13.2: PlantUML Gizmo pour Google Docs et Google Slides.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-GizmoSamples" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/SelectSampleDiagramGizmo.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 13.3: PlantUML Gizmo offre plusieurs exemples de diagramme UML.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 13.3: PlantUML Gizmo offre plusieurs exemples de diagramme UML.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-LucidchartUML" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/LucidchartDSSBotched.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 13.4: Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidcharts. C’est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n’y a pas de sémantique UML dans l’outil. Par exemple, un «&nbsp;messages&nbsp;» dans Lucidcharts est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d’autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloque «&nbsp;loop&nbsp;». La ligne de vie de l’acteur Étudiant se transforme en diagonale lorsque l’acteur est déplacé à droite. Un vrai message UML est normalement toujours à l’horizontale et une vraie ligne de vie est toujours à la verticale. Puisque Lucidcharts ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d’outil.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 13.4: Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidcharts. C’est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n’y a pas de sémantique UML dans l’outil. Par exemple, un «&nbsp;messages&nbsp;» dans Lucidcharts est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d’autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloque «&nbsp;loop&nbsp;». La ligne de vie de l’acteur Étudiant se transforme en diagonale lorsque l’acteur est déplacé à droite. Un vrai message UML est normalement toujours à l’horizontale et une vraie ligne de vie est toujours à la verticale. Puisque Lucidcharts ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d’outil.</figcaption><p></p>
 </figure>
 </div>
 
@@ -395,7 +395,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const icon = "";

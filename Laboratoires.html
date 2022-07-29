@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.15">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -434,7 +434,7 @@ ContributionsÉquipeViews.html</code></pre>
 <div id="fig-GitinspectorOutput" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/gitinspector_output.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 20.1: Exemple de rapport généré par <code>gitinspector</code>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 20.1: Exemple de rapport généré par <code>gitinspector</code>.</figcaption><p></p>
 </figure>
 </div>
 <section id="faire-le-bilan-de-la-contribution-de-chacun" class="level3" data-number="20.3.1">
@@ -513,7 +513,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const icon = "";

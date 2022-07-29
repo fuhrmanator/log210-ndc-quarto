@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.15">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -250,7 +250,7 @@ div.csl-indent {
 <figure class="figure">
 <img src="images/PanneConnexionService.png" title="Comment tolérer une panne de connexion ou de service?" class="img-fluid figure-img" style="width:70.0%">
 </figure>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 15.1: Comment tolérer une panne de connexion ou de service?</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 15.1: Comment tolérer une panne de connexion ou de service?</figcaption><p></p>
 </figure>
 </div>
 <p>Voici les points importants:</p>
@@ -298,7 +298,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const icon = "";

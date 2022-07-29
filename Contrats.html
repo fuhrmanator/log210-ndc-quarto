@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.15">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -260,7 +260,7 @@ ul.task-list{list-style: none;}
 <div id="fig-ContratExempleCreerNouvelleVente" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/SurvolContrats.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 8.1: Pendant l’opération système <code>créerNouvelleVente</code>, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 8.1: Pendant l’opération système <code>créerNouvelleVente</code>, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -312,7 +312,7 @@ ul.task-list{list-style: none;}
 <div id="fig-MDD-risk-objets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/MDD-Risk-contrats.drawio.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 8.2: Les postconditions décrivent la manipulation d’objets dans un MDD (la partie inférieure ici est un diagramme d’objets)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 8.2: Les postconditions décrivent la manipulation d’objets dans un MDD (la partie inférieure ici est un diagramme d’objets)</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -352,7 +352,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const icon = "";

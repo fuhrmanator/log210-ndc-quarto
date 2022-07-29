@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.15">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -244,7 +244,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Risk-dice-example.jpg" class="img-fluid figure-img" width="300"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Cinq dés utilisés dans le jeu de Risk. By Val42 - <a href="http://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg">https://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC By-SA 3.0</a> <a href="https://commons.wikimedia.org/w/index.php?curid=3272090">Link</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Cinq dés utilisés dans le jeu de Risk. By Val42 - <a href="http://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg">https://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC By-SA 3.0</a> <a href="https://commons.wikimedia.org/w/index.php?curid=3272090">Link</a></figcaption><p></p>
 </figure>
 </div>
 <p>Selon «&nbsp;Risk&nbsp;». 2019. <a href="https://fr.wikipedia.org/w/index.php?title=Risk&amp;oldid=164264587">Wikipédia</a>. (accédé le 9 décembre 2019):</p>
@@ -268,7 +268,7 @@ ul.task-list{list-style: none;}
 <div id="fig-uc" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="CasUtilisation_files/mediabag/fa63d2da8dc7d28519b0173e826501d02481ea69.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 3.1: Diagramme de cas d’utilisation. <a href="http://www.plantuml.com/plantuml/uml/VL9BJiGm3DrNuWuMB60MCu8RW00XXbcCA9yD6zDwsgYfCpYEe4BS1yx1nN3AWeh5I94J-JtRptPEew9ewdqHEyTR5EmXwk39hBWg8tiJw1chhf6GkAw23m8goD4WOjqh3a5R5y4EGejSlufJ9OPDO0N7yEYu3g_HY7y9QzfWyfefZ3t1ZRYOOwxlpertrr8a2DgIHF0XTD08uPYiVBY2enux4vg4h38DXtOxjeQyfzgg2fojLd1VNjwMa_9mSZoRjlHVGSGc6zwjyvexM8OaZ7udxwshQYWhSLlToLkJZKhYLDXqX2g9YbYXxUMayBHHq03YcbQXTaALki2JqAsjoTeenqLckC1ARHwcc980HbWMsOtS666_7A9-V_Qq3-y5mD5YiPXbpZZtx3XJnPT4yiI9BVSGHtYvpjZ5zrUF8YGpEF1PK2Cu6B24-VoNChv-StqKfyIr_QaV">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 3.1: Diagramme de cas d’utilisation. <a href="http://www.plantuml.com/plantuml/uml/VL9BJiGm3DrNuWuMB60MCu8RW00XXbcCA9yD6zDwsgYfCpYEe4BS1yx1nN3AWeh5I94J-JtRptPEew9ewdqHEyTR5EmXwk39hBWg8tiJw1chhf6GkAw23m8goD4WOjqh3a5R5y4EGejSlufJ9OPDO0N7yEYu3g_HY7y9QzfWyfefZ3t1ZRYOOwxlpertrr8a2DgIHF0XTD08uPYiVBY2enux4vg4h38DXtOxjeQyfzgg2fojLd1VNjwMa_9mSZoRjlHVGSGc6zwjyvexM8OaZ7udxwshQYWhSLlToLkJZKhYLDXqX2g9YbYXxUMayBHHq03YcbQXTaALki2JqAsjoTeenqLckC1ARHwcc980HbWMsOtS666_7A9-V_Qq3-y5mD5YiPXbpZZtx3XJnPT4yiI9BVSGHtYvpjZ5zrUF8YGpEF1PK2Cu6B24-VoNChv-StqKfyIr_QaV">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <p>Notes:</p>
@@ -297,7 +297,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const icon = "";
