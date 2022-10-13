@@ -1,6 +1,5 @@
 project:
   type: book
-  language: _language.yml   # customized, "tableau" plutôt que "table", etc.
 
 latex-auto-install: true
 
@@ -9,6 +8,7 @@ crossref:
   tbl-prefix: tableau    # (default is "Table")
 
 lang: fr
+language: _language.yml   # customized, "tableau" plutôt que "table", etc.
 
 book:
 
