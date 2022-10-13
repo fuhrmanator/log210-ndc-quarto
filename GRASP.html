@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -223,14 +228,14 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#sec-SpectreDeLaConception" id="toc-sec-SpectreDeLaConception" class="nav-link active" data-scroll-target="#sec-SpectreDeLaConception"> <span class="header-section-number">6.1</span> Spectre de la conception</a></li>
-  <li><a href="#tbl-GRASPTable" id="toc-tbl-GRASPTable" class="nav-link" data-scroll-target="#tbl-GRASPTable"> <span class="header-section-number">6.2</span> Tableau des principes GRASP</a></li>
-  <li><a href="#grasp-et-rdcu" id="toc-grasp-et-rdcu" class="nav-link" data-scroll-target="#grasp-et-rdcu"> <span class="header-section-number">6.3</span> GRASP et RDCU</a></li>
-  <li><a href="#grasp-et-patterns-gof" id="toc-grasp-et-patterns-gof" class="nav-link" data-scroll-target="#grasp-et-patterns-gof"> <span class="header-section-number">6.4</span> GRASP et Patterns GoF</a></li>
+  <li><a href="#sec-SpectreDeLaConception" id="toc-sec-SpectreDeLaConception" class="nav-link active" data-scroll-target="#sec-SpectreDeLaConception"><span class="toc-section-number">6.1</span>  Spectre de la conception</a></li>
+  <li><a href="#tbl-GRASPTable" id="toc-tbl-GRASPTable" class="nav-link" data-scroll-target="#tbl-GRASPTable"><span class="toc-section-number">6.2</span>  Tableau des principes GRASP</a></li>
+  <li><a href="#grasp-et-rdcu" id="toc-grasp-et-rdcu" class="nav-link" data-scroll-target="#grasp-et-rdcu"><span class="toc-section-number">6.3</span>  GRASP et RDCU</a></li>
+  <li><a href="#grasp-et-patterns-gof" id="toc-grasp-et-patterns-gof" class="nav-link" data-scroll-target="#grasp-et-patterns-gof"><span class="toc-section-number">6.4</span>  GRASP et Patterns GoF</a></li>
   </ul>
 </nav>
     </div>
@@ -267,7 +272,7 @@ div.csl-indent {
 <div id="fig-SpectreConception" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="GRASP_files/mediabag/d8229f5245d4fc4d5c0694888b43bdf52ac59ada.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 6.1: Spectre de la conception, adapté de Neal Ford. <a href="http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Spectre de la conception, adapté de Neal Ford. <a href="http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <p>À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l’on nomme «&nbsp;Hacking cowboy&nbsp;». C’est le cas lors d’un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement). Vous ne feriez pas un logiciel avec 10 patrons GoF ou les diagrammes UML pour réfléchir à votre architecture. Mais vous savez aussi que le code qui est produit lors d’un hackathon ne sera pas facile à maintenir. Le seul but est de faire du code qui marche pour montrer une idée intéressante.</p>
@@ -282,7 +287,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <p>Voici un extrait du livre du cours, <strong>UML 2 et les design patterns</strong> de Craig Larman.</p>
 <div id="tbl-tableGRASP" class="anchored">
 <table class="table">
-<caption>Tableau 6.1: Patterns (principes) GRASP</caption>
+<caption>Tableau&nbsp;6.1: Patterns (principes) GRASP</caption>
 <colgroup>
 <col style="width: 15%">
 <col style="width: 85%">
@@ -420,7 +425,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

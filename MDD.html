@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -204,25 +209,25 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#classes-conceptuelles" id="toc-classes-conceptuelles" class="nav-link active" data-scroll-target="#classes-conceptuelles"> <span class="header-section-number">4.1</span> Classes conceptuelles</a>
+  <li><a href="#classes-conceptuelles" id="toc-classes-conceptuelles" class="nav-link active" data-scroll-target="#classes-conceptuelles"><span class="toc-section-number">4.1</span>  Classes conceptuelles</a>
   <ul class="collapse">
-  <li><a href="#catégories-pour-identifier-des-classes-conceptuelles" id="toc-catégories-pour-identifier-des-classes-conceptuelles" class="nav-link" data-scroll-target="#catégories-pour-identifier-des-classes-conceptuelles"> <span class="header-section-number">4.1.1</span> Catégories pour identifier des classes conceptuelles</a></li>
+  <li><a href="#catégories-pour-identifier-des-classes-conceptuelles" id="toc-catégories-pour-identifier-des-classes-conceptuelles" class="nav-link" data-scroll-target="#catégories-pour-identifier-des-classes-conceptuelles"><span class="toc-section-number">4.1.1</span>  Catégories pour identifier des classes conceptuelles</a></li>
   </ul></li>
-  <li><a href="#attributs" id="toc-attributs" class="nav-link" data-scroll-target="#attributs"> <span class="header-section-number">4.2</span> Attributs</a></li>
-  <li><a href="#associations" id="toc-associations" class="nav-link" data-scroll-target="#associations"> <span class="header-section-number">4.3</span> Associations</a></li>
-  <li><a href="#exemple-de-mdd-pour-le-jeu-de-risk" id="toc-exemple-de-mdd-pour-le-jeu-de-risk" class="nav-link" data-scroll-target="#exemple-de-mdd-pour-le-jeu-de-risk"> <span class="header-section-number">4.4</span> Exemple de MDD pour le jeu de Risk</a></li>
-  <li><a href="#attributs-dérivés" id="toc-attributs-dérivés" class="nav-link" data-scroll-target="#attributs-dérivés"> <span class="header-section-number">4.5</span> Attributs dérivés</a></li>
-  <li><a href="#classes-de-description-et-de-catalogues" id="toc-classes-de-description-et-de-catalogues" class="nav-link" data-scroll-target="#classes-de-description-et-de-catalogues"> <span class="header-section-number">4.6</span> Classes de «&nbsp;description&nbsp;» et de catalogues</a></li>
-  <li><a href="#classes-dassociation" id="toc-classes-dassociation" class="nav-link" data-scroll-target="#classes-dassociation"> <span class="header-section-number">4.7</span> Classes d’association</a></li>
-  <li><a href="#affinement-du-mdd" id="toc-affinement-du-mdd" class="nav-link" data-scroll-target="#affinement-du-mdd"> <span class="header-section-number">4.8</span> Affinement du MDD</a></li>
-  <li><a href="#faq-mdd" id="toc-faq-mdd" class="nav-link" data-scroll-target="#faq-mdd"> <span class="header-section-number">4.9</span> FAQ MDD</a>
+  <li><a href="#attributs" id="toc-attributs" class="nav-link" data-scroll-target="#attributs"><span class="toc-section-number">4.2</span>  Attributs</a></li>
+  <li><a href="#associations" id="toc-associations" class="nav-link" data-scroll-target="#associations"><span class="toc-section-number">4.3</span>  Associations</a></li>
+  <li><a href="#exemple-de-mdd-pour-le-jeu-de-risk" id="toc-exemple-de-mdd-pour-le-jeu-de-risk" class="nav-link" data-scroll-target="#exemple-de-mdd-pour-le-jeu-de-risk"><span class="toc-section-number">4.4</span>  Exemple de MDD pour le jeu de Risk</a></li>
+  <li><a href="#attributs-dérivés" id="toc-attributs-dérivés" class="nav-link" data-scroll-target="#attributs-dérivés"><span class="toc-section-number">4.5</span>  Attributs dérivés</a></li>
+  <li><a href="#classes-de-description-et-de-catalogues" id="toc-classes-de-description-et-de-catalogues" class="nav-link" data-scroll-target="#classes-de-description-et-de-catalogues"><span class="toc-section-number">4.6</span>  Classes de «&nbsp;description&nbsp;» et de catalogues</a></li>
+  <li><a href="#classes-dassociation" id="toc-classes-dassociation" class="nav-link" data-scroll-target="#classes-dassociation"><span class="toc-section-number">4.7</span>  Classes d’association</a></li>
+  <li><a href="#affinement-du-mdd" id="toc-affinement-du-mdd" class="nav-link" data-scroll-target="#affinement-du-mdd"><span class="toc-section-number">4.8</span>  Affinement du MDD</a></li>
+  <li><a href="#faq-mdd" id="toc-faq-mdd" class="nav-link" data-scroll-target="#faq-mdd"><span class="toc-section-number">4.9</span>  FAQ MDD</a>
   <ul class="collapse">
-  <li><a href="#mddchaquecasutilisation" id="toc-mddchaquecasutilisation" class="nav-link" data-scroll-target="#mddchaquecasutilisation"> <span class="header-section-number">4.9.1</span> Y a-t-il un MDD pour chaque cas d’utilisation?</a></li>
-  <li><a href="#mdd_donnees" id="toc-mdd_donnees" class="nav-link" data-scroll-target="#mdd_donnees"> <span class="header-section-number">4.9.2</span> Un <strong>modèle du domaine</strong> est-il la même chose qu’un <strong>modèle de données</strong>?</a></li>
+  <li><a href="#mddchaquecasutilisation" id="toc-mddchaquecasutilisation" class="nav-link" data-scroll-target="#mddchaquecasutilisation"><span class="toc-section-number">4.9.1</span>  Y a-t-il un MDD pour chaque cas d’utilisation?</a></li>
+  <li><a href="#mdd_donnees" id="toc-mdd_donnees" class="nav-link" data-scroll-target="#mdd_donnees"><span class="toc-section-number">4.9.2</span>  Un <strong>modèle du domaine</strong> est-il la même chose qu’un <strong>modèle de données</strong>?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -389,7 +394,7 @@ ul.task-list{list-style: none;}
 </ul>
 <div id="tbl-associations-courantes" class="anchored">
 <table class="table">
-<caption>Tableau 4.1: Extrait du tableau 9.2&nbsp;<i class="fa-solid fa-book"></i>&nbsp;(liste d’associations courantes).</caption>
+<caption>Tableau&nbsp;4.1: Extrait du tableau 9.2&nbsp;<i class="fa-solid fa-book"></i>&nbsp;(liste d’associations courantes).</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -476,7 +481,7 @@ ul.task-list{list-style: none;}
 <div id="fig-MDD-jeu-de-risk" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/ff7380a7a7f7af8b020b8554ec77aa58f81d9fd2.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 4.1: Modèle du domaine du jeu de Risk. <a href="http://www.plantuml.com/plantuml/uml/VLJRRjD047ttLupyuXObWHGe8a9Lgr9LBPM8aW8lVTdOKsVnUZRi9IL2IF0tv9q_o9_m9SpQSPscKQLedVMScNFspAoFhHF6-L95jf0q4qQKODr28Qz6fbkHYKYBt6XFMQgLDk2C8CiX91SbuARI0ly4J0LbTqOwXmItcXn8WY-ICdrdewGjb-6jyCe518aIuOEHDgHSN9z6oVKKBO9sKpGMbDO5v0P5LMhy-HpsIb6mI6-GUN6Hy5CI7qOfp9ZJmCdL5NmQdut66-JGVx7_b00hyh3Gaoelg81BxGs9JMksKT-BD8DnQkJCFLLiY6oIiHk5DhrpncDaKy7jw4TJcI5WENCBAB6SXAnK2Mk36FG6VaG0f4iOm9XRHpbldzDaA1RsOvhwsMffEIIvKp_NUUzNooffplKvlmasLT6Ff2sQRJnKmg6etiKWB0n7JIXGF6Q_BtJYdFZciKPCwftWcQZvmZiMSejaTuYeb0idDQtJHwjbBakUj_OmqN04SJ-6PzqknAyEubhF04xPOyb8E7g0E8ph266buSowxWrbSYxjQid_sFMZg0MqXJk7dHjwqtdBQxybEUVRCCD04VO17S3zNk_PFIGmpBMqahfPGAwDhS6gMprPO0tygZtBuB7U1cOCV1rNFHlm2ARAXuCbe6HEuHx8ENkAa3Q7zWJ8LpD5KCBmLE_z-_LxFrgFIWm01uF3bh-X6bJ35BZNm5q72kwOrLyLS7iri5F5zg7NssXPb6nLuHBt_TkgaxJ-gSV8Tp0qsgt-vCWTqfuNKGzLz32jbjaCt02k1AKxctD3cx1w_h9kCC_iEdtdeFEoyVuot5Z6HCUSmf_7_m00">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.1: Modèle du domaine du jeu de Risk. <a href="http://www.plantuml.com/plantuml/uml/VLJRRjD047ttLupyuXObWHGe8a9Lgr9LBPM8aW8lVTdOKsVnUZRi9IL2IF0tv9q_o9_m9SpQSPscKQLedVMScNFspAoFhHF6-L95jf0q4qQKODr28Qz6fbkHYKYBt6XFMQgLDk2C8CiX91SbuARI0ly4J0LbTqOwXmItcXn8WY-ICdrdewGjb-6jyCe518aIuOEHDgHSN9z6oVKKBO9sKpGMbDO5v0P5LMhy-HpsIb6mI6-GUN6Hy5CI7qOfp9ZJmCdL5NmQdut66-JGVx7_b00hyh3Gaoelg81BxGs9JMksKT-BD8DnQkJCFLLiY6oIiHk5DhrpncDaKy7jw4TJcI5WENCBAB6SXAnK2Mk36FG6VaG0f4iOm9XRHpbldzDaA1RsOvhwsMffEIIvKp_NUUzNooffplKvlmasLT6Ff2sQRJnKmg6etiKWB0n7JIXGF6Q_BtJYdFZciKPCwftWcQZvmZiMSejaTuYeb0idDQtJHwjbBakUj_OmqN04SJ-6PzqknAyEubhF04xPOyb8E7g0E8ph266buSowxWrbSYxjQid_sFMZg0MqXJk7dHjwqtdBQxybEUVRCCD04VO17S3zNk_PFIGmpBMqahfPGAwDhS6gMprPO0tygZtBuB7U1cOCV1rNFHlm2ARAXuCbe6HEuHx8ENkAa3Q7zWJ8LpD5KCBmLE_z-_LxFrgFIWm01uF3bh-X6bJ35BZNm5q72kwOrLyLS7iri5F5zg7NssXPb6nLuHBt_TkgaxJ-gSV8Tp0qsgt-vCWTqfuNKGzLz32jbjaCt02k1AKxctD3cx1w_h9kCC_iEdtdeFEoyVuot5Z6HCUSmf_7_m00">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -486,7 +491,7 @@ ul.task-list{list-style: none;}
 <div id="fig-MDD-attribut-derive" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/d99d8868212b4107028e1acf9ccc6926cb54aa3a.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 4.2: <code>nbPaysOccupés</code> est un attribut dérivé et sa valeur sera calculée selon le nombre de pays de l’association. <a href="http://www.plantuml.com/plantuml/uml/VLB1QW8n4BtdAmOlsnRKUXKHYvHYArIwjZt7xEY6pKvaac2b-46zzm_yiSvQeM9123E4UNdlpKn68MgEgNOgL9RMcdKD8MuTIcHhpYeBRQeL-qI5ySupHDOKf8GKLGQnj07aQ2Wr5HksCIB1qbC4I_1kgV2ReB8_kWANEhdO84ZN24ziG_DaCX-hR5vYGF2nH0xWlAzWnQWFLFdR0rpLkXAJYL5qSPj9jYJDE8U5Q3BSJQVmcj-_v2VYqBkzlcGWw5KJwABB2LNmw1EJFXtDEUgZCWNaXkqwNYAReGo9mmdHwUmY9rJ1Q5b7JvMsGC1w7RTGOxreNXcdGsZCO6BuL03aQ-X3BgkZbLm7XpNr5oxXi4kBcTw6PsFIUlyL16Of3he7n53jZbmDv3_JJXqrMhqMjDkIEfsRrY-u3sDfXlVVOdAeHaY5_9aV">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.2: <code>nbPaysOccupés</code> est un attribut dérivé et sa valeur sera calculée selon le nombre de pays de l’association. <a href="http://www.plantuml.com/plantuml/uml/VLB1QW8n4BtdAmOlsnRKUXKHYvHYArIwjZt7xEY6pKvaac2b-46zzm_yiSvQeM9123E4UNdlpKn68MgEgNOgL9RMcdKD8MuTIcHhpYeBRQeL-qI5ySupHDOKf8GKLGQnj07aQ2Wr5HksCIB1qbC4I_1kgV2ReB8_kWANEhdO84ZN24ziG_DaCX-hR5vYGF2nH0xWlAzWnQWFLFdR0rpLkXAJYL5qSPj9jYJDE8U5Q3BSJQVmcj-_v2VYqBkzlcGWw5KJwABB2LNmw1EJFXtDEUgZCWNaXkqwNYAReGo9mmdHwUmY9rJ1Q5b7JvMsGC1w7RTGOxreNXcdGsZCO6BuL03aQ-X3BgkZbLm7XpNr5oxXi4kBcTw6PsFIUlyL16Of3he7n53jZbmDv3_JJXqrMhqMjDkIEfsRrY-u3sDfXlVVOdAeHaY5_9aV">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -502,7 +507,7 @@ ul.task-list{list-style: none;}
 <div id="fig-MDD-CoursGroupeCoursDescription" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/12d5a4f4944242c6c13c9cd279ee5c61a0703d63.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 4.3: Cours joue le rôle de description d’entités (les groupes-cours).</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.3: Cours joue le rôle de description d’entités (les groupes-cours).</figcaption><p></p>
 </figure>
 </div>
 <div class="callout-warning callout callout-style-default callout-captioned">
@@ -521,7 +526,7 @@ Avertissement
 <div id="fig-MDD-ErreurDescription" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/81388c483adcfc0557f8ec918c51497640ad802f.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 4.4: Erreur fréquente en LOG210 - utiliser une classe de description sans justification.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.4: Erreur fréquente en LOG210 - utiliser une classe de description sans justification.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -543,7 +548,7 @@ Avertissement
 <div id="fig-MDD-classe-association" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/f59a2e71ea352c8c48db1a5f68fdacc3bf863fd8.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 4.5: Classe d’association dans le MDD Jeu de Risk. <a href="http://www.plantuml.com/plantuml/uml/VPBFIWD13CRl0xv3wALLRB5N3r8f8bL1wVhddCwckyFEP4fc5YtY0tdt3NmnirPm4ImCayFtI_9bChEKKN8Rl4cDumqA1aXvwqblSRPJ3dhI2crJIMovjD57WIp8IINYV626a6kNG0z2ZLm-YykP6DQHCpY69yTbV4uA_XOiQOsjpnt260YknQKkPt4_L-w-faGGSqsImCVOG2M4tyMAnqiO1MpKQ2kadMaxrEXO1_AUIkqgS7vp0m_5nRBejOVfoM5_fByE4bRTnVjzBhY1gzWAez_BlJIsXCAAs-Izt1tfKqdg6-i_OPQMJBAeUvcQsfK453Pv2u72IjECzPXIPuXQWLS3m370AHIwGwxCsuz-XzlqltfhRRl1x2BlcDNoyxroGLUR57QSbVpfC9WEO3pMC9aS3NPbJs6kiyZdXreyCwCTUFoj7S9aqgjkPiIb_gil">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.5: Classe d’association dans le MDD Jeu de Risk. <a href="http://www.plantuml.com/plantuml/uml/VPBFIWD13CRl0xv3wALLRB5N3r8f8bL1wVhddCwckyFEP4fc5YtY0tdt3NmnirPm4ImCayFtI_9bChEKKN8Rl4cDumqA1aXvwqblSRPJ3dhI2crJIMovjD57WIp8IINYV626a6kNG0z2ZLm-YykP6DQHCpY69yTbV4uA_XOiQOsjpnt260YknQKkPt4_L-w-faGGSqsImCVOG2M4tyMAnqiO1MpKQ2kadMaxrEXO1_AUIkqgS7vp0m_5nRBejOVfoM5_fByE4bRTnVjzBhY1gzWAez_BlJIsXCAAs-Izt1tfKqdg6-i_OPQMJBAeUvcQsfK453Pv2u72IjECzPXIPuXQWLS3m370AHIwGwxCsuz-XzlqltfhRRl1x2BlcDNoyxroGLUR57QSbVpfC9WEO3pMC9aS3NPbJs6kiyZdXreyCwCTUFoj7S9aqgjkPiIb_gil">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -570,8 +575,8 @@ Avertissement
 <h2 data-number="4.9" class="anchored" data-anchor-id="faq-mdd"><span class="header-section-number">4.9</span> FAQ MDD</h2>
 <section id="mddchaquecasutilisation" class="level3" data-number="4.9.1">
 <h3 data-number="4.9.1" class="anchored" data-anchor-id="mddchaquecasutilisation"><span class="header-section-number">4.9.1</span> Y a-t-il un MDD pour chaque cas d’utilisation?</h3>
-<p>Selon la méthodologie du livre du cours, bien qu’une application ait souvent plusieurs fonctionnalités (cas d’utilisation), il n’y a qu’un seul MDD.</p>
-<p>Cela dit, Le MDD est comme un fichier de code source, puisque sa <em>version</em> peut évoluer avec le projet. Le MDD évoluera normalement après chaque itération, car on fait une nouvelle analyse pour les nouvelles fonctionnalités visées dans l’itération. Au début du projet, le MDD est plus simple, puisqu’il porte sur seulement les cas d’utilisation ciblés à la première itération. Le MDD devient plus riche au fur et à mesure qu’on avance dans les itérations, parce qu’il modélise davantage de concepts reliés aux problèmes traités par les nouvelles fonctionnalités à réaliser.</p>
+<p>Selon la méthodologie du cours, bien qu’une application ait souvent plusieurs fonctionnalités (cas d’utilisation), il n’y a qu’un seul MDD.</p>
+<p>Cela dit, le MDD est comme un fichier de code source, puisque sa <em>version</em> peut évoluer avec le projet. Le MDD évoluera normalement après chaque itération, car on fait une nouvelle analyse pour les nouvelles fonctionnalités visées dans l’itération. Au début du projet, le MDD est plus simple, puisqu’il porte sur seulement les cas d’utilisation ciblés à la première itération. Le MDD devient plus riche au fur et à mesure qu’on avance dans les itérations, parce qu’il modélise davantage de concepts reliés aux problèmes traités par les nouvelles fonctionnalités à réaliser.</p>
 <p>Par exemple, la version initiale du MDD (chapitre 9&nbsp;<i class="fa-solid fa-book"></i>) ne traite pas la fonctionnalité de paiement par carte de crédit. Les classes conceptuelles modélisant la problématique de paiements par carte de crédit sont absentes dans le MDD initial. Plus tard (après plusieurs itérations, dans le chapitre sur le raffinement du MDD), on voit un MDD beaucoup plus riche qui reflète la modélisation des concepts reliés à des fonctionnalités comme les paiements par carte de crédit, les demandes d’autorisation de paiement, etc.</p>
 </section>
 <section id="mdd_donnees" class="level3" data-number="4.9.2">
@@ -660,7 +665,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

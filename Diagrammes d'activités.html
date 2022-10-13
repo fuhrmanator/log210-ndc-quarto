@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -204,11 +209,11 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#diagrammes-de-flot-de-données-dfd" id="toc-diagrammes-de-flot-de-données-dfd" class="nav-link active" data-scroll-target="#diagrammes-de-flot-de-données-dfd"> <span class="header-section-number">16.1</span> Diagrammes de flot de données (DFD)</a></li>
+  <li><a href="#diagrammes-de-flot-de-données-dfd" id="toc-diagrammes-de-flot-de-données-dfd" class="nav-link active" data-scroll-target="#diagrammes-de-flot-de-données-dfd"><span class="toc-section-number">16.1</span>  Diagrammes de flot de données (DFD)</a></li>
   </ul>
 </nav>
     </div>
@@ -248,7 +253,7 @@ ul.task-list{list-style: none;}
 <div id="fig-ActivityDiagramExampleGitCommit" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Diagrammes d'activités_files/mediabag/78e51cd0ca2ae59f07c206a3b51b4cce0bf7ea97.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 16.1: Diagramme d’activités pour un processus simple avec git. <a href="http://www.plantuml.com/plantuml/uml/VL9BRjj03DtFAGXlRE_QhRreZAG9ya5QH6wxoc8yGqcC98unmscIS_G2tVeSGkzLoWfGEq0j29Gmxv5yV9op93PAxbgJ6kAjZRQ39AyjQepatY4RwvegXipUXJP4a6WvAOGiPWfIKm9zBTIM_NCa4MGe0miGmmzY7vwJcVuhvx6qkPM1mRP3k8sKXfJhzRcPhcjC245gZ0dQ41ge8jfzgUBx5SmwswZ8757xukjKlyGwJDkYrvuHLdTtyAtu_50SD8UF7-Rc__sJhOR09qLUSmCt8KUsxIdQI-Cy52xILaxHlgAQ5DE1g4Fl96OyW2x6v3M-oAgbYZlr7Pm6ZAVMDspOS124I5Kji82BVhV9OXOF_SvJXH5SyBWyvgoSq4-IVcSMvuf25poLrEyUZsdtVtvb3tuQDayenb09ioiRlTOS4vmL2fm-pOSrCSo-P9eRqEUz84T9YO02PHx-zgJ5wYbaUHC8_MyTorR4rN94zy8cXPwXdpoEPvUMz2vCNEWwaWdO3BxVROD0HR8S60PRlLYp-y2Za8KsB_T9Huhtc6QFrY0hf5Q6xV7ubyJcJ44r-Yy0">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;16.1: Diagramme d’activités pour un processus simple avec git. <a href="http://www.plantuml.com/plantuml/uml/VL9BRjj03DtFAGXlRE_QhRreZAG9ya5QH6wxoc8yGqcC98unmscIS_G2tVeSGkzLoWfGEq0j29Gmxv5yV9op93PAxbgJ6kAjZRQ39AyjQepatY4RwvegXipUXJP4a6WvAOGiPWfIKm9zBTIM_NCa4MGe0miGmmzY7vwJcVuhvx6qkPM1mRP3k8sKXfJhzRcPhcjC245gZ0dQ41ge8jfzgUBx5SmwswZ8757xukjKlyGwJDkYrvuHLdTtyAtu_50SD8UF7-Rc__sJhOR09qLUSmCt8KUsxIdQI-Cy52xILaxHlgAQ5DE1g4Fl96OyW2x6v3M-oAgbYZlr7Pm6ZAVMDspOS124I5Kji82BVhV9OXOF_SvJXH5SyBWyvgoSq4-IVcSMvuf25poLrEyUZsdtVtvb3tuQDayenb09ioiRlTOS4vmL2fm-pOSrCSo-P9eRqEUz84T9YO02PHx-zgJ5wYbaUHC8_MyTorR4rN94zy8cXPwXdpoEPvUMz2vCNEWwaWdO3BxVROD0HR8S60PRlLYp-y2Za8KsB_T9Huhtc6QFrY0hf5Q6xV7ubyJcJ44r-Yy0">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <section id="diagrammes-de-flot-de-données-dfd" class="level2" data-number="16.1">
@@ -258,7 +263,7 @@ ul.task-list{list-style: none;}
 <div id="fig-GitHubClassroomActivities" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Diagrammes d'activités_files/mediabag/ce5585e0d1f00b1fa9fd02b75a1109f8a7141939.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 16.2: Diagramme d’activités pour les activités séquentielles de GitHub Classrooms. <a href="http://www.plantuml.com/plantuml/uml/NP91JXmn44NtFaL9B6P62lH-PWCQ420b2eh80JnszL0QkspiCWfINo17cKrMkK5VBDMJ5Y2yyCB_-zVxbY-hs28j1bCFnDaM6w7AQq3T2xbFoiwwmxwanjwba0f8iLnLGfOFhcliRGloYB_aAj2UeyhWTCDYX4IpRzWzsV4Fuqdo2-k4NaZ6OuMSMW5Ldnj2rss3hRMa5BiEbjFaZETE7NLbXXkkgEcMvG87S-fXrjio7h70sxsDEUjxhsjz7tCgYW21gY1u13UPq2pllL9GJvfKuLjAFk1gynPrLUlSGPtibTCt6xf7j75oFUXOkrVVSk8gX645OV7pnrUjHQobh53YZHdEl9z8Xl6tD4ypzVfxHWPrltDkdn9LAa3lL3FKn3IBu_6vKKPOfWRkF-Tyf4p3BSbTssdwTSk1z2MLha_be6HQV3pcyQ-MiGrsM1Fn5x0lw2RDfPW5ZLyqXeXnLqxl51Qfx2rJFLNH0LLIDfV8Nd_7Fm00">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;16.2: Diagramme d’activités pour les activités séquentielles de GitHub Classrooms. <a href="http://www.plantuml.com/plantuml/uml/NP91JXmn44NtFaL9B6P62lH-PWCQ420b2eh80JnszL0QkspiCWfINo17cKrMkK5VBDMJ5Y2yyCB_-zVxbY-hs28j1bCFnDaM6w7AQq3T2xbFoiwwmxwanjwba0f8iLnLGfOFhcliRGloYB_aAj2UeyhWTCDYX4IpRzWzsV4Fuqdo2-k4NaZ6OuMSMW5Ldnj2rss3hRMa5BiEbjFaZETE7NLbXXkkgEcMvG87S-fXrjio7h70sxsDEUjxhsjz7tCgYW21gY1u13UPq2pllL9GJvfKuLjAFk1gynPrLUlSGPtibTCt6xf7j75oFUXOkrVVSk8gX645OV7pnrUjHQobh53YZHdEl9z8Xl6tD4ypzVfxHWPrltDkdn9LAa3lL3FKn3IBu_6vKKPOfWRkF-Tyf4p3BSbTssdwTSk1z2MLha_be6HQV3pcyQ-MiGrsM1Fn5x0lw2RDfPW5ZLyqXeXnLqxl51Qfx2rJFLNH0LLIDfV8Nd_7Fm00">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 
@@ -335,7 +340,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

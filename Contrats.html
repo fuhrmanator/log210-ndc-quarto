@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -204,16 +209,16 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#quest-ce-quun-contrat-dopération" id="toc-quest-ce-quun-contrat-dopération" class="nav-link active" data-scroll-target="#quest-ce-quun-contrat-dopération"> <span class="header-section-number">8.1</span> Qu’est-ce qu’un contrat d’opération</a></li>
-  <li><a href="#exemple-contrats-dopération-pour-attaquer-un-pays" id="toc-exemple-contrats-dopération-pour-attaquer-un-pays" class="nav-link" data-scroll-target="#exemple-contrats-dopération-pour-attaquer-un-pays"> <span class="header-section-number">8.2</span> Exemple: Contrats d’opération pour Attaquer un pays</a>
+  <li><a href="#quest-ce-quun-contrat-dopération" id="toc-quest-ce-quun-contrat-dopération" class="nav-link active" data-scroll-target="#quest-ce-quun-contrat-dopération"><span class="toc-section-number">8.1</span>  Qu’est-ce qu’un contrat d’opération</a></li>
+  <li><a href="#exemple-contrats-dopération-pour-attaquer-un-pays" id="toc-exemple-contrats-dopération-pour-attaquer-un-pays" class="nav-link" data-scroll-target="#exemple-contrats-dopération-pour-attaquer-un-pays"><span class="toc-section-number">8.2</span>  Exemple: Contrats d’opération pour Attaquer un pays</a>
   <ul class="collapse">
-  <li><a href="#attaquer-un-pays" id="toc-attaquer-un-pays" class="nav-link" data-scroll-target="#attaquer-un-pays"> <span class="header-section-number">8.2.1</span> Attaquer un pays</a></li>
+  <li><a href="#attaquer-un-pays" id="toc-attaquer-un-pays" class="nav-link" data-scroll-target="#attaquer-un-pays"><span class="toc-section-number">8.2.1</span>  Attaquer un pays</a></li>
   </ul></li>
-  <li><a href="#feuille-de-référence" id="toc-feuille-de-référence" class="nav-link" data-scroll-target="#feuille-de-référence"> <span class="header-section-number">8.3</span> Feuille de référence</a></li>
+  <li><a href="#feuille-de-référence" id="toc-feuille-de-référence" class="nav-link" data-scroll-target="#feuille-de-référence"><span class="toc-section-number">8.3</span>  Feuille de référence</a></li>
   </ul>
 </nav>
     </div>
@@ -260,7 +265,7 @@ ul.task-list{list-style: none;}
 <div id="fig-ContratExempleCreerNouvelleVente" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/SurvolContrats.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 8.1: Pendant l’opération système <code>créerNouvelleVente</code>, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;8.1: Pendant l’opération système <code>créerNouvelleVente</code>, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -312,7 +317,7 @@ ul.task-list{list-style: none;}
 <div id="fig-MDD-risk-objets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/MDD-Risk-contrats.drawio.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 8.2: Les postconditions décrivent la manipulation d’objets dans un MDD (la partie inférieure ici est un diagramme d’objets)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;8.2: Les postconditions décrivent la manipulation d’objets dans un MDD (la partie inférieure ici est un diagramme d’objets)</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -407,7 +412,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

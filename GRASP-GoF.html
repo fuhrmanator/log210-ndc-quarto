@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -267,20 +272,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#exemple-avec-adaptateur" id="toc-exemple-avec-adaptateur" class="nav-link active" data-scroll-target="#exemple-avec-adaptateur"> <span class="header-section-number">14.1</span> Exemple avec Adaptateur</a></li>
-  <li><a href="#imaginer-le-code-sans-le-pattern-gof" id="toc-imaginer-le-code-sans-le-pattern-gof" class="nav-link" data-scroll-target="#imaginer-le-code-sans-le-pattern-gof"> <span class="header-section-number">14.2</span> Imaginer le code sans le pattern GoF</a></li>
-  <li><a href="#identifier-les-grasp-dans-les-gof" id="toc-identifier-les-grasp-dans-les-gof" class="nav-link" data-scroll-target="#identifier-les-grasp-dans-les-gof"> <span class="header-section-number">14.3</span> Identifier les GRASP dans les GoF</a>
+  <li><a href="#exemple-avec-adaptateur" id="toc-exemple-avec-adaptateur" class="nav-link active" data-scroll-target="#exemple-avec-adaptateur"><span class="toc-section-number">14.1</span>  Exemple avec Adaptateur</a></li>
+  <li><a href="#imaginer-le-code-sans-le-pattern-gof" id="toc-imaginer-le-code-sans-le-pattern-gof" class="nav-link" data-scroll-target="#imaginer-le-code-sans-le-pattern-gof"><span class="toc-section-number">14.2</span>  Imaginer le code sans le pattern GoF</a></li>
+  <li><a href="#identifier-les-grasp-dans-les-gof" id="toc-identifier-les-grasp-dans-les-gof" class="nav-link" data-scroll-target="#identifier-les-grasp-dans-les-gof"><span class="toc-section-number">14.3</span>  Identifier les GRASP dans les GoF</a>
   <ul class="collapse">
-  <li><a href="#polymorphisme" id="toc-polymorphisme" class="nav-link" data-scroll-target="#polymorphisme"> <span class="header-section-number">14.3.1</span> Polymorphisme</a></li>
-  <li><a href="#fabrication-pure" id="toc-fabrication-pure" class="nav-link" data-scroll-target="#fabrication-pure"> <span class="header-section-number">14.3.2</span> Fabrication pure</a></li>
-  <li><a href="#indirection" id="toc-indirection" class="nav-link" data-scroll-target="#indirection"> <span class="header-section-number">14.3.3</span> Indirection</a></li>
-  <li><a href="#protection-des-variations" id="toc-protection-des-variations" class="nav-link" data-scroll-target="#protection-des-variations"> <span class="header-section-number">14.3.4</span> Protection des variations</a></li>
+  <li><a href="#polymorphisme" id="toc-polymorphisme" class="nav-link" data-scroll-target="#polymorphisme"><span class="toc-section-number">14.3.1</span>  Polymorphisme</a></li>
+  <li><a href="#fabrication-pure" id="toc-fabrication-pure" class="nav-link" data-scroll-target="#fabrication-pure"><span class="toc-section-number">14.3.2</span>  Fabrication pure</a></li>
+  <li><a href="#indirection" id="toc-indirection" class="nav-link" data-scroll-target="#indirection"><span class="toc-section-number">14.3.3</span>  Indirection</a></li>
+  <li><a href="#protection-des-variations" id="toc-protection-des-variations" class="nav-link" data-scroll-target="#protection-des-variations"><span class="toc-section-number">14.3.4</span>  Protection des variations</a></li>
   </ul></li>
-  <li><a href="#grasp-et-réusinage" id="toc-grasp-et-réusinage" class="nav-link" data-scroll-target="#grasp-et-réusinage"> <span class="header-section-number">14.4</span> GRASP et réusinage</a></li>
+  <li><a href="#grasp-et-réusinage" id="toc-grasp-et-réusinage" class="nav-link" data-scroll-target="#grasp-et-réusinage"><span class="toc-section-number">14.4</span>  GRASP et réusinage</a></li>
   </ul>
 </nav>
     </div>
@@ -312,7 +317,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <figure class="figure">
 <img src="images/Fig23.1.png" title="Figure A26.1/F23.1 du livre de Larman" class="img-fluid figure-img">
 </figure>
-<p></p><figcaption class="figure-caption">Figure 14.1: Le pattern Adaptateur.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.1: Le pattern Adaptateur.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -335,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <figure class="figure">
 <img src="images/Fig23.3.png" title="Figure A26.3/F23.3 du livre de Larman" class="img-fluid figure-img">
 </figure>
-<p></p><figcaption class="figure-caption">Figure 14.2: Adaptateur et principes GRASP.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.2: Adaptateur et principes GRASP.</figcaption><p></p>
 </figure>
 </div>
 <p>On peut donc voir le pattern adaptateur comme <em>une spécialisation</em> de plusieurs principes GRASP:</p>
@@ -471,7 +476,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

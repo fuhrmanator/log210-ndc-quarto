@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -267,18 +272,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#exemple-dss-pour-attaquer-un-pays" id="toc-exemple-dss-pour-attaquer-un-pays" class="nav-link active" data-scroll-target="#exemple-dss-pour-attaquer-un-pays"> <span class="header-section-number">5.1</span> Exemple: DSS pour Attaquer un pays</a></li>
-  <li><a href="#les-dss-font-abstraction-de-la-couche-présentation" id="toc-les-dss-font-abstraction-de-la-couche-présentation" class="nav-link" data-scroll-target="#les-dss-font-abstraction-de-la-couche-présentation"> <span class="header-section-number">5.2</span> Les DSS font abstraction de la couche présentation</a></li>
-  <li><a href="#faq-dss" id="toc-faq-dss" class="nav-link" data-scroll-target="#faq-dss"> <span class="header-section-number">5.3</span> FAQ DSS</a>
+  <li><a href="#exemple-dss-pour-attaquer-un-pays" id="toc-exemple-dss-pour-attaquer-un-pays" class="nav-link active" data-scroll-target="#exemple-dss-pour-attaquer-un-pays"><span class="toc-section-number">5.1</span>  Exemple: DSS pour Attaquer un pays</a></li>
+  <li><a href="#les-dss-font-abstraction-de-la-couche-présentation" id="toc-les-dss-font-abstraction-de-la-couche-présentation" class="nav-link" data-scroll-target="#les-dss-font-abstraction-de-la-couche-présentation"><span class="toc-section-number">5.2</span>  Les DSS font abstraction de la couche présentation</a></li>
+  <li><a href="#faq-dss" id="toc-faq-dss" class="nav-link" data-scroll-target="#faq-dss"><span class="toc-section-number">5.3</span>  FAQ DSS</a>
   <ul class="collapse">
-  <li><a href="#faut-il-une-opération-système-après-une-boucle" id="toc-faut-il-une-opération-système-après-une-boucle" class="nav-link" data-scroll-target="#faut-il-une-opération-système-après-une-boucle"> <span class="header-section-number">5.3.1</span> Faut-il une opération système après une boucle?</a></li>
-  <li><a href="#comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" id="toc-comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" class="nav-link" data-scroll-target="#comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs"> <span class="header-section-number">5.3.2</span> Comment faire si un cas d’utilisation a des <em>scénarios alternatifs</em>?</a></li>
-  <li><a href="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" id="toc-est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="nav-link" data-scroll-target="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"> <span class="header-section-number">5.3.3</span> Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type primitif)?</a></li>
-  <li><a href="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" id="toc-ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" class="nav-link" data-scroll-target="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp"> <span class="header-section-number">5.3.4</span> Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page web au contrôleur GRASP?</a></li>
+  <li><a href="#faut-il-une-opération-système-après-une-boucle" id="toc-faut-il-une-opération-système-après-une-boucle" class="nav-link" data-scroll-target="#faut-il-une-opération-système-après-une-boucle"><span class="toc-section-number">5.3.1</span>  Faut-il une opération système après une boucle?</a></li>
+  <li><a href="#comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" id="toc-comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" class="nav-link" data-scroll-target="#comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs"><span class="toc-section-number">5.3.2</span>  Comment faire si un cas d’utilisation a des <em>scénarios alternatifs</em>?</a></li>
+  <li><a href="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" id="toc-est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="nav-link" data-scroll-target="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"><span class="toc-section-number">5.3.3</span>  Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type primitif)?</a></li>
+  <li><a href="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" id="toc-ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" class="nav-link" data-scroll-target="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp"><span class="toc-section-number">5.3.4</span>  Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page web au contrôleur GRASP?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -319,7 +324,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-dssattaquerunpays" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="DSS_files/mediabag/484ba24a092b01c9db531e10416af2036101d9df.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 5.1: Diagramme de séquence système pour <em>Attaquer un pays</em>. <a href="http://www.plantuml.com/plantuml/uml/VLFBRjj03BmBo3yGlZW6uhP1RuPXn6YA8cqA557INd9XLhIyi4Ifv2uI_r7r7VgnSkFOKN8me1V4uN268rreG0cnhZBTU6vHi0ODsuhiAjwboicWz81kKqeJkN1DrGW4GLOh4OUJR0nXxHNiG5WZ5u_YGo26LSC1FCCVpqNpg0Py9IneXR4A2S9O4_mGhwddwlQBuMxNf0HDM9CeL4spWL88dydotz_WjCQD2Or2DfcsOxjxDaDLHOLD5LXUNyDT_lKc7uo7yq-JeQNt2XJBTE7ZEgzu0z-RA8pLKTpJnXMGE_5jE8hxHROgqQ6muGg3HChKeULo_k7pC2lw6uaT_IHDmfULBncSnK6I1HyCVvddq9fIcFl5CWGql41aQ76hyuz-aQ4BjghHpEnGb16WWikCFNZdMxJeHhDygw7_LzDpKJCtNIZCeEYx6aL8NcXF4-NkERND8BTFYCkpUqw5oxvR4QkDE5GccMNQcX85qrjxxhizDp8tPkj0pGytVLVwsfoz6U4vJDxtx2UzQTgzB8PTy_bqclgaxzIomA0MIphZ4rIOcFGi5LyOe2Kfei8z5mJL60ygA40HqpRs_cphpZprdLltdI4o6vm-ttQlTEVsrTqakp28_Ml_0G00">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.1: Diagramme de séquence système pour <em>Attaquer un pays</em>. <a href="http://www.plantuml.com/plantuml/uml/VLFBRjj03BmBo3yGlZW6uhP1RuPXn6YA8cqA557INd9XLhIyi4Ifv2uI_r7r7VgnSkFOKN8me1V4uN268rreG0cnhZBTU6vHi0ODsuhiAjwboicWz81kKqeJkN1DrGW4GLOh4OUJR0nXxHNiG5WZ5u_YGo26LSC1FCCVpqNpg0Py9IneXR4A2S9O4_mGhwddwlQBuMxNf0HDM9CeL4spWL88dydotz_WjCQD2Or2DfcsOxjxDaDLHOLD5LXUNyDT_lKc7uo7yq-JeQNt2XJBTE7ZEgzu0z-RA8pLKTpJnXMGE_5jE8hxHROgqQ6muGg3HChKeULo_k7pC2lw6uaT_IHDmfULBncSnK6I1HyCVvddq9fIcFl5CWGql41aQ76hyuz-aQ4BjghHpEnGb16WWikCFNZdMxJeHhDygw7_LzDpKJCtNIZCeEYx6aL8NcXF4-NkERND8BTFYCkpUqw5oxvR4QkDE5GccMNQcX85qrjxxhizDp8tPkj0pGytVLVwsfoz6U4vJDxtx2UzQTgzB8PTy_bqclgaxzIomA0MIphZ4rIOcFGi5LyOe2Kfei8z5mJL60ygA40HqpRs_cphpZprdLltdI4o6vm-ttQlTEVsrTqakp28_Ml_0G00">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -329,7 +334,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-dssabstraction" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="DSS_files/mediabag/eb9823db1dfd91cba17cff167ed0bab725004e07.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 5.2: Une opération système dans un DSS. C’est une abstraction. <a href="http://www.plantuml.com/plantuml/uml/VLB1IWD13Bqlz1z2Bwq7YyLR3z8Y8ce5SQkUusniXvtDr2HBxH_fT_J7pFRYug4mP0xl9Nd9ormDnTec5Lf7tg9W0shxH1ubXWuPzA1t3FLQSijLo2aBc22hGyGsA4PWcwZW3s63NEqacX73HsQ3oF0MkSexTU9VmOe-i4tMKHWRWWU9skNShQwTjzgG4cJRa2Yad6jO2-6nMFbw2-C6QnVQ2dbdse_yZ-m3fKILTnLOB9VmKjuybxtsCBquwu_qNu7YkWjyMkSTrt2VMs5C9tbVTQYW31AtTfBtHBugqRwm_WfDMYeqeFiodLpslQBFbZZG8sadV97YcY6u7IG51lCT36UkareP0Yg4mjCiXhX5zsGuA_TgX--6Zg0MuVnAOGRLuQT14PA56NhzyMGoEIlcn9MVmoy0">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.2: Une opération système dans un DSS. C’est une abstraction. <a href="http://www.plantuml.com/plantuml/uml/VLB1IWD13Bqlz1z2Bwq7YyLR3z8Y8ce5SQkUusniXvtDr2HBxH_fT_J7pFRYug4mP0xl9Nd9ormDnTec5Lf7tg9W0shxH1ubXWuPzA1t3FLQSijLo2aBc22hGyGsA4PWcwZW3s63NEqacX73HsQ3oF0MkSexTU9VmOe-i4tMKHWRWWU9skNShQwTjzgG4cJRa2Yad6jO2-6nMFbw2-C6QnVQ2dbdse_yZ-m3fKILTnLOB9VmKjuybxtsCBquwu_qNu7YkWjyMkSTrt2VMs5C9tbVTQYW31AtTfBtHBugqRwm_WfDMYeqeFiodLpslQBFbZZG8sadV97YcY6u7IG51lCT36UkareP0Yg4mjCiXhX5zsGuA_TgX--6Zg0MuVnAOGRLuQT14PA56NhzyMGoEIlcn9MVmoy0">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <p>Plus tard, lorsque c’est le moment d’implémenter le code, les détails importants seront à respecter. Il faut faire attention aux principes de la séparation des couches présentation et domaine. Par exemple, la <a href="#fig-dssdetails">figure&nbsp;<span>5.3</span></a> rentre dans les détails de ce qui se passe réellement dans une opération système quand la solution fonctionne avec un service web:</p>
@@ -342,7 +347,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-dssdetails" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="DSS_files/mediabag/122ed6c9ff93382f2cb279199094957fb35d8697.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 5.3: Une opération système est envoyée par la couche présentation et elle est reçue dans la couche domaine par son contrôleur GRASP. Ceci est un exemple avec un navigateur web, mais d’autres possibilités existent pour la couche présentation. <a href="http://www.plantuml.com/plantuml/uml/VLJ1RXen4Bslb7yOqKC2Ig6ebmf5gm29qgH9YrZIN7ePx06SDVPsx4r8lwYvzm_uiSwksdH1LQILlVAyUU_DZENJ495ZkRP9o8qha74D8JvPafMDgY87ZT0SLRvaNpgjlFKCaT452P6B1yaXn9K981_22fr-P1CZELXu5y4uk3DE-ySWm7-4cXPOsbX17Au9Fh49LSxbR2ousOe2WOyhuW3M-noMJ5YJPLylu6YDkHWjcKIPdWvbDquAifQqg38Chw_XDZkVPWrvwBzhDqlQTn1mMItkTP-NBeShNx93-ofkaoiDcM9Jn5Tn4v9MSMWQQxOmSab9K2XpwNVVDsT5tqjoYcueLCQ7rYmTA1a7SGCbQpJA5EZY1BKsRYbT-0_Bo6z6dZNnU7-w2Qee9ws154qbjm03t2Tplu7Ms9TgHL3mzZa84gFnhWLlj5uij4uQqf8zAcEief8zXvEJp_XWbXY5y8xcQGfxwAalurynhk1Uq_ccOAarJHDo6iJ0ZWdjrsWSrVALWJt2Aogd9kGreHB2iRIVjx-iY5nCXzb4M7SIkjrkZGqlOlVmDXNh0r3MICyucSj1Aku6y74scy35-UoRws5XUW_zdju-hv6PU1WZ2hedV8dpKQxq0t6TL9V8zQojx4T_ocid_CAhQOUaIN0CQW1VYkqprrs7y1JYzgTS9r5U66VaHoO8PrbMyqdD0-XqJeBvGOF-XtIF-KZijJkTH5NG8D1Tk-guFWnaHSaYJC_6jycfD4RUYDy0">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.3: Une opération système est envoyée par la couche présentation et elle est reçue dans la couche domaine par son contrôleur GRASP. Ceci est un exemple avec un navigateur web, mais d’autres possibilités existent pour la couche présentation. <a href="http://www.plantuml.com/plantuml/uml/VLJ1RXen4Bslb7yOqKC2Ig6ebmf5gm29qgH9YrZIN7ePx06SDVPsx4r8lwYvzm_uiSwksdH1LQILlVAyUU_DZENJ495ZkRP9o8qha74D8JvPafMDgY87ZT0SLRvaNpgjlFKCaT452P6B1yaXn9K981_22fr-P1CZELXu5y4uk3DE-ySWm7-4cXPOsbX17Au9Fh49LSxbR2ousOe2WOyhuW3M-noMJ5YJPLylu6YDkHWjcKIPdWvbDquAifQqg38Chw_XDZkVPWrvwBzhDqlQTn1mMItkTP-NBeShNx93-ofkaoiDcM9Jn5Tn4v9MSMWQQxOmSab9K2XpwNVVDsT5tqjoYcueLCQ7rYmTA1a7SGCbQpJA5EZY1BKsRYbT-0_Bo6z6dZNnU7-w2Qee9ws154qbjm03t2Tplu7Ms9TgHL3mzZa84gFnhWLlj5uij4uQqf8zAcEief8zXvEJp_XWbXY5y8xcQGfxwAalurynhk1Uq_ccOAarJHDo6iJ0ZWdjrsWSrVALWJt2Aogd9kGreHB2iRIVjx-iY5nCXzb4M7SIkjrkZGqlOlVmDXNh0r3MICyucSj1Aku6y74scy35-UoRws5XUW_zdju-hv6PU1WZ2hedV8dpKQxq0t6TL9V8zQojx4T_ocid_CAhQOUaIN0CQW1VYkqprrs7y1JYzgTS9r5U66VaHoO8PrbMyqdD0-XqJeBvGOF-XtIF-KZijJkTH5NG8D1Tk-guFWnaHSaYJC_6jycfD4RUYDy0">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <div class="callout-warning callout callout-style-simple">
@@ -473,7 +478,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

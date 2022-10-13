@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -204,14 +209,14 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#exemple-jeu-de-risk" id="toc-exemple-jeu-de-risk" class="nav-link active" data-scroll-target="#exemple-jeu-de-risk"> <span class="header-section-number">3.1</span> Exemple: jeu de Risk</a>
+  <li><a href="#exemple-jeu-de-risk" id="toc-exemple-jeu-de-risk" class="nav-link active" data-scroll-target="#exemple-jeu-de-risk"><span class="toc-section-number">3.1</span>  Exemple: jeu de Risk</a>
   <ul class="collapse">
-  <li><a href="#scénario-attaquer-un-pays" id="toc-scénario-attaquer-un-pays" class="nav-link" data-scroll-target="#scénario-attaquer-un-pays"> <span class="header-section-number">3.1.1</span> Scénario: Attaquer un pays</a></li>
-  <li><a href="#diagramme-de-cas-dutilisation" id="toc-diagramme-de-cas-dutilisation" class="nav-link" data-scroll-target="#diagramme-de-cas-dutilisation"> <span class="header-section-number">3.1.2</span> Diagramme de cas d’utilisation</a></li>
+  <li><a href="#scénario-attaquer-un-pays" id="toc-scénario-attaquer-un-pays" class="nav-link" data-scroll-target="#scénario-attaquer-un-pays"><span class="toc-section-number">3.1.1</span>  Scénario: Attaquer un pays</a></li>
+  <li><a href="#diagramme-de-cas-dutilisation" id="toc-diagramme-de-cas-dutilisation" class="nav-link" data-scroll-target="#diagramme-de-cas-dutilisation"><span class="toc-section-number">3.1.2</span>  Diagramme de cas d’utilisation</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -268,7 +273,7 @@ ul.task-list{list-style: none;}
 <div id="fig-uc" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="CasUtilisation_files/mediabag/fa63d2da8dc7d28519b0173e826501d02481ea69.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 3.1: Diagramme de cas d’utilisation. <a href="http://www.plantuml.com/plantuml/uml/VL9BJiGm3DrNuWuMB60MCu8RW00XXbcCA9yD6zDwsgYfCpYEe4BS1yx1nN3AWeh5I94J-JtRptPEew9ewdqHEyTR5EmXwk39hBWg8tiJw1chhf6GkAw23m8goD4WOjqh3a5R5y4EGejSlufJ9OPDO0N7yEYu3g_HY7y9QzfWyfefZ3t1ZRYOOwxlpertrr8a2DgIHF0XTD08uPYiVBY2enux4vg4h38DXtOxjeQyfzgg2fojLd1VNjwMa_9mSZoRjlHVGSGc6zwjyvexM8OaZ7udxwshQYWhSLlToLkJZKhYLDXqX2g9YbYXxUMayBHHq03YcbQXTaALki2JqAsjoTeenqLckC1ARHwcc980HbWMsOtS666_7A9-V_Qq3-y5mD5YiPXbpZZtx3XJnPT4yiI9BVSGHtYvpjZ5zrUF8YGpEF1PK2Cu6B24-VoNChv-StqKfyIr_QaV">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.1: Diagramme de cas d’utilisation. <a href="http://www.plantuml.com/plantuml/uml/VL9BJiGm3DrNuWuMB60MCu8RW00XXbcCA9yD6zDwsgYfCpYEe4BS1yx1nN3AWeh5I94J-JtRptPEew9ewdqHEyTR5EmXwk39hBWg8tiJw1chhf6GkAw23m8goD4WOjqh3a5R5y4EGejSlufJ9OPDO0N7yEYu3g_HY7y9QzfWyfefZ3t1ZRYOOwxlpertrr8a2DgIHF0XTD08uPYiVBY2enux4vg4h38DXtOxjeQyfzgg2fojLd1VNjwMa_9mSZoRjlHVGSGc6zwjyvexM8OaZ7udxwshQYWhSLlToLkJZKhYLDXqX2g9YbYXxUMayBHHq03YcbQXTaALki2JqAsjoTeenqLckC1ARHwcc980HbWMsOtS666_7A9-V_Qq3-y5mD5YiPXbpZZtx3XJnPT4yiI9BVSGHtYvpjZ5zrUF8YGpEF1PK2Cu6B24-VoNChv-StqKfyIr_QaV">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <p>Notes:</p>
@@ -352,7 +357,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

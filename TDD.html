@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -223,13 +228,13 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#kata-tdd" id="toc-kata-tdd" class="nav-link active" data-scroll-target="#kata-tdd"> <span class="header-section-number">10.1</span> Kata TDD</a>
+  <li><a href="#kata-tdd" id="toc-kata-tdd" class="nav-link active" data-scroll-target="#kata-tdd"><span class="toc-section-number">10.1</span>  Kata TDD</a>
   <ul class="collapse">
-  <li><a href="#exemple-de-kata-tdd-fizzbuzz" id="toc-exemple-de-kata-tdd-fizzbuzz" class="nav-link" data-scroll-target="#exemple-de-kata-tdd-fizzbuzz"> <span class="header-section-number">10.1.1</span> Exemple de Kata TDD FizzBuzz</a></li>
+  <li><a href="#exemple-de-kata-tdd-fizzbuzz" id="toc-exemple-de-kata-tdd-fizzbuzz" class="nav-link" data-scroll-target="#exemple-de-kata-tdd-fizzbuzz"><span class="toc-section-number">10.1.1</span>  Exemple de Kata TDD FizzBuzz</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -263,7 +268,7 @@ div.csl-indent {
 <div id="fig-TDD_states" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="TDD_files/mediabag/711196cbeb61faf5000cee14ada59fe1670a8b48.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 10.1: États du développement piloté par les tests. <a href="http://www.plantuml.com/plantuml/uml/RLJDQXin4BxhAGONwgJ43eLIYZ5B4fj0BgKqII_T7kJToLf4AsqraerxwhLlqTxgv_2Rz4awqgx_WY_BelbclX_DxXLvwNoejPYh4W7hng-WH2gSQhooHj2pCerqiWRoAutyTAf83VlAlPSURwmhqKsijWvcMXRFBm6trlYsl9mhZwVAzubYPdLvigf-8Bnz_x9qxPnT7jRxUy0KdsJGFbO_oXgXTu-LHNYyWvieiIVwNdcctFpYIGHbW7ApNg2sJOCr6W-DqjPlri3ZG2E1H_8aAFB2Pnig14dGkmvGMsKeDy4aI6usws9k0_RWbSEoQ_Y2pYVyWmsCtStBMIqHqp6wSeYcmt-Iz32TfevnaPBZMHcV0X_dvk1iJEnzzEv3Ddxjvw6U3KgxDDduCY4o7hj2hUrIV7tp3GPELNC_o3hz8vYupHfTRemD2vGXDr6KQAi3ny2aUyGXyLOuXCAMo99jSF0a-Q2JxvAPCpeVKsYoVp__Z2_ZYqZT0tr0c9lJb2ronzVvIubajv49Wk702wyMYYzbQs-NH8laDURfWPIH5NPQVhTQjXqT4rDjCpvs1oHDUpT2OuMcX89l1vqu7lTug0QEUC7qkPlNXc8hiLiePE2G16z8u-nCR_xoFie55j3jp10cs32NDFw2cxI41eCNqZcru72_1znl831pjpFGw4207fJcwmYbawAmt5Dn3t_8Up8QYkERkTE90VOC_KuAa5KUQgbZ6cpjJCKtunNpHGCpMmKy7y8qnbH4QtG1ra17p3hR6FbxIiv4ZB1DKbpnWtyV_m40">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;10.1: États du développement piloté par les tests. <a href="http://www.plantuml.com/plantuml/uml/RLJDQXin4BxhAGONwgJ43eLIYZ5B4fj0BgKqII_T7kJToLf4AsqraerxwhLlqTxgv_2Rz4awqgx_WY_BelbclX_DxXLvwNoejPYh4W7hng-WH2gSQhooHj2pCerqiWRoAutyTAf83VlAlPSURwmhqKsijWvcMXRFBm6trlYsl9mhZwVAzubYPdLvigf-8Bnz_x9qxPnT7jRxUy0KdsJGFbO_oXgXTu-LHNYyWvieiIVwNdcctFpYIGHbW7ApNg2sJOCr6W-DqjPlri3ZG2E1H_8aAFB2Pnig14dGkmvGMsKeDy4aI6usws9k0_RWbSEoQ_Y2pYVyWmsCtStBMIqHqp6wSeYcmt-Iz32TfevnaPBZMHcV0X_dvk1iJEnzzEv3Ddxjvw6U3KgxDDduCY4o7hj2hUrIV7tp3GPELNC_o3hz8vYupHfTRemD2vGXDr6KQAi3ny2aUyGXyLOuXCAMo99jSF0a-Q2JxvAPCpeVKsYoVp__Z2_ZYqZT0tr0c9lJb2ronzVvIubajv49Wk702wyMYYzbQs-NH8laDURfWPIH5NPQVhTQjXqT4rDjCpvs1oHDUpT2OuMcX89l1vqu7lTug0QEUC7qkPlNXc8hiLiePE2G16z8u-nCR_xoFie55j3jp10cs32NDFw2cxI41eCNqZcru72_1znl831pjpFGw4207fJcwmYbawAmt5Dn3t_8Up8QYkERkTE90VOC_KuAa5KUQgbZ6cpjJCKtunNpHGCpMmKy7y8qnbH4QtG1ra17p3hR6FbxIiv4ZB1DKbpnWtyV_m40">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <p>Les activités de réusinage sont expliquées dans la section <a href="Réusinage.html">Réusinage (Refactorisation)</a>.</p>
@@ -273,7 +278,7 @@ div.csl-indent {
 <div id="fig-KataBasaiDai" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/karate.jpg" class="img-fluid figure-img" style="width:40.0%"></p>
-<p></p><figcaption class="figure-caption">Figure 10.2: Étudiante de karaté faisant le kata <em>Basai Dai</em> (photo <a href="https://www.flickr.com/photos/the-consortium/4507180302/">«&nbsp;Karate&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/the-consortium/">The Consortium</a>).</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;10.2: Étudiante de karaté faisant le kata <em>Basai Dai</em> (photo <a href="https://www.flickr.com/photos/the-consortium/4507180302/">«&nbsp;Karate&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/the-consortium/">The Consortium</a>).</figcaption><p></p>
 </figure>
 </div>
 <p>Alors, le «&nbsp;kata TDD&nbsp;» a été proposé par Dave Thomas et le but est de développer la fluidité avec le développement piloté par les tests. Un kata TDD se pratique avec un IDE (environnement de développement logiciel) et un support pour les tests (par exemple JUnit). Pratiquer le même kata peut améliorer votre habileté de programmation. On peut pratiquer le même kata dans un langage différent ou avec un IDE ou environnement de test différent. Le kata vous permet d’avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour test et pour l’application, API de l’environnement de test, etc.).</p>
@@ -417,7 +422,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

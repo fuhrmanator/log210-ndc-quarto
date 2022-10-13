@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -223,13 +228,13 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#origine" id="toc-origine" class="nav-link active" data-scroll-target="#origine"> <span class="header-section-number">7.1</span> Origine</a></li>
-  <li><a href="#nuances-de-la-dette-technique" id="toc-nuances-de-la-dette-technique" class="nav-link" data-scroll-target="#nuances-de-la-dette-technique"> <span class="header-section-number">7.2</span> Nuances de la dette technique</a></li>
-  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé"> <span class="header-section-number">7.3</span> Résumé</a></li>
+  <li><a href="#origine" id="toc-origine" class="nav-link active" data-scroll-target="#origine"><span class="toc-section-number">7.1</span>  Origine</a></li>
+  <li><a href="#nuances-de-la-dette-technique" id="toc-nuances-de-la-dette-technique" class="nav-link" data-scroll-target="#nuances-de-la-dette-technique"><span class="toc-section-number">7.2</span>  Nuances de la dette technique</a></li>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé"><span class="toc-section-number">7.3</span>  Résumé</a></li>
   </ul>
 </nav>
     </div>
@@ -257,7 +262,7 @@ div.csl-indent {
 <div id="fig-FowlerDesignStaminaHypothesis" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/FowlerPseuoGraphFunctionaltyTime.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 7.1: «&nbsp;Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.&nbsp;» <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler 2007</a>)</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7.1: «&nbsp;Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.&nbsp;» <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler 2007</a>)</span></figcaption><p></p>
 </figure>
 </div>
 <p>Martin Fowler <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">2007</a>)</span> a posé la question «&nbsp;Est-ce que ça vaut la peine de faire du bon design?&nbsp;» – peut-on en faire moins pour développer plus vite? Il a proposé un pseudographique comparant la fonctionnalité cumulative (élément difficile à mesurer) avec le temps (voir la <a href="#fig-FowlerDesignStaminaHypothesis">figure&nbsp;<span>7.1</span></a>). Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que des mois. Mais il avoue que c’est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d’évaluer ce qu’est un bon design. Le graphe sert à illustrer le principe qu’à un certain moment, ignorer une conception va nuire à la performance des développeurs en ce qui concerne les nouvelles fonctionnalités.</p>
@@ -274,7 +279,7 @@ div.csl-indent {
 <div id="fig-TechnicalDebtGoogleTrends" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/TechnicalDebtGoogleTrends.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 7.2: Tendances Google (trends.google.com) pour le terme «&nbsp;dette technique&nbsp;» (anglais <em>technical debt</em>)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7.2: Tendances Google (trends.google.com) pour le terme «&nbsp;dette technique&nbsp;» (anglais <em>technical debt</em>)</figcaption><p></p>
 </figure>
 </div>
 <p>Comme c’est une métaphore puissante, beaucoup de développeurs l’utilisent et c’est un terme avec une certaine popularité (voir à la <a href="#fig-TechnicalDebtGoogleTrends">figure&nbsp;<span>7.2</span></a>). Dans une <a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">vidéo</a> plus récente, Cunningham a rappelé que l’origine de la métaphore s’inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement «&nbsp;mal écrit&nbsp;»:</p>
@@ -304,7 +309,7 @@ La dette imprudente pourrait aussi être délibérée. Une équipe peut connaît
 <p>La dette peut être classifiée dans un quadrant comme dans le <a href="#tbl-DetteQuadrant">tableau&nbsp;<span>7.1</span></a> proposé par Fowler. Selon lui, la dette dont Ward Cunningham a parlé dans sa vidéo peut être classifiée comme «&nbsp;prudente et involontaire&nbsp;». Fowler remarque que selon son expérience, la dette «&nbsp;imprudente et délibérée&nbsp;» est rarement rentable.</p>
 <div id="tbl-DetteQuadrant" class="anchored">
 <table class="table">
-<caption>Tableau 7.1: Classification de la dette selon Fowler (2009)</caption>
+<caption>Tableau&nbsp;7.1: Classification de la dette selon Fowler (2009)</caption>
 <colgroup>
 <col style="width: 12%">
 <col style="width: 44%">
@@ -421,7 +426,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
