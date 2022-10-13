@@ -1,5 +1,7 @@
 # Manuel du livre de LOG210 dans Quarto
 
+![Publier les REL](https://github.com/fuhrmanator/log210-ndc-quarto/actions/workflows/quarto-render-publish.yml/badge.svg)
+
 Pour construire le manuel localement:
 
 - installer PlantUML et configurer les variables d'environnement (JAVA_HOME et PLANTUML) selon [ces directives](https://github.com/pandoc/lua-filters/tree/master/diagram-generator#plantuml)
