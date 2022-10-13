@@ -325,9 +325,9 @@ Voici un résumé des points importants traités dans ce chapitre, dont quelques
 
 ### Y a-t-il un MDD pour chaque cas d'utilisation?{#mddchaquecasutilisation}
 
-Selon la méthodologie du livre du cours, bien qu'une application ait souvent plusieurs fonctionnalités (cas d'utilisation), il n'y a qu'un seul MDD.
+Selon la méthodologie du cours, bien qu'une application ait souvent plusieurs fonctionnalités (cas d'utilisation), il n'y a qu'un seul MDD.
 
-Cela dit, Le MDD est comme un fichier de code source, puisque sa *version* peut évoluer avec le projet.
+Cela dit, le MDD est comme un fichier de code source, puisque sa *version* peut évoluer avec le projet.
 Le MDD évoluera normalement après chaque itération, car on fait une nouvelle analyse pour les nouvelles fonctionnalités visées dans l'itération.
 Au début du projet, le MDD est plus simple, puisqu'il porte sur seulement les cas d'utilisation ciblés à la première itération.
 Le MDD devient plus riche au fur et à mesure qu'on avance dans les itérations, parce qu'il modélise davantage de concepts reliés aux problèmes traités par les nouvelles fonctionnalités à réaliser.
@@ -342,7 +342,10 @@ Voici la réponse de Craig Larman dans la section 9.2 \faBook<i class="fa-solid
 
 > *Un **modèle du domaine** n'est pas un **modèle de données** (qui représente par définition des objets persistants stockés quelque part).*
 
-Il peut y avoir des concepts dans un domaine qui ne sont pas dans la base de données. Considérez l'exemple de la carte de crédit utilisée pour payer mais qui n'est jamais stockée pour les raisons de sécurité. Avec seulement un modèle de données, cette classe conceptuelle ne serait jamais modélisée. Larman précise:
+Il peut y avoir des concepts dans un domaine qui ne sont pas dans la base de données.
+Considérez l'exemple de la carte de crédit utilisée pour payer mais qui n'est jamais stockée pour les raisons de sécurité.
+Avec seulement un modèle de données, cette classe conceptuelle ne serait jamais modélisée.
+Larman précise:
 
 > *N'excluez donc pas une classe simplement parce que les spécifications n'indiquent pas un besoin évident de mémoriser les informations la concernant (un critère courant pour la modélisation des données quand on conçoit des bases de données relationnelles mais qui n'a pas cours en modélisation d'un domaine), ou parce que la classe conceptuelle ne possède pas d'attributs. Il est légal d'avoir une classe conceptuelle sans attribut, ou une classe conceptuelle qui joue un rôle exclusivement comportementale dans le domaine.*
 
