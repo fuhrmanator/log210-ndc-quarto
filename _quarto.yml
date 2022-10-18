@@ -12,8 +12,8 @@ language: _language.yml   # customized, "tableau" plutôt que "table", etc.
 
 book:
 
-  #cover-image: images/LOG210wordle_ordre_alph.png
-  subtitle: "![nuage de mots](images/LOG210wordle_ordre_alph.png){width=70%}"
+  #cover-image: images/wordle_ordre_alph.png
+  subtitle: "![nuage de mots](images/wordle_ordre_alph.png){width=70%}"
   title: "LOG210 Analyse et conception de logiciels"
   
   #subtitle: "Notes de cours"
@@ -58,7 +58,7 @@ link-external-icon: true
 format:
 
   epub: 
-    epub-cover-image: "images/LOG210wordle_ordre_alph.png"
+    epub-cover-image: "images/wordle_ordre_alph.png"
 
   html:
     header-includes: |
