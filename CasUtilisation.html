@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LOG210 Analyse et conception de logiciels - 3&nbsp; Cas d’utilisation</title>
+<title>Analyse et conception de logiciels - 3&nbsp; Cas d’utilisation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -84,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+      <a href="./">Analyse et conception de logiciels</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -240,12 +259,26 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Le chapitre 6&nbsp;<i class="fa-solid fa-book"></i>&nbsp;présente les cas d’utilisation. Il s’agit des documents textuels décrivant l’interaction entre un système (logiciel à développer) et un ou plusieurs acteurs (les utilisateurs ou systèmes externes). Le cas d’utilisation décrit plusieurs scénarios, mais en général il y a un scénario principal (<em>«&nbsp;Happy Path&nbsp;»</em>) représentant ce qui se passe lorsqu’il n’y a pas d’anomalie.</p>
+<p>Les cas d’utilisation sont des documents textuels décrivant l’interaction entre un système (un logiciel à développer) et un ou plusieurs acteurs (les utilisateurs ou systèmes externes). Le cas d’utilisation décrit plusieurs scénarios, mais en général il y a un scénario principal (<em>«&nbsp;Happy Path&nbsp;»</em>) représentant ce qui se passe lorsqu’il n’y a pas d’anomalie.</p>
+<p>Les cas d’utilisation sont une manière de documenter les fonctionalités (les exigences fonctionnelles).</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>D’autres méthodologies de développement peuvent déterminer les besoins avec les récits utilisateur (<em>user stories</em>), qui sont généralement plus courts et moins préscriptifs que des cas d’utilisation. Par exemple, dans un récit utilisateur on ne spécifie pas un ordre d’interactions entre l’acteur et le système. Une raison pour ne pas spécifier autant de détails est que ça peut changer beaucoup (surtout au début du projet). Voir <a href="https://softwareengineering.stackexchange.com/q/113381/51948">cette discussion sur stackexchange.com</a> pour savoir plus sur les différences.</p>
+</div>
+</div>
+<p>La théorie sur <em>comment écrire</em> les cas d’utilisation ne fait pas partie de ce manuel <span class="citation" data-cites="craig_uml_2005">(voir <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, chap. 6</a>)</span>.</p>
 <p>La notation UML inclut les diagrammes de cas d’utilisation, qui sont comme une table des matières pour les fonctionnalités d’un système.</p>
-<p>Dans LOG210, la théorie sur comment écrire les cas d’utilisation ne fait pas partie du cours; c’est un élément expliqué dans un autre cours (<em>LOG410 Analyse de besoins et spécifications</em>).</p>
 <section id="exemple-jeu-de-risk" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exemple-jeu-de-risk"><span class="header-section-number">3.1</span> Exemple: jeu de Risk</h2>
-<p>L’exemple suivant concerne le jeu de Risk.</p>
+<p>Nous décrivons un cas d’utilisation à l’aide d’un exemple concernant le jeu de Risk.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Risk-dice-example.jpg" class="img-fluid figure-img" width="300"></p>
@@ -256,6 +289,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>L’attaquant jette un à trois dés suivant le nombre de régiments qu’il désire engager (avec un maximum de trois régiments engagés, et en considérant qu’un régiment au moins doit rester libre d’engagements sur le territoire attaquant) et le défenseur deux dés (un s’il n’a plus qu’un régiment). On compare le dé le plus fort de l’attaquant au dé le plus fort du défenseur et le deuxième dé le plus fort de l’attaquant au deuxième dé du défenseur. Chaque fois que le dé du défenseur est supérieur ou égal à celui de l’attaquant, l’attaquant perd un régiment; dans le cas contraire, c’est le défenseur qui en perd un.</p>
 </blockquote>
+<p>Alors, nous proposon les étapes (les interactions entre les acteurs et le système) pour ce scénario:</p>
 <section id="scénario-attaquer-un-pays" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="scénario-attaquer-un-pays"><span class="header-section-number">3.1.1</span> Scénario: Attaquer un pays</h3>
 <ol type="1">
@@ -270,20 +304,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="diagramme-de-cas-dutilisation" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="diagramme-de-cas-dutilisation"><span class="header-section-number">3.1.2</span> Diagramme de cas d’utilisation</h3>
 <p>La <a href="#fig-uc">figure&nbsp;<span>3.1</span></a> est un exemple de diagramme de cas d’utilisation.</p>
+<p>Un diagramme de cas d’utilisation n’est qu’une sorte de <em>table des matières</em> des fonctionnalités. Le diagramme ne montre qu’une faible partie des détails trouvés dans le texte de chaque cas d’utilisation. Le diagramme ne peut donc remplacer la documentation textuelle.</p>
+<p>Dans la <a href="#fig-uc">figure&nbsp;<span>3.1</span></a>, le cas d’utilisation «&nbsp;…&nbsp;» signifie qu’il y a d’autres cas d’utilisation à spécifier concrètement. C’est à dire tous les autres cas d’utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.</p>
+<p>Le cas d’utilisation <em>Démarrer</em> n’est pas normalement indiqué dans un diagramme. C’est une astuce pédagogique proposée par Larman <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>, car il faudra concevoir et coder ce scénario, bien qu’il ne soit pas une fonctionnalité connue par l’utilisateur.</p>
 <div id="fig-uc" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="CasUtilisation_files/mediabag/fa63d2da8dc7d28519b0173e826501d02481ea69.svg" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;3.1: Diagramme de cas d’utilisation. <a href="http://www.plantuml.com/plantuml/uml/VL9BJiGm3DrNuWuMB60MCu8RW00XXbcCA9yD6zDwsgYfCpYEe4BS1yx1nN3AWeh5I94J-JtRptPEew9ewdqHEyTR5EmXwk39hBWg8tiJw1chhf6GkAw23m8goD4WOjqh3a5R5y4EGejSlufJ9OPDO0N7yEYu3g_HY7y9QzfWyfefZ3t1ZRYOOwxlpertrr8a2DgIHF0XTD08uPYiVBY2enux4vg4h38DXtOxjeQyfzgg2fojLd1VNjwMa_9mSZoRjlHVGSGc6zwjyvexM8OaZ7udxwshQYWhSLlToLkJZKhYLDXqX2g9YbYXxUMayBHHq03YcbQXTaALki2JqAsjoTeenqLckC1ARHwcc980HbWMsOtS666_7A9-V_Qq3-y5mD5YiPXbpZZtx3XJnPT4yiI9BVSGHtYvpjZ5zrUF8YGpEF1PK2Cu6B24-VoNChv-StqKfyIr_QaV">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
-<p>Notes:</p>
-<ul>
-<li>Un diagramme de cas d’utilisation n’est qu’une sorte de <em>table des matières</em> des fonctionnalités. Le diagramme ne montre qu’une faible partie des détails trouvés dans le texte de chaque cas d’utilisation. Le diagramme ne peut donc remplacer la documentation textuelle.</li>
-<li>Le cas d’utilisation «&nbsp;…&nbsp;» signifie tous les autres cas d’utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.</li>
-<li>Le cas d’utilisation <em>Démarrer</em> n’est pas normalement indiqué dans un diagramme. C’est une astuce pédagogique pour la méthodologie du cours, car il faudra concevoir et coder ce scénario, bien qu’il ne soit pas une fonctionnalité connue par l’utilisateur.</li>
-</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
 </section>
 </section>
 

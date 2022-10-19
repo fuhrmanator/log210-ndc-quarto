@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LOG210 Analyse et conception de logiciels - 10&nbsp; Développement piloté par les tests</title>
+<title>Analyse et conception de logiciels - 10&nbsp; Développement piloté par les tests</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,7 +103,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+      <a href="./">Analyse et conception de logiciels</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -262,9 +262,9 @@ div.csl-indent {
 <p>Ainsi, il y a toujours des tests pour les fonctionnalités et le développement se fait en petits incréments qui sont validés par les tests. Faire les <em>petits pas</em> réduit le risque associé à de gros changements dans un logiciel sans validation intermédiaire. Au fur et à mesure qu’on développe un logiciel, on développe également quelques tests de ce dernier. Puisque les tests sont automatiques, ils sont aussi faciles à exécuter que le compilateur.</p>
 <p>Il y a une discipline imposée dans le TDD qui nécessite d’écrire un <em>test en premier</em>, c’est-à-dire <em>avant</em> d’écrire le code. La démarche est illustrée par la <a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>. Beaucoup d’outils (IDE) favorisent ce genre de développement. Nous pouvons écrire un test qui appelle à une fonction qui n’existe pas encore et l’IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour même. Un puriste du TDD insistera sur le fait que le test soit écrit toujours en premier! Cette discipline est parfois culturelle.</p>
 <p>Plusieurs chercheurs ont mené des expériences, par exemple <span class="citation" data-cites="Karac_TDD_2018">Karac et Turhan (<a href="references.html#ref-Karac_TDD_2018" role="doc-biblioref">2018</a>)</span>, pour voir si <em>tester en premier</em> avait un vrai bénéfice. Les résultats de leurs analyses n’ont pas toujours montré que c’est le cas (ce genre d’expérience est difficile de faire, en partie parce qu’il n’y a pas beaucoup de développeurs en industrie qui le pratiquent). Les chercheurs ont trouvé que faire un petit test <em>après</em> avoir écrit le code a aussi un bénéfice sur le plan de la qualité. Dans tous les cas, des chercheurs ont trouvé que le fait de travailler en <em>petits pas</em> apporte <em>toujours</em> un avantage sur le plan de la qualité. Travailler en <em>petits pas</em> est utile, même sans faire du TDD de manière dogmatique.</p>
-<p>Sachez qu’il existe beaucoup d’intergiciels (anglais <em>frameworks</em>) pour faciliter l’exécution automatique des tests réalisés dans le cadre du TDD. Pour Java il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements. En ce qui concerne le squelette pour le laboratoire de LOG210, il s’agit de <a href="https://jestjs.io/">Jest</a>. <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). --></p>
-<p>L’exécution de tests peut être même faite à chaque commit du code dans un dépôt comme GitHub. Le squelette de LOG210 utilise <a href="https://travis-ci.org/">Travis</a> pour cela. Cependant, pour un dépôt privé, Travis nécessite un compte payant.</p>
-<p>Il est possible de mesurer la <a href="https://fr.wikipedia.org/wiki/Couverture_de_code">couverture de code</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>&nbsp;atteinte par les tests (mais ce sujet commence à sortir du cadre de la matière du cours). Le squelette utilise <a href="https://coveralls.io/">Coveralls</a> pour ce faire.</p>
+<p>Sachez qu’il existe beaucoup d’intergiciels (anglais <em>frameworks</em>) pour faciliter l’exécution automatique des tests réalisés dans le cadre du TDD. Pour Java il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements. En ce qui concerne le squelette pour le laboratoire, il s’agit de <a href="https://jestjs.io/">Jest</a>. <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). --></p>
+<p>L’exécution de tests peut être même faite à chaque commit du code dans un dépôt comme GitHub.</p>
+<p>Il est possible de mesurer la <a href="https://fr.wikipedia.org/wiki/Couverture_de_code">couverture de code</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>&nbsp;atteinte par les tests (mais ce sujet sort du cadre de la matière de ce manuel).</p>
 <div id="fig-TDD_states" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="TDD_files/mediabag/711196cbeb61faf5000cee14ada59fe1670a8b48.svg" class="img-fluid figure-img"></p>

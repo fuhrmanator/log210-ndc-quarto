@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LOG210 Analyse et conception de logiciels - 14&nbsp; Décortiquer les patterns GoF avec GRASP</title>
+<title>Analyse et conception de logiciels - 14&nbsp; Décortiquer les patterns GoF avec GRASP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,6 +83,25 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -147,7 +166,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+      <a href="./">Analyse et conception de logiciels</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -323,7 +342,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="imaginer-le-code-sans-le-pattern-gof" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="imaginer-le-code-sans-le-pattern-gof"><span class="header-section-number">14.2</span> Imaginer le code sans le pattern GoF</h2>
-<p>Chaque principe GRASP est défini avec un énoncé d’un problème de conception et une solution pour le résoudre. Pourtant, beaucoup d’exemples dans le livre de LOG210 sont des patterns déjà appliqués (et le problème initial n’est pas toujours expliqué en détail).</p>
+<p>Chaque principe GRASP est défini avec un énoncé d’un problème de conception et une solution pour le résoudre. Pourtant, beaucoup d’exemples dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> sont des patterns déjà appliqués (et le problème initial n’est pas toujours expliqué en détail).</p>
 <p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on serait obligé de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme ceci:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* calculateurTaxes est le nom du calculateur utilisé actuellement */</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span><span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"GoodAsGoldTaxPro"</span><span class="op">)</span> <span class="op">{</span></span>
@@ -404,6 +423,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

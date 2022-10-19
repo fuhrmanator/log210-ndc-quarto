@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LOG210 Analyse et conception de logiciels - 9&nbsp; Réalisations de cas d’utilisation (RDCU)</title>
+<title>Analyse et conception de logiciels - 9&nbsp; Réalisations de cas d’utilisation (RDCU)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,7 +103,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+      <a href="./">Analyse et conception de logiciels</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -267,9 +267,9 @@ div.csl-indent {
 
 </header>
 
-<p>Les réalisations de cas d’utilisation (RDCU) sont le sujet du chapitre F17/A18&nbsp;<i class="fa-solid fa-book"></i>. Voici les points importants pour le cours:</p>
+<p>Les réalisations de cas d’utilisation (RDCU) sont le sujet du chapitre F17/A18&nbsp;<i class="fa-solid fa-book"></i>. Voici les points importants pour la méthodologie:</p>
 <ul>
-<li>Une RDCU est une synthèse des informations spécifiées dans le MDD, le DSS et les contrats d’opération. Elle sert à esquisser une solution (qui n’est pas encore codée) afin de rendre plus explicite l’activité impliquant des choix de conception. Si vous n’avez pas bien compris les autres éléments (MDD, DSS, etc.), il est difficile de réussir les RDCU dans le cours. Il est normal de ne pas tout comprendre au début, alors posez les questions si vous ne comprenez pas.</li>
+<li>Une RDCU est une synthèse des informations spécifiées dans le MDD, le DSS et les contrats d’opération. Elle sert à esquisser une solution (qui n’est pas encore codée) afin de rendre plus explicite l’activité impliquant des choix de conception. Si vous n’avez pas bien compris les autres éléments (MDD, DSS, etc.), il est difficile de réussir les RDCU. Il est normal de ne pas tout comprendre au début, alors posez les questions si vous ne comprenez pas.</li>
 <li>De manière générale, toute bonne RDCU doit faire les choses suivantes:
 <ul>
 <li>spécifier un contrôleur (pour la première opération système dans un DSS, qui sera le même pour le reste des opérations dans le DSS);</li>
@@ -283,7 +283,7 @@ div.csl-indent {
 <li>On dessine à la main des diagrammes puisqu’on peut faire ça en équipe à un tableau blanc. Mais aussi, à l’examen vous devez faire des diagrammes à la main.</li>
 <li>Au lieu d’un message pointillé indiquant le retour d’une valeur à la fin de l’exécution d’une méthode, on utilise l’affectation sur le message (comme dans la programmation), par exemple <code>c = getClient(...)</code> à la <a href="#fig-RDCU_ID_en_objets">figure&nbsp;<span>9.4</span></a></li>
 </ul></li>
-<li>Le livre présente quelques RDCU qui sont des <em>diagrammes de communication</em>. Cette notation n’est pas utilisée dans le cours, car elle est plus complexe à utiliser et elle est comparable à la notation des diagrammes de séquence.</li>
+<li>Le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> présente quelques RDCU qui sont des <em>diagrammes de communication</em>. Cette notation n’est pas utilisée dans ce manuel, car elle est plus complexe à utiliser et elle est comparable à la notation des diagrammes de séquence.</li>
 <li>Faire des RDCU est plus agile que coder, car dans un diagramme on peut voir le flux de plusieurs messages à travers plusieurs classes. Dans une solution codée, il serait nécessaire d’ouvrir plusieurs fichiers afin de voir le code de chaque méthode (message) et on ne peut pas voir toute la dynamique de la même manière. Faire des changements à un diagramme (avant de le coder) est en principe plus facile que changer le code source. On peut également se servir des structures (<code>List</code>, <code>Array</code>, <code>Map</code>, etc.) dans un diagramme, avant que celles-ci ne soient créées.</li>
 <li>Faire des RDCU est une activité créative. Un diagramme dynamique en UML peut avoir une mauvaise logique, car il s’agit d’un dessin. <em>Le codage dans un langage de programmation est la seule manière de valider une RDCU</em>. Évidemment, la programmation prend beaucoup plus de temps et n’est pas insignifiante. Faire une RDCU est comme faire un <em>plan</em> pour un bâtiment, tandis que faire de la programmation est comme <em>construire</em> le bâtiment. Si un plan contient des erreurs de conception, on va les savoir lors de la construction. Alors, votre RDCU sera en doute jusqu’à ce que vous la traduisiez en code exécuté et testé.</li>
 </ul>
@@ -296,7 +296,7 @@ div.csl-indent {
 </div>
 <section id="spécifier-le-contrôleur" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="spécifier-le-contrôleur"><span class="header-section-number">9.1</span> Spécifier le contrôleur</h2>
-<p>Pour commencer une RDCU, on spécifie le contrôleur selon GRASP. Dans les travaux pour le cours, vous devez indiquer <em>pourquoi vous avez choisi telle classe pour être le contrôleur</em>. Ce n’est pas un choix arbitraire. Référez-vous à la définition dans .</p>
+<p>Pour commencer une RDCU, on spécifie le contrôleur selon GRASP. Dans les travaux réalisés selon la méthodologie de ce manuel, vous devez indiquer <em>pourquoi vous avez choisi telle classe pour être le contrôleur</em>. Ce n’est pas un choix arbitraire. Référez-vous à la définition dans le <a href="GRASP.html#tbl-tableGRASP">tableau&nbsp;<span>6.1</span></a>.</p>
 <p>Pour initialiser les liens entre la couche présentation et les contrôleurs GRASP, Larman vous propose de le faire dans la <a href="#sec-RDCU_Demarrer">RDCU pour l’initialisation, le scénario Démarrer</a>.</p>
 </section>
 <section id="satisfaire-les-postconditions" class="level2" data-number="9.2">
@@ -355,7 +355,7 @@ Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur st
 <section id="sec-TransformerIDenObjets" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="sec-TransformerIDenObjets"><span class="header-section-number">9.4</span> Transformer identifiants en objets</h2>
 <p>La directive d’utiliser les types primitifs pour les opérations système nous mène à un problème récurrent dans les RDCU : transformer un identifiant (souvent de type <code>String</code> ou <code>int</code>) en objet. Larman vous propose un idiome (pas vraiment un patron) nommé <strong>Transformer identifiant en objet</strong> qui sert à repérer la référence d’un objet qui correspond à l’identifiant.</p>
-<p>Il y a un exemple à la <a href="#fig-RDCU_ID_en_objets">figure&nbsp;<span>9.4</span></a> provenant du chapitre sur <strong>l’Application des patterns GoF (Figure 23.18)</strong>&nbsp;<i class="fa-solid fa-book"></i>. Un autre exemple du livre du cours est l’identifiant <code>codeArticle</code> transformé en objet <code>DescriptionProduit</code> par la méthode<br>
+<p>Il y a un exemple à la <a href="#fig-RDCU_ID_en_objets">figure&nbsp;<span>9.4</span></a> provenant du chapitre sur <strong>l’Application des patterns GoF (Figure 23.18)</strong>&nbsp;<i class="fa-solid fa-book"></i>. Un autre exemple du livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> est l’identifiant <code>codeArticle</code> transformé en objet <code>DescriptionProduit</code> par la méthode<br>
 <code>CatalogueProduits.getDescProduit(codeArticle:String):DescriptionProduit</code>.</p>
 <div id="fig-RDCU_ID_en_objets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -367,8 +367,8 @@ Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur st
 </section>
 <section id="sec-UtilisationMap" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="sec-UtilisationMap"><span class="header-section-number">9.5</span> Utilisation de tableau associatif (<code>Map&lt;clé, objet&gt;</code>)</h2>
-<p>Pour <em>transformer un ID en objets</em>, il est pratique d’utiliser un <a href="https://fr.wikipedia.org/wiki/Tableau_associatif">tableau associatif (aussi appelé dictionnaire ou map en anglais)</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>. L’exemple du livre du cours concerne le problème de repérer une <code>Case</code> Monopoly à partir de son nom (<code>String</code>). C’est la figure A17.7/F17.7&nbsp;<i class="fa-solid fa-book"></i>. Voir les détails dans le livre.</p>
-<p>Notez que les exemples du livre ne montrent qu’un seul <em>type</em> dans le tableau associatif, par exemple <code>Map&lt;Case&gt;</code>, tandis que normalement il faut spécifier aussi le type de la clé, par exemple <code>Map&lt;String, Case&gt;</code>.</p>
+<p>Pour <em>transformer un ID en objets</em>, il est pratique d’utiliser un <a href="https://fr.wikipedia.org/wiki/Tableau_associatif">tableau associatif (aussi appelé dictionnaire ou map en anglais)</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>. L’exemple du livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> concerne le problème de repérer une <code>Case</code> Monopoly à partir de son nom (<code>String</code>). C’est la figure A17.7/F17.7&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<p>Notez que les exemples de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> ne montrent qu’un seul <em>type</em> dans le tableau associatif, par exemple <code>Map&lt;Case&gt;</code>, tandis que normalement il faut spécifier aussi le type de la clé, par exemple <code>Map&lt;String, Case&gt;</code>.</p>
 <p>Un tableau associatif fournit une méthode <code>get</code> ou <code>find</code> pour rechercher un objet à partir de sa clé (son identifiant). La <a href="#fig-Map_Case_Monopoly">figure&nbsp;<span>9.5</span></a> en est un exemple.</p>
 <div id="fig-Map_Case_Monopoly" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -386,7 +386,7 @@ Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur st
 <li>Le lancement d’une application dépend du langage de programmation et du système d’exploitation.</li>
 <li>À chaque nouvelle RDCU, on doit possiblement actualiser la RDCU «&nbsp;Démarrer&nbsp;» pour tenir compte des hypothèses faites dans la dernière RDCU. Elle est assez «&nbsp;instable&nbsp;» pour cette raison. Larman recommande de faire sa conception en dernier lieu.</li>
 <li>Il faut choisir l’objet du domaine initial, qui est souvent l’objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses «&nbsp;enfants&nbsp;» directs, puis chaque enfant aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu de Risk à la <a href="MDD.html#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>, <code>JeuRisk</code> pourrait être l’objet racine, qui devra créer l’objet <code>PlateauRisk</code> et les cinq instances de <code>Dé</code>. L’objet <code>PlateauRisk</code>, lors de son initialisation, pourra instancier les 42 objets <code>Pays</code> et les six objets <code>Continent</code>, en passant à chaque <code>Continent</code> leurs objets <code>Pays</code> lors de son initialisation. Si <code>PlateauRisk</code> fournit une méthode <code>getPays(nom)</code> qui dépend d’un tableau associatif selon <a href="#sec-TransformerIDenObjets">Transformer identifiants en objets</a>, alors c’est dans l’initialisation de cette classe où l’instance de <code>Map&lt;String,Pays&gt;</code> sera créée.</li>
-<li>Selon l’application, les objets peuvent être chargés en mémoire à partir d’un système de persistance, par exemple une base de données ou un fichier. Pour l’exemple de Risk, <code>PlateauRisk</code> pourrait charger, à partir d’un fichier JSON, des données pour initialiser toutes les instances de <code>Pays</code>. Pour une application d’inscription de cours à l’université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d’une base de données. Une base de données amène un lot d’avantages et d’inconvénients, et elle n’est pas toujours nécessaire. Dans LOG210, on n’aborde pas le problème de base de données (c’est le sujet d’un autre cours).</li>
+<li>Selon l’application, les objets peuvent être chargés en mémoire à partir d’un système de persistance, par exemple une base de données ou un fichier. Pour l’exemple de Risk, <code>PlateauRisk</code> pourrait charger, à partir d’un fichier JSON, des données pour initialiser toutes les instances de <code>Pays</code>. Pour une application d’inscription de cours à l’université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d’une base de données. Une base de données amène un lot d’avantages et d’inconvénients, et elle n’est pas toujours nécessaire. Dans la méthodologie de ce manuel, on n’aborde pas le problème de base de données (c’est le sujet d’un autre cours).</li>
 </ul>
 <div id="fig-DemarrerRisk" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -419,6 +419,9 @@ Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur st
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-coad97a" class="csl-entry" role="doc-biblioentry">
 Coad, Peter. 1997. <em>Object <span>Models</span>: <span>Strategies</span>, <span>Patterns</span>, and <span>Applications</span></em>. 2nd Revised ed. edition. <span>Upper Saddle River, N.J</span>: <span>Pearson Technology Group</span>.
+</div>
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
 </div>
 </div>
 </section>

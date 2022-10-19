@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LOG210 Analyse et conception de logiciels - 4&nbsp; Modèle du domaine (MDD, modèle conceptuel)</title>
+<title>Analyse et conception de logiciels - 4&nbsp; Modèle du domaine (MDD, modèle conceptuel)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -84,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LOG210 Analyse et conception de logiciels</a> 
+      <a href="./">Analyse et conception de logiciels</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -251,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Les MDD sont expliqués en détail dans le chapitre 9&nbsp;<i class="fa-solid fa-book"></i>, mais voici des points importants pour LOG210:</p>
+<p>Les MDD sont expliqués en détail dans le chapitre 9&nbsp;<i class="fa-solid fa-book"></i>, mais voici des points importants:</p>
 <ul>
 <li>Les classes conceptuelles ne sont pas des classes logicielles. Ainsi, selon la méthodologie de Larman, <em>elles n’ont pas de méthodes</em>.</li>
 <li>Les classes ont des noms commençant avec une lettre majuscule, par exemple <code>Joueur</code> et elles ne sont jamais au pluriel, par exemple <del><code>Joueurs</code></del>.</li>
@@ -358,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>visibilité nom : type multiplicité = défaut {propriété}</strong></p>
 <p>Voici des points importants:</p>
 <ul>
-<li><em>Le type d’un attribut est important et il faut les spécifier dans un MDD</em>, même si dans le livre du cours il y a plusieurs exemples sans type.</li>
+<li><em>Le type d’un attribut est important et il faut les spécifier dans un MDD</em>, même si dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> il y a plusieurs exemples sans type.</li>
 <li>On ne se soucie pas de la visibilité des attributs dans un MDD.</li>
 <li>Faites attention à la confusion des attributs et des classes. Si on ne pense pas un concept <em>X</em> en termes alphanumériques dans le monde réel, alors il s’agit probablement d’une classe conceptuelle. Par exemple, dans le monde réel, une université n’est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12&nbsp;<i class="fa-solid fa-book"></i>.</li>
 <li>De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a> la classe <code>Pays</code> n’a pas un <em>attribut</em> <code>joueur:Joueur</code> (qui contrôle le Pays); elle a plutôt une <em>association</em> avec la classe <code>Joueur</code> et un verbe <code>contrôle</code>.</li>
@@ -499,7 +518,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4.6" class="anchored" data-anchor-id="classes-de-description-et-de-catalogues"><span class="header-section-number">4.6</span> Classes de «&nbsp;description&nbsp;» et de catalogues</h2>
 <p>Deux catégories de classes conceptuelles qui vont de pair sont les <em>descriptions d’entités</em> et les <em>catalogues</em> qui agrègent les descriptions. Elles sont expliquées en détail dans la section 9.13 <i class="fa-solid fa-book"></i>. Voici des conditions pour utiliser correctement une classe de description d’une autre classe «&nbsp;X&nbsp;»:</p>
 <ul>
-<li>Il faut disposer de la description d’un produit ou d’un service «&nbsp;X&nbsp;» indépendamment de l’existence actuelle des «&nbsp;X&nbsp;». Par exemple, il pourrait y avoir une rupture de stocke d’un Produit (aucune instance actuelle), mais on a besoin de connaître son prix. La classe DescriptionProduit permet d’avoir cette information, même s’il n’y a plus d’instances de Produit. Un autre exemple est un trimestre où le cours <em>LOG711</em> ne se donne pas (il n’y a pas de GroupeCours de LOG711 dans le trimestre actuel). Alors une classe Cours (qui joue le rôle de description) sert pour spécifier le nombre de crédits, les cours préalables, etc.</li>
+<li>Il faut disposer de la description d’un produit ou d’un service «&nbsp;X&nbsp;» indépendamment de l’existence actuelle des «&nbsp;X&nbsp;». Par exemple, il pourrait y avoir une rupture de stocke d’un Produit (aucune instance actuelle), mais on a besoin de connaître son prix. La classe DescriptionProduit permet d’avoir cette information, même s’il n’y a plus d’instances de Produit. Un autre exemple est un trimestre où un cours <em>LOG711</em> ne se donne pas (il n’y a pas de GroupeCours de LOG711 dans le trimestre actuel). Alors une classe Cours (qui joue le rôle de description) sert pour spécifier le nombre de crédits, les cours préalables, etc.</li>
 <li>La suppression d’instances de «&nbsp;X&nbsp;» entraîne la perte de l’information qui doit être mémorisée, mais a été incorrectement associée à l’entité en question.</li>
 <li>La classe de description réduit la duplication des informations.</li>
 </ul>
@@ -526,7 +545,7 @@ Avertissement
 <div id="fig-MDD-ErreurDescription" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/81388c483adcfc0557f8ec918c51497640ad802f.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.4: Erreur fréquente en LOG210 - utiliser une classe de description sans justification.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.4: Erreur fréquente - utiliser une classe de description sans justification.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -575,7 +594,7 @@ Avertissement
 <h2 data-number="4.9" class="anchored" data-anchor-id="faq-mdd"><span class="header-section-number">4.9</span> FAQ MDD</h2>
 <section id="mddchaquecasutilisation" class="level3" data-number="4.9.1">
 <h3 data-number="4.9.1" class="anchored" data-anchor-id="mddchaquecasutilisation"><span class="header-section-number">4.9.1</span> Y a-t-il un MDD pour chaque cas d’utilisation?</h3>
-<p>Selon la méthodologie du cours, bien qu’une application ait souvent plusieurs fonctionnalités (cas d’utilisation), il n’y a qu’un seul MDD.</p>
+<p>Selon la méthodologie de ce manuel, bien qu’une application ait souvent plusieurs fonctionnalités (cas d’utilisation), il n’y a qu’un seul MDD.</p>
 <p>Cela dit, le MDD est comme un fichier de code source, puisque sa <em>version</em> peut évoluer avec le projet. Le MDD évoluera normalement après chaque itération, car on fait une nouvelle analyse pour les nouvelles fonctionnalités visées dans l’itération. Au début du projet, le MDD est plus simple, puisqu’il porte sur seulement les cas d’utilisation ciblés à la première itération. Le MDD devient plus riche au fur et à mesure qu’on avance dans les itérations, parce qu’il modélise davantage de concepts reliés aux problèmes traités par les nouvelles fonctionnalités à réaliser.</p>
 <p>Par exemple, la version initiale du MDD (chapitre 9&nbsp;<i class="fa-solid fa-book"></i>) ne traite pas la fonctionnalité de paiement par carte de crédit. Les classes conceptuelles modélisant la problématique de paiements par carte de crédit sont absentes dans le MDD initial. Plus tard (après plusieurs itérations, dans le chapitre sur le raffinement du MDD), on voit un MDD beaucoup plus riche qui reflète la modélisation des concepts reliés à des fonctionnalités comme les paiements par carte de crédit, les demandes d’autorisation de paiement, etc.</p>
 </section>
@@ -592,6 +611,11 @@ Avertissement
 <p>Vous pouvez aussi lire <a href="https://stackoverflow.com/q/3507671/1168342">cette question</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
 </section>
 </section>
 
