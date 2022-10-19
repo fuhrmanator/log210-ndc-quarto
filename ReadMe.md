@@ -1,4 +1,4 @@
-# Manuel du livre de LOG210 dans Quarto
+# Manuel de cours d'Analyse et de conception de logiciels (Quarto)
 
 ![Publier les REL](https://github.com/fuhrmanator/log210-ndc-quarto/actions/workflows/quarto-render-publish.yml/badge.svg)
 

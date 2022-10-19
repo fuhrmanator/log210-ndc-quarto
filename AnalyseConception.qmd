@@ -145,7 +145,7 @@ Un patron définit des rôles et parfois des classes et du code supplémentaires
 Le tout doit s'intégrer dans un design existant (qui est possiblement déjà complexe).
 - Un *environnement* peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l'environnement sans fil, des écrans tactiles, la pile limitée, etc.
 
-La @fig-complexitySources présente les sources de complexité ainsi que leurs noms qu'on va utiliser dans le cours:
+La @fig-complexitySources présente les sources de complexité ainsi que leurs noms qu'on va utiliser dans ce manuel:
 
 ### Complexité inhérente (provenant du problème)
 

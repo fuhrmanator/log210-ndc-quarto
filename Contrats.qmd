@@ -1,7 +1,7 @@
 # Contrats d'opération
 
 Les contrats d'opération sont le sujet du chapitre 11\ \faBook<i class="fa-solid fa-book"></i>.
-Voici les points importants pour le cours:
+Voici les points importants pour la méthodologie:
 
 - On ne spécifie pas les préconditions dans les contrats.
 - Un contrat d'opération correspond à une opération système provenant d'un DSS.

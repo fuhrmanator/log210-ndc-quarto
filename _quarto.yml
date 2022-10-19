@@ -12,11 +12,9 @@ language: _language.yml   # customized, "tableau" plutôt que "table", etc.
 
 book:
 
-  #cover-image: images/wordle_ordre_alph.png
   subtitle: "![nuage de mots](images/wordle_ordre_alph.png){width=70%}"
-  title: "LOG210 Analyse et conception de logiciels"
+  title: "Analyse et conception de logiciels"
   
-  #subtitle: "Notes de cours"
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
@@ -73,16 +71,10 @@ format:
     
 
   pdf:
-    # has to be latexmk for .plantuml plugin to work (not sure why, see )
+    # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: latexmk
     colorlinks: true
-    linkcolor: Blue
-    urlcolor: Maroon
-    #citecolor: Orange  # not really used when `link-citations: true`
-    #cite-method: biblatex
     documentclass: scrbook
-    # lof: true
-    # lot: true
     toc: true
     toc-depth: 2
     highlight-style: github

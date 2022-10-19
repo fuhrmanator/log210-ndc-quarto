@@ -29,7 +29,7 @@ Mais en TypeScript, c'est facile de déclarer un type comme une *union* de plusi
 
 Le **`lab 0`** aborde plusieurs de ces aspects, mais certaines notions sont plus complexes et nécessitent une étude approfondie. 
 Le but de cette section est de donner des tutoriels plus spécifiques.
-Enseigner la syntaxe ou les principes du langage TypeScript n'est pas le but du cours, mais apprendre à trouver l'information soi-même est essentiel pour une personne travaillant dans les technologies de l'information.
+Enseigner la syntaxe ou les principes du langage TypeScript n'est pas le but de ce manuel, mais apprendre à trouver l'information soi-même est essentiel pour une personne travaillant dans les technologies de l'information.
 
 Il y a un [dépôt d'exemples avec TypeScript (utilisant `ts-node` pour les voir facilement)](https://github.com/profcfuhrmanets/exemples-ts) sur GitHub.
 Il y a un exemple qui montre comment faire des REST à partir de TypeScript avec le système SGB. 
@@ -92,7 +92,8 @@ Par exemple, si on fait `if (maVariable)` pour tester si une variable est défin
 
 ## Évaluer les contributions des membres de l'équipe {#sec-ContributionsEquipe}
 
-Il existe un outil nommé `gitinspector` qui peut indiquer le niveau d'implication des membres de l'équipe dans un projet sur GitHub. Étant donné que LOG210 utilise un squelette avec les tests, les fichiers `src` de TypeScript, les modèles PlantUML et le README.md, il est possible d'utiliser `gitinspector` pour voir des rapports de contribution sur chacun des volets.
+Il existe un outil nommé `gitinspector` qui peut indiquer le niveau d'implication des membres de l'équipe dans un projet sur GitHub.
+Étant donné que les laboratoires de ce manuel utilise un squelette avec les tests, les fichiers `src` de TypeScript, les modèles PlantUML et le README.md, il est possible d'utiliser `gitinspector` pour voir des rapports de contribution sur chacun des volets.
 
 Pour faciliter l'utilisation de l'outil, le professeur Fuhrman a créé un [script en bash](https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853). Voici comment l'utiliser:
 
@@ -152,14 +153,14 @@ Une inégalité importante dans les contributions est un signal d'alarme. On doi
 
 - Est-ce que Francis et Mélanie sont à l'aise avec les technologies utilisées dans le lab, ont-ils besoin de coaching?
 - Sont-ils des "parasites" ou "mollassons" [@oakley_coping_2004] ([traduction française de l'article](https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub))? 
-Le plan de cours vous permet d'exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais **seulement s'ils n'ont rien fait du tout** (ce qui n'est pas le cas dans l'exemple ci-dessus).
+À certaines universités, le plan de cours vous permet d'exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais **seulement s'ils n'ont rien fait du tout** (ce qui n'est pas le cas dans l'exemple ci-dessus).
 Une personne exclue de cette manière va probablement abandonner le cours et vous perdrez définitivement un coéquipier.
 - Est-ce que Anne et Justin ont laissé suffisamment de liberté aux autres pour faire une contribution importante? Font-ils assez confiance aux autres? 
 - Avez-vous fait un plan d'itération assez détaillé pour que chacun puisse contribuer adéquatement? Dans l'exemple ci-dessus, peut-être Francis et Mélanie ont-ils trouvé ça difficile de savoir où contribuer?
 - Est-ce que tout le monde assiste aux séances de laboratoire?
 - Est-ce que tout le monde travaille *au moins 6 heures en dehors des séances encadrées*?
 - Est-ce que certains coéquipiers travaillent excessivement, sans donner la chance aux autres de contribuer?
-N'oubliez pas que les laboratoires sont une manière d'apprendre à pratiquer la matière du cours. 
+N'oubliez pas que les laboratoires sont une manière d'apprendre à pratiquer la matière de ce manuel. 
 Laisser un ou deux coéquipiers faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l'examen final pour ceux qui ont moins contribué).
 Il y a aussi un risque sur le plan de la [Redondance des compétences dans l’équipe (Bus Factor)](#sec-Bus_Factor), surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il travaille trop.
 - Est-ce que tout le monde utilise un moyen de communiquer de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n'est pas l'outil idéal pour coordonner un travail en équipe.

@@ -28,13 +28,12 @@ Travailler en *petits pas* est utile, même sans faire du TDD de manière dogmat
 
 Sachez qu'il existe beaucoup d'intergiciels (anglais *frameworks*) pour faciliter l'exécution automatique des tests réalisés dans le cadre du TDD.
 Pour Java il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements.
-En ce qui concerne le squelette pour le laboratoire de LOG210, il s'agit de [Jest](https://jestjs.io/).
+En ce qui concerne le squelette pour le laboratoire, il s'agit de [Jest](https://jestjs.io/).
 <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). -->
 
-L'exécution de tests peut être même faite à chaque commit du code dans un dépôt comme GitHub. Le squelette de LOG210 utilise [Travis](https://travis-ci.org/) pour cela. 
-Cependant, pour un dépôt privé, Travis nécessite un compte payant.
+L'exécution de tests peut être même faite à chaque commit du code dans un dépôt comme GitHub. 
 
-Il est possible de mesurer la [couverture de code](https://fr.wikipedia.org/wiki/Couverture_de_code)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>\ atteinte par les tests (mais ce sujet commence à sortir du cadre de la matière du cours). Le squelette utilise [Coveralls](https://coveralls.io/) pour ce faire.
+Il est possible de mesurer la [couverture de code](https://fr.wikipedia.org/wiki/Couverture_de_code)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>\ atteinte par les tests (mais ce sujet sort du cadre de la matière de ce manuel).
 
 ```{.plantuml #fig-TDD_states caption="États du développement piloté par les tests. [(PlantUML)](http://www.plantuml.com/plantuml/uml/RLJDQXin4BxhAGONwgJ43eLIYZ5B4fj0BgKqII_T7kJToLf4AsqraerxwhLlqTxgv_2Rz4awqgx_WY_BelbclX_DxXLvwNoejPYh4W7hng-WH2gSQhooHj2pCerqiWRoAutyTAf83VlAlPSURwmhqKsijWvcMXRFBm6trlYsl9mhZwVAzubYPdLvigf-8Bnz_x9qxPnT7jRxUy0KdsJGFbO_oXgXTu-LHNYyWvieiIVwNdcctFpYIGHbW7ApNg2sJOCr6W-DqjPlri3ZG2E1H_8aAFB2Pnig14dGkmvGMsKeDy4aI6usws9k0_RWbSEoQ_Y2pYVyWmsCtStBMIqHqp6wSeYcmt-Iz32TfevnaPBZMHcV0X_dvk1iJEnzzEv3Ddxjvw6U3KgxDDduCY4o7hj2hUrIV7tp3GPELNC_o3hz8vYupHfTRemD2vGXDr6KQAi3ny2aUyGXyLOuXCAMo99jSF0a-Q2JxvAPCpeVKsYoVp__Z2_ZYqZT0tr0c9lJb2ronzVvIubajv49Wk702wyMYYzbQs-NH8laDURfWPIH5NPQVhTQjXqT4rDjCpvs1oHDUpT2OuMcX89l1vqu7lTug0QEUC7qkPlNXc8hiLiePE2G16z8u-nCR_xoFie55j3jp10cs32NDFw2cxI41eCNqZcru72_1znl831pjpFGw4207fJcwmYbawAmt5Dn3t_8Up8QYkERkTE90VOC_KuAa5KUQgbZ6cpjJCKtunNpHGCpMmKy7y8qnbH4QtG1ra17p3hR6FbxIiv4ZB1DKbpnWtyV_m40)" }
 @startuml

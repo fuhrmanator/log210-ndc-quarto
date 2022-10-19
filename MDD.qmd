@@ -1,6 +1,6 @@
 # Modèle du domaine (MDD, modèle conceptuel)
 
-Les MDD sont expliqués en détail dans le chapitre 9 \faBook<i class="fa-solid fa-book"></i>, mais voici des points importants pour LOG210:
+Les MDD sont expliqués en détail dans le chapitre 9 \faBook<i class="fa-solid fa-book"></i>, mais voici des points importants:
 
 - Les classes conceptuelles ne sont pas des classes logicielles. Ainsi, selon la méthodologie de Larman, *elles n'ont pas de méthodes*.
 - Les classes ont des noms commençant avec une lettre majuscule, par exemple `Joueur` et elles ne sont jamais au pluriel, par exemple ~~`Joueurs`~~.
@@ -48,7 +48,7 @@ Pour l'UML, la syntaxe complète d'un attribut est :
 
 Voici des points importants:
 
-- *Le type d'un attribut est important et il faut les spécifier dans un MDD*, même si dans le livre du cours il y a plusieurs exemples sans type.
+- *Le type d'un attribut est important et il faut les spécifier dans un MDD*, même si dans le livre de @craig_uml_2005 il y a plusieurs exemples sans type.
 - On ne se soucie pas de la visibilité des attributs dans un MDD.
 - Faites attention à la confusion des attributs et des classes. Si on ne pense pas un concept *X* en termes alphanumériques dans le monde réel, alors il s'agit probablement d'une classe conceptuelle. Par exemple, dans le monde réel, une université n'est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12 \faBook<i class="fa-solid fa-book"></i>.
 - De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple dans la @fig-MDD-jeu-de-risk la classe `Pays` n'a pas un *attribut* `joueur:Joueur` (qui contrôle le Pays); elle a plutôt une *association* avec la classe `Joueur` et un verbe `contrôle`.
@@ -194,7 +194,7 @@ Elles sont expliquées en détail dans la section 9.13 \faBook<i class="fa-solid
 Voici des conditions pour utiliser correctement une classe de description d'une autre classe "X":
 
 - Il faut disposer de la description d'un produit ou d'un service "X" indépendamment de l'existence actuelle des "X". Par exemple, il pourrait y avoir une rupture de stocke d'un Produit (aucune instance actuelle), mais on a besoin de connaître son prix. La classe DescriptionProduit permet d'avoir cette information, même s'il n'y a plus d'instances de Produit. 
-Un autre exemple est un trimestre où le cours *LOG711* ne se donne pas (il n'y a pas de GroupeCours de LOG711 dans le trimestre actuel). 
+Un autre exemple est un trimestre où un cours *LOG711* ne se donne pas (il n'y a pas de GroupeCours de LOG711 dans le trimestre actuel).
 Alors une classe Cours (qui joue le rôle de description) sert pour spécifier le nombre de crédits, les cours préalables, etc.
 - La suppression d'instances de "X" entraîne la perte de l'information qui doit être mémorisée, mais a été incorrectement associée à l'entité en question.
 - La classe de description réduit la duplication des informations.
@@ -234,7 +234,7 @@ end note
 Attention de ne pas faire l'erreur naïve d'utiliser une classe de description simplement pour "décrire" une autre classe. Voir la @fig-MDD-ErreurDescription pour un exemple.
 :::
 
-```{.plantuml #fig-MDD-ErreurDescription caption="Erreur fréquente en LOG210 - utiliser une classe de description sans justification."}
+```{.plantuml #fig-MDD-ErreurDescription caption="Erreur fréquente - utiliser une classe de description sans justification."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -325,7 +325,7 @@ Voici un résumé des points importants traités dans ce chapitre, dont quelques
 
 ### Y a-t-il un MDD pour chaque cas d'utilisation?{#mddchaquecasutilisation}
 
-Selon la méthodologie du cours, bien qu'une application ait souvent plusieurs fonctionnalités (cas d'utilisation), il n'y a qu'un seul MDD.
+Selon la méthodologie de ce manuel, bien qu'une application ait souvent plusieurs fonctionnalités (cas d'utilisation), il n'y a qu'un seul MDD.
 
 Cela dit, le MDD est comme un fichier de code source, puisque sa *version* peut évoluer avec le projet.
 Le MDD évoluera normalement après chaque itération, car on fait une nouvelle analyse pour les nouvelles fonctionnalités visées dans l'itération.
