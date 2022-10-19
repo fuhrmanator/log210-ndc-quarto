@@ -8,9 +8,13 @@ D'abord, qu'est-ce qu'une exigence?
 C'est une condition documentée à laquelle un logiciel (ou un système) doit satisfaire.
 C'est quelque chose qui facilite la vie d'un utilisateur ou qui amène une valeur socio-économique.
 
-Voici un exemple d'une exigence d'un système de messagerie instantanée (comme Discord ou Slack): il doit permettre à des utilisateurs d'écrire les messages qui sont affichés dans un canal. 
+Voici un exemple d'une exigence d'un système de messagerie instantanée (comme Discord ou Slack): 
+
+> Il doit permettre à des utilisateurs d'écrire des messages qui seront affichés dans un canal. 
+
 Cette fonctionnalité a une utilité évidente -- la communication.
 Il s'agit d'une *exigence de fonctionnalité*.
+
 Si ces messages doivent être visibles à tous les utilisateurs dans le canal en moins de 0,5 secondes, alors il s'agit d'une exigence sur *la qualité de la performance* du système.
 Lorsqu'il s'agit des qualités d'un système comme la performance, on peut les appeler *exigences non fonctionnelles*, car elles ne sont pas les fonctionnalités.
 Il y a beaucoup d'exemples d'exigences non fonctionnelles, par exemple sur [Wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement#Examples)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
