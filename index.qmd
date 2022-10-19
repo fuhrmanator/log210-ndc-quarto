@@ -1,5 +1,12 @@
 # Préface {.unnumbered}
 
-Ce manuel a été produit par le logiciel Quarto.
+Ce manuel a été réalisé avec le soutien de la [fabriqueREL](https://fabriquerel.org/).
 
+Ce manuel a été produit par le logiciel Quarto.
 Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
+
+## Pourquoi un ressource educative libre? {.unnumbered}
+
+
+## Remerciements {.unnumbered}
+

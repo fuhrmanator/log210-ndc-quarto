@@ -18,9 +18,9 @@ book:
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
-  date: "2022-05-06"
+  date: "2022-10-19"
   chapters:
-    - index.qmd
+    - index.qmd # Preface
     - AnalyseConception.qmd
     - Besoins.qmd
     - CasUtilisation.qmd
