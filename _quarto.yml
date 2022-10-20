@@ -74,10 +74,10 @@ format:
     
 
   pdf:
+    babel-lang: french
     # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: latexmk
-    template-partials:
-      - partials/title.tex
+    template: partials/template.tex
       # - template.tex
     colorlinks: true
     documentclass: scrbook
