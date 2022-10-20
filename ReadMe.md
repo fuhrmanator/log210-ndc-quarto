@@ -20,5 +20,5 @@ Pour construire le manuel localement:
 Versions construites avec GitHub actions:
 
 - [Site web](https://fuhrmanator.github.io/log210-ndc-quarto/)
-- [PDF](https://fuhrmanator.github.io/log210-ndc-quarto/LOG210-Analyse-et-conception-de-logiciels.pdf)
-- [EPUB](https://fuhrmanator.github.io/log210-ndc-quarto/LOG210-Analyse-et-conception-de-logiciels.epub)
+- [PDF](https://fuhrmanator.github.io/log210-ndc-quarto/Analyse-et-conception-de-logiciels.pdf)
+- [EPUB](https://fuhrmanator.github.io/log210-ndc-quarto/Analyse-et-conception-de-logiciels.epub)
