@@ -1,4 +1,4 @@
-# Manuel du livre de LOG210 dans Quarto
+# Manuel: Analyse et conception de logiciels (format Quarto)
 
 ![Publier les REL](https://github.com/fuhrmanator/log210-ndc-quarto/actions/workflows/quarto-render-publish.yml/badge.svg)
 
@@ -11,7 +11,7 @@ Pour construire le manuel localement:
 - installer Quarto (<https://quarto.org>)
 - installer l'extension Quarto dans VSCode
 - Quarto: Render Project (commande dans VSCode)
-  - Sinon, dans un terminal CMD.exe (Windows) dans le répertoire du projet:
+  - Sinon, dans un terminal bash, CMD.exe (Windows), etc. dans le répertoire du projet:
     ```
     quarto render --preview pdf
     ```

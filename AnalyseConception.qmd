@@ -1,6 +1,16 @@
 # Analyse et conception de logiciels
 
-Voici le descriptif du cours, selon le plan de cours:
+Ce manuel a été créé dans un contexte de cours d'ingénieur logiciel (LOG210 à l'École de technologie supérieure à Montréal).
+Il s'agit d'une approche où la communauté étudiante apprend à programmer d'abord ("CS-first" selon @SE_Curriculum_ACM_2014).
+Ainsi, le contenu est organisé pour les personnes ayant déjà une expérience en:
+
+- programmation dans un langage orienté objet (Java, C#, TypeScript, etc.);
+- application des patrons de conception de la "bande des quatre" (Gang of Four): Gamma, Helm, Johnson et Vlissides @GoF1994.
+
+La notation UML (*Unified Modeling Language*) est utilisée partout dans ce manuel.
+Nous faisons une hypothèse que les personnes suivant ce manuel aient déjà vu cette notation avant, mais la familiarité avec UML n'est pas un préalable.
+
+<!-- Voici le descriptif du cours, selon le plan de cours:
 
 ::: {.callout-important icon="false" appearance="simple"}
 À la suite de ce cours, l'étudiant sera en mesure:
@@ -12,30 +22,32 @@ Voici le descriptif du cours, selon le plan de cours:
 Méthodes et techniques de modélisation orientés objet, langage de modélisation, cas d'utilisation, analyse orientée objet, modèle du domaine, conception et programmation orientées objet, principes GRASP, patrons de conception, processus itératif et évolutif.
 
 Séances de laboratoire axées sur l'application des notions d'analyse, de conception et de programmation orientées objet vues en classe. Mise en œuvre d'un modèle d'objet à partir d'une spécification de logiciel et à l'aide d'un langage orienté objet contemporain. Conception d'applications utilisant les outils UML ainsi que des techniques et des outils utiles au génie logiciel, tels qu'un environnement de développement intégré, la compilation automatique et les tests automatiques.
-:::
+::: -->
 
-## Livre obligatoire
+## Livre complémentaire
 
-Le livre obligatoire [@craig_uml_2005] pour ce cours est indiqué dans le plan de cours. **Le présent document n'est pas un substitut pour le livre obligatoire.**
+Ce manuel suit la méthodologie d'analyse et de conception proposée par Craig Larman dans son livre "UML 2 et les Design Patterns" @craig_uml_2005.
+Le livre est encore populaire et pertinent, mais malheureusement il n'a pas été actualisé depuis sa 3^e^ édition (2005).
+La traduction française du livre n'est plus en stocke au Québec depuis plusieurs années.
+Beaucoup de choses ont évolué depuis bientôt vingt ans!
 
-Les références au livre obligatoire sont indiquées par l'icône du livre \faBook<i class="fa-solid fa-book"></i>.
-
-Le livre est disponible en français et en anglais, cependant les chapitres ne sont pas toujours les mêmes.
-Donc, il est parfois nécessaire d'indiquer la référence avec **F** et **A** pour la langue.
+Au besoin, des références à ce livre sont indiquées par l'icône du livre \faBook<i class="fa-solid fa-book"></i>.
+Puisque ce livre-là est disponible en français et en anglais et les numéros de chapitres ne sont pas toujours les mêmes, nous indiquons la référence avec **F** et **A** pour la langue.
 Par exemple, **F16.10/A17.10** indique la section **16.10 du livre en français** et la section **17.10 du livre en anglais.**
-
 Toutes les références sont données pour la 3^e^ édition du livre.
 Si vous avez une autre édition, les chapitres ne sont pas toujours les mêmes et vous devez chercher le sujet dans la table des matières.
 
-## Analyse vs Conception
+Vous trouverez également d'autres sujets importants pour un ingénieur: les notions de complexité, le contexte industriel qui affecte les décisions de conception, l'impact de la conception sur d'autres qualités d'un logiciel, le travail en équipe, etc.
 
-Ce sujet est abordé en détail dans le chapitre 1 \faBook<i class="fa-solid fa-book"></i>.
+## Analyse vs Conception
 
 L'**analyse** met l'accent sur une investigation du problème et des besoins plutôt que sur la recherche d'une solution.
 
 La **conception** sous-entend l'élaboration d'une solution conceptuelle répondant aux besoins plutôt que la mise en œuvre de cette solution.
 
-```{.plantuml #fig-mddDes caption="Diagramme de *classes conceptuelles* décrivant le *problème* d'un jeu de dés (adapté du Jeu de dés du Ch. 1 de Larman). Ceci est élaboré lors d'une activité d'analyse."}
+<!-- Pour plus de détails, vous pouvez consulter le chapitre 1 \faBook<i class="fa-solid fa-book"></i>. -->
+
+```{.plantuml #fig-mddDes caption="Diagramme de *classes conceptuelles* décrivant le *problème* d'un jeu de dés [adapté du Jeu de dés de @craig_uml_2005, chap. 1]. Ceci est élaboré lors d'une activité d'analyse."}
 @startuml
 !include ecriture.pumlinclude
 'left to right direction
@@ -90,7 +102,7 @@ Ensuite, on veut construire un logiciel pour ce jeu et donc on peut spécifier l
 On peut aussi modéliser ce besoin (un élément du problème) par une classe conceptuelle `Dé` ayant un attribut `face` dont sa valeur est un type `int`.
 Les personnes travaillant sur un projet vont facilement comprendre ce modèle, car les gens comprennent les objets qui représentent des aspects de la vraie vie.
 
-Dans LOG210 une modélisation orientée objet est utilisée et pour l'analyse (classes conceptuelles décrivant le problème et les besoins comme à la @fig-mddDes) et pour la conception (classes logicielles proposant une solution dont sa représentation est proche de la modélisation du problème comme à la @fig-ddcDes).
+Dans l'approche proposée par ce manuel une modélisation orientée objet est utilisée et pour l'analyse (classes conceptuelles décrivant le problème et les besoins comme à la @fig-mddDes) et pour la conception (classes logicielles proposant une solution dont sa représentation est proche de la modélisation du problème comme à la @fig-ddcDes).
 
 ## Décalage des représentations {#sec-DecalageRepresentations}
 
@@ -137,13 +149,14 @@ En voici quelques exemples en développement de logiciels:
 - Un cadre d'applications (cadriciel, *framework*) est toujours complexe.
 Par exemple un framework comme Angular ou React pour développer un *front-end* (application frontale), car l'interaction entre l'utilisateur et une application (possiblement répartie dans le nuage) nécessite beaucoup de fonctionnalités supportées par le cadriciel.
 - Un *algorithme* peut être complexe, par exemple, l'algorithme de [tri de Shell](https://fr.wikipedia.org/wiki/Tri_de_Shell) est plus complexe qu'un simple algorithme de [tri à bulles](https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles).
-Notez que la complexité d'un algorithme peut parfois apporter des gains de performance, mais coder, déboguer et maintenir une implémentation d'un algorithme complexe sera plus coûteux.
-- Un *patron de conception* peut être complexe, par exemple, les patrons Visiteur, Décorateur, Médiateur, etc.
+Notez que la complexité d'un algorithme peut parfois apporter des gains de performance.
+Mais le codage, le débogage et la maintenance d'une implémentation d'un algorithme complexe seront plus coûteux.
+- Un *patron de conception* peut être complexe, par exemple, les patrons Visiteur, Décorateur, Médiateur, etc. des GoF [-@GoF1994].
 Un patron définit des rôles et parfois des classes et du code supplémentaires à créer.
-Le tout doit s'intégrer dans un design existant (qui est possiblement déjà complexe).
-- Un *environnement* peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l'environnement sans fil, des écrans tactiles, la pile limitée, etc.
+Le tout doit s'intégrer dans un design existant (qui a son propre niveau de complexité).
+- Un *environnement* peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l'environnement sans fil, des écrans tactiles de tailles différentes, de l'alimentation limitée, etc.
 
-La @fig-complexitySources présente les sources de complexité ainsi que leurs noms qu'on va utiliser dans le cours:
+La @fig-complexitySources présente les sources de complexité ainsi que leurs noms qu'on va utiliser dans ce manuel:
 
 ### Complexité inhérente (provenant du problème)
 
@@ -199,28 +212,36 @@ C --> E
 
 ## Survol de la méthodologie
 
-La @fig-SurvolMethodologie présente la méthode d'analyse et de conception enseignée dans le cours. C'est une adaptation de plusieurs figures présentées dans le livre du cours.
+La @fig-SurvolMethodologie présente la méthode d'analyse et de conception proposée dans ce manuel.
+C'est une adaptation de plusieurs figures présentées par @craig_uml_2005.
 
 ![Survol de la méthodologie.](images/FigA.1-avec-contrats.png){#fig-SurvolMethodologie}
 
 ## Développement itératif, évolutif et agile
 
-Le chapitre 2 du livre \faBook<i class="fa-solid fa-book"></i> définit un processus itératif et adaptatif ainsi que les concepts fondamentaux du Processus Unifié.
+Nous adaptons également un processus moderne de développement avec des itérations, selon une méthodologie "agile".
+Dans le chapitre 2 du livre de Craig Larman, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du "Processus Unifié", qui est une représentation générique de cette stratégie de développement.
 
-Les points importants sont les suivants:
+Nous résumons les points importants ainsi:
 
-- Le développement itératif et évolutif implique de programmer et de tester précocement un système partiel selon des cycles répétitifs.
-- Un cycle est nommé une itération et dure un temps fixe (par exemple, 3 semaines) comprenant les activités d'analyse, de conception, de programmation et de test, ainsi qu'une démonstration pour solliciter des rétroactions du client (voir la @fig-DevIteratifIncremental).
-- La durée d'une itération est limitée dans le temps (*timeboxed* en anglais), de 2 à 6 semaines. Il n'est pas permis d'ajouter du temps à la durée d'une itération si le projet avance plus lentement que prévu, car cela impliquerait un retard de la rétroaction du client. Si le respect des délais semble compromis, on supprime plutôt des tâches ou des spécifications et on les inclut dans l'itération suivante.
-- Les premières itérations peuvent sembler chaotiques, car elles sont loin de la "bonne voie". Avec la rétroaction du client et l'adaptation, le système à développer converge vers une solution appropriée (voir la @fig-StabiliteDansLesIterations).
-- Il y a plusieurs avantages du développement itératif et incrémental:
-  - moins d'échecs, amélioration de la productivité et de la qualité;
-  - gestion précoce des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.)
-  - progrès immédiatement visibles;
-  - rétroaction, implication des utilisateurs et adaptations précoces;
-  - complexité gérée (par itération);
-  - possibilité d'exploiter méthodiquement les leçons tirées d'une itération.
-- Dans une itération, la modélisation avec l'UML se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n'est pas triviale (voir la @fig-AnalyseConceptionDansLesIterations).
+- Le développement itératif et évolutif implique de programmer et de tester précocement un système partiel dans des cycles répétitifs.
+- Un cycle est nommé une itération et dure un temps fixe (par exemple, trois semaines) comprenant les activités d'analyse, de conception, de programmation et de test, ainsi qu'une démonstration pour solliciter des rétroactions du client (voir la @fig-DevIteratifIncremental).
+- La durée d'une itération est limitée dans le temps (*timeboxed* en anglais), de 2 à 6 semaines.
+Il n'est pas permis d'ajouter du temps à la durée d'une itération si le projet avance plus lentement que prévu, car cela impliquerait un retard de la rétroaction du client.
+Si le respect des délais semble compromis, on supprime plutôt des tâches ou des spécifications et on les reprend éventuellement dans une itération ultérieure.
+- Les premières itérations peuvent sembler chaotiques, car elles sont loin de la "bonne voie".
+Avec la rétroaction du client et l'adaptation, le système à développer converge vers une solution appropriée (voir la @fig-StabiliteDansLesIterations).
+Cette instabilité peut être particulièrement prononcée dans un contexte d'entreprise en démarrage.
+- Dans une itération, la modélisation (par exemple, avec l'UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n'est pas triviale (voir la @fig-AnalyseConceptionDansLesIterations). Selon le contexte du projet (voir le [Spectre de la conception](#sec-SpectreDeLaConception)), on peut décider de ne pas faire de la modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l'on appelle la [dette technique](#sec-DetteTechnique).
+
+Le développement itératif et incrémental amène plusieurs avantages selon @craig_uml_2005:
+
+> - diminution d'échecs, une amélioration de la productivité et de la qualité;
+>  - une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.);
+>  - des progrès immédiatement visibles;
+>  - la rétroaction, l'implication des utilisateurs et l'adaptation précoces;
+>  - la complexité est gérée (restreinte à une itération);
+>  - la possibilité d'exploiter méthodiquement les leçons tirées d'une itération.
 
 ![Le développement itératif et incrémental (Figure 2.1 du livre).](images/A2.1.svg){#fig-DevIteratifIncremental}
 
@@ -230,4 +251,4 @@ Les points importants sont les suivants:
 
 ![Processus itératif et évolutif.](images/iteratif-evolutif.png){#fig-IteratifEvolutif}
 
-![Nuage de mots importants du plan de cours de LOG210.](images/LOG210wordle_ordre_alph.png){#fig-nuageDeMots}
+![Nuage de mots importants.](images/wordle_ordre_alph.png){#fig-nuageDeMots}

@@ -110,12 +110,13 @@ Cherchez à répartir les responsabilités dans l'équipe afin d'avoir un *bus f
 Partagez des compétences pour maintenir une équipe robuste.
 Vous pouvez également garder votre solution *simple* et garder la documentation de votre conception à jour.
 
-> Si un coéquipier quitte en cours de la session, il n'est pas facile de maintenir le même rythme.
-Cependant, les enseignants et les chargés de laboratoire de LOG210 s'attendront à ce que vous ayez pensé à un plan B avant de perdre le coéquipier. Au moins un autre coéquipier doit être au courant de ce que faisait l'ancien coéquipier, pour que le projet ne soit pas complètement arrêté.
+> Si un coéquipier quitte en cours du trimestre, il n'est pas facile de maintenir le même rythme.
+Cependant, les enseignants et les chargés de laboratoire s'attendront à ce que vous ayez pensé à un plan B avant de perdre le coéquipier.
+Au moins un autre coéquipier doit être au courant de ce que faisait l'ancien coéquipier, pour que le projet ne soit pas complètement arrêté.
 
 ## Mentorat
 
-En LOG210, ça peut être l'enseignant qui décide la composition des équipes.
+Ça peut être l'enseignant qui décide la composition des équipes.
 Ça veut dire que forcément certains coéquipiers ont plus d'expérience et de facilité à faire certaines tâches que d'autres.
 Les équipes doivent composer avec cette diversité.
 C'est une approche pédagogique reconnue par les experts.
@@ -127,7 +128,9 @@ Apprendre à quelqu'un comment faire une tâche et lui donner l'occasion d'évol
 
 Si les plus forts n'aident pas les autres, ils risquent de les éloigner de l'équipe et de se trouver seuls sur le plan des contributions techniques. Voir la section sur la [Redondance des compétences dans l’équipe (Bus Factor)](#sec-Bus_Factor).
 
-Encadrer un coéquipier au début de la session peut prendre beaucoup de temps. Mais, si la personne devient plus autonome, c'est un gain pour toute l'équipe. Cela augmente également le *bus factor*.
+Encadrer un coéquipier au début du trimestre peut prendre beaucoup de temps.
+Mais, si la personne devient plus autonome, c'est un gain pour toute l'équipe.
+Cela augmente également le *bus factor*.
 
 Voici quelques conseils pour le mentorat:
 
@@ -148,8 +151,8 @@ Considérez les volets HRC lorsque vous vous trouvez dans une des situations sui
   - il n'a pas la patience pour accommoder les coéquipiers moins expérimentés.
   - il croit que les autres auraient dû apprendre mieux à programmer dans les cours préalables.
 - un coéquipier dit qu'il a "fait ses 3 heures de contribution" chaque dimanche chez lui et que ça devrait suffire pour sa partie (il a un emploi et n'a pas beaucoup de temps disponible pour l'équipe d'un laboratoire).
-- un ou deux membres d'une équipe abandonnent le cours après l'examen intra, à cause du double-seuil du cours.
-- un coéquipier suit cinq (!) cours en même temps et n'a pas le temps adéquat pour travailler correctement dans LOG210.
+- un ou deux membres d'une équipe abandonnent le cours après les évaluation de mi-trimestre, par crainte d'échec.
+- un coéquipier suit cinq (!) cours en même temps et n'a pas le temps adéquat pour travailler correctement dans les laboratoires de cette matière.
 - plusieurs coéquipiers sont "expérimentés" mais ils ont de la difficulté à s'entendre sur la direction du projet.
 - l'équipe n'est pas cohésive; chacun fait avancer sa partie, mais le code ne fonctionne pas ensemble.
 

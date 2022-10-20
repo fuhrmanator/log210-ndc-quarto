@@ -1,11 +1,11 @@
 # Réalisations de cas d'utilisation (RDCU) {#sec-RDCU}
 
 Les réalisations de cas d'utilisation (RDCU) sont le sujet du chapitre F17/A18\ \faBook<i class="fa-solid fa-book"></i>.
-Voici les points importants pour le cours:
+Voici les points importants pour la méthodologie:
 
 - Une RDCU est une synthèse des informations spécifiées dans le MDD, le DSS et les contrats d'opération.
 Elle sert à esquisser une solution (qui n'est pas encore codée) afin de rendre plus explicite l'activité impliquant des choix de conception.
-Si vous n'avez pas bien compris les autres éléments (MDD, DSS, etc.), il est difficile de réussir les RDCU dans le cours.
+Si vous n'avez pas bien compris les autres éléments (MDD, DSS, etc.), il est difficile de réussir les RDCU.
 Il est normal de ne pas tout comprendre au début, alors posez les questions si vous ne comprenez pas.
 - De manière générale, toute bonne RDCU doit faire les choses suivantes:
   - spécifier un contrôleur (pour la première opération système dans un DSS, qui sera le même pour le reste des opérations dans le DSS);
@@ -17,7 +17,8 @@ Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique l
   - On doit se servir des annotations pour documenter les choix (GRASP).
   - On dessine à la main des diagrammes puisqu'on peut faire ça en équipe à un tableau blanc. Mais aussi, à l'examen vous devez faire des diagrammes à la main.
   - Au lieu d'un message pointillé indiquant le retour d'une valeur à la fin de l'exécution d'une méthode, on utilise l'affectation sur le message (comme dans la programmation), par exemple `c = getClient(...)` à la @fig-RDCU_ID_en_objets
-- Le livre présente quelques RDCU qui sont des *diagrammes de communication*. Cette notation n'est pas utilisée dans le cours, car elle est plus complexe à utiliser et elle est comparable à la notation des diagrammes de séquence.
+- Le livre de @craig_uml_2005 présente quelques RDCU qui sont des *diagrammes de communication*. 
+Cette notation n'est pas utilisée dans ce manuel, car elle est plus complexe à utiliser et elle est comparable à la notation des diagrammes de séquence.
 - Faire des RDCU est plus agile que coder, car dans un diagramme on peut voir le flux de plusieurs messages à travers plusieurs classes.
 Dans une solution codée, il serait nécessaire d'ouvrir plusieurs fichiers afin de voir le code de chaque méthode (message) et on ne peut pas voir toute la dynamique de la même manière.
 Faire des changements à un diagramme (avant de le coder) est en principe plus facile que changer le code source.
@@ -72,11 +73,11 @@ endlegend
 ## Spécifier le contrôleur
 
 Pour commencer une RDCU, on spécifie le contrôleur selon GRASP. 
-Dans les travaux pour le cours, vous devez indiquer *pourquoi vous avez choisi telle classe pour être le contrôleur*.
+Dans les travaux réalisés selon la méthodologie de ce manuel, vous devez indiquer *pourquoi vous avez choisi telle classe pour être le contrôleur*.
 Ce n'est pas un choix arbitraire.
-Référez-vous à la définition dans \nameref{tab_GRASPControleur}.
+Référez-vous à la définition dans le @tbl-tableGRASP.
 
-Pour initialiser les liens entre la couche présentation et les contrôleurs GRASP, Larman vous propose de le faire dans la [RDCU pour l’initialisation, le scénario Démarrer](#sec-RDCU_Demarrer).
+Pour initialiser les liens entre la couche présentation et les contrôleurs GRASP, Larman vous propose de le faire dans la [RDCU pour l'initialisation, le scénario Démarrer](#sec-RDCU_Demarrer).
 
 ## Satisfaire les postconditions
 
@@ -157,7 +158,7 @@ La directive d'utiliser les types primitifs pour les opérations système nous m
 Larman vous propose un idiome (pas vraiment un patron) nommé **Transformer identifiant en objet** qui sert à repérer la référence d'un objet qui correspond à l'identifiant.
 
 Il y a un exemple à la @fig-RDCU_ID_en_objets provenant du chapitre sur **l'Application des patterns GoF (Figure 23.18)**\ \faBook<i class="fa-solid fa-book"></i>.
-Un autre exemple du livre du cours est l'identifiant `codeArticle` transformé en objet `DescriptionProduit` par la méthode  
+Un autre exemple du livre de @craig_uml_2005 est l'identifiant `codeArticle` transformé en objet `DescriptionProduit` par la méthode  
 `CatalogueProduits.getDescProduit(codeArticle:String):DescriptionProduit`.
 
 ```{.plantuml #fig-RDCU_ID_en_objets caption="Un identifiant `idClient:String` est transformé en objet `c:Client`, qui est ensuite envoyé à la Vente en cours. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLB1Qjn03BqRyWyYboGBBTsheIKX2MNRB0GxJI-zJCQAhNgisKho9ldxohk4ke4i33CmxytJqzESgmMnSKY5ziIR8640jPU4lWl52JcQGGyXzgtaaPkOKnOm2QmE8TjHSGBMaOAl05tWvad831aUCniGmq_Y9Z-f4_y9DlWOncGJXSE0y5r8fpUhkqldtNMe2Daw58MKSm-jODY9rVTVuNG8lHiT1RqolfpuIUmDfOIDLnMukBc17_LrLS_Am_BJsRobjmuqjDF6Xtskk8TlUHGEwI3lkOyDr55eOmTvj-XHYSwDpICq6R7G67mkou_B-QpmpuWSSOqw6Rz8r3947mTAuGoZI9lWyH-N5ROUhU0n18Ng3RWERL3Y7RR-7zkMzvFS3jeM7xv01QNdGqfocSYXMu-Xme4KJwdPNvqL5JXpxSm8dw55sz_F29mDGQZjh8GQKsQuVjwW6A3zuiKYeSBg2hpr_F0RJHUBlUJs_UAnVDK-Hsxyu_u5)"  }
@@ -178,9 +179,11 @@ La @sec-UtilisationMap explique comment implémenter la transformation avec un t
 
 ## Utilisation de tableau associatif (`Map<clé, objet>`) {#sec-UtilisationMap}
 
-Pour *transformer un ID en objets*, il est pratique d'utiliser un [tableau associatif (aussi appelé dictionnaire ou map en anglais)](https://fr.wikipedia.org/wiki/Tableau_associatif)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>. L'exemple du livre du cours concerne le problème de repérer une `Case` Monopoly à partir de son nom (`String`). C'est la figure A17.7/F17.7\ \faBook<i class="fa-solid fa-book"></i>. Voir les détails dans le livre.
+Pour *transformer un ID en objets*, il est pratique d'utiliser un [tableau associatif (aussi appelé dictionnaire ou map en anglais)](https://fr.wikipedia.org/wiki/Tableau_associatif)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
+L'exemple du livre de @craig_uml_2005 concerne le problème de repérer une `Case` Monopoly à partir de son nom (`String`).
+C'est la figure A17.7/F17.7\ \faBook<i class="fa-solid fa-book"></i>. 
 
-Notez que les exemples du livre ne montrent qu'un seul *type* dans le tableau associatif, par exemple `Map<Case>`, tandis que normalement il faut spécifier aussi le type de la clé, par exemple `Map<String, Case>`.
+Notez que les exemples de @craig_uml_2005 ne montrent qu'un seul *type* dans le tableau associatif, par exemple `Map<Case>`, tandis que normalement il faut spécifier aussi le type de la clé, par exemple `Map<String, Case>`.
 
 Un tableau associatif fournit une méthode `get` ou `find` pour rechercher un objet à partir de sa clé (son identifiant). La @fig-Map_Case_Monopoly en est un exemple.
 
@@ -210,7 +213,7 @@ Voici quelques points importants:
 - Le lancement d'une application dépend du langage de programmation et du système d'exploitation.
 - À chaque nouvelle RDCU, on doit possiblement actualiser la RDCU "Démarrer" pour tenir compte des hypothèses faites dans la dernière RDCU. Elle est assez "instable" pour cette raison. Larman recommande de faire sa conception en dernier lieu.
 - Il faut choisir l'objet du domaine initial, qui est souvent l'objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses "enfants" directs, puis chaque enfant aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu de Risk à la @fig-MDD-jeu-de-risk, `JeuRisk` pourrait être l'objet racine, qui devra créer l'objet `PlateauRisk` et les cinq instances de `Dé`. L'objet `PlateauRisk`, lors de son initialisation, pourra instancier les 42 objets `Pays` et les six objets `Continent`, en passant à chaque `Continent` leurs objets `Pays` lors de son initialisation. Si `PlateauRisk` fournit une méthode `getPays(nom)` qui dépend d'un tableau associatif selon [Transformer identifiants en objets](#sec-TransformerIDenObjets), alors c'est dans l'initialisation de cette classe où l'instance de `Map<String,Pays>` sera créée.
-- Selon l'application, les objets peuvent être chargés en mémoire à partir d'un système de persistance, par exemple une base de données ou un fichier. Pour l'exemple de Risk, `PlateauRisk` pourrait charger, à partir d'un fichier JSON, des données pour initialiser toutes les instances de `Pays`. Pour une application d'inscription de cours à l'université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d'une base de données. Une base de données amène un lot d'avantages et d'inconvénients, et elle n'est pas toujours nécessaire. Dans LOG210, on n'aborde pas le problème de base de données (c'est le sujet d'un autre cours).
+- Selon l'application, les objets peuvent être chargés en mémoire à partir d'un système de persistance, par exemple une base de données ou un fichier. Pour l'exemple de Risk, `PlateauRisk` pourrait charger, à partir d'un fichier JSON, des données pour initialiser toutes les instances de `Pays`. Pour une application d'inscription de cours à l'université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d'une base de données. Une base de données amène un lot d'avantages et d'inconvénients, et elle n'est pas toujours nécessaire. Dans la méthodologie de ce manuel, on n'aborde pas le problème de base de données (c'est le sujet d'un autre cours).
 
 ```{.plantuml #fig-DemarrerRisk  caption="Exemple de l'initialisation partielle du jeu de Risk. [(PlantUML)](http://www.plantuml.com/plantuml/uml/ZLLDJzj04BrRuZ-Ck2H88Ig7NYoAG6bLGQ4WGji3uR3i3lR6zknsTqrBVr7pE_B7EdPYnvYF8aKRP-VDcpTlHiwX3yA5iiWZdscomea2V7Z8aK-dPHNPweHkXSmIPqfIqkJ6GN22F8UGmbOqW91g3_mHa0fIlvmE0Gdk30NG13yqAVFBCt13gF1Eb7ce82GAX2zE-ohd-6h2kAiKFO89AJeFkJ4P90v5JJRz_Xc6XSXOQEcGA-F3WByrSKDvZeghEZWwFOLlqq-Nqqvvs7ktqssfhy2Bf3heTPt7bC69AHs9_5NSxqmgc4gdRNWLTu5ibVDTOLqBWokHqwNWmUoDzxh3mfybaiGpz9Noermd19BdWIvYHD1IMy7-RyVdjtCCPqBJDWWFfWnUA-nXJh2yr3wh4VC-mSVbeWwetlr5BWAAJQBj9qwuIqsigGxBnr4RNuW7lqhiHSw4dL7Cv_wKbv6IqOmgx44DBY9PxG9MEjVDmExkmG7_XXXMiOWC0vnEqX33kZT07o0VcCeDS4Aoi8XNouBUVzzGgeX9QZB5N6gvyDVw1ZuyOZNtwBZMICN0gc7YbWkEbMv6JI6HkELVNYRsBK9IrGBRfW9xr9ImVRqDitN_fUvOtp0NaLqJ5ynRUVYSSEj6HOyzxhAr5JhkrzxNx8tePgx-w1vb5RvcbsOaK-4IT9CduSuyE7soWa6El5E6QBb0FoCrAFcLeMMgENGoFV_AxvLDeMPKJqkFlVw3ZGcoDK6svWwVaQjlncIA4Op7uvt7xiWtkTEskD8rtt--Xkthiwq-MmsfdT3mvVph-OjQxPkqrWDOJQ_Q3A7KqEwiB-JcejtKzk6Gd_X_u1y0)" }
 @startuml

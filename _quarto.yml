@@ -8,21 +8,22 @@ crossref:
   tbl-prefix: tableau    # (default is "Table")
 
 lang: fr
-language: _language.yml   # customized, "tableau" plutôt que "table", etc.
+# language: _language.yml   # customized, "tableau" plutôt que "table", etc.
 
 book:
 
-  #cover-image: images/LOG210wordle_ordre_alph.png
-  subtitle: "![nuage de mots](images/LOG210wordle_ordre_alph.png){width=70%}"
-  title: "LOG210 Analyse et conception de logiciels"
+  title: "Analyse et conception de logiciels"
+  subtitle: "![nuage de mots](images/wordle_ordre_alph.png){width=70%}"
+  cover-image: images/wordle_ordre_alph.png
+  image: images/wordle_ordre_alph.png
   
-  #subtitle: "Notes de cours"
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
-  date: "2022-05-06"
+  date: "2022-10-19"
+  date-format: "DD MMMM YYYY"
   chapters:
-    - index.qmd
+    - index.qmd # Preface
     - AnalyseConception.qmd
     - Besoins.qmd
     - CasUtilisation.qmd
@@ -58,31 +59,23 @@ link-external-icon: true
 format:
 
   epub: 
-    epub-cover-image: "images/LOG210wordle_ordre_alph.png"
+    epub-cover-image: "images/wordle_ordre_alph.png"
 
   html:
     header-includes: |
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
             rel="stylesheet" data-external="1"/>
-    # include-in-header:
-    #   - font-awesome.html
     # https://quarto.org/docs/output-formats/html-themes.html#overview
-    # theme: cosmo
-    # needed for inline plantuml/graphviz figures
-    # self-contained: true
+    theme: simplex
     
 
   pdf:
-    # has to be latexmk for .plantuml plugin to work (not sure why, see )
+    babel-lang: french
+    # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: latexmk
+    template: partials/template.tex
     colorlinks: true
-    linkcolor: Blue
-    urlcolor: Maroon
-    #citecolor: Orange  # not really used when `link-citations: true`
-    #cite-method: biblatex
     documentclass: scrbook
-    # lof: true
-    # lot: true
     toc: true
     toc-depth: 2
     highlight-style: github
@@ -91,39 +84,16 @@ format:
       - left=20mm
       - heightrounded
     fontfamily: libertinus
-    # fontfamilyoptions: 
-    #   - osf
-    #   - p
-    #   - tt=false
+    fontfamilyoptions: 
+      - osf
+      - p
     fontsize: 11pt
-    # monofont: libertinus-mono
-    # monofont: cm
     header-includes: 
-    # - \input{glyphtounicode}
-    # - \pdfgentounicode=1
-    # - \usepackage[style=french]{csquotes}
-    # - \usepackage{fontawesome5}
-    # - \usepackage{fontawesome}
-    # - \usepackage{tcolorbox}
-    - \usepackage{colortbl}
-    # - \newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
-    # - \renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
-    # Use courrier for monospace? https://tex.stackexchange.com/a/142319/17868
-#    - \usepackage{inconsolata}
-#    - \usepackage[scaled]{beramono}
-    - \usepackage[scaled=.8]{cascadia-code}
+      - \usepackage{colortbl}
+      - \usepackage[scaled=.8]{cascadia-code}
     # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
-    - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
-    - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
-    # # Float control
-    # - \usepackage{float}
-    # - \floatplacement{figure}{htbp}
-    # # Allow changing font size of code blocks, using \small right before the code fence, for example 
-    # # https://stackoverflow.com/a/47492620/1168342
-    # - \usepackage{setspace}
-    # - \usepackage{hyperref}
-    # - \usepackage[hyperpageref]{backref}
-    #- \PassOptionsToPackage{backref=true,backend=biber,style=authoryear}{biblatex}
+      - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
+      - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
 
 # filters must be run in the proper order here
 filters:

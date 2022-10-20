@@ -14,17 +14,17 @@ Les classes cohésives sont plus faciles à comprendre, à maintenir et à réut
 > \faHatCowboySide<i class="fa-solid fa-hat-cowboy-side"></i>\ Avez-vous déjà une bonne expérience en programmation?
 Avez-vous l'habitude de coder rapidement des solutions qui fonctionnent?
 Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous.
-Dans LOG210, vous devez être en mesure de justifier vos choix de conception et cela va vous ralentir au début.
+Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception et cela va vous ralentir au début (reflèxe du "hacking cowboy" peut-être?).
 Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui soit également facile à maintenir.
 C'est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes.
-Une fois que vous avez l'habitude à utiliser les GRASP, vous serez encore rapide avec votre développement, mais en plus votre design sera meilleur sur le plan de la maintenabilité.
+Une fois que vous avez l'habitude à utiliser les GRASP, vous serez encore rapide avec votre développement, mais en plus votre design sera meilleur sur le plan de la maintenabilité et vous aurez plus de confiance dans vos choix.
 
 ## Spectre de la conception {#sec-SpectreDeLaConception}
 
 Neal Ford [-@Ford2009] a [proposé](https://www.ibm.com/developerworks/library/j-eaed1/index.html) la notion d'effort pour la conception qu'il a nommée le "Spectre de la conception".
 La @fig-SpectreConception illustre le principe.
 
-```{.plantuml #fig-SpectreConception  caption="Spectre de la conception, adapté de Neal Ford. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV)" }
+```{.plantuml #fig-SpectreConception  caption="Spectre de la conception, adapté de @Ford2009. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV)" }
 @startuml
 !include ecriture.pumlinclude
 scale 1.2
@@ -73,14 +73,16 @@ Cette négligence à la conception (pour la maintenabilité) est aussi nommée l
 À l'autre extrémité du spectre, c'est beaucoup d'effort dépensé sur la conception, que l'on nomme "Cascade pure".
 Dans le cycle de vie en cascade, on met un temps fixe, par exemple plusieurs mois, à étudier la conception.
 Comme toute chose poussée à l'extrême, ce n'est pas idéal non plus.
-Dans le livre du cours, Larman explique en détail des problèmes posés par une approche en cascade.
+Dans son livre, @craig_uml_2005 explique en détail des problèmes posés par une approche en cascade.
 Dans certains domaines, par exemple les logiciels pour le contrôle d'avion ou des appareils médicaux, une approche en cascade est encore utilisée, en dépit des problèmes dus à l'approche.
 La sécurité et la robustesse des logiciels sont très importantes, alors on passe beaucoup de temps à vérifier et valider la conception.
 Puisque les exigences sont plus stables (et les développeurs ont *a priori* une meilleure compréhension du domaine), l'approche en cascade n'est pas si mal.
 Pourtant le coût pour produire des logiciels certifiés est énorme.
 
-Le spectre de la conception est très important pour LOG210, parce que votre bagage d'ingénieur devrait vous permettre de travailler partout sur ce spectre.
-C'est le contexte de l'entreprise pour laquelle vous travaillez qui déterminera combien d'effort à mettre sur la conception.
+Le spectre de la conception est très important pour le monde réel, parce que une ingénieure ou un ingénieur devrait pouvoir s'adapter selon où les attentes de son travail.
+Le dogme sur "la bonne manière" de développer un logiciel est souvent sans contexte.
+C'est le contexte de l'entreprise pour laquelle vous travaillez qui peut déterminer combien d'effort à mettre sur la conception.
+Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l'extrémité "hacking cowboy" du spectre), même si on vous dit que c'est "agile".
 <!-- Si vous négligez complètement la conception, vous pouvez peut-être produire du code qui fonctionne plus vite à court terme.
 Mais il faudra repayer la dette technique un jour.
 Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). -->
@@ -89,7 +91,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 
 ## Tableau des principes GRASP {#tbl-GRASPTable}
 
-Voici un extrait du livre du cours, **UML 2 et les design patterns** de Craig Larman.
+Voici un extrait du livre de @craig_uml_2005.
 
 | Pattern       | Description                                   |
 |:--------------|:----------------------------------------------|

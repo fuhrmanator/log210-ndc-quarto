@@ -5,3 +5,5 @@ site_libs/
 /.quarto/
 
 *_files/
+
+/.luarc.json

@@ -7,10 +7,10 @@ Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.
 
 ![Office Lens peut détecter le cadre d'un dessin sur un tableau blanc ou papier et le transformer.](images/OfficeLensWhiteBoard.jpg){width="200px"}
 
-> Tous les travaux demandés pour les **examens** de LOG210 doivent être faits *à la main*.
+> Tous les travaux demandés pour les **examens** (de LOG210 à l'École de technologie supérieure) doivent être faits *à la main*.
 Pour cette raison, il vaut mieux pratiquer dessiner les modèles en mode esquisse (à la main).
 
-Dans LOG210, on exploite l'outil PlantUML pour faire beaucoup de modèles. C'est un outil qui a plusieurs avantages:
+Dans la méthodologie de ce manuel, on exploite l'outil PlantUML pour faire beaucoup de modèles. C'est un outil qui a plusieurs avantages:
 
 - il est basé sur un langage dédié simple (anglais *domain specific language* ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version (git);
 - il est basé sur du code libre;
@@ -32,9 +32,9 @@ Par exemple, une ligne de vie dans un diagramme de séquence est toujours vertic
 Il est possible de corriger le diagramme, mais en combien de clics?
 C'est très vite tannant.
 
-## Exemples de diagramme avec PlantUML pour LOG210
+## Exemples de diagramme avec PlantUML
 
-Dans le menu "Select sample diagram" de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de LOG210 (voir la @fig-GizmoSamples).
+Dans le menu "Select sample diagram" de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et le livre de @craig_uml_2005 (voir la @fig-GizmoSamples).
 
 ## Astuces PlantUML
 

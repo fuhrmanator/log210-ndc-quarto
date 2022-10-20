@@ -1,28 +1,44 @@
 # Besoins (exigences)
 
-Un exemple d'une exigence d'un système pourrait être qu'il doit afficher le nombre d'utilisateurs dans un forum de discussion en ligne.
-Il s'agit d'une exigence de fonctionnalité.
-Si cette information doit être actualisée toutes les 2 secondes, alors il s'agit d'une exigence sur *la qualité de la performance* du système.
-Pour les qualités d'un système comme la performance, on peut les appeler *exigences non fonctionnelles*, car elles ne sont pas les fonctionnalités.
+Dans le développement de logiciels, il est normal de spécifier ce que le logiciel est censé faire.
+Selon la méthodologie proposée dans ce manuel, la spécification des besoins n'est pas facultative!
+La spécification des besoins est la base de la méthodologie de développement.
+
+D'abord, qu'est-ce qu'une exigence?
+C'est une condition documentée à laquelle un logiciel (ou un système) doit satisfaire.
+C'est quelque chose qui facilite la vie d'un utilisateur ou qui amène une valeur socio-économique.
+
+Voici un exemple d'une exigence d'un système de messagerie instantanée (comme Discord ou Slack): 
+
+> Il doit permettre à des utilisateurs d'écrire des messages qui seront affichés dans un canal. 
+
+Cette fonctionnalité a une utilité évidente -- la communication.
+Il s'agit d'une *exigence de fonctionnalité*.
+
+Si ces messages doivent être visibles à tous les utilisateurs dans le canal en moins de 0,5 secondes, alors il s'agit d'une exigence sur *la qualité de la performance* du système.
+Lorsqu'il s'agit des qualités d'un système comme la performance, on peut les appeler *exigences non fonctionnelles*, car elles ne sont pas les fonctionnalités.
 Il y a beaucoup d'exemples d'exigences non fonctionnelles, par exemple sur [Wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement#Examples)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
+Le nom porte à la confusion, car une chose qui ne fonctionne pas est "non fonctionnelle".
+Pour cette raison, elle sont aussi appelées des exigences sur les qualités ou sur les contraintes.
+On peut aussi les appeler informellement les "ilités", car ces qualités sont souvent des aptitudes du système: la maintenabilité, la convivialité, la testabilité, etc.
 
 ![Ramasser les besoins non fonctionnels? "[Dog Clean Up](https://thenounproject.com/icon/dog-clean-up-21489/)" de [Luis Prado](https://thenounproject.com/Luis), utilisé selon [CC0](https://creativecommons.org/publicdomain/zero/1.0/)](images/Pick-up-after-dog-1540480672.svg){#fig-besoins width="60%"}
 
 ## FURPS+
 
-Le chapitre 5\ \faBook<i class="fa-solid fa-book"></i>\ traite le sujet des besoins et leur évolution.
-FURPS+ est un modèle (avec un acronyme) pour classer les exigences (besoins) d'un logiciel. Voici un résumé, mais la section 5.4\ \faBook<i class="fa-solid fa-book"></i>\ explique en détail:
+FURPS+ est un modèle (avec un acronyme) pour classer les exigences (besoins) d'un logiciel.
+Voici un résumé de FURPS+ [voir @craig_uml_2005 section 5.4]:
 
 - **Fonctionnalité** (*Functionality*). Ce sont les exigences exprimées souvent par les cas d'utilisation, par exemple, *Traiter une vente*. La sécurité est aussi considérée dans ce volet.
 - **Aptitude à l'utilisation** (*Usability*). Convivialité - les facteurs humains du logiciel, par exemple le nombre de clics que ça prend pour réaliser une fonctionnalité, à quel point une interface est facile à comprendre par un utilisateur, etc.
 - **Fiabilité** (*Reliability*). Comment le logiciel doit se comporter lorsqu'il y a des problèmes ou des pannes. 
 Par exemple, un traitement texte produit un fichier de sauvegarde de secours, ou une application continue à fonctionner même si le réseau est coupé.
 - **Performance** (*Performance*). Comment un logiciel doit se comporter lors d'une charge importante sur le système.
-Par exemple, lors de la période d'inscription, Cheminot doit avoir un temps de réponse de moins de 2 secondes.
+Par exemple, lors de la période d'inscription universitaire, le système doit avoir un temps de réponse de moins de 2 secondes.
 - **Possibilités de prise en charge** (*Supportability*). Adaptabilité ou maintenabilité - à quel point le logiciel sera facile à modifier face aux changements prévus.
 Par exemple, lors d'un changement de lois fiscales, quelles sont les caractéristiques de la conception qui vont faciliter le développement d'une nouvelle version du logiciel.
 - **\+** : Comprend toutes les autres choses:
   - **Implémentation**. Par exemple, le projet doit être réalisé avec des langages et des bibliothèques qui ne sont pas payants (logiciel libre).
   - **Interface**. Par exemple, contraintes d'interfaçage avec un système externe.
   - **Exploitation**. Par exemple, utilisation de système d'intégration continue.
-  - **Aspects juridiques**. Par exemple, la licence du logiciel, les politiques de confidentialité, etc.
+  - **Aspects juridiques**. Par exemple, la licence du logiciel, les politiques de confidentialité et d'utilisation des données personnelles, etc.
