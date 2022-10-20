@@ -8,17 +8,20 @@ crossref:
   tbl-prefix: tableau    # (default is "Table")
 
 lang: fr
-language: _language.yml   # customized, "tableau" plutôt que "table", etc.
+# language: _language.yml   # customized, "tableau" plutôt que "table", etc.
 
 book:
 
-  subtitle: "![nuage de mots](images/wordle_ordre_alph.png){width=70%}"
   title: "Analyse et conception de logiciels"
+  subtitle: "![nuage de mots](images/wordle_ordre_alph.png){width=70%}"
+  cover-image: images/wordle_ordre_alph.png
+  image: images/wordle_ordre_alph.png
   
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
   date: "2022-10-19"
+  date-format: "DD MMMM YYYY"
   chapters:
     - index.qmd # Preface
     - AnalyseConception.qmd
@@ -73,6 +76,9 @@ format:
   pdf:
     # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: latexmk
+    template-partials:
+      - partials/title.tex
+      # - template.tex
     colorlinks: true
     documentclass: scrbook
     toc: true
@@ -91,22 +97,25 @@ format:
     # monofont: libertinus-mono
     # monofont: cm
     header-includes: 
+      # - \PassOptionsToPackage{french}{babel}
+      # - \PassOptionsToPackage{shorthands=on}{babel}
+    # - \usepackage[french]{babel}
     # - \input{glyphtounicode}
     # - \pdfgentounicode=1
     # - \usepackage[style=french]{csquotes}
     # - \usepackage{fontawesome5}
     # - \usepackage{fontawesome}
     # - \usepackage{tcolorbox}
-    - \usepackage{colortbl}
+      - \usepackage{colortbl}
     # - \newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
     # - \renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
     # Use courrier for monospace? https://tex.stackexchange.com/a/142319/17868
 #    - \usepackage{inconsolata}
 #    - \usepackage[scaled]{beramono}
-    - \usepackage[scaled=.8]{cascadia-code}
+      - \usepackage[scaled=.8]{cascadia-code}
     # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
-    - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
-    - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
+      - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
+      - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
     # # Float control
     # - \usepackage{float}
     # - \floatplacement{figure}{htbp}

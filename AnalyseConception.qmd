@@ -5,7 +5,7 @@ Il s'agit d'une approche où la communauté étudiante apprend à programmer d'a
 Ainsi, le contenu est organisé pour les personnes ayant déjà une expérience en:
 
 - programmation dans un langage orienté objet (Java, C#, TypeScript, etc.);
-- application des patrons de conception de la "bande des quatre" (Gang of Four) : Gamma, Helm, Johnson et Vlissides @GoF1994.
+- application des patrons de conception de la "bande des quatre" (Gang of Four): Gamma, Helm, Johnson et Vlissides @GoF1994.
 
 La notation UML (*Unified Modeling Language*) est utilisée partout dans ce manuel.
 Nous faisons une hypothèse que les personnes suivant ce manuel aient déjà vu cette notation avant, mais la familiarité avec UML n'est pas un préalable.
@@ -29,7 +29,7 @@ Séances de laboratoire axées sur l'application des notions d'analyse, de conce
 Ce manuel suit la méthodologie d'analyse et de conception proposée par Craig Larman dans son livre "UML 2 et les Design Patterns" @craig_uml_2005.
 Le livre est encore populaire et pertinent, mais malheureusement il n'a pas été actualisé depuis sa 3^e^ édition (2005).
 La traduction française du livre n'est plus en stocke au Québec depuis plusieurs années.
-Beaucoup de choses ont évolué depuis bientôt deux siècles!
+Beaucoup de choses ont évolué depuis bientôt vingt ans!
 
 Au besoin, des références à ce livre sont indiquées par l'icône du livre \faBook<i class="fa-solid fa-book"></i>.
 Puisque ce livre-là est disponible en français et en anglais et les numéros de chapitres ne sont pas toujours les mêmes, nous indiquons la référence avec **F** et **A** pour la langue.
