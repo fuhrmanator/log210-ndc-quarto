@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR" xml:lang="fr-FR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.1.251">
@@ -331,9 +331,16 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <h2 data-number="1.4" class="anchored" data-anchor-id="la-complexité-et-ses-sources"><span class="header-section-number">1.4</span> La complexité et ses sources</h2>
 <p>Un.e ingénieur.e logiciel est constamment dans une bataille avec un adversaire dont le nom est la complexité. Mais qu’est-ce que la <span style="white-space:nowrap">complexité ?</span> La&nbsp;<a href="#fig-complexity">figure&nbsp;<span>1.3</span></a> est une image de la complexité. Reconnaissez-vous le domaine d’où vient cette <span style="white-space:nowrap">image ?</span></p>
 <p>Voici une définition de la <span style="white-space:nowrap">complexité :</span></p>
-<blockquote class="blockquote">
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><strong>Complexité</strong>: Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.</p>
-</blockquote>
+</div>
+</div>
+</div>
 <div id="fig-complexity" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/flickr_lytfyre_complexity.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -391,7 +398,12 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <li>Dans une itération, la modélisation (par exemple, avec l’UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n’est pas triviale (voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.8</span></a>). Selon le contexte du projet (voir le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), on peut décider de ne pas faire de la modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l’on appelle la <a href="DetteTechnique.html">dette technique</a>.</li>
 </ul>
 <p>Le développement itératif et incrémental amène plusieurs avantages selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
-<blockquote class="blockquote">
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <ul>
 <li>diminution d’échecs, une amélioration de la productivité et de la <span style="white-space:nowrap">qualité ;</span></li>
 <li>une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, <span style="white-space:nowrap">etc.) ;</span></li>
@@ -400,23 +412,25 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <li>la complexité est gérée (restreinte à une <span style="white-space:nowrap">itération) ;</span></li>
 <li>la possibilité d’exploiter méthodiquement les leçons tirées d’une itération.</li>
 </ul>
-</blockquote>
+</div>
+</div>
+</div>
 <div id="fig-DevIteratifIncremental" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/A2.1.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.6: Le développement itératif et incrémental (Figure 2.1 du livre).</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.6: Le développement itératif et incrémental <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. 2.1</a>)</span>.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-StabiliteDansLesIterations" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/F2.2.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.7: Rétroaction et adaptation itératives convergent vers le système souhaité (Figure 2.2 du livre).</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.7: Rétroaction et adaptation itératives convergent vers le système souhaité <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. 2.2</a>)</span>.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-AnalyseConceptionDansLesIterations" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/F2.4.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.8: Analyse et conception évolutives, majoritairement effectuées dans les premières itérations (Figure 2.4 du livre).</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.8: Analyse et conception évolutives, majoritairement effectuées dans les premières itérations <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. 2.4</a>)</span>.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-IteratifEvolutif" class="quarto-figure quarto-figure-center anchored">
