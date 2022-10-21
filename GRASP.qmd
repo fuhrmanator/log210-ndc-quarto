@@ -79,7 +79,7 @@ La sécurité et la robustesse des logiciels sont très importantes, alors on pa
 Puisque les exigences sont plus stables (et les développeurs ont *a priori* une meilleure compréhension du domaine), l'approche en cascade n'est pas si mal.
 Pourtant le coût pour produire des logiciels certifiés est énorme.
 
-Le spectre de la conception est très important pour le monde réel, parce que une ingénieure ou un ingénieur devrait pouvoir s'adapter selon où les attentes de son travail.
+Le spectre de la conception est très important pour le monde réel, parce que une ingénieure ou un ingénieur devrait pouvoir s'adapter selon les attentes de son travail.
 Le dogme sur "la bonne manière" de développer un logiciel est souvent sans contexte.
 C'est le contexte de l'entreprise pour laquelle vous travaillez qui peut déterminer combien d'effort à mettre sur la conception.
 Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l'extrémité "hacking cowboy" du spectre), même si on vous dit que c'est "agile".
