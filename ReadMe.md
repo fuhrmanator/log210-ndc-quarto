@@ -1,6 +1,6 @@
 # Manuel: Analyse et conception de logiciels (format Quarto)
 
-![Publier les REL](https://github.com/fuhrmanator/log210-ndc-quarto/actions/workflows/quarto-render-publish.yml/badge.svg)
+[![GitHub build status][CI badge]][CI workflow]
 
 Pour construire le manuel localement:
 
@@ -22,3 +22,7 @@ Versions construites avec GitHub actions:
 - [Site web](https://fuhrmanator.github.io/log210-ndc-quarto/)
 - [PDF](https://fuhrmanator.github.io/log210-ndc-quarto/Analyse-et-conception-de-logiciels.pdf)
 - [EPUB](https://fuhrmanator.github.io/log210-ndc-quarto/Analyse-et-conception-de-logiciels.epub)
+
+[CI badge]: https://img.shields.io/github/workflow/status/fuhrmanator/log210-ndc-quarto/Render%20and%20Publish?logo=github
+
+[CI workflow]: https://github.com/fuhrmanator/log210-ndc-quarto/actions/workflows/quarto-render-publish.yml
