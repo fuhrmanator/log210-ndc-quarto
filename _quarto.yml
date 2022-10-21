@@ -78,6 +78,8 @@ format:
     documentclass: scrbook
     toc: true
     toc-depth: 2
+    lof: true
+    lot: true
     highlight-style: github
     geometry:
       - top=30mm
