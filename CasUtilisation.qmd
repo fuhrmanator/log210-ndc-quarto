@@ -26,7 +26,9 @@ Nous décrivons un cas d'utilisation à l'aide d'un exemple concernant le jeu de
 
 Selon "Risk". 2019. [Wikipédia](https://fr.wikipedia.org/w/index.php?title=Risk&oldid=164264587). (accédé le 9 décembre 2019):
 
-> L'attaquant jette un à trois dés suivant le nombre de régiments qu'il désire engager (avec un maximum de trois régiments engagés, et en considérant qu'un régiment au moins doit rester libre d'engagements sur le territoire attaquant) et le défenseur deux dés (un s'il n'a plus qu'un régiment). On compare le dé le plus fort de l'attaquant au dé le plus fort du défenseur et le deuxième dé le plus fort de l'attaquant au deuxième dé du défenseur. Chaque fois que le dé du défenseur est supérieur ou égal à celui de l'attaquant, l'attaquant perd un régiment; dans le cas contraire, c'est le défenseur qui en perd un.
+::: {.callout}
+L'attaquant jette un à trois dés suivant le nombre de régiments qu'il désire engager (avec un maximum de trois régiments engagés, et en considérant qu'un régiment au moins doit rester libre d'engagements sur le territoire attaquant) et le défenseur deux dés (un s'il n'a plus qu'un régiment). On compare le dé le plus fort de l'attaquant au dé le plus fort du défenseur et le deuxième dé le plus fort de l'attaquant au deuxième dé du défenseur. Chaque fois que le dé du défenseur est supérieur ou égal à celui de l'attaquant, l'attaquant perd un régiment; dans le cas contraire, c'est le défenseur qui en perd un.
+:::
 
 Alors, nous proposon les étapes (les interactions entre les acteurs et le système) pour ce scénario:
 

@@ -138,7 +138,9 @@ Mais qu'est-ce que la complexité? La @fig-complexity est une image de la compl
 
 Voici une définition de la complexité:
 
-> **Complexité**: Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.
+::: {.callout}
+**Complexité**: Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.
+:::
 
 ![["Complexity"](https://www.flickr.com/photos/lytfyre/6489338411/) [(CC BY-SA 2.0)](https://creativecommons.org/licenses/by-sa/2.0/) par [lytfyre](https://www.flickr.com/people/lytfyre/).](images/flickr_lytfyre_complexity.jpg){width=80% #fig-complexity}
 
@@ -238,12 +240,14 @@ Cette instabilité peut être particulièrement prononcée dans un contexte d'en
 
 Le développement itératif et incrémental amène plusieurs avantages selon @craig_uml_2005:
 
-> - diminution d'échecs, une amélioration de la productivité et de la qualité;
->  - une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.);
->  - des progrès immédiatement visibles;
->  - la rétroaction, l'implication des utilisateurs et l'adaptation précoces;
->  - la complexité est gérée (restreinte à une itération);
->  - la possibilité d'exploiter méthodiquement les leçons tirées d'une itération.
+::: {.callout}
+- diminution d'échecs, une amélioration de la productivité et de la qualité;
+- une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.);
+- des progrès immédiatement visibles;
+- la rétroaction, l'implication des utilisateurs et l'adaptation précoces;
+- la complexité est gérée (restreinte à une itération);
+- la possibilité d'exploiter méthodiquement les leçons tirées d'une itération.
+:::
 
 \filbreak
 
