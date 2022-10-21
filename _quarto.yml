@@ -72,7 +72,7 @@ format:
   pdf:
     # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: latexmk
-    template: partials/template.tex
+    # template: partials/template.tex
     colorlinks: true
     documentclass: scrbook
     toc: true
@@ -96,9 +96,10 @@ format:
 
 # filters must be run in the proper order here
 filters:
-  - filters/pandoc-quotes.lua
+  - filters/fr-nbsp.lua
   - filters/diagram-generator.lua
   - quarto
+  - filters/pandoc-quotes.lua
 
 #
 # Note: If JAVA_HOME, PLANTUML and DOT system variables are correctly set 
