@@ -11,20 +11,22 @@ En tant qu'ingénieur logiciel, vous devez décider souvent où placer une méth
 Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et des classes plus cohésives.
 Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.
 
-> \faHatCowboySide<i class="fa-solid fa-hat-cowboy-side"></i>\ Avez-vous déjà une bonne expérience en programmation?
+::: {.callout-tip appearance="minimal"}
+\faHatCowboySide<i class="fa-solid fa-hat-cowboy-side"></i>\ Avez-vous déjà une bonne expérience en programmation?
 Avez-vous l'habitude de coder rapidement des solutions qui fonctionnent?
 Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous.
 Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception et cela va vous ralentir au début (reflèxe du "hacking cowboy" peut-être?).
 Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui soit également facile à maintenir.
 C'est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes.
 Une fois que vous avez l'habitude à utiliser les GRASP, vous serez encore rapide avec votre développement, mais en plus votre design sera meilleur sur le plan de la maintenabilité et vous aurez plus de confiance dans vos choix.
+:::
 
 ## Spectre de la conception {#sec-SpectreDeLaConception}
 
 Neal Ford [-@Ford2009] a [proposé](https://www.ibm.com/developerworks/library/j-eaed1/index.html) la notion d'effort pour la conception qu'il a nommée le "Spectre de la conception".
 La @fig-SpectreConception illustre le principe.
 
-```{.plantuml #fig-SpectreConception  caption="Spectre de la conception, adapté de @Ford2009. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV)" }
+```{.plantuml width="80%" #fig-SpectreConception caption="Spectre de la conception, adapté de @Ford2009. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV)" }
 @startuml
 !include ecriture.pumlinclude
 scale 1.2
