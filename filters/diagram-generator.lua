@@ -161,7 +161,7 @@ local function convert_with_inkscape(filetype)
 
   if filetype == 'png' then
     local png_arg = isv1 and '--export-type=png' or '--export-png="%s"'
-    output_args = png_arg .. '--export-dpi=300'
+    output_args = png_arg .. ' --export-dpi=300'
   elseif filetype == 'svg' then
     output_args = isv1 and '--export-type=svg --export-plain-svg' or '--export-plain-svg="%s"'
   else
@@ -361,7 +361,7 @@ function CodeBlock(block)
   local title = #caption > 0 and "fig:" or ""
 
   -- Transfer identifier and other relevant attributes from the code
-  -- block to the image. Currently, only `name` is kept as an attribute.
+  -- block to the image. The `name` is kept as an attribute.
   -- This allows a figure block starting with:
   --
   --     ```{#fig:example .plantuml caption="Image created by **PlantUML**."}
@@ -370,7 +370,9 @@ function CodeBlock(block)
   -- with `pandoc-crossref`.
   local img_attr = {
     id = block.identifier,
-    name = block.attributes.name
+    name = block.attributes.name,
+    width = block.attributes.width,
+    height = block.attributes.height
   }
 
   -- Create a new image for the document's structure. Attach the user's
