@@ -242,9 +242,9 @@ $endif$
 $pandoc.tex()$
 $if(lang)$
 \ifLuaTeX
-\usepackage[bidi=basic,french]{babel}
+\usepackage[french,bidi=basic]{babel}
 \else
-\usepackage[bidi=default,french]{babel}
+\usepackage[french,bidi=default]{babel}
 \fi
 $if(babel-lang)$
 \babelprovide[main,import]{$babel-lang$}
@@ -253,8 +253,8 @@ $for(babel-otherlangs)$
 \babelprovide[import]{$babel-otherlangs$}
 $endfor$
 % get rid of language-specific shorthands (see #6817):
-% \let\LanguageShortHands\languageshorthands
-% \def\languageshorthands#1{}
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 $endif$
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
