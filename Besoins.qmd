@@ -15,11 +15,11 @@ Voici un exemple d'une exigence d'un système de messagerie instantanée (comme 
 Cette fonctionnalité a une utilité évidente -- la communication.
 Il s'agit d'une *exigence de fonctionnalité*.
 
-Si ces messages doivent être visibles à tous les utilisateurs dans le canal en moins de 0,5 secondes, alors il s'agit d'une exigence sur *la qualité de la performance* du système.
+Si ces messages doivent être visibles à tous les utilisateurs dans le canal en moins de 0,5 seconde, alors il s'agit d'une exigence sur *la qualité de la performance* du système.
 Lorsqu'il s'agit des qualités d'un système comme la performance, on peut les appeler *exigences non fonctionnelles*, car elles ne sont pas les fonctionnalités.
 Il y a beaucoup d'exemples d'exigences non fonctionnelles, par exemple sur [Wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement#Examples)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
 Le nom porte à la confusion, car une chose qui ne fonctionne pas est "non fonctionnelle".
-Pour cette raison, elle sont aussi appelées des exigences sur les qualités ou sur les contraintes.
+Pour cette raison, elles sont aussi appelées des exigences sur les qualités ou sur les contraintes.
 On peut aussi les appeler informellement les "ilités", car ces qualités sont souvent des aptitudes du système: la maintenabilité, la convivialité, la testabilité, etc.
 
 ![Ramasser les besoins non fonctionnels? "[Dog Clean Up](https://thenounproject.com/icon/dog-clean-up-21489/)" de [Luis Prado](https://thenounproject.com/Luis), utilisé selon [CC0](https://creativecommons.org/publicdomain/zero/1.0/)](images/Pick-up-after-dog-1540480672.svg){#fig-besoins width="60%"}
