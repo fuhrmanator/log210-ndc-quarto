@@ -86,9 +86,11 @@ Tout ce qui n'est pas converti en `false` (expliqué ci-dessus) est converti en 
 - `-20` 
 - etc.
 
-> N'oubliez pas que la valeur de `0` est "falsy" dans une condition. 
+::: {.callout-caution}
+N'oubliez pas que la valeur de `0` est "falsy" dans une condition. 
 C'est souvent un piège en JavaScript quand on considère les variables qui peuvent avoir une valeur numérique.
 Par exemple, si on fait `if (maVariable)` pour tester si une variable est définie, si la variable est définie et a sa valeur est `0`, la condition sera `false`.
+:::
 
 ## Évaluer les contributions des membres de l'équipe {#sec-ContributionsEquipe}
 
@@ -145,7 +147,9 @@ Un des objectifs du bilan est d'essayer d'expliquer les gros écarts et de corri
 Par exemple, on peut voir à la @fig-GitinspectorOutput que les deux coéquipiers Anne et Justin ont fait une contribution beaucoup plus importante que les autres coéquipiers Francis et Mélanie. 
 Dans le bilan de l'itération, **on doit indiquer explicitement ce fait, même avec des pourcentages**. 
 
-> Une phrase vague comme "certains ont travaillé plus que d'autres" est une formulation diplomatique, mais elle n'est pas assez explicite et n'est pas une résolution proactive du problème le cas échéant.
+::: {.callout-important}
+Une phrase vague comme "certains ont travaillé plus que d'autres" est une formulation diplomatique, mais elle n'est pas assez explicite et n'est pas une résolution proactive du problème le cas échéant.
+:::
 
 ### Proposer des solutions si besoin {#sec-solution_problemes_equipes}
 

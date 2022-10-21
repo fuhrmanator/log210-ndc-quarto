@@ -97,8 +97,10 @@ La @fig-dssdetails est à titre d'information seulement. Un  DSS ne rentre pas d
 
 ### Faut-il une opération système après une boucle?
 
-> Dans l'exemple pour *Attaquer un pays*, à l'extérieur de la boucle il y a une opération système `terminerAttaque`.
-> Est-ce obligatoire d'avoir une opération système après une boucle?
+::: {.callout}
+Dans l'exemple pour *Attaquer un pays*, à l'extérieur de la boucle il y a une opération système `terminerAttaque`.
+Est-ce obligatoire d'avoir une opération système après une boucle?
+:::
 
 L'opération système `terminerAttaque` sert pour signaler la fin de la boucle.
 Le système saura que l'acteur ne veut plus répéter les actions dans la boucle.
@@ -108,7 +110,9 @@ Cependant, si vous avez une boucle pour indiquer la possibilité de répéter un
 
 ### Comment faire si un cas d'utilisation a des *scénarios alternatifs*?
 
-> Fait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs `opt` et `alt`) pour montrer des flots différents dans le même DSS?
+::: {.callout}
+Fait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs `opt` et `alt`) pour montrer des flots différents dans le même DSS?
+:::
 
 Un objectif de faire un DSS est de **définir les opérations système**.
 Donc, on peut se poser la question suivante: les scénarios alternatifs impliquent-ils une ou plusieurs opérations système n'ayant pas encore été définies?
@@ -121,7 +125,9 @@ Utilisez un autre DSS (ou plusieurs) ayant le nom des scénarios alternatifs si 
 
 ### Est-ce normal d'avoir une opération système avec beaucoup d'arguments (de type primitif)?
 
-> Puisqu'une opération système doit avoir seulement des arguments de type primitif, j'ai plusieurs opérations système avec de nombreux (plus que 5) arguments. Pourquoi il n'est pas permis de passer des objets comme argument?
+::: {.callout}
+Puisqu'une opération système doit avoir seulement des arguments de type primitif, j'ai plusieurs opérations système avec de nombreux (plus que 5) arguments. Pourquoi il n'est pas permis de passer des objets comme argument?
+:::
 
 Il n'est pas conseillé de passer des *objets du domaine* comme argument, puisque c'est la couche présentation qui invoque l'opération système.
 La couche présentation n'est pas censée manipuler directement les objets dans la couche domaine, sinon elle empiète sur les responsabilités de la couche domaine.
@@ -146,8 +152,10 @@ compteARebours({ initial: 20, increment: 2, final: 4 });
 
 ### Ne serait-il pas plus simple de passer l'objet `body` de la page web au contrôleur GRASP?
 
-> Décortiquer toutes les informations dans un formulaire web est compliqué, puis on doit passer tout ça à un contrôleur GRASP comme des arguments de type primitif.
+::: {.callout}
+Décortiquer toutes les informations dans un formulaire web est compliqué, puis on doit passer tout ça à un contrôleur GRASP comme des arguments de type primitif.
 Ne serait-il pas plus simple de passer l'objet `body` de la page web au contrôleur GRASP et le laisser faire le décorticage?
+:::
 
 Dans un sens ça serait plus simple (pour le code de la couche présentation).
 Cependant, nous voulons séparer les couches pour favoriser le remplacement de la couche présentation, par exemple à travers une application iOS ou Android.

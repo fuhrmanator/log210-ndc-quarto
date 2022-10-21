@@ -2,7 +2,9 @@
 
 Ce chapitre contient des informations sur les diagrammes d'activités en UML. Les détails se trouvent dans le chapitre F25/A28\ \faBook<i class="fa-solid fa-book"></i>.
 
-> Les diagrammes d'activités servent à modéliser des processus d'affaires (de métier), des enchaînements d'activités (workflows), des flots de données et des algorithmes complexes.
+::: {.callout}
+Les diagrammes d'activités servent à modéliser des processus d'affaires (de métier), des enchaînements d'activités (workflows), des flots de données et des algorithmes complexes.
+:::
 
 Voici les éléments importants:
 

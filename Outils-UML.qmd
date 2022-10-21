@@ -7,8 +7,10 @@ Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.
 
 ![Office Lens peut détecter le cadre d'un dessin sur un tableau blanc ou papier et le transformer.](images/OfficeLensWhiteBoard.jpg){width="200px"}
 
-> Tous les travaux demandés pour les **examens** (de LOG210 à l'École de technologie supérieure) doivent être faits *à la main*.
+::: {.callout-caution}
+Tous les travaux demandés pour les **examens** (de LOG210 à l'École de technologie supérieure) doivent être faits *à la main*.
 Pour cette raison, il vaut mieux pratiquer dessiner les modèles en mode esquisse (à la main).
+:::
 
 Dans la méthodologie de ce manuel, on exploite l'outil PlantUML pour faire beaucoup de modèles. C'est un outil qui a plusieurs avantages:
 

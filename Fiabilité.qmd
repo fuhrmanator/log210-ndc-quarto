@@ -19,11 +19,11 @@ Voici les points importants:
   Dans ce cas, il faut bien gérer les exceptions.
   - Utilisation de *Procuration (Proxy) de redirection \[GoF\]* pour basculer sur un service local en cas de panne (écriture d'information), A35.4/F30.4\ \faBook<i class="fa-solid fa-book"></i>
 
-> Faire une conception pour la fiabilité nécessite de l'expérience (ou l'utilisation des patterns). Un bon livre est celui de R. Hanmer [@hanmer_patterns_2007].
+::: {.callout-important}
+Faire une conception pour la fiabilité nécessite de l'expérience (ou l'utilisation des patterns). Un bon livre est celui de @hanmer_patterns_2007.
 
-
-> L'utilisation de services dans le nuage (infonuagique) amène une redondance de serveurs. 
-> Cependant, même un service web a besoin de [redondance dans les zones géographiques](https://aws.amazon.com/about-aws/global-infrastructure/), car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourrait affecter toute une grappe de serveurs.
-
+L'utilisation de services dans le nuage (infonuagique) amène une redondance de serveurs. 
+Cependant, même un service web a besoin de [redondance dans les zones géographiques](https://aws.amazon.com/about-aws/global-infrastructure/), car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourrait affecter toute une grappe de serveurs.
+:::
 
 

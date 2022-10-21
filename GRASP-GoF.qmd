@@ -53,15 +53,23 @@ Référez-vous à la @fig-Fig23_1 du pattern Adaptateur pour les sections suivan
 
 ### Polymorphisme
 
-> **Problème:** Qui est responsable quand le comportement varie selon le type?  
-> **Solution:** Lorsqu'un comportement varie selon le type (classe), affectez la responsabilité de ce comportement -- avec des opérations polymorphes -- aux types pour lesquels le comportement varie.
+Selon @craig_uml_2005:
+
+::: {.callout}
+**Problème:** Qui est responsable quand le comportement varie selon le type?  
+**Solution:** Lorsqu'un comportement varie selon le type (classe), affectez la responsabilité de ce comportement -- avec des opérations polymorphes -- aux types pour lesquels le comportement varie.
+:::
 
 Le "comportement qui varie" est la manière d'adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode `getTaxes()`. Alors, cette "responsabilité" est affectée au type interface `IAdaptateurCalculTaxes` (et ces implémentations) dans l'opération polymorphe `getTaxes()`.
 
 ### Fabrication pure
 
-> **Problème:** En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte cohésion?  
-> **Solution:** Affectez un ensemble très cohésif de responsabilités à une classe "comportementale" artificielle qui ne représente pas un concept du domaine - une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.
+Selon @craig_uml_2005:
+
+::: {.callout}
+**Problème:** En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte cohésion?  
+**Solution:** Affectez un ensemble très cohésif de responsabilités à une classe "comportementale" artificielle qui ne représente pas un concept du domaine - une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.
+:::
 
 La Fabrication pure est la classe "comportementale et artificielle" qui est la hiérarchie `IAdaptateurCalculTaxes` (comprenant chaque adaptateur concret). 
 Elle est comportementale puisqu'elle ne fait qu'adapter des appels. 
@@ -78,15 +86,23 @@ Il suffit de créer un adaptateur pour ce dernier.
 
 ### Indirection
 
-> **Problème:** Comment affecter les responsabilités pour éviter le couplage direct?  
-> **Solution:** Pour éviter le couplage direct, affectez la responsabilité à un objet qui sert d'intermédiaire avec les autres composants ou services.
+Selon @craig_uml_2005:
+
+::: {.callout}
+**Problème:** Comment affecter les responsabilités pour éviter le couplage direct?  
+**Solution:** Pour éviter le couplage direct, affectez la responsabilité à un objet qui sert d'intermédiaire avec les autres composants ou services.
+:::
 
 Le "couplage direct" qui est évité est le couplage entre la classe Vente et les calculateurs de taxes externes. Le pattern Adaptateur (général) cherche à découpler le Client des classes nommées Adaptee, car chaque Adaptee a une API différente pour le même genre de "service". Alors, la responsabilité de s'adapter aux services différents est affectée à la hiérarchie de "classes intermédiaires", soit l'interface type IAdaptateurCalculTaxes et ses implémentations.
 
 ### Protection des variations
 
-> **Problème:** Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l'instabilité de ces éléments n'aient pas d'impact négatif sur les autres?  
-> **Solution:** Identifiez les points de variation ou d'instabilité prévisibles et affectez les responsabilités afin de créer une "interface" stable autour d'eux.
+Selon @craig_uml_2005:
+
+::: {.callout}
+**Problème:** Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l'instabilité de ces éléments n'aient pas d'impact négatif sur les autres?  
+**Solution:** Identifiez les points de variation ou d'instabilité prévisibles et affectez les responsabilités afin de créer une "interface" stable autour d'eux.
+:::
 
 Les "variations ou l'instabilité" sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs du projet (ce sont des modules externes ayant chacun une API différente). Quant à "l'impact négatif sur les autres", il s'agit des modifications que les développeurs auraient à faire sur la classe Vente chaque fois que l'on décide de supporter un autre calculateur de taxes (ou si l'API de ce dernier évolue). 
 

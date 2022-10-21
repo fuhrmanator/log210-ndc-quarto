@@ -87,7 +87,9 @@ Certaines postconditions concernent la création d'une instance.
 Dans votre RDCU, vous devez respecter le GRASP Créateur.
 Référez-vous à la définition dans le \nameref{tab_GRASPCreateur}.
 
-> Une erreur potentielle est de donner la responsabilité de créer à un contrôleur, puisqu'*il a les données pour initialiser* l'objet. Bien que ce soit justifiable par le principe GRASP Créateur, il vaut mieux favoriser une classe qui *agrège* l'objet à créer, le cas échéant.
+::: {.callout-caution}
+Une erreur potentielle est de donner la responsabilité de créer à un contrôleur, puisqu'*il a les données pour initialiser* l'objet. Bien que ce soit justifiable par le principe GRASP Créateur, il vaut mieux favoriser une classe qui *agrège* l'objet à créer, le cas échéant.
+:::
 
 ### Former une association
 
@@ -266,7 +268,8 @@ Le principe du [Décalage des représentations](#sec-DecalageRepresentations) es
 Lorsqu'on fait l'ébauche d'une RDCU, on peut réduire le décalage des représentations principalement en s'inspirant des classes conceptuelles (du modèle du domaine) pour proposer des classes logicielles dans la solution décrite dans la RDCU.
 Plus une solution ressemble à la description du problème, plus elle sera facile à comprendre.
 
-> Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n'ayant aucun lien avec le modèle du domaine.
+::: {.callout-caution}
+Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n'ayant aucun lien avec le modèle du domaine.
 Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine.
 Il faut vérifier avec une personne expérimentée (l'architecte du projet si possible) que l'application du pattern est justifiée, qu'elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées.
 Chaque fois qu'on propose des classes logicielles qui n'ont pas de liens avec la représentation du problème du domaine, on *augmente le décalage des représentations* et on rend la solution un peu plus difficile à comprendre.
@@ -274,11 +277,14 @@ C'est aussi une forme de [Complexité circonstancielle (provenant des choix de c
 Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels.
 Il est très difficile, même pour les experts en conception, de trouver un bon équilibre entre toutes les forces: la maintenabilité, la simplicité, les fonctionnalités, etc.
 Vous pouvez en lire plus dans [cette réponse sur StackOverflow](https://stackoverflow.com/a/18702842/1168342)\ \faStackOverflow<i class="fa-brands fa-stack-overflow"></i>.
+:::
 
 ## Pattern "Faire soi-même" {#sec-FaireSoiMeme}
 
 Dans la section F30.8/A33.7\ \faBook<i class="fa-solid fa-book"></i>, Larman mentionne le pattern "Faire soi-même" de Peter Coad [-@coad97a] qui permet de réduire le [Décalage des représentations](#sec-DecalageRepresentations), même s'il ne représente pas exactement la réalité des objets (voir la @fig-main_des):
 
-> **Faire soi-même**: "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction"
+::: {.callout}
+**Faire soi-même**: "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction"
+:::
 
 ![Dans la vraie vie, les dés sont lancés par une main (["Hand of chance"](https://www.flickr.com/photos/aerust/9590772048/) [(CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/) par [Alexandra E Rust](https://www.flickr.com/people/aerust/)).](images/flickr_aerust_hand_of_chance.jpg){width=80% #fig-main_des}
