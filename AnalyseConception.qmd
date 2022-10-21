@@ -234,6 +234,8 @@ Avec la rétroaction du client et l'adaptation, le système à développer conve
 Cette instabilité peut être particulièrement prononcée dans un contexte d'entreprise en démarrage.
 - Dans une itération, la modélisation (par exemple, avec l'UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n'est pas triviale (voir la @fig-AnalyseConceptionDansLesIterations). Selon le contexte du projet (voir le [Spectre de la conception](#sec-SpectreDeLaConception)), on peut décider de ne pas faire de la modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l'on appelle la [dette technique](#sec-DetteTechnique).
 
+\filbreak
+
 Le développement itératif et incrémental amène plusieurs avantages selon @craig_uml_2005:
 
 > - diminution d'échecs, une amélioration de la productivité et de la qualité;
@@ -243,11 +245,13 @@ Le développement itératif et incrémental amène plusieurs avantages selon @cr
 >  - la complexité est gérée (restreinte à une itération);
 >  - la possibilité d'exploiter méthodiquement les leçons tirées d'une itération.
 
-![Le développement itératif et incrémental (Figure 2.1 du livre).](images/A2.1.svg){#fig-DevIteratifIncremental}
+\filbreak
 
-![Rétroaction et adaptation itératives convergent vers le système souhaité (Figure 2.2 du livre).](images/F2.2.svg){#fig-StabiliteDansLesIterations}
+![Le développement itératif et incrémental [@craig_uml_2005, figure 2.1].](images/A2.1.svg){#fig-DevIteratifIncremental}
 
-![Analyse et conception évolutives, majoritairement effectuées dans les premières itérations (Figure 2.4 du livre).](images/F2.4.svg){#fig-AnalyseConceptionDansLesIterations}
+![Rétroaction et adaptation itératives convergent vers le système souhaité [@craig_uml_2005, figure 2.2].](images/F2.2.svg){#fig-StabiliteDansLesIterations}
+
+![Analyse et conception évolutives, majoritairement effectuées dans les premières itérations [@craig_uml_2005, figure 2.4].](images/F2.4.svg){#fig-AnalyseConceptionDansLesIterations}
 
 ![Processus itératif et évolutif.](images/iteratif-evolutif.png){#fig-IteratifEvolutif}
 
