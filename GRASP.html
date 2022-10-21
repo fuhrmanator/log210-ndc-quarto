@@ -260,11 +260,11 @@ div.csl-indent {
 
 <p>GRASP est un acronyme de l’expression anglaise «&nbsp;General Responsibility Assignment Software Patterns&nbsp;» c’est-à-dire les principes pour affecter les responsabilités logicielles dans les classes.</p>
 <p>Une approche GRASP devrait amener un design vers la modularité et la maintenabilité.</p>
-<p>L’acronyme d’une expression vulgarisée pourrait être POMM: «&nbsp;Principes pour déterminer Où Mettre une Méthode&nbsp;».</p>
+<p>L’acronyme d’une expression vulgarisée pourrait être <span style="white-space:nowrap">POMM :</span> «&nbsp;Principes pour déterminer Où Mettre une Méthode&nbsp;».</p>
 <p>En tant qu’ingénieur logiciel, vous devez décider souvent où placer une méthode (dans quelle classe) et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d’ingénierie favorisant la modularité.</p>
 <p>Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et des classes plus cohésives. Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.</p>
 <blockquote class="blockquote">
-<p><i class="fa-solid fa-hat-cowboy-side"></i>&nbsp;Avez-vous déjà une bonne expérience en programmation? Avez-vous l’habitude de coder rapidement des solutions qui fonctionnent? Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous. Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception et cela va vous ralentir au début (reflèxe du «&nbsp;hacking cowboy&nbsp;» peut-être?). Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui soit également facile à maintenir. C’est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes. Une fois que vous avez l’habitude à utiliser les GRASP, vous serez encore rapide avec votre développement, mais en plus votre design sera meilleur sur le plan de la maintenabilité et vous aurez plus de confiance dans vos choix.</p>
+<p><i class="fa-solid fa-hat-cowboy-side"></i>&nbsp;Avez-vous déjà une bonne expérience en <span style="white-space:nowrap">programmation ?</span> Avez-vous l’habitude de coder rapidement des solutions qui <span style="white-space:nowrap">fonctionnent ?</span> Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous. Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception et cela va vous ralentir au début (reflèxe du «&nbsp;hacking cowboy&nbsp;» peut-être?). Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui soit également facile à maintenir. C’est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes. Une fois que vous avez l’habitude à utiliser les GRASP, vous serez encore rapide avec votre développement, mais en plus votre design sera meilleur sur le plan de la maintenabilité et vous aurez plus de confiance dans vos choix.</p>
 </blockquote>
 <section id="sec-SpectreDeLaConception" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="sec-SpectreDeLaConception"><span class="header-section-number">6.1</span> Spectre de la conception</h2>
@@ -305,35 +305,35 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 </tr>
 <tr class="even">
 <td style="text-align: left;">Créateur<br><em>F16.10/A17.10</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Qui crée? (Notez que Fabrique Concrète est une solution de rechange courante.) Affectez à la classe B la responsabilité de créer une instance de la classe A si l’une des assertions suivantes est vraie:<br>&nbsp; 1. B contient A<br>&nbsp;2. B agrège A<br>&nbsp;3. B a les données pour initialiser A<br>&nbsp;4. B enregistre A<br>&nbsp;5. B utilise étroitement A <br></td>
+<td style="text-align: left;">Qui <span style="white-space:nowrap">crée ?</span> (Notez que Fabrique Concrète est une solution de rechange courante.) Affectez à la classe B la responsabilité de créer une instance de la classe A si l’une des assertions suivantes est <span style="white-space:nowrap">vraie :</span><br>&nbsp; 1. B contient A<br>&nbsp;2. B agrège A<br>&nbsp;3. B a les données pour initialiser A<br>&nbsp;4. B enregistre A<br>&nbsp;5. B utilise étroitement A <br></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Contrôleur<br><em>F16.13/A17.13</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Quel est le premier objet en dehors de la couche présentation qui reçoit et coordonne («&nbsp;contrôle&nbsp;») les opérations système? <br><br> Affectez une responsabilité à la classe qui correspond à l’une de ces définitions: <br>&nbsp;1. Elle représente le système global, un «&nbsp;objet racine&nbsp;», un équipement ou un sous-système (contrôleur de façade). <br>&nbsp;2. Elle représente un scénario de cas d’utilisation dans lequel l’opération système se produit (<em>contrôleur de session</em> ou contrôleur de cas d’utilisation). On la nomme GestionnaireX, où X est le nom du cas d’utilisation. <br></td>
+<td style="text-align: left;">Quel est le premier objet en dehors de la couche présentation qui reçoit et coordonne («&nbsp;contrôle&nbsp;») les opérations <span style="white-space:nowrap">système ?</span> <br><br> Affectez une responsabilité à la classe qui correspond à l’une de ces <span style="white-space:nowrap">définitions :</span> <br>&nbsp;1. Elle représente le système global, un «&nbsp;objet racine&nbsp;», un équipement ou un sous-système (contrôleur de façade). <br>&nbsp;2. Elle représente un scénario de cas d’utilisation dans lequel l’opération système se produit (<em>contrôleur de session</em> ou contrôleur de cas d’utilisation). On la nomme GestionnaireX, où X est le nom du cas d’utilisation. <br></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Faible Couplage <br>(évaluation) <br><em>F16.12/A17.12</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Comment minimiser les dépendances? <br><br> Affectez les responsabilités de sorte que le couplage (inutile) demeure faible. Employez ce principe pour évaluer les alternatives. <br></td>
+<td style="text-align: left;">Comment minimiser les <span style="white-space:nowrap">dépendances ?</span> <br><br> Affectez les responsabilités de sorte que le couplage (inutile) demeure faible. Employez ce principe pour évaluer les alternatives. <br></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Forte Cohésion<br>(évaluation)<br><em>F16.14/A17.14</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Comment conserver les objets cohésifs, compréhensibles, gérables et, en conséquence, obtenir un Faible Couplage? <br><br> Affectez les responsabilités de sorte que les classes demeurent cohésives. Employez ce principe pour évaluer les différentes solutions. <br></td>
+<td style="text-align: left;">Comment conserver les objets cohésifs, compréhensibles, gérables et, en conséquence, obtenir un Faible <span style="white-space:nowrap">Couplage ?</span> <br><br> Affectez les responsabilités de sorte que les classes demeurent cohésives. Employez ce principe pour évaluer les différentes solutions. <br></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Polymorphisme<br><em>F22.1/A25.1</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Qui est responsable quand le comportement varie selon le type? <br><br> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types pour lesquels le comportement varie. <br></td>
+<td style="text-align: left;">Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span> <br><br> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types pour lesquels le comportement varie. <br></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Fabrication Pure <br> <em>F22.2/A25.2</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte cohésion? <br><br> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine — une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation. <br></td>
+<td style="text-align: left;">En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte <span style="white-space:nowrap">cohésion ?</span> <br><br> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine — une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation. <br></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Indirection <br> <em>F22.3/A25.3</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Comment affecter les responsabilités pour éviter le couplage direct? <br><br> Affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services. <br></td>
+<td style="text-align: left;">Comment affecter les responsabilités pour éviter le couplage <span style="white-space:nowrap">direct ?</span> <br><br> Affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services. <br></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Protection des variations <br><em>F22.4/A25.4</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les autres? <br><br> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</td>
+<td style="text-align: left;">Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span> <br><br> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</td>
 </tr>
 </tbody>
 </table>

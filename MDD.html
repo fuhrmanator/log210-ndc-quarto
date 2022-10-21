@@ -245,7 +245,7 @@ div.csl-indent {
   <li><a href="#affinement-du-mdd" id="toc-affinement-du-mdd" class="nav-link" data-scroll-target="#affinement-du-mdd"><span class="toc-section-number">4.8</span>  Affinement du MDD</a></li>
   <li><a href="#faq-mdd" id="toc-faq-mdd" class="nav-link" data-scroll-target="#faq-mdd"><span class="toc-section-number">4.9</span>  FAQ MDD</a>
   <ul class="collapse">
-  <li><a href="#mddchaquecasutilisation" id="toc-mddchaquecasutilisation" class="nav-link" data-scroll-target="#mddchaquecasutilisation"><span class="toc-section-number">4.9.1</span>  Y a-t-il un MDD pour chaque cas d’utilisation?</a></li>
+  <li><a href="#mddchaquecasutilisation" id="toc-mddchaquecasutilisation" class="nav-link" data-scroll-target="#mddchaquecasutilisation"><span class="toc-section-number">4.9.1</span>  Y a-t-il un MDD pour chaque cas <span style="white-space:nowrap">d’utilisation ?</span></a></li>
   <li><a href="#mdd_donnees" id="toc-mdd_donnees" class="nav-link" data-scroll-target="#mdd_donnees"><span class="toc-section-number">4.9.2</span>  Un <strong>modèle du domaine</strong> est-il la même chose qu’un <strong>modèle de données</strong>?</a></li>
   </ul></li>
   </ul>
@@ -270,14 +270,14 @@ div.csl-indent {
 
 </header>
 
-<p>Les MDD sont expliqués en détail dans le chapitre 9&nbsp;<i class="fa-solid fa-book"></i>, mais voici des points importants:</p>
+<p>Les MDD sont expliqués en détail dans le chapitre 9&nbsp;<i class="fa-solid fa-book"></i>, mais voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li>Les classes conceptuelles ne sont pas des classes logicielles. Ainsi, selon la méthodologie de Larman, <em>elles n’ont pas de méthodes</em>.</li>
 <li>Les classes ont des noms commençant avec une lettre majuscule, par exemple <code>Joueur</code> et elles ne sont jamais au pluriel, par exemple <del><code>Joueurs</code></del>.</li>
 </ul>
 <section id="classes-conceptuelles" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="classes-conceptuelles"><span class="header-section-number">4.1</span> Classes conceptuelles</h2>
-<p>Il y a trois stratégies pour identifier les classes conceptuelles:</p>
+<p>Il y a trois stratégies pour identifier les classes <span style="white-space:nowrap">conceptuelles :</span></p>
 <ol type="1">
 <li>Réutiliser ou modifier des modèles existants.</li>
 <li>Utiliser une liste de catégories.</li>
@@ -307,23 +307,23 @@ div.csl-indent {
 <td style="text-align: left;"><em>LigneArticles</em>, <em>ExemplaireLivre</em>, <em>GroupeCours</em></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Produit ou service lié à une transaction ou une ligne de transaction</strong>: Pour quel concept sont faites des transactions?</td>
+<td style="text-align: left;"><strong>Produit ou service lié à une transaction ou une ligne de transaction</strong>: Pour quel concept sont faites des <span style="white-space:nowrap">transactions ?</span></td>
 <td style="text-align: left;"><em>Article</em>, <em>Vélo</em>, <em>Vol</em>, <em>Livre</em>, <em>Cours</em></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Où la transaction est-elle enregistrée?</strong></td>
+<td style="text-align: left;"><strong>Où la transaction est-elle <span style="white-space:nowrap">enregistrée ?</span></strong></td>
 <td style="text-align: left;"><em>Caisse</em>, <em>GrandLivre</em>, <em>ManifesteDeVol</em></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Rôle des personnes liées à la transaction</strong>: Qui sont les parties impliquées dans une transaction?</td>
+<td style="text-align: left;"><strong>Rôle des personnes liées à la transaction</strong>: Qui sont les parties impliquées dans une <span style="white-space:nowrap">transaction ?</span></td>
 <td style="text-align: left;"><em>Caissier</em>, <em>Client</em>, <em>JoueurDeMonopoly</em>, <em>Passager</em></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Organisations liées à la transaction</strong> : Quelles sont les organisations impliquées dans une transaction?</td>
+<td style="text-align: left;"><strong>Organisations liées à la transaction</strong> : Quelles sont les organisations impliquées dans une <span style="white-space:nowrap">transaction ?</span></td>
 <td style="text-align: left;"><em>Magasin</em>, <em>CompagnieAérienne</em>, <em>Bibliothèque</em>, <em>Université</em></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Lieu de la transaction; lieu du service</strong></td>
+<td style="text-align: left;"><strong>Lieu de la <span style="white-space:nowrap">transaction ;</span> lieu du service</strong></td>
 <td style="text-align: left;"><em>Magasin</em>, <em>Aéroport</em>, <em>Avion</em>, <em>Siège</em>, <em>LocalCours</em></td>
 </tr>
 <tr class="even">
@@ -373,14 +373,14 @@ div.csl-indent {
 <section id="attributs" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="attributs"><span class="header-section-number">4.2</span> Attributs</h2>
 <p>Les attributs sont le sujet de la section 9.16&nbsp;<i class="fa-solid fa-book"></i>. Comme c’est le cas pour les classes et les associations, on fait figurer les attributs <em>quand les cas d’utilisation suggèrent la nécessité de mémoriser des informations</em>.</p>
-<p>Pour l’UML, la syntaxe complète d’un attribut est&nbsp;:</p>
+<p>Pour l’UML, la syntaxe complète d’un attribut <span style="white-space:nowrap">est&nbsp; :</span></p>
 <p><strong>visibilité nom : type multiplicité = défaut {propriété}</strong></p>
-<p>Voici des points importants:</p>
+<p>Voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li><em>Le type d’un attribut est important et il faut les spécifier dans un MDD</em>, même si dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> il y a plusieurs exemples sans type.</li>
 <li>On ne se soucie pas de la visibilité des attributs dans un MDD.</li>
 <li>Faites attention à la confusion des attributs et des classes. Si on ne pense pas un concept <em>X</em> en termes alphanumériques dans le monde réel, alors il s’agit probablement d’une classe conceptuelle. Par exemple, dans le monde réel, une université n’est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12&nbsp;<i class="fa-solid fa-book"></i>.</li>
-<li>De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a> la classe <code>Pays</code> n’a pas un <em>attribut</em> <code>joueur:Joueur</code> (qui contrôle le Pays); elle a plutôt une <em>association</em> avec la classe <code>Joueur</code> et un verbe <code>contrôle</code>.</li>
+<li>De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a> la classe <code>Pays</code> n’a pas un <em>attribut</em> <code>joueur:Joueur</code> (qui contrôle le <span style="white-space:nowrap">Pays) ;</span> elle a plutôt une <em>association</em> avec la classe <code>Joueur</code> et un verbe <code>contrôle</code>.</li>
 </ul>
 <div class="callout-warning callout callout-style-simple">
 <div class="callout-body d-flex">
@@ -395,9 +395,9 @@ div.csl-indent {
 </section>
 <section id="associations" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="associations"><span class="header-section-number">4.3</span> Associations</h2>
-<p>Les associations dans le MDD sont le sujet de la section 9.14&nbsp;<i class="fa-solid fa-book"></i>. Il faut se référer au contenu du livre pour les détails. Une association est une relation entre des classes (ou des instances de classes). Elle indique une connexion significative ou intéressante. Voici des points importants:</p>
+<p>Les associations dans le MDD sont le sujet de la section 9.14&nbsp;<i class="fa-solid fa-book"></i>. Il faut se référer au contenu du livre pour les détails. Une association est une relation entre des classes (ou des instances de classes). Elle indique une connexion significative ou intéressante. Voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
-<li>Il est facile de trouver beaucoup d’associations, mais il faut se limiter à celles qui doivent être conservées un certain temps. Pensez à la <strong>mémorabilité</strong> d’une association dans le contexte du logiciel à développer. Par exemple, considérez les associations de la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>:
+<li>Il est facile de trouver beaucoup d’associations, mais il faut se limiter à celles qui doivent être conservées un certain temps. Pensez à la <strong>mémorabilité</strong> d’une association dans le contexte du logiciel à développer. Par exemple, considérez les associations de la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a><span style="white-space:nowrap"> :</span>
 <ul>
 <li>Il existe une association entre <code>Joueur</code> et <code>Pays</code>, car il est important de savoir quel joueur contrôle quel pays dans le jeu de Risk.</li>
 <li>Il n’y a pas d’association entre <code>JeuRisk</code> et <code>Attaque</code>, même si les attaques font partie du jeu. Il n’est pas essentiel de mémoriser l’historique de toutes les attaques réalisées dans le jeu.</li>
@@ -516,7 +516,7 @@ div.csl-indent {
 </section>
 <section id="classes-de-description-et-de-catalogues" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="classes-de-description-et-de-catalogues"><span class="header-section-number">4.6</span> Classes de «&nbsp;description&nbsp;» et de catalogues</h2>
-<p>Deux catégories de classes conceptuelles qui vont de pair sont les <em>descriptions d’entités</em> et les <em>catalogues</em> qui agrègent les descriptions. Elles sont expliquées en détail dans la section 9.13 <i class="fa-solid fa-book"></i>. Voici des conditions pour utiliser correctement une classe de description d’une autre classe «&nbsp;X&nbsp;»:</p>
+<p>Deux catégories de classes conceptuelles qui vont de pair sont les <em>descriptions d’entités</em> et les <em>catalogues</em> qui agrègent les descriptions. Elles sont expliquées en détail dans la section 9.13 <i class="fa-solid fa-book"></i>. Voici des conditions pour utiliser correctement une classe de description d’une autre classe «&nbsp;X&nbsp;»<span style="white-space:nowrap"> :</span></p>
 <ul>
 <li>Il faut disposer de la description d’un produit ou d’un service «&nbsp;X&nbsp;» indépendamment de l’existence actuelle des «&nbsp;X&nbsp;». Par exemple, il pourrait y avoir une rupture de stocke d’un Produit (aucune instance actuelle), mais on a besoin de connaître son prix. La classe DescriptionProduit permet d’avoir cette information, même s’il n’y a plus d’instances de Produit. Un autre exemple est un trimestre où un cours <em>LOG711</em> ne se donne pas (il n’y a pas de GroupeCours de LOG711 dans le trimestre actuel). Alors une classe Cours (qui joue le rôle de description) sert pour spécifier le nombre de crédits, les cours préalables, etc.</li>
 <li>La suppression d’instances de «&nbsp;X&nbsp;» entraîne la perte de l’information qui doit être mémorisée, mais a été incorrectement associée à l’entité en question.</li>
@@ -555,10 +555,10 @@ Avertissement
 <blockquote class="blockquote">
 <p>Une classe d’association permet de traiter une association comme une classe, et de la modéliser avec des attributs…</p>
 </blockquote>
-<p>Il pourrait être utile d’avoir une classe d’association dans un MDD si:</p>
+<p>Il pourrait être utile d’avoir une classe d’association dans un MDD <span style="white-space:nowrap">si :</span></p>
 <ul>
-<li>un attribut est lié à une association;</li>
-<li>la durée de vie des instances de la classe d’association dépend de l’association;</li>
+<li>un attribut est lié à une <span style="white-space:nowrap">association ;</span></li>
+<li>la durée de vie des instances de la classe d’association dépend de <span style="white-space:nowrap">l’association ;</span></li>
 <li>il y a une association <em>N</em>-<em>N</em> entre deux concepts et des informations liées a l’association elle-même.</li>
 </ul>
 <p>Dans l’exemple à la <a href="#fig-MDD-classe-association">figure&nbsp;<span>4.5</span></a>, voici pourquoi il y a une classe d’association Occupation. Lorsqu’un Joueur contrôle un Pays, il doit y avoir des armées dans ce dernier. Le MDD pourrait avoir un attribut <code>nbRégiments</code> dans la classe Pays. Cependant, l’attribut <code>nbRégiments</code> est lié à l’association entre le Joueur et le Pays qu’il contrôle, alors on décide d’utiliser une classe d’association.</p>
@@ -574,16 +574,16 @@ Avertissement
 <section id="affinement-du-mdd" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="affinement-du-mdd"><span class="header-section-number">4.8</span> Affinement du MDD</h2>
 <p>Lorsqu’on modélise un domaine, il est normal de commencer avec un modèle simple (à partir d’un ou deux cas d’utilisation) et ensuite on l’affine dans les itérations suivantes, où on y intègre d’autres éléments plus subtils ou complexes du problème qu’on étudie. Les détails de cette approche sont présentés dans le chapitre F26/A32&nbsp;<i class="fa-solid fa-book"></i>. Bien que la matière soit présentée plus tard dans le livre, ce sont des choses à savoir pour la modélisation d’un domaine, même dans une première itération.</p>
-<p>Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus haut:</p>
+<p>Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus <span style="white-space:nowrap">haut :</span></p>
 <ul>
-<li>Composition, par exemple, la classe Continent qui groupe les Pays dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>. Larman propose d’utiliser la composition lorsque:
+<li>Composition, par exemple, la classe Continent qui groupe les Pays dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>. Larman propose d’utiliser la composition <span style="white-space:nowrap">lorsque :</span>
 <ul>
 <li>la durée de vie du composant est limitée à celle du composite (lorsqu’un objet Continent est instancié ça doit grouper des instances de Pays pour être cohérent), il existe une dépendance création-suppression de la partie avec le tout (ça ne fait pas de sens de supprimer un objet Pays d’une instance de Continent dans le jeu de Risk).</li>
 <li>il existe un assemblage logique ou physique évident entre le tout est les parties (on ne peut construire un Continent sans les Pays).</li>
 <li>certaines propriétés du composite, comme son emplacement, s’étendent aux composants.</li>
 <li>les opérations que l’on peut appliquer au composite, telles que destruction, déplacement et enregistrement, se propagent aux composants.</li>
 </ul></li>
-<li>Généralisation/spécialisation, voir le livre pour les exemples et les directives, notamment la règle des 100% (conformité à la définition) et la règle «&nbsp;est-un&nbsp;» (appartenance à l’ensemble).</li>
+<li>Généralisation/spécialisation, voir le livre pour les exemples et les directives, notamment la règle des <span style="white-space:nowrap">100 %</span> (conformité à la définition) et la règle «&nbsp;est-un&nbsp;» (appartenance à l’ensemble).</li>
 <li>Attribut dérivé, par exemple, <code>/nbPaysOccupés</code> dans la classe Joueur est un attribut dérivé de l’association entre Joueur et Pays (<a href="#fig-MDD-attribut-derive">figure&nbsp;<span>4.2</span></a>).</li>
 <li>Hiérarchies dans un MDD et héritage dans l’implémentation</li>
 <li>Noms de rôles</li>
@@ -593,7 +593,7 @@ Avertissement
 <section id="faq-mdd" class="level2" data-number="4.9">
 <h2 data-number="4.9" class="anchored" data-anchor-id="faq-mdd"><span class="header-section-number">4.9</span> FAQ MDD</h2>
 <section id="mddchaquecasutilisation" class="level3" data-number="4.9.1">
-<h3 data-number="4.9.1" class="anchored" data-anchor-id="mddchaquecasutilisation"><span class="header-section-number">4.9.1</span> Y a-t-il un MDD pour chaque cas d’utilisation?</h3>
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="mddchaquecasutilisation"><span class="header-section-number">4.9.1</span> Y a-t-il un MDD pour chaque cas <span style="white-space:nowrap">d’utilisation ?</span></h3>
 <p>Selon la méthodologie de ce manuel, bien qu’une application ait souvent plusieurs fonctionnalités (cas d’utilisation), il n’y a qu’un seul MDD.</p>
 <p>Cela dit, le MDD est comme un fichier de code source, puisque sa <em>version</em> peut évoluer avec le projet. Le MDD évoluera normalement après chaque itération, car on fait une nouvelle analyse pour les nouvelles fonctionnalités visées dans l’itération. Au début du projet, le MDD est plus simple, puisqu’il porte sur seulement les cas d’utilisation ciblés à la première itération. Le MDD devient plus riche au fur et à mesure qu’on avance dans les itérations, parce qu’il modélise davantage de concepts reliés aux problèmes traités par les nouvelles fonctionnalités à réaliser.</p>
 <p>Par exemple, la version initiale du MDD (chapitre 9&nbsp;<i class="fa-solid fa-book"></i>) ne traite pas la fonctionnalité de paiement par carte de crédit. Les classes conceptuelles modélisant la problématique de paiements par carte de crédit sont absentes dans le MDD initial. Plus tard (après plusieurs itérations, dans le chapitre sur le raffinement du MDD), on voit un MDD beaucoup plus riche qui reflète la modélisation des concepts reliés à des fonctionnalités comme les paiements par carte de crédit, les demandes d’autorisation de paiement, etc.</p>
@@ -604,7 +604,7 @@ Avertissement
 <blockquote class="blockquote">
 <p><em>Un <strong>modèle du domaine</strong> n’est pas un <strong>modèle de données</strong> (qui représente par définition des objets persistants stockés quelque part).</em></p>
 </blockquote>
-<p>Il peut y avoir des concepts dans un domaine qui ne sont pas dans la base de données. Considérez l’exemple de la carte de crédit utilisée pour payer mais qui n’est jamais stockée pour les raisons de sécurité. Avec seulement un modèle de données, cette classe conceptuelle ne serait jamais modélisée. Larman précise:</p>
+<p>Il peut y avoir des concepts dans un domaine qui ne sont pas dans la base de données. Considérez l’exemple de la carte de crédit utilisée pour payer mais qui n’est jamais stockée pour les raisons de sécurité. Avec seulement un modèle de données, cette classe conceptuelle ne serait jamais modélisée. Larman <span style="white-space:nowrap">précise :</span></p>
 <blockquote class="blockquote">
 <p><em>N’excluez donc pas une classe simplement parce que les spécifications n’indiquent pas un besoin évident de mémoriser les informations la concernant (un critère courant pour la modélisation des données quand on conçoit des bases de données relationnelles mais qui n’a pas cours en modélisation d’un domaine), ou parce que la classe conceptuelle ne possède pas d’attributs. Il est légal d’avoir une classe conceptuelle sans attribut, ou une classe conceptuelle qui joue un rôle exclusivement comportementale dans le domaine.</em></p>
 </blockquote>

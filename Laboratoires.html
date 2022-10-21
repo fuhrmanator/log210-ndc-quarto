@@ -296,7 +296,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#javascripttypescript" id="toc-javascripttypescript" class="nav-link active" data-scroll-target="#javascripttypescript"><span class="toc-section-number">20.1</span>  JavaScript/TypeScript</a></li>
-  <li><a href="#javascript-truthy-et-falsy-conversion-en-valeur-booléenne" id="toc-javascript-truthy-et-falsy-conversion-en-valeur-booléenne" class="nav-link" data-scroll-target="#javascript-truthy-et-falsy-conversion-en-valeur-booléenne"><span class="toc-section-number">20.2</span>  JavaScript: Truthy et Falsy (conversion en valeur booléenne)</a>
+  <li><a href="#javascript-truthy-et-falsy-conversion-en-valeur-booléenne" id="toc-javascript-truthy-et-falsy-conversion-en-valeur-booléenne" class="nav-link" data-scroll-target="#javascript-truthy-et-falsy-conversion-en-valeur-booléenne"><span class="toc-section-number">20.2</span>  <span style="white-space:nowrap">JavaScript :</span> Truthy et Falsy (conversion en valeur booléenne)</a>
   <ul class="collapse">
   <li><a href="#falsy" id="toc-falsy" class="nav-link" data-scroll-target="#falsy"><span class="toc-section-number">20.2.1</span>  Falsy</a></li>
   <li><a href="#truthy" id="toc-truthy" class="nav-link" data-scroll-target="#truthy"><span class="toc-section-number">20.2.2</span>  Truthy</a></li>
@@ -332,12 +332,12 @@ div.csl-indent {
 <p>Ce chapitre contient des informations sur le volet technique des laboratoires.</p>
 <section id="javascripttypescript" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="javascripttypescript"><span class="header-section-number">20.1</span> JavaScript/TypeScript</h2>
-<p>Pour la personne ayant déjà des connaissances Java (de LOG121), il est recommandé d’apprendre les choses dans cet ordre:</p>
+<p>Pour la personne ayant déjà des connaissances Java (de LOG121), il est recommandé d’apprendre les choses dans cet <span style="white-space:nowrap">ordre :</span></p>
 <ul>
 <li><strong>JavaScript</strong> - un tutoriel intéressant (et libre) est sur <a href="https://fr.javascript.info/">fr.javascript.info</a>. Je vous recommande de contribuer à des <a href="https://github.com/javascript-tutorial/fr.javascript.info#readme">traductions en français sur GitHub</a>.</li>
 <li><strong>TypeScript</strong> - <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html">ce tutoriel</a> est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C#.</li>
 </ul>
-<p>Voici des points importants pour le projet de laboratoire, organisés pour quelqu’un ayant déjà des connaissances en Java:</p>
+<p>Voici des points importants pour le projet de laboratoire, organisés pour quelqu’un ayant déjà des connaissances en <span style="white-space:nowrap">Java :</span></p>
 <ul>
 <li>TypeScript se traduit («&nbsp;emit&nbsp;») en JavaScript, alors il faut comprendre le moteur d’exécution JavaScript.</li>
 <li>Pour convertir une chaîne en nombre, pour lire ou écrire un fichier sur disque, etc., on utilise des opérations en JavaScript.</li>
@@ -358,8 +358,8 @@ div.csl-indent {
 <p>Il y a un <a href="https://github.com/profcfuhrmanets/exemples-ts">dépôt d’exemples avec TypeScript (utilisant <code>ts-node</code> pour les voir facilement)</a> sur GitHub. Il y a un exemple qui montre comment faire des REST à partir de TypeScript avec le système SGB.</p>
 </section>
 <section id="javascript-truthy-et-falsy-conversion-en-valeur-booléenne" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="javascript-truthy-et-falsy-conversion-en-valeur-booléenne"><span class="header-section-number">20.2</span> JavaScript: Truthy et Falsy (conversion en valeur booléenne)</h2>
-<p>JavaScript offre un mécanisme simple pour vérifier des valeurs dans une expression <code>if</code>. Imaginez l’exemple suivant:</p>
+<h2 data-number="20.2" class="anchored" data-anchor-id="javascript-truthy-et-falsy-conversion-en-valeur-booléenne"><span class="header-section-number">20.2</span> <span style="white-space:nowrap">JavaScript :</span> Truthy et Falsy (conversion en valeur booléenne)</h2>
+<p>JavaScript offre un mécanisme simple pour vérifier des valeurs dans une expression <code>if</code>. Imaginez l’exemple <span style="white-space:nowrap">suivant :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> maVariable<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">// d'autres instructions...</span></span>
@@ -378,7 +378,7 @@ div.csl-indent {
 <p>Il faut comprendre la règle de conversion en valeur booléenne selon «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;». En fait, il est plus simple de commencer par les valeurs se traduisant en <code>false</code> («&nbsp;falsy&nbsp;»), car tout ce qui ne l’est pas est donc <code>true</code> («&nbsp;truthy&nbsp;»).</p>
 <section id="falsy" class="level3" data-number="20.2.1">
 <h3 data-number="20.2.1" class="anchored" data-anchor-id="falsy"><span class="header-section-number">20.2.1</span> Falsy</h3>
-<p>Les valeurs suivantes se convertissent en <code>false</code> dans une condition:</p>
+<p>Les valeurs suivantes se convertissent en <code>false</code> dans une <span style="white-space:nowrap">condition :</span></p>
 <ul>
 <li><code>false</code></li>
 <li><code>null</code></li>
@@ -390,7 +390,7 @@ div.csl-indent {
 </section>
 <section id="truthy" class="level3" data-number="20.2.2">
 <h3 data-number="20.2.2" class="anchored" data-anchor-id="truthy"><span class="header-section-number">20.2.2</span> Truthy</h3>
-<p>Tout ce qui n’est pas converti en <code>false</code> (expliqué ci-dessus) est converti en <code>true</code>. En voici quelques exemples:</p>
+<p>Tout ce qui n’est pas converti en <code>false</code> (expliqué ci-dessus) est converti en <code>true</code>. En voici quelques <span style="white-space:nowrap">exemples :</span></p>
 <ul>
 <li><code>{}</code> (objet vide)</li>
 <li><code>[]</code> (tableau vide)</li>
@@ -405,7 +405,7 @@ div.csl-indent {
 <section id="sec-ContributionsEquipe" class="level2" data-number="20.3">
 <h2 data-number="20.3" class="anchored" data-anchor-id="sec-ContributionsEquipe"><span class="header-section-number">20.3</span> Évaluer les contributions des membres de l’équipe</h2>
 <p>Il existe un outil nommé <code>gitinspector</code> qui peut indiquer le niveau d’implication des membres de l’équipe dans un projet sur GitHub. Étant donné que les laboratoires de ce manuel utilise un squelette avec les tests, les fichiers <code>src</code> de TypeScript, les modèles PlantUML et le README.md, il est possible d’utiliser <code>gitinspector</code> pour voir des rapports de contribution sur chacun des volets.</p>
-<p>Pour faciliter l’utilisation de l’outil, le professeur Fuhrman a créé un <a href="https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853">script en bash</a>. Voici comment l’utiliser:</p>
+<p>Pour faciliter l’utilisation de l’outil, le professeur Fuhrman a créé un <a href="https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853">script en bash</a>. Voici comment <span style="white-space:nowrap">l’utiliser :</span></p>
 <ul>
 <li>Installer <code>gitinspector</code> dans npm avec la commande <code>npm install -g gitinspector</code></li>
 <li>Télécharger le script</li>
@@ -430,7 +430,7 @@ ContributionsÉquipeModèles.html
 ContributionsÉquipeDocs.html
 ContributionsÉquipeTypeScript.html
 ContributionsÉquipeViews.html</code></pre>
-<p>Les fichiers <code>.html</code> sont créés pour les contributions <code>Test</code>, <code>Modèles</code>, <code>Docs</code>, <code>TypeScript</code> et <code>Views</code>. Chaque rapport indique les contributions selon deux perspectives:</p>
+<p>Les fichiers <code>.html</code> sont créés pour les contributions <code>Test</code>, <code>Modèles</code>, <code>Docs</code>, <code>TypeScript</code> et <code>Views</code>. Chaque rapport indique les contributions selon deux <span style="white-space:nowrap">perspectives :</span></p>
 <ol type="1">
 <li>Le nombre de soumissions par auteur (activité git)</li>
 <li>Le nombre de lignes par auteur encore présentes et intactes dans la version HEAD</li>
@@ -452,47 +452,47 @@ ContributionsÉquipeViews.html</code></pre>
 </section>
 <section id="sec-solution_problemes_equipes" class="level3" data-number="20.3.2">
 <h3 data-number="20.3.2" class="anchored" data-anchor-id="sec-solution_problemes_equipes"><span class="header-section-number">20.3.2</span> Proposer des solutions si besoin</h3>
-<p>Une inégalité importante dans les contributions est un signal d’alarme. On doit agir, mais on commence par poser des questions, par exemple:</p>
+<p>Une inégalité importante dans les contributions est un signal d’alarme. On doit agir, mais on commence par poser des questions, par <span style="white-space:nowrap">exemple :</span></p>
 <ul>
-<li>Est-ce que Francis et Mélanie sont à l’aise avec les technologies utilisées dans le lab, ont-ils besoin de coaching?</li>
-<li>Sont-ils des «&nbsp;parasites&nbsp;» ou «&nbsp;mollassons&nbsp;» <span class="citation" data-cites="oakley_coping_2004">(<a href="references.html#ref-oakley_coping_2004" role="doc-biblioref">Oakley et al. 2004</a>)</span> (<a href="https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub">traduction française de l’article</a>)? À certaines universités, le plan de cours vous permet d’exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais <strong>seulement s’ils n’ont rien fait du tout</strong> (ce qui n’est pas le cas dans l’exemple ci-dessus). Une personne exclue de cette manière va probablement abandonner le cours et vous perdrez définitivement un coéquipier.</li>
-<li>Est-ce que Anne et Justin ont laissé suffisamment de liberté aux autres pour faire une contribution importante? Font-ils assez confiance aux autres?</li>
-<li>Avez-vous fait un plan d’itération assez détaillé pour que chacun puisse contribuer adéquatement? Dans l’exemple ci-dessus, peut-être Francis et Mélanie ont-ils trouvé ça difficile de savoir où contribuer?</li>
-<li>Est-ce que tout le monde assiste aux séances de laboratoire?</li>
+<li>Est-ce que Francis et Mélanie sont à l’aise avec les technologies utilisées dans le lab, ont-ils besoin de <span style="white-space:nowrap">coaching ?</span></li>
+<li>Sont-ils des «&nbsp;parasites&nbsp;» ou «&nbsp;mollassons&nbsp;» <span class="citation" data-cites="oakley_coping_2004">(<a href="references.html#ref-oakley_coping_2004" role="doc-biblioref">Oakley et al. 2004</a>)</span> (<a href="https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub">traduction française de l’article</a><span style="white-space:nowrap">) ?</span> À certaines universités, le plan de cours vous permet d’exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais <strong>seulement s’ils n’ont rien fait du tout</strong> (ce qui n’est pas le cas dans l’exemple ci-dessus). Une personne exclue de cette manière va probablement abandonner le cours et vous perdrez définitivement un coéquipier.</li>
+<li>Est-ce que Anne et Justin ont laissé suffisamment de liberté aux autres pour faire une contribution <span style="white-space:nowrap">importante ?</span> Font-ils assez confiance aux <span style="white-space:nowrap">autres ?</span></li>
+<li>Avez-vous fait un plan d’itération assez détaillé pour que chacun puisse contribuer <span style="white-space:nowrap">adéquatement ?</span> Dans l’exemple ci-dessus, peut-être Francis et Mélanie ont-ils trouvé ça difficile de savoir où <span style="white-space:nowrap">contribuer ?</span></li>
+<li>Est-ce que tout le monde assiste aux séances de <span style="white-space:nowrap">laboratoire ?</span></li>
 <li>Est-ce que tout le monde travaille <em>au moins 6 heures en dehors des séances encadrées</em>?</li>
-<li>Est-ce que certains coéquipiers travaillent excessivement, sans donner la chance aux autres de contribuer? N’oubliez pas que les laboratoires sont une manière d’apprendre à pratiquer la matière de ce manuel. Laisser un ou deux coéquipiers faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l’examen final pour ceux qui ont moins contribué). Il y a aussi un risque sur le plan de la <a href="TravailEquipe.html#sec-Bus_Factor">Redondance des compétences dans l’équipe (Bus Factor)</a>, surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d’épuisement à cause du fait qu’il travaille trop.</li>
-<li>Est-ce que tout le monde utilise un moyen de communiquer de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n’est pas l’outil idéal pour coordonner un travail en équipe.</li>
+<li>Est-ce que certains coéquipiers travaillent excessivement, sans donner la chance aux autres de <span style="white-space:nowrap">contribuer ?</span> N’oubliez pas que les laboratoires sont une manière d’apprendre à pratiquer la matière de ce manuel. Laisser un ou deux coéquipiers faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l’examen final pour ceux qui ont moins contribué). Il y a aussi un risque sur le plan de la <a href="TravailEquipe.html#sec-Bus_Factor">Redondance des compétences dans l’équipe (Bus Factor)</a>, surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d’épuisement à cause du fait qu’il travaille trop.</li>
+<li>Est-ce que tout le monde utilise un moyen de communiquer de manière synchrone et asynchrone (Slack, Discord, Teams, <span style="white-space:nowrap">etc.) ?</span> Le courriel n’est pas l’outil idéal pour coordonner un travail en équipe.</li>
 <li>etc.</li>
 </ul>
 <p>Dans le bilan il faut <em>constater les faits</em> et <em>proposer des solutions</em> pour éviter des inégalités importantes sur le plan de la contribution dans les prochaines itérations. Ainsi, vous gérez les problèmes de manière plus proactive.</p>
 </section>
 <section id="faq-pour-gitinspector" class="level3" data-number="20.3.3">
 <h3 data-number="20.3.3" class="anchored" data-anchor-id="faq-pour-gitinspector"><span class="header-section-number">20.3.3</span> FAQ pour gitinspector</h3>
-<p><strong>Q: Comment fusionner le travail réalisé par le même coéquipier, mais avec plusieurs comptes (courriels) différents?</strong></p>
-<p><strong>R:</strong> La solution est avec le fichier <code>.mailmap</code>. Vous pouvez rapidement générer un fichier de base avec la commande:</p>
+<p><strong><span style="white-space:nowrap">Q :</span> Comment fusionner le travail réalisé par le même coéquipier, mais avec plusieurs comptes (courriels) <span style="white-space:nowrap">différents ?</span></strong></p>
+<p><strong><span style="white-space:nowrap">R :</span></strong> La solution est avec le fichier <code>.mailmap</code>. Vous pouvez rapidement générer un fichier de base avec la <span style="white-space:nowrap">commande :</span></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> shortlog <span class="at">-se</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">"s/^.*</span><span class="dt">\\</span><span class="st">t//"</span>  <span class="op">&gt;</span> .mailmap</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ensuite, modifiez le fichier <code>.mailmap</code> pour respecter ce format:</p>
+<p>Ensuite, modifiez le fichier <code>.mailmap</code> pour respecter ce <span style="white-space:nowrap">format :</span></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode email code-with-copy"><code class="sourceCode email"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Prénom Nom Désirés &lt;courriel&gt; Prénom Nom Non-Désirés &lt;courriel&gt;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Par exemple, soit le <code>.mailmap</code> initial qui contient quatres entrées pour le même auteur:</p>
+<p>Par exemple, soit le <code>.mailmap</code> initial qui contient quatres entrées pour le même <span style="white-space:nowrap">auteur :</span></p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode email code-with-copy"><code class="sourceCode email"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Christopher (Cris) Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Christopher Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>Cris Fuhrman &lt;fuhrmanator+git@gmail.com&gt;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>On décide de garder l’alias <code>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</code> pour chaque nom:</p>
+<p>On décide de garder l’alias <code>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</code> pour chaque <span style="white-space:nowrap">nom :</span></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode email code-with-copy"><code class="sourceCode email"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt; Christopher (Cris) Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt; Christopher Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt; Cris Fuhrman &lt;fuhrmanator+git@gmail.com&gt;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Le nom que vous mettez sera celui qui apparaît dans les rapports la prochaine fois qu’ils seront générés.</p>
-<p><strong>Q: Comment exclure le travail réalisé par un chargé de laboratoire (par exemple le clone initial dans GitHub Classroom)?</strong></p>
-<p><strong>R:</strong> La solution est d’ajouter le nom de l’auteur dans le tableau du script <code>contributions.sh</code> à la ligne suivante avec <code>authorsToExcludeArray</code>. Attention:</p>
+<p><strong><span style="white-space:nowrap">Q :</span> Comment exclure le travail réalisé par un chargé de laboratoire (par exemple le clone initial dans GitHub <span style="white-space:nowrap">Classroom) ?</span></strong></p>
+<p><strong><span style="white-space:nowrap">R :</span></strong> La solution est d’ajouter le nom de l’auteur dans le tableau du script <code>contributions.sh</code> à la ligne suivante avec <code>authorsToExcludeArray</code>. <span style="white-space:nowrap">Attention :</span></p>
 <ul>
 <li>Il n’y a pas de <code>,</code> entre les éléments des tableaux en bash.</li>
 <li>Le nom d’un auteur ayant un accent ne sera pas reconnu. Il faut changer le nom dans le <code>.mailmap</code> pour qu’il n’y ait pas d’accents, ou utiliser une chaîne partielle comme <code>"Benjamin Le"</code> pour exclure les contributions de <code>"Benjamin Le Dû"</code>.</li>
 </ul>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="va">authorsToExcludeArray</span><span class="op">=</span><span class="va">(</span><span class="st">"C. Fuhrman"</span> <span class="st">"Benjamin Le"</span> <span class="st">"Yvan Ross"</span><span class="va">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Q: J’ai une autre question…</strong></p>
-<p><strong>R:</strong> Il y a aussi une <a href="https://github.com/ejwa/gitinspector/wiki/FAQ">FAQ sur le dépôt de gitinspector</a>.</p>
+<p><strong><span style="white-space:nowrap">Q :</span> J’ai une autre question…</strong></p>
+<p><strong><span style="white-space:nowrap">R :</span></strong> Il y a aussi une <a href="https://github.com/ejwa/gitinspector/wiki/FAQ">FAQ sur le dépôt de gitinspector</a>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

@@ -258,9 +258,9 @@ div.csl-indent {
 
 </header>
 
-<p>Si on écrivait des logiciels pouvant se tester automatiquement? Le développement piloté par les tests (anglais <em>test-driven development, TDD</em>) est une pratique populaire et intéressante. Il s’agit d’écrire des logiciels avec un composant d’autovalidation (des tests automatisés). Mais, écrire beaucoup de tests n’est pas toujours une tâche agréable pour des développeurs. Historiquement, si on attend la fin d’un projet pour écrire des tests, il ne reste plus beaucoup de temps et l’équipe laisse tomber les tests. Pour pallier ce problème, le développement piloté par les tests propose de travailler <strong>en petits pas</strong>. C’est-à-dire écrire un test simple (en premier), puis écrire la partie du logiciel pour passer le test de manière simple (le plus simple). Ça fait moins de codage entre les validations et c’est possiblement même plus stimulant pour les développeurs.</p>
+<p>Si on écrivait des logiciels pouvant se tester <span style="white-space:nowrap">automatiquement ?</span> Le développement piloté par les tests (anglais <em>test-driven development, TDD</em>) est une pratique populaire et intéressante. Il s’agit d’écrire des logiciels avec un composant d’autovalidation (des tests automatisés). Mais, écrire beaucoup de tests n’est pas toujours une tâche agréable pour des développeurs. Historiquement, si on attend la fin d’un projet pour écrire des tests, il ne reste plus beaucoup de temps et l’équipe laisse tomber les tests. Pour pallier ce problème, le développement piloté par les tests propose de travailler <strong>en petits pas</strong>. C’est-à-dire écrire un test simple (en premier), puis écrire la partie du logiciel pour passer le test de manière simple (le plus simple). Ça fait moins de codage entre les validations et c’est possiblement même plus stimulant pour les développeurs.</p>
 <p>Ainsi, il y a toujours des tests pour les fonctionnalités et le développement se fait en petits incréments qui sont validés par les tests. Faire les <em>petits pas</em> réduit le risque associé à de gros changements dans un logiciel sans validation intermédiaire. Au fur et à mesure qu’on développe un logiciel, on développe également quelques tests de ce dernier. Puisque les tests sont automatiques, ils sont aussi faciles à exécuter que le compilateur.</p>
-<p>Il y a une discipline imposée dans le TDD qui nécessite d’écrire un <em>test en premier</em>, c’est-à-dire <em>avant</em> d’écrire le code. La démarche est illustrée par la <a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>. Beaucoup d’outils (IDE) favorisent ce genre de développement. Nous pouvons écrire un test qui appelle à une fonction qui n’existe pas encore et l’IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour même. Un puriste du TDD insistera sur le fait que le test soit écrit toujours en premier! Cette discipline est parfois culturelle.</p>
+<p>Il y a une discipline imposée dans le TDD qui nécessite d’écrire un <em>test en premier</em>, c’est-à-dire <em>avant</em> d’écrire le code. La démarche est illustrée par la <a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>. Beaucoup d’outils (IDE) favorisent ce genre de développement. Nous pouvons écrire un test qui appelle à une fonction qui n’existe pas encore et l’IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour même. Un puriste du TDD insistera sur le fait que le test soit écrit toujours en <span style="white-space:nowrap">premier !</span> Cette discipline est parfois culturelle.</p>
 <p>Plusieurs chercheurs ont mené des expériences, par exemple <span class="citation" data-cites="Karac_TDD_2018">Karac et Turhan (<a href="references.html#ref-Karac_TDD_2018" role="doc-biblioref">2018</a>)</span>, pour voir si <em>tester en premier</em> avait un vrai bénéfice. Les résultats de leurs analyses n’ont pas toujours montré que c’est le cas (ce genre d’expérience est difficile de faire, en partie parce qu’il n’y a pas beaucoup de développeurs en industrie qui le pratiquent). Les chercheurs ont trouvé que faire un petit test <em>après</em> avoir écrit le code a aussi un bénéfice sur le plan de la qualité. Dans tous les cas, des chercheurs ont trouvé que le fait de travailler en <em>petits pas</em> apporte <em>toujours</em> un avantage sur le plan de la qualité. Travailler en <em>petits pas</em> est utile, même sans faire du TDD de manière dogmatique.</p>
 <p>Sachez qu’il existe beaucoup d’intergiciels (anglais <em>frameworks</em>) pour faciliter l’exécution automatique des tests réalisés dans le cadre du TDD. Pour Java il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements. En ce qui concerne le squelette pour le laboratoire, il s’agit de <a href="https://jestjs.io/">Jest</a>. <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). --></p>
 <p>L’exécution de tests peut être même faite à chaque commit du code dans un dépôt comme GitHub.</p>
@@ -286,7 +286,7 @@ div.csl-indent {
 <section id="exemple-de-kata-tdd-fizzbuzz" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="exemple-de-kata-tdd-fizzbuzz"><span class="header-section-number">10.1.1</span> Exemple de Kata TDD FizzBuzz</h3>
 <p>L’inspiration de cet exercice vient de <a href="http://codingdojo.org/kata/FizzBuzz/">codingdojo.org</a>.</p>
-<p>Dans cet exercice, il faut écrire par le développement piloté par les tests un programme qui imprime les nombres de 1 à 100. Mais pour les multiples de trois, il faut imprimer <code>Fizz</code> au lieu du nombre et pour les multiples de cinq, il faut imprimer <code>Buzz</code>. Pour les nombres étant des multiples de trois et de cinq il faut imprimer <code>FizzBuzz</code>. Voici un exemple des sorties:</p>
+<p>Dans cet exercice, il faut écrire par le développement piloté par les tests un programme qui imprime les nombres de 1 à 100. Mais pour les multiples de trois, il faut imprimer <code>Fizz</code> au lieu du nombre et pour les multiples de cinq, il faut imprimer <code>Buzz</code>. Pour les nombres étant des multiples de trois et de cinq il faut imprimer <code>FizzBuzz</code>. Voici un exemple des <span style="white-space:nowrap">sorties :</span></p>
 <pre><code>1
 2
 Fizz
@@ -315,10 +315,10 @@ Buzz
 <section id="déroulement" class="level4" data-number="10.1.1.2">
 <h4 data-number="10.1.1.2" class="anchored" data-anchor-id="déroulement"><span class="header-section-number">10.1.1.2</span> Déroulement</h4>
 <p>Cet exercice peut se faire individuellement ou en équipe de deux. En équipe, une personne écrit le test et l’autre écrit le code pour passer le test (c’est la variante ping-pong). Chacun réfléchit aux activités de réusinage éventuelles lorsque le projet est dans l’état vert (<a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>). Les membres de l’équipe peuvent changer de rôle (testeur, codeur) après un certain nombre d’étapes, ou après avoir terminé le kata entier.</p>
-<p>Pour respecter la philosophie de <em>petits pas,</em> il vaut mieux:</p>
+<p>Pour respecter la philosophie de <em>petits pas,</em> il vaut <span style="white-space:nowrap">mieux :</span></p>
 <ul>
-<li>ne lire que l’étape courante;</li>
-<li>ne travailler que sur l’étape courante;</li>
+<li>ne lire que l’étape <span style="white-space:nowrap">courante ;</span></li>
+<li>ne travailler que sur l’étape <span style="white-space:nowrap">courante ;</span></li>
 <li>ne faire que les tests avec les entrées valides.</li>
 </ul>
 </section>
@@ -334,7 +334,7 @@ Buzz
 <li><p>Un argument de 10 retourne <code>Buzz</code></p></li>
 <li><p>Un argument de 15 retourne <code>FizzBuzz</code></p></li>
 <li><p>Un argument de 30 retourne <code>FizzBuzz</code></p></li>
-<li><p>Supporter des exigences qui évoluent. Attention aux conflits dans les exigences:</p>
+<li><p>Supporter des exigences qui évoluent. Attention aux conflits dans les <span style="white-space:nowrap">exigences :</span></p>
 <ol type="a">
 <li>Il faut imprimer Fizz au lieu du nombre si le nombre est un multiple de 3 ou contient un 3 (ex. 13 → <code>Fizz</code>).</li>
 <li>Il faut imprimer Buzz au lieu du nombre si le nombre est un multiple de 5 ou contient un 5 (ex. 59 → <code>Fizz</code>).</li>

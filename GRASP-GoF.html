@@ -343,7 +343,7 @@ div.csl-indent {
 <section id="imaginer-le-code-sans-le-pattern-gof" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="imaginer-le-code-sans-le-pattern-gof"><span class="header-section-number">14.2</span> Imaginer le code sans le pattern GoF</h2>
 <p>Chaque principe GRASP est défini avec un énoncé d’un problème de conception et une solution pour le résoudre. Pourtant, beaucoup d’exemples dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> sont des patterns déjà appliqués (et le problème initial n’est pas toujours expliqué en détail).</p>
-<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on serait obligé de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme ceci:</p>
+<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on serait obligé de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme <span style="white-space:nowrap">ceci :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* calculateurTaxes est le nom du calculateur utilisé actuellement */</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span><span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"GoodAsGoldTaxPro"</span><span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour intéragir avec le calculateur */</span></span>
@@ -362,7 +362,7 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption">Figure&nbsp;14.2: Adaptateur et principes GRASP.</figcaption><p></p>
 </figure>
 </div>
-<p>On peut donc voir le pattern adaptateur comme <em>une spécialisation</em> de plusieurs principes GRASP:</p>
+<p>On peut donc voir le pattern adaptateur comme <em>une spécialisation</em> de plusieurs principes <span style="white-space:nowrap">GRASP :</span></p>
 <ul>
 <li>Polymorphisme</li>
 <li>Indirection</li>
@@ -371,7 +371,7 @@ div.csl-indent {
 <li>Forte cohésion</li>
 <li>Protection des variations</li>
 </ul>
-<p>Êtes-vous en mesure d’expliquer dans ce contexte comment Adaptateur est relié à ces principes? C’est-à-dire, pouvez-vous identifier les GRASP dans le pattern Adaptateur?</p>
+<p>Êtes-vous en mesure d’expliquer dans ce contexte comment Adaptateur est relié à ces <span style="white-space:nowrap">principes ?</span> C’est-à-dire, pouvez-vous identifier les GRASP dans le pattern <span style="white-space:nowrap">Adaptateur ?</span></p>
 </section>
 <section id="identifier-les-grasp-dans-les-gof" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="identifier-les-grasp-dans-les-gof"><span class="header-section-number">14.3</span> Identifier les GRASP dans les GoF</h2>
@@ -380,16 +380,16 @@ div.csl-indent {
 <section id="polymorphisme" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="polymorphisme"><span class="header-section-number">14.3.1</span> Polymorphisme</h3>
 <blockquote class="blockquote">
-<p><strong>Problème:</strong> Qui est responsable quand le comportement varie selon le type?<br>
-<strong>Solution:</strong> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types pour lesquels le comportement varie.</p>
+<p><strong><span style="white-space:nowrap">Problème :</span></strong> Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span><br>
+<strong><span style="white-space:nowrap">Solution :</span></strong> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types pour lesquels le comportement varie.</p>
 </blockquote>
 <p>Le «&nbsp;comportement qui varie&nbsp;» est la manière d’adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode <code>getTaxes()</code>. Alors, cette «&nbsp;responsabilité&nbsp;» est affectée au type interface <code>IAdaptateurCalculTaxes</code> (et ces implémentations) dans l’opération polymorphe <code>getTaxes()</code>.</p>
 </section>
 <section id="fabrication-pure" class="level3" data-number="14.3.2">
 <h3 data-number="14.3.2" class="anchored" data-anchor-id="fabrication-pure"><span class="header-section-number">14.3.2</span> Fabrication pure</h3>
 <blockquote class="blockquote">
-<p><strong>Problème:</strong> En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte cohésion?<br>
-<strong>Solution:</strong> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine - une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p>
+<p><strong><span style="white-space:nowrap">Problème :</span></strong> En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte <span style="white-space:nowrap">cohésion ?</span><br>
+<strong><span style="white-space:nowrap">Solution :</span></strong> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine - une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p>
 </blockquote>
 <p>La Fabrication pure est la classe «&nbsp;comportementale et artificielle&nbsp;» qui est la hiérarchie <code>IAdaptateurCalculTaxes</code> (comprenant chaque adaptateur concret). Elle est comportementale puisqu’elle ne fait qu’adapter des appels. Elle est artificielle puisqu’elle ne représente pas un élément dans le modèle du domaine.</p>
 <p>L’ensemble des adaptateurs concrets ont des «&nbsp;responsabilités cohésives&nbsp;» qui sont la manière d’adapter la méthode <code>getTaxes()</code> aux méthodes (immuables) des calculateurs de taxes externes. Elles ne font que ça. La cohésion est augmentée aussi dans la classe Vente qui n’a plus la responsabilité de s’adapter aux calculateurs de taxes externes. C’est le travail qui a été donné aux adaptateurs concrets.</p>
@@ -398,16 +398,16 @@ div.csl-indent {
 <section id="indirection" class="level3" data-number="14.3.3">
 <h3 data-number="14.3.3" class="anchored" data-anchor-id="indirection"><span class="header-section-number">14.3.3</span> Indirection</h3>
 <blockquote class="blockquote">
-<p><strong>Problème:</strong> Comment affecter les responsabilités pour éviter le couplage direct?<br>
-<strong>Solution:</strong> Pour éviter le couplage direct, affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services.</p>
+<p><strong><span style="white-space:nowrap">Problème :</span></strong> Comment affecter les responsabilités pour éviter le couplage <span style="white-space:nowrap">direct ?</span><br>
+<strong><span style="white-space:nowrap">Solution :</span></strong> Pour éviter le couplage direct, affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services.</p>
 </blockquote>
 <p>Le «&nbsp;couplage direct&nbsp;» qui est évité est le couplage entre la classe Vente et les calculateurs de taxes externes. Le pattern Adaptateur (général) cherche à découpler le Client des classes nommées Adaptee, car chaque Adaptee a une API différente pour le même genre de «&nbsp;service&nbsp;». Alors, la responsabilité de s’adapter aux services différents est affectée à la hiérarchie de «&nbsp;classes intermédiaires&nbsp;», soit l’interface type IAdaptateurCalculTaxes et ses implémentations.</p>
 </section>
 <section id="protection-des-variations" class="level3" data-number="14.3.4">
 <h3 data-number="14.3.4" class="anchored" data-anchor-id="protection-des-variations"><span class="header-section-number">14.3.4</span> Protection des variations</h3>
 <blockquote class="blockquote">
-<p><strong>Problème:</strong> Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les autres?<br>
-<strong>Solution:</strong> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p>
+<p><strong><span style="white-space:nowrap">Problème :</span></strong> Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span><br>
+<strong><span style="white-space:nowrap">Solution :</span></strong> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p>
 </blockquote>
 <p>Les «&nbsp;variations ou l’instabilité&nbsp;» sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs du projet (ce sont des modules externes ayant chacun une API différente). Quant à «&nbsp;l’impact négatif sur les autres&nbsp;», il s’agit des modifications que les développeurs auraient à faire sur la classe Vente chaque fois que l’on décide de supporter un autre calculateur de taxes (ou si l’API de ce dernier évolue).</p>
 <p>Quant aux «&nbsp;responsabilités&nbsp;» à affecter, c’est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de «&nbsp;l’interface stable&nbsp;», il s’agit de la méthode <code>getTaxes()</code> qui ne changera jamais. Elle est définie dans le type-interface IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API).</p>

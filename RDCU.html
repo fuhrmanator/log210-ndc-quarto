@@ -267,16 +267,16 @@ div.csl-indent {
 
 </header>
 
-<p>Les réalisations de cas d’utilisation (RDCU) sont le sujet du chapitre F17/A18&nbsp;<i class="fa-solid fa-book"></i>. Voici les points importants pour la méthodologie:</p>
+<p>Les réalisations de cas d’utilisation (RDCU) sont le sujet du chapitre F17/A18&nbsp;<i class="fa-solid fa-book"></i>. Voici les points importants pour la <span style="white-space:nowrap">méthodologie :</span></p>
 <ul>
 <li>Une RDCU est une synthèse des informations spécifiées dans le MDD, le DSS et les contrats d’opération. Elle sert à esquisser une solution (qui n’est pas encore codée) afin de rendre plus explicite l’activité impliquant des choix de conception. Si vous n’avez pas bien compris les autres éléments (MDD, DSS, etc.), il est difficile de réussir les RDCU. Il est normal de ne pas tout comprendre au début, alors posez les questions si vous ne comprenez pas.</li>
-<li>De manière générale, toute bonne RDCU doit faire les choses suivantes:
+<li>De manière générale, toute bonne RDCU doit faire les choses <span style="white-space:nowrap">suivantes :</span>
 <ul>
-<li>spécifier un contrôleur (pour la première opération système dans un DSS, qui sera le même pour le reste des opérations dans le DSS);</li>
-<li>satisfaire les postconditions du contrat d’opération correspondant;</li>
+<li>spécifier un contrôleur (pour la première opération système dans un DSS, qui sera le même pour le reste des opérations dans le <span style="white-space:nowrap">DSS) ;</span></li>
+<li>satisfaire les postconditions du contrat d’opération <span style="white-space:nowrap">correspondant ;</span></li>
 <li>rechercher les informations qui sont éventuellement rendues à l’acteur dans le DSS.</li>
 </ul></li>
-<li>Il s’agit d’un diagramme de séquence en UML. Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique la notation de manière agile:
+<li>Il s’agit d’un diagramme de séquence en UML. Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique la notation de manière <span style="white-space:nowrap">agile :</span>
 <ul>
 <li>Il n’est pas nécessaire de faire les boîtes d’activation, car ça prend du temps à les faire correctement lorsqu’on dessine à la main un diagramme.</li>
 <li>On doit se servir des annotations pour documenter les choix (GRASP).</li>
@@ -313,7 +313,7 @@ div.csl-indent {
 <p>Pour les postconditions où il faut former une association entre un objet <em>a</em> et <em>b</em>, il y a plusieurs façons de faire.</p>
 <ul>
 <li>S’il y a une agrégation entre les objets, il s’agit probablement d’une méthode <code>add()</code> sur l’objet qui agrège.</li>
-<li>S’il y a une association simple, il faut considérer la navigabilité de l’association. Est-ce qu’il faut pouvoir retrouver l’objet <em>a</em> à partir de l’objet <em>b</em> ou vice-versa? Il s’agira d’une méthode <code>setB(b)</code> sur l’objet <code>a</code> (pour trouver <em>b</em> à partir de <em>a</em>), etc.</li>
+<li>S’il y a une association simple, il faut considérer la navigabilité de l’association. Est-ce qu’il faut pouvoir retrouver l’objet <em>a</em> à partir de l’objet <em>b</em> ou <span style="white-space:nowrap">vice-versa ?</span> Il s’agira d’une méthode <code>setB(b)</code> sur l’objet <code>a</code> (pour trouver <em>b</em> à partir de <em>a</em>), etc.</li>
 <li>S’il faut former une association entre un objet et un autre «&nbsp;sur une base de correspondance avec&nbsp;» un identifiant passé comme argument, alors il faut repérer le bon objet d’abord. Voir la section <a href="#sec-TransformerIDenObjets">Transformer identifiants en objets</a>.</li>
 </ul>
 <p>Dans la plupart des cas, la justification GRASP pour former une association est Expert, défini dans le . Il faut faire attention à la <a href="#sec-Visibilite">visibilité</a>&nbsp;<i class="fa-solid fa-low-vision"></i>.</p>
@@ -332,11 +332,11 @@ div.csl-indent {
 </section>
 <section id="sec-Visibilite" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="sec-Visibilite"><span class="header-section-number">9.3</span> Visibilité</h2>
-<p>Dans tous les cas, si un message est envoyé à un objet, ce dernier doit être <em>visible</em> à l’objet qui lui envoie le message. Régler les problèmes de visibilité nécessite de la créativité. Il est difficile à enseigner cette démarche, mais les points suivants peuvent aider:</p>
+<p>Dans tous les cas, si un message est envoyé à un objet, ce dernier doit être <em>visible</em> à l’objet qui lui envoie le message. Régler les problèmes de visibilité nécessite de la créativité. Il est difficile à enseigner cette démarche, mais les points suivants peuvent <span style="white-space:nowrap">aider :</span></p>
 <ul>
 <li>Pour un objet racine (par exemple <code>Université</code>) il peut s’agir d’un objet Singleton, qui aura une visibilité globale. C’est-à-dire que n’importe quel objet pourrait lui envoyer un message. Cependant, les objets Singleton posent des problèmes de conception, notamment pour les tests. Il vaut mieux éviter ce choix, si possible.<br>
 Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur stackoverflow</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</li>
-<li>Sinon, il faudra que l’objet émetteur ait une référence de l’objet récepteur. Par exemple dans la <a href="#fig-RDCU_Visibilite1">figure&nbsp;<span>9.3</span></a>, la référence à <em>b</em> peut être:
+<li>Sinon, il faudra que l’objet émetteur ait une référence de l’objet récepteur. Par exemple dans la <a href="#fig-RDCU_Visibilite1">figure&nbsp;<span>9.3</span></a>, la référence à <em>b</em> peut <span style="white-space:nowrap">être :</span>
 <ul>
 <li>stockée comme un attribut de <em>a</em>,</li>
 <li>passée comme un argument dans un message antérieur, ou</li>
@@ -381,7 +381,7 @@ Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur st
 <section id="sec-RDCU_Demarrer" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="sec-RDCU_Demarrer"><span class="header-section-number">9.6</span> RDCU pour l’initialisation, le scénario Démarrer</h2>
 <p>Le lancement de l’application correspond à la RDCU «&nbsp;Démarrer&nbsp;». La section <strong>Initialisation et cas d’utilisation Démarrer</strong> (F17.4, p.345) ou <strong>Initialization and the ‹Start Up› Use Case</strong> (A18.4, p.274)&nbsp;<i class="fa-solid fa-book"></i>&nbsp;traite ce sujet important. C’est dans cette conception où il faut mettre en place tous les éléments importants pour les hypothèses faites dans les autres RDCU, par exemple les classes de collection (Map), les références pour la visibilité, l’initialisation des contrôleurs, etc.</p>
-<p>Voici quelques points importants:</p>
+<p>Voici quelques points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li>Le lancement d’une application dépend du langage de programmation et du système d’exploitation.</li>
 <li>À chaque nouvelle RDCU, on doit possiblement actualiser la RDCU «&nbsp;Démarrer&nbsp;» pour tenir compte des hypothèses faites dans la dernière RDCU. Elle est assez «&nbsp;instable&nbsp;» pour cette raison. Larman recommande de faire sa conception en dernier lieu.</li>
@@ -399,12 +399,12 @@ Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur st
 <h2 data-number="9.7" class="anchored" data-anchor-id="réduire-le-décalage-des-représentations"><span class="header-section-number">9.7</span> Réduire le décalage des représentations</h2>
 <p>Le principe du <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a> est la différence entre la modélisation (la représentation) du problème (du domaine) et la modélisation de la solution. Lorsqu’on fait l’ébauche d’une RDCU, on peut réduire le décalage des représentations principalement en s’inspirant des classes conceptuelles (du modèle du domaine) pour proposer des classes logicielles dans la solution décrite dans la RDCU. Plus une solution ressemble à la description du problème, plus elle sera facile à comprendre.</p>
 <blockquote class="blockquote">
-<p>Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n’ayant aucun lien avec le modèle du domaine. Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine. Il faut vérifier avec une personne expérimentée (l’architecte du projet si possible) que l’application du pattern est justifiée, qu’elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées. Chaque fois qu’on propose des classes logicielles qui n’ont pas de liens avec la représentation du problème du domaine, on <em>augmente le décalage des représentations</em> et on rend la solution un peu plus difficile à comprendre. C’est aussi une forme de <a href="AnalyseConception.html#sec-ComplexiteCirc">Complexité circonstancielle (provenant des choix de conception)</a>. Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels. Il est très difficile, même pour les experts en conception, de trouver un bon équilibre entre toutes les forces: la maintenabilité, la simplicité, les fonctionnalités, etc. Vous pouvez en lire plus dans <a href="https://stackoverflow.com/a/18702842/1168342">cette réponse sur StackOverflow</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</p>
+<p>Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n’ayant aucun lien avec le modèle du domaine. Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine. Il faut vérifier avec une personne expérimentée (l’architecte du projet si possible) que l’application du pattern est justifiée, qu’elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées. Chaque fois qu’on propose des classes logicielles qui n’ont pas de liens avec la représentation du problème du domaine, on <em>augmente le décalage des représentations</em> et on rend la solution un peu plus difficile à comprendre. C’est aussi une forme de <a href="AnalyseConception.html#sec-ComplexiteCirc">Complexité circonstancielle (provenant des choix de conception)</a>. Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels. Il est très difficile, même pour les experts en conception, de trouver un bon équilibre entre toutes les <span style="white-space:nowrap">forces :</span> la maintenabilité, la simplicité, les fonctionnalités, etc. Vous pouvez en lire plus dans <a href="https://stackoverflow.com/a/18702842/1168342">cette réponse sur StackOverflow</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</p>
 </blockquote>
 </section>
 <section id="sec-FaireSoiMeme" class="level2" data-number="9.8">
 <h2 data-number="9.8" class="anchored" data-anchor-id="sec-FaireSoiMeme"><span class="header-section-number">9.8</span> Pattern «&nbsp;Faire soi-même&nbsp;»</h2>
-<p>Dans la section F30.8/A33.7&nbsp;<i class="fa-solid fa-book"></i>, Larman mentionne le pattern «&nbsp;Faire soi-même&nbsp;» de Peter Coad <span class="citation" data-cites="coad97a">(<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span> qui permet de réduire le <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a>, même s’il ne représente pas exactement la réalité des objets (voir la <a href="#fig-main_des">figure&nbsp;<span>9.7</span></a>):</p>
+<p>Dans la section F30.8/A33.7&nbsp;<i class="fa-solid fa-book"></i>, Larman mentionne le pattern «&nbsp;Faire soi-même&nbsp;» de Peter Coad <span class="citation" data-cites="coad97a">(<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span> qui permet de réduire le <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a>, même s’il ne représente pas exactement la réalité des objets (voir la <a href="#fig-main_des">figure&nbsp;<span>9.7</span></a><span style="white-space:nowrap"> ):</span></p>
 <blockquote class="blockquote">
 <p><strong>Faire soi-même</strong>: «&nbsp;Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction&nbsp;»</p>
 </blockquote>

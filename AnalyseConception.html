@@ -265,10 +265,10 @@ div.csl-indent {
 
 </header>
 
-<p>Ce manuel a été créé dans un contexte de cours d’ingénieur logiciel (LOG210 à l’École de technologie supérieure à Montréal). Il s’agit d’une approche où la communauté étudiante apprend à programmer d’abord («&nbsp;CS-first&nbsp;» selon <span class="citation" data-cites="SE_Curriculum_ACM_2014">Ardis et al. (<a href="references.html#ref-SE_Curriculum_ACM_2014" role="doc-biblioref">2015</a>)</span>). Ainsi, le contenu est organisé pour les personnes ayant déjà une expérience en:</p>
+<p>Ce manuel a été créé dans un contexte de cours d’ingénieur logiciel (LOG210 à l’École de technologie supérieure à Montréal). Il s’agit d’une approche où la communauté étudiante apprend à programmer d’abord («&nbsp;CS-first&nbsp;» selon <span class="citation" data-cites="SE_Curriculum_ACM_2014">Ardis et al. (<a href="references.html#ref-SE_Curriculum_ACM_2014" role="doc-biblioref">2015</a>)</span>). Ainsi, le contenu est organisé pour les personnes ayant déjà une expérience <span style="white-space:nowrap">en :</span></p>
 <ul>
-<li>programmation dans un langage orienté objet (Java, C#, TypeScript, etc.);</li>
-<li>application des patrons de conception de la «&nbsp;bande des quatre&nbsp;» (Gang of Four): Gamma, Helm, Johnson et Vlissides <span class="citation" data-cites="GoF1994">Gamma et al. (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>.</li>
+<li>programmation dans un langage orienté objet (Java, C#, TypeScript, <span style="white-space:nowrap">etc.) ;</span></li>
+<li>application des patrons de conception de la «&nbsp;bande des quatre&nbsp;» (Gang of <span style="white-space:nowrap">Four) :</span> Gamma, Helm, Johnson et Vlissides <span class="citation" data-cites="GoF1994">Gamma et al. (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>.</li>
 </ul>
 <p>La notation UML (<em>Unified Modeling Language</em>) est utilisée partout dans ce manuel. Nous faisons une hypothèse que les personnes suivant ce manuel aient déjà vu cette notation avant, mais la familiarité avec UML n’est pas un préalable.</p>
 <!-- Voici le descriptif du cours, selon le plan de cours:
@@ -286,9 +286,9 @@ Séances de laboratoire axées sur l'application des notions d'analyse, de conce
 ::: -->
 <section id="livre-complémentaire" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="livre-complémentaire"><span class="header-section-number">1.1</span> Livre complémentaire</h2>
-<p>Ce manuel suit la méthodologie d’analyse et de conception proposée par Craig Larman dans son livre «&nbsp;UML 2 et les Design Patterns&nbsp;» <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Le livre est encore populaire et pertinent, mais malheureusement il n’a pas été actualisé depuis sa 3<sup>e</sup> édition (2005). La traduction française du livre n’est plus en stocke au Québec depuis plusieurs années. Beaucoup de choses ont évolué depuis bientôt vingt ans!</p>
+<p>Ce manuel suit la méthodologie d’analyse et de conception proposée par Craig Larman dans son livre «&nbsp;UML 2 et les Design Patterns&nbsp;» <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Le livre est encore populaire et pertinent, mais malheureusement il n’a pas été actualisé depuis sa 3<sup>e</sup> édition (2005). La traduction française du livre n’est plus en stocke au Québec depuis plusieurs années. Beaucoup de choses ont évolué depuis bientôt vingt <span style="white-space:nowrap">ans !</span></p>
 <p>Au besoin, des références à ce livre sont indiquées par l’icône du livre&nbsp;<i class="fa-solid fa-book"></i>. Puisque ce livre-là est disponible en français et en anglais et les numéros de chapitres ne sont pas toujours les mêmes, nous indiquons la référence avec <strong>F</strong> et <strong>A</strong> pour la langue. Par exemple, <strong>F16.10/A17.10</strong> indique la section <strong>16.10 du livre en français</strong> et la section <strong>17.10 du livre en anglais.</strong> Toutes les références sont données pour la 3<sup>e</sup> édition du livre. Si vous avez une autre édition, les chapitres ne sont pas toujours les mêmes et vous devez chercher le sujet dans la table des matières.</p>
-<p>Vous trouverez également d’autres sujets importants pour un ingénieur: les notions de complexité, le contexte industriel qui affecte les décisions de conception, l’impact de la conception sur d’autres qualités d’un logiciel, le travail en équipe, etc.</p>
+<p>Vous trouverez également d’autres sujets importants pour un <span style="white-space:nowrap">ingénieur :</span> les notions de complexité, le contexte industriel qui affecte les décisions de conception, l’impact de la conception sur d’autres qualités d’un logiciel, le travail en équipe, etc.</p>
 </section>
 <section id="analyse-vs-conception" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="analyse-vs-conception"><span class="header-section-number">1.2</span> Analyse vs Conception</h2>
@@ -319,7 +319,7 @@ Séances de laboratoire axées sur l'application des notions d'analyse, de conce
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Imaginez une autre solution n’ayant qu’une seule classe <code>Jeu</code> contenant toute la logique du jeu. Avez-vous déjà codé une solution simple comme ça? C’est un bon design au départ, car c’est simple. Mais au fur et à mesure que vous codez la logique du jeu, bien que ça fonctionne parfaitement, la classe <code>Jeu</code> grossit et devient difficile à comprendre. <!-- Par exemple, on voit une méthode `brasser()` dans la classe `Dé` qui montre que ce sera la responsabilité de cette classe de changer sa valeur quand ça sera le bon moment. --></p>
+<p>Imaginez une autre solution n’ayant qu’une seule classe <code>Jeu</code> contenant toute la logique du jeu. Avez-vous déjà codé une solution simple comme <span style="white-space:nowrap">ça ?</span> C’est un bon design au départ, car c’est simple. Mais au fur et à mesure que vous codez la logique du jeu, bien que ça fonctionne parfaitement, la classe <code>Jeu</code> grossit et devient difficile à comprendre. <!-- Par exemple, on voit une méthode `brasser()` dans la classe `Dé` qui montre que ce sera la responsabilité de cette classe de changer sa valeur quand ça sera le bon moment. --></p>
 </div>
 </div>
 </div>
@@ -329,8 +329,8 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 </section>
 <section id="la-complexité-et-ses-sources" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="la-complexité-et-ses-sources"><span class="header-section-number">1.4</span> La complexité et ses sources</h2>
-<p>Un.e ingénieur.e logiciel est constamment dans une bataille avec un adversaire dont le nom est la complexité. Mais qu’est-ce que la complexité? La&nbsp;<a href="#fig-complexity">figure&nbsp;<span>1.3</span></a> est une image de la complexité. Reconnaissez-vous le domaine d’où vient cette image?</p>
-<p>Voici une définition de la complexité:</p>
+<p>Un.e ingénieur.e logiciel est constamment dans une bataille avec un adversaire dont le nom est la complexité. Mais qu’est-ce que la <span style="white-space:nowrap">complexité ?</span> La&nbsp;<a href="#fig-complexity">figure&nbsp;<span>1.3</span></a> est une image de la complexité. Reconnaissez-vous le domaine d’où vient cette <span style="white-space:nowrap">image ?</span></p>
+<p>Voici une définition de la <span style="white-space:nowrap">complexité :</span></p>
 <blockquote class="blockquote">
 <p><strong>Complexité</strong>: Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.</p>
 </blockquote>
@@ -340,7 +340,7 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <p></p><figcaption class="figure-caption">Figure&nbsp;1.3: <a href="https://www.flickr.com/photos/lytfyre/6489338411/">«&nbsp;Complexity&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/lytfyre/">lytfyre</a>.</figcaption><p></p>
 </figure>
 </div>
-<p>En voici quelques exemples en développement de logiciels:</p>
+<p>En voici quelques exemples en développement de <span style="white-space:nowrap">logiciels :</span></p>
 <ul>
 <li>Un <em>problème</em> peut être complexe, par exemple le domaine des lois fiscales pour lequel des logiciels existent pour aider les gens à faire des déclarations de revenus.</li>
 <li>Un <em>projet logiciel</em> peut être complexe, avec plusieurs packages, chacun ayant beaucoup de classes, etc.</li>
@@ -349,10 +349,10 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <li>Un <em>patron de conception</em> peut être complexe, par exemple, les patrons Visiteur, Décorateur, Médiateur, etc. des GoF <span class="citation" data-cites="GoF1994">(<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>. Un patron définit des rôles et parfois des classes et du code supplémentaires à créer. Le tout doit s’intégrer dans un design existant (qui a son propre niveau de complexité).</li>
 <li>Un <em>environnement</em> peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l’environnement sans fil, des écrans tactiles de tailles différentes, de l’alimentation limitée, etc.</li>
 </ul>
-<p>La <a href="#fig-complexitySources">figure&nbsp;<span>1.4</span></a> présente les sources de complexité ainsi que leurs noms qu’on va utiliser dans ce manuel:</p>
+<p>La <a href="#fig-complexitySources">figure&nbsp;<span>1.4</span></a> présente les sources de complexité ainsi que leurs noms qu’on va utiliser dans ce <span style="white-space:nowrap">manuel :</span></p>
 <section id="complexité-inhérente-provenant-du-problème" class="level3" data-number="1.4.1">
 <h3 data-number="1.4.1" class="anchored" data-anchor-id="complexité-inhérente-provenant-du-problème"><span class="header-section-number">1.4.1</span> Complexité inhérente (provenant du problème)</h3>
-<p>La complexité inhérente est au sein du problème que résout un logiciel. Elle est souvent <em>visible</em> à l’utilisateur du logiciel. Elle se compose des parties du logiciel qui sont nécessairement des problèmes difficiles. N’importe quel logiciel qui tente de résoudre ces problèmes aura une manifestation de cette complexité dans son implémentation. Exemple: un logiciel qui aide à faire des déclarations de revenus aura une complexité inhérente due à la complexité des lois fiscales qui spécifient comment doit être préparée une déclaration.</p>
+<p>La complexité inhérente est au sein du problème que résout un logiciel. Elle est souvent <em>visible</em> à l’utilisateur du logiciel. Elle se compose des parties du logiciel qui sont nécessairement des problèmes difficiles. N’importe quel logiciel qui tente de résoudre ces problèmes aura une manifestation de cette complexité dans son implémentation. <span style="white-space:nowrap">Exemple :</span> un logiciel qui aide à faire des déclarations de revenus aura une complexité inhérente due à la complexité des lois fiscales qui spécifient comment doit être préparée une déclaration.</p>
 </section>
 <section id="sec-ComplexiteCirc" class="level3" data-number="1.4.2">
 <h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-ComplexiteCirc"><span class="header-section-number">1.4.2</span> Complexité circonstancielle (provenant des choix de conception)</h3>
@@ -382,7 +382,7 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <section id="développement-itératif-évolutif-et-agile" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="développement-itératif-évolutif-et-agile"><span class="header-section-number">1.6</span> Développement itératif, évolutif et agile</h2>
 <p>Nous adaptons également un processus moderne de développement avec des itérations, selon une méthodologie «&nbsp;agile&nbsp;». Dans le chapitre 2 du livre de Craig Larman, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du «&nbsp;Processus Unifié&nbsp;», qui est une représentation générique de cette stratégie de développement.</p>
-<p>Nous résumons les points importants ainsi:</p>
+<p>Nous résumons les points importants <span style="white-space:nowrap">ainsi :</span></p>
 <ul>
 <li>Le développement itératif et évolutif implique de programmer et de tester précocement un système partiel dans des cycles répétitifs.</li>
 <li>Un cycle est nommé une itération et dure un temps fixe (par exemple, trois semaines) comprenant les activités d’analyse, de conception, de programmation et de test, ainsi qu’une démonstration pour solliciter des rétroactions du client (voir la <a href="#fig-DevIteratifIncremental">figure&nbsp;<span>1.6</span></a>).</li>
@@ -390,14 +390,14 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <li>Les premières itérations peuvent sembler chaotiques, car elles sont loin de la «&nbsp;bonne voie&nbsp;». Avec la rétroaction du client et l’adaptation, le système à développer converge vers une solution appropriée (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.7</span></a>). Cette instabilité peut être particulièrement prononcée dans un contexte d’entreprise en démarrage.</li>
 <li>Dans une itération, la modélisation (par exemple, avec l’UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n’est pas triviale (voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.8</span></a>). Selon le contexte du projet (voir le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), on peut décider de ne pas faire de la modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l’on appelle la <a href="DetteTechnique.html">dette technique</a>.</li>
 </ul>
-<p>Le développement itératif et incrémental amène plusieurs avantages selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>:</p>
+<p>Le développement itératif et incrémental amène plusieurs avantages selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
 <blockquote class="blockquote">
 <ul>
-<li>diminution d’échecs, une amélioration de la productivité et de la qualité;</li>
-<li>une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.);</li>
-<li>des progrès immédiatement visibles;</li>
-<li>la rétroaction, l’implication des utilisateurs et l’adaptation précoces;</li>
-<li>la complexité est gérée (restreinte à une itération);</li>
+<li>diminution d’échecs, une amélioration de la productivité et de la <span style="white-space:nowrap">qualité ;</span></li>
+<li>une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, <span style="white-space:nowrap">etc.) ;</span></li>
+<li>des progrès immédiatement <span style="white-space:nowrap">visibles ;</span></li>
+<li>la rétroaction, l’implication des utilisateurs et l’adaptation <span style="white-space:nowrap">précoces ;</span></li>
+<li>la complexité est gérée (restreinte à une <span style="white-space:nowrap">itération) ;</span></li>
 <li>la possibilité d’exploiter méthodiquement les leçons tirées d’une itération.</li>
 </ul>
 </blockquote>

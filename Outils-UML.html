@@ -330,13 +330,13 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>Tous les travaux demandés pour les <strong>examens</strong> (de LOG210 à l’École de technologie supérieure) doivent être faits <em>à la main</em>. Pour cette raison, il vaut mieux pratiquer dessiner les modèles en mode esquisse (à la main).</p>
 </blockquote>
-<p>Dans la méthodologie de ce manuel, on exploite l’outil PlantUML pour faire beaucoup de modèles. C’est un outil qui a plusieurs avantages:</p>
+<p>Dans la méthodologie de ce manuel, on exploite l’outil PlantUML pour faire beaucoup de modèles. C’est un outil qui a plusieurs <span style="white-space:nowrap">avantages :</span></p>
 <ul>
-<li>il est basé sur un langage dédié simple (anglais <em>domain specific language</em> ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version (git);</li>
-<li>il est basé sur du code libre;</li>
-<li>il s’occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est complexe);</li>
-<li>il est populaire (utilisé par des ingénieurs chez Google pour documenter Android, Pay, etc.);</li>
-<li>il existe plusieurs supports pour les outils de documentation:
+<li>il est basé sur un langage dédié simple (anglais <em>domain specific language</em> ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version <span style="white-space:nowrap">(git) ;</span></li>
+<li>il est basé sur du code <span style="white-space:nowrap">libre ;</span></li>
+<li>il s’occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est <span style="white-space:nowrap">complexe) ;</span></li>
+<li>il est populaire (utilisé par des ingénieurs chez Google pour documenter Android, Pay, <span style="white-space:nowrap">etc.) ;</span></li>
+<li>il existe plusieurs supports pour les outils de <span style="white-space:nowrap">documentation :</span>
 <ul>
 <li>extension <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">PlantUML pour VisualStudio Code</a> (<a href="#fig-PlantUMLVSCode">figure&nbsp;<span>13.1</span></a>) avec <a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel</a>&nbsp;<i class="fa-brands fa-youtube"></i>;</li>
 <li>extension <a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&amp;hl=en">PlantUML Gizmo</a> pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l’ÉTS (<a href="#fig-PlantUMLGizmo">figure&nbsp;<span>13.2</span></a>)</li>
@@ -349,7 +349,7 @@ div.csl-indent {
 </figure>
 </div>
 <p>Pour un débutant, le langage PlantUML peut sembler plus compliqué qu’utiliser un outil graphique comme Lucidchart. Cependant, pour beaucoup de diagrammes (comme les diagrammes de séquence), ça peut être plus long à créer ou à modifier. Bien que ces outils aient des gabarits ou des modes «&nbsp;UML&nbsp;», ceux-ci ne sont pas toujours conviviaux ou complets. C’est souvent juste des objets groupés et le vrai sens de la notation UML n’est pas considéré.</p>
-<p>Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l’orienter dans n’importe quel sens. Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n’ont aucun sens en UML (voir la <a href="#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>). Il est possible de corriger le diagramme, mais en combien de clics? C’est très vite tannant.</p>
+<p>Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l’orienter dans n’importe quel sens. Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n’ont aucun sens en UML (voir la <a href="#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>). Il est possible de corriger le diagramme, mais en combien de <span style="white-space:nowrap">clics ?</span> C’est très vite tannant.</p>
 <section id="exemples-de-diagramme-avec-plantuml" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="exemples-de-diagramme-avec-plantuml"><span class="header-section-number">13.1</span> Exemples de diagramme avec PlantUML</h2>
 <p>Dans le menu «&nbsp;Select sample diagram&nbsp;» de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> (voir la <a href="#fig-GizmoSamples">figure&nbsp;<span>13.3</span></a>).</p>
@@ -357,17 +357,17 @@ div.csl-indent {
 <section id="astuces-plantuml" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="astuces-plantuml"><span class="header-section-number">13.2</span> Astuces PlantUML</h2>
 <ul>
-<li><a href="https://stackoverflow.com/q/32203610/1168342">Comment intégrer PlantUML dans le <code>Readme.md</code> de GitHub/GitLab?</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i></li>
-<li>Le serveur de PlantUML.com génère un diagramme à partir d’un URL:<br>
+<li><a href="https://stackoverflow.com/q/32203610/1168342">Comment intégrer PlantUML dans le <code>Readme.md</code> de <span style="white-space:nowrap">GitHub/GitLab ?</span></a>&nbsp;<i class="fa-brands fa-stack-overflow"></i></li>
+<li>Le serveur de PlantUML.com génère un diagramme à partir d’un <span style="white-space:nowrap">URL :</span><br>
 <code>https://plantuml.com/plantuml/{forme}/{clé}</code> qui contient une clé comme<br>
 <code>Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00</code>.<br>
 La clé est en fait une représentation compressée du code source.</li>
-<li>On peut changer la forme du diagramme en changeant la partie <code>{forme}</code> de l’URL:
+<li>On peut changer la forme du diagramme en changeant la partie <code>{forme}</code> de <span style="white-space:nowrap">l’URL :</span>
 <ul>
-<li><code>{forme}</code> → <code>png</code>, <code>img</code> ou <code>svg</code> : représentation graphique correspondante;</li>
-<li><code>{forme}</code> → <code>uml</code> : récupération du code source PlantUML (ça marche avec <code>http:</code> seulement);</li>
+<li><code>{forme}</code> → <code>png</code>, <code>img</code> ou <code>svg</code> : représentation graphique <span style="white-space:nowrap">correspondante ;</span></li>
+<li><code>{forme}</code> → <code>uml</code> : récupération du code source PlantUML (ça marche avec <code>http:</code> <span style="white-space:nowrap">seulement) ;</span></li>
 </ul></li>
-<li>On peut également récupérer le code source d’un URL avec l’outil PlantUML localement avec l’option <code>-decodeurl {clé}</code> de la ligne de commande:</li>
+<li>On peut également récupérer le code source d’un URL avec l’outil PlantUML localement avec l’option <code>-decodeurl {clé}</code> de la ligne de <span style="white-space:nowrap">commande :</span></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> java <span class="at">-jar</span> plantuml.jar <span class="at">-decodeurl</span> Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@startuml</span></span>
@@ -378,7 +378,7 @@ La clé est en fait une représentation compressée du code source.</li>
 <li>Les images <code>png</code> générées par le serveur ou par l’outil contiennent une copie du code source dans les meta-données PNG.
 <ul>
 <li>On peut <a href="https://twitter.com/thefuhrmanator/status/1193565869227556868">récupérer le code source PlantUML à partir d’une image PNG</a> avec un outil sur le Web comme <a href="http://exif.regex.info/exif.cgi">ceci</a>.</li>
-<li>On peut également utiliser l’option <code>-metadata</code> de la ligne de commande PlantUML:</li>
+<li>On peut également utiliser l’option <code>-metadata</code> de la ligne de commande <span style="white-space:nowrap">PlantUML :</span></li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> java <span class="at">-jar</span> plantuml.jar <span class="at">-metadata</span> diagram.png <span class="op">&gt;</span> diagram.puml</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
