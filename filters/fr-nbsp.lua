@@ -11,22 +11,24 @@ PANDOC_VERSION:must_be_at_least '2.9.2'
 --- add non-breaking spaces according to high punctuation rules, similar to babel-french
 local function space_high_punctuation_and_quotes(inlines)
     local i = 1
+    local ascii_punctuation_pattern = '[;!%?%%:]'
+    local nbsp = '\u{202f}'
     while inlines[i] do
         if inlines[i].t == 'Str' then
-            if string.len(inlines[i].text) > 1 and string.match(inlines[i].text:sub(-1), '[;!%?%%:]') then
+            if string.len(inlines[i].text) > 1 and string.match(inlines[i].text:sub(-1), ascii_punctuation_pattern) then
                 -- insert nbsp before last char
-                inlines[i].text = inlines[i].text:sub(1, -2) .. '\u{202f}' .. inlines[i].text:sub(-1)
+                inlines[i].text = inlines[i].text:sub(1, -2) .. nbsp .. inlines[i].text:sub(-1)
             end
             -- unicode is a problem in patterns, so we just brute force it?
-            inlines[i].text = string.gsub(inlines[i].text, "€", '\u{202f}' .. "€")
-            inlines[i].text = string.gsub(inlines[i].text, "»", '\u{202f}' .. "»")
-            inlines[i].text = string.gsub(inlines[i].text, "«", "«" .. '\u{202f}')
+            inlines[i].text = string.gsub(inlines[i].text, "€", nbsp .. "€")
+            inlines[i].text = string.gsub(inlines[i].text, "»", nbsp .. "»")
+            inlines[i].text = string.gsub(inlines[i].text, "«", "«" .. nbsp)
         end
         -- quotes, citation
         if inlines[i+1] and (inlines[i].t == 'Quoted' or inlines[i].t == 'Cite') 
             and inlines[i+1].t == 'Str' 
-            and inlines[i+1].text:match('[;!%?%%:]') then
-                inlines[i+1].text = '\u{202f}' .. inlines[i+1].text
+            and inlines[i+1].text:match(ascii_punctuation_pattern) then
+                inlines[i+1].text = nbsp .. inlines[i+1].text
             -- skip the item we just spaced
             i = i + 1
         end
