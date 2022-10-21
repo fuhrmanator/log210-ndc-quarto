@@ -365,24 +365,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 data-number="5.3" class="anchored" data-anchor-id="faq-dss"><span class="header-section-number">5.3</span> FAQ DSS</h2>
 <section id="faut-il-une-opération-système-après-une-boucle" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="faut-il-une-opération-système-après-une-boucle"><span class="header-section-number">5.3.1</span> Faut-il une opération système après une <span style="white-space:nowrap">boucle ?</span></h3>
-<blockquote class="blockquote">
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Dans l’exemple pour <em>Attaquer un pays</em>, à l’extérieur de la boucle il y a une opération système <code>terminerAttaque</code>. Est-ce obligatoire d’avoir une opération système après une <span style="white-space:nowrap">boucle ?</span></p>
-</blockquote>
+</div>
+</div>
+</div>
 <p>L’opération système <code>terminerAttaque</code> sert pour signaler la fin de la boucle. Le système saura que l’acteur ne veut plus répéter les actions dans la boucle. Mais elle permet aussi de faire des calculs concernant ce qui s’est passé dans la boucle, p.&nbsp;ex. pour déterminer qui contrôle quel pays après les attaques.</p>
 <p>Cependant, si vous avez une boucle pour indiquer la possibilité de répéter une action (p.&nbsp;ex. ajouter des produits dans un système d’inventaire) et vous n’avez pas besoin de faire un calcul à la fin, alors une opération système pour terminer une telle boucle n’est pas nécessaire (surtout avec une application web).</p>
 </section>
 <section id="comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs"><span class="header-section-number">5.3.2</span> Comment faire si un cas d’utilisation a des <em>scénarios alternatifs</em>?</h3>
-<blockquote class="blockquote">
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Fait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs <code>opt</code> et <code>alt</code>) pour montrer des flots différents dans le même <span style="white-space:nowrap">DSS ?</span></p>
-</blockquote>
+</div>
+</div>
+</div>
 <p>Un objectif de faire un DSS est de <strong>définir les opérations système</strong>. Donc, on peut se poser la question <span style="white-space:nowrap">suivante :</span> les scénarios alternatifs impliquent-ils une ou plusieurs opérations système n’ayant pas encore été <span style="white-space:nowrap">définies ?</span> Si la réponse est non, on peut ignorer les scénarios alternatifs dans le DSS. Par contre, si la réponse est oui, il est essentiel de définir ces opérations système dans un DSS. Quant au choix de faire des DSS séparés ou d’utiliser la notation UML pour montrer les flots différents sur le même DSS, ça dépend de la complexité de la logique des flots. Un DSS devrait être <em>facile à comprendre</em>. C’est à vous de juger si votre DSS avec des <code>opt</code> ou <code>alt</code> est assez simple ou fait du <em>spaghetti</em>. Utilisez un autre DSS (ou plusieurs) ayant le nom des scénarios alternatifs si cela vous semble plus clair.</p>
 </section>
 <section id="est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="level3" data-number="5.3.3">
 <h3 data-number="5.3.3" class="anchored" data-anchor-id="est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"><span class="header-section-number">5.3.3</span> Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type <span style="white-space:nowrap">primitif) ?</span></h3>
-<blockquote class="blockquote">
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Puisqu’une opération système doit avoir seulement des arguments de type primitif, j’ai plusieurs opérations système avec de nombreux (plus que 5) arguments. Pourquoi il n’est pas permis de passer des objets comme <span style="white-space:nowrap">argument ?</span></p>
-</blockquote>
+</div>
+</div>
+</div>
 <p>Il n’est pas conseillé de passer des <em>objets du domaine</em> comme argument, puisque c’est la couche présentation qui invoque l’opération système. La couche présentation n’est pas censée manipuler directement les objets dans la couche domaine, sinon elle empiète sur les responsabilités de la couche domaine.</p>
 <p>Une solution pour réduire le nombre d’arguments sans utiliser un objet du domaine est d’appliquer un <a href="#Refactoring">réusinage</a> pour le <em>smell</em> nommé <em>Long Parameter List</em>, par exemple <a href="https://refactoring.com/catalog/introduceParameterObject.html">Introduce Parameter Object</a>. Notez que l’objet de paramètres que vous introduisez n’est pas un objet (classe) du <span style="white-space:nowrap">domaine !</span> La distinction est importante, car la logique d’affaires demeure dans la couche domaine. En TypeScript, une fonction peut être définie avec un objet de paramètre. Cet exemple montre même comment on peut «&nbsp;déstructurer&nbsp;» l’objet pour déclarer les variables utilisées dans la <span style="white-space:nowrap">fonction :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// inspiré de https://leanpub.com/essentialtypescript/read</span></span>
@@ -398,9 +419,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" class="level3" data-number="5.3.4">
 <h3 data-number="5.3.4" class="anchored" data-anchor-id="ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp"><span class="header-section-number">5.3.4</span> Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page web au contrôleur <span style="white-space:nowrap">GRASP ?</span></h3>
-<blockquote class="blockquote">
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Décortiquer toutes les informations dans un formulaire web est compliqué, puis on doit passer tout ça à un contrôleur GRASP comme des arguments de type primitif. Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page web au contrôleur GRASP et le laisser faire le <span style="white-space:nowrap">décorticage ?</span></p>
-</blockquote>
+</div>
+</div>
+</div>
 <p>Dans un sens ça serait plus simple (pour le code de la couche présentation). Cependant, nous voulons séparer les couches pour favoriser le remplacement de la couche présentation, par exemple à travers une application iOS ou Android.</p>
 <p>Si vous mettez la logique de la couche présentation (décortiquer un formulaire web) dans la couche domaine (le contrôleur GRASP), ça ne respecte pas les responsabilités des couches. Imaginez un tel contrôleur GRASP si vous aviez trois types d’application frontale (navigateur web, application iOS et application Android). Le contrôleur GRASP recevra des représentations de «&nbsp;formulaire&nbsp;» de chaque couche présentation différente. En passant, l’objet <code>body</code> n’a rien à voir avec une interface <span style="white-space:nowrap">Android !</span> Ce pauvre contrôleur serait obligé de connaître alors toutes les trois formes (web, iOS, Android) et ainsi sa cohésion sera beaucoup plus faible. Pour respecter les responsabilités, on laisse la couche présentation faire le décorticage et construire une opération système selon l’API définie dans le DSS. Cela simplifie aussi le contrôleur GRASP.</p>
 

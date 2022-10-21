@@ -304,9 +304,19 @@ div.csl-indent {
 <section id="créer-une-instance" class="level3" data-number="9.2.1">
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="créer-une-instance"><span class="header-section-number">9.2.1</span> Créer une instance</h3>
 <p>Certaines postconditions concernent la création d’une instance. Dans votre RDCU, vous devez respecter le GRASP Créateur. Référez-vous à la définition dans le .</p>
-<blockquote class="blockquote">
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Mise en garde
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Une erreur potentielle est de donner la responsabilité de créer à un contrôleur, puisqu’<em>il a les données pour initialiser</em> l’objet. Bien que ce soit justifiable par le principe GRASP Créateur, il vaut mieux favoriser une classe qui <em>agrège</em> l’objet à créer, le cas échéant.</p>
-</blockquote>
+</div>
+</div>
 </section>
 <section id="former-une-association" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="former-une-association"><span class="header-section-number">9.2.2</span> Former une association</h3>
@@ -398,16 +408,33 @@ Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur st
 <section id="réduire-le-décalage-des-représentations" class="level2" data-number="9.7">
 <h2 data-number="9.7" class="anchored" data-anchor-id="réduire-le-décalage-des-représentations"><span class="header-section-number">9.7</span> Réduire le décalage des représentations</h2>
 <p>Le principe du <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a> est la différence entre la modélisation (la représentation) du problème (du domaine) et la modélisation de la solution. Lorsqu’on fait l’ébauche d’une RDCU, on peut réduire le décalage des représentations principalement en s’inspirant des classes conceptuelles (du modèle du domaine) pour proposer des classes logicielles dans la solution décrite dans la RDCU. Plus une solution ressemble à la description du problème, plus elle sera facile à comprendre.</p>
-<blockquote class="blockquote">
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Mise en garde
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n’ayant aucun lien avec le modèle du domaine. Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine. Il faut vérifier avec une personne expérimentée (l’architecte du projet si possible) que l’application du pattern est justifiée, qu’elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées. Chaque fois qu’on propose des classes logicielles qui n’ont pas de liens avec la représentation du problème du domaine, on <em>augmente le décalage des représentations</em> et on rend la solution un peu plus difficile à comprendre. C’est aussi une forme de <a href="AnalyseConception.html#sec-ComplexiteCirc">Complexité circonstancielle (provenant des choix de conception)</a>. Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels. Il est très difficile, même pour les experts en conception, de trouver un bon équilibre entre toutes les <span style="white-space:nowrap">forces :</span> la maintenabilité, la simplicité, les fonctionnalités, etc. Vous pouvez en lire plus dans <a href="https://stackoverflow.com/a/18702842/1168342">cette réponse sur StackOverflow</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</p>
-</blockquote>
+</div>
+</div>
 </section>
 <section id="sec-FaireSoiMeme" class="level2" data-number="9.8">
 <h2 data-number="9.8" class="anchored" data-anchor-id="sec-FaireSoiMeme"><span class="header-section-number">9.8</span> Pattern «&nbsp;Faire soi-même&nbsp;»</h2>
 <p>Dans la section F30.8/A33.7&nbsp;<i class="fa-solid fa-book"></i>, Larman mentionne le pattern «&nbsp;Faire soi-même&nbsp;» de Peter Coad <span class="citation" data-cites="coad97a">(<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span> qui permet de réduire le <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a>, même s’il ne représente pas exactement la réalité des objets (voir la <a href="#fig-main_des">figure&nbsp;<span>9.7</span></a><span style="white-space:nowrap"> ):</span></p>
-<blockquote class="blockquote">
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><strong>Faire soi-même</strong>: «&nbsp;Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction&nbsp;»</p>
-</blockquote>
+</div>
+</div>
+</div>
 <div id="fig-main_des" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/flickr_aerust_hand_of_chance.jpg" class="img-fluid figure-img" style="width:80.0%"></p>

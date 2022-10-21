@@ -552,9 +552,16 @@ Avertissement
 <section id="classes-dassociation" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="classes-dassociation"><span class="header-section-number">4.7</span> Classes d’association</h2>
 <p>Les classes d’association dans le MDD sont le sujet de la section A32.10/F26.10&nbsp;<i class="fa-solid fa-book"></i>.</p>
-<blockquote class="blockquote">
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Une classe d’association permet de traiter une association comme une classe, et de la modéliser avec des attributs…</p>
-</blockquote>
+</div>
+</div>
+</div>
 <p>Il pourrait être utile d’avoir une classe d’association dans un MDD <span style="white-space:nowrap">si :</span></p>
 <ul>
 <li>un attribut est lié à une <span style="white-space:nowrap">association ;</span></li>
@@ -600,14 +607,28 @@ Avertissement
 </section>
 <section id="mdd_donnees" class="level3" data-number="4.9.2">
 <h3 data-number="4.9.2" class="anchored" data-anchor-id="mdd_donnees"><span class="header-section-number">4.9.2</span> Un <strong>modèle du domaine</strong> est-il la même chose qu’un <strong>modèle de données</strong>?</h3>
-<p>Voici la réponse de Craig Larman dans la section 9.2&nbsp;<i class="fa-solid fa-book"></i>:</p>
-<blockquote class="blockquote">
-<p><em>Un <strong>modèle du domaine</strong> n’est pas un <strong>modèle de données</strong> (qui représente par définition des objets persistants stockés quelque part).</em></p>
-</blockquote>
+<p>Voici la réponse de Craig Larman <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> dans la section 9.2&nbsp;<i class="fa-solid fa-book"></i>:</p>
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Un <strong>modèle du domaine</strong> n’est pas un <strong>modèle de données</strong> (qui représente par définition des objets persistants stockés quelque part).</p>
+</div>
+</div>
+</div>
 <p>Il peut y avoir des concepts dans un domaine qui ne sont pas dans la base de données. Considérez l’exemple de la carte de crédit utilisée pour payer mais qui n’est jamais stockée pour les raisons de sécurité. Avec seulement un modèle de données, cette classe conceptuelle ne serait jamais modélisée. Larman <span style="white-space:nowrap">précise :</span></p>
-<blockquote class="blockquote">
-<p><em>N’excluez donc pas une classe simplement parce que les spécifications n’indiquent pas un besoin évident de mémoriser les informations la concernant (un critère courant pour la modélisation des données quand on conçoit des bases de données relationnelles mais qui n’a pas cours en modélisation d’un domaine), ou parce que la classe conceptuelle ne possède pas d’attributs. Il est légal d’avoir une classe conceptuelle sans attribut, ou une classe conceptuelle qui joue un rôle exclusivement comportementale dans le domaine.</em></p>
-</blockquote>
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>N’excluez donc pas une classe simplement parce que les spécifications n’indiquent pas un besoin évident de mémoriser les informations la concernant (un critère courant pour la modélisation des données quand on conçoit des bases de données relationnelles mais qui n’a pas cours en modélisation d’un domaine), ou parce que la classe conceptuelle ne possède pas d’attributs. Il est légal d’avoir une classe conceptuelle sans attribut, ou une classe conceptuelle qui joue un rôle exclusivement comportementale dans le domaine.</p>
+</div>
+</div>
+</div>
 <p>Vous pouvez aussi lire <a href="https://stackoverflow.com/q/3507671/1168342">cette question</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</p>
 
 
