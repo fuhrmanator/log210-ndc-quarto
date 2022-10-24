@@ -43,9 +43,9 @@ class B {
 
 ```
 
-\newpage
+\filbreak
 
-(@) Écrire le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
+@. Écrire le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
 
 ```{.plantuml}
 @startuml
@@ -78,14 +78,10 @@ deactivate r
 @enduml
 
 ```
- 
-| Classes codées en TypeScript |
-|------------------------------|
-| (mettre votre code ici)      |
 
-: {tbl-colwidths="[100]"}
+\filbreak
 
-(@) Écrire le code pour la figure suivante.
+@. Écrire le code pour la figure suivante.
 
 ```{.plantuml}
 @startuml
@@ -109,13 +105,9 @@ deactivate Bob
 @enduml
 ```
 
-| Classes codées en TypeScript |
-|------------------------------|
-| (mettre votre code ici)      |
+\filbreak
 
-: {tbl-colwidths="[100]"}
-
-(@) Écrire le code pour la figure suivante décrivant l'utilisation d'un //Cornet// dans le jeu de Monopoly [tirée de @craig_uml_2005, figure F22.9]
+@. Écrire le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu de Monopoly [tirée de @craig_uml_2005, figure F22.9]
 ```{.plantuml}
 @startuml
 skinparam style strictuml
@@ -135,14 +127,9 @@ j -> pos : atterrirSur( j )
 @enduml
 ```
 
-| Classes codées en TypeScript |
-|------------------------------|
-| (mettre votre code ici)      |
+\filbreak
 
-
-: {tbl-colwidths="[100]"}
-
-(@) Écrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu de Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7]
+@. Écrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu de Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7]
 
 ```{.plantuml}
 @startuml
@@ -171,9 +158,3 @@ aep -> j : setPosition(prison)
 note right : selon Expert
 @enduml
 ```
-
-| Classes codées en TypeScript |
-|------------------------------|
-| (mettre votre code ici)      |
-
-: {tbl-colwidths="[100]"}
