@@ -1,6 +1,9 @@
 project:
   type: book
 
+license: "CC BY-SA"
+
+
 latex-auto-install: true
 
 crossref:
@@ -13,7 +16,6 @@ lang: fr-FR
 book:
 
   title: "Analyse et conception de logiciels"
-  subtitle: "![nuage de mots](images/wordle_ordre_alph.png){width=70%}"
   cover-image: images/wordle_ordre_alph.png
   image: images/wordle_ordre_alph.png
   
@@ -22,8 +24,6 @@ book:
     - "Yvan Ross"
   date: last-modified
   date-format: "DD MMMM YYYY à HH:mm:ss Z"
-
-  license: "CC BY-SA"
 
   chapters:
     - index.qmd # Preface
@@ -106,6 +106,10 @@ format:
     # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
       - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
       - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
+      - \usepackage{titling}
+      - \pretitle{\begin{center}
+        \includegraphics[]{images/wordle_ordre_alph.png}\LARGE\\}
+      - \posttitle{\end{center}}
 
 # filters must be run in the proper order here
 filters:
