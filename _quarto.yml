@@ -20,7 +20,7 @@ book:
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
-  date: "2022-10-19"
+  date: "2022-10-24"
   date-format: "DD MMMM YYYY"
   chapters:
     - index.qmd # Preface
@@ -72,6 +72,7 @@ format:
   pdf:
     # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: latexmk
+    # thanks: "Thanks here"
     template: partials/template.tex
     # babel-lang: french
     colorlinks: true
