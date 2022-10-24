@@ -108,7 +108,7 @@ format:
       - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
       - \usepackage{titling}
       - \pretitle{\begin{center}
-        \includegraphics[]{images/wordle_ordre_alph.png}\LARGE\\}
+        \includegraphics[]{images/wordle_ordre_alph.png}\Huge\\}
       - \posttitle{\end{center}}
 
 # filters must be run in the proper order here
