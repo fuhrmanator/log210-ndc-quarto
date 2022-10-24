@@ -20,8 +20,11 @@ book:
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
-  date: "2022-10-24"
-  date-format: "DD MMMM YYYY"
+  date: last-modified
+  date-format: "DD MMMM YYYY à HH:mm:ss Z"
+
+  license: "CC BY-SA"
+
   chapters:
     - index.qmd # Preface
     - AnalyseConception.qmd
@@ -45,6 +48,9 @@ book:
     - Diagrammes de déploiement.qmd
     - Laboratoires.qmd
     - references.qmd
+    # Annexes
+  appendices:
+    - Exercices.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib
@@ -56,12 +62,15 @@ link-citations: true # pandoc setting
 latex-auto-mk: true
 link-external-icon: true
 
+appendix-style: default
+
 format:
 
   epub: 
     epub-cover-image: "images/wordle_ordre_alph.png"
 
   html:
+    title-block-banner: true
     header-includes: |
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
             rel="stylesheet" data-external="1"/>
@@ -114,3 +123,5 @@ filters:
 # javaPath: C:/Program Files/Java/jdk1.8.0_331/bin/java.exe
 # plantumlPath: G:/My Drive/PlantUML/plantuml.jar
 # dotPath: C:/Program Files/Graphviz/bin/dot.exe
+
+### citation info
