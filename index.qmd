@@ -15,10 +15,9 @@ Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
 
 1. Here's a diagram
 
-    ```{.plantuml}
+    ```{.plantuml #fig-abc caption="Diagramme de *classes logicielles* décrivant une *solution* au problème du jeu de dés. La conception s'inspire du modèle du problème, afin de faciliter sa compréhension."}
     @startuml
-    skinparam style strictuml
-    scale 1.0
+    !include ecriture.pumlinclude
     participant ":Bernard" as Bob
     participant ":Alice" as Alice
     participant ":Autre" as Other
@@ -36,3 +35,25 @@ Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
     deactivate Bob
     @enduml
     ```
+
+```{.plantuml #fig-def}
+@startuml
+skinparam style strictuml
+scale 1.0
+participant ":Bernard" as Bob
+participant ":Alice" as Alice
+participant ":Autre" as Other
+[-> Bob : init
+activate Bob
+Bob -> Alice : allô(12)
+activate Alice
+
+create Other
+Alice --> Other : create
+
+Alice -->> Bob : "oui"
+deactivate Alice
+[<<-- Bob : 15
+deactivate Bob
+@enduml
+```

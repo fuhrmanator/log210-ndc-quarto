@@ -47,7 +47,6 @@ book:
     - ConceptionPackages.qmd
     - Diagrammes de déploiement.qmd
     - Laboratoires.qmd
-    - ExercicesCoderSequence.qmd
     - references.qmd
     # Annexes
   appendices:
