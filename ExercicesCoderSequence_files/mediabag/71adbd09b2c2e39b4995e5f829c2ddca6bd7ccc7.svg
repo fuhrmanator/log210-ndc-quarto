@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="438px" preserveAspectRatio="none" style="width:565px;height:438px;background:#FFFFFF;" version="1.1" viewBox="0 0 565 438" width="565px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="251.4922" style="stroke:#181818;stroke-width:1.0;" width="10" x="215" y="133.9922"/><rect fill="#FFFFFF" height="162.0938" style="stroke:#181818;stroke-width:1.0;" width="10" x="315" y="223.3906"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="219.5" x2="219.5" y1="52.5938" y2="431.9453"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="320" x2="320" y1="222.9063" y2="431.9453"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="464" x2="464" y1="403.1484" y2="431.9453"/><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="77" x="181.5" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="188.5" y="41.292">:Registre</text><rect fill="#FFFFFF" height="251.4922" style="stroke:#181818;stroke-width:1.0;" width="10" x="215" y="133.9922"/><rect fill="#FFFFFF" height="162.0938" style="stroke:#181818;stroke-width:1.0;" width="10" x="315" y="223.3906"/><path d="M83,67.5938 L83,107.5938 L215,107.5938 L215,77.5938 L205,67.5938 L83,67.5938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M205,67.5938 L205,77.5938 L215,77.5938 L205,67.5938 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="111" x="89" y="84.6606">selon Créateur et</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="89" y="99.7935">Contrôleur</text><polygon fill="#181818" points="203,129.9922,213,133.9922,203,137.9922" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="0" x2="209" y1="133.9922" y2="133.9922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="7" y="128.9263">créerNouvelleVente</text><path d="M230,146.9922 L230,186.9922 L387,186.9922 L387,156.9922 L377,146.9922 L230,146.9922 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M377,146.9922 L377,156.9922 L387,156.9922 L377,146.9922 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="236" y="164.0591">Registre crée une</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="236" y="179.1919">Vente selon Créateur</text><polygon fill="#181818" points="278,209.3906,288,213.3906,278,217.3906" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="225" x2="284" y1="213.3906" y2="213.3906"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="232" y="208.3247">create</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="60" x="290" y="192.2578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="297" y="212.2529">:Vente</text><path d="M330,238.5547 L330,308.5547 L558,308.5547 L558,248.5547 L548,238.5547 L330,238.5547 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M548,238.5547 L548,248.5547 L558,248.5547 L548,238.5547 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="200" x="336" y="255.6216">selon Créateur, Vente crée une</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="207" x="336" y="270.7544">collection vide (par exemple une</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="194" x="336" y="285.8872">List) destinée a mémoriser les</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="166" x="336" y="301.02">instances de LigneArticles</text><path d="M5,319.0859 L5,359.0859 L310,359.0859 L310,329.0859 L300,319.0859 L5,319.0859 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M300,319.0859 L300,329.0859 L310,329.0859 L300,319.0859 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="280" x="11" y="336.1528">l'activation de Vente est implicitement dans</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="242" x="11" y="351.2856">le constructeur de l'instance de Vente</text><polygon fill="#181818" points="378,381.4844,388,385.4844,378,389.4844" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="320" x2="384" y1="385.4844" y2="385.4844"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="327" y="380.4185">create</text><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148" x="390" y="364.3516"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="414" y="384.3467">lignesArticles :</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134" x="397" y="400.6436">List&lt;LigneArticles&gt;</text><!--MD5=[9511d2c163139683d5e32d57a236767e]
+@startuml
+skinparam style strictuml
+scale 1.0
+participant ":Registre" as r
+note left of r : selon Créateur et\nContrôleur
+->r : créerNouvelleVente
+activate r
+note right of r : Registre crée une\nVente selon Créateur
+participant ":Vente" as s
+create s
+r- ->s : create
+activate s
+note right of s
+selon Créateur, Vente crée une 
+collection vide (par exemple une
+List) destinée a mémoriser les
+instances de LigneArticles
+end note
+note left of s
+l'activation de Vente est implicitement dans 
+le constructeur de l'instance de Vente
+end note
+participant "lignesArticles :\nList<LigneArticles>" as li
+create li
+s- ->li : create
+deactivate s
+deactivate r
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
