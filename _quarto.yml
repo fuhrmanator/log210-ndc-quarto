@@ -66,8 +66,8 @@ appendix-style: default
 
 format:
 
-  epub: 
-    epub-cover-image: "images/wordle_ordre_alph.png"
+  # epub: 
+  #   epub-cover-image: "images/wordle_ordre_alph.png"
 
   html:
     title-block-banner: true
@@ -78,38 +78,38 @@ format:
     theme: simplex
     
 
-  pdf:
-    # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
-    pdf-engine: latexmk
-    # thanks: "Thanks here"
-    template: partials/template.tex
-    # babel-lang: french
-    colorlinks: true
-    documentclass: scrbook
-    toc: true
-    toc-depth: 2
-    lof: true
-    lot: true
-    highlight-style: github
-    geometry:
-      - top=30mm
-      - left=20mm
-      - heightrounded
-    fontfamily: libertinus
-    fontfamilyoptions: 
-      - osf
-      - p
-    fontsize: 11pt
-    header-includes: 
-      - \usepackage{colortbl}
-      - \usepackage[scaled=.8]{cascadia-code}
-    # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
-      - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
-      - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
-      - \usepackage{titling}
-      - \pretitle{\begin{center}
-        \includegraphics[]{images/wordle_ordre_alph.png}\Huge\\}
-      - \posttitle{\end{center}}
+  # pdf:
+  #   # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
+  #   pdf-engine: latexmk
+  #   # thanks: "Thanks here"
+  #   template: partials/template.tex
+  #   # babel-lang: french
+  #   colorlinks: true
+  #   documentclass: scrbook
+  #   toc: true
+  #   toc-depth: 2
+  #   lof: true
+  #   lot: true
+  #   highlight-style: github
+  #   geometry:
+  #     - top=30mm
+  #     - left=20mm
+  #     - heightrounded
+  #   fontfamily: libertinus
+  #   fontfamilyoptions: 
+  #     - osf
+  #     - p
+  #   fontsize: 11pt
+  #   header-includes: 
+  #     - \usepackage{colortbl}
+  #     - \usepackage[scaled=.8]{cascadia-code}
+  #   # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
+  #     - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
+  #     - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
+  #     - \usepackage{titling}
+  #     - \pretitle{\begin{center}
+  #       \includegraphics[]{images/wordle_ordre_alph.png}\Huge\\}
+  #     - \posttitle{\end{center}}
 
 # filters must be run in the proper order here
 filters:
