@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyse et conception de logiciels - Appendix A — Exercice : Coder des méthodes à partir des diagrammes d’interaction</title>
+<title>Analyse et conception de logiciels - Appendix A — Exercice : Coder des méthodes à partir des diagrammes de séquence</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,7 +152,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Appendix A — <span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes d’interaction</h1>
+      <h1 class="quarto-secondary-nav-title">Appendix A — <span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes de séquence</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -163,7 +163,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Appendix A — <span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes d’interaction</h1>
+      <h1 class="title d-none d-lg-block">Appendix A — <span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes de séquence</h1>
                       </div>
   </div>
     
@@ -310,7 +310,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercices.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes d’interaction</span></a>
+  <a href="./Exercices.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes de séquence</span></a>
   </div>
 </li>
       </ul>
@@ -343,7 +343,12 @@ Astuce
 </div>
 </div>
 <p>Voici un modèle à suivre. Pour le diagramme <span style="white-space:nowrap">suivant :</span></p>
-<p><img src="Exercices_files/mediabag/66220ae337b796a887801d01890ab45732aa9635.svg" id="fig-modele" class="img-fluid"></p>
+<div id="fig-modele" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Exercices_files/mediabag/66220ae337b796a887801d01890ab45732aa9635.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;A.1: Exemple de diagramme de séquence.</figcaption><p></p>
+</figure>
+</div>
 <p>On code les classes suivantes en <span style="white-space:nowrap">TypeScript :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> A {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    b<span class="op">:</span> B<span class="op">;</span>  <span class="co">// A envoie un message à B, visibilité d'attribut</span></span>
