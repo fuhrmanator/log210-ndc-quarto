@@ -45,7 +45,7 @@ class B {
 
 \filbreak
 
-@. Écrire le code pour la figure suivante.
+1. Écrire le code pour la figure suivante.
 
     ```{.plantuml}
     @startuml
@@ -71,7 +71,7 @@ class B {
 
 \filbreak
 
-@. Écrire le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
+2. Écrire le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
 
     ```{.plantuml}
     @startuml
@@ -106,7 +106,7 @@ class B {
 
 \filbreak
 
-@. Écrire le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu de Monopoly [tirée de @craig_uml_2005, figure F22.9]
+3. Écrire le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu de Monopoly [tirée de @craig_uml_2005, figure F22.9]
 
     ```{.plantuml}
     @startuml
@@ -129,7 +129,7 @@ class B {
 
 \filbreak
 
-@. Écrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu de Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7]
+4. Écrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu de Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7]
 
     ```{.plantuml}
     @startuml

@@ -10,3 +10,29 @@ Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
 
 ## Remerciements {.unnumbered}
 
+
+## Test {.unnumbered}
+
+1. Here's a diagram
+
+    ```{.plantuml}
+    @startuml
+    skinparam style strictuml
+    scale 1.0
+    participant ":Bernard" as Bob
+    participant ":Alice" as Alice
+    participant ":Autre" as Other
+    [-> Bob : init
+    activate Bob
+    Bob -> Alice : allô(12)
+    activate Alice
+
+    create Other
+    Alice --> Other : create
+
+    Alice -->> Bob : "oui"
+    deactivate Alice
+    [<<-- Bob : 15
+    deactivate Bob
+    @enduml
+    ```
