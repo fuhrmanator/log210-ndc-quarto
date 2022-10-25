@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyse et conception de logiciels - 13&nbsp; Outils pour la modélisation UML</title>
+<title>Analyse et conception de logiciels - 21&nbsp; Exercice : Coder des méthodes à partir des diagrammes de séquence</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,8 +112,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./GRASP-GoF.html" rel="next">
-<link href="./TravailEquipe.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./Laboratoires.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -153,7 +153,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes de séquence</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -164,7 +164,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></h1>
+      <h1 class="title d-none d-lg-block"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes de séquence</span></h1>
                       </div>
   </div>
     
@@ -258,7 +258,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -298,7 +298,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ExercicesCoderSequence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes de séquence</span></a>
+  <a href="./ExercicesCoderSequence.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Coder des méthodes à partir des diagrammes de séquence</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -326,14 +326,7 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table des matières</h2>
-   
-  <ul>
-  <li><a href="#exemples-de-diagramme-avec-plantuml" id="toc-exemples-de-diagramme-avec-plantuml" class="nav-link active" data-scroll-target="#exemples-de-diagramme-avec-plantuml"><span class="toc-section-number">13.1</span>  Exemples de diagramme avec PlantUML</a></li>
-  <li><a href="#astuces-plantuml" id="toc-astuces-plantuml" class="nav-link" data-scroll-target="#astuces-plantuml"><span class="toc-section-number">13.2</span>  Astuces PlantUML</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -341,97 +334,57 @@ div.csl-indent {
 
 
 
-<p>Le chapitre F20/A22&nbsp;<i class="fa-solid fa-book"></i>&nbsp;définit quelques termes importants pour la modélisation avec UML et les outils.</p>
-<p>En mode esquisse, lorsqu’on dessine un modèle sur un tableau blanc ou un papier, un outil pratique pour numériser le tout est <strong>Office Lens</strong> (<a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&amp;hl=fr_CA">Android</a> ou <a href="https://apps.apple.com/ca/app/microsoft-office-lens-pdf-scan/id975925059">iOS</a>). Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/OfficeLensWhiteBoard.jpg" class="img-fluid figure-img" width="200"></p>
-<p></p><figcaption class="figure-caption">Office Lens peut détecter le cadre d’un dessin sur un tableau blanc ou papier et le transformer.</figcaption><p></p>
-</figure>
-</div>
-<div class="callout-caution callout callout-style-default callout-captioned">
+<p>Pour chacun des diagrammes suivants, écrire les classes TypeScript avec les méthodes indiquées dans le diagramme. <span class="citation" data-cites="craig_uml_2005">(Cet exercice complémente le livre de <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005</a> à la section F18.6/A20.4.)</span></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Mise en garde
+Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Tous les travaux demandés pour les <strong>examens</strong> (de LOG210 à l’École de technologie supérieure) doivent être faits <em>à la main</em>. Pour cette raison, il vaut mieux pratiquer dessiner les modèles en mode esquisse (à la main).</p>
+<p>Vous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n’est pas forcément permis lors d’un examen.</p>
 </div>
 </div>
-<p>Dans la méthodologie de ce manuel, on exploite l’outil PlantUML pour faire beaucoup de modèles. C’est un outil qui a plusieurs <span style="white-space:nowrap">avantages :</span></p>
-<ul>
-<li>il est basé sur un langage dédié simple (anglais <em>domain specific language</em> ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version <span style="white-space:nowrap">(git) ;</span></li>
-<li>il est basé sur du code <span style="white-space:nowrap">libre ;</span></li>
-<li>il s’occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est <span style="white-space:nowrap">complexe) ;</span></li>
-<li>il est populaire (utilisé par des ingénieurs chez Google pour documenter Android, Pay, <span style="white-space:nowrap">etc.) ;</span></li>
-<li>il existe plusieurs supports pour les outils de <span style="white-space:nowrap">documentation :</span>
-<ul>
-<li>extension <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">PlantUML pour VisualStudio Code</a> (<a href="#fig-PlantUMLVSCode">figure&nbsp;<span>13.1</span></a>) avec <a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel</a>&nbsp;<i class="fa-brands fa-youtube"></i>;</li>
-<li>extension <a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&amp;hl=en">PlantUML Gizmo</a> pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l’ÉTS (<a href="#fig-PlantUMLGizmo">figure&nbsp;<span>13.2</span></a>)</li>
-</ul></li>
-</ul>
-<div id="fig-PlantUMLVSCode" class="quarto-figure quarto-figure-center anchored">
+<p>Voici un modèle à suivre. Pour le diagramme <span style="white-space:nowrap">suivant :</span></p>
+<div id="fig-modele" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/PlantUMLVSCode.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.1: L’extension PlantUML pour VisualStudio Code.</figcaption><p></p>
+<p><img src="ExercicesCoderSequence_files/mediabag/66220ae337b796a887801d01890ab45732aa9635.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;21.1: Exemple de diagramme de séquence.</figcaption><p></p>
 </figure>
 </div>
-<p>Pour un débutant, le langage PlantUML peut sembler plus compliqué qu’utiliser un outil graphique comme Lucidchart. Cependant, pour beaucoup de diagrammes (comme les diagrammes de séquence), ça peut être plus long à créer ou à modifier. Bien que ces outils aient des gabarits ou des modes «&nbsp;UML&nbsp;», ceux-ci ne sont pas toujours conviviaux ou complets. C’est souvent juste des objets groupés et le vrai sens de la notation UML n’est pas considéré.</p>
-<p>Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l’orienter dans n’importe quel sens. Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n’ont aucun sens en UML (voir la <a href="#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>). Il est possible de corriger le diagramme, mais en combien de <span style="white-space:nowrap">clics ?</span> C’est très vite tannant.</p>
-<section id="exemples-de-diagramme-avec-plantuml" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="exemples-de-diagramme-avec-plantuml"><span class="header-section-number">13.1</span> Exemples de diagramme avec PlantUML</h2>
-<p>Dans le menu «&nbsp;Select sample diagram&nbsp;» de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> (voir la <a href="#fig-GizmoSamples">figure&nbsp;<span>13.3</span></a>).</p>
-</section>
-<section id="astuces-plantuml" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="astuces-plantuml"><span class="header-section-number">13.2</span> Astuces PlantUML</h2>
-<ul>
-<li><a href="https://stackoverflow.com/q/32203610/1168342">Comment intégrer PlantUML dans le <code>Readme.md</code> de <span style="white-space:nowrap">GitHub/GitLab ?</span></a>&nbsp;<i class="fa-brands fa-stack-overflow"></i></li>
-<li>Le serveur de PlantUML.com génère un diagramme à partir d’un <span style="white-space:nowrap">URL :</span><br>
-<code>https://plantuml.com/plantuml/{forme}/{clé}</code> qui contient une clé comme<br>
-<code>Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00</code>.<br>
-La clé est en fait une représentation compressée du code source.</li>
-<li>On peut changer la forme du diagramme en changeant la partie <code>{forme}</code> de <span style="white-space:nowrap">l’URL :</span>
-<ul>
-<li><code>{forme}</code> → <code>png</code>, <code>img</code> ou <code>svg</code> : représentation graphique <span style="white-space:nowrap">correspondante ;</span></li>
-<li><code>{forme}</code> → <code>uml</code> : récupération du code source PlantUML (ça marche avec <code>http:</code> <span style="white-space:nowrap">seulement) ;</span></li>
-</ul></li>
-<li>On peut également récupérer le code source d’un URL avec l’outil PlantUML localement avec l’option <code>-decodeurl {clé}</code> de la ligne de <span style="white-space:nowrap">commande :</span></li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> java <span class="at">-jar</span> plantuml.jar <span class="at">-decodeurl</span> Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@startuml</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Alice</span> <span class="at">-</span><span class="op">&gt;</span> Bob: Authentication Request</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Bob</span> <span class="at">--</span><span class="op">&gt;</span> Alice: Authentication Response</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">@enduml</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Les images <code>png</code> générées par le serveur ou par l’outil contiennent une copie du code source dans les meta-données PNG.
-<ul>
-<li>On peut <a href="https://twitter.com/thefuhrmanator/status/1193565869227556868">récupérer le code source PlantUML à partir d’une image PNG</a> avec un outil sur le Web comme <a href="http://exif.regex.info/exif.cgi">ceci</a>.</li>
-<li>On peut également utiliser l’option <code>-metadata</code> de la ligne de commande <span style="white-space:nowrap">PlantUML :</span></li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> java <span class="at">-jar</span> plantuml.jar <span class="at">-metadata</span> diagram.png <span class="op">&gt;</span> diagram.puml</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-<div id="fig-PlantUMLGizmo" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/PlantUMLGizmoSlides.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.2: PlantUML Gizmo pour Google Docs et Google Slides.</figcaption><p></p>
-</figure>
-</div>
-<div id="fig-GizmoSamples" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/SelectSampleDiagramGizmo.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.3: PlantUML Gizmo offre plusieurs exemples de diagramme UML.</figcaption><p></p>
-</figure>
-</div>
-<div id="fig-LucidchartUML" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/LucidchartDSSBotched.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.4: Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidcharts. C’est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n’y a pas de sémantique UML dans l’outil. Par exemple, un «&nbsp;messages&nbsp;» dans Lucidcharts est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d’autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloque «&nbsp;loop&nbsp;». La ligne de vie de l’acteur Étudiant se transforme en diagonale lorsque l’acteur est déplacé à droite. Un vrai message UML est normalement toujours à l’horizontale et une vraie ligne de vie est toujours à la verticale. Puisque Lucidcharts ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d’outil.</figcaption><p></p>
-</figure>
-</div>
+<p>On code les classes suivantes en <span style="white-space:nowrap">TypeScript :</span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> A {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    b<span class="op">:</span> B<span class="op">;</span>  <span class="co">// A envoie un message à B, visibilité d'attribut</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">execute</span>(arg0<span class="op">:</span><span class="dt">number</span>)<span class="op">:</span><span class="dt">any</span> {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> result <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">b</span><span class="op">.</span><span class="fu">setItem</span>(<span class="st">"Fred"</span>)<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> B {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">setItem</span>(arg0<span class="op">:</span><span class="dt">string</span>)<span class="op">:</span><span class="dt">any</span> {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">//...</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol class="example" type="1">
+<li><p>Écrire le code pour la figure suivante.</p>
+<p><img src="ExercicesCoderSequence_files/mediabag/05f2d042e4435df182f757ac9d52baab322fb59b.svg" class="img-fluid"></p></li>
+</ol>
+<ol start="2" class="example" type="1">
+<li><p>Écrire le code pour la figure suivante décrivant la création de la collection de Vente <span class="citation" data-cites="craig_uml_2005">(tirée de <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005</a>, figure. 17.6)</span>.</p>
+<p><img src="ExercicesCoderSequence_files/mediabag/71adbd09b2c2e39b4995e5f829c2ddca6bd7ccc7.svg" class="img-fluid"></p></li>
+</ol>
+<ol start="3" class="example" type="1">
+<li><p>Écrire le code pour la figure suivante décrivant l’utilisation d’un <em>Cornet</em> dans le jeu de Monopoly <span class="citation" data-cites="craig_uml_2005">(tirée de <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. F22.9</a>)</span></p>
+<p><img src="ExercicesCoderSequence_files/mediabag/fd01a1b1a3d4a2f43801f23133871b7fe2e097e8.svg" class="img-fluid"></p></li>
+</ol>
+<ol start="4" class="example" type="1">
+<li><p>Écrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode <code>atterrirSur</code> dans le jeu de Monopoly <span class="citation" data-cites="craig_uml_2005">(tirées de <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. F22.6</a> et F22.7)</span></p>
+<p><img src="ExercicesCoderSequence_files/mediabag/a1e85803bfda1585abb8dcbccadc4e4453b52018.svg" class="img-fluid"></p>
+<p><img src="ExercicesCoderSequence_files/mediabag/b90982aa6769dadf50c96bb28e980a678d27dd01.svg" class="img-fluid"></p></li>
+</ol>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
@@ -439,7 +392,6 @@ La clé est en fait une représentation compressée du code source.</li>
 Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
 </div>
 </div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -556,13 +508,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./TravailEquipe.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></span>
+      <a href="./Laboratoires.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./GRASP-GoF.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">Bibliographie</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
