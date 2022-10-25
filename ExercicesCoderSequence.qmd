@@ -9,7 +9,7 @@ Vous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n
 
 Voici un modèle à suivre. Pour le diagramme suivant:
 
-```{.plantuml #fig-modele caption="Exemple de diagramme de séquence."}
+```{.plantuml #fig-modele caption="Exemple de diagramme de séquence." }
 @startuml
 scale 1.0
 skinparam style strictuml
@@ -146,7 +146,7 @@ class B {
     @enduml
     ```
 
-    ```{.plantuml}
+    ```{.plantuml }
     @startuml
     skinparam style strictuml
     scale 1.0

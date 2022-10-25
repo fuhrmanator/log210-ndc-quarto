@@ -47,10 +47,11 @@ book:
     - ConceptionPackages.qmd
     - Diagrammes de déploiement.qmd
     - Laboratoires.qmd
+    - ExercicesCoderSequence.qmd
     - references.qmd
     # Annexes
   appendices:
-    - Exercices.qmd
+    - ExercicesCoderSequence.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib
