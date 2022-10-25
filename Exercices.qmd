@@ -1,4 +1,4 @@
-# Exercice: Coder des méthodes à partir des diagrammes d’interaction
+# Exercice: Coder des méthodes à partir des diagrammes de séquence
 
 Pour chacun des diagrammes suivants, écrire les classes TypeScript avec les méthodes indiquées dans le diagramme. 
 [Cet exercice complémente le livre de @craig_uml_2005 à la section F18.6/A20.4.]
@@ -9,7 +9,7 @@ Vous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n
 
 Voici un modèle à suivre. Pour le diagramme suivant:
 
-```{.plantuml #fig-modele}
+```{.plantuml #fig-modele caption="Exemple de diagramme de séquence."}
 @startuml
 scale 1.0
 skinparam style strictuml
