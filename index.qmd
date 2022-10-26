@@ -1,12 +1,40 @@
 # Préface {.unnumbered}
 
-Ce manuel a été réalisé avec le soutien de la [fabriqueREL](https://fabriquerel.org/).
+Ce livre vise à décrire une méthodologie de développement de logiciel qui répond à des besoins dans un domaine d'application dans lequel l'équipe de développement n'a pas nécessairement une expertise importante.
+Pour palier ce manque d'expertise et pour concevoir un logiciel avec des abstractions (des classes) plus intuitives, on fait une _analyse_ du domaine et on propose une conception du logiciel à développer.
+Pour faire face à la complexité, on fait ces activités en itérations ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction.
 
-Ce manuel a été produit par le logiciel Quarto.
-Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
+Le présent manuel a commencé comme des notes de cours pour le cours _LOG210: Analyse et conception de logiciels_ dans les programmes de Génie logiciel (LOG) et Génie des technologies de l'information (GTI) de l'École de technologie supérieure.
+LOG210 a été mis sur pied au début des années 2000 et le livre obligatoire a toujours été le fameux _Applying UML and Patterns_ de Craig Larman qui était à sa 2^e^ édition à l'époque.
+En 2005 la 3^e^ édition a été imprimée avec plusieurs traductions, notamment la version française [-@craig_uml_2005].
+Pendant plus de 10 ans ce livre a été apprécié par les personnes étudiantes.
+Mais pour le corps enseignant donnant le cours, le manque d'exercices dans le livre a toujours été un inconvénient.
+En plus, certains sujets (les cas d'utilisation) dans le livre de Larman sont moins pertinents en industrie aujourd'hui, puis  d'autres sujets (le développement piloté par les tests, le travail en équipe, les cadriciels Web) sont devenus plus importants.
+Finalement, la traduction française du livre est en rupture de stocke depuis plusieurs années.
+Ce manuel essaie de pallier tous ces problèmes, sous forme de ressource éducative libre (REL).
 
 ## Pourquoi une ressource educative libre? {.unnumbered}
 
+Aujourd'hui les logiciels libres sont très répandus.
+Dans le cadre de l'enseignement, nous utilisons les dépôts de code source libre comme GitHub et GitLab, car ces plateformes permettent de collaborer, d'évaluer et de valider des logiciels dans les communautés de logiciel libre.
+Il est donc naturel d'imaginer une forme analogique pour le contenu de ce manuel, soit une **ressource éducative libre (REL)**, qui est également développé à travers un dépôt libre (GitHub dans ce cas). 
+
+Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels libres:
+
+- Quarto [-@noauthor_quarto_2022] (le langage source du texte est [Markdown](https://quarto.org/docs/authoring/markdown-basics.html));
+- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022] font partie des composantes exploitées par Quarto; 
+- PlantUML [-@noauthor_plantuml_2022] pour les figures sous forme de texte (faciles à actualiser).
+
+Autant possible, les figures passent par un format SVG afin que le texte soit "trouvable" par les moteurs de recherche.
+
+Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'information, pour donner une meilleure inclusivité des personnes apprenantes et enseignantes.  
 
 ## Remerciements {.unnumbered}
+
+Ce manuel a été réalisé avec le soutien de la [fabriqueREL](https://fabriquerel.org/).
+
+## Sources du manuel
+
+Ce manuel a été produit par le logiciel Quarto.
+Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
 
