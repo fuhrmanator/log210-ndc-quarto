@@ -22,6 +22,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -101,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Date De Publication</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">26 octobre 2022 à 13:47:07 +00:00</p>
+        <p class="date">27 octobre 2022 à 18:53:13 +00:00</p>
       </div>
     </div>
       
@@ -259,8 +278,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#préface" id="toc-préface" class="nav-link active" data-scroll-target="#préface">Préface</a>
   <ul class="collapse">
-  <li><a href="#pourquoi-une-ressource-educative-libre" id="toc-pourquoi-une-ressource-educative-libre" class="nav-link" data-scroll-target="#pourquoi-une-ressource-educative-libre">Pourquoi une ressource educative <span style="white-space:nowrap">libre ?</span></a></li>
+  <li><a href="#pourquoi-une-ressource-éducative-libre" id="toc-pourquoi-une-ressource-éducative-libre" class="nav-link" data-scroll-target="#pourquoi-une-ressource-éducative-libre">Pourquoi une ressource éducative <span style="white-space:nowrap">libre ?</span></a></li>
   <li><a href="#remerciements" id="toc-remerciements" class="nav-link" data-scroll-target="#remerciements">Remerciements</a></li>
+  <li><a href="#sources-du-manuel" id="toc-sources-du-manuel" class="nav-link" data-scroll-target="#sources-du-manuel">Sources du manuel</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -274,15 +294,67 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="préface" class="level1 unnumbered">
 <p><img src="images/wordle_ordre_alph.png" title="Analyse et conception de logiciels" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Préface</h1>
-<p>Ce manuel a été réalisé avec le soutien de la <a href="https://fabriquerel.org/">fabriqueREL</a>.</p>
-<p>Ce manuel a été produit par le logiciel Quarto. Pour en savoir plus sur Quarto, visitez <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
-<section id="pourquoi-une-ressource-educative-libre" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="pourquoi-une-ressource-educative-libre">Pourquoi une ressource educative <span style="white-space:nowrap">libre ?</span></h2>
+<p>Ce livre vise à décrire une méthodologie de développement de logiciel qui répond à des besoins dans un domaine d’application dans lequel l’équipe de développement n’a pas nécessairement une expertise importante. Pour pallier ce manque d’expertise et pour concevoir un logiciel avec des abstractions (des classes) plus intuitives, on fait une <em>analyse</em> du domaine et on propose une conception du logiciel à développer. Pour faire face à la complexité, on fait ces activités en itérations ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction.</p>
+<p>Le présent manuel a commencé comme des notes de cours pour le cours <em>Analyse et conception de logiciel (LOG210)</em> dans les programmes de baccalauréat en Génie logiciel (LOG) et en Génie des technologies de l’information (GTI) de l’École de technologie supérieure. LOG210 a été mis sur pied au début des années 2000 et le livre obligatoire a toujours été le fameux <em>Applying UML and Patterns</em> de Craig Larman qui était à sa 2<sup>e</sup> édition <span class="citation" data-cites="larman_applying_2001">(<a href="references.html#ref-larman_applying_2001" role="doc-biblioref">2001</a>)</span> à l’époque. En 2005 la 3<sup>e</sup> édition a été publiée avec plusieurs traductions, notamment en français <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Pendant plus de 10 ans, le livre de Larman a été apprécié par les personnes étudiantes.</p>
+<p>Mais pour le corps enseignant donnant le cours, le manque d’exercices dans le livre a toujours été un inconvénient. En plus, certains sujets (comme les cas d’utilisation et les diagrammes de communication) dans le livre de Larman sont moins pertinents en industrie aujourd’hui, puis d’autres sujets (comme le développement piloté par les tests, le travail en équipe, les cadriciels Web) sont devenus plus importants. Une 4<sup>e</sup> édition n’a jamais été publiée, et finalement, la traduction française du livre est en rupture de stocke depuis plusieurs années. Ce manuel essaie de pallier tous ces problèmes, sous forme de ressource éducative libre (REL).</p>
+<section id="pourquoi-une-ressource-éducative-libre" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="pourquoi-une-ressource-éducative-libre">Pourquoi une ressource éducative <span style="white-space:nowrap">libre ?</span></h2>
+<p>Aujourd’hui les logiciels libres sont très répandus. Dans le cadre de l’enseignement, nous utilisons les dépôts de code source libre comme GitHub et GitLab, car ces plateformes permettent de collaborer, d’évaluer et de valider des logiciels dans les communautés de logiciel libre. Il est donc naturel d’imaginer une forme analogique pour le contenu de ce manuel, soit une <strong>ressource éducative libre (REL)</strong>, qui est également développée à travers un dépôt libre (GitHub dans ce cas).</p>
+<p>Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels <span style="white-space:nowrap">libres :</span></p>
+<ul>
+<li>Quarto <span class="citation" data-cites="noauthor_quarto_2022">(<a href="references.html#ref-noauthor_quarto_2022" role="doc-biblioref">2022</a>)</span> (le langage source du texte est <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown</a><span style="white-space:nowrap">) ;</span></li>
+<li>Pandoc <span class="citation" data-cites="noauthor_pandoc_2022">(<a href="references.html#ref-noauthor_pandoc_2022" role="doc-biblioref">2022</a>)</span> et LaTeX <span class="citation" data-cites="noauthor_latex_2022">(<a href="references.html#ref-noauthor_latex_2022" role="doc-biblioref">2022</a>)</span> font partie des composantes exploitées par <span style="white-space:nowrap">Quarto ;</span></li>
+<li>PlantUML <span class="citation" data-cites="noauthor_plantuml_2022">(<a href="references.html#ref-noauthor_plantuml_2022" role="doc-biblioref">2022</a>)</span> pour les figures sous forme de texte (faciles à actualiser).</li>
+</ul>
+<p>Autant possibles, les figures passent par un format SVG afin que le texte soit «&nbsp;trouvable&nbsp;» par les moteurs de recherche.</p>
+<p>Finalement, il y a une tendance à faire des REL pour favoriser l’accès à l’information, pour donner une meilleure inclusivité des personnes apprenantes et enseignantes.</p>
 </section>
 <section id="remerciements" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="remerciements">Remerciements</h2>
+<p>Comme beaucoup de ressources libres, ce manuel existe grâce à une collaboration avec de nombreuses personnes. La <a href="https://fabriquerel.org">fabriqueREL</a> (ressources éducatives libres) a soutenu financièrement et pédagogiquement l’élaboration du manuel lors de la période 2022-2023. Les conseils avec la dimension <em>Creative Commons</em> de la licence du contenu ont été fort utiles. Nous remercions les membres de suivi du projet dans le cadre ce travail pris en charge par la fabriqueREL pour leur <span style="white-space:nowrap">support :</span></p>
+<ul>
+<li>Marianne Dubé, conseillère pédagogique à l’Université de Sherbrooke et coordonnatrice de la fabriqueREL.</li>
+<li>Mouna Moumene, bibliothécaire à l’École de technologie supérieure (ÉTS).</li>
+<li>Marjolaine Lewis, conseillère pédagogique et technopédagogique à l’École de technologie supérieure (ÉTS).</li>
+<li>Claude Potvin, conseiller en formation à l’Université Laval.</li>
+<li>Stéphane Roux, directeur général du service de soutien à la formation à l’Université de Sherbrooke.</li>
+<li>Serge Allary, vice-recteur adjoint aux études de l’Université de Sherbrooke.</li>
+</ul>
+<p>La fabriqueREL est également une vitrine de rayonnement importante pour les REL au Québec. Elle permet de valoriser le travail réalisé par un membre du corps professoral dans la rédaction d’un manuel libre pour un cours universitaire. Cela favorise une évolution positive dans la culture universitaire au Québec.</p>
+<p>Nous tenons aussi à remercier chaleureusement les auxiliaires d’enseignement et les personnes ayant suivi le cours <em>Analyse et conception de logiciels (LOG210)</em> des programmes de baccalauréat en Génie logiciel et Génie des technologies de l’information à l’ÉTS. Leurs commentaires et suggestions constructifs ont permis d’améliorer les versions antérieures de ce manuel qui ont été utilisées dans le cadre de ce cours.</p>
+<p>Nous remercions les membres du comité de révision (2023) pour leurs rétroactions <span style="white-space:nowrap">constructives :</span></p>
+<ul>
+<li>à compléter, étudiant.e en génie logiciel à l’ÉTS.</li>
+<li>à compléter, étudiant.e en génie des technologies de l’information à l’ÉTS.</li>
+<li>Roberto Erick Lopez-Herrejon, professeur au département de génie logiciel et des TI à l’ÉTS.</li>
+</ul>
+<p>Finalement, nous remercions «&nbsp;à déterminer&nbsp;», réviseur.e linguistique à «&nbsp;(à déterminer)&nbsp;», pour la révision du manuel.</p>
+</section>
+<section id="sources-du-manuel" class="level2">
+<h2 class="anchored" data-anchor-id="sources-du-manuel">Sources du manuel</h2>
+<p>Ce manuel est écrit en Markdown et les sources sont sur GitHub à <a href="https://github.com/fuhrmanator/log210-ndc-quarto" class="uri">https://github.com/fuhrmanator/log210-ndc-quarto</a>. Les versions Web, PDF et EPUB ont été générées par le logiciel Quarto. Pour en savoir plus sur Quarto, visitez <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-larman_applying_2001" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2001. <em>Applying <span>UML</span> and <span>Patterns</span>: <span>An Introduction</span> to <span>Object-Oriented Analysis</span> and <span>Design</span> and the <span>Unified Process</span></em>. 2nd edition. <span>Upper Saddle River, NJ</span>: <span>Prentice Hall</span>.
+</div>
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+———. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+<div id="ref-noauthor_latex_2022" class="csl-entry" role="doc-biblioentry">
+<span>«&nbsp;<span>LaTeX</span>&nbsp;»</span>. 2022. In <em>Wikipedia</em>. <a href="https://en.wikipedia.org/w/index.php?title=LaTeX&amp;oldid=1114993597">https://en.wikipedia.org/w/index.php?title=LaTeX&amp;oldid=1114993597</a>.
+</div>
+<div id="ref-noauthor_pandoc_2022" class="csl-entry" role="doc-biblioentry">
+<span>«&nbsp;Pandoc&nbsp;»</span>. 2022. In <em>Wikipedia</em>. <a href="https://en.wikipedia.org/w/index.php?title=Pandoc&amp;oldid=1116852485">https://en.wikipedia.org/w/index.php?title=Pandoc&amp;oldid=1116852485</a>.
+</div>
+<div id="ref-noauthor_plantuml_2022" class="csl-entry" role="doc-biblioentry">
+<span>«&nbsp;<span>PlantUML</span>&nbsp;»</span>. 2022. In <em>Wikipedia</em>. <a href="https://en.wikipedia.org/w/index.php?title=PlantUML&amp;oldid=1111009429">https://en.wikipedia.org/w/index.php?title=PlantUML&amp;oldid=1111009429</a>.
+</div>
+<div id="ref-noauthor_quarto_2022" class="csl-entry" role="doc-biblioentry">
+<span>«&nbsp;Quarto&nbsp;»</span>. 2022. 26 octobre 2022. <a href="https://quarto.org/">https://quarto.org/</a>.
+</div>
+</div>
 </section>
 </section>
 
