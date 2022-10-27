@@ -4,7 +4,7 @@ Ce livre vise à décrire une méthodologie de développement de logiciel qui r�
 Pour pallier ce manque d'expertise et pour concevoir un logiciel avec des abstractions (des classes) plus intuitives, on fait une _analyse_ du domaine et on propose une conception du logiciel à développer.
 Pour faire face à la complexité, on fait ces activités en itérations ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction.
 
-Le présent manuel a commencé comme des notes de cours pour le cours _LOG210: Analyse et conception de logiciels_ dans les programmes de Génie logiciel (LOG) et Génie des technologies de l'information (GTI) de l'École de technologie supérieure.
+Le présent manuel a commencé comme des notes de cours pour le cours _Analyse et conception de logiciel (LOG210)_ dans les programmes de baccalauréat en Génie logiciel (LOG) et en Génie des technologies de l'information (GTI) de l'École de technologie supérieure.
 LOG210 a été mis sur pied au début des années 2000 et le livre obligatoire a toujours été le fameux _Applying UML and Patterns_ de Craig Larman qui était à sa 2^e^ édition [-@larman_applying_2001] à l'époque.
 En 2005 la 3^e^ édition a été publiée avec plusieurs traductions, notamment en français [-@craig_uml_2005].
 Pendant plus de 10 ans, le livre de Larman a été apprécié par les personnes étudiantes.
@@ -32,10 +32,35 @@ Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'in
 
 ## Remerciements {.unnumbered}
 
-Ce manuel a été réalisé avec le soutien de la [fabriqueREL](https://fabriquerel.org/).
+Comme beaucoup de ressources libres, ce manuel existe grâce à une collaboration avec de nombreuses personnes.
+La [fabriqueREL](https://fabriquerel.org) (ressources éducatives libres) a soutenu financièrement et pédagogiquement l'élaboration du manuel lors de la période 2022-2023.
+Les conseils avec la dimension _Creative Commons_ de la licence du contenu ont été fort utiles.
+Nous remercions les membres de suivi du projet dans le cadre ce travail pris en charge par la fabriqueREL pour leur support:
+
+- Marianne Dubé, conseillère pédagogique à l'Université de Sherbrooke et coordonnatrice de la fabriqueREL.
+- Mouna Moumene, bibliothécaire à l'École de technologie supérieure (ÉTS).
+- Marjolaine Lewis, conseillère pédagogique et technopédagogique à l'École de technologie supérieure (ÉTS).
+- Claude Potvin, conseiller en formation à l'Université Laval.
+- Stéphane Roux, directeur général du service de soutien à la formation à l'Université de Sherbrooke.
+- Serge Allary, vice-recteur adjoint aux études de l'Université de Sherbrooke.
+
+La fabriqueREL est également une vitrine de rayonnement importante pour les REL au Québec.
+Elle permet de valoriser le travail réalisé par un membre du corps professoral dans la rédaction d'un manuel libre pour un cours universitaire.
+Cela favorise une évolution positive dans la culture universitaire au Québec.
+
+Nous tenons aussi à remercier chaleureusement les auxiliaires d'enseignement et les personnes ayant suivi le cours _Analyse et conception de logiciels (LOG210)_ des programmes de baccalauréat en Génie logiciel et Génie des technologies de l'information à l'ÉTS.
+Leurs commentaires et suggestions constructifs ont permis d'améliorer les versions antérieures de ce manuel qui ont été utilisées dans le cadre de ce cours.
+
+Nous remercions les membres du comité de révision (2023) pour leurs rétroactions constructives:
+
+- à compléter, étudiant.e en génie logiciel à l'ÉTS.
+- à compléter, étudiant.e en génie des technologies de l'information à l'ÉTS.
+- Roberto Erick Lopez-Herrejon, professeur au département de génie logiciel et des TI à l'ÉTS.
+
+Finalement, nous remercions "à déterminer", réviseur.e linguistique à "(à déterminer)", pour la révision du manuel.
 
 ## Sources du manuel
 
 Ce manuel est écrit en Markdown et les sources sont sur GitHub à <https://github.com/fuhrmanator/log210-ndc-quarto>.
-Les versions Web, PDF et EPUB ont été créées par le logiciel Quarto.
+Les versions Web, PDF et EPUB ont été générées par le logiciel Quarto.
 Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
