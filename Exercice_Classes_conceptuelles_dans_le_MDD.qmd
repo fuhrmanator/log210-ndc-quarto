@@ -4,7 +4,7 @@
 classes conceptuelles candidates avec les deux méthodes proposées dans
 la **section 9.5** du livre:
 
--   En utilisant une liste de **catégories de classes** (voir le livre et les notes de cours)
+-   En utilisant une liste de [**catégories de classes**](#sec-catégoriesClasses)
 
 -   À l’aide de groupes nominaux
 
@@ -13,10 +13,13 @@ la **section 9.5** du livre:
 Proposer les classes candidates provenant du cas d’utilisation selon les
 catégories de classes
 
-| Catégorie de classe conceptuelle      | Classes candidates selon le cas d’utilisation |
+| **Catégorie de classe conceptuelle**      | **Classes candidates selon le cas d’utilisation** |
 | ----------- | ----------- |
-|             |             |    
-|             |             |
+|Transaction métier (d'affaires)             |      ...       |    
+|     ...        |       ...      |
+|      ...       |       ...      |
+|     ...        |       ...      |
+|      ...       |       ...      |
 
 ## À l’aide de groupes nominaux
 
