@@ -108,8 +108,9 @@ format:
       - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
       - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
       - \usepackage{titling}
+      - \usepackage{transparent}
       - \pretitle{\begin{center}
-        \includegraphics[]{images/wordle_ordre_alph.png}\Huge\\}
+        \transparent{0.4}\includegraphics[]{images/wordle_ordre_alph.png}\Huge\\}
       - \posttitle{\end{center}}
 
 # filters must be run in the proper order here
