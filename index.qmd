@@ -1,18 +1,19 @@
 # Préface {.unnumbered}
 
-Ce livre vise à décrire une méthodologie de développement de logiciel qui répond à des besoins dans un domaine d'application dans lequel l'équipe de développement n'a pas nécessairement une expertise importante.
-Pour pallier ce manque d'expertise et pour concevoir un logiciel avec des abstractions (des classes) plus intuitives, on fait une _analyse_ du domaine et on propose une conception du logiciel à développer.
-Pour faire face à la complexité, on fait ces activités en itérations ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction.
+Cet ouvrage a commencé comme des notes de cours pour le cours _Analyse et conception de logiciel (LOG210)_ dans les programmes de baccalauréat en Génie logiciel (LOG) et en Génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal au Québec.
+À l'origine, la communauté étudiante dans ces programmes provenaient des "Collèges d'enseignement général et professionnel" (CÉGEP), ayant donc déjà reçu au diplôme d'études collégiales (DEC) dans un programme technique. 
+Ainsi, ces personnes ont déjà appris à programmer dans un langage orienté objet.
+En effet, cette démarche correspond à l'approche "Computer-Science-first" (CS-first) pour enseigner le génie logiciel @SE_Curriculum_ACM_2014.
 
-Le présent manuel a commencé comme des notes de cours pour le cours _Analyse et conception de logiciel (LOG210)_ dans les programmes de baccalauréat en Génie logiciel (LOG) et en Génie des technologies de l'information (GTI) de l'École de technologie supérieure.
 LOG210 a été mis sur pied au début des années 2000 et le livre obligatoire a toujours été le fameux _Applying UML and Patterns_ de Craig Larman qui était à sa 2^e^ édition [-@larman_applying_2001] à l'époque.
-En 2005 la 3^e^ édition a été publiée avec plusieurs traductions, notamment en français [-@craig_uml_2005].
-Pendant plus de 10 ans, le livre de Larman a été apprécié par les personnes étudiantes.
+En 2005 la 3^e^ édition a été publiée avec plusieurs traductions, notamment celle en français [-@craig_uml_2005].
+Pendant plus de 10 ans, le livre de Larman a été fort apprécié par les personnes étudiantes.
 
-Mais pour le corps enseignant donnant le cours, le manque d'exercices dans le livre a toujours été un inconvénient.
-En plus, certains sujets (comme les cas d'utilisation et les diagrammes de communication) dans le livre de Larman sont moins pertinents en industrie aujourd'hui, puis d'autres sujets (comme le développement piloté par les tests, le travail en équipe, les cadriciels Web) sont devenus plus importants.
-Une 4^e^ édition n'a jamais été publiée, et finalement, la traduction française du livre est en rupture de stocke depuis plusieurs années.
-Ce manuel essaie de pallier tous ces problèmes, sous forme de ressource éducative libre (REL).
+Mais pour le corps enseignant donnant le cours, le manque d'exercices dans le livre a toujours été un gros inconvénient.
+En plus, certains sujets (comme les cas d'utilisation, les précondition des contrats d'opération et les diagrammes de communication) dans le livre de Larman sont moins pertinents en industrie aujourd'hui, puis d'autres sujets (comme le développement piloté par les tests, le travail en équipe, les cadriciels Web) sont devenus plus importants.
+Une 4^e^ édition n'a jamais été publiée. 
+Finalement, la traduction française du livre est en rupture de stocke depuis 2019.
+Le présent manuel essaie de pallier tous ces problèmes, sous forme de ressource éducative libre (REL).
 
 ## Pourquoi une ressource éducative libre? {.unnumbered}
 
@@ -26,9 +27,57 @@ Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels libres
 - Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022] font partie des composantes exploitées par Quarto; 
 - PlantUML [-@noauthor_plantuml_2022] pour les figures sous forme de texte (faciles à actualiser).
 
-Autant possibles, les figures passent par un format SVG afin que le texte soit "trouvable" par les moteurs de recherche.
+Autant possibles, les figures sont créés dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche.
 
 Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'information, pour donner une meilleure inclusivité des personnes apprenantes et enseignantes.  
+
+# Prérequis
+
+Le contenu de ce manuel est organisé pour les personnes ayant déjà une base et une expérience avec:
+
+- la programmation dans un langage orienté objet (Java, C#, C++, Python, TypeScript, etc.);
+- les concepts de modélisation orientée objet (les classes, les interfaces, les instances, l'héritage, la composition, le polymorphisme, etc.);
+- les tests unitaires (avec un cadriciel comme JUnit);
+- application des patrons de conception de la "bande des quatre" (Gang of Four): Gamma, Helm, Johnson et Vlissides @GoF1994.
+
+La notation UML (*Unified Modeling Language*) est utilisée partout dans ce manuel.
+Nous faisons une hypothèse que les personnes suivant ce manuel aient déjà vu cette notation avant, mais la familiarité avec UML n'est pas un préalable.
+
+<!-- Voici le descriptif du cours, selon le plan de cours:
+
+::: {.callout-important icon="false" appearance="simple"}
+À la suite de ce cours, l'étudiant sera en mesure:
+
+- de maîtriser et appliquer des patrons de conception logicielle;
+- de concevoir un logiciel orienté objet en appliquant un ensemble de principes et des méthodes heuristiques de génie logiciel;
+- de réaliser un logiciel en suivant un processus itératif et évolutif incluant les activités d'analyse et de conception par objets.
+
+Méthodes et techniques de modélisation orientés objet, langage de modélisation, cas d'utilisation, analyse orientée objet, modèle du domaine, conception et programmation orientées objet, principes GRASP, patrons de conception, processus itératif et évolutif.
+
+Séances de laboratoire axées sur l'application des notions d'analyse, de conception et de programmation orientées objet vues en classe. Mise en œuvre d'un modèle d'objet à partir d'une spécification de logiciel et à l'aide d'un langage orienté objet contemporain. Conception d'applications utilisant les outils UML ainsi que des techniques et des outils utiles au génie logiciel, tels qu'un environnement de développement intégré, la compilation automatique et les tests automatiques.
+::: -->
+
+## Livre complémentaire
+
+Ce manuel suit la méthodologie d'analyse et de conception proposée par Craig Larman dans son livre "UML 2 et les Design Patterns" @craig_uml_2005.
+Le livre est encore populaire et pertinent, mais malheureusement il n'a pas été actualisé depuis sa 3^e^ édition (2005).
+La traduction française du livre n'est plus en stocke au Québec depuis plusieurs années.
+Beaucoup de choses ont évolué depuis bientôt vingt ans!
+
+::: {.callout-note}
+Au besoin, des références au livre de Larman sont indiquées par l'icône du livre \faBook<i class="fa-solid fa-book"></i>.
+Puisqu'il est disponible en français et en anglais, puis il y a des différences avec les numéros de chapitres, nous indiquons une référence avec **F** et **A** pour signifier la langue du livre.
+Par exemple, la matière sur les principes GRASP est dans le chapitre 17 dans la version en anglais.
+Cependant, à cause des fusions de contenu lors de la traduction, la matière sur GRASP est dans le chapitre 16 dans la version en français.
+Dans ce cas, à cause des différences de chapitres, **F16.10/A17.10** indique la section **16.10 du livre en français** et la section **17.10 du livre en anglais.**
+Toutes les références sont données pour la 3^e^ édition du livre.
+:::
+
+::: {.callout-caution}
+Si vous avez une autre édition comme la 2^e^ du livre en anglais, ou même une des premières impressions du livre en anglais, les chapitres ne sont pas toujours les mêmes et vous devrez chercher le sujet dans la table des matières.
+:::
+
+Cependant, dans ce manuel vous trouverez également d'autres sujets importants pour un ingénieur: les notions de complexité, le contexte industriel qui affecte les décisions de conception, l'impact de la conception sur d'autres qualités d'un logiciel, le travail en équipe, etc.
 
 ## Remerciements {.unnumbered}
 
