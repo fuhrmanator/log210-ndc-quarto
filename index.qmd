@@ -64,3 +64,11 @@ Finalement, nous remercions "à déterminer", réviseur.e linguistique à "(à d
 Ce manuel est écrit en Markdown et les sources sont sur GitHub à <https://github.com/fuhrmanator/log210-ndc-quarto>.
 Les versions Web, PDF et EPUB ont été générées par le logiciel Quarto.
 Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
+
+## Licence
+
+[![Licence Creative
+Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)\
+Cette œuvre est mise à disposition selon les termes de la [Licence
+Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
+International](http://creativecommons.org/licenses/by-sa/4.0/).
