@@ -13,7 +13,7 @@ Il y a trois stratégies pour identifier les classes conceptuelles:
 2. Utiliser une liste de catégories.
 3. Identifier des groupes nominaux.
 
-### Catégories pour identifier des classes conceptuelles
+### Catégories pour identifier des classes conceptuelles {#sec-catégoriesClasses}
 
 :Extrait du tableau 9.1 \faBook<i class="fa-solid fa-book"></i>
 
