@@ -51,6 +51,7 @@ book:
     # Annexes
   appendices:
     - ExercicesCoderSequence.qmd
+    - Template-Classes_conceptuelles_dans_le_MDD.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib
