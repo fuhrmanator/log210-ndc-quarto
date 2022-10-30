@@ -75,7 +75,14 @@ format:
     header-includes: |
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
             rel="stylesheet" data-external="1"/>
+      <style type="text/css">
+        @font-face {
+          font-family: 'xkcd Script';
+          src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
+        }
+      </style>
     # https://quarto.org/docs/output-formats/html-themes.html#overview
+    resources: web-resources/**
     theme: simplex
     
 
@@ -110,7 +117,7 @@ format:
       - \usepackage{titling}
       - \usepackage{transparent}
       - \pretitle{\begin{center}
-        \transparent{0.4}\includegraphics[]{images/wordle_ordre_alph.png}\Huge\\}
+        \transparent{0.4}\includegraphics[]{images/wordle_ordre_alph.png}\transparent{1.0}\huge\\}
       - \posttitle{\end{center}}
 
 # filters must be run in the proper order here
@@ -118,6 +125,7 @@ filters:
   - filters/fr-nbsp.lua
   - filters/diagram-generator.lua
   - quarto
+  - filters/inline-svg.lua
   - filters/pandoc-quotes.lua
 
 #
