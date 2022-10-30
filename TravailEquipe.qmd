@@ -107,7 +107,7 @@ C'est le nombre minimum de coéquipiers à perdre (heurtés par un bus) pour arr
 Par exemple, dans un projet de stage, si c'est vous qui écrivez tout le code, alors c'est un *bus factor* de 1.
 Si vous n'êtes plus présent, le projet s'arrête.
 
-![*Facteur de bus* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné. [@fitzpatrick_team_2012]](images/BusFactorTeamGeek.png){width="500px"}
+![*Facteur de bus* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné. [@fitzpatrick_team_2012] ["A bus waiting at a pedestrian crossing in Lima"](https://www.flickr.com/photos/panr/3170401562/) ([CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)) par [Robert Cutts](https://www.flickr.com/people/panr/)](images/PietonBusPeru.jpg){width="500px"}
 
 Un coéquipier peut être absent (ou moins disponible) pour des raisons moins graves, par exemple, il part en vacances, il tombe malade, il prend un congé parental, il change d'emploi, ou il abandonne le cours.
 Cherchez à répartir les responsabilités dans l'équipe afin d'avoir un *bus factor* d'au moins 2.
