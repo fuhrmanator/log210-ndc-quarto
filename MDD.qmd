@@ -257,7 +257,7 @@ class "Catalogue\nClients" as CP #ffdddd
 C "1" -- "1" GC : Décrit >
 CP "1" -r- "*" C : Répertorie >
 note bottom of C
-<size:14><#red:frowning:></size> Mauvaise classe de "description". Il n'est pas nécessaire 
+<size:14><#red:frowning:></size> Mauvaise classe de « description ». Il n'est pas nécessaire 
 d'avoir cette classe, car les clients sont décrits dans leur 
 propre classe Client. Si un client n'existe pas, il n'a pas de
 sens dans le MDD. Les informations ne seraient pas dupliquées 
