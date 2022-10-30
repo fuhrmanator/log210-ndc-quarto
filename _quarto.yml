@@ -75,8 +75,28 @@ format:
     header-includes: |
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
             rel="stylesheet" data-external="1"/>
+      <style type="text/css">
+        @font-face {
+          font-family: 'xkcd Script';
+          src: url('https://cdn.rawgit.com/dummy-index/xkcd-font/master/xkcd-script/font/xkcd-script.ttf') format('truetype'),
+            url('https://cdn.rawgit.com/dummy-index/xkcd-font/master/xkcd-script/font/xkcd-script.woff') format('woff');
+        },
+        # svg {
+        #   font-family: 'xkcd Script', sans-serif;
+        # }
+        # @font-face { 
+        #   font-family: 'xkcd Script'; 
+        #   src: url('web-resources/xkcd-font/xkcd-script.woff') format('woff'), 
+        #     url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
+        #   font-weight: 400; 
+        #   font-style: normal; 
+        # }
+      </style>
     # https://quarto.org/docs/output-formats/html-themes.html#overview
+    resources: web-resources/**
+    embed-resources: true
     theme: simplex
+    # self-contained: true
     
 
   pdf:
@@ -119,6 +139,7 @@ filters:
   - filters/diagram-generator.lua
   - quarto
   - filters/pandoc-quotes.lua
+  # - filters/embed-svg.py
 
 #
 # Note: If JAVA_HOME, PLANTUML and DOT system variables are correctly set 
