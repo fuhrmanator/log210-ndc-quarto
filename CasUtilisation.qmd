@@ -1,4 +1,4 @@
-# Cas d'utilisation
+# Cas d'utilisation {#sec-cu}
 
 Les cas d'utilisation sont des documents textuels décrivant l'interaction entre un système (un logiciel à développer) et un ou plusieurs acteurs (les utilisateurs ou systèmes externes).
 Le cas d'utilisation décrit plusieurs scénarios, mais en général il y a un scénario principal (*"Happy Path"*) représentant ce qui se passe lorsqu'il n'y a pas d'anomalie.

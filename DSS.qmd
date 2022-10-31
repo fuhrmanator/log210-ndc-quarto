@@ -1,4 +1,4 @@
-# Diagrammes de séquence système (DSS)
+# Diagrammes de séquence système (DSS) {#sec-dss}
 
 Un diagramme de séquence système (DSS) est un diagramme UML (diagramme de séquence) limité à un acteur (provenant du scénario d'un cas d'utilisation) et le Système.
 Les DSS sont expliqués en détail dans le chapitre 10\ \faBook<i class="fa-solid fa-book"></i>, mais voici des points importants pour la méthodologie de ce manuel:

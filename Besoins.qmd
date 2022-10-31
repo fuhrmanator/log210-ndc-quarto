@@ -1,4 +1,4 @@
-# Besoins (exigences)
+# Besoins (exigences) {#sec-besoins}
 
 Dans le développement de logiciels, il est normal de spécifier ce que le logiciel est censé faire.
 Selon la méthodologie proposée dans ce manuel, la spécification des besoins n'est pas facultative!

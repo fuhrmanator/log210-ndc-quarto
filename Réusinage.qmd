@@ -41,7 +41,7 @@ C'est une manière de gérer la dette technique, car grâce au réusinage on peu
 De plus, beaucoup d'IDE supportent l'automatisation d'activités de réusinage, rendant le processus plus facile et robuste.
 Probablement vous avez déjà "renommé" une variable dans le code source, à travers un menu "Refactoring".
 
-Le réusinage est une activité intégrale du [Développement piloté par les tests](#sec-TDD).
+Le réusinage est une activité intégrale du [Développement piloté par les tests](#sec-tdd).
 
 ## Symptômes de la mauvaise conception - Code smells
 
