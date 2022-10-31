@@ -1,4 +1,4 @@
-# Contrats d'opération
+# Contrats d'opération {#sec-contrats}
 
 Les contrats d'opération sont le sujet du chapitre 11\ \faBook<i class="fa-solid fa-book"></i>.
 Voici les points importants pour la méthodologie:
