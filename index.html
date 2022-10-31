@@ -126,7 +126,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Date De Publication</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">30 octobre 2022 à 22:27:03 +00:00</p>
+        <p class="date">31 octobre 2022 à 18:53:12 +00:00</p>
       </div>
     </div>
       
@@ -285,6 +285,10 @@ div.csl-indent {
   <li><a href="#préface" id="toc-préface" class="nav-link active" data-scroll-target="#préface">Préface</a>
   <ul class="collapse">
   <li><a href="#pourquoi-une-ressource-éducative-libre" id="toc-pourquoi-une-ressource-éducative-libre" class="nav-link" data-scroll-target="#pourquoi-une-ressource-éducative-libre">Pourquoi une ressource éducative <span style="white-space:nowrap">libre ?</span></a></li>
+  </ul></li>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">Prérequis</a>
+  <ul class="collapse">
+  <li><a href="#livre-complémentaire" id="toc-livre-complémentaire" class="nav-link" data-scroll-target="#livre-complémentaire">Livre complémentaire</a></li>
   <li><a href="#remerciements" id="toc-remerciements" class="nav-link" data-scroll-target="#remerciements">Remerciements</a></li>
   <li><a href="#sources-du-manuel" id="toc-sources-du-manuel" class="nav-link" data-scroll-target="#sources-du-manuel">Sources du manuel</a></li>
   <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence</a></li>
@@ -301,9 +305,9 @@ div.csl-indent {
 
 <section id="préface" class="level1 unnumbered">
 <p><img src="images/wordle_ordre_alph.png" title="Analyse et conception de logiciels" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Préface</h1>
-<p>Ce livre vise à décrire une méthodologie de développement de logiciel qui répond à des besoins dans un domaine d’application dans lequel l’équipe de développement n’a pas nécessairement une expertise importante. Pour pallier ce manque d’expertise et pour concevoir un logiciel avec des abstractions (des classes) plus intuitives, on fait une <em>analyse</em> du domaine et on propose une conception du logiciel à développer. Pour faire face à la complexité, on fait ces activités en itérations ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction.</p>
-<p>Le présent manuel a commencé comme des notes de cours pour le cours <em>Analyse et conception de logiciel (LOG210)</em> dans les programmes de baccalauréat en Génie logiciel (LOG) et en Génie des technologies de l’information (GTI) de l’École de technologie supérieure. LOG210 a été mis sur pied au début des années 2000 et le livre obligatoire a toujours été le fameux <em>Applying UML and Patterns</em> de Craig Larman qui était à sa 2<sup>e</sup> édition <span class="citation" data-cites="larman_applying_2001">(<a href="references.html#ref-larman_applying_2001" role="doc-biblioref">2001</a>)</span> à l’époque. En 2005 la 3<sup>e</sup> édition a été publiée avec plusieurs traductions, notamment en français <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Pendant plus de 10 ans, le livre de Larman a été apprécié par les personnes étudiantes.</p>
-<p>Mais pour le corps enseignant donnant le cours, le manque d’exercices dans le livre a toujours été un inconvénient. En plus, certains sujets (comme les cas d’utilisation et les diagrammes de communication) dans le livre de Larman sont moins pertinents en industrie aujourd’hui, puis d’autres sujets (comme le développement piloté par les tests, le travail en équipe, les cadriciels Web) sont devenus plus importants. Une 4<sup>e</sup> édition n’a jamais été publiée, et finalement, la traduction française du livre est en rupture de stocke depuis plusieurs années. Ce manuel essaie de pallier tous ces problèmes, sous forme de ressource éducative libre (REL).</p>
+<p>Cet ouvrage a commencé comme des notes de cours pour le cours <em>Analyse et conception de logiciel (LOG210)</em> dans les programmes de baccalauréat en Génie logiciel (LOG) et en Génie des technologies de l’information (GTI) de l’École de technologie supérieure (ÉTS) à Montréal au Québec. À l’origine, la communauté étudiante dans ces programmes provenaient des «&nbsp;Collèges d’enseignement général et professionnel&nbsp;» (CÉGEP), ayant donc déjà reçu au diplôme d’études collégiales (DEC) dans un programme technique. Ainsi, ces personnes ont déjà appris à programmer dans un langage orienté objet. En effet, cette démarche correspond à l’approche «&nbsp;Computer-Science-first&nbsp;» (CS-first) pour enseigner le génie logiciel <span class="citation" data-cites="SE_Curriculum_ACM_2014">Ardis et al. (<a href="references.html#ref-SE_Curriculum_ACM_2014" role="doc-biblioref">2015</a>)</span>.</p>
+<p>LOG210 a été mis sur pied au début des années 2000 et le livre obligatoire a toujours été le fameux <em>Applying UML and Patterns</em> de Craig Larman qui était à sa 2<sup>e</sup> édition <span class="citation" data-cites="larman_applying_2001">(<a href="references.html#ref-larman_applying_2001" role="doc-biblioref">2001</a>)</span> à l’époque. En 2005 la 3<sup>e</sup> édition a été publiée avec plusieurs traductions, notamment celle en français <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Pendant plus de 10 ans, le livre de Larman a été fort apprécié par les personnes étudiantes.</p>
+<p>Mais pour le corps enseignant donnant le cours, le manque d’exercices dans le livre a toujours été un gros inconvénient. En plus, certains sujets (comme les cas d’utilisation, les précondition des contrats d’opération et les diagrammes de communication) dans le livre de Larman sont moins pertinents en industrie aujourd’hui, puis d’autres sujets (comme le développement piloté par les tests, le travail en équipe, les cadriciels Web) sont devenus plus importants. Une 4<sup>e</sup> édition n’a jamais été publiée. Finalement, la traduction française du livre est en rupture de stocke depuis 2019. Le présent manuel essaie de pallier tous ces problèmes, sous forme de ressource éducative libre (REL).</p>
 <section id="pourquoi-une-ressource-éducative-libre" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="pourquoi-une-ressource-éducative-libre">Pourquoi une ressource éducative <span style="white-space:nowrap">libre ?</span></h2>
 <p>Aujourd’hui les logiciels libres sont très répandus. Dans le cadre de l’enseignement, nous utilisons les dépôts de code source libre comme GitHub et GitLab, car ces plateformes permettent de collaborer, d’évaluer et de valider des logiciels dans les communautés de logiciel libre. Il est donc naturel d’imaginer une forme analogique pour le contenu de ce manuel, soit une <strong>ressource éducative libre (REL)</strong>, qui est également développée à travers un dépôt libre (GitHub dans ce cas).</p>
@@ -313,8 +317,63 @@ div.csl-indent {
 <li>Pandoc <span class="citation" data-cites="noauthor_pandoc_2022">(<a href="references.html#ref-noauthor_pandoc_2022" role="doc-biblioref">2022</a>)</span> et LaTeX <span class="citation" data-cites="noauthor_latex_2022">(<a href="references.html#ref-noauthor_latex_2022" role="doc-biblioref">2022</a>)</span> font partie des composantes exploitées par <span style="white-space:nowrap">Quarto ;</span></li>
 <li>PlantUML <span class="citation" data-cites="noauthor_plantuml_2022">(<a href="references.html#ref-noauthor_plantuml_2022" role="doc-biblioref">2022</a>)</span> pour les figures sous forme de texte (faciles à actualiser).</li>
 </ul>
-<p>Autant possibles, les figures passent par un format SVG afin que le texte soit «&nbsp;trouvable&nbsp;» par les moteurs de recherche.</p>
+<p>Autant possibles, les figures sont créés dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit «&nbsp;indexable&nbsp;» par les moteurs de recherche.</p>
 <p>Finalement, il y a une tendance à faire des REL pour favoriser l’accès à l’information, pour donner une meilleure inclusivité des personnes apprenantes et enseignantes.</p>
+</section>
+</section>
+<section id="prérequis" class="level1">
+<h1>Prérequis</h1>
+<p>Le contenu de ce manuel est organisé pour les personnes ayant déjà une base et une expérience <span style="white-space:nowrap">avec :</span></p>
+<ul>
+<li>la programmation dans un langage orienté objet (Java, C#, C++, Python, TypeScript, <span style="white-space:nowrap">etc.) ;</span></li>
+<li>les concepts de modélisation orientée objet (les classes, les interfaces, les instances, l’héritage, la composition, le polymorphisme, <span style="white-space:nowrap">etc.) ;</span></li>
+<li>les tests unitaires (avec un cadriciel comme <span style="white-space:nowrap">JUnit) ;</span></li>
+<li>application des patrons de conception de la «&nbsp;bande des quatre&nbsp;» (Gang of <span style="white-space:nowrap">Four) :</span> Gamma, Helm, Johnson et Vlissides <span class="citation" data-cites="GoF1994">Gamma et al. (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>.</li>
+</ul>
+<p>La notation UML (<em>Unified Modeling Language</em>) est utilisée partout dans ce manuel. Nous faisons une hypothèse que les personnes suivant ce manuel aient déjà vu cette notation avant, mais la familiarité avec UML n’est pas un préalable.</p>
+<!-- Voici le descriptif du cours, selon le plan de cours:
+
+::: {.callout-important icon="false" appearance="simple"}
+À la suite de ce cours, l'étudiant sera en mesure:
+
+- de maîtriser et appliquer des patrons de conception logicielle;
+- de concevoir un logiciel orienté objet en appliquant un ensemble de principes et des méthodes heuristiques de génie logiciel;
+- de réaliser un logiciel en suivant un processus itératif et évolutif incluant les activités d'analyse et de conception par objets.
+
+Méthodes et techniques de modélisation orientés objet, langage de modélisation, cas d'utilisation, analyse orientée objet, modèle du domaine, conception et programmation orientées objet, principes GRASP, patrons de conception, processus itératif et évolutif.
+
+Séances de laboratoire axées sur l'application des notions d'analyse, de conception et de programmation orientées objet vues en classe. Mise en œuvre d'un modèle d'objet à partir d'une spécification de logiciel et à l'aide d'un langage orienté objet contemporain. Conception d'applications utilisant les outils UML ainsi que des techniques et des outils utiles au génie logiciel, tels qu'un environnement de développement intégré, la compilation automatique et les tests automatiques.
+::: -->
+<section id="livre-complémentaire" class="level2">
+<h2 class="anchored" data-anchor-id="livre-complémentaire">Livre complémentaire</h2>
+<p>Ce manuel suit la méthodologie d’analyse et de conception proposée par Craig Larman dans son livre «&nbsp;UML 2 et les Design Patterns&nbsp;» <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Le livre est encore populaire et pertinent, mais malheureusement il n’a pas été actualisé depuis sa 3<sup>e</sup> édition (2005). La traduction française du livre n’est plus en stocke au Québec depuis plusieurs années. Beaucoup de choses ont évolué depuis bientôt vingt <span style="white-space:nowrap">ans !</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Au besoin, des références au livre de Larman sont indiquées par l’icône du livre&nbsp;<i class="fa-solid fa-book"></i>. Puisqu’il est disponible en français et en anglais, puis il y a des différences avec les numéros de chapitres, nous indiquons une référence avec <strong>F</strong> et <strong>A</strong> pour signifier la langue du livre. Par exemple, la matière sur les principes GRASP est dans le chapitre 17 dans la version en anglais. Cependant, à cause des fusions de contenu lors de la traduction, la matière sur GRASP est dans le chapitre 16 dans la version en français. Dans ce cas, à cause des différences de chapitres, <strong>F16.10/A17.10</strong> indique la section <strong>16.10 du livre en français</strong> et la section <strong>17.10 du livre en anglais.</strong> Toutes les références sont données pour la 3<sup>e</sup> édition du livre.</p>
+</div>
+</div>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Mise en garde
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si vous avez une autre édition comme la 2<sup>e</sup> du livre en anglais, ou même une des premières impressions du livre en anglais, les chapitres ne sont pas toujours les mêmes et vous devrez chercher le sujet dans la table des matières.</p>
+</div>
+</div>
+<p>Cependant, dans ce manuel vous trouverez également d’autres sujets importants pour un <span style="white-space:nowrap">ingénieur :</span> les notions de complexité, le contexte industriel qui affecte les décisions de conception, l’impact de la conception sur d’autres qualités d’un logiciel, le travail en équipe, etc.</p>
 </section>
 <section id="remerciements" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="remerciements">Remerciements</h2>
@@ -348,6 +407,12 @@ Cette œuvre est mise à disposition selon les termes de la <a href="http://crea
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-SE_Curriculum_ACM_2014" class="csl-entry" role="doc-biblioentry">
+Ardis, Mark, Greg Hislop, Mark Sebern, David Budgen, Jeff Offutt, et Willem Visser. 2015. <span>«&nbsp;Software <span>Engineering</span> 2014 - <span>Curriculum Guidelines</span> for <span>Undergraduate Degree Programs</span> in <span>Software Engineering</span>&nbsp;»</span>. <span>ACM: Association for Computing Machinery</span>.
+</div>
+<div id="ref-GoF1994" class="csl-entry" role="doc-biblioentry">
+Gamma, Erich, Richard Helm, Ralph Johnson, et John Vlissides. 1994. <em>Design <span>Patterns</span>: <span>Elements</span> of <span>Reusable</span> <span>Object</span>-<span>Oriented</span> <span>Software</span></em>. 1ʳᵉ éd. Reading, Mass: Addison-Wesley Professional. <a href="http://amazon.com/o/ASIN/0201633612/">http://amazon.com/o/ASIN/0201633612/</a>.
+</div>
 <div id="ref-larman_applying_2001" class="csl-entry" role="doc-biblioentry">
 Larman, Craig. 2001. <em>Applying <span>UML</span> and <span>Patterns</span>: <span>An Introduction</span> to <span>Object-Oriented Analysis</span> and <span>Design</span> and the <span>Unified Process</span></em>. 2nd edition. <span>Upper Saddle River, NJ</span>: <span>Prentice Hall</span>.
 </div>

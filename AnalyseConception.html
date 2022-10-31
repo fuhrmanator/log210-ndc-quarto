@@ -268,17 +268,16 @@ div.csl-indent {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#livre-complémentaire" id="toc-livre-complémentaire" class="nav-link active" data-scroll-target="#livre-complémentaire"><span class="toc-section-number">1.1</span>  Livre complémentaire</a></li>
-  <li><a href="#analyse-vs-conception" id="toc-analyse-vs-conception" class="nav-link" data-scroll-target="#analyse-vs-conception"><span class="toc-section-number">1.2</span>  Analyse vs Conception</a></li>
-  <li><a href="#sec-DecalageRepresentations" id="toc-sec-DecalageRepresentations" class="nav-link" data-scroll-target="#sec-DecalageRepresentations"><span class="toc-section-number">1.3</span>  Décalage des représentations</a></li>
-  <li><a href="#la-complexité-et-ses-sources" id="toc-la-complexité-et-ses-sources" class="nav-link" data-scroll-target="#la-complexité-et-ses-sources"><span class="toc-section-number">1.4</span>  La complexité et ses sources</a>
+  <li><a href="#analyse-vs-conception" id="toc-analyse-vs-conception" class="nav-link active" data-scroll-target="#analyse-vs-conception"><span class="toc-section-number">1.1</span>  Analyse vs Conception</a></li>
+  <li><a href="#sec-DecalageRepresentations" id="toc-sec-DecalageRepresentations" class="nav-link" data-scroll-target="#sec-DecalageRepresentations"><span class="toc-section-number">1.2</span>  Décalage des représentations</a></li>
+  <li><a href="#la-complexité-et-ses-sources" id="toc-la-complexité-et-ses-sources" class="nav-link" data-scroll-target="#la-complexité-et-ses-sources"><span class="toc-section-number">1.3</span>  La complexité et ses sources</a>
   <ul class="collapse">
-  <li><a href="#complexité-inhérente-provenant-du-problème" id="toc-complexité-inhérente-provenant-du-problème" class="nav-link" data-scroll-target="#complexité-inhérente-provenant-du-problème"><span class="toc-section-number">1.4.1</span>  Complexité inhérente (provenant du problème)</a></li>
-  <li><a href="#sec-ComplexiteCirc" id="toc-sec-ComplexiteCirc" class="nav-link" data-scroll-target="#sec-ComplexiteCirc"><span class="toc-section-number">1.4.2</span>  Complexité circonstancielle (provenant des choix de conception)</a></li>
-  <li><a href="#complexité-environnementale-provenant-de-lenvironnement-dexécution" id="toc-complexité-environnementale-provenant-de-lenvironnement-dexécution" class="nav-link" data-scroll-target="#complexité-environnementale-provenant-de-lenvironnement-dexécution"><span class="toc-section-number">1.4.3</span>  Complexité environnementale (provenant de l’environnement d’exécution)</a></li>
+  <li><a href="#complexité-inhérente-provenant-du-problème" id="toc-complexité-inhérente-provenant-du-problème" class="nav-link" data-scroll-target="#complexité-inhérente-provenant-du-problème"><span class="toc-section-number">1.3.1</span>  Complexité inhérente (provenant du problème)</a></li>
+  <li><a href="#sec-ComplexiteCirc" id="toc-sec-ComplexiteCirc" class="nav-link" data-scroll-target="#sec-ComplexiteCirc"><span class="toc-section-number">1.3.2</span>  Complexité circonstancielle (provenant des choix de conception)</a></li>
+  <li><a href="#complexité-environnementale-provenant-de-lenvironnement-dexécution" id="toc-complexité-environnementale-provenant-de-lenvironnement-dexécution" class="nav-link" data-scroll-target="#complexité-environnementale-provenant-de-lenvironnement-dexécution"><span class="toc-section-number">1.3.3</span>  Complexité environnementale (provenant de l’environnement d’exécution)</a></li>
   </ul></li>
-  <li><a href="#survol-de-la-méthodologie" id="toc-survol-de-la-méthodologie" class="nav-link" data-scroll-target="#survol-de-la-méthodologie"><span class="toc-section-number">1.5</span>  Survol de la méthodologie</a></li>
-  <li><a href="#développement-itératif-évolutif-et-agile" id="toc-développement-itératif-évolutif-et-agile" class="nav-link" data-scroll-target="#développement-itératif-évolutif-et-agile"><span class="toc-section-number">1.6</span>  Développement itératif, évolutif et agile</a></li>
+  <li><a href="#survol-de-la-méthodologie" id="toc-survol-de-la-méthodologie" class="nav-link" data-scroll-target="#survol-de-la-méthodologie"><span class="toc-section-number">1.4</span>  Survol de la méthodologie</a></li>
+  <li><a href="#développement-itératif-évolutif-et-agile" id="toc-développement-itératif-évolutif-et-agile" class="nav-link" data-scroll-target="#développement-itératif-évolutif-et-agile"><span class="toc-section-number">1.5</span>  Développement itératif, évolutif et agile</a></li>
   </ul>
 </nav>
     </div>
@@ -288,33 +287,13 @@ div.csl-indent {
 
 
 
-<p>Ce manuel a été créé dans un contexte de cours d’ingénieur logiciel (LOG210 à l’École de technologie supérieure à Montréal). Il s’agit d’une approche où la communauté étudiante apprend à programmer d’abord («&nbsp;CS-first&nbsp;» selon <span class="citation" data-cites="SE_Curriculum_ACM_2014">Ardis et al. (<a href="references.html#ref-SE_Curriculum_ACM_2014" role="doc-biblioref">2015</a>)</span>). Ainsi, le contenu est organisé pour les personnes ayant déjà une expérience <span style="white-space:nowrap">en :</span></p>
-<ul>
-<li>programmation dans un langage orienté objet (Java, C#, TypeScript, <span style="white-space:nowrap">etc.) ;</span></li>
-<li>application des patrons de conception de la «&nbsp;bande des quatre&nbsp;» (Gang of <span style="white-space:nowrap">Four) :</span> Gamma, Helm, Johnson et Vlissides <span class="citation" data-cites="GoF1994">Gamma et al. (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>.</li>
-</ul>
-<p>La notation UML (<em>Unified Modeling Language</em>) est utilisée partout dans ce manuel. Nous faisons une hypothèse que les personnes suivant ce manuel aient déjà vu cette notation avant, mais la familiarité avec UML n’est pas un préalable.</p>
-<!-- Voici le descriptif du cours, selon le plan de cours:
-
-::: {.callout-important icon="false" appearance="simple"}
-À la suite de ce cours, l'étudiant sera en mesure:
-
-- de maîtriser et appliquer des patrons de conception logicielle;
-- de concevoir un logiciel orienté objet en appliquant un ensemble de principes et des méthodes heuristiques de génie logiciel;
-- de réaliser un logiciel en suivant un processus itératif et évolutif incluant les activités d'analyse et de conception par objets.
-
-Méthodes et techniques de modélisation orientés objet, langage de modélisation, cas d'utilisation, analyse orientée objet, modèle du domaine, conception et programmation orientées objet, principes GRASP, patrons de conception, processus itératif et évolutif.
-
-Séances de laboratoire axées sur l'application des notions d'analyse, de conception et de programmation orientées objet vues en classe. Mise en œuvre d'un modèle d'objet à partir d'une spécification de logiciel et à l'aide d'un langage orienté objet contemporain. Conception d'applications utilisant les outils UML ainsi que des techniques et des outils utiles au génie logiciel, tels qu'un environnement de développement intégré, la compilation automatique et les tests automatiques.
-::: -->
-<section id="livre-complémentaire" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="livre-complémentaire"><span class="header-section-number">1.1</span> Livre complémentaire</h2>
-<p>Ce manuel suit la méthodologie d’analyse et de conception proposée par Craig Larman dans son livre «&nbsp;UML 2 et les Design Patterns&nbsp;» <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Le livre est encore populaire et pertinent, mais malheureusement il n’a pas été actualisé depuis sa 3<sup>e</sup> édition (2005). La traduction française du livre n’est plus en stocke au Québec depuis plusieurs années. Beaucoup de choses ont évolué depuis bientôt vingt <span style="white-space:nowrap">ans !</span></p>
-<p>Au besoin, des références à ce livre sont indiquées par l’icône du livre&nbsp;<i class="fa-solid fa-book"></i>. Puisque ce livre-là est disponible en français et en anglais et les numéros de chapitres ne sont pas toujours les mêmes, nous indiquons la référence avec <strong>F</strong> et <strong>A</strong> pour la langue. Par exemple, <strong>F16.10/A17.10</strong> indique la section <strong>16.10 du livre en français</strong> et la section <strong>17.10 du livre en anglais.</strong> Toutes les références sont données pour la 3<sup>e</sup> édition du livre. Si vous avez une autre édition, les chapitres ne sont pas toujours les mêmes et vous devez chercher le sujet dans la table des matières.</p>
-<p>Vous trouverez également d’autres sujets importants pour un <span style="white-space:nowrap">ingénieur :</span> les notions de complexité, le contexte industriel qui affecte les décisions de conception, l’impact de la conception sur d’autres qualités d’un logiciel, le travail en équipe, etc.</p>
-</section>
-<section id="analyse-vs-conception" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="analyse-vs-conception"><span class="header-section-number">1.2</span> Analyse vs Conception</h2>
+<p>Comment développer un logiciel dans un domaine où l’équipe de développement n’a pas forcément une expérience <span style="white-space:nowrap">importante ?</span> Comment faire une bonne conception d’un tel <span style="white-space:nowrap">logiciel ?</span> Cette œuvre vise à décrire une méthodologie de développement de logiciel qui répond à ces questions.</p>
+<p>Nous suivrons une approche systématique permettant de modéliser un domaine d’application et de concevoir un logiciel avec des abstractions (des classes) plus intuitives. Dans le fond, c’est faire une <em>analyse</em> d’un domaine d’application et proposer une <em>conception</em> du logiciel à développer dans le domaine visé.</p>
+<p>Puisqu’une conception doit être réalisée (codée) pour être validée, nous appliquerons une approche de programmation pilotée par les tests (<em>test-driven development</em> ou <em>TDD</em> en anglais). Le TDD est un élément essentiel dans le <a href="https://fr.wikipedia.org/wiki/Devops">devops</a>, une approche permettant de livrer et de faire évoluer rapidement les logiciels de manière robuste.</p>
+<p>Orthogonalement, surtout pour faire face à la complexité, la méthodologie propose ces activités en itérations ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction. C’est une approche dite «&nbsp;agile&nbsp;», ayant une base pédagogique neutre, nommée le «&nbsp;processus unifié&nbsp;».</p>
+<p>Dans ce chapitre, nous présentons en détail ces dimensions du développement de logiciel.</p>
+<section id="analyse-vs-conception" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="analyse-vs-conception"><span class="header-section-number">1.1</span> Analyse vs Conception</h2>
 <p>L’<strong>analyse</strong> met l’accent sur une investigation du problème et des besoins plutôt que sur la recherche d’une solution.</p>
 <p>La <strong>conception</strong> sous-entend l’élaboration d’une solution conceptuelle répondant aux besoins plutôt que la mise en œuvre de cette solution.</p>
 <!-- Pour plus de détails, vous pouvez consulter le chapitre 1 \faBook<i class="fa-solid fa-book"></i>. -->
@@ -453,8 +432,8 @@ Country: null
 <p>Imaginez un jeu qui est joué dans la vraie vie avec deux dés à six faces. Ensuite, on veut construire un logiciel pour ce jeu et donc on peut spécifier la règle du jeu, dont un de nombreux besoins est de générer un nombre aléatoire entre 1 et 6 (comme un dé à six faces). On peut aussi modéliser ce besoin (un élément du problème) par une classe conceptuelle <code>Dé</code> ayant un attribut <code>face</code> dont sa valeur est un type <code>int</code>. Les personnes travaillant sur un projet vont facilement comprendre ce modèle, car les gens comprennent les objets qui représentent des aspects de la vraie vie.</p>
 <p>Dans l’approche proposée par ce manuel une modélisation orientée objet est utilisée et pour l’analyse (classes conceptuelles décrivant le problème et les besoins comme à la <a href="#fig-mddDes">figure&nbsp;<span>1.1</span></a>) et pour la conception (classes logicielles proposant une solution dont sa représentation est proche de la modélisation du problème comme à la <a href="#fig-ddcDes">figure&nbsp;<span>1.2</span></a>).</p>
 </section>
-<section id="sec-DecalageRepresentations" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="sec-DecalageRepresentations"><span class="header-section-number">1.3</span> Décalage des représentations</h2>
+<section id="sec-DecalageRepresentations" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-DecalageRepresentations"><span class="header-section-number">1.2</span> Décalage des représentations</h2>
 <p>Vous avez sûrement remarqué que le modèle du problème (<a href="#fig-mddDes">figure&nbsp;<span>1.1</span></a>) ressemble beaucoup au modèle de la solution (<a href="#fig-ddcDes">figure&nbsp;<span>1.2</span></a>) pour notre exemple de jeu de dés. Cependant, il y a des différences, car une solution comporte des détails sur la dynamique du jeu qui sera codée. Le modèle du problème et le modèle de la solution ne sont pas identiques.</p>
 <div class="callout-tip callout callout-style-simple">
 <div class="callout-body d-flex">
@@ -470,8 +449,8 @@ Country: null
 On comprend plus facilement les éléments dans ce modèle. --> Plus une solution (conception) ressemble à une description (modèle d’analyse) du problème, plus elle est facile à comprendre et à valider. La différence entre la représentation d’un problème et la représentation de sa solution s’appelle le <em>décalage des représentations</em>. C’est un terme complexe pour un principe très intuitif. Méfiez-vous des classes importantes dont leur nom est difficile à tracer au problème. Elles vont rendre votre solution plus difficile à comprendre. Pour des explications de Larman, lisez la section 9.3&nbsp;<i class="fa-solid fa-book"></i>.</p>
 <p>L’exemple du jeu est trivial, puisque le problème est relativement simple. Réduire le décalage des représentations est un principe très important surtout lorsque le problème à résoudre est complexe.</p>
 </section>
-<section id="la-complexité-et-ses-sources" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="la-complexité-et-ses-sources"><span class="header-section-number">1.4</span> La complexité et ses sources</h2>
+<section id="la-complexité-et-ses-sources" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="la-complexité-et-ses-sources"><span class="header-section-number">1.3</span> La complexité et ses sources</h2>
 <p>Un.e ingénieur.e logiciel est constamment dans une bataille avec un adversaire dont le nom est la complexité. Mais qu’est-ce que la <span style="white-space:nowrap">complexité ?</span> La&nbsp;<a href="#fig-complexity">figure&nbsp;<span>1.3</span></a> est une image de la complexité. Reconnaissez-vous le domaine d’où vient cette <span style="white-space:nowrap">image ?</span></p>
 <p>Voici une définition de la <span style="white-space:nowrap">complexité :</span></p>
 <div class="callout callout callout-style-simple no-icon">
@@ -500,16 +479,16 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <li>Un <em>environnement</em> peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l’environnement sans fil, des écrans tactiles de tailles différentes, de l’alimentation limitée, etc.</li>
 </ul>
 <p>La <a href="#fig-complexitySources">figure&nbsp;<span>1.4</span></a> présente les sources de complexité ainsi que leurs noms qu’on va utiliser dans ce <span style="white-space:nowrap">manuel :</span></p>
-<section id="complexité-inhérente-provenant-du-problème" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="complexité-inhérente-provenant-du-problème"><span class="header-section-number">1.4.1</span> Complexité inhérente (provenant du problème)</h3>
+<section id="complexité-inhérente-provenant-du-problème" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="complexité-inhérente-provenant-du-problème"><span class="header-section-number">1.3.1</span> Complexité inhérente (provenant du problème)</h3>
 <p>La complexité inhérente est au sein du problème que résout un logiciel. Elle est souvent <em>visible</em> à l’utilisateur du logiciel. Elle se compose des parties du logiciel qui sont nécessairement des problèmes difficiles. N’importe quel logiciel qui tente de résoudre ces problèmes aura une manifestation de cette complexité dans son implémentation. <span style="white-space:nowrap">Exemple :</span> un logiciel qui aide à faire des déclarations de revenus aura une complexité inhérente due à la complexité des lois fiscales qui spécifient comment doit être préparée une déclaration.</p>
 </section>
-<section id="sec-ComplexiteCirc" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-ComplexiteCirc"><span class="header-section-number">1.4.2</span> Complexité circonstancielle (provenant des choix de conception)</h3>
+<section id="sec-ComplexiteCirc" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="sec-ComplexiteCirc"><span class="header-section-number">1.3.2</span> Complexité circonstancielle (provenant des choix de conception)</h3>
 <p>Les choix que font les ingénieur.e.s dans un projet peuvent amener de la complexité circonstancielle. En tant qu’ingénieur.e.s, nous avons un devoir de contrôler cette forme de complexité, par exemple en prenant soin avec un choix de cadriciel Web ou d’architecture logicielle. La complexité circonstancielle peut aussi être due à des contraintes imposées sur la conception, comme une utilisation obligatoire d’une vieille base de données ou d’une bibliothèque logicielle héritée, d’un langage de programmation, etc. La complexité circonstancielle (aussi appelée accidentelle) peut être gérée avec des technologies, par exemple les débogueurs, les patrons de conception (un Adaptateur pour les bases de données différentes), etc.</p>
 </section>
-<section id="complexité-environnementale-provenant-de-lenvironnement-dexécution" class="level3" data-number="1.4.3">
-<h3 data-number="1.4.3" class="anchored" data-anchor-id="complexité-environnementale-provenant-de-lenvironnement-dexécution"><span class="header-section-number">1.4.3</span> Complexité environnementale (provenant de l’environnement d’exécution)</h3>
+<section id="complexité-environnementale-provenant-de-lenvironnement-dexécution" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="complexité-environnementale-provenant-de-lenvironnement-dexécution"><span class="header-section-number">1.3.3</span> Complexité environnementale (provenant de l’environnement d’exécution)</h3>
 <p>Cette forme de complexité comprend des aspects d’une solution qui ne sont pas sous le contrôle des ingénieur.e.s. Dans un environnement d’exécution, il y a des dimensions comme le ramasse-miettes (<em>garbage collection</em>), l’ordonnancement des fils d’exécution (<em>threads</em>) sur un serveur, l’utilisation de <em>containers</em> (à la Docker), etc. qui peuvent affecter la qualité d’un logiciel. Les ingénieur.e.s doivent gérer ces formes de complexité, mais il n’y a pas beaucoup de stratégies évidentes face aux technologies qui évoluent très vite.</p>
 <div id="fig-complexitySources" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -569,9 +548,20 @@ Country: null
 </div>
 </section>
 </section>
-<section id="survol-de-la-méthodologie" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="survol-de-la-méthodologie"><span class="header-section-number">1.5</span> Survol de la méthodologie</h2>
-<p>La <a href="#fig-SurvolMethodologie">figure&nbsp;<span>1.5</span></a> présente la méthode d’analyse et de conception proposée dans ce manuel. C’est une adaptation de plusieurs figures présentées par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
+<section id="survol-de-la-méthodologie" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="survol-de-la-méthodologie"><span class="header-section-number">1.4</span> Survol de la méthodologie</h2>
+<p>La méthodologie d’analyse et de conception proposée dans ce manuel se base sur celle présentée par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
+<p>Voici les éléments importants documentés dans ce manuel (voir la <a href="#fig-SurvolMethodologie">figure&nbsp;<span>1.5</span></a>, qui est une adaptation de plusieurs figures de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> ):</span></p>
+<ul>
+<li>il y a une spécification explicite des besoins (<a href="Besoins.html"><span>Chapitre&nbsp;2</span></a>) dans le modèle de cas <span style="white-space:nowrap">d’utilisation ;</span></li>
+<li>à partir de chaque cas d’utilisation (<a href="CasUtilisation.html"><span>Chapitre&nbsp;3</span></a>), il y a une conception de haut niveau (l’API du système à développer) documentée sous forme de diagramme de séquence système (DSS) (<a href="DSS.html"><span>Chapitre&nbsp;5</span></a><span style="white-space:nowrap"> );</span></li>
+<li>à partir de chaque DSS, on peut définir un ensemble de contrats d’opération (<a href="Contrats.html"><span>Chapitre&nbsp;8</span></a>), surtout pour les opérations <span style="white-space:nowrap">complexes ;</span></li>
+<li>à partir de l’ensemble des besoins, on construit un modèle du domaine (MDD) (<a href="MDD.html"><span>Chapitre&nbsp;4</span></a><span style="white-space:nowrap"> );</span></li>
+<li>pour faire une conception intuitive et facile à adapter, on propose un modèle de conception sous forme de plusieurs RDCU (<a href="RDCU.html"><span>Chapitre&nbsp;9</span></a>) qui sont cohérentes avec le MDD (pour diminuer le décalage des représentations) et les <span style="white-space:nowrap">contrats ;</span></li>
+<li>pour implémenter les conceptions, on développe du code à partir des diagrammes dans le modèle de conception, ainsi que du code pour tester tout ça selon le développement piloté par les tests (<a href="TDD.html"><span>Chapitre&nbsp;10</span></a><span style="white-space:nowrap"> );</span></li>
+<li>pour gérer la dette technique (<a href="DetteTechnique.html"><span>Chapitre&nbsp;7</span></a>) on fait du réusinage (<a href="Réusinage.html"><span>Chapitre&nbsp;11</span></a>) au <span style="white-space:nowrap">besoin ;</span></li>
+<li>le tout se fait de manière évolutive, en itérations courtes selon le <em>Processus unifié</em>.</li>
+</ul>
 <div id="fig-SurvolMethodologie" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/FigA.1-avec-contrats.png" class="img-fluid figure-img"></p>
@@ -579,8 +569,8 @@ Country: null
 </figure>
 </div>
 </section>
-<section id="développement-itératif-évolutif-et-agile" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="développement-itératif-évolutif-et-agile"><span class="header-section-number">1.6</span> Développement itératif, évolutif et agile</h2>
+<section id="développement-itératif-évolutif-et-agile" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="développement-itératif-évolutif-et-agile"><span class="header-section-number">1.5</span> Développement itératif, évolutif et agile</h2>
 <p>Nous adaptons également un processus moderne de développement avec des itérations, selon une méthodologie «&nbsp;agile&nbsp;». Dans le chapitre 2 du livre de Craig Larman, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du «&nbsp;Processus Unifié&nbsp;», qui est une représentation générique de cette stratégie de développement.</p>
 <p>Nous résumons les points importants <span style="white-space:nowrap">ainsi :</span></p>
 <ul>
@@ -641,9 +631,6 @@ Country: null
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-SE_Curriculum_ACM_2014" class="csl-entry" role="doc-biblioentry">
-Ardis, Mark, Greg Hislop, Mark Sebern, David Budgen, Jeff Offutt, et Willem Visser. 2015. <span>«&nbsp;Software <span>Engineering</span> 2014 - <span>Curriculum Guidelines</span> for <span>Undergraduate Degree Programs</span> in <span>Software Engineering</span>&nbsp;»</span>. <span>ACM: Association for Computing Machinery</span>.
-</div>
 <div id="ref-GoF1994" class="csl-entry" role="doc-biblioentry">
 Gamma, Erich, Richard Helm, Ralph Johnson, et John Vlissides. 1994. <em>Design <span>Patterns</span>: <span>Elements</span> of <span>Reusable</span> <span>Object</span>-<span>Oriented</span> <span>Software</span></em>. 1ʳᵉ éd. Reading, Mass: Addison-Wesley Professional. <a href="http://amazon.com/o/ASIN/0201633612/">http://amazon.com/o/ASIN/0201633612/</a>.
 </div>
