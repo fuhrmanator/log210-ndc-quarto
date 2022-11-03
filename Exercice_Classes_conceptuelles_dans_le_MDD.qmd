@@ -4,7 +4,7 @@
 classes conceptuelles candidates avec les deux méthodes proposées dans
 la **section 9.5** du livre:
 
--   En utilisant une liste de [**catégories de classes**](#sec-catégoriesClasses)
+-   En utilisant une liste de [**catégories de classes**](#sec-categoriesClasses)
 
 -   À l’aide de groupes nominaux
 
@@ -26,43 +26,10 @@ catégories de classes
 C’est l’analyse linguistique consistant à repérer les noms et les
 groupes nominaux dans la description textuelle d’un domaine.
 
-## Diagramme de classes conceptuelles
-
-À partir du [cas d’utilisation en annexe](#sec-usecases), esquissez le Modèle du domaine correspondant au
-domaine de l’application.
-
-1. Considérez les   [classes candidates identifiées par catégorie et les groupes nominaux](#sec-classes) provenant de l’exercice précédent (une liste est dans l’annexe).
-
-2. Notez que les classes candidates et groupes nominaux ne sont pas tous les classes ou attributs (certains n’ont rien à voir avec le problème du domaine). Vous devez appliquer
-les directives vues dans le chapitre 9 du livre.
-
-3. Tout attribut doit avoir un type.
-
-4. Limitez-vous à des associations “mémorisables” dans le contexte de l’application du logiciel (ne pas faire des associations hors de la portée du cas d’utilisation).
-
-5. Vérifiez les cardinalités.
-
-6. Vérifiez les verbes sur les associations ainsi que le sens de lecture.
-
-Pour faire votre modèle:
-
-> *Vous pouvez les dessiner à la main et en prendre une photo.*
->
-> *Vous pouvez également utiliser PlantUML:*
-
--   *[tutoriel VSCode sur YouTube](https://www.youtube.com/watch?v=xkwJ9GwgZJU)*
-
--   *[PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571), module supplémentaire Google Docs,*
-
--   [*PlantText.com*](https://www.planttext.com/)
-
-
-(Votre MDD devrait apparaître ci-bas) 
-
 
 ## Annexe 1 : Cas d'utilisation
 
-### Cas d’utilisation - Réserver un livre de la bibliothèque{#sec-usecases}
+### Cas d’utilisation - Réserver un livre de la bibliothèque
 
 **Parties prenantes et intérêts** :  
 - **Le Membre.** Il veut un moyen de recherche exact et rapide et ne
@@ -109,46 +76,3 @@ Extensions (scénarios alternatifs) :
     1.  Le système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.
 
     2.  Le membre lance une nouvelle recherche.
-
-## Annexe 2 :  Classes candidates et groupes nominaux{#sec-classes}
-
-Cette liste est le résultat de l’application des méthodes 2 et 3 pour trouver les classes
-candidates et groupes nominaux (c’est une solution possible de l’exercice précédent).
-
-| **Catégorie de classe conceptuelle**      | **Classes candidates selon le cas d’utilisation** |
-| ----------- | ----------- |
-|  Transactions d’entreprise           | Réservation            |    
-|  Rôles des personnes, organisation           | Membre, Bibliothèque            |
-|  Produit ou service lié à une transaction ou une ligne de transaction           | Livre, Exemplaire            |    
-|  Lieu de la transaction           | Bibliothèque            |
-|  Objets physiques           | Livre, Exemplaire            |    
-|  Descriptions d’objets (**voir sec. 9.13!**)           | Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)            |
-|  Catalogue            | CatalogueLivre            |    
-
-### Groupes nominaux
-
-C’est l’analyse linguistique consistant à repérer les noms et les
-groupes nominaux dans la description textuelle d’un domaine.
-
-*N.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s’appliquer du tout.*
-
-- Bibliothèque
-- Liste de livres
-- Membre
-- Nom
-- Reservation 
-- Livre 
-- Titre 
-- Auteur
-- ISBN 
-- Maison d’édition 
-- Numéro de l’édition
-- Année
-- Exemplaires
-- Nombres 
-- Code 
-- Disponibilité
-- Réservation
-- Numéro de confirmation 
-- Nom du membre 
-- Code de l’exemplaire 
