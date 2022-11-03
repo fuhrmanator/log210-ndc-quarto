@@ -117,13 +117,13 @@ candidates et groupes nominaux (c’est une solution possible de l’exercice pr
 
 | **Catégorie de classe conceptuelle**      | **Classes candidates selon le cas d’utilisation** |
 | ----------- | ----------- |
-|  Transactions d’entreprise  | Réservation            |    
-|  Rôles des personnes, organisation   | Membre, Bibliothèque            |
-|  Produit ou service lié à une transaction ou une ligne de transaction | Livre, Exemplaire            |    
-|  Lieu de la transaction     | Bibliothèque            |
-|  Objets physiques           | Livre, Exemplaire            |    
-|  Descriptions d’objets (**voir sec. 9.13!**)           | Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)            |
-|  Catalogue            | CatalogueLivre            |    
+|Transactions d’entreprise  | Réservation            |    
+|Rôles des personnes, organisation   | Membre, Bibliothèque            |
+|Produit ou service lié à une transaction ou une ligne de transaction | Livre, Exemplaire            |    
+|Lieu de la transaction     | Bibliothèque            |
+|Objets physiques           | Livre, Exemplaire            |    
+|Descriptions d’objets (**voir sec. 9.13!**)  | Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)            |
+|Catalogue            | CatalogueLivre            |    
 
 ### Groupes nominaux
 
