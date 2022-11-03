@@ -132,23 +132,23 @@ groupes nominaux dans la description textuelle d’un domaine.
 
 *N.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s’appliquer du tout.*
 
-Bibliothèque \
-Liste de livres \
-Membre \
-Nom \
-Reservation \
-Livre \
-Titre \
-Auteur \
-ISBN \
-Maison d’édition \
-Numéro de l’édition \
-Année \
-Exemplaires \
-Nombres \
-Code \
-Disponibilité \
-Réservation \
-Numéro de confirmation \
-Nom du membre \
-Code de l’exemplaire 
+- Bibliothèque
+- Liste de livres
+- Membre
+- Nom
+- Reservation 
+- Livre 
+- Titre 
+- Auteur
+- ISBN 
+- Maison d’édition 
+- Numéro de l’édition
+- Année
+- Exemplaires
+- Nombres 
+- Code 
+- Disponibilité
+- Réservation
+- Numéro de confirmation 
+- Nom du membre 
+- Code de l’exemplaire 
