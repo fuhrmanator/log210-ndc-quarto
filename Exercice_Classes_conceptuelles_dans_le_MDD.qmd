@@ -115,15 +115,15 @@ Extensions (scénarios alternatifs) :
 Cette liste est le résultat de l’application des méthodes 2 et 3 pour trouver les classes
 candidates et groupes nominaux (c’est une solution possible de l’exercice précédent).
 
-| **Catégorie de classe conceptuelle**      | **Classes candidates selon le cas d’utilisation** |
-| ----------- | ----------- |
-|Transactions d’entreprise  | Réservation            |    
-|Rôles des personnes, organisation   | Membre, Bibliothèque            |
-|Produit ou service en liaison à une transaction ou une ligne de transaction | Livre, Exemplaire            |    
-|Lieu de la transaction     | Bibliothèque            |
-|Objets physiques           | Livre, Exemplaire            |    
-|Descriptions d’objets (**voir sec. 9.13!**)  | Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)            |
-|Catalogue            | CatalogueLivre            |    
+ **Catégorie de classe conceptuelle** | **Classes candidates selon le cas d’utilisation** 
+:----------|:----------
+Transactions d’entreprise  | Réservation
+Rôles des personnes, organisation  | Membre, Bibliothèque
+Produit ou service lié à une transaction ou une ligne de transaction | Livre, Exemplaire    
+Lieu de la transaction  | Bibliothèque
+Objets physiques | Livre, Exemplaire 
+Descriptions d’objets (**voir sec. 9.13!**)  | Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)
+Catalogue | CatalogueLivre  
 
 ### Groupes nominaux
 
