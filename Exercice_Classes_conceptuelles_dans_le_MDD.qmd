@@ -28,10 +28,10 @@ groupes nominaux dans la description textuelle d’un domaine.
 
 ## Diagramme de classes conceptuelles
 
-À partir du [cas d’utilisation en annexe](#sec-usecases), esquissez le Modèle du domaine correspondant au
+À partir du [cas d’utilisation de la section 1](#sec-usecases), esquissez le Modèle du domaine correspondant au
 domaine de l’application.
 
-1. Considérez les   [classes candidates identifiées par catégorie et les groupes nominaux](#sec-classes) provenant de l’exercice précédent (une liste est dans l’annexe).
+1. Considérez les   [classes candidates identifiées par catégorie et les groupes nominaux](#sec-classes) provenant de l’exercice précédent (une liste est dans la section 2).
 
 2. Notez que les classes candidates et groupes nominaux ne sont pas tous les classes ou attributs (certains n’ont rien à voir avec le problème du domaine). Vous devez appliquer
 les directives vues dans le chapitre 9 du livre.
@@ -60,7 +60,7 @@ Pour faire votre modèle:
 (Votre MDD devrait apparaître ci-bas) 
 
 
-## Annexe 1 : Cas d'utilisation
+## Section 1 : Cas d'utilisation
 
 ### Cas d’utilisation - Réserver un livre de la bibliothèque{#sec-usecases}
 
@@ -110,7 +110,7 @@ Extensions (scénarios alternatifs) :
 
     2.  Le membre lance une nouvelle recherche.
 
-## Annexe 2 :  Classes candidates et groupes nominaux{#sec-classes}
+## Section 2 :  Classes candidates et groupes nominaux{#sec-classes}
 
 Cette liste est le résultat de l’application des méthodes 2 et 3 pour trouver les classes
 candidates et groupes nominaux (c’est une solution possible de l’exercice précédent).

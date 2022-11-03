@@ -1,7 +1,7 @@
 # Exercice Contrats d’opération
 
 Faire **un contrat d’opération pour chacune des opérations système**
-dans le DSS dans l’annexe A, selon le modèle du domaine dans l’annexe B.
+dans le DSS dans la section A, selon le modèle du domaine dans la section B.
 
 Les éléments d’un contrat sont:
 
@@ -21,10 +21,10 @@ Les éléments d’un contrat sont:
 
 Écrivez vos contrats ici (un pour chaque opération système):
 
-## Annexe A - DSS
+## section A - DSS
 
 ![](images/media/image13.png)
 
-## Annexe B - MDD partiel
+## section B - MDD partiel
 
 ![](images/media/image14.png)
