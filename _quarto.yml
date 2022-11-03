@@ -53,6 +53,7 @@ book:
     - ExercicesCoderSequence.qmd
     - Exercice_Classes_conceptuelles_dans_le_MDD.qmd
     - Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.qmd
+    - Exercice_Contrats_d_opération.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib

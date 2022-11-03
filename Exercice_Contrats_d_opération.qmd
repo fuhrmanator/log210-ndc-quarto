@@ -1,0 +1,30 @@
+# Exercice Contrats d’opération
+
+Faire **un contrat d’opération pour chacune des opérations système**
+dans le DSS dans l’annexe A, selon le modèle du domaine dans l’annexe B.
+
+Les éléments d’un contrat sont:
+
+-   La signature de l’opération système;
+
+-   Les postconditions qui sont d’une des formes suivantes:
+
+    -   création (ou suppression) d'instances;
+
+    -   modification des valeurs des attributs;
+
+    -   formation (ou rupture) d'associations.
+
+-   Les postconditions doivent utiliser *le vocabulaire du modèle du  domaine*. Ça veut dire qu’il faut parler d’instances de classes conceptuelles, de leurs attributs et des associations entre classes.
+
+### Contrats d’opération
+
+Écrivez vos contrats ici (un pour chaque opération système):
+
+## Annexe A - DSS
+
+![](images/media/image13.png)
+
+## Annexe B - MDD partiel
+
+![](images/media/image14.png)
