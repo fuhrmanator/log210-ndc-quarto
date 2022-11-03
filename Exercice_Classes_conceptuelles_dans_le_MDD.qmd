@@ -119,6 +119,7 @@ candidates et groupes nominaux (c’est une solution possible de l’exercice pr
 | ----------- | ----------- |
 |Transactions d’entreprise  | Réservation            |    
 |Rôles des personnes, organisation   | Membre, Bibliothèque            |
+|Produit ou service en liaison à une transaction ou une ligne de transaction | Livre, Exemplaire            |    
 |Lieu de la transaction     | Bibliothèque            |
 |Objets physiques           | Livre, Exemplaire            |    
 |Descriptions d’objets (**voir sec. 9.13!**)  | Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)            |
