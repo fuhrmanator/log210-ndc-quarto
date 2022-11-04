@@ -1,19 +1,235 @@
-# Exercice: Critique d’une conception
+# Exercice: Critique d'une conception
 
-1.  Considérer le MDD pour le jeu de Monopoly (voir plus bas pour le MDD en français et en anglais).
+Dans cet exercice, l'objectif est de vous sensibiliser à la facilité de comprendre une conception à partir d'un problème.
+Un objectif secondaire est de considérer les choix de conception sur un plan de la cohésion et du couplage. 
+Ici, il s'agit du jeu de Monopoly, qui est un exemple proposé par @craig_uml_2005 pour lequel il a également proposé un modèle du domaine et une conception, selon la méthodologie.
 
-2.  Visitez [ce jamboard](https://jamboard.google.com/d/12ask7dmSv2dVVd115iYJp4wh2NiSYgqOMQogUt-bBD0/edit?usp=sharing) et choisissez la page pour votre équipe.
+Pour cet exercice, nous examinerons une conception orientée objet réelle du jeu de Monopoly disponible sur GitHub, soit [Emojiopoly](https://github.com/Chuzzy/Emojiopoly). Voici le travail à faire.
 
-3.  À l’aide des outils de jamboard, faites les remarques sur la conception **surtout par rapport au MDD et le décalage des représentations**.
+- Considérez les deux artefacts:
+    - un [modèle du domaine de Monopoly](#sec-MDD_Monopoly) proposé par @craig_uml_2005 (il y a une version en français et en anglais, puisque le code TypeScript est en anglais) et 
+    - un [modèle d'une solution](#sec-DDC_Emojiopoly) sous forme de diagramme de classes logicielles, créé à partir du code TypeScript dans le dépôt mentionné ci-haut). 
+- Nous faisons une hypothèse que l'équipe qui a développé Emojiopoly n'ait pas commencé avec le MDD de Larman.
+- Comparez ces deux artefacts et faites des remarques sur la conception, **surtout par rapport au MDD et le décalage des représentations**.
+- Faites des remarques sur la solution concernant la cohésion et le couplage.
 
-Emojiopoly
+## Diagramme de classes d'Emojiopoly {#sec-DDC_Emojiopoly .unnumbered .unlisted}
 
-# MDD en français
+Pour visualiser la conception, nous avons généré un diagramme des classes en UML avec l'outil [tplant](https://github.com/bafolts/tplant):
 
-![](images/media/image16.png)
+```{.plantuml caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly](https://github.com/Chuzzy/Emojiopoly)" #fig-Emojiopoly_classes}
+@startuml
+' généré avec tplant a partir d'un clone de https://github.com/Chuzzy/Emojiopoly :
+' tplant --input src/monopoly/**/*.ts --output Emojiopoly.puml -A
+' (certaines éléments ont été modifiés pour la mise en page)
+'left to right direction
+interface Card {
+    +text: string
+    +action: "advance" | "back" | "choice" | "payeach" | "collecteach" |\n "doubletransport" | "earn" | "pay" | "stealmoney" | "stolenmoney" |\n "streetrepairs" | "gotojail"
+    +value?: string | number | number[]
+}
+class MonopolyGame {
+    +jackpot: number
+    +currentTurnIndex: number
+    +consecutiveDoubles: number
+    +players: Player[]
+    +currentPlayer: Player
+    +dice: number[]
+    +isTurnFinished: boolean
+    +unpaidDebts: Debt[]
+    +messageEventHandler: (message: string) => void
+    +chanceCards: Card[]
+    +chestCards: Card[]
+    +chanceCardIndex: number
+    +chestCardIndex: number
+    +addToJackpot(amount: number): void
+    +rollDice(die1?: number, die2?: number): void
+    +moveToSquare(newSquare: Square, awardSalary?: boolean): void
+    +sendToJail(): void
+    +moveBack(numberOfSpaces: number): void
+    +postBail(): void
+    +takeChance(): void
+    +takeChest(): void
+    +handleCard(card: Card): void
+    +movePlayer(): void
+    +payDebts(): void
+    +finishTurn(): void
+    +board: Square[]
+    +playerNames: string[]
+    +houseRules: HouseRules
+}
+interface HouseRules {
+    ' +needMonopolyToBuild: boolean
+    ' +doubleRentWithMortgages: boolean
+    ' +evenBuildRule: boolean
+    ' +rentInJail: boolean
+    ' +extraTurnOnRollingOutOfJail: boolean
+    ' +tradeOutOfBankruptcy: boolean
+    ' +bankCoversUnpaidRent: boolean
+    ' +bankruptAssetsAlwaysToBank: boolean
+    ' +purchaseMortgagedProperties: boolean
+    ' +freeParkingJackpot: number | "fines"
+    ' +goSalary: number
+    ' +landOnGo: "normal" | "double" | "freemove"
+    ' +startingMoney: number
+    ' +turnsInJail: number
+    ' +bailAmount: number
+    ' +maxConsecutiveDoubles: number
+    ' +houseLimit: number
+    ' +hotelLimit: number
+    ' +mortgageRate: number
+    ' +unmortgageRate: number
+    ' +maintenanceRate: number
+    ' +incomeTax: number
+    ' +superTax: number
+}
+class Player {
+    +ownedProperties: Property[]
+    +currentSquare: Square
+    +turnsInJail: number
+    +name: string
+    +money: number
+}
+class Property {
+    +buildingsCount: number
+    +isMortgaged: boolean
+    +owner: Player
+    +name: string
+    +color: "brown" | "lightblue" | "pink" | "orange" | "red" | "yellow" |\n "green" | "blue" | "white"
+    +price: number
+    +rent: number[] | "transport" | "utility"
+    +buildPrice: number
+}
+class Square {
+    +occupants: Player[]
+    +addOccupant(occupant: Player): void
+    +removeOccupant(occupant: Player): void
+    +squareContents: "gotojail" | Property | "go" | "jail" | "parking" |\n "chance" | "chest" | "incometax" | "supertax"
+}
+class Debt {
+    +amount: number
+    +payDebt(): void
+    +toString(): string
+    +game: MonopolyGame
+    +debtor: Player
+    +creditor: Player
+    +initialAmount: number
+}
+MonopolyGame --> "*" Player
+' MonopolyGame --> "1" Player
+MonopolyGame --> "*" Debt
+MonopolyGame --> "*" Card
+' MonopolyGame --> "1" Square
+' MonopolyGame --> "1" Card
+MonopolyGame --> "*" Square
+MonopolyGame --> "1" HouseRules
+Player --> "*" Property
+Player --> "1" Square
+Property --> "1" Player
+Square --> "*" Player
+' Square --> "1" Player
+Square --> "1" Property
+Debt --> "1" MonopolyGame
+Debt --> "1" Player
+@enduml
+```
+
+## Modèle du domaine de Monopoly {#sec-MDD_Monopoly .unnumbered .unlisted}
+
+Puisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle du domaine de Monopoly en français et en anglais pour vous aider à comprendre les termes.
+
+```{.plantuml caption="MDD (version française) de Monopoly proposé par @craig_uml_2005"}
+@startuml
+!include ecriture.pumlinclude
+hide empty members
+'left to right direction
+class "JeuDeMonopoly" as MG {
+    compteurRonds
+}
+class "Dé" as D {
+    valeur
+}
+class "Plateau" as B {
+}
+
+class "Pion" as T {
+    nom
+}
+class "Joueur" as P {
+    argent
+    nom
+}
+
+abstract class "Case" as S {
+    nom
+}
+abstract class "Propriété" as Prop extends S {
+    prix
+}
+class "Case\nOrdinaire" extends S
+class "Case\nDépart" extends S
+class "Case\nImpôts" extends S 
+class "Case\nTerrain" extends Prop 
+class "Case\nGare" extends Prop 
+class "Case\nService\nPublic" extends Prop 
 
 
-# MDD en anglais
+P "0..1" -- "*" Prop : Possède >
+P "1" -- "1" T : Possède >
+T "0..8" -- "1" S : Est-sur >
 
-![](images/media/image15.png)
+B "1" *-- "40" S
+P "2..8" -- "1" MG : Joue
+MG "1" -- "2" D : Joué-avec >
+MG "1" -r- "1" B : Joué-sur >
 
+@enduml
+```
+
+```{.plantuml caption="MDD (version anglaise) de Monopoly proposé par @craig_uml_2005"}
+@startuml
+!include ecriture.pumlinclude
+hide empty members
+'left to right direction
+class "Monopoly\nGame" as MG {
+    roundCount
+}
+class "Die" as D {
+    faceValue
+}
+class "Board" as B {
+}
+
+class "Token" as T {
+    name
+}
+class "Player" as P {
+    cash
+    name
+}
+
+abstract class "Square" as S {
+    name
+}
+abstract class "Property" as Prop extends S {
+    price
+}
+class "Regular\nSquare" extends S
+class "Go\nSquare" extends S
+class "Income\nTax\nSquare" extends S 
+class "Lot\nSquare" extends Prop 
+class "Railroad\nSquare" extends Prop 
+class "Utility\nSquare" extends Prop 
+
+
+P "0..1" -- "*" Prop : Owns >
+P "1" -- "1" T : Owns >
+T "0..8" -- "1" S : Is-on >
+
+B "1" *-- "40" S
+P "2..8" -- "1" MG : Plays
+MG "1" -- "2" D : Played-with >
+MG "1" -r- "1" B : Played-on >
+
+@enduml
+```
