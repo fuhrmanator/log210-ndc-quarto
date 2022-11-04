@@ -5,7 +5,7 @@
 À partir du [cas d’utilisation de l'annexe B](#sec-usecases), esquissez le Modèle du domaine correspondant au
 domaine de l’application.
 
-1. Considérez les  [classes candidates identifiées par catégorie et les groupes nominaux](#sec-classes) provenant de l’exercice précédent (une liste est présente dans @sec-groups).
+1. Considérez les  [classes candidates identifiées par catégorie et les groupes nominaux](#sec-classes) provenant de l’exercice précédent (une liste est présente dans la @sec-groups).
 
 2. Notez que les classes candidates et groupes nominaux ne sont pas tous les classes ou attributs (certains n’ont rien à voir avec le problème du domaine). Vous devez appliquer
 les directives vues dans le chapitre 9 du livre.
