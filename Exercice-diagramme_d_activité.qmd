@@ -1,4 +1,4 @@
-# Exercice: diagramme d'activité
+# Exercice: Diagramme d'activité
 
 Dessinez un diagramme d'activité qui modélise ce qui se passe lorsque vous faites un devoir dans Google Classroom.
 Votre diagramme doit comprendre les activités de l'enseignant et de l'étudiant. 
@@ -6,4 +6,4 @@ Le devoir doit être un objet dans le diagramme.
 
 {{< include _callout_conseils_diagrammes.qmd >}}
 
-(Votre \[diagramme\] devrait apparaître plus bas)
+(Votre diagramme devrait apparaître plus bas)
