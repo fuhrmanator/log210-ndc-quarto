@@ -581,88 +581,172 @@
     "text": "Ardis, Mark, Greg Hislop, Mark Sebern, David Budgen, Jeff Offutt, and\nWillem Visser. 2015. “Software Engineering 2014 -\nCurriculum Guidelines for Undergraduate Degree\nPrograms in Software Engineering.” ACM:\nAssociation for Computing Machinery.\n\n\nAvgeriou, Paris, Philippe Kruchten, Ipek Ozkaya, and Carolyn Seaman.\n2016. “Managing Technical Debt in Software\nEngineering (Dagstuhl Seminar 16162).” Edited by Paris\nAvgeriou, Philippe Kruchten, Ipek Ozkaya, and Carolyn Seaman.\nDagstuhl Reports 6 (4): 110–38. https://doi.org/10.4230/DagRep.6.4.110.\n\n\nCoad, Peter. 1997. Object Models:\nStrategies, Patterns, and\nApplications. 2nd Revised ed. edition. Upper\nSaddle River, N.J: Pearson Technology Group.\n\n\nFitzpatrick, Brian W., and Ben Collins-Sussman. 2012. Team\nGeek: A Software\nDeveloper’s Guide to Working\nWell with Others. 1 edition. Sebastopol.\nCA: O’Reilly Media.\n\n\nFord, Neal. 2009. “Evolutionary Architecture and Emergent Design:\nInvestigating Architecture and Design.” {CT}316. http://www.ibm.com/developerworks/library/j-eaed1/.\n\n\nFowler, Martin. 2007. “Bliki:\nDesignStaminaHypothesis.” Martinfowler.com.\n\n\n———. 2018. Refactoring: Improving the Design of Existing Code.\n2 edition. Boston: Addison-Wesley Professional.\n\n\nGamma, Erich, Richard Helm, Ralph Johnson, and John Vlissides. 1994.\nDesign Patterns: Elements of\nReusable Object-Oriented\nSoftware. 1st ed. Reading, Mass: Addison-Wesley\nProfessional. http://amazon.com/o/ASIN/0201633612/.\n\n\nHanmer, Robert. 2007. Patterns for Fault\nTolerant Software. 1st ed. Chichester,\nEngland ; Hoboken, NJ: Wiley.\n\n\nKarac, I., and B. Turhan. 2018. “What Do We (Really) Know about\nTest-Driven Development?” IEEE Software 35 (4): 81–85.\nhttps://doi.org/10.1109/MS.2018.2801554.\n\n\nLarman, Craig. 2001. Applying UML and\nPatterns: An Introduction to\nObject-Oriented Analysis and Design and the\nUnified Process. 2nd edition. Upper Saddle\nRiver, NJ: Prentice Hall.\n\n\n———. 2005. UML 2 et design patterns. 3rd ed.\nParis: Village Mondial.\n\n\n“LaTeX.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=LaTeX&oldid=1114993597.\n\n\nOakley, Barbara, RM Felder, R Brent, and I Elhajj. 2004. “Coping\nwith Hitchhikers and Couch Potatoes on Teams.” Journal of\nStudent Centered Learning 2 (1): 32–34. https://www.cs.cornell.edu/courses/cs3110/2018fa/teams/hitchhikers.html.\n\n\n“Pandoc.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=Pandoc&oldid=1116852485.\n\n\n“PlantUML.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=PlantUML&oldid=1111009429.\n\n\n“Quarto.” 2022. October 26, 2022. https://quarto.org/."
   },
   {
-    "objectID": "ExercicesCoderSequence.html",
-    "href": "ExercicesCoderSequence.html",
-    "title": "Appendix A — Exercice : Coder des méthodes à partir des diagrammes de séquence",
-    "section": "",
-    "text": "Astuce\n\n\n\nVous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n’est pas forcément permis lors d’un examen.\n\n\nVoici un modèle à suivre. Pour le diagramme suivant :\n\n\n:A:Bexecute(3)result = setItem(\"Fred\")\nFigure A.1: Exemple de diagramme de séquence.\n\n\nOn code les classes suivantes en TypeScript :\nclass A {\n    b: B;  // A envoie un message à B, visibilité d'attribut\n    execute(arg0:number):any {\n        const result = this.b.setItem(\"Fred\");\n    }\n}\n\nclass B {\n    setItem(arg0:string):any {\n        //...\n    }\n}\n\nÉcrire le code pour la figure suivante.\n:Bernard:Aliceinitallô(12)create:Autre\"oui\"15\n\n\nÉcrire le code pour la figure suivante décrivant la création de la collection de Vente (tirée de Larman 2005, figure. 17.6).\n:Registreselon Créateur etContrôleurcréerNouvelleVenteRegistre crée uneVente selon Créateurcreate:Venteselon Créateur, Vente crée unecollection vide (par exemple uneList) destinée a mémoriser lesinstances de LigneArticlesl'activation de Vente est implicitement dansle constructeur de l'instance de VentecreatelignesArticles :List<LigneArticles>\n\n\nÉcrire le code pour la figure suivante décrivant l’utilisation d’un Cornet dans le jeu de Monopoly (tirée de Larman 2005, fig. F22.9)\nj : Joueur: Cornet: Plateaupos : CaseSelon Fabrication pureprendreTourlancervalTot = getTotalpos = getCase( pos, valTot )atterrirSur( j )\n\n\nÉcrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode atterrirSur dans le jeu de Monopoly (tirées de Larman 2005, fig. F22.6 et F22.7)\n: CaseImpôtsj : JoueuratterrirSur(j)selon Polymorphismec = getCashselon ExpertdiminuerCash(min(200, 10% de c))selon Expert\n: CaseAllezEnPrisonj : JoueuratterrirSur(j)selon PolymorphismesetPosition(prison)selon Expert\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
-  },
-  {
     "objectID": "Exercice_Classes_conceptuelles_dans_le_MDD.html",
     "href": "Exercice_Classes_conceptuelles_dans_le_MDD.html",
-    "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
+    "title": "Appendix A — Exercice : Classes conceptuelles dans le MDD",
     "section": "",
     "text": "À partir du cas d’utilisation Réserver un livre de la bibliothèque, trouvez des classes conceptuelles candidates avec les deux méthodes proposées dans la section 9.5 de Larman (2005) :"
   },
   {
     "objectID": "Exercice_Classes_conceptuelles_dans_le_MDD.html#par-catégories-de-classes",
     "href": "Exercice_Classes_conceptuelles_dans_le_MDD.html#par-catégories-de-classes",
-    "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
+    "title": "Appendix A — Exercice : Classes conceptuelles dans le MDD",
     "section": "Par catégories de classes",
     "text": "Par catégories de classes\nProposer les classes candidates provenant du cas d’utilisation selon les catégories de classes\n\n\n\n\n\n\n\nCatégorie de classe conceptuelle\nClasses candidates selon le cas d’utilisation\n\n\n\n\nTransaction d’affaires (métier)\nRéservation (ceci est un exemple)\n\n\n(continuez avec d’autres catégories)"
   },
   {
     "objectID": "Exercice_Classes_conceptuelles_dans_le_MDD.html#à-laide-de-groupes-nominaux",
     "href": "Exercice_Classes_conceptuelles_dans_le_MDD.html#à-laide-de-groupes-nominaux",
-    "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
+    "title": "Appendix A — Exercice : Classes conceptuelles dans le MDD",
     "section": "À l’aide de groupes nominaux",
     "text": "À l’aide de groupes nominaux\nC’est l’analyse linguistique consistant à repérer (souligner ou mettre en surbrillance) les noms et les groupes nominaux dans la description textuelle d’un domaine (dans cet exercice, c’est le cas d’utilisation Réserver un livre de la bibliothèque)."
   },
   {
     "objectID": "Exercice_Classes_conceptuelles_dans_le_MDD.html#sec-CU_Réserver_livre",
     "href": "Exercice_Classes_conceptuelles_dans_le_MDD.html#sec-CU_Réserver_livre",
-    "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
+    "title": "Appendix A — Exercice : Classes conceptuelles dans le MDD",
     "section": "Cas d’utilisation - Réserver un livre de la bibliothèque",
     "text": "Cas d’utilisation - Réserver un livre de la bibliothèque\nParties prenantes et intérêts:\n- Le Membre. Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.\n- La Bibliothèque. Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.\nPréconditions: Le Membre est identifié et authentifié\nActeur principal : Membre\n\nLe membre choisit la fonction « recherche » et saisit du texte décrivant le livre (par exemple, une partie du titre, « UML »).\nLe système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, « UML2 et le design patterns, Craig Larman, 2005 » et « UML par la pratique, Pascal Rocques, 2009 ».\nLe membre choisit un livre parmi les résultats, par exemple, « UML2 et les design patterns, Craig Larman, 2005 ».\nLe système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre « UML2 et les design patterns », un avec l’identificateur d’exemplaire « 1 » qui est disponible et un avec l’identificateur d’exemplaire « 2 » qui n’est pas disponible.\nLe membre réserve un exemplaire du livre qui est disponible.\nLe système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.\n\nExtensions (scénarios alternatifs) :\n\nAucun livre ne correspond au texte de la recherche.\n\nLe système affiche un message indiquant qu’aucun livre n’a été trouvé.\nLe membre lance une nouvelle recherche.\n\n\n\n\nTous les exemplaires ne sont pas disponibles.\n\nLe système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.\nLe membre lance une nouvelle recherche.\n\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_Diagramme_de_classes_conceptuelles_MDD.html",
     "href": "Exercice_Diagramme_de_classes_conceptuelles_MDD.html",
-    "title": "Appendix C — Exercice : Diagramme de classes conceptuelles (MDD)",
+    "title": "Appendix B — Exercice : Diagramme de classes conceptuelles (MDD)",
     "section": "",
     "text": "À partir du cas d’utilisation Réserver un livre de la bibliothèque, esquissez le Modèle du domaine correspondant au domaine de l’application."
   },
   {
     "objectID": "Exercice_Diagramme_de_classes_conceptuelles_MDD.html#sec-ClassesCandidatesSolution",
     "href": "Exercice_Diagramme_de_classes_conceptuelles_MDD.html#sec-ClassesCandidatesSolution",
-    "title": "Appendix C — Exercice : Diagramme de classes conceptuelles (MDD)",
+    "title": "Appendix B — Exercice : Diagramme de classes conceptuelles (MDD)",
     "section": "Classes candidates et groupes nominaux",
-    "text": "Classes candidates et groupes nominaux\nCeci est une solution possible pour l’exercice à Annexe B\n\nClasses candidates\nCette liste est le résultat de l’application des méthodes 2 et 3 pour trouver les classes candidates et groupes nominaux (c’est une solution possible de l’exercice précédent).\n\n\n\n\n\n\n\nCatégorie de classe conceptuelle\nClasses candidates selon le cas d’utilisation\n\n\n\n\nTransactions d’entreprise\nRéservation\n\n\nRôles des personnes, organisation\nMembre, Bibliothèque\n\n\nProduit ou service lié à une transaction ou une ligne de transaction\nLivre, Exemplaire\n\n\nLieu de la transaction\nBibliothèque\n\n\nObjets physiques\nLivre, Exemplaire\n\n\nDescriptions d’objets (voir sec. 9.13 !)\nLivre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)\n\n\nCatalogue\nCatalogueLivre\n\n\n\n\n\nGroupes nominaux\nC’est l’analyse linguistique consistant à repérer les noms et les groupes nominaux dans la description textuelle d’un domaine.\n\n\n\n\n\n\nNote\n\n\n\nN.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s’appliquer du tout.\n\n\nBibliothèque\nListe de livres\nMembre\nNom\nReservation\nLivre\nTitre\nAuteur\nISBN\nMaison d’édition\nNuméro de l’édition\nAnnée\nExemplaires\nNombres\nCode\nDisponibilité\nRéservation\nNuméro de confirmation\nNom du membre\nCode de l’exemplaire"
-  },
-  {
-    "objectID": "Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.html",
-    "href": "Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.html",
-    "title": "Appendix D — Création des méthodes à partir des diagrammes d’interaction",
-    "section": "",
-    "text": "Avertissement\n\n\n\nVous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais ça ne sera pas possible à l’examen final\n\n\nModèle :\n:A:Bexecute(3)result = setItem(\"Fred\")\nclass A {\n    b: B;  // A envoie un message à B, visibilité d'attribut\n    execute(arg0:number):any {\n        const result = this.b.setItem(\"Fred\");\n    }\n}\n\nclass B {\n    setItem(arg0:string):any {\n        //...\n    }\n}\n\n\n\nLa figure suivante décrit la création de la collection de Vente (tirée de Larman 2005, figure. 17.6)\n:Registreselon Créateur etContrôleurcréerNouvelleVenteRegistre crée uneVente selon Créateurcreate:Venteselon Créateur, Vente crée unecollection vide (par exemple uneList) destinée a mémoriser lesinstances de LigneArticlesl'activation de Vente est implicitement dansle constructeur de l'instance de VentecreatelignesArticles :List<LigneArticles>\n\n\n\n:Bernard:Aliceinitallô(12)create:Autre\"oui\"15\n\n\n\nFigure F22.9: Utilisation d'unCornetdans le jeu de Monopolyj : Joueur: Cornet: Plateaupos : CaseSelon Fabrication pureprendreTourlancervalTot = getTotalpos = getCase( pos, valTot )atterrirSur( j )\n\n\n\nFigure F22.6 - Le cas deCaseImpôtsdans Monopoly: CaseImpôtsj : JoueuratterrirSur(j)selon Polymorphismec = getCashselon ExpertdiminuerCash(min(200, 10% de c))selon Expert\nFigure F22.7 - Le cas deCaseAllezEnPrisondans Monopoly: CaseAllezEnPrisonj : JoueuratterrirSur(j)selon PolymorphismesetPosition(prison)selon Expert\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+    "text": "Classes candidates et groupes nominaux\nCeci est une solution possible pour l’exercice à Annexe A\n\nClasses candidates\nCette liste est le résultat de l’application des méthodes 2 et 3 pour trouver les classes candidates et groupes nominaux (c’est une solution possible de l’exercice précédent).\n\n\n\n\n\n\n\nCatégorie de classe conceptuelle\nClasses candidates selon le cas d’utilisation\n\n\n\n\nTransactions d’entreprise\nRéservation\n\n\nRôles des personnes, organisation\nMembre, Bibliothèque\n\n\nProduit ou service lié à une transaction ou une ligne de transaction\nLivre, Exemplaire\n\n\nLieu de la transaction\nBibliothèque\n\n\nObjets physiques\nLivre, Exemplaire\n\n\nDescriptions d’objets (voir sec. 9.13 !)\nLivre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)\n\n\nCatalogue\nCatalogueLivre\n\n\n\n\n\nGroupes nominaux\nC’est l’analyse linguistique consistant à repérer les noms et les groupes nominaux dans la description textuelle d’un domaine.\n\n\n\n\n\n\nNote\n\n\n\nN.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s’appliquer du tout.\n\n\nBibliothèque\nListe de livres\nMembre\nNom\nReservation\nLivre\nTitre\nAuteur\nISBN\nMaison d’édition\nNuméro de l’édition\nAnnée\nExemplaires\nNombres\nCode\nDisponibilité\nRéservation\nNuméro de confirmation\nNom du membre\nCode de l’exemplaire"
   },
   {
     "objectID": "Exercice_Contrats_d_opération.html",
     "href": "Exercice_Contrats_d_opération.html",
-    "title": "Appendix E — Exercice Contrats d’opération",
+    "title": "Appendix C — Exercice : Contrats d’opération",
     "section": "",
     "text": "Rédigez un contrat d’opération pour chacune des opérations système du DSS ci-bas, selon le modèle du domaine ci-bas.\nLes éléments importants d’un contrat sont :"
   },
   {
     "objectID": "Exercice_Contrats_d_opération.html#contrats-dopération",
     "href": "Exercice_Contrats_d_opération.html#contrats-dopération",
-    "title": "Appendix E — Exercice Contrats d’opération",
+    "title": "Appendix C — Exercice : Contrats d’opération",
     "section": "Contrats d’opération",
     "text": "Contrats d’opération\nÉcrivez vos contrats ici (un pour chaque opération système) :\n\nDSS\n\n\nDSS pour le scénarioTraiter vente:Caissier:SystèmedémarrerVenteloop[reste des articles]saisirArticle(codeArticle:int, quantité:int)description, totalterminerSale()total with taxesfairePaiement(montant:Monnaie)rendu de monnaie, reçu\nDSS pour le scénario Traiter Vente de Larman (2005)\n\n\n\n\nMDD partiel\nLigneArticlequantité:intVentedateHeure: DateHeureestTerminée : booleanPaiementmontant:MonnaieMagasinnom:Stringadresse:StringDescriptionProduitdescription : Stringprix : MoneycodeArticle : intCatalogueProduitRegistreContient1..*1Héberge1..*1Saisie-sur11Payée-par111*Décrite-par*1\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_DSS_Diagrammes-de-séquence-système.html",
     "href": "Exercice_DSS_Diagrammes-de-séquence-système.html",
-    "title": "Appendix F — Exercice : Diagramme de séquence système (DSS)",
+    "title": "Appendix D — Exercice : Diagramme de séquence système (DSS)",
     "section": "",
     "text": "Les opérations système doivent définir le type de chaque argument, s’il y en a.\n\n\n\n\n\n\nNote\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML :\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs.\nPlantText.com.\n\nNous déconseillons LucidChart et d’autres outils ayant juste des profils simples pour UML, puisqu’ils ne sont pas bien adaptés (voir la figure 13.4)."
   },
   {
-    "objectID": "Exercice_Adaptateur_pour_Maps_CF.html",
-    "href": "Exercice_Adaptateur_pour_Maps_CF.html",
-    "title": "Appendix G — Exercice : Adaptateur pour Maps",
+    "objectID": "Exercice_Diagramme_états.html",
+    "href": "Exercice_Diagramme_états.html",
+    "title": "Appendix E — Exercices diagramme d’états",
     "section": "",
-    "text": "Google Maps\nBing Maps\nApple Maps\n\nLe système veut obtenir une liste d’étapes (des directions) pour se rendre à une destination à partir d’un point de départ. L’utilisateur du système pourra décider lequel des services lui convient dans les préférences.\nLe but de l’exercice est de déterminer l’interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d’itinéraires. Cela peut être un diagramme de classe réalisé avec PlantUML."
+    "text": "Ces exercices devraient vous aider à comprendre les diagrammes d’états en UML. Vous devez vous référer au livre du cours pour la bonne notation (figure F25.9/A29.2)."
+  },
+  {
+    "objectID": "Exercice_Diagramme_états.html#exercice-1",
+    "href": "Exercice_Diagramme_états.html#exercice-1",
+    "title": "Appendix E — Exercices diagramme d’états",
+    "section": "E.1 Exercice 1",
+    "text": "E.1 Exercice 1\nFaire un diagramme d’états en UML modélisant les états d’un téléphone intelligent. Considérer une dynamique simplifiée, avec seulement trois états correspondant aux images suivantes :\n\nPour simplifier encore le modèle, le bouton en haut à droite sert pour éteindre et pour allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint."
+  },
+  {
+    "objectID": "Exercice_Diagramme_états.html#exercice-2",
+    "href": "Exercice_Diagramme_états.html#exercice-2",
+    "title": "Appendix E — Exercices diagramme d’états",
+    "section": "E.2 Exercice 2",
+    "text": "E.2 Exercice 2\nFaire un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format bref) :\nS’authentifier. Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.\nGérer guichet. L’Administrateur démarre le système et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre."
+  },
+  {
+    "objectID": "Exercice-diagramme_d_activité.html",
+    "href": "Exercice-diagramme_d_activité.html",
+    "title": "Appendix F — Exercice : diagramme d’activité",
+    "section": "",
+    "text": "Note\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML :\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs.\nPlantText.com.\n\nNous déconseillons LucidChart et d’autres outils ayant juste des profils simples pour UML, puisqu’ils ne sont pas bien adaptés (voir la figure 13.4).\n\n\n(Votre [diagramme] devrait apparaître plus bas)"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "",
+    "text": "Dans cet exercice, vous allez mieux comprendre la relation entre les principes GRASP et les patrons GoF. La figure suivante est tirée du livre de Larman, Figure A26.3/F23.3) :\nUne bonne ressource pour les patterns est la suivante :\nhttps://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.1 Itérateur",
+    "text": "G.1 Itérateur\nIdentifiez les 4 principes GRASP dans le patron Itérateur, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.2 Observateur",
+    "text": "G.2 Observateur\nIdentifiez les 4 principes GRASP dans le patron Observateur, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.3 Stratégie",
+    "text": "G.3 Stratégie\nIdentifiez les 4 principes GRASP dans le patron Stratégie, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.4 Composite",
+    "text": "G.4 Composite\nIdentifiez les 4 principes GRASP dans le patron Composite, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.5 Décorateur",
+    "text": "G.5 Décorateur\nIdentifiez les 4 principes GRASP dans le patron Décorateur, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.6 Méthode Template",
+    "text": "G.6 Méthode Template\nIdentifiez les 4 principes GRASP dans le patron Méthode Template, selon les directives dans les notes de cours à la section 14.3 :\n \nPatron TEMPLATE METHOD"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.7 Commande",
+    "text": "G.7 Commande\nIdentifiez les 4 principes GRASP dans le patron Commande, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.8 Méthode Fabrique",
+    "text": "G.8 Méthode Fabrique\nIdentifiez les 4 principes GRASP dans le patron Méthode fabrique, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.9 Proxy",
+    "text": "G.9 Proxy\nIdentifiez les 4 principes GRASP dans le patron Proxy, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
+    "title": "Appendix G — Exercice : Identifier GRASP dans GoF",
+    "section": "G.10 Façade",
+    "text": "G.10 Façade\nIdentifiez les 4 principes GRASP dans le patron Façade, selon les directives dans les notes de cours à la section 14.3 :"
   },
   {
     "objectID": "Exercice_Critique_d-une_conception.html",
@@ -686,108 +770,17 @@
     "text": "Modèle du domaine de Monopoly\nPuisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle du domaine de Monopoly en français et en anglais pour vous aider à comprendre les termes.\n\n\nJeuDeMonopolycompteurRondsDévaleurPlateauPionnomJoueurargentnomCasenomPropriétéprixCaseOrdinaireCaseDépartCaseImpôtsCaseTerrainCaseGareCaseServicePublicPossède0..1*Possède11Est-sur0..81140Joue2..81Joué-avec12Joué-sur11\nMDD (version française) de Monopoly proposé par Larman (2005)\n\n\n\n\nMonopolyGameroundCountDiefaceValueBoardTokennamePlayercashnameSquarenamePropertypriceRegularSquareGoSquareIncomeTaxSquareLotSquareRailroadSquareUtilitySquareOwns0..1*Owns11Is-on0..81140Plays2..81Played-with12Played-on11\nMDD (version anglaise) de Monopoly proposé par Larman (2005)\n\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
-    "objectID": "Exercice_Diagramme_états.html",
-    "href": "Exercice_Diagramme_états.html",
-    "title": "Appendix I — Exercices diagramme d’états",
+    "objectID": "Exercice-Coder_des_méthodes_des_DS.html",
+    "href": "Exercice-Coder_des_méthodes_des_DS.html",
+    "title": "Appendix I — Exercice : Coder des méthodes à partir des diagrammes de séquence",
     "section": "",
-    "text": "Ces exercices devraient vous aider à comprendre les diagrammes d’états en UML. Vous devez vous référer au livre du cours pour la bonne notation (figure F25.9/A29.2)."
+    "text": "Astuce\n\n\n\nVous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n’est pas forcément permis lors d’un examen.\n\n\nVoici un modèle à suivre. Pour le diagramme suivant :\n\n\n:A:Bexecute(3)result = setItem(\"Fred\")\nFigure I.1: Exemple de diagramme de séquence.\n\n\nOn code les classes suivantes en TypeScript :\nclass A {\n    b: B;  // A envoie un message à B, visibilité d'attribut\n    execute(arg0:number):any {\n        const result = this.b.setItem(\"Fred\");\n    }\n}\n\nclass B {\n    setItem(arg0:string):any {\n        //...\n    }\n}\n\nÉcrire le code pour la figure suivante.\n:Bernard:Aliceinitallô(12)create:Autre\"oui\"15\n\n\nÉcrire le code pour la figure suivante décrivant la création de la collection de Vente (tirée de Larman 2005, figure. 17.6).\n:Registreselon Créateur etContrôleurcréerNouvelleVenteRegistre crée uneVente selon Créateurcreate:Venteselon Créateur, Vente crée unecollection vide (par exemple uneList) destinée a mémoriser lesinstances de LigneArticlesl'activation de Vente est implicitement dansle constructeur de l'instance de VentecreatelignesArticles :List<LigneArticles>\n\n\nÉcrire le code pour la figure suivante décrivant l’utilisation d’un Cornet dans le jeu de Monopoly (tirée de Larman 2005, fig. F22.9)\nj : Joueur: Cornet: Plateaupos : CaseSelon Fabrication pureprendreTourlancervalTot = getTotalpos = getCase( pos, valTot )atterrirSur( j )\n\n\nÉcrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode atterrirSur dans le jeu de Monopoly (tirées de Larman 2005, fig. F22.6 et F22.7)\n: CaseImpôtsj : JoueuratterrirSur(j)selon Polymorphismec = getCashselon ExpertdiminuerCash(min(200, 10% de c))selon Expert\n: CaseAllezEnPrisonj : JoueuratterrirSur(j)selon PolymorphismesetPosition(prison)selon Expert\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
-    "objectID": "Exercice_Diagramme_états.html#exercice-1",
-    "href": "Exercice_Diagramme_états.html#exercice-1",
-    "title": "Appendix I — Exercices diagramme d’états",
-    "section": "I.1 Exercice 1",
-    "text": "I.1 Exercice 1\nFaire un diagramme d’états en UML modélisant les états d’un téléphone intelligent. Considérer une dynamique simplifiée, avec seulement trois états correspondant aux images suivantes :\n\nPour simplifier encore le modèle, le bouton en haut à droite sert pour éteindre et pour allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint."
-  },
-  {
-    "objectID": "Exercice_Diagramme_états.html#exercice-2",
-    "href": "Exercice_Diagramme_états.html#exercice-2",
-    "title": "Appendix I — Exercices diagramme d’états",
-    "section": "I.2 Exercice 2",
-    "text": "I.2 Exercice 2\nFaire un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format bref) :\nS’authentifier. Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.\nGérer guichet. L’Administrateur démarre le système et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre."
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "objectID": "Exercice_Adaptateur_pour_Maps_CF.html",
+    "href": "Exercice_Adaptateur_pour_Maps_CF.html",
+    "title": "Appendix J — Exercice : Adaptateur pour Maps",
     "section": "",
-    "text": "Dans cet exercice, vous allez mieux comprendre la relation entre les principes GRASP et les patrons GoF. La figure suivante est tirée du livre de Larman, Figure A26.3/F23.3) :\nUne bonne ressource pour les patterns est la suivante :\nhttps://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.1 Itérateur",
-    "text": "J.1 Itérateur\nIdentifiez les 4 principes GRASP dans le patron Itérateur, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.2 Observateur",
-    "text": "J.2 Observateur\nIdentifiez les 4 principes GRASP dans le patron Observateur, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.3 Stratégie",
-    "text": "J.3 Stratégie\nIdentifiez les 4 principes GRASP dans le patron Stratégie, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.4 Composite",
-    "text": "J.4 Composite\nIdentifiez les 4 principes GRASP dans le patron Composite, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.5 Décorateur",
-    "text": "J.5 Décorateur\nIdentifiez les 4 principes GRASP dans le patron Décorateur, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.6 Méthode Template",
-    "text": "J.6 Méthode Template\nIdentifiez les 4 principes GRASP dans le patron Méthode Template, selon les directives dans les notes de cours à la section 14.3 :\n \nPatron TEMPLATE METHOD"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.7 Commande",
-    "text": "J.7 Commande\nIdentifiez les 4 principes GRASP dans le patron Commande, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.8 Méthode Fabrique",
-    "text": "J.8 Méthode Fabrique\nIdentifiez les 4 principes GRASP dans le patron Méthode fabrique, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.9 Proxy",
-    "text": "J.9 Proxy\nIdentifiez les 4 principes GRASP dans le patron Proxy, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
-    "href": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
-    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
-    "section": "J.10 Façade",
-    "text": "J.10 Façade\nIdentifiez les 4 principes GRASP dans le patron Façade, selon les directives dans les notes de cours à la section 14.3 :"
-  },
-  {
-    "objectID": "Exercice-diagramme_d_activité.html",
-    "href": "Exercice-diagramme_d_activité.html",
-    "title": "Appendix K — Exercice : diagramme d’activité",
-    "section": "",
-    "text": "Note\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML :\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs.\nPlantText.com.\n\nNous déconseillons LucidChart et d’autres outils ayant juste des profils simples pour UML, puisqu’ils ne sont pas bien adaptés (voir la figure 13.4).\n\n\n(Votre [diagramme] devrait apparaître plus bas)"
+    "text": "Google Maps\nBing Maps\nApple Maps\n\nLe système veut obtenir une liste d’étapes (des directions) pour se rendre à une destination à partir d’un point de départ. L’utilisateur du système pourra décider lequel des services lui convient dans les préférences.\nLe but de l’exercice est de déterminer l’interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d’itinéraires. Cela peut être un diagramme de classe réalisé avec PlantUML."
   }
 ]
