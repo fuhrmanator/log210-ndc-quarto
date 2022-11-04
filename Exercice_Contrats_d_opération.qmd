@@ -1,13 +1,13 @@
-# Exercice Contrats d’opération
+# Exercice Contrats d'opération
 
-Faire **un contrat d’opération pour chacune des opérations système**
+Faire **un contrat d'opération pour chacune des opérations système**
 dans le DSS de la section A, selon le modèle du domaine dans la section B.
 
-Les éléments d’un contrat sont:
+Les éléments d'un contrat sont:
 
--   La signature de l’opération système;
+-   La signature de l'opération système;
 
--   Les postconditions qui sont d’une des formes suivantes:
+-   Les postconditions qui sont d'une des formes suivantes:
 
     -   création (ou suppression) d'instances;
 
@@ -15,9 +15,9 @@ Les éléments d’un contrat sont:
 
     -   formation (ou rupture) d'associations.
 
--   Les postconditions doivent utiliser *le vocabulaire du modèle du  domaine*. Ça veut dire qu’il faut parler d’instances de classes conceptuelles, de leurs attributs et des associations entre classes.
+-   Les postconditions doivent utiliser *le vocabulaire du modèle du  domaine*. Ça veut dire qu'il faut parler d'instances de classes conceptuelles, de leurs attributs et des associations entre classes.
 
-### Contrats d’opération{.unnumbered}
+### Contrats d'opération{.unnumbered}
 
 Écrivez vos contrats ici (un pour chaque opération système):
 

@@ -1,8 +1,8 @@
-# Exercice: diagramme d’activité
+# Exercice: diagramme d'activité
 
-Dessinez un diagramme d’activité qui modélise ce qui se passe lorsque
+Dessinez un diagramme d'activité qui modélise ce qui se passe lorsque
 vous faites un devoir dans Google Classroom. Votre diagramme doit
-comprendre les activités de l’enseignant et de l’étudiant. Le devoir
+comprendre les activités de l'enseignant et de l'étudiant. Le devoir
 doit être un objet dans le diagramme.
 
 > *Vous pouvez le dessiner à la main et en prendre une photo.*
@@ -15,8 +15,8 @@ doit être un objet dans le diagramme.
 
 -   [*PlantText.com*](https://www.planttext.com/)
 
-> *Je ne recommande pas Lucidchart ou d’autres outils ayant juste des
-> profils UML, puisqu’ils ne sont pas bien adaptés (voir les notes de
-> cours de LOG210 pour plus d’explications).*
+> *Je ne recommande pas Lucidchart ou d'autres outils ayant juste des
+> profils UML, puisqu'ils ne sont pas bien adaptés (voir les notes de
+> cours de LOG210 pour plus d'explications).*
 
 (Votre \[diagramme\] devrait apparaître plus bas)

@@ -1,8 +1,8 @@
 # Diagrammes de séquence système (DSS)
 
-Esquissez le DSS pour le cas d’utilisation joint à cet exercice (devoir
+Esquissez le DSS pour le cas d'utilisation joint à cet exercice (devoir
 dans Google Classroom). Les opérations système doivent définir le type
-de chaque argument, s’il y en a.
+de chaque argument, s'il y en a.
 
 > *Vous pouvez le dessiner à la main et en prendre une photo.*
 >
@@ -14,8 +14,8 @@ de chaque argument, s’il y en a.
 
 -   [*PlantText.com*](https://www.planttext.com/)
 
-> *Je ne recommande pas LucidChart et d’autres outils ayant juste des
-> profils UML, puisqu’ils ne sont pas bien adaptés (voir les notes de
-> cours de LOG210 pour plus d’explications).*
+> *Je ne recommande pas LucidChart et d'autres outils ayant juste des
+> profils UML, puisqu'ils ne sont pas bien adaptés (voir les notes de
+> cours de LOG210 pour plus d'explications).*
 
-[Cas d’utilisation - Réserver un livre de la bibliothèque](#sec-usecases)
+[Cas d'utilisation - Réserver un livre de la bibliothèque](#sec-CU_Réserver_livre)

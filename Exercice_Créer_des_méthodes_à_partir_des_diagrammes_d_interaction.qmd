@@ -1,11 +1,11 @@
-# Création des méthodes à partir des diagrammes d’interaction
+# Création des méthodes à partir des diagrammes d'interaction
 
 Pour chacun des diagrammes suivants, écrire les classes TypeScript avec
 les méthodes indiquées dans le diagramme. La matière du livre est à la
 section F18.6/A20.4.
 
 ::: {.callout-warning}
-**Vous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais ça ne sera pas possible à l’examen final**
+**Vous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais ça ne sera pas possible à l'examen final**
 :::
 
 Modèle:
