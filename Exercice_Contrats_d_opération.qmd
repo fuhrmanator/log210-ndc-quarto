@@ -1,30 +1,82 @@
 # Exercice Contrats d'opération
 
-Faire **un contrat d'opération pour chacune des opérations système**
-dans le DSS de la section A, selon le modèle du domaine dans la section B.
+Rédigez **un contrat d'opération pour chacune des opérations système** du DSS ci-bas, selon le modèle du domaine ci-bas.
 
-Les éléments d'un contrat sont:
+Les éléments importants d'un contrat sont:
 
--   La signature de l'opération système;
-
--   Les postconditions qui sont d'une des formes suivantes:
-
+- La signature de l'opération système;
+- Les postconditions qui sont d'une des formes suivantes:
     -   création (ou suppression) d'instances;
-
     -   modification des valeurs des attributs;
-
     -   formation (ou rupture) d'associations.
+-   Les postconditions doivent utiliser *le vocabulaire du modèle du  domaine*.
+Ça veut dire qu'il faut parler d'instances de classes conceptuelles, de leurs attributs et des associations entre classes.
 
--   Les postconditions doivent utiliser *le vocabulaire du modèle du  domaine*. Ça veut dire qu'il faut parler d'instances de classes conceptuelles, de leurs attributs et des associations entre classes.
-
-### Contrats d'opération{.unnumbered}
+## Contrats d'opération {.unnumbered .unlisted}
 
 Écrivez vos contrats ici (un pour chaque opération système):
 
-## section A - DSS
+### DSS {.unnumbered .unlisted}
 
-![](images/media/image13.png)
+```{.plantuml caption="DSS pour le scénario Traiter Vente de @craig_uml_2005"}
+@startuml
+skinparam style strictuml
+skinparam SequenceMessageAlign center
+skinparam backgroundcolor transparent
+title DSS pour le scénario <i>Traiter vente</i>
+actor ":Caissier" as c
+participant ":Système" as s
+c->s : démarrerVente
+loop reste des articles
+ c->s : saisirArticle(codeArticle:int, quantité:int)
+ c<<--s : description, total
+end loop
+c->s : terminerSale()
+c<<--s : total with taxes
+c->s : fairePaiement(montant:Monnaie)
+c<<--s : rendu de monnaie, reçu
+@enduml
+```
 
-## section B - MDD partiel
+### MDD partiel {.unnumbered .unlisted}
 
-![](images/media/image14.png)
+```{.plantuml}
+@startuml
+skinparam style strictuml
+hide methods
+hide empty members
+skinparam style strictuml
+skinparam backgroundcolor transparent
+
+class "LigneArticle" as SLI {
+  quantité:int
+}
+class Vente {
+  dateHeure: DateHeure
+  estTerminée : boolean
+}
+class Paiement {
+  montant:Monnaie
+}
+class Magasin {
+  nom:String
+  adresse:String
+}
+class "Description\nProduit" as PD {
+  description : String
+  prix : Money
+  codeArticle : int
+}
+'class Item
+class "CatalogueProduit" as PC
+'PD "1" -l- "*" Item : Describes >
+'SLI "1" -right- "*" Item: Records-sale-of >
+Vente "1" *-up- "1..*" SLI : Contient >
+Magasin "1" -left- "1..*" Registre : Héberge >
+Vente "1" -right- "1" Registre : Saisie-sur >
+Vente "1" -down- "1" Paiement : Payée-par >
+'PD "*" -- "1" Magasin: Gère <
+PC "1" *-- "*" PD
+SLI "*" - "1" PD : Décrite-par >
+@enduml
+```
