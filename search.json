@@ -612,8 +612,8 @@
     "objectID": "Exercice_Classes_conceptuelles_dans_le_MDD.html#sec-CU_Réserver_livre",
     "href": "Exercice_Classes_conceptuelles_dans_le_MDD.html#sec-CU_Réserver_livre",
     "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
-    "section": "B.1 Cas d’utilisation - Réserver un livre de la bibliothèque",
-    "text": "B.1 Cas d’utilisation - Réserver un livre de la bibliothèque\nParties prenantes et intérêts:\n- Le Membre. Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.\n- La Bibliothèque. Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.\nPréconditions: Le Membre est identifié et authentifié\nActeur principal : Membre\n\nLe membre choisit la fonction « recherche » et saisit du texte décrivant le livre (par exemple, une partie du titre, « UML »).\nLe système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, « UML2 et le design patterns, Craig Larman, 2005 » et « UML par la pratique, Pascal Rocques, 2009 ».\nLe membre choisit un livre parmi les résultats, par exemple, « UML2 et les design patterns, Craig Larman, 2005 ».\nLe système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre « UML2 et les design patterns », un avec l’identificateur d’exemplaire « 1 » qui est disponible et un avec l’identificateur d’exemplaire « 2 » qui n’est pas disponible.\nLe membre réserve un exemplaire du livre qui est disponible.\nLe système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.\n\nExtensions (scénarios alternatifs) :\n\nAucun livre ne correspond au texte de la recherche.\n\nLe système affiche un message indiquant qu’aucun livre n’a été trouvé.\nLe membre lance une nouvelle recherche.\n\n\n\n\nTous les exemplaires ne sont pas disponibles.\n\nLe système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.\nLe membre lance une nouvelle recherche.\n\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+    "section": "Cas d’utilisation - Réserver un livre de la bibliothèque",
+    "text": "Cas d’utilisation - Réserver un livre de la bibliothèque\nParties prenantes et intérêts:\n- Le Membre. Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.\n- La Bibliothèque. Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.\nPréconditions: Le Membre est identifié et authentifié\nActeur principal : Membre\n\nLe membre choisit la fonction « recherche » et saisit du texte décrivant le livre (par exemple, une partie du titre, « UML »).\nLe système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, « UML2 et le design patterns, Craig Larman, 2005 » et « UML par la pratique, Pascal Rocques, 2009 ».\nLe membre choisit un livre parmi les résultats, par exemple, « UML2 et les design patterns, Craig Larman, 2005 ».\nLe système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre « UML2 et les design patterns », un avec l’identificateur d’exemplaire « 1 » qui est disponible et un avec l’identificateur d’exemplaire « 2 » qui n’est pas disponible.\nLe membre réserve un exemplaire du livre qui est disponible.\nLe système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.\n\nExtensions (scénarios alternatifs) :\n\nAucun livre ne correspond au texte de la recherche.\n\nLe système affiche un message indiquant qu’aucun livre n’a été trouvé.\nLe membre lance une nouvelle recherche.\n\n\n\n\nTous les exemplaires ne sont pas disponibles.\n\nLe système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.\nLe membre lance une nouvelle recherche.\n\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_Diagramme_de_classes_conceptuelles_MDD.html",
@@ -627,7 +627,7 @@
     "href": "Exercice_Diagramme_de_classes_conceptuelles_MDD.html#sec-ClassesCandidatesSolution",
     "title": "Appendix C — Exercice : Diagramme de classes conceptuelles (MDD)",
     "section": "Classes candidates et groupes nominaux",
-    "text": "Classes candidates et groupes nominaux\nCeci est une solution possible pour l’exercice à Annexe B\n\nClasses candidates\nCette liste est le résultat de l’application des méthodes 2 et 3 pour trouver les classes candidates et groupes nominaux (c’est une solution possible de l’exercice précédent).\n\n\n\n\n\n\n\nCatégorie de classe conceptuelle\nClasses candidates selon le cas d’utilisation\n\n\n\n\nTransactions d’entreprise\nRéservation\n\n\nRôles des personnes, organisation\nMembre, Bibliothèque\n\n\nProduit ou service lié à une transaction ou une ligne de transaction\nLivre, Exemplaire\n\n\nLieu de la transaction\nBibliothèque\n\n\nObjets physiques\nLivre, Exemplaire\n\n\nDescriptions d’objets (voir sec. 9.13 !)\nLivre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)\n\n\nCatalogue\nCatalogueLivre\n\n\n\n\n\nC.0.1 Groupes nominaux\nC’est l’analyse linguistique consistant à repérer les noms et les groupes nominaux dans la description textuelle d’un domaine.\nN.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s’appliquer du tout.\nBibliothèque\nListe de livres\nMembre\nNom\nReservation\nLivre\nTitre\nAuteur\nISBN\nMaison d’édition\nNuméro de l’édition\nAnnée\nExemplaires\nNombres\nCode\nDisponibilité\nRéservation\nNuméro de confirmation\nNom du membre\nCode de l’exemplaire"
+    "text": "Classes candidates et groupes nominaux\nCeci est une solution possible pour l’exercice à Annexe B\n\nClasses candidates\nCette liste est le résultat de l’application des méthodes 2 et 3 pour trouver les classes candidates et groupes nominaux (c’est une solution possible de l’exercice précédent).\n\n\n\n\n\n\n\nCatégorie de classe conceptuelle\nClasses candidates selon le cas d’utilisation\n\n\n\n\nTransactions d’entreprise\nRéservation\n\n\nRôles des personnes, organisation\nMembre, Bibliothèque\n\n\nProduit ou service lié à une transaction ou une ligne de transaction\nLivre, Exemplaire\n\n\nLieu de la transaction\nBibliothèque\n\n\nObjets physiques\nLivre, Exemplaire\n\n\nDescriptions d’objets (voir sec. 9.13 !)\nLivre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)\n\n\nCatalogue\nCatalogueLivre\n\n\n\n\n\nGroupes nominaux\nC’est l’analyse linguistique consistant à repérer les noms et les groupes nominaux dans la description textuelle d’un domaine.\n\n\n\n\n\n\nNote\n\n\n\nN.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s’appliquer du tout.\n\n\nBibliothèque\nListe de livres\nMembre\nNom\nReservation\nLivre\nTitre\nAuteur\nISBN\nMaison d’édition\nNuméro de l’édition\nAnnée\nExemplaires\nNombres\nCode\nDisponibilité\nRéservation\nNuméro de confirmation\nNom du membre\nCode de l’exemplaire"
   },
   {
     "objectID": "Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.html",
@@ -641,28 +641,21 @@
     "href": "Exercice_Contrats_d_opération.html",
     "title": "Appendix E — Exercice Contrats d’opération",
     "section": "",
-    "text": "Faire un contrat d’opération pour chacune des opérations système dans le DSS de la section A, selon le modèle du domaine dans la section B.\nLes éléments d’un contrat sont :"
+    "text": "Rédigez un contrat d’opération pour chacune des opérations système du DSS ci-bas, selon le modèle du domaine ci-bas.\nLes éléments importants d’un contrat sont :"
   },
   {
-    "objectID": "Exercice_Contrats_d_opération.html#section-a---dss",
-    "href": "Exercice_Contrats_d_opération.html#section-a---dss",
+    "objectID": "Exercice_Contrats_d_opération.html#contrats-dopération",
+    "href": "Exercice_Contrats_d_opération.html#contrats-dopération",
     "title": "Appendix E — Exercice Contrats d’opération",
-    "section": "E.1 section A - DSS",
-    "text": "E.1 section A - DSS"
-  },
-  {
-    "objectID": "Exercice_Contrats_d_opération.html#section-b---mdd-partiel",
-    "href": "Exercice_Contrats_d_opération.html#section-b---mdd-partiel",
-    "title": "Appendix E — Exercice Contrats d’opération",
-    "section": "E.2 section B - MDD partiel",
-    "text": "E.2 section B - MDD partiel"
+    "section": "Contrats d’opération",
+    "text": "Contrats d’opération\nÉcrivez vos contrats ici (un pour chaque opération système) :\n\nDSS\n\n\nDSS pour le scénarioTraiter vente:Caissier:SystèmedémarrerVenteloop[reste des articles]saisirArticle(codeArticle:int, quantité:int)description, totalterminerSale()total with taxesfairePaiement(montant:Monnaie)rendu de monnaie, reçu\nDSS pour le scénario Traiter Vente de Larman (2005)\n\n\n\n\nMDD partiel\nLigneArticlequantité:intVentedateHeure: DateHeureestTerminée : booleanPaiementmontant:MonnaieMagasinnom:Stringadresse:StringDescriptionProduitdescription : Stringprix : MoneycodeArticle : intCatalogueProduitRegistreContient1..*1Héberge1..*1Saisie-sur11Payée-par111*Décrite-par*1\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_DSS_Diagrammes-de-séquence-système.html",
     "href": "Exercice_DSS_Diagrammes-de-séquence-système.html",
-    "title": "Appendix F — Diagrammes de séquence système (DSS)",
+    "title": "Appendix F — Exercice : Diagramme de séquence système (DSS)",
     "section": "",
-    "text": "Les opérations système doivent définir le type de chaque argument, s’il y en a.\n\n\n\n\n\n\nNote\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML:*\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs,\nPlantText.com\n\nNous déconseillons LucidChart et d’autres outils ayant juste des profils simples pour UML, puisqu’ils ne sont pas bien adaptés (voir la @#fig-LucidchartUML)."
+    "text": "Les opérations système doivent définir le type de chaque argument, s’il y en a.\n\n\n\n\n\n\nNote\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML :\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs.\nPlantText.com.\n\nNous déconseillons LucidChart et d’autres outils ayant juste des profils simples pour UML, puisqu’ils ne sont pas bien adaptés (voir la figure 13.4)."
   },
   {
     "objectID": "Exercice_Adaptateur_pour_Maps_CF.html",
@@ -795,6 +788,6 @@
     "href": "Exercice-diagramme_d_activité.html",
     "title": "Appendix K — Exercice : diagramme d’activité",
     "section": "",
-    "text": "Note\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML:*\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs,\nPlantText.com\n\nNous déconseillons LucidChart et d’autres outils ayant juste des profils simples pour UML, puisqu’ils ne sont pas bien adaptés (voir la @#fig-LucidchartUML).\n\n\n(Votre [diagramme] devrait apparaître plus bas)"
+    "text": "Note\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML :\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs.\nPlantText.com.\n\nNous déconseillons LucidChart et d’autres outils ayant juste des profils simples pour UML, puisqu’ils ne sont pas bien adaptés (voir la figure 13.4).\n\n\n(Votre [diagramme] devrait apparaître plus bas)"
   }
 ]
