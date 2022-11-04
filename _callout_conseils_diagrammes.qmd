@@ -1,0 +1,12 @@
+
+::: {.callout-note}
+Vous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML:*
+
+-   *[tutoriel VSCode sur YouTube](https://www.youtube.com/watch?v=xkwJ9GwgZJU)*
+-   *[PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571), module supplémentaire Google Docs,*
+-   [*PlantText.com*](https://www.planttext.com/)
+
+Nous déconseillons LucidChart et d'autres outils ayant juste des profils simples pour UML, puisqu'ils ne sont pas bien adaptés (voir la @#fig-LucidchartUML).
+
+:::
+

@@ -166,7 +166,7 @@ Une personne exclue de cette manière va probablement abandonner le cours et vou
 - Est-ce que certains coéquipiers travaillent excessivement, sans donner la chance aux autres de contribuer?
 N'oubliez pas que les laboratoires sont une manière d'apprendre à pratiquer la matière de ce manuel. 
 Laisser un ou deux coéquipiers faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l'examen final pour ceux qui ont moins contribué).
-Il y a aussi un risque sur le plan de la [Redondance des compétences dans l’équipe (Bus Factor)](#sec-Bus_Factor), surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il travaille trop.
+Il y a aussi un risque sur le plan de la [Redondance des compétences dans l'équipe (Bus Factor)](#sec-Bus_Factor), surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il travaille trop.
 - Est-ce que tout le monde utilise un moyen de communiquer de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n'est pas l'outil idéal pour coordonner un travail en équipe.
 - etc.
 

@@ -52,6 +52,16 @@ book:
     # Annexes
   appendices:
     - ExercicesCoderSequence.qmd
+    - Exercice_Classes_conceptuelles_dans_le_MDD.qmd
+    - Exercice_Diagramme_de_classes_conceptuelles_MDD.qmd
+    - Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.qmd
+    - Exercice_Contrats_d_opération.qmd
+    - Exercice_DSS_Diagrammes-de-séquence-système.qmd
+    - Exercice_Adaptateur_pour_Maps_CF.qmd
+    - Exercice_Critique_d-une_conception.qmd
+    - Exercice_Diagramme_états.qmd
+    - Exercice_Identifier_GRASP_dans_GoF.qmd
+    - Exercice-diagramme_d_activité.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib

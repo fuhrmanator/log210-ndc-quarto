@@ -1,0 +1,156 @@
+# Création des méthodes à partir des diagrammes d'interaction
+
+Pour chacun des diagrammes suivants, écrire les classes TypeScript avec
+les méthodes indiquées dans le diagramme. La matière du livre est à la
+section F18.6/A20.4.
+
+::: {.callout-warning}
+**Vous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais ça ne sera pas possible à l'examen final**
+:::
+
+Modèle:
+
+```{.plantuml }
+@startuml
+skinparam style strictuml
+participant ":A" as B
+participant ":B" as A
+[-> B : execute(3)
+activate B
+B -> A : result = setItem("Fred")
+activate A
+
+deactivate A
+deactivate B
+@enduml
+```
+
+```java
+class A {
+    b: B;  // A envoie un message à B, visibilité d'attribut
+    execute(arg0:number):any {
+        const result = this.b.setItem("Fred");
+    }
+}
+
+class B {
+    setItem(arg0:string):any {
+        //...
+    }
+}
+
+```
+
+1. 
+
+La figure suivante décrit la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6]
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+participant ":Registre" as r
+note left of r : selon Créateur et\nContrôleur
+->r : créerNouvelleVente
+activate r
+note right of r : Registre crée une\nVente selon Créateur
+participant ":Vente" as s
+create s
+r-->s : create
+activate s
+note right of s
+ selon Créateur, Vente crée une 
+ collection vide (par exemple une
+ List) destinée a mémoriser les
+ instances de LigneArticles
+end note
+note left of s
+l'activation de Vente est implicitement dans 
+le constructeur de l'instance de Vente
+end note
+participant "lignesArticles :\nList<LigneArticles>" as li
+create li
+s-->li : create
+deactivate s
+deactivate r
+@enduml
+
+```
+ 
+
+2.  
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+participant ":Bernard" as Bob
+participant ":Alice" as Alice
+participant ":Autre" as Other
+[-> Bob : init
+activate Bob
+Bob -> Alice : allô(12)
+activate Alice
+
+create Other
+Alice --> Other : create
+
+Alice -->> Bob : "oui"
+deactivate Alice
+[<<-- Bob : 15
+deactivate Bob
+@enduml
+```
+
+3. 
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+
+title Figure F22.9: Utilisation d'un //Cornet// dans le jeu de Monopoly
+participant "j : Joueur" as j
+participant ": Cornet" as c
+participant ": Plateau" as p
+participant "pos : Case" as pos
+
+note over c : Selon Fabrication pure
+-> j : prendreTour
+j -> c : lancer
+j -> c : valTot = getTotal
+
+j -> p : pos = getCase( pos, valTot )
+j -> pos : atterrirSur( j )
+@enduml
+```
+
+
+\newpage
+
+4.  
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+title Figure F22.6 - Le cas de //CaseImpôts// dans Monopoly
+participant ": CaseImpôts" as im
+participant "j : Joueur" as j
+-> im : atterrirSur(j)
+note left: selon Polymorphisme
+im -> j : c = getCash
+note right : selon Expert
+im -> j : diminuerCash(min(200, 10% de c))
+note right : selon Expert
+@enduml
+```
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+title Figure F22.7 - Le cas de //CaseAllezEnPrison// dans Monopoly
+participant ": CaseAllezEnPrison" as aep
+participant "j : Joueur" as j
+-> aep : atterrirSur(j)
+note left: selon Polymorphisme
+aep -> j : setPosition(prison)
+note right : selon Expert
+@enduml
+```
