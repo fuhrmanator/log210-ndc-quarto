@@ -18,8 +18,10 @@ les directives vues dans le chapitre 9 du livre.
 
 {{< include _callout_conseils_diagrammes.qmd >}}
 
+\newpage
+
 | (Votre MDD devrait apparaître ci-bas) |
-|---------------------------------------|
+|:-------------------------------------:|
 |                                       |
 |                                       |
 |                                       |
@@ -55,12 +57,14 @@ Objets physiques | Livre, Exemplaire
 Descriptions d'objets (**voir sec. 9.13!**)  | Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)
 Catalogue | CatalogueLivre
 
-### Groupes nominaux {#sec-groups}
+### Groupes nominaux {#sec-groups .unnumbered .unlisted}
 
 C'est l'analyse linguistique consistant à repérer les noms et les
 groupes nominaux dans la description textuelle d'un domaine.
 
-*N.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s'appliquer du tout.*
+::: {.callout-note}
+N.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s'appliquer du tout.
+:::
 
 Bibliothèque \
 Liste de livres \
