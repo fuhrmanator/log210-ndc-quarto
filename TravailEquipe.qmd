@@ -135,7 +135,7 @@ Apprendre à quelqu'un comment faire une tâche et lui donner l'occasion d'évol
 :::
 
 Si les plus forts n'aident pas les autres, ils risquent de les éloigner de l'équipe et de se trouver seuls sur le plan des contributions techniques. 
-Voir la section sur la [Redondance des compétences dans l’équipe (Bus Factor)](#sec-Bus_Factor).
+Voir la section sur la [Redondance des compétences dans l'équipe (Bus Factor)](#sec-Bus_Factor).
 
 Encadrer un coéquipier au début du trimestre peut prendre beaucoup de temps.
 Mais, si la personne devient plus autonome, c'est un gain pour toute l'équipe.
@@ -168,4 +168,4 @@ Considérez les volets HRC lorsque vous vous trouvez dans une des situations sui
 Vous devez en parler avec votre équipe. 
 Si la situation ne s'améliore pas, vous devez en parler avec les chargés de laboratoire et l'enseignant.
 
-Pour mieux évaluer le travail de chacun dans l'équipe au laboratoire, il y a des conseils dans la section [Évaluer les contributions des membres de l’équipe](#sec-ContributionsEquipe).
+Pour mieux évaluer le travail de chacun dans l'équipe au laboratoire, il y a des conseils dans la section [Évaluer les contributions des membres de l'équipe](#sec-ContributionsEquipe).

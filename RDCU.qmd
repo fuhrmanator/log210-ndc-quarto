@@ -152,7 +152,7 @@ A -> B : unMessage()
 B -> : ...
 @enduml
 ```
-Pour initialiser les références nécessaires pour la bonne visibilité, Larman vous propose de faire ça dans la [RDCU pour l’initialisation, le scénario Démarrer](#sec-RDCU_Demarrer).
+Pour initialiser les références nécessaires pour la bonne visibilité, Larman vous propose de faire ça dans la [RDCU pour l'initialisation, le scénario Démarrer](#sec-RDCU_Demarrer).
 
 ## Transformer identifiants en objets {#sec-TransformerIDenObjets}
 

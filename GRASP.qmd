@@ -113,7 +113,7 @@ Voici un extrait du livre de @craig_uml_2005.
 
 Les principes GRASP sont utilisés dans les réalisations de cas d'utilisation (RDCU). 
 On s'en sert pour annoter les décisions de conception, pour rendre explicites (documenter) les choix. 
-Voir la section [Réalisations de cas d’utilisation (RDCU)](#sec-RDCU) pour plus d'informations.
+Voir la section [Réalisations de cas d'utilisation (RDCU)](#sec-RDCU) pour plus d'informations.
 
 ## GRASP et Patterns GoF
 

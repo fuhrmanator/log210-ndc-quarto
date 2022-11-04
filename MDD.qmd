@@ -17,7 +17,7 @@ Il y a trois stratégies pour identifier les classes conceptuelles:
 
 :Extrait du tableau 9.1 \faBook<i class="fa-solid fa-book"></i>
 
-Catégorie | Exemples
+**Catégorie** | **Exemples**
 :----------|:----------
 **Transactions d'affaire**: Elles sont essentielles, commencez l'analyse par les transactions. | *Vente*, *Attaque*, *Réservation*, *Inscription*, *EmpruntVélo*
 **Lignes d'une transaction**: Éléments compris dans une transaction. |  *LigneArticles*, *ExemplaireLivre*, *GroupeCours*
