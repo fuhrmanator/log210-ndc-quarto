@@ -58,7 +58,7 @@ book:
     - Exercice_DSS_Diagrammes-de-séquence-système.qmd
     - Exercice_Adaptateur_pour_Maps_CF.qmd
     - Exercice_Critique_d-une_conception.qmd
-    - Exercice_diagramme_d_états_en_classe.qmd
+    - Exercice_Diagramme_états.qmd
     - Exercice_Identifier_GRASP_dans_GoF.qmd
     - Exercice-diagramme_d_activité.qmd
   # repo-actions: [source, issue]
