@@ -48,13 +48,14 @@ selon les directives dans les notes de cours à la section 14.3:
 
 ## Décorateur
 
-Identifiez les 4 principes GRASP dans le patron
-[Décorateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Bars-,patron%20decorateur,-Contexte),
+Identifiez les 4 principes GRASP dans le patron [Décorateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Bars-,patron%20decorateur,-Contexte),
 selon les directives dans les notes de cours à la section 14.3:
 
 ![](images/media/image22.png)
 
 ## Méthode Template
+Identifiez les 4 principes GRASP dans le patron [Méthode Template](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte),
+selon les directives dans les notes de cours à la section 14.3:
 
 ![](images/media/image21.png){width="300px"}
 ![](images/media/image8.png){width="300px"}
@@ -63,26 +64,19 @@ selon les directives dans les notes de cours à la section 14.3:
 
 ## Commande
 
-Identifiez les 4 principes GRASP dans le patron
-[Commande](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte),
-selon les directives dans les notes de cours à la section 14.3:
+Identifiez les 4 principes GRASP dans le patron [Commande](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte), selon les directives dans les notes de cours à la section 14.3:
 
 
 ## Méthode Fabrique
 
-Identifiez les 4 principes GRASP dans le patron [Méthode fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)),
-selon les directives dans les notes de cours à la section 14.3:
+Identifiez les 4 principes GRASP dans le patron [Méthode fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)), selon les directives dans les notes de cours à la section 14.3:
 
 
 ## Proxy
 
-Identifiez les 4 principes GRASP dans le patron
-[Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=y-,proxies,-Ch10),
-selon les directives dans les notes de cours à la section 14.3:
+Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=y-,proxies,-Ch10), selon les directives dans les notes de cours à la section 14.3:
 
 
 ## Façade
 
-Identifiez les 4 principes GRASP dans le patron
-[Façade](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=de%20propri%C3%A9t%C3%A9s-,La%20classe%20Fa%C3%A7ade,Un,-Bean%20est),
-selon les directives dans les notes de cours à la section 14.3:
+Identifiez les 4 principes GRASP dans le patron [Façade](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=de%20propri%C3%A9t%C3%A9s-,La%20classe%20Fa%C3%A7ade,Un,-Bean%20est), selon les directives dans les notes de cours à la section 14.3:
