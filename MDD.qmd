@@ -1,4 +1,4 @@
-# Modèle du domaine (MDD, modèle conceptuel)
+# Modèle du domaine (MDD, modèle conceptuel) {#sec-mdd}
 
 Les MDD sont expliqués en détail dans le chapitre 9 \faBook<i class="fa-solid fa-book"></i>, mais voici des points importants:
 
@@ -203,7 +203,10 @@ La @fig-MDD-CoursGroupeCoursDescription présente une classe de description pour
 
 ```{.plantuml #fig-MDD-CoursGroupeCoursDescription caption="Cours joue le rôle de description d'entités (les groupes-cours)."}
 @startuml
-!include ecriture.pumlinclude
+'!include ecriture.pumlinclude
+skinparam defaultFontName Arial
+skinparam style strictuml
+hide empty members
 scale 1
 hide empty members
 class "GroupeCours" as GC {
@@ -234,9 +237,13 @@ end note
 Attention de ne pas faire l'erreur naïve d'utiliser une classe de description simplement pour "décrire" une autre classe. Voir la @fig-MDD-ErreurDescription pour un exemple.
 :::
 
+
 ```{.plantuml #fig-MDD-ErreurDescription caption="Erreur fréquente - utiliser une classe de description sans justification."}
 @startuml
-!include ecriture.pumlinclude
+'!include ecriture.pumlinclude
+skinparam defaultFontName Arial
+skinparam style strictuml
+hide empty members
 scale 1
 hide empty members
 class "Client" as GC {
@@ -250,7 +257,7 @@ class "Catalogue\nClients" as CP #ffdddd
 C "1" -- "1" GC : Décrit >
 CP "1" -r- "*" C : Répertorie >
 note bottom of C
-<:frowning_face:> Mauvaise classe de « description ». Il n'est pas nécessaire 
+<size:14><#red:frowning:></size> Mauvaise classe de « description ». Il n'est pas nécessaire 
 d'avoir cette classe, car les clients sont décrits dans leur 
 propre classe Client. Si un client n'existe pas, il n'a pas de
 sens dans le MDD. Les informations ne seraient pas dupliquées 

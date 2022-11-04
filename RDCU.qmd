@@ -1,4 +1,4 @@
-# Réalisations de cas d'utilisation (RDCU) {#sec-RDCU}
+# Réalisations de cas d'utilisation (RDCU) {#sec-rdcu}
 
 Les réalisations de cas d'utilisation (RDCU) sont le sujet du chapitre F17/A18\ \faBook<i class="fa-solid fa-book"></i>.
 Voici les points importants pour la méthodologie:
@@ -77,7 +77,7 @@ Dans les travaux réalisés selon la méthodologie de ce manuel, vous devez indi
 Ce n'est pas un choix arbitraire.
 Référez-vous à la définition dans le @tbl-tableGRASP.
 
-Pour initialiser les liens entre la couche présentation et les contrôleurs GRASP, Larman vous propose de le faire dans la [RDCU pour l'initialisation, le scénario Démarrer](#sec-RDCU_Demarrer).
+Pour initialiser les liens entre la couche présentation et les contrôleurs GRASP, Larman vous propose de le faire dans la [RDCU pour l'initialisation, le scénario Démarrer](#sec-rdcu_Demarrer).
 
 ## Satisfaire les postconditions
 
@@ -205,7 +205,7 @@ P -> m : c = get(nom) : Case
 
 Dans la section suivante, l'initialisation des éléments utilisés dans les RDCU (comme des tableaux associatifs) est expliquée.
 
-## RDCU pour l'initialisation, le scénario Démarrer {#sec-RDCU_Demarrer}
+## RDCU pour l'initialisation, le scénario Démarrer {#sec-rdcu_Demarrer}
 
 Le lancement de l'application correspond à la RDCU "Démarrer".
 La section **Initialisation et cas d'utilisation Démarrer** (F17.4, p.345) ou **Initialization and the 'Start Up' Use Case** (A18.4, p.274)\ \faBook<i class="fa-solid fa-book"></i>\ traite ce sujet important. C'est dans cette conception où il faut mettre en place tous les éléments importants pour les hypothèses faites dans les autres RDCU, par exemple les classes de collection (Map), les références pour la visibilité, l'initialisation des contrôleurs, etc.

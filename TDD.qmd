@@ -1,4 +1,4 @@
-# Développement piloté par les tests {#sec-TDD}
+# Développement piloté par les tests {#sec-tdd}
 
 Si on écrivait des logiciels pouvant se tester automatiquement?
 Le développement piloté par les tests (anglais *test-driven development, TDD*) est une pratique populaire et intéressante.

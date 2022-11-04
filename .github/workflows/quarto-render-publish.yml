@@ -46,7 +46,7 @@ jobs:
         uses: tlylt/install-graphviz@v1
 
       - name: Install xkcd font
-        run: mkdir -p /usr/share/fonts/TTF && cp xkcd-font/xkcd-script.ttf /usr/share/fonts/TTF && export JAVA_FONTS="/usr/share/fonts/TTF"
+        run: mkdir -p /usr/share/fonts/TTF && cp web-resources/xkcd-font/xkcd-script.ttf /usr/share/fonts/TTF && export JAVA_FONTS="/usr/share/fonts/TTF"
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
