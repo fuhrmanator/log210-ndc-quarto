@@ -1,22 +1,10 @@
 # Exercices diagramme d'états
 
-> *Vous pouvez les dessiner à la main et en prendre une photo.*
->
-> *Vous pouvez également utiliser PlantUML:*
-
--   *[tutoriel VSCode sur YouTube](https://www.youtube.com/watch?v=xkwJ9GwgZJU)*
-
--   *[PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571), module supplémentaire Google Docs,*
-
--   [*PlantText.com*](https://www.planttext.com/)
-
-> *Je déconseille LucidChart et d'autres outils ayant juste des profils
-> UML, puisqu'ils ne sont pas bien adaptés (voir les notes de cours de
-> LOG210 pour plus d'explications).*
-
 Ces exercices devraient vous aider à comprendre les diagrammes d'états
 en UML. Vous devez vous référer au livre du cours pour la bonne notation
 (figure F25.9/A29.2).
+
+{{< include _callout_conseils_diagrammes.qmd >}}
 
 ## Exercice 1
 
