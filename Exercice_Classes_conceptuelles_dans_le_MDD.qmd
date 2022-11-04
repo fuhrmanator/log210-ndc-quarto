@@ -30,7 +30,7 @@ C'est l'analyse linguistique consistant à repérer (souligner ou mettre en surb
 
 \newpage
 
-## Cas d'utilisation - Réserver un livre de la bibliothèque {#sec-CU_Réserver_livre}
+## Cas d'utilisation - Réserver un livre de la bibliothèque {#sec-CU_Réserver_livre .unnumbered .unlisted}
 
 **Parties prenantes et intérêts**:  
 - **Le Membre.** Il veut un moyen de recherche exact et rapide et ne
