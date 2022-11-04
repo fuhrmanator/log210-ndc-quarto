@@ -60,6 +60,7 @@ book:
     - Exercice_Critique_d-une_conception.qmd
     - Exercice_diagramme_d_états_en_classe.qmd
     - Exercice_Identifier_GRASP_dans_GoF.qmd
+    - Exercice-diagramme_d_activité.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib
