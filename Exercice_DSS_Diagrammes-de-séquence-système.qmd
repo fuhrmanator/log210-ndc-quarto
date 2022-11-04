@@ -1,4 +1,4 @@
-# Diagrammes de séquence système (DSS)
+# Exercice: Diagramme de séquence système (DSS)
 
 Esquissez le DSS pour le cas d'utilisation [Réserver un livre de la bibliothèque](#sec-CU_Réserver_livre). 
 
