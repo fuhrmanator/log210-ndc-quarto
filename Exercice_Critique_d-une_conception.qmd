@@ -1,0 +1,19 @@
+# Exercice: Critique d’une conception
+
+1.  Considérer le MDD pour le jeu de Monopoly (voir plus bas pour le MDD en français et en anglais).
+
+2.  Visitez [ce jamboard](https://jamboard.google.com/d/12ask7dmSv2dVVd115iYJp4wh2NiSYgqOMQogUt-bBD0/edit?usp=sharing) et choisissez la page pour votre équipe.
+
+3.  À l’aide des outils de jamboard, faites les remarques sur la conception **surtout par rapport au MDD et le décalage des représentations**.
+
+Emojiopoly
+
+# MDD en français
+
+![](images/media/image16.png)
+
+
+# MDD en anglais
+
+![](images/media/image15.png)
+
