@@ -19,7 +19,7 @@ Il se peut que certains principes GRASP ne s'appliquent pas à un patron GoF!
 ## Itérateur
 
 Identifiez les 4 principes GRASP dans le patron
-[Itérateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=mur-,patron%20iterateur,-Contexte),
+[Itérateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=long%20d'un%20mur.-,Patron%20It%C3%A9rateur,Contexte,-un%20agr%C3%A9gat%20est),
 selon les directives à la @sec-GRASP_Adaptateur.
 
 ## Observateur
@@ -44,7 +44,7 @@ selon les directives à la @sec-GRASP_Adaptateur.
 
 ## Décorateur
 
-Identifiez les 4 principes GRASP dans le patron [Décorateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Bars-,patron%20decorateur,-Contexte),
+Identifiez les 4 principes GRASP dans le patron [Décorateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte,-Objets%20composant%20peuvent),
 selon les directives à la @sec-GRASP_Adaptateur.
 
 ## Méthode Template
@@ -63,7 +63,7 @@ Identifiez les 4 principes GRASP dans le patron [Méthode fabrique](https://fuhr
 
 ## Proxy
 
-Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=y-,proxies,-Ch10), selon les directives à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe%20(le), selon les directives à la @sec-GRASP_Adaptateur.
 
 
 ## Façade
