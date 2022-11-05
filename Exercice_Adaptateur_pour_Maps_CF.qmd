@@ -1,4 +1,4 @@
-# Exercice: Adaptateur pour Maps
+# Adaptateur pour Maps
 
 Proposez une mise en oeuvre du patron GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul d'itinéraires:
 

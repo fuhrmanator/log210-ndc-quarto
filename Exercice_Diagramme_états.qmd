@@ -1,4 +1,4 @@
-# Exercice: Diagramme d'états
+# Diagramme d'états
 
 Ces exercices devraient vous aider à comprendre les diagrammes d'états
 en UML. Vous devez vous référer au livre du cours pour la bonne notation

@@ -1,4 +1,4 @@
-# Exercice : Diagramme de classes conceptuelles (MDD)
+# Diagramme de classes conceptuelles (MDD)
 
 À partir du [cas d'utilisation _Réserver un livre de la bibliothèque_](#sec-CU_Réserver_livre), esquissez le Modèle du domaine correspondant au
 domaine de l'application.

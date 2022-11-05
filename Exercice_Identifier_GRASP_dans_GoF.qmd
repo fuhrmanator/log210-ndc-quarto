@@ -1,4 +1,4 @@
-# Exercice: Identifier GRASP dans GoF
+# Identifier GRASP dans GoF
 
 Dans cet exercice, vous allez mieux comprendre la relation entre les
 principes GRASP et les patrons GoF. La figure suivante est tirée du

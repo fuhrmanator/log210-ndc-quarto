@@ -1,4 +1,4 @@
-# Exercice: Critique d'une conception
+# Critique d'une conception
 
 Dans cet exercice, l'objectif est de vous sensibiliser à la facilité de comprendre une conception à partir d'un problème.
 Un objectif secondaire est de considérer les choix de conception sur un plan de la cohésion et du couplage. 

@@ -1,4 +1,4 @@
-# Exercice: Contrats d'opération
+# Contrats d'opération
 
 Rédigez **un contrat d'opération pour chacune des opérations système** du DSS ci-bas, selon le modèle du domaine ci-bas.
 
