@@ -32,61 +32,8 @@ Elle est responsable de connaître tous les détails (l'API distinct et immuable
 
 Le pattern Adaptateur comprend les principes GRASP Faible couplage, Forte cohésion, Polymorphisme, Indirection, Fabrication pure et Protection des variations. La @fig-Fig23_3 (tirée du livre de Larman, Figure A26.3/F23.3) démontre la relation entre ces principes dans le cas d'Adaptateur.
 
-
 ```{.plantuml #fig-Fig23_3 caption="Adaptateur et principes GRASP [voir @craig_uml_2005, figure **A26.3/F23.3**]"}
-@startuml Adaptateur_GRASP
-skinparam style strictuml
-skinparam defaultfontname Arial
-hide empty members
-left to right direction
-skinparam rectangle {
-    fontsize 0
-}
-legend
-**Faible couplage** est une façon d'obtenir une **protection à un point de variation**.
-
-**Polymorphisme** est une façon d'obtenir une **protection à un point de variation**
-et un **faible couplage**.
-
-Une **indirection** est une façon d'obtenir un **faible couplage**.
-
-Le pattern **Adaptateur** est une sorte **d'indirection** et une **Fabrication pure** qui 
-applique le principe de **Polymorphisme**.
-end legend
-
-rectangle " " {
-    class "Mécanisme de\n**protection des**\n**variations**" as PV
-    class "Mécanisme de\n**faible couplage**" as FCoup
-    class "Mécanisme de\n**forte cohésion**" as FCoh
-    class "Exemple de\n**polymorphisme**" as Poly
-    class "Mecanisme\nd'**indirection**" as Indir
-    class "**Fabrication**\n**pure**" as FP
-note as GRASP
-**Principes**
-**GRASP**
-end note
-}
-rectangle "  " {
-    class "**Adaptateur**" as A
-note as GoF
-**Patterns**
-**GoF**
-end note
-
-    A -left[hidden]- GoF
-}
-FCoup -up-|> PV
-
-Poly -up-|> FCoup
-Indir -up-|> FCoup
-FP -up-|> FCoup
-FP -up-|> FCoh
-
-A -up-|> Indir
-A -up-|> FP
-A -up-|> Poly
-
-@enduml
+!include figF23_3.pumlinclude
 ```
 
 On peut donc voir le pattern adaptateur comme *une spécialisation* de plusieurs principes GRASP:
@@ -100,7 +47,7 @@ On peut donc voir le pattern adaptateur comme *une spécialisation* de plusieurs
 
 Êtes-vous en mesure d'expliquer dans ce contexte comment Adaptateur est relié à ces principes? C'est-à-dire, pouvez-vous identifier les GRASP dans le pattern Adaptateur?
 
-## Identifier les GRASP dans les GoF
+## Identifier les GRASP dans les GoF {#sec-GRASP_Adaptateur}
 
 Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d'imaginer le problème qui pourrait exister et comment le principe (et le pattern GoF) résout le problème.
 
