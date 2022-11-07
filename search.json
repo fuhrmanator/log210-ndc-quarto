@@ -35,13 +35,6 @@
     "text": "Licence\n\nCette œuvre est mise à disposition selon les termes de la Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International.\n\n\n\n\nArdis, Mark, Greg Hislop, Mark Sebern, David Budgen, Jeff Offutt, et Willem Visser. 2015. « Software Engineering 2014 - Curriculum Guidelines for Undergraduate Degree Programs in Software Engineering ». ACM: Association for Computing Machinery.\n\n\nGamma, Erich, Richard Helm, Ralph Johnson, et John Vlissides. 1994. Design Patterns: Elements of Reusable Object-Oriented Software. 1ʳᵉ éd. Reading, Mass: Addison-Wesley Professional. http://amazon.com/o/ASIN/0201633612/.\n\n\nLarman, Craig. 2001. Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and the Unified Process. 2nd edition. Upper Saddle River, NJ: Prentice Hall.\n\n\n———. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial.\n\n\n« LaTeX ». 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=LaTeX&oldid=1114993597.\n\n\n« Pandoc ». 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=Pandoc&oldid=1116852485.\n\n\n« PlantUML ». 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=PlantUML&oldid=1111009429.\n\n\n« Quarto ». 2022. 26 octobre 2022. https://quarto.org/."
   },
   {
-    "objectID": "Théorie.html",
-    "href": "Théorie.html",
-    "title": "Théorie",
-    "section": "",
-    "text": "Voici la partie théorique."
-  },
-  {
     "objectID": "AnalyseConception.html",
     "href": "AnalyseConception.html",
     "title": "1  Analyse et conception de logiciels",
@@ -586,13 +579,6 @@
     "title": "Bibliographie",
     "section": "",
     "text": "Ardis, Mark, Greg Hislop, Mark Sebern, David Budgen, Jeff Offutt, and\nWillem Visser. 2015. “Software Engineering 2014 -\nCurriculum Guidelines for Undergraduate Degree\nPrograms in Software Engineering.” ACM:\nAssociation for Computing Machinery.\n\n\nAvgeriou, Paris, Philippe Kruchten, Ipek Ozkaya, and Carolyn Seaman.\n2016. “Managing Technical Debt in Software\nEngineering (Dagstuhl Seminar 16162).” Edited by Paris\nAvgeriou, Philippe Kruchten, Ipek Ozkaya, and Carolyn Seaman.\nDagstuhl Reports 6 (4): 110–38. https://doi.org/10.4230/DagRep.6.4.110.\n\n\nCoad, Peter. 1997. Object Models:\nStrategies, Patterns, and\nApplications. 2nd Revised ed. edition. Upper\nSaddle River, N.J: Pearson Technology Group.\n\n\nFitzpatrick, Brian W., and Ben Collins-Sussman. 2012. Team\nGeek: A Software\nDeveloper’s Guide to Working\nWell with Others. 1 edition. Sebastopol.\nCA: O’Reilly Media.\n\n\nFord, Neal. 2009. “Evolutionary Architecture and Emergent Design:\nInvestigating Architecture and Design.” {CT}316. http://www.ibm.com/developerworks/library/j-eaed1/.\n\n\nFowler, Martin. 2007. “Bliki:\nDesignStaminaHypothesis.” Martinfowler.com.\n\n\n———. 2018. Refactoring: Improving the Design of Existing Code.\n2 edition. Boston: Addison-Wesley Professional.\n\n\nGamma, Erich, Richard Helm, Ralph Johnson, and John Vlissides. 1994.\nDesign Patterns: Elements of\nReusable Object-Oriented\nSoftware. 1st ed. Reading, Mass: Addison-Wesley\nProfessional. http://amazon.com/o/ASIN/0201633612/.\n\n\nHanmer, Robert. 2007. Patterns for Fault\nTolerant Software. 1st ed. Chichester,\nEngland ; Hoboken, NJ: Wiley.\n\n\nKarac, I., and B. Turhan. 2018. “What Do We (Really) Know about\nTest-Driven Development?” IEEE Software 35 (4): 81–85.\nhttps://doi.org/10.1109/MS.2018.2801554.\n\n\nLarman, Craig. 2001. Applying UML and\nPatterns: An Introduction to\nObject-Oriented Analysis and Design and the\nUnified Process. 2nd edition. Upper Saddle\nRiver, NJ: Prentice Hall.\n\n\n———. 2005. UML 2 et design patterns. 3rd ed.\nParis: Village Mondial.\n\n\n“LaTeX.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=LaTeX&oldid=1114993597.\n\n\nOakley, Barbara, RM Felder, R Brent, and I Elhajj. 2004. “Coping\nwith Hitchhikers and Couch Potatoes on Teams.” Journal of\nStudent Centered Learning 2 (1): 32–34. https://www.cs.cornell.edu/courses/cs3110/2018fa/teams/hitchhikers.html.\n\n\n“Pandoc.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=Pandoc&oldid=1116852485.\n\n\n“PlantUML.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=PlantUML&oldid=1111009429.\n\n\n“Quarto.” 2022. October 26, 2022. https://quarto.org/."
-  },
-  {
-    "objectID": "Exercices.html",
-    "href": "Exercices.html",
-    "title": "Exercices",
-    "section": "",
-    "text": "Voici la partie exercices."
   },
   {
     "objectID": "Exercice_Classes_conceptuelles_dans_le_MDD.html",
