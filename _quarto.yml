@@ -129,7 +129,6 @@ format:
     lot: true
     hyperrefoptions: 
       - pdfdisplaydoctitle=true
-      - pdftitle="Analyse et conception de logiciels"
     highlight-style: github
     geometry:
       - top=30mm
@@ -139,7 +138,7 @@ format:
     fontfamilyoptions: 
       - osf
       - p
-    fontsize: 11pt
+    fontsize: 12pt
     include-in-header: 
       - tex-hacks/color-tables.tex
       - tex-hacks/code-font.tex
