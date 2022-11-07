@@ -108,6 +108,7 @@ format:
     classoption: 
       # Remove odd-even page breaks (for printing PDF)
       - open=any
+      - french
     toc: true
     toc-depth: 2
     toccolor: blue
@@ -129,6 +130,7 @@ format:
       - tex-hacks/fix-unicode-chars.tex
       - tex-hacks/redefine-title-page.tex
     # header-includes: |
+    #   \frenchsetup{PartNameFull=false}
 
     include-before-body: 
       - tex-hacks/redefine-parts-layout.tex

@@ -4,10 +4,10 @@
   afterskip=\dimexpr3.3\baselineskip+\parskip\relax,
   style=chapter% no part page
 ]{part}
-%\renewcommand\partformat{\partname\ \thepart\autodot\enskip}
 % Bug in babel with french in some classes - https://tex.stackexchange.com/a/541944/17868
-% workaround, but we could also do \frenchsetup{PartNameFull=false} in preamble?
-\renewcommand\partformat{\frenchpartname\ \thepart\autodot\enskip}
+% workaround, but we could also do \frenchsetup{PartNameFull=false} in preamble
+\renewcommand\partformat{\partname\ \thepart\autodot\enskip}
+%\renewcommand\partformat{\frenchpartname\ \thepart\autodot\enskip}
 
 \DeclareNewSectionCommand[
   beforeskip=-1sp,

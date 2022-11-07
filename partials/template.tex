@@ -242,16 +242,17 @@ $endif$
 $pandoc.tex()$
 $if(lang)$
 \ifLuaTeX
-\usepackage[french,bidi=basic]{babel}
+\usepackage[bidi=basic]{babel}
 \else
-\usepackage[french,bidi=default]{babel}
+\usepackage[bidi=default$if(babel-lang)$,$babel-lang$$endif$]{babel}
+%\usepackage[bidi=default]{babel}
 \fi
-$if(babel-lang)$
-\babelprovide[main,import]{$babel-lang$}
-$endif$
-$for(babel-otherlangs)$
-\babelprovide[import]{$babel-otherlangs$}
-$endfor$
+% $if(babel-lang)$
+% \babelprovide[main,import]{$babel-lang$}
+% $endif$
+% $for(babel-otherlangs)$
+% \babelprovide[import]{$babel-otherlangs$}
+% $endfor$
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
