@@ -5,7 +5,7 @@ Le chapitre F20/A22\ \faBook<i class="fa-solid fa-book"></i>\ définit quelques 
 En mode esquisse, lorsqu'on dessine un modèle sur un tableau blanc ou un papier, un outil pratique pour numériser le tout est **Microsoft Lens** ([Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&hl=fr_CA) ou [iOS](https://apps.apple.com/ca/app/microsoft-office-lens-pdf-scan/id975925059)).
 Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.
 
-![Office Lens peut détecter le cadre d'un dessin sur un tableau blanc ou papier et le transformer.](images/OfficeLensWhiteBoard.jpg){width="200px"}
+![Microsoft Lens peut détecter le cadre d'un dessin sur un tableau blanc ou papier et le transformer, même si on n'est pas droit devant le dessin.](images/OfficeLensWhiteBoard.jpg){width="200px"}
 
 ::: {.callout-caution}
 Tous les travaux demandés pour les **examens** (de LOG210 à l'École de technologie supérieure) doivent être faits *à la main*.
