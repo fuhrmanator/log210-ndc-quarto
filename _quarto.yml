@@ -11,7 +11,7 @@ crossref:
   tbl-prefix: tableau    # (default is "Table")
 
 # setting fr-FR causes the date to be in english?
-lang: fr
+lang: fr-FR
 # language: _language.yml   # customized, "tableau" plutôt que "table", etc.
 
 book:
@@ -74,6 +74,14 @@ link-citations: true # pandoc setting
 latex-auto-mk: true
 link-external-icon: true
 
+# Don't set colors here - only link color works, and it overrides the HTML theme: option. 
+#  For the PDF version, I put them in the pdf: options below
+# toccolor: blue
+# urlcolor: Green4
+# citecolor: violet
+#linkcolor: violet
+
+
 appendix-style: default
 
 format:
@@ -94,7 +102,7 @@ format:
       </style>
     # https://quarto.org/docs/output-formats/html-themes.html#overview
     resources: web-resources/**
-    theme: simplex
+    theme: Spacelab
     
 
   pdf:
@@ -113,8 +121,15 @@ format:
     toc: true
     toc-depth: 2
     toccolor: blue
+    urlcolor: Green4
+    citecolor: violet
+    linkcolor: violet
+
     lof: true
     lot: true
+    hyperrefoptions: 
+      - pdfdisplaydoctitle=true
+      - pdftitle="Analyse et conception de logiciels"
     highlight-style: github
     geometry:
       - top=30mm
