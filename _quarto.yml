@@ -28,27 +28,29 @@ book:
 
   chapters:
     - index.qmd # Preface
-    - AnalyseConception.qmd
-    - Besoins.qmd
-    - CasUtilisation.qmd
-    - MDD.qmd
-    - DSS.qmd
-    - GRASP.qmd
-    - DetteTechnique.qmd
-    - Contrats.qmd
-    - RDCU.qmd
-    - TDD.qmd
-    - Réusinage.qmd
-    - TravailEquipe.qmd
-    - Outils-UML.qmd
-    - GRASP-GoF.qmd
-    - Fiabilité.qmd
-    - Diagrammes d'activités.qmd
-    - Diagrammes d'états.qmd
-    - ConceptionPackages.qmd
-    - Diagrammes de déploiement.qmd
-    - Laboratoires.qmd
-    - references.qmd
+    - part: Théorie.qmd
+      chapters:
+      - AnalyseConception.qmd
+      - Besoins.qmd
+      - CasUtilisation.qmd
+      - MDD.qmd
+      - DSS.qmd
+      - GRASP.qmd
+      - DetteTechnique.qmd
+      - Contrats.qmd
+      - RDCU.qmd
+      - TDD.qmd
+      - Réusinage.qmd
+      - TravailEquipe.qmd
+      - Outils-UML.qmd
+      - GRASP-GoF.qmd
+      - Fiabilité.qmd
+      - Diagrammes d'activités.qmd
+      - Diagrammes d'états.qmd
+      - ConceptionPackages.qmd
+      - Diagrammes de déploiement.qmd
+      - Laboratoires.qmd
+      - references.qmd
     - part: Exercices.qmd
       chapters:
         - Exercice_Classes_conceptuelles_dans_le_MDD.qmd
@@ -103,8 +105,12 @@ format:
     # babel-lang: french
     colorlinks: true
     documentclass: scrbook
+    classoption: 
+      # Remove odd-even page breaks (for printing PDF)
+      - open=any
     toc: true
     toc-depth: 2
+    toccolor: blue
     lof: true
     lot: true
     highlight-style: github
@@ -117,17 +123,15 @@ format:
       - osf
       - p
     fontsize: 11pt
-    header-includes: 
-      - \usepackage{colortbl}
-      - \usepackage[scaled=.8]{cascadia-code}
-    # Bibliographies in French have raised r and e for the number "édition" e.g. 1re, 3e
-      - \DeclareUnicodeCharacter{1D49}{$^\text{e}$}
-      - \DeclareUnicodeCharacter{02B3}{$^\text{r}$}
-      - \usepackage{titling}
-      - \usepackage{transparent}
-      - \pretitle{\begin{center}
-        \transparent{0.4}\includegraphics[]{images/wordle_ordre_alph.png}\transparent{1.0}\huge\\}
-      - \posttitle{\end{center}}
+    include-in-header: 
+      - tex-hacks/color-tables.tex
+      - tex-hacks/code-font.tex
+      - tex-hacks/fix-unicode-chars.tex
+      - tex-hacks/redefine-title-page.tex
+    # header-includes: |
+
+    include-before-body: 
+      - tex-hacks/redefine-parts-layout.tex
 
 # filters must be run in the proper order here
 filters:

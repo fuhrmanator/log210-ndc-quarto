@@ -1,0 +1,27 @@
+% https://tex.stackexchange.com/a/419468/17868
+\RedeclareSectionCommand[
+  beforeskip=\dimexpr-3.3\baselineskip-\parskip\relax,
+  afterskip=\dimexpr3.3\baselineskip+\parskip\relax,
+  style=chapter% no part page
+]{part}
+%\renewcommand\partformat{\partname\ \thepart\autodot\enskip}
+% Bug in babel with french in some classes - https://tex.stackexchange.com/a/541944/17868
+% workaround, but we could also do \frenchsetup{PartNameFull=false} in preamble?
+\renewcommand\partformat{\frenchpartname\ \thepart\autodot\enskip}
+
+\DeclareNewSectionCommand[
+  beforeskip=-1sp,
+  afterskip=1.725\baselineskip plus .115\baselineskip minus .192\baselineskip,
+  style=section,% no page break before \firstchapterinpart
+  level=\chapternumdepth,
+  indent=0pt,
+  tocindent=0pt,
+  tocnumwidth=1.5em,
+  font=\usekomafont{chapter},
+  tocstyle=chapter
+]{firstchapterinpart}
+
+\makeatletter
+\let\c@firstchapterinpart\c@chapter% use the same counter for both chapter and firstchapterinpart
+\def\cl@firstchapterinpart{\cl@chapter}% use the same reset list as chapter
+\makeatother
