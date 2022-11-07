@@ -100,14 +100,15 @@ format:
   pdf:
     # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: latexmk
-    # thanks: "Thanks here"
+
     template: partials/template.tex
-    # babel-lang: french
+
     colorlinks: true
     documentclass: scrbook
     classoption: 
       # Remove odd-even page breaks (for printing PDF)
       - open=any
+      # pass french to book class (babel will see it automatically)
       - french
     toc: true
     toc-depth: 2
