@@ -1,13 +1,17 @@
 
 ::: {.callout-note}
 
-Vous pouvez dessiner les diagrammes à la main et en prendre une photo. Vous pouvez également utiliser PlantUML:
+Vous pouvez dessiner les diagrammes à la main et en prendre une photo avec une application comme Microsoft Lens ([Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens), [iOS](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059)).
 
--   [tutoriel VSCode sur YouTube](https://www.youtube.com/watch?v=xkwJ9GwgZJU)
--   [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571), module supplémentaire Google Docs.
--   [PlantText.com](https://www.planttext.com/).
+Vous pouvez également utiliser PlantUML.
+Voici des ressources à ce propos: ![Logo PlantUML](images/Plantuml_Logo.svg){width=50px}
 
-Nous déconseillons LucidChart et d'autres outils ayant juste des profils simples pour UML, puisqu'ils ne sont pas bien adaptés (voir la @fig-LucidchartUML).
+- [tutoriel VSCode sur YouTube](https://www.youtube.com/watch?v=xkwJ9GwgZJU);
+- [extension PlantUML pour VSCode](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml);
+- [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571), module supplémentaire Google Docs;
+- [PlantText.com](https://www.planttext.com/).
+
+Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la @fig-LucidchartUML).
 
 :::
 
