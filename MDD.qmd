@@ -363,3 +363,103 @@ N'excluez donc pas une classe simplement parce que les spécifications n'indique
 :::
 
 Vous pouvez aussi lire [cette question](https://stackoverflow.com/q/3507671/1168342) \faStackOverflow<i class="fa-brands fa-stack-overflow"></i>.
+
+## Exercices
+
+::: {#exr-MDD-trouver-classes-conceptuelles-catégorie}
+
+### Classes conceptuelles trouvées par catégorie
+
+À partir du [cas d'utilisation _Réserver un livre de la bibliothèque_](#sec-CU_Réserver_livre), trouvez des classes conceptuelles candidates en utilisant une liste de catégories de classes.
+Vous pouvez remplir un tableau comme ceci:
+
+| [**Catégorie de classe conceptuelle**](#sec-categoriesClasses)      | **Classes candidates selon le cas d'utilisation** |
+|:----------- |:----------- |
+|Transaction d'affaires (métier) |  _Réservation_ (ceci est un exemple)    |    
+| (Continuez avec d'autres catégories) | |
+| (Certaines catégories ne s'appliqueront pas.) | |
+| | (Certaines classes candidates seront découvertes par plusieurs catégories)  |
+| | |
+| | |
+| | |
+| | |
+
+: {tbl-colwidths="[40,60]"}
+
+:::
+<!-- ::: {.solution}
+ **Catégorie de classe conceptuelle** | **Classes candidates selon le cas d'utilisation** 
+:----------|:----------
+Transactions d'entreprise  | Réservation
+Rôles des personnes, organisation  | Membre, Bibliothèque
+Produit ou service lié à une transaction ou une ligne de transaction | Livre, Exemplaire
+Lieu de la transaction  | Bibliothèque
+Objets physiques | Livre, Exemplaire
+Descriptions d'objets (**voir sec. 9.13!**)  | Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)
+Catalogue | CatalogueLivre
+::: -->
+
+
+::: {#exr-MDD-trouver-classes-conceptuelles-noms}
+
+### Classes conceptuelles trouvées à l'aide de groupes nominaux
+
+Cette fois-ci, utilisez les groupes nominaux pour trouver des classes conceptuelles candidates.
+Commencez par souligner ou mettre en surbrillance les noms et les groupes nominaux dans le [cas d'utilisation _Réserver un livre de la bibliothèque_](#sec-CU_Réserver_livre).
+Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s'appliquer du tout.
+Faites une liste de classes conceptuelles candidates (sans doublons).
+:::
+<!-- ::: {.solution}
+Bibliothèque \
+Liste de livres \
+Membre \
+Nom \
+Reservation \
+Livre \
+Titre \
+Auteur \
+ISBN \
+Maison d'édition \
+Numéro de l'édition \
+Année \
+Exemplaires \
+Nombres \
+Code \
+Disponibilité \
+Réservation \
+Numéro de confirmation \
+Nom du membre \
+Code de l'exemplaire 
+::: -->
+
+
+::: {#exr-MDD-comparer-classes-candidates}
+
+### Comparaison des approches
+
+Comparez la liste de classes trouvées dans @exr-MDD-trouver-classes-conceptuelles-noms avec les classes trouvées dans @exr-MDD-trouver-classes-conceptuelles-catégorie.
+Quelles sont les différences?
+
+:::
+
+
+{{< include _callout_conseils_diagrammes.qmd >}}
+
+::: {#exr-MDD-diagramme}
+
+### Diagramme de classes conceptuelles
+
+À partir du [cas d'utilisation _Réserver un livre de la bibliothèque_](#sec-CU_Réserver_livre), esquissez le Modèle du domaine correspondant au domaine de l'application (cela comprend des **classes**, des **attributs** et des **associations**).
+
+1. Considérez les classes candidates provenant de l'@exr-MDD-trouver-classes-conceptuelles-catégorie et de l'@exr-MDD-trouver-classes-conceptuelles-noms.
+1. Notez que les classes candidates dénichées ne sont pas toujours importantes.
+Certains concepts sont des attributs.
+D'autres (surtout avec l'approche linguistique) n'ont rien à voir avec le problème du domaine. 
+Vous devez appliquer les directives vues dans le chapitre 9 de @craig_uml_2005.
+1. Faites attention à bien modéliser la classe de "description" dans ce problème.
+1. Tout attribut doit avoir un type.
+1. Limitez-vous à des associations "mémorisables" dans le contexte de l'application du logiciel (ne pas faire des associations hors de la portée du cas d'utilisation).
+1. Vérifiez les cardinalités.
+1. Vérifiez les verbes sur les associations ainsi que le sens de lecture.
+
+:::

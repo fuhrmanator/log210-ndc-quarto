@@ -1,0 +1,37 @@
+# Cas d'utilisation - Réserver un livre de la bibliothèque {#sec-CU_Réserver_livre}
+
+**Parties prenantes et intérêts**:  
+- **Le Membre.** Il veut un moyen de recherche exact et rapide et ne
+veut pas que la Bibliothèque mémorise des informations sur ses
+recherches (confidentialité). Il veut pouvoir réaliser des réservations
+aisément, obtenir un service rapide en fournissant un minimum d'efforts.
+Il veut également une preuve de réservation.  
+- **La Bibliothèque.** Elle veut enregistrer correctement les
+réservations et satisfaire les souhaits des membres.  
+**Préconditions**: Le Membre est identifié et authentifié  
+**Acteur principal: Membre**
+
+1.  Le membre choisit la fonction "recherche" et saisit du texte décrivant le livre (par exemple, une partie du titre, "UML").
+2.  Le système affiche une liste de livres (le titre, l'auteur et l'année) correspondant à la recherche, par exemple, "UML2 et le design patterns, Craig Larman, 2005" et "UML par la pratique, Pascal Rocques, 2009".
+3.  Le membre choisit un livre parmi les résultats, par exemple, "UML2 et les design patterns, Craig Larman, 2005".
+4.  Le système affiche les informations détaillées du livre (le titre, l'auteur, le numéro ISBN, la maison d'édition, le numéro de l'édition et l'année) ainsi que la liste de tous les exemplaires
+du livre indiquant s'ils sont disponibles ou pas, par exemple,
+deux exemplaires du livre "UML2 et les design patterns", un avec
+l'identificateur d'exemplaire "1" qui est disponible et un avec
+l'identificateur d'exemplaire "2" qui n'est pas disponible.
+5.  Le membre réserve un exemplaire du livre qui est disponible.
+6.  Le système confirme la réservation en affichant un numéro de
+réservation avec le nom du membre et le code de l'exemplaire du
+livre.
+
+Extensions (scénarios alternatifs):
+
+2.  Aucun livre ne correspond au texte de la recherche.
+    1.  Le système affiche un message indiquant qu'aucun livre n'a été trouvé.
+    2.  Le membre lance une nouvelle recherche.
+
+<!-- -->
+
+4.  Tous les exemplaires ne sont pas disponibles.
+    1.  Le système affiche toutes les informations du livre et des exemplaires, mais un message indique qu'il n'est pas possible de réserver, faute d'exemplaires disponibles.
+    2.  Le membre lance une nouvelle recherche.
