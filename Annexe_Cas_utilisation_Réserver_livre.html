@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyse et conception de logiciels - 15&nbsp; Fiabilité</title>
+<title>Analyse et conception de logiciels - Appendix A — Cas d’utilisation - Réserver un livre de la bibliothèque</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -49,8 +30,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Diagrammes d'activités.html" rel="next">
-<link href="./GRASP-GoF.html" rel="prev">
+<link href="./Exercice_Adaptateur_pour_Maps_CF.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -96,7 +76,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></h1>
+      <h1 class="quarto-secondary-nav-title">Appendix A — Cas d’utilisation - Réserver un livre de la bibliothèque</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -107,7 +87,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></h1>
+      <h1 class="title"><span id="sec-CU_Réserver_livre" class="quarto-section-identifier d-none d-lg-block">Appendix A — Cas d’utilisation - Réserver un livre de la bibliothèque</span></h1>
                       </div>
   </div>
     
@@ -219,7 +199,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -309,7 +289,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
   </div>
 </li>
       </ul>
@@ -327,52 +307,37 @@ div.csl-indent {
 
 
 
-<p>Le chapitre A35/F30&nbsp;<i class="fa-solid fa-book"></i>&nbsp;présente le problème de la fiabilité pour le système NextGen POS. C’est le basculement sur un service local en cas d’échec d’un service distant.</p>
-<div id="fig-PanneConnexionService" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figure class="figure">
-<img src="images/PanneConnexionService.png" title="Comment tolérer une panne de connexion ou de service?" class="img-fluid figure-img" style="width:70.0%">
-</figure>
-<p></p><figcaption class="figure-caption">Figure&nbsp;15.1: Comment tolérer une panne de connexion ou de <span style="white-space:nowrap">service ?</span></figcaption><p></p>
-</figure>
-</div>
-<p>Voici les points <span style="white-space:nowrap">importants :</span></p>
-<ul>
-<li>Définitions des termes, A35.3/F30.3&nbsp;<i class="fa-solid fa-book"></i>:
-<ul>
-<li><strong>Faute.</strong> La cause première du problème</li>
-<li><strong>Erreur.</strong> La manifestation de la faute lors de l’exécution. Les erreurs sont détectées (ou non).</li>
-<li><strong>Échec.</strong> Déni de service causé par une erreur.</li>
-</ul></li>
-<li>Les solutions proposées par l’architecte système et documentées par Larman impliquent les concepts <span style="white-space:nowrap">suivants :</span>
-<ul>
-<li>Mise en cache locale d’informations recherchées au service distant, A35.2/F30.2&nbsp;<i class="fa-solid fa-book"></i></li>
-<li>Utilisation d’<em>Adaptateur [GoF]</em> pour réaliser le service redondant (lecture d’information), A35.2/F30.2&nbsp;<i class="fa-solid fa-book"></i></li>
-<li>Réalisation d’un scénario dans le cas d’utilisation pour supporter l’échec de tout (rien ne va plus) en permettant au Caissier de saisir l’information (description et prix), A35.3/F30.3&nbsp;<i class="fa-solid fa-book"></i>. Dans ce cas, il faut bien gérer les exceptions.</li>
-<li>Utilisation de <em>Procuration (Proxy) de redirection [GoF]</em> pour basculer sur un service local en cas de panne (écriture d’information), A35.4/F30.4&nbsp;<i class="fa-solid fa-book"></i></li>
-</ul></li>
-</ul>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Faire une conception pour la fiabilité nécessite de l’expérience (ou l’utilisation des patterns). Un bon livre est celui de <span class="citation" data-cites="hanmer_patterns_2007">Hanmer (<a href="references.html#ref-hanmer_patterns_2007" role="doc-biblioref">2007</a>)</span>.</p>
-<p>L’utilisation de services dans le nuage (infonuagique) amène une redondance de serveurs. Cependant, même un service web a besoin de <a href="https://aws.amazon.com/about-aws/global-infrastructure/">redondance dans les zones géographiques</a>, car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourrait affecter toute une grappe de serveurs.</p>
-</div>
-</div>
+<p><strong>Parties prenantes et intérêts</strong>:<br>
+- <strong>Le Membre.</strong> Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.<br>
+- <strong>La Bibliothèque.</strong> Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.<br>
+<strong>Préconditions</strong>: Le Membre est identifié et authentifié<br>
+<strong>Acteur <span style="white-space:nowrap">principal :</span> Membre</strong></p>
+<ol type="1">
+<li>Le membre choisit la fonction «&nbsp;recherche&nbsp;» et saisit du texte décrivant le livre (par exemple, une partie du titre, «&nbsp;UML&nbsp;»).</li>
+<li>Le système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, «&nbsp;UML2 et le design patterns, Craig Larman, 2005&nbsp;» et «&nbsp;UML par la pratique, Pascal Rocques, 2009&nbsp;».</li>
+<li>Le membre choisit un livre parmi les résultats, par exemple, «&nbsp;UML2 et les design patterns, Craig Larman, 2005&nbsp;».</li>
+<li>Le système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre «&nbsp;UML2 et les design patterns&nbsp;», un avec l’identificateur d’exemplaire «&nbsp;1&nbsp;» qui est disponible et un avec l’identificateur d’exemplaire «&nbsp;2&nbsp;» qui n’est pas disponible.</li>
+<li>Le membre réserve un exemplaire du livre qui est disponible.</li>
+<li>Le système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.</li>
+</ol>
+<p>Extensions (scénarios <span style="white-space:nowrap">alternatifs) :</span></p>
+<ol start="2" type="1">
+<li>Aucun livre ne correspond au texte de la recherche.
+<ol type="1">
+<li>Le système affiche un message indiquant qu’aucun livre n’a été trouvé.</li>
+<li>Le membre lance une nouvelle recherche.</li>
+</ol></li>
+</ol>
+<!-- -->
+<ol start="4" type="1">
+<li>Tous les exemplaires ne sont pas disponibles.
+<ol type="1">
+<li>Le système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.</li>
+<li>Le membre lance une nouvelle recherche.</li>
+</ol></li>
+</ol>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-hanmer_patterns_2007" class="csl-entry" role="doc-biblioentry">
-Hanmer, Robert. 2007. <em>Patterns for <span>Fault</span> <span>Tolerant</span> <span>Software</span></em>. 1ʳᵉ éd. Chichester, England ; Hoboken, NJ: Wiley.
-</div>
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -489,14 +454,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./GRASP-GoF.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></span>
+      <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Diagrammes d'activités.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
