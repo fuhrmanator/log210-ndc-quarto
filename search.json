@@ -203,6 +203,13 @@
     "text": "5.3 FAQ DSS\n\n5.3.1 Faut-il une opération système après une boucle ?\n\n\n\n\n\n\nDans l’exemple pour Attaquer un pays, à l’extérieur de la boucle il y a une opération système terminerAttaque. Est-ce obligatoire d’avoir une opération système après une boucle ?\n\n\n\nL’opération système terminerAttaque sert pour signaler la fin de la boucle. Le système saura que l’acteur ne veut plus répéter les actions dans la boucle. Mais elle permet aussi de faire des calculs concernant ce qui s’est passé dans la boucle, p. ex. pour déterminer qui contrôle quel pays après les attaques.\nCependant, si vous avez une boucle pour indiquer la possibilité de répéter une action (p. ex. ajouter des produits dans un système d’inventaire) et vous n’avez pas besoin de faire un calcul à la fin, alors une opération système pour terminer une telle boucle n’est pas nécessaire (surtout avec une application web).\n\n\n5.3.2 Comment faire si un cas d’utilisation a des scénarios alternatifs?\n\n\n\n\n\n\nFait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs opt et alt) pour montrer des flots différents dans le même DSS ?\n\n\n\nUn objectif de faire un DSS est de définir les opérations système. Donc, on peut se poser la question suivante : les scénarios alternatifs impliquent-ils une ou plusieurs opérations système n’ayant pas encore été définies ? Si la réponse est non, on peut ignorer les scénarios alternatifs dans le DSS. Par contre, si la réponse est oui, il est essentiel de définir ces opérations système dans un DSS. Quant au choix de faire des DSS séparés ou d’utiliser la notation UML pour montrer les flots différents sur le même DSS, ça dépend de la complexité de la logique des flots. Un DSS devrait être facile à comprendre. C’est à vous de juger si votre DSS avec des opt ou alt est assez simple ou fait du spaghetti. Utilisez un autre DSS (ou plusieurs) ayant le nom des scénarios alternatifs si cela vous semble plus clair.\n\n\n5.3.3 Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type primitif) ?\n\n\n\n\n\n\nPuisqu’une opération système doit avoir seulement des arguments de type primitif, j’ai plusieurs opérations système avec de nombreux (plus que 5) arguments. Pourquoi il n’est pas permis de passer des objets comme argument ?\n\n\n\nIl n’est pas conseillé de passer des objets du domaine comme argument, puisque c’est la couche présentation qui invoque l’opération système. La couche présentation n’est pas censée manipuler directement les objets dans la couche domaine, sinon elle empiète sur les responsabilités de la couche domaine.\nUne solution pour réduire le nombre d’arguments sans utiliser un objet du domaine est d’appliquer un réusinage pour le smell nommé Long Parameter List, par exemple Introduce Parameter Object. Notez que l’objet de paramètres que vous introduisez n’est pas un objet (classe) du domaine ! La distinction est importante, car la logique d’affaires demeure dans la couche domaine. En TypeScript, une fonction peut être définie avec un objet de paramètre. Cet exemple montre même comment on peut « déstructurer » l’objet pour déclarer les variables utilisées dans la fonction :\n// inspiré de https://leanpub.com/essentialtypescript/read\nfunction compteARebours({ initial: number, final: final = 0,\n                          increment: increment = 1, initial: actuel }) {\n    while (actuel >= final) {\n        console.log(actuel);\n        actuel -= increment\n    }\n}\ncompteARebours({ initial: 20 });\ncompteARebours({ initial: 20, increment: 2, final: 4 });\n\n\n5.3.4 Ne serait-il pas plus simple de passer l’objet body de la page web au contrôleur GRASP ?\n\n\n\n\n\n\nDécortiquer toutes les informations dans un formulaire web est compliqué, puis on doit passer tout ça à un contrôleur GRASP comme des arguments de type primitif. Ne serait-il pas plus simple de passer l’objet body de la page web au contrôleur GRASP et le laisser faire le décorticage ?\n\n\n\nDans un sens ça serait plus simple (pour le code de la couche présentation). Cependant, nous voulons séparer les couches pour favoriser le remplacement de la couche présentation, par exemple à travers une application iOS ou Android.\nSi vous mettez la logique de la couche présentation (décortiquer un formulaire web) dans la couche domaine (le contrôleur GRASP), ça ne respecte pas les responsabilités des couches. Imaginez un tel contrôleur GRASP si vous aviez trois types d’application frontale (navigateur web, application iOS et application Android). Le contrôleur GRASP recevra des représentations de « formulaire » de chaque couche présentation différente. En passant, l’objet body n’a rien à voir avec une interface Android ! Ce pauvre contrôleur serait obligé de connaître alors toutes les trois formes (web, iOS, Android) et ainsi sa cohésion sera beaucoup plus faible. Pour respecter les responsabilités, on laisse la couche présentation faire le décorticage et construire une opération système selon l’API définie dans le DSS. Cela simplifie aussi le contrôleur GRASP."
   },
   {
+    "objectID": "DSS.html#exercices",
+    "href": "DSS.html#exercices",
+    "title": "5  Diagrammes de séquence système (DSS)",
+    "section": "5.4 Exercices",
+    "text": "5.4 Exercices\n\n\n\n\n\n\nNote\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo avec une application comme Microsoft Lens (Android, iOS).\nVous pouvez également utiliser PlantUML. Voici des ressources à ce propos : \n\ntutoriel VSCode sur YouTube ;\nextension PlantUML pour VSCode ;\nPlantUML Gizmo, module supplémentaire Google Docs ;\nPlantText.com.\n\nMéfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la figure 13.4).\n\n\n\nExercice 5.1 (Dessiner un DSS à partir d’un cas d’utilisation) Esquissez le DSS pour le cas d’utilisation Réserver un livre de la bibliothèque. Toutes les opérations système doivent définir le type de chaque argument, le cas échéant."
+  },
+  {
     "objectID": "GRASP.html",
     "href": "GRASP.html",
     "title": "6  Principes GRASP",
@@ -637,149 +644,142 @@
     "text": "Contrats d’opération\nÉcrivez vos contrats ici (un pour chaque opération système) :\n\nDSS\n\n\nDSS pour le scénarioTraiter vente:Caissier:SystèmedémarrerVenteloop[reste des articles]saisirArticle(codeArticle:int, quantité:int)description, totalterminerSale()total with taxesfairePaiement(montant:Monnaie)rendu de monnaie, reçu\nDSS pour le scénario Traiter Vente de Larman (2005)\n\n\n\n\nMDD partiel\nLigneArticlequantité:intVentedateHeure: DateHeureestTerminée : booleanPaiementmontant:MonnaieMagasinnom:Stringadresse:StringDescriptionProduitdescription : Stringprix : MoneycodeArticle : intCatalogueProduitRegistreContient1..*1Héberge1..*1Saisie-sur11Payée-par111*Décrite-par*1\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
-    "objectID": "Exercice_DSS_Diagrammes-de-séquence-système.html",
-    "href": "Exercice_DSS_Diagrammes-de-séquence-système.html",
-    "title": "24  Diagramme de séquence système (DSS)",
-    "section": "",
-    "text": "Les opérations système doivent définir le type de chaque argument, s’il y en a.\n\n\n\n\n\n\nNote\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo avec une application comme Microsoft Lens (Android, iOS).\nVous pouvez également utiliser PlantUML. Voici des ressources à ce propos : \n\ntutoriel VSCode sur YouTube ;\nextension PlantUML pour VSCode ;\nPlantUML Gizmo, module supplémentaire Google Docs ;\nPlantText.com.\n\nMéfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la figure 13.4)."
-  },
-  {
     "objectID": "Exercice_Diagramme_états.html",
     "href": "Exercice_Diagramme_états.html",
-    "title": "25  Diagramme d’états",
+    "title": "24  Diagramme d’états",
     "section": "",
     "text": "Ces exercices devraient vous aider à comprendre les diagrammes d’états en UML. Vous devez vous référer au livre du cours pour la bonne notation (figure F25.9/A29.2)."
   },
   {
     "objectID": "Exercice_Diagramme_états.html#exercice-1",
     "href": "Exercice_Diagramme_états.html#exercice-1",
-    "title": "25  Diagramme d’états",
-    "section": "25.1 Exercice 1",
-    "text": "25.1 Exercice 1\nFaire un diagramme d’états en UML modélisant les états d’un téléphone intelligent. Considérer une dynamique simplifiée, avec seulement trois états correspondant aux images suivantes :\n\nPour simplifier encore le modèle, le bouton en haut à droite sert pour éteindre et pour allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint."
+    "title": "24  Diagramme d’états",
+    "section": "24.1 Exercice 1",
+    "text": "24.1 Exercice 1\nFaire un diagramme d’états en UML modélisant les états d’un téléphone intelligent. Considérer une dynamique simplifiée, avec seulement trois états correspondant aux images suivantes :\n\nPour simplifier encore le modèle, le bouton en haut à droite sert pour éteindre et pour allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint."
   },
   {
     "objectID": "Exercice_Diagramme_états.html#exercice-2",
     "href": "Exercice_Diagramme_états.html#exercice-2",
-    "title": "25  Diagramme d’états",
-    "section": "25.2 Exercice 2",
-    "text": "25.2 Exercice 2\nFaire un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format bref) :\nS’authentifier. Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.\nGérer guichet. L’Administrateur démarre le système et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre."
+    "title": "24  Diagramme d’états",
+    "section": "24.2 Exercice 2",
+    "text": "24.2 Exercice 2\nFaire un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format bref) :\nS’authentifier. Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.\nGérer guichet. L’Administrateur démarre le système et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre."
   },
   {
     "objectID": "Exercice_Diagramme_activité.html",
     "href": "Exercice_Diagramme_activité.html",
-    "title": "26  Diagramme d’activité",
+    "title": "25  Diagramme d’activité",
     "section": "",
     "text": "Note\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo avec une application comme Microsoft Lens (Android, iOS).\nVous pouvez également utiliser PlantUML. Voici des ressources à ce propos : \n\ntutoriel VSCode sur YouTube ;\nextension PlantUML pour VSCode ;\nPlantUML Gizmo, module supplémentaire Google Docs ;\nPlantText.com.\n\nMéfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la figure 13.4).\n\n\n(Votre diagramme devrait apparaître plus bas)"
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html",
-    "title": "27  Identifier GRASP dans GoF",
+    "title": "26  Identifier GRASP dans GoF",
     "section": "",
-    "text": "Dans cet exercice, vous allez mieux comprendre la relation entre les principes GRASP et les patrons GoF.\nNous rappelons le modèle pour décortiquer le patron Adaptateur, illustré à la figure 27.1.\nUne bonne ressource pour les patterns GoF est la suivante :\nhttps://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html"
+    "text": "Dans cet exercice, vous allez mieux comprendre la relation entre les principes GRASP et les patrons GoF.\nNous rappelons le modèle pour décortiquer le patron Adaptateur, illustré à la figure 26.1.\nUne bonne ressource pour les patterns GoF est la suivante :\nhttps://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html"
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.1 Itérateur",
-    "text": "27.1 Itérateur\nIdentifiez les 4 principes GRASP dans le patron Itérateur, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.1 Itérateur",
+    "text": "26.1 Itérateur\nIdentifiez les 4 principes GRASP dans le patron Itérateur, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.2 Observateur",
-    "text": "27.2 Observateur\nIdentifiez les 4 principes GRASP dans le patron Observateur, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.2 Observateur",
+    "text": "26.2 Observateur\nIdentifiez les 4 principes GRASP dans le patron Observateur, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.3 Stratégie",
-    "text": "27.3 Stratégie\nIdentifiez les 4 principes GRASP dans le patron Stratégie, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.3 Stratégie",
+    "text": "26.3 Stratégie\nIdentifiez les 4 principes GRASP dans le patron Stratégie, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.4 Composite",
-    "text": "27.4 Composite\nIdentifiez les 4 principes GRASP dans le patron Composite, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.4 Composite",
+    "text": "26.4 Composite\nIdentifiez les 4 principes GRASP dans le patron Composite, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.5 Décorateur",
-    "text": "27.5 Décorateur\nIdentifiez les 4 principes GRASP dans le patron Décorateur, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.5 Décorateur",
+    "text": "26.5 Décorateur\nIdentifiez les 4 principes GRASP dans le patron Décorateur, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.6 Méthode Template",
-    "text": "27.6 Méthode Template\nIdentifiez les 4 principes GRASP dans le patron Méthode Template, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.6 Méthode Template",
+    "text": "26.6 Méthode Template\nIdentifiez les 4 principes GRASP dans le patron Méthode Template, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.7 Commande",
-    "text": "27.7 Commande\nIdentifiez les 4 principes GRASP dans le patron Commande, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.7 Commande",
+    "text": "26.7 Commande\nIdentifiez les 4 principes GRASP dans le patron Commande, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.8 Méthode Fabrique",
-    "text": "27.8 Méthode Fabrique\nIdentifiez les 4 principes GRASP dans le patron Méthode fabrique, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.8 Méthode Fabrique",
+    "text": "26.8 Méthode Fabrique\nIdentifiez les 4 principes GRASP dans le patron Méthode fabrique, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.9 Proxy",
-    "text": "27.9 Proxy\nIdentifiez les 4 principes GRASP dans le patron Proxy, selon les directives à la Section 14.3."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.9 Proxy",
+    "text": "26.9 Proxy\nIdentifiez les 4 principes GRASP dans le patron Proxy, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
-    "title": "27  Identifier GRASP dans GoF",
-    "section": "27.10 Façade",
-    "text": "27.10 Façade\nIdentifiez les 4 principes GRASP dans le patron Façade, selon les directives à la Section 14.3.\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+    "title": "26  Identifier GRASP dans GoF",
+    "section": "26.10 Façade",
+    "text": "26.10 Façade\nIdentifiez les 4 principes GRASP dans le patron Façade, selon les directives à la Section 14.3.\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_Critique_d-une_conception.html",
     "href": "Exercice_Critique_d-une_conception.html",
-    "title": "28  Critique d’une conception",
+    "title": "27  Critique d’une conception",
     "section": "",
     "text": "Dans cet exercice, l’objectif est de vous sensibiliser à la facilité de comprendre une conception à partir d’un problème. Un objectif secondaire est de considérer les choix de conception sur un plan de la cohésion et du couplage. Ici, il s’agit du jeu de Monopoly, qui est un exemple proposé par Larman (2005) pour lequel il a également proposé un modèle du domaine et une conception, selon la méthodologie.\nPour cet exercice, nous examinerons une conception orientée objet réelle du jeu de Monopoly disponible sur GitHub, soit Emojiopoly. Voici le travail à faire."
   },
   {
     "objectID": "Exercice_Critique_d-une_conception.html#sec-DDC_Emojiopoly",
     "href": "Exercice_Critique_d-une_conception.html#sec-DDC_Emojiopoly",
-    "title": "28  Critique d’une conception",
+    "title": "27  Critique d’une conception",
     "section": "Diagramme de classes d’Emojiopoly",
-    "text": "Diagramme de classes d’Emojiopoly\nPour visualiser la conception, nous avons généré un diagramme des classes en UML avec l’outil tplant :\n\n\nCardtext: stringaction: \"advance\" | \"back\" | \"choice\" | \"payeach\" | \"collecteach\" |\"doubletransport\" | \"earn\" | \"pay\" | \"stealmoney\" | \"stolenmoney\" |\"streetrepairs\" | \"gotojail\"value?: string | number | number[]MonopolyGamejackpot: numbercurrentTurnIndex: numberconsecutiveDoubles: numberplayers: Player[]currentPlayer: Playerdice: number[]isTurnFinished: booleanunpaidDebts: Debt[]chanceCards: Card[]chestCards: Card[]chanceCardIndex: numberchestCardIndex: numberboard: Square[]playerNames: string[]houseRules: HouseRulesmessageEventHandler: (message: string) => voidaddToJackpot(amount: number): voidrollDice(die1?: number, die2?: number): voidmoveToSquare(newSquare: Square, awardSalary?: boolean): voidsendToJail(): voidmoveBack(numberOfSpaces: number): voidpostBail(): voidtakeChance(): voidtakeChest(): voidhandleCard(card: Card): voidmovePlayer(): voidpayDebts(): voidfinishTurn(): voidHouseRulesPlayerownedProperties: Property[]currentSquare: SquareturnsInJail: numbername: stringmoney: numberPropertybuildingsCount: numberisMortgaged: booleanowner: Playername: stringcolor: \"brown\" | \"lightblue\" | \"pink\" | \"orange\" | \"red\" | \"yellow\" |\"green\" | \"blue\" | \"white\"price: numberrent: number[] | \"transport\" | \"utility\"buildPrice: numberSquareoccupants: Player[]squareContents: \"gotojail\" | Property | \"go\" | \"jail\" | \"parking\" |\"chance\" | \"chest\" | \"incometax\" | \"supertax\"addOccupant(occupant: Player): voidremoveOccupant(occupant: Player): voidDebtamount: numbergame: MonopolyGamedebtor: Playercreditor: PlayerinitialAmount: numberpayDebt(): voidtoString(): string**1**1*11*11\nFigure 28.1: Diagramme de classes logicielles (TypeScript) pour le projet Emojiopoly"
+    "text": "Diagramme de classes d’Emojiopoly\nPour visualiser la conception, nous avons généré un diagramme des classes en UML avec l’outil tplant :\n\n\nCardtext: stringaction: \"advance\" | \"back\" | \"choice\" | \"payeach\" | \"collecteach\" |\"doubletransport\" | \"earn\" | \"pay\" | \"stealmoney\" | \"stolenmoney\" |\"streetrepairs\" | \"gotojail\"value?: string | number | number[]MonopolyGamejackpot: numbercurrentTurnIndex: numberconsecutiveDoubles: numberplayers: Player[]currentPlayer: Playerdice: number[]isTurnFinished: booleanunpaidDebts: Debt[]chanceCards: Card[]chestCards: Card[]chanceCardIndex: numberchestCardIndex: numberboard: Square[]playerNames: string[]houseRules: HouseRulesmessageEventHandler: (message: string) => voidaddToJackpot(amount: number): voidrollDice(die1?: number, die2?: number): voidmoveToSquare(newSquare: Square, awardSalary?: boolean): voidsendToJail(): voidmoveBack(numberOfSpaces: number): voidpostBail(): voidtakeChance(): voidtakeChest(): voidhandleCard(card: Card): voidmovePlayer(): voidpayDebts(): voidfinishTurn(): voidHouseRulesPlayerownedProperties: Property[]currentSquare: SquareturnsInJail: numbername: stringmoney: numberPropertybuildingsCount: numberisMortgaged: booleanowner: Playername: stringcolor: \"brown\" | \"lightblue\" | \"pink\" | \"orange\" | \"red\" | \"yellow\" |\"green\" | \"blue\" | \"white\"price: numberrent: number[] | \"transport\" | \"utility\"buildPrice: numberSquareoccupants: Player[]squareContents: \"gotojail\" | Property | \"go\" | \"jail\" | \"parking\" |\"chance\" | \"chest\" | \"incometax\" | \"supertax\"addOccupant(occupant: Player): voidremoveOccupant(occupant: Player): voidDebtamount: numbergame: MonopolyGamedebtor: Playercreditor: PlayerinitialAmount: numberpayDebt(): voidtoString(): string**1**1*11*11\nFigure 27.1: Diagramme de classes logicielles (TypeScript) pour le projet Emojiopoly"
   },
   {
     "objectID": "Exercice_Critique_d-une_conception.html#sec-MDD_Monopoly",
     "href": "Exercice_Critique_d-une_conception.html#sec-MDD_Monopoly",
-    "title": "28  Critique d’une conception",
+    "title": "27  Critique d’une conception",
     "section": "Modèle du domaine de Monopoly",
     "text": "Modèle du domaine de Monopoly\nPuisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle du domaine de Monopoly en français et en anglais pour vous aider à comprendre les termes.\n\n\nJeuDeMonopolycompteurRondsDévaleurPlateauPionnomJoueurargentnomCasenomPropriétéprixCaseOrdinaireCaseDépartCaseImpôtsCaseTerrainCaseGareCaseServicePublicPossède0..1*Possède11Est-sur0..81140Joue2..81Joué-avec12Joué-sur11\nMDD (version française) de Monopoly proposé par Larman (2005)\n\n\n\n\nMonopolyGameroundCountDiefaceValueBoardTokennamePlayercashnameSquarenamePropertypriceRegularSquareGoSquareIncomeTaxSquareLotSquareRailroadSquareUtilitySquareOwns0..1*Owns11Is-on0..81140Plays2..81Played-with12Played-on11\nMDD (version anglaise) de Monopoly proposé par Larman (2005)\n\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_Coder_des_méthodes_des_DS.html",
     "href": "Exercice_Coder_des_méthodes_des_DS.html",
-    "title": "29  Coder des méthodes à partir des diagrammes de séquence",
+    "title": "28  Coder des méthodes à partir des diagrammes de séquence",
     "section": "",
-    "text": "Astuce\n\n\n\nVous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n’est pas forcément permis lors d’un examen.\n\n\nVoici un modèle à suivre. Pour le diagramme suivant :\n\n\n:A:Bexecute(3)result = setItem(\"Fred\")\nFigure 29.1: Exemple de diagramme de séquence.\n\n\nOn code les classes suivantes en TypeScript :\nclass A {\n    b: B;  // A envoie un message à B, visibilité d'attribut\n    execute(arg0:number):any {\n        const result = this.b.setItem(\"Fred\");\n    }\n}\n\nclass B {\n    setItem(arg0:string):any {\n        //...\n    }\n}\n\nÉcrire le code pour la figure suivante.\n:Bernard:Aliceinitallô(12)create:Autre\"oui\"15\n\n\nÉcrire le code pour la figure suivante décrivant la création de la collection de Vente (tirée de Larman 2005, figure. 17.6).\n:Registreselon Créateur etContrôleurcréerNouvelleVenteRegistre crée uneVente selon Créateurcreate:Venteselon Créateur, Vente crée unecollection vide (par exemple uneList) destinée a mémoriser lesinstances de LigneArticlesl'activation de Vente est implicitement dansle constructeur de l'instance de VentecreatelignesArticles :List<LigneArticles>\n\n\nÉcrire le code pour la figure suivante décrivant l’utilisation d’un Cornet dans le jeu de Monopoly (tirée de Larman 2005, fig. F22.9)\nj : Joueur: Cornet: Plateaupos : CaseSelon Fabrication pureprendreTourlancervalTot = getTotalpos = getCase( pos, valTot )atterrirSur( j )\n\n\nÉcrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode atterrirSur dans le jeu de Monopoly (tirées de Larman 2005, fig. F22.6 et F22.7)\n: CaseImpôtsj : JoueuratterrirSur(j)selon Polymorphismec = getCashselon ExpertdiminuerCash(min(200, 10% de c))selon Expert\n: CaseAllezEnPrisonj : JoueuratterrirSur(j)selon PolymorphismesetPosition(prison)selon Expert\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+    "text": "Astuce\n\n\n\nVous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n’est pas forcément permis lors d’un examen.\n\n\nVoici un modèle à suivre. Pour le diagramme suivant :\n\n\n:A:Bexecute(3)result = setItem(\"Fred\")\nFigure 28.1: Exemple de diagramme de séquence.\n\n\nOn code les classes suivantes en TypeScript :\nclass A {\n    b: B;  // A envoie un message à B, visibilité d'attribut\n    execute(arg0:number):any {\n        const result = this.b.setItem(\"Fred\");\n    }\n}\n\nclass B {\n    setItem(arg0:string):any {\n        //...\n    }\n}\n\nÉcrire le code pour la figure suivante.\n:Bernard:Aliceinitallô(12)create:Autre\"oui\"15\n\n\nÉcrire le code pour la figure suivante décrivant la création de la collection de Vente (tirée de Larman 2005, figure. 17.6).\n:Registreselon Créateur etContrôleurcréerNouvelleVenteRegistre crée uneVente selon Créateurcreate:Venteselon Créateur, Vente crée unecollection vide (par exemple uneList) destinée a mémoriser lesinstances de LigneArticlesl'activation de Vente est implicitement dansle constructeur de l'instance de VentecreatelignesArticles :List<LigneArticles>\n\n\nÉcrire le code pour la figure suivante décrivant l’utilisation d’un Cornet dans le jeu de Monopoly (tirée de Larman 2005, fig. F22.9)\nj : Joueur: Cornet: Plateaupos : CaseSelon Fabrication pureprendreTourlancervalTot = getTotalpos = getCase( pos, valTot )atterrirSur( j )\n\n\nÉcrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode atterrirSur dans le jeu de Monopoly (tirées de Larman 2005, fig. F22.6 et F22.7)\n: CaseImpôtsj : JoueuratterrirSur(j)selon Polymorphismec = getCashselon ExpertdiminuerCash(min(200, 10% de c))selon Expert\n: CaseAllezEnPrisonj : JoueuratterrirSur(j)selon PolymorphismesetPosition(prison)selon Expert\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_Adaptateur_pour_Maps_CF.html",
     "href": "Exercice_Adaptateur_pour_Maps_CF.html",
-    "title": "30  Adaptateur pour Maps",
+    "title": "29  Adaptateur pour Maps",
     "section": "",
     "text": "Google Maps\nBing Maps\nApple Maps\n\nLe système veut obtenir une liste d’étapes (des directions) pour se rendre à une destination à partir d’un point de départ. L’utilisateur du système pourra décider lequel des services lui convient dans les préférences.\nLe but de l’exercice est de déterminer l’interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d’itinéraires. Cela peut être un diagramme de classe réalisé avec PlantUML."
   }

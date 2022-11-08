@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR" xml:lang="fr-FR"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.1.251">
@@ -323,37 +323,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_DSS_Diagrammes-de-séquence-système.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Diagramme de séquence système (DSS)</span></a>
+  <a href="./Exercice_Diagramme_états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Diagramme d’états</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Diagramme_états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Diagramme d’états</span></a>
+  <a href="./Exercice_Diagramme_activité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Diagramme d’activité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Diagramme_activité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Diagramme d’activité</span></a>
+  <a href="./Exercice_Identifier_GRASP_dans_GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Identifier GRASP dans GoF</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Identifier_GRASP_dans_GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Identifier GRASP dans GoF</span></a>
+  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
+  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
+  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
   </div>
 </li>
       </ul>
@@ -376,6 +371,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" id="toc-est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="nav-link" data-scroll-target="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"><span class="toc-section-number">5.3.3</span>  Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type <span style="white-space:nowrap">primitif) ?</span></a></li>
   <li><a href="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" id="toc-ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" class="nav-link" data-scroll-target="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp"><span class="toc-section-number">5.3.4</span>  Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page web au contrôleur <span style="white-space:nowrap">GRASP ?</span></a></li>
   </ul></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">5.4</span>  Exercices</a></li>
   </ul>
 </nav>
     </div>
@@ -641,9 +637,36 @@ Country: null
 </div>
 <p>Dans un sens ça serait plus simple (pour le code de la couche présentation). Cependant, nous voulons séparer les couches pour favoriser le remplacement de la couche présentation, par exemple à travers une application iOS ou Android.</p>
 <p>Si vous mettez la logique de la couche présentation (décortiquer un formulaire web) dans la couche domaine (le contrôleur GRASP), ça ne respecte pas les responsabilités des couches. Imaginez un tel contrôleur GRASP si vous aviez trois types d’application frontale (navigateur web, application iOS et application Android). Le contrôleur GRASP recevra des représentations de «&nbsp;formulaire&nbsp;» de chaque couche présentation différente. En passant, l’objet <code>body</code> n’a rien à voir avec une interface <span style="white-space:nowrap">Android !</span> Ce pauvre contrôleur serait obligé de connaître alors toutes les trois formes (web, iOS, Android) et ainsi sa cohésion sera beaucoup plus faible. Pour respecter les responsabilités, on laisse la couche présentation faire le décorticage et construire une opération système selon l’API définie dans le DSS. Cela simplifie aussi le contrôleur GRASP.</p>
-
-
 </section>
+</section>
+<section id="exercices" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="exercices"><span class="header-section-number">5.4</span> Exercices</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vous pouvez dessiner les diagrammes à la main et en prendre une photo avec une application comme Microsoft Lens (<a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officelens">Android</a>, <a href="https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059">iOS</a>).</p>
+<p>Vous pouvez également utiliser PlantUML. Voici des ressources à ce <span style="white-space:nowrap">propos :</span> <img src="images/Plantuml_Logo.svg" class="img-fluid" width="50" alt="Logo PlantUML"></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel VSCode sur YouTube</a><span style="white-space:nowrap"> ;</span></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">extension PlantUML pour VSCode</a><span style="white-space:nowrap"> ;</span></li>
+<li><a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571">PlantUML Gizmo</a>, module supplémentaire Google <span style="white-space:nowrap">Docs ;</span></li>
+<li><a href="https://www.planttext.com/">PlantText.com</a>.</li>
+</ul>
+<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la <a href="Outils-UML.html#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>).</p>
+</div>
+</div>
+<div id="exr-DSS" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 5.1 (Dessiner un DSS à partir d’un cas d’utilisation) </strong></span>Esquissez le DSS pour le cas d’utilisation <a href="Exercice_Classes_conceptuelles_dans_le_MDD.html#sec-CU_Réserver_livre">Réserver un livre de la bibliothèque</a>. Toutes les opérations système doivent définir le type de chaque argument, le cas échéant.</p>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
