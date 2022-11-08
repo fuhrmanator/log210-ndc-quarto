@@ -11,7 +11,7 @@ crossref:
   tbl-prefix: tableau    # (default is "Table")
 
 # setting fr-FR causes the date to be in english?
-lang: fr-FR
+lang: fr
 # language: _language.yml   # customized, "tableau" plutôt que "table", etc.
 
 book:
@@ -56,7 +56,7 @@ book:
       - Exercice_Classes_conceptuelles_dans_le_MDD.qmd
       - Exercice_Diagramme_de_classes_conceptuelles_MDD.qmd
       - Exercice_Contrats_d_opération.qmd
-      - Exercice_DSS_Diagrammes-de-séquence-système.qmd
+      # - Exercice_DSS_Diagrammes-de-séquence-système.qmd
       - Exercice_Diagramme_états.qmd
       - Exercice_Diagramme_activité.qmd
       - Exercice_Identifier_GRASP_dans_GoF.qmd

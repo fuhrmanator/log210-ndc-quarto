@@ -167,3 +167,16 @@ En passant, l'objet `body` n'a rien à voir avec une interface Android!
 Ce pauvre contrôleur serait obligé de connaître alors toutes les trois formes (web, iOS, Android) et ainsi sa cohésion sera beaucoup plus faible.
 Pour respecter les responsabilités, on laisse la couche présentation faire le décorticage et construire une opération système selon l'API définie dans le DSS.
 Cela simplifie aussi le contrôleur GRASP.
+
+## Exercices
+
+{{< include _callout_conseils_diagrammes.qmd >}}
+
+::: {#exr-DSS}
+
+### Dessiner un DSS à partir d'un cas d'utilisation
+
+Esquissez le DSS pour le cas d'utilisation [Réserver un livre de la bibliothèque](#sec-CU_Réserver_livre). 
+Toutes les opérations système doivent définir le type de chaque argument, le cas échéant.
+
+:::

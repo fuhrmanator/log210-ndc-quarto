@@ -1,7 +1,0 @@
-# Diagramme de séquence système (DSS)
-
-Esquissez le DSS pour le cas d'utilisation [Réserver un livre de la bibliothèque](#sec-CU_Réserver_livre). 
-
-Les opérations système doivent définir le type de chaque argument, s'il y en a.
-
-{{< include _callout_conseils_diagrammes.qmd >}}
