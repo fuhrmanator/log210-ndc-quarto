@@ -4,19 +4,19 @@ Le développement de logiciels se fait souvent en équipe.
 Cependant, il y a des défis pour travailler en équipe.
 Souvent, avant l'université on apprend comment s'organiser en équipe, faire des rencontres, répartir le travail, planifier, etc.
 Pourtant, il y a d'autres défis dans ce travail, des défis sur le plan humain.
-C'est le sujet du livre "Team Geek" [-@fitzpatrick_team_2012] écrit par Brian W. Fitzpatrick (anciennement de Google) et Ben Collins-Sussman (Subversion, Google).
+C'est le sujet du livre "Team Geek" [-@fitzpatrick_team_2012] écrit par Brian W. Fitzpatrick (ancien employé de Google) et Ben Collins-Sussman (développeur fondateur du système de contrôle de version Subversion, employé de Google).
 
 Aujourd'hui, la demande pour le talent en technologies de l'information est importante.
 Les technologies évoluent constamment et le temps que vous investissez pour maîtriser une technologie est important.
-Pourtant, il y a des risques avec certains investissements de temps à long terme. 
+Pourtant, il y a des risques avec certains investissements de temps à long terme.
 Par exemple, qui développe du code encore pour [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>?
-Cette technologie est maintenant désuète et ça ne sert à rien de mentionner cette compétence sur un CV.
+Cette technologie est maintenant désuète et ça ne vaut pas beaucoup de mentionner cette compétence sur un CV.
 
 La bonne nouvelle est qu'une "technologie" ne changera jamais: le comportement humain.
 Donc, il est toujours rentable d'investir du temps pour mieux maîtriser cet aspect du développement.
-Les entreprises en technologies de l'information sont toujours à la recherche de développeurs qui ont également des compétences générales ("soft skills").
+Les entreprises en technologies de l'information sont toujours à la recherche de développeurs qui ont également des compétences générales (*soft skills*).
 
-Les auteurs de "Team Geek" abordent les problèmes dus aux tendances comportementales chez les développeurs.
+@fitzpatrick_team_2012 abordent des problèmes dus aux tendances comportementales chez les développeurs.
 Par exemple, une personne n'a pas toujours envie de montrer son code source aux autres membres de l'équipe pour plusieurs raisons:
 
 - Son code n'est pas fini.
@@ -30,7 +30,7 @@ Par contre, ce genre de comportement augmente certains risques dans le développ
 - de "réinventer la roue";
 - de terminer le travail plus tard que son compétiteur, qui, lui, a collaboré avec son équipe.
 
-Les auteurs le disent et c'est un fait: si nous sommes tous plus ou moins compétents sur le plan technique, ce qui fera la différence importante dans une carrière est notre habileté à collaborer avec les autres.
+@fitzpatrick_team_2012 le disent et c'est un fait: si nous sommes tous plus ou moins compétents sur le plan technique, ce qui fera la différence importante dans une carrière est notre habileté à collaborer avec les autres.
 
 ![Pratiquement tout conflit social est dû à un manque d'humilité, de respect ou de confiance.](images/HRC_venn.svg){width=40% #fig-HRC_venn}
 
@@ -47,14 +47,14 @@ Voici la définition d'*humilité* selon Antidote:
 *Disposition à s'abaisser volontairement, par sentiment de sa propre faiblesse.*
 :::
 
-Une personne humble pense ainsi:
+Une personne humble pense ainsi [@fitzpatrick_team_2012]:
 
 - Je ne suis pas le centre de l'univers.
 - Je ne suis ni omniscient ni infaillible.
 - Je suis ouvert à m'améliorer.
 
 ::: {.callout-important}
-L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte d'être mal traité.e par les autres". Voir la section [Proposer des solutions si besoin](#sec-solution_problemes_equipes).
+L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte d'être mal traité.e par les autres". Voir la section [Proposer des solutions au besoin](#sec-solution_problemes_equipes).
 :::
 
 ![Éviter d'être le ["Centre de l'univers"](https://www.flickr.com/photos/diamondduste/466060240/) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)) par [Diamondduste](https://www.flickr.com/people/diamondduste/).](images/flickr_diamondduste_center.jpg){width="200px"}
@@ -83,7 +83,7 @@ Il sait que la qualité de son code n'équivaut pas à son estime de soi. (Cela 
 
 ### Respect
 
-Une personne démontrant du respect pense ainsi:
+Une personne démontrant du respect pense ainsi [@fitzpatrick_team_2012]:
 
 - Je me soucie des gens avec qui je travaille.
 - Je les traite comme des êtres humains.
@@ -91,7 +91,7 @@ Une personne démontrant du respect pense ainsi:
 
 ### Confiance
 
-Une personne démontrant la confiance pense ainsi:
+Une personne démontrant la confiance pense ainsi [@fitzpatrick_team_2012]:
 
 - Je crois que les autres membres de l'équipe sont compétents et qu'ils feront la bonne chose.
 - Je suis à l'aise lorsqu'ils prennent le volant, le cas échéant.
@@ -103,7 +103,7 @@ Le dernier point peut être extrêmement difficile si vous avez déjà été dé
 Pour qu'une équipe soit robuste, il faut une redondance des compétences.
 Sinon, la perte d'un membre de l'équipe (pour une raison quelconque) peut engendrer de graves conséquences, voire arrêter carrément le développement.
 Ce principe a été nommé en anglais *Bus factor*.
-C'est le nombre minimum de membres à perdre (par exemple, heurtés par un bus) pour arrêter le projet par manque de personnel bien informé ou compétent.
+C'est le nombre minimum de membres à perdre (par exemple, ils ont été heurtés par un bus) pour arrêter le projet par manque de personnel bien informé ou compétent.
 Par exemple, dans un projet de stage, si c'est vous qui écrivez tout le code, alors c'est un *bus factor* de 1.
 Si vous n'êtes plus là, le projet s'arrête!
 
@@ -115,7 +115,7 @@ Cherchez à répartir les responsabilités dans l'équipe afin d'avoir un *bus f
 Partagez des compétences pour maintenir une équipe robuste.
 
 Vous pouvez également garder votre solution *simple* et garder la documentation de votre conception à jour.
-L'automatisation des tests dans un processus de construction de logiciel (*build process*) à la devops (@sec-tdd) aide aussi, car l'équipe ne dépend pas d'une personne pour rouler les tests et valider le code.
+L'automatisation des tests dans un processus de construction de logiciel (*build process*) à la devops (@sec-tdd) aide aussi, car l'équipe ne dépend pas d'une personne pour construire la solution, rouler les tests, etc.
 Ces pratiques vont également faciliter l'intégration de nouvelles personnes dans l'équipe.
 
 ::: {.callout-warning}
@@ -166,12 +166,12 @@ Considérez les volets HRC lorsque vous vous trouvez dans une des situations sui
   - il n'a pas la patience pour accommoder les membres de l'équipe moins expérimentés.
   - il croit que les autres auraient dû apprendre mieux à programmer dans les cours préalables.
 - un membre de l'équipe dit qu'il a "fait ses 3 heures de contribution" chaque dimanche chez lui et que ça devrait suffire pour sa partie (il a un emploi et n'a pas beaucoup de temps disponible pour l'équipe du projet universitaire).
-- un ou deux membres d'une équipe abandonnent le cours après les évaluation de mi-trimestre, par crainte d'échec.
-- un membre de l'équipe suit cinq (!) cours en même temps et n'a pas le temps adéquat pour travailler correctement dans les laboratoires de cette matière.
-- plusieurs membres de l'équipe sont "expérimentés" mais ils ont de la difficulté à s'entendre sur la direction du projet.
+- un ou deux membres d'une équipe abandonnent le cours après les évaluations de mi-trimestre, par crainte d'échec.
+- un membre de l'équipe suit cinq (!) cours en même temps et n'a pas le temps suffisant pour travailler correctement dans les laboratoires de cette matière.
+- plusieurs membres de l'équipe sont "expérimentés", mais ils ont de la difficulté à s'entendre sur l'orientation du projet.
 - l'équipe n'est pas cohésive; chacun fait avancer sa partie, mais le code ne fonctionne pas ensemble.
 
-Vous devez en parler avec votre équipe. 
-Si la situation ne s'améliore pas, vous devez en parler avec les chargés de laboratoire et l'enseignant.
+Vous devez en parler avec votre équipe.
+Si la situation ne s'améliore pas, vous devez en parler avec une personne ressource, comme votre superviseur (en stage), les auxiliaires de laboratoire ou l'enseignant ou l'enseignante.
 
 Pour mieux évaluer le travail de chacun dans l'équipe au laboratoire, il y a des conseils dans la section [Évaluer les contributions des membres de l'équipe](#sec-ContributionsEquipe).
