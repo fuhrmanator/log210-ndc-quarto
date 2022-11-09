@@ -288,3 +288,15 @@ Dans la section F30.8/A33.7\ \faBook<i class="fa-solid fa-book"></i>, Larman men
 :::
 
 ![Dans la vraie vie, les dés sont lancés par une main (["Hand of chance"](https://www.flickr.com/photos/aerust/9590772048/) [(CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/) par [Alexandra E Rust](https://www.flickr.com/people/aerust/)).](images/flickr_aerust_hand_of_chance.jpg){width=80% #fig-main_des}
+
+## Exercices
+
+::: {#exr-RDCU-Ouvrir-caisse}
+
+### RDCU pour le cas d'utilisation *Ouvrir la caisse*
+
+Faites les RDCU pour [le cas d'utilisation *Ouvrir la caisse*](#sec-CU_Ouvrir_caisse).
+Vous y trouverez également des artefacts tels que le DSS, les contrats d'opération et le modèle du domaine.
+Ils sont essentiels pour faire les RDCU selon la méthodologie.
+
+:::

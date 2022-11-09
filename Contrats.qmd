@@ -27,40 +27,34 @@ Un contrat d'opération permet de spécifier tous les changements dans le MDD qu
 
 ![Pendant l'opération système `créerNouvelleVente`, une instance de Vente doit être créée. Le contrat d'opération le spécifie dans une postcondition.](images/SurvolContrats.svg){#fig-ContratExempleCreerNouvelleVente}
 
-## Exemple: Contrats d'opération pour Attaquer un pays
+## Exemple: Contrats d'opération pour Attaquer un pays {#sec-contrat_exemple}
 
 Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du domaine correspondant aux postconditions.
 
-### Attaquer un pays
+### Attaquer un pays {.unnumbered .unlisted}
 
-#### Opération: `démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)`
+#### Opération: `démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)` {.unnumbered .unlisted}
 
-##### Postconditions
+#### Postconditions {.unnumbered .unlisted}
 
 - une nouvelle instance *a* de Attaque a été créée
 - *a* a été associée au Pays sur une base de correspondance avec paysAttaquant
 - *a* a été associée au Pays sur une base de correspondance avec paysDéfenseur
 
-#### Opération: `annoncerAttaque(nbRégimentsAttaquant:int)`
+#### Opération: `annoncerAttaque(nbRégimentsAttaquant:int)` {.unnumbered .unlisted}
 
-##### Postconditions
+#### Postconditions {.unnumbered .unlisted}
 
 - a.nbAttaquant est devenu nbRégimentsAttaquant
 
-#### Opération: `annoncerDéfense(nbRégimentsDéfendant:int)`
+#### Opération: `annoncerDéfense(nbRégimentsDéfendant:int)` {.unnumbered .unlisted}
 
-##### Postconditions
+#### Postconditions {.unnumbered .unlisted}
 
 - a.nbDéfendant est devenu nbRégimentsDéfendant
 - L'attribut valeur des d1 à d5 est devenue un nombre entier aléatoire entre 1 et 6
 - Occupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysAttaquant.
 - Occupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysDéfendant.
-
-#### Opération: `terminerAttaque()`
-
-##### Postconditions
-
-- TODO: Handle the change of Occupation?
 
 <!-- Draw.io svg contient du texte en SVG 1.1 qui pose problème. Alors j'exporte manuellement en PDF avec l'outil draw.io sur le web. -->
 ![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets)](images/MDD-Risk-contrats.drawio.svg){#fig-MDD-risk-objets}
@@ -69,10 +63,33 @@ Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du 
 
 Pour faire des contrats, voici une démarche générale:
 
-1.  Faire un contrat pour chaque opération système
-1.  Regarder toujours le MDD (vocabulaire du domaine)
-1.  Rappeler les formes de postconditions
-    a)  créer/supprimer instance
-    a)  former/briser association
-    a)  modifier attributs
-1.  Ne rien oublier. Marquer le MDD ou dessiner un diagramme d'objets, comme à la @fig-MDD-risk-objets si nécessaire.
+1. Faire un contrat pour chaque opération système.
+1. Porter une attention à sa signature (les arguments et leur type).
+1. Rappeler les formes de postconditions:
+   a) créer/supprimer instance;
+   a) former/briser association;
+   a) modifier attributs.
+1. Utiliser *le vocabulaire du modèle du domaine* dans les postconditions.
+Ça veut dire qu'il faut parler d'instances de classes conceptuelles, de leurs attributs et des associations entre ces classes.
+1. Ne pas créer une instance de classe qui existe déjà, par exemple un produit (connu) dans un magasin, un acteur (connu) qui se connecte au système, ou (dans l'exemple de Risk) un Pays (voir la partie basse de la @fig-MDD-risk-objets).
+1. Ne rien oublier. Marquer le MDD ou dessiner un diagramme d'objets, comme à la partie basse de la @fig-MDD-risk-objets si nécessaire.
+
+## Exercices
+
+::: {#exr-contrat_Terminer_attaque}
+### terminerAttaque
+
+Rédiger le contrat d'opération pour `terminerAttaque()`.
+Il faut considérer le cas où une attaque a réussi.
+C'est-à-dire le `paysDéfenseur` change de Joueur (celui du `paysAttaquant`).
+Suivez les exemples de contrat d'opération à la @sec-contrat_exemple.
+:::
+
+::: {#exr-contrats-Traiter-vente}
+
+### Contrats d'opération pour Traiter une vente
+
+Rédigez **un contrat d'opération pour chacune des opérations système** dans le DSS (et qui soit cohérent avec le MDD) dans la @sec-DSS_traiter_vente. 
+Suivez les exemples de contrat d'opération à la @sec-contrat_exemple.
+
+:::

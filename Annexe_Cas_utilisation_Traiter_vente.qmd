@@ -1,22 +1,8 @@
-# Contrats d'opération
+# Cas d'utilisation - Traiter une vente {#sec-CU_Traiter_vente}
 
-Rédigez **un contrat d'opération pour chacune des opérations système** du DSS ci-bas, selon le modèle du domaine ci-bas.
+Voici des artefacts en PlantUML proposés pour le cas d'utilisation *Traiter une vente* documenté par @craig_uml_2005.
 
-Les éléments importants d'un contrat sont:
-
-- La signature de l'opération système;
-- Les postconditions qui sont d'une des formes suivantes:
-    -   création (ou suppression) d'instances;
-    -   modification des valeurs des attributs;
-    -   formation (ou rupture) d'associations.
--   Les postconditions doivent utiliser *le vocabulaire du modèle du  domaine*.
-Ça veut dire qu'il faut parler d'instances de classes conceptuelles, de leurs attributs et des associations entre classes.
-
-## Contrats d'opération {.unnumbered .unlisted}
-
-Écrivez vos contrats ici (un pour chaque opération système):
-
-### DSS {.unnumbered .unlisted}
+## DSS {#sec-DSS_traiter_vente}
 
 ```{.plantuml caption="DSS pour le scénario Traiter Vente de @craig_uml_2005"}
 @startuml
@@ -38,7 +24,7 @@ c<<--s : rendu de monnaie, reçu
 @enduml
 ```
 
-### MDD partiel {.unnumbered .unlisted}
+## MDD partiel
 
 ```{.plantuml}
 @startuml

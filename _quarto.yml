@@ -55,7 +55,7 @@ book:
       chapters:
       # - Exercice_Classes_conceptuelles_dans_le_MDD.qmd
       # - Exercice_Diagramme_de_classes_conceptuelles_MDD.qmd
-      - Exercice_Contrats_d_opération.qmd
+      # - Exercice_Contrats_d_opération.qmd
       # - Exercice_DSS_Diagrammes-de-séquence-système.qmd
       - Exercice_Diagramme_états.qmd
       - Exercice_Diagramme_activité.qmd
@@ -65,6 +65,8 @@ book:
       - Exercice_Adaptateur_pour_Maps_CF.qmd
   appendices:
     - Annexe_Cas_utilisation_Réserver_livre.qmd
+    - Annexe_Cas_utilisation_Traiter_vente.qmd
+    - Annexe_Cas_utilisation_Ouvrir_caisse.qmd
   # repo-actions: [source, issue]
 
 bibliography: references.bib
