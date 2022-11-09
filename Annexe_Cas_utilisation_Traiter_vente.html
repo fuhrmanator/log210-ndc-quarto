@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Analyse et conception de logiciels - Appendix B — Cas d’utilisation - Traiter une vente</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" rel="next">
+<link href="./Annexe_Cas_utilisation_Réserver_livre.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+<style type="text/css">
+  @font-face {
+    font-family: 'xkcd Script';
+    src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
+  }
+</style>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Appendix B — Cas d’utilisation - Traiter une vente</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span id="sec-CU_Traiter_vente" class="quarto-section-identifier d-none d-lg-block">Appendix B — Cas d’utilisation - Traiter une vente</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Théorie</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Exercices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Diagramme_états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Diagramme d’états</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Diagramme_activité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Diagramme d’activité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Identifier_GRASP_dans_GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Identifier GRASP dans GoF</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Annexes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#sec-DSS_traiter_vente" id="toc-sec-DSS_traiter_vente" class="nav-link active" data-scroll-target="#sec-DSS_traiter_vente"><span class="toc-section-number">B.1</span>  DSS</a></li>
+  <li><a href="#mdd-partiel" id="toc-mdd-partiel" class="nav-link" data-scroll-target="#mdd-partiel"><span class="toc-section-number">B.2</span>  MDD partiel</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Voici des artefacts en PlantUML proposés pour le cas d’utilisation <em>Traiter une vente</em> documenté par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
+<section id="sec-DSS_traiter_vente" class="level2" data-number="B.1">
+<h2 data-number="B.1" class="anchored" data-anchor-id="sec-DSS_traiter_vente"><span class="header-section-number">B.1</span> DSS</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="380px" preserveaspectratio="none" style="width:387px;height:380px;background:#00000000;" version="1.1" viewbox="0 0 387 380" width="387px" zoomandpan="magnify"><defs></defs><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="286" x="52" y="10"></rect><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="165" x="57" y="27.9951">DSS pour le scénario</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" font-weight="bold" lengthadjust="spacing" textlength="106" x="227" y="27.9951">Traiter vente</text><rect height="75.3984" style="stroke:#000000;stroke-width:1.5;fill:none;" width="371" x="10" y="164.7266"></rect><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="52" x2="52" y1="118.5938" y2="373.6563"></line><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="331" x2="331" y1="118.5938" y2="373.6563"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="59" x="20" y="115.292">:Caissier</text><ellipse cx="52.5" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"></ellipse><path d="M52.5,58.7969 L52.5,85.7969 M39.5,66.7969 L65.5,66.7969 M52.5,85.7969 L39.5,100.7969 M52.5,85.7969 L65.5,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"></path><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="292" y="87.2969"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="299" y="107.292">:Système</text><polygon fill="#181818" points="319.5,145.7266,329.5,149.7266,319.5,153.7266" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="52.5" x2="325.5" y1="149.7266" y2="149.7266"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="98" x="143" y="144.6606">démarrerVente</text><path d="M10,164.7266 L87,164.7266 L87,171.8594 L77,181.8594 L10,181.8594 L10,164.7266 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"></path><rect fill="none" height="75.3984" style="stroke:#000000;stroke-width:1.5;" width="371" x="10" y="164.7266"></rect><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="32" x="25" y="177.7935">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthadjust="spacing" textlength="122" x="102" y="176.937">[reste des articles]</text><polygon fill="#181818" points="319.5,198.9922,329.5,202.9922,319.5,206.9922" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="52.5" x2="325.5" y1="202.9922" y2="202.9922"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="255" x="64.5" y="197.9263">saisirArticle(codeArticle:int, quantité:int)</text><line style="stroke:#181818;stroke-width:1.0;" x1="53.5" x2="63.5" y1="232.125" y2="228.125"></line><line style="stroke:#181818;stroke-width:1.0;" x1="53.5" x2="63.5" y1="232.125" y2="236.125"></line><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="52.5" x2="330.5" y1="232.125" y2="232.125"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="107" x="138.5" y="227.0591">description, total</text><polygon fill="#181818" points="319.5,264.2578,329.5,268.2578,319.5,272.2578" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="52.5" x2="325.5" y1="268.2578" y2="268.2578"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="93" x="145.5" y="263.1919">terminerSale()</text><line style="stroke:#181818;stroke-width:1.0;" x1="53.5" x2="63.5" y1="297.3906" y2="293.3906"></line><line style="stroke:#181818;stroke-width:1.0;" x1="53.5" x2="63.5" y1="297.3906" y2="301.3906"></line><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="52.5" x2="330.5" y1="297.3906" y2="297.3906"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="97" x="143.5" y="292.3247">total with taxes</text><polygon fill="#181818" points="319.5,322.5234,329.5,326.5234,319.5,330.5234" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="52.5" x2="325.5" y1="326.5234" y2="326.5234"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="212" x="86" y="321.4575">fairePaiement(montant:Monnaie)</text><line style="stroke:#181818;stroke-width:1.0;" x1="53.5" x2="63.5" y1="355.6563" y2="351.6563"></line><line style="stroke:#181818;stroke-width:1.0;" x1="53.5" x2="63.5" y1="355.6563" y2="359.6563"></line><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="52.5" x2="330.5" y1="355.6563" y2="355.6563"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="153" x="115.5" y="350.5903">rendu de monnaie, reçu</text><!--MD5=[77a9c91a72144e300db8d4ed43f0a12a]
+@startuml
+skinparam style strictuml
+skinparam SequenceMessageAlign center
+skinparam backgroundcolor transparent
+title DSS pour le scénario <i>Traiter vente</i>
+actor ":Caissier" as c
+participant ":Système" as s
+c->s : démarrerVente
+loop reste des articles
+ c->s : saisirArticle(codeArticle:int, quantité:int)
+ c<<- -s : description, total
+end loop
+c->s : terminerSale()
+c<<- -s : total with taxes
+c->s : fairePaiement(montant:Monnaie)
+c<<- -s : rendu de monnaie, reçu
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">DSS pour le scénario Traiter Vente de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="mdd-partiel" class="level2" data-number="B.2">
+<h2 data-number="B.2" class="anchored" data-anchor-id="mdd-partiel"><span class="header-section-number">B.2</span> MDD partiel</h2>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="471px" preserveaspectratio="none" style="width:577px;height:471px;background:#00000000;" version="1.1" viewbox="0 0 577 471" width="577px" zoomandpan="magnify"><defs></defs><g><!--MD5=[0f797c69f9e41cb064b07a68d09bd28a]
+class SLI--><g id="elem_SLI"><rect codeline="7" fill="#F1F1F1" height="50.5938" id="SLI" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="91" x="46" y="118"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="79" x="52" y="135.9951">LigneArticle</text><line style="stroke:#181818;stroke-width:0.5;" x1="47" x2="136" y1="144.2969" y2="144.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="79" x="52" y="161.292">quantité:int</text></g><!--MD5=[af358a925ab72893600c8103e45e46a7]
+class Vente--><g id="elem_Vente"><rect codeline="10" fill="#F1F1F1" height="66.8906" id="Vente" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="169" x="7" y="270"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="41" x="71" y="287.9951">Vente</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="175" y1="296.2969" y2="296.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="157" x="13" y="313.292">dateHeure: DateHeure</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="157" x="13" y="329.5889">estTerminée : boolean</text></g><!--MD5=[72030ae3ecfac43e095a217e694cb8cb]
+class Paiement--><g id="elem_Paiement"><rect codeline="14" fill="#F1F1F1" height="50.5938" id="Paiement" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="24.5" y="414"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="59" y="431.9951">Paiement</text><line style="stroke:#181818;stroke-width:0.5;" x1="25.5" x2="157.5" y1="440.2969" y2="440.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="122" x="30.5" y="457.292">montant:Monnaie</text></g><!--MD5=[ed3c962971a0335cfe15113458d16a5b]
+class Magasin--><g id="elem_Magasin"><rect codeline="17" fill="#F1F1F1" height="66.8906" id="Magasin" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="113" x="457" y="270"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="57" x="485" y="287.9951">Magasin</text><line style="stroke:#181818;stroke-width:0.5;" x1="458" x2="569" y1="296.2969" y2="296.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="76" x="463" y="313.292">nom:String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="101" x="463" y="329.5889">adresse:String</text></g><!--MD5=[09c37243107ab2a2f6d436592c92ad9c]
+class PD--><g id="elem_PD"><rect codeline="21" fill="#F1F1F1" height="99.4844" id="PD" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="142" x="258.5" y="94"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="79" x="290" y="111.9951">Description</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="49" x="305" y="128.292">Produit</text><line style="stroke:#181818;stroke-width:0.5;" x1="259.5" x2="399.5" y1="136.5938" y2="136.5938"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="130" x="264.5" y="153.5889">description : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="83" x="264.5" y="169.8857">prix : Money</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="107" x="264.5" y="186.1826">codeArticle : int</text></g><!--MD5=[218f71f443b9e0720bb96dd9df1d4749]
+class PC--><g id="elem_PC"><rect codeline="27" fill="#F1F1F1" height="26.2969" id="PC" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125" x="267" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="119" x="270" y="24.9951">CatalogueProduit</text></g><!--MD5=[241fc117608423b41437da83aafad110]
+class Registre--><g id="elem_Registre"><rect fill="#F1F1F1" height="26.2969" id="Registre" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="64" x="288.5" y="290.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="58" x="291.5" y="308.4951">Registre</text></g><!--MD5=[f215aaf98d2c525ac4d05217637ad0d7]
+link SLI to Vente--><g id="link_SLI_Vente"><path codeline="30" d="M91.5,169.19 C91.5,192.46 91.5,227.92 91.5,256.41 " fill="none" id="SLI-to-Vente" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="91.5,269.76,95.5,263.76,91.5,257.76,87.5,263.76,91.5,269.76" style="stroke:#181818;stroke-width:1.0;"></polygon><polygon fill="#000000" points="96.5,226.5664,93.5611,235.6115,99.4389,235.6115,96.5,226.5664" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="54" x="105.5" y="236.0669">Contient</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="23" x="65.9844" y="188.5762">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="8" x="82.7375" y="258.9886">1</text></g><!--MD5=[8adf08e78a1c6eb095e7d0a0bfcb5481]
+link Registre to Magasin--><g id="link_Registre_Magasin"><path codeline="31" d="M352.8,303.5 C381.13,303.5 422.97,303.5 456.86,303.5 " fill="none" id="Registre-Magasin" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#000000" points="369.75,292.0664,378.7951,295.0053,378.7951,289.1275,369.75,292.0664" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="55" x="383.75" y="296.5669">Héberge</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="23" x="360.6019" y="316.8882">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="8" x="441.0905" y="299.6215">1</text></g><!--MD5=[3aaf4cfa95dfb6ee674dad4f6614f4cf]
+link Vente to Registre--><g id="link_Vente_Registre"><path codeline="32" d="M176.12,303.5 C215.24,303.5 259.35,303.5 288.41,303.5 " fill="none" id="Vente-Registre" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#000000" points="203.25,292.0664,194.2049,289.1275,194.2049,295.0053,203.25,292.0664" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="63" x="207.25" y="296.5669">Saisie-sur</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="8" x="184.0127" y="299.9097">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="8" x="272.5153" y="298.9083">1</text></g><!--MD5=[4508c4f021184254a37d65f681b87577]
+link Vente to Paiement--><g id="link_Vente_Paiement"><path codeline="33" d="M91.5,337.28 C91.5,360.83 91.5,392.1 91.5,413.62 " fill="none" id="Vente-Paiement" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#000000" points="96.5,380.5664,99.4389,371.5213,93.5611,371.5213,96.5,380.5664" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="65" x="105.5" y="380.0669">Payée-par</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="8" x="82.7625" y="356.9802">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="8" x="82.575" y="403.0301">1</text></g><!--MD5=[d5bad5ad8ea6efac8284bfb09ac0127b]
+reverse link PC to PD--><g id="link_PC_PD"><path codeline="35" d="M329.5,46.31 C329.5,60.04 329.5,77.49 329.5,93.75 " fill="none" id="PC-backto-PD" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="329.5,33.09,325.5,39.09,329.5,45.09,333.5,39.09,329.5,33.09" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="8" x="319.85" y="53.6164">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="7" x="322.0297" y="83.1003">*</text></g><!--MD5=[86fa3e60ab21da6c91cba4fe1cae9f97]
+link SLI to PD--><g id="link_SLI_PD"><path codeline="36" d="M137.11,143.5 C171.39,143.5 219.01,143.5 258.29,143.5 " fill="none" id="SLI-PD" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#000000" points="164.25,132.0664,155.2049,129.1275,155.2049,135.0053,164.25,132.0664" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="72" x="168.25" y="136.5669">Décrite-par</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="7" x="144.9369" y="139.4145">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="8" x="242.534" y="139.7753">1</text></g><!--MD5=[979badd426c5b3e756e9d0e59bd6a5a5]
+@startuml
+skinparam style strictuml
+hide methods
+hide empty members
+skinparam style strictuml
+skinparam backgroundcolor transparent
+
+class "LigneArticle" as SLI {
+  quantité:int
+}
+class Vente {
+  dateHeure: DateHeure
+  estTerminée : boolean
+}
+class Paiement {
+  montant:Monnaie
+}
+class Magasin {
+  nom:String
+  adresse:String
+}
+class "Description\nProduit" as PD {
+  description : String
+  prix : Money
+  codeArticle : int
+}
+'class Item
+class "CatalogueProduit" as PC
+'PD "1" -l- "*" Item : Describes >
+'SLI "1" -right- "*" Item: Records-sale-of >
+Vente "1" *-up- "1..*" SLI : Contient >
+Magasin "1" -left- "1..*" Registre : Héberge >
+Vente "1" -right- "1" Registre : Saisie-sur >
+Vente "1" -down- "1" Paiement : Payée-par >
+'PD "*" - - "1" Magasin: Gère <
+PC "1" *- - "*" PD
+SLI "*" - "1" PD : Décrite-par >
+@enduml
+
+@startuml
+skinparam style strictuml
+hide methods
+hide empty members
+skinparam style strictuml
+skinparam backgroundcolor transparent
+
+class "LigneArticle" as SLI {
+  quantité:int
+}
+class Vente {
+  dateHeure: DateHeure
+  estTerminée : boolean
+}
+class Paiement {
+  montant:Monnaie
+}
+class Magasin {
+  nom:String
+  adresse:String
+}
+class "Description\nProduit" as PD {
+  description : String
+  prix : Money
+  codeArticle : int
+}
+class "CatalogueProduit" as PC
+Vente "1" *-up- "1..*" SLI : Contient >
+Magasin "1" -left- "1..*" Registre : Héberge >
+Vente "1" -right- "1" Registre : Saisie-sur >
+Vente "1" -down- "1" Paiement : Payée-par >
+PC "1" *- - "*" PD
+SLI "*" - "1" PD : Décrite-par >
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

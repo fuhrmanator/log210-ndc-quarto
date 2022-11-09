@@ -294,18 +294,25 @@
     "text": "8.1 Qu’est-ce qu’un contrat d’opération\nUn contrat d’opération est un document décrivant ce qui est arrivé après l’exécution d’une opération système. Cette description est présentée sous forme de postconditions utilisant le vocabulaire du modèle du domaine.\nLe MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente) mais aussi des instances de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clients qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque client.\nDans la figure 8.1, l’opération système créerNouvelleVente() provient d’un diagramme de séquence système lié au cas d’utilisation Traiter Vente. Elle correspond au moment où le caissier démarre une nouvelle vente pour un client. Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec le passé composé en français) : « une instance v de Vente a été créée ».\nUn contrat d’opération permet de spécifier tous les changements dans le MDD qui doivent avoir lieu lors de l’opération système. Les postconditions du contrat saisissent l’évolution du MDD.\n\n\n\nFigure 8.1: Pendant l’opération système créerNouvelleVente, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition."
   },
   {
-    "objectID": "Contrats.html#exemple-contrats-dopération-pour-attaquer-un-pays",
-    "href": "Contrats.html#exemple-contrats-dopération-pour-attaquer-un-pays",
+    "objectID": "Contrats.html#sec-contrat_exemple",
+    "href": "Contrats.html#sec-contrat_exemple",
     "title": "8  Contrats d’opération",
     "section": "8.2 Exemple : Contrats d’opération pour Attaquer un pays",
-    "text": "8.2 Exemple : Contrats d’opération pour Attaquer un pays\nVoir la figure 8.2 pour les changements dans les objets du modèle du domaine correspondant aux postconditions.\n\n8.2.1 Attaquer un pays\n\n8.2.1.1 Opération : démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)\n\n8.2.1.1.1 Postconditions\n\nune nouvelle instance a de Attaque a été créée\na a été associée au Pays sur une base de correspondance avec paysAttaquant\na a été associée au Pays sur une base de correspondance avec paysDéfenseur\n\n\n\n\n8.2.1.2 Opération : annoncerAttaque(nbRégimentsAttaquant:int)\n\n8.2.1.2.1 Postconditions\n\na.nbAttaquant est devenu nbRégimentsAttaquant\n\n\n\n\n8.2.1.3 Opération : annoncerDéfense(nbRégimentsDéfendant:int)\n\n8.2.1.3.1 Postconditions\n\na.nbDéfendant est devenu nbRégimentsDéfendant\nL’attribut valeur des d1 à d5 est devenue un nombre entier aléatoire entre 1 et 6\nOccupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysAttaquant.\nOccupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysDéfendant.\n\n\n\n\n8.2.1.4 Opération : terminerAttaque()\n\n8.2.1.4.1 Postconditions\n\nTODO : Handle the change of Occupation ?\n\n\n\n\n\nFigure 8.2: Les postconditions décrivent la manipulation d’objets dans un MDD (la partie inférieure ici est un diagramme d’objets)"
+    "text": "8.2 Exemple : Contrats d’opération pour Attaquer un pays\nVoir la figure 8.2 pour les changements dans les objets du modèle du domaine correspondant aux postconditions.\n\nAttaquer un pays\n\nOpération : démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)\n\n\nPostconditions\n\nune nouvelle instance a de Attaque a été créée\na a été associée au Pays sur une base de correspondance avec paysAttaquant\na a été associée au Pays sur une base de correspondance avec paysDéfenseur\n\n\n\nOpération : annoncerAttaque(nbRégimentsAttaquant:int)\n\n\nPostconditions\n\na.nbAttaquant est devenu nbRégimentsAttaquant\n\n\n\nOpération : annoncerDéfense(nbRégimentsDéfendant:int)\n\n\nPostconditions\n\na.nbDéfendant est devenu nbRégimentsDéfendant\nL’attribut valeur des d1 à d5 est devenue un nombre entier aléatoire entre 1 et 6\nOccupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysAttaquant.\nOccupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysDéfendant.\n\n\n\n\n\nFigure 8.2: Les postconditions décrivent la manipulation d’objets dans un MDD (la partie inférieure ici est un diagramme d’objets)"
   },
   {
     "objectID": "Contrats.html#feuille-de-référence",
     "href": "Contrats.html#feuille-de-référence",
     "title": "8  Contrats d’opération",
     "section": "8.3 Feuille de référence",
-    "text": "8.3 Feuille de référence\nPour faire des contrats, voici une démarche générale :\n\nFaire un contrat pour chaque opération système\nRegarder toujours le MDD (vocabulaire du domaine)\nRappeler les formes de postconditions\n\ncréer/supprimer instance\nformer/briser association\nmodifier attributs\n\nNe rien oublier. Marquer le MDD ou dessiner un diagramme d’objets, comme à la figure 8.2 si nécessaire."
+    "text": "8.3 Feuille de référence\nPour faire des contrats, voici une démarche générale :\n\nFaire un contrat pour chaque opération système.\nPorter une attention à sa signature (les arguments et leur type).\nRappeler les formes de postconditions :\n\ncréer/supprimer instance ;\nformer/briser association ;\nmodifier attributs.\n\nUtiliser le vocabulaire du modèle du domaine dans les postconditions. Ça veut dire qu’il faut parler d’instances de classes conceptuelles, de leurs attributs et des associations entre ces classes.\nNe pas créer une instance de classe qui existe déjà, par exemple un produit (connu) dans un magasin, un acteur (connu) qui se connecte au système, ou (dans l’exemple de Risk) un Pays (voir la partie basse de la figure 8.2).\nNe rien oublier. Marquer le MDD ou dessiner un diagramme d’objets, comme à la partie basse de la figure 8.2 si nécessaire."
+  },
+  {
+    "objectID": "Contrats.html#exercices",
+    "href": "Contrats.html#exercices",
+    "title": "8  Contrats d’opération",
+    "section": "8.4 Exercices",
+    "text": "8.4 Exercices\n\nExercice 8.1 (terminerAttaque) Rédiger le contrat d’opération pour terminerAttaque(). Il faut considérer le cas où une attaque a réussi. C’est-à-dire le paysDéfenseur change de Joueur (celui du paysAttaquant). Suivez les exemples de contrat d’opération à la Section 8.2.\n\n\nExercice 8.2 (Contrats d’opération pour Traiter une vente) Rédigez un contrat d’opération pour chacune des opérations système dans le DSS (et qui soit cohérent avec le MDD) dans la Section B.1. Suivez les exemples de contrat d’opération à la Section 8.2."
   },
   {
     "objectID": "RDCU.html",
@@ -368,7 +375,14 @@
     "href": "RDCU.html#sec-FaireSoiMeme",
     "title": "9  Réalisations de cas d’utilisation (RDCU)",
     "section": "9.8 Pattern « Faire soi-même »",
-    "text": "9.8 Pattern « Faire soi-même »\nDans la section F30.8/A33.7 , Larman mentionne le pattern « Faire soi-même » de Peter Coad (1997) qui permet de réduire le Décalage des représentations, même s’il ne représente pas exactement la réalité des objets (voir la figure 9.7 ):\n\n\n\n\n\n\nFaire soi-même: « Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction »\n\n\n\n\n\n\nFigure 9.7: Dans la vraie vie, les dés sont lancés par une main (« Hand of chance » (CC BY 2.0) par Alexandra E Rust).\n\n\n\n\n\n\nCoad, Peter. 1997. Object Models: Strategies, Patterns, and Applications. 2nd Revised ed. edition. Upper Saddle River, N.J: Pearson Technology Group.\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+    "text": "9.8 Pattern « Faire soi-même »\nDans la section F30.8/A33.7 , Larman mentionne le pattern « Faire soi-même » de Peter Coad (1997) qui permet de réduire le Décalage des représentations, même s’il ne représente pas exactement la réalité des objets (voir la figure 9.7 ):\n\n\n\n\n\n\nFaire soi-même: « Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction »\n\n\n\n\n\n\nFigure 9.7: Dans la vraie vie, les dés sont lancés par une main (« Hand of chance » (CC BY 2.0) par Alexandra E Rust)."
+  },
+  {
+    "objectID": "RDCU.html#exercices",
+    "href": "RDCU.html#exercices",
+    "title": "9  Réalisations de cas d’utilisation (RDCU)",
+    "section": "9.9 Exercices",
+    "text": "9.9 Exercices\n\nExercice 9.1 (RDCU pour le cas d’utilisation Ouvrir la caisse) Faites les RDCU pour le cas d’utilisation Ouvrir la caisse. Vous y trouverez également des artefacts tels que le DSS, les contrats d’opération et le modèle du domaine. Ils sont essentiels pour faire les RDCU selon la méthodologie.\n\n\n\n\n\nCoad, Peter. 1997. Object Models: Strategies, Patterns, and Applications. 2nd Revised ed. edition. Upper Saddle River, N.J: Pearson Technology Group.\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "TDD.html",
@@ -595,156 +609,142 @@
     "text": "Ardis, Mark, Greg Hislop, Mark Sebern, David Budgen, Jeff Offutt, and\nWillem Visser. 2015. “Software Engineering 2014 -\nCurriculum Guidelines for Undergraduate Degree\nPrograms in Software Engineering.” ACM:\nAssociation for Computing Machinery.\n\n\nAvgeriou, Paris, Philippe Kruchten, Ipek Ozkaya, and Carolyn Seaman.\n2016. “Managing Technical Debt in Software\nEngineering (Dagstuhl Seminar 16162).” Edited by Paris\nAvgeriou, Philippe Kruchten, Ipek Ozkaya, and Carolyn Seaman.\nDagstuhl Reports 6 (4): 110–38. https://doi.org/10.4230/DagRep.6.4.110.\n\n\nCoad, Peter. 1997. Object Models:\nStrategies, Patterns, and\nApplications. 2nd Revised ed. edition. Upper\nSaddle River, N.J: Pearson Technology Group.\n\n\nFitzpatrick, Brian W., and Ben Collins-Sussman. 2012. Team\nGeek: A Software\nDeveloper’s Guide to Working\nWell with Others. 1 edition. Sebastopol.\nCA: O’Reilly Media.\n\n\nFord, Neal. 2009. “Evolutionary Architecture and Emergent Design:\nInvestigating Architecture and Design.” {CT}316. http://www.ibm.com/developerworks/library/j-eaed1/.\n\n\nFowler, Martin. 2007. “Bliki:\nDesignStaminaHypothesis.” Martinfowler.com.\n\n\n———. 2018. Refactoring: Improving the Design of Existing Code.\n2 edition. Boston: Addison-Wesley Professional.\n\n\nGamma, Erich, Richard Helm, Ralph Johnson, and John Vlissides. 1994.\nDesign Patterns: Elements of\nReusable Object-Oriented\nSoftware. 1st ed. Reading, Mass: Addison-Wesley\nProfessional. http://amazon.com/o/ASIN/0201633612/.\n\n\nHanmer, Robert. 2007. Patterns for Fault\nTolerant Software. 1st ed. Chichester,\nEngland ; Hoboken, NJ: Wiley.\n\n\nKarac, I., and B. Turhan. 2018. “What Do We (Really) Know about\nTest-Driven Development?” IEEE Software 35 (4): 81–85.\nhttps://doi.org/10.1109/MS.2018.2801554.\n\n\nLarman, Craig. 2001. Applying UML and\nPatterns: An Introduction to\nObject-Oriented Analysis and Design and the\nUnified Process. 2nd edition. Upper Saddle\nRiver, NJ: Prentice Hall.\n\n\n———. 2005. UML 2 et design patterns. 3rd ed.\nParis: Village Mondial.\n\n\n“LaTeX.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=LaTeX&oldid=1114993597.\n\n\nOakley, Barbara, RM Felder, R Brent, and I Elhajj. 2004. “Coping\nwith Hitchhikers and Couch Potatoes on Teams.” Journal of\nStudent Centered Learning 2 (1): 32–34. https://www.cs.cornell.edu/courses/cs3110/2018fa/teams/hitchhikers.html.\n\n\n“Pandoc.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=Pandoc&oldid=1116852485.\n\n\n“PlantUML.” 2022. In Wikipedia. https://en.wikipedia.org/w/index.php?title=PlantUML&oldid=1111009429.\n\n\n“Quarto.” 2022. October 26, 2022. https://quarto.org/."
   },
   {
-    "objectID": "Exercice_Contrats_d_opération.html",
-    "href": "Exercice_Contrats_d_opération.html",
-    "title": "21  Contrats d’opération",
-    "section": "",
-    "text": "Rédigez un contrat d’opération pour chacune des opérations système du DSS ci-bas, selon le modèle du domaine ci-bas.\nLes éléments importants d’un contrat sont :"
-  },
-  {
-    "objectID": "Exercice_Contrats_d_opération.html#contrats-dopération",
-    "href": "Exercice_Contrats_d_opération.html#contrats-dopération",
-    "title": "21  Contrats d’opération",
-    "section": "Contrats d’opération",
-    "text": "Contrats d’opération\nÉcrivez vos contrats ici (un pour chaque opération système) :\n\nDSS\n\n\nDSS pour le scénarioTraiter vente:Caissier:SystèmedémarrerVenteloop[reste des articles]saisirArticle(codeArticle:int, quantité:int)description, totalterminerSale()total with taxesfairePaiement(montant:Monnaie)rendu de monnaie, reçu\nDSS pour le scénario Traiter Vente de Larman (2005)\n\n\n\n\nMDD partiel\nLigneArticlequantité:intVentedateHeure: DateHeureestTerminée : booleanPaiementmontant:MonnaieMagasinnom:Stringadresse:StringDescriptionProduitdescription : Stringprix : MoneycodeArticle : intCatalogueProduitRegistreContient1..*1Héberge1..*1Saisie-sur11Payée-par111*Décrite-par*1\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
-  },
-  {
     "objectID": "Exercice_Diagramme_états.html",
     "href": "Exercice_Diagramme_états.html",
-    "title": "22  Diagramme d’états",
+    "title": "21  Diagramme d’états",
     "section": "",
     "text": "Ces exercices devraient vous aider à comprendre les diagrammes d’états en UML. Vous devez vous référer au livre du cours pour la bonne notation (figure F25.9/A29.2)."
   },
   {
     "objectID": "Exercice_Diagramme_états.html#exercice-1",
     "href": "Exercice_Diagramme_états.html#exercice-1",
-    "title": "22  Diagramme d’états",
-    "section": "22.1 Exercice 1",
-    "text": "22.1 Exercice 1\nFaire un diagramme d’états en UML modélisant les états d’un téléphone intelligent. Considérer une dynamique simplifiée, avec seulement trois états correspondant aux images suivantes :\n\nPour simplifier encore le modèle, le bouton en haut à droite sert pour éteindre et pour allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint."
+    "title": "21  Diagramme d’états",
+    "section": "21.1 Exercice 1",
+    "text": "21.1 Exercice 1\nFaire un diagramme d’états en UML modélisant les états d’un téléphone intelligent. Considérer une dynamique simplifiée, avec seulement trois états correspondant aux images suivantes :\n\nPour simplifier encore le modèle, le bouton en haut à droite sert pour éteindre et pour allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint."
   },
   {
     "objectID": "Exercice_Diagramme_états.html#exercice-2",
     "href": "Exercice_Diagramme_états.html#exercice-2",
-    "title": "22  Diagramme d’états",
-    "section": "22.2 Exercice 2",
-    "text": "22.2 Exercice 2\nFaire un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format bref) :\nS’authentifier. Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.\nGérer guichet. L’Administrateur démarre le système et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre."
+    "title": "21  Diagramme d’états",
+    "section": "21.2 Exercice 2",
+    "text": "21.2 Exercice 2\nFaire un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format bref) :\nS’authentifier. Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.\nGérer guichet. L’Administrateur démarre le système et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre."
   },
   {
     "objectID": "Exercice_Diagramme_activité.html",
     "href": "Exercice_Diagramme_activité.html",
-    "title": "23  Diagramme d’activité",
+    "title": "22  Diagramme d’activité",
     "section": "",
     "text": "Note\n\n\n\nVous pouvez dessiner les diagrammes à la main et en prendre une photo avec une application comme Microsoft Lens (Android, iOS).\nVous pouvez également utiliser PlantUML. Voici des ressources à ce propos : \n\ntutoriel VSCode sur YouTube ;\nextension PlantUML pour VSCode ;\nPlantUML Gizmo, module supplémentaire Google Docs ;\nPlantText.com.\n\nMéfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la figure 13.4).\n\n\n(Votre diagramme devrait apparaître plus bas)"
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html",
-    "title": "24  Identifier GRASP dans GoF",
+    "title": "23  Identifier GRASP dans GoF",
     "section": "",
-    "text": "Dans cet exercice, vous allez mieux comprendre la relation entre les principes GRASP et les patrons GoF.\nNous rappelons le modèle pour décortiquer le patron Adaptateur, illustré à la figure 24.1.\nUne bonne ressource pour les patterns GoF est la suivante :\nhttps://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html"
+    "text": "Dans cet exercice, vous allez mieux comprendre la relation entre les principes GRASP et les patrons GoF.\nNous rappelons le modèle pour décortiquer le patron Adaptateur, illustré à la figure 23.1.\nUne bonne ressource pour les patterns GoF est la suivante :\nhttps://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html"
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.1 Itérateur",
-    "text": "24.1 Itérateur\nIdentifiez les 4 principes GRASP dans le patron Itérateur, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.1 Itérateur",
+    "text": "23.1 Itérateur\nIdentifiez les 4 principes GRASP dans le patron Itérateur, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.2 Observateur",
-    "text": "24.2 Observateur\nIdentifiez les 4 principes GRASP dans le patron Observateur, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.2 Observateur",
+    "text": "23.2 Observateur\nIdentifiez les 4 principes GRASP dans le patron Observateur, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.3 Stratégie",
-    "text": "24.3 Stratégie\nIdentifiez les 4 principes GRASP dans le patron Stratégie, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.3 Stratégie",
+    "text": "23.3 Stratégie\nIdentifiez les 4 principes GRASP dans le patron Stratégie, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.4 Composite",
-    "text": "24.4 Composite\nIdentifiez les 4 principes GRASP dans le patron Composite, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.4 Composite",
+    "text": "23.4 Composite\nIdentifiez les 4 principes GRASP dans le patron Composite, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.5 Décorateur",
-    "text": "24.5 Décorateur\nIdentifiez les 4 principes GRASP dans le patron Décorateur, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.5 Décorateur",
+    "text": "23.5 Décorateur\nIdentifiez les 4 principes GRASP dans le patron Décorateur, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.6 Méthode Template",
-    "text": "24.6 Méthode Template\nIdentifiez les 4 principes GRASP dans le patron Méthode Template, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.6 Méthode Template",
+    "text": "23.6 Méthode Template\nIdentifiez les 4 principes GRASP dans le patron Méthode Template, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.7 Commande",
-    "text": "24.7 Commande\nIdentifiez les 4 principes GRASP dans le patron Commande, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.7 Commande",
+    "text": "23.7 Commande\nIdentifiez les 4 principes GRASP dans le patron Commande, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.8 Méthode Fabrique",
-    "text": "24.8 Méthode Fabrique\nIdentifiez les 4 principes GRASP dans le patron Méthode fabrique, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.8 Méthode Fabrique",
+    "text": "23.8 Méthode Fabrique\nIdentifiez les 4 principes GRASP dans le patron Méthode fabrique, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.9 Proxy",
-    "text": "24.9 Proxy\nIdentifiez les 4 principes GRASP dans le patron Proxy, selon les directives à la Section 14.3."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.9 Proxy",
+    "text": "23.9 Proxy\nIdentifiez les 4 principes GRASP dans le patron Proxy, selon les directives à la Section 14.3."
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
-    "title": "24  Identifier GRASP dans GoF",
-    "section": "24.10 Façade",
-    "text": "24.10 Façade\nIdentifiez les 4 principes GRASP dans le patron Façade, selon les directives à la Section 14.3.\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+    "title": "23  Identifier GRASP dans GoF",
+    "section": "23.10 Façade",
+    "text": "23.10 Façade\nIdentifiez les 4 principes GRASP dans le patron Façade, selon les directives à la Section 14.3.\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_Critique_d-une_conception.html",
     "href": "Exercice_Critique_d-une_conception.html",
-    "title": "25  Critique d’une conception",
+    "title": "24  Critique d’une conception",
     "section": "",
     "text": "Dans cet exercice, l’objectif est de vous sensibiliser à la facilité de comprendre une conception à partir d’un problème. Un objectif secondaire est de considérer les choix de conception sur un plan de la cohésion et du couplage. Ici, il s’agit du jeu de Monopoly, qui est un exemple proposé par Larman (2005) pour lequel il a également proposé un modèle du domaine et une conception, selon la méthodologie.\nPour cet exercice, nous examinerons une conception orientée objet réelle du jeu de Monopoly disponible sur GitHub, soit Emojiopoly. Voici le travail à faire."
   },
   {
     "objectID": "Exercice_Critique_d-une_conception.html#sec-DDC_Emojiopoly",
     "href": "Exercice_Critique_d-une_conception.html#sec-DDC_Emojiopoly",
-    "title": "25  Critique d’une conception",
+    "title": "24  Critique d’une conception",
     "section": "Diagramme de classes d’Emojiopoly",
-    "text": "Diagramme de classes d’Emojiopoly\nPour visualiser la conception, nous avons généré un diagramme des classes en UML avec l’outil tplant :\n\n\nCardtext: stringaction: \"advance\" | \"back\" | \"choice\" | \"payeach\" | \"collecteach\" |\"doubletransport\" | \"earn\" | \"pay\" | \"stealmoney\" | \"stolenmoney\" |\"streetrepairs\" | \"gotojail\"value?: string | number | number[]MonopolyGamejackpot: numbercurrentTurnIndex: numberconsecutiveDoubles: numberplayers: Player[]currentPlayer: Playerdice: number[]isTurnFinished: booleanunpaidDebts: Debt[]chanceCards: Card[]chestCards: Card[]chanceCardIndex: numberchestCardIndex: numberboard: Square[]playerNames: string[]houseRules: HouseRulesmessageEventHandler: (message: string) => voidaddToJackpot(amount: number): voidrollDice(die1?: number, die2?: number): voidmoveToSquare(newSquare: Square, awardSalary?: boolean): voidsendToJail(): voidmoveBack(numberOfSpaces: number): voidpostBail(): voidtakeChance(): voidtakeChest(): voidhandleCard(card: Card): voidmovePlayer(): voidpayDebts(): voidfinishTurn(): voidHouseRulesPlayerownedProperties: Property[]currentSquare: SquareturnsInJail: numbername: stringmoney: numberPropertybuildingsCount: numberisMortgaged: booleanowner: Playername: stringcolor: \"brown\" | \"lightblue\" | \"pink\" | \"orange\" | \"red\" | \"yellow\" |\"green\" | \"blue\" | \"white\"price: numberrent: number[] | \"transport\" | \"utility\"buildPrice: numberSquareoccupants: Player[]squareContents: \"gotojail\" | Property | \"go\" | \"jail\" | \"parking\" |\"chance\" | \"chest\" | \"incometax\" | \"supertax\"addOccupant(occupant: Player): voidremoveOccupant(occupant: Player): voidDebtamount: numbergame: MonopolyGamedebtor: Playercreditor: PlayerinitialAmount: numberpayDebt(): voidtoString(): string**1**1*11*11\nFigure 25.1: Diagramme de classes logicielles (TypeScript) pour le projet Emojiopoly"
+    "text": "Diagramme de classes d’Emojiopoly\nPour visualiser la conception, nous avons généré un diagramme des classes en UML avec l’outil tplant :\n\n\nCardtext: stringaction: \"advance\" | \"back\" | \"choice\" | \"payeach\" | \"collecteach\" |\"doubletransport\" | \"earn\" | \"pay\" | \"stealmoney\" | \"stolenmoney\" |\"streetrepairs\" | \"gotojail\"value?: string | number | number[]MonopolyGamejackpot: numbercurrentTurnIndex: numberconsecutiveDoubles: numberplayers: Player[]currentPlayer: Playerdice: number[]isTurnFinished: booleanunpaidDebts: Debt[]chanceCards: Card[]chestCards: Card[]chanceCardIndex: numberchestCardIndex: numberboard: Square[]playerNames: string[]houseRules: HouseRulesmessageEventHandler: (message: string) => voidaddToJackpot(amount: number): voidrollDice(die1?: number, die2?: number): voidmoveToSquare(newSquare: Square, awardSalary?: boolean): voidsendToJail(): voidmoveBack(numberOfSpaces: number): voidpostBail(): voidtakeChance(): voidtakeChest(): voidhandleCard(card: Card): voidmovePlayer(): voidpayDebts(): voidfinishTurn(): voidHouseRulesPlayerownedProperties: Property[]currentSquare: SquareturnsInJail: numbername: stringmoney: numberPropertybuildingsCount: numberisMortgaged: booleanowner: Playername: stringcolor: \"brown\" | \"lightblue\" | \"pink\" | \"orange\" | \"red\" | \"yellow\" |\"green\" | \"blue\" | \"white\"price: numberrent: number[] | \"transport\" | \"utility\"buildPrice: numberSquareoccupants: Player[]squareContents: \"gotojail\" | Property | \"go\" | \"jail\" | \"parking\" |\"chance\" | \"chest\" | \"incometax\" | \"supertax\"addOccupant(occupant: Player): voidremoveOccupant(occupant: Player): voidDebtamount: numbergame: MonopolyGamedebtor: Playercreditor: PlayerinitialAmount: numberpayDebt(): voidtoString(): string**1**1*11*11\nFigure 24.1: Diagramme de classes logicielles (TypeScript) pour le projet Emojiopoly"
   },
   {
     "objectID": "Exercice_Critique_d-une_conception.html#sec-MDD_Monopoly",
     "href": "Exercice_Critique_d-une_conception.html#sec-MDD_Monopoly",
-    "title": "25  Critique d’une conception",
+    "title": "24  Critique d’une conception",
     "section": "Modèle du domaine de Monopoly",
     "text": "Modèle du domaine de Monopoly\nPuisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle du domaine de Monopoly en français et en anglais pour vous aider à comprendre les termes.\n\n\nJeuDeMonopolycompteurRondsDévaleurPlateauPionnomJoueurargentnomCasenomPropriétéprixCaseOrdinaireCaseDépartCaseImpôtsCaseTerrainCaseGareCaseServicePublicPossède0..1*Possède11Est-sur0..81140Joue2..81Joué-avec12Joué-sur11\nMDD (version française) de Monopoly proposé par Larman (2005)\n\n\n\n\nMonopolyGameroundCountDiefaceValueBoardTokennamePlayercashnameSquarenamePropertypriceRegularSquareGoSquareIncomeTaxSquareLotSquareRailroadSquareUtilitySquareOwns0..1*Owns11Is-on0..81140Plays2..81Played-with12Played-on11\nMDD (version anglaise) de Monopoly proposé par Larman (2005)\n\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_Coder_des_méthodes_des_DS.html",
     "href": "Exercice_Coder_des_méthodes_des_DS.html",
-    "title": "26  Coder des méthodes à partir des diagrammes de séquence",
+    "title": "25  Coder des méthodes à partir des diagrammes de séquence",
     "section": "",
-    "text": "Astuce\n\n\n\nVous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n’est pas forcément permis lors d’un examen.\n\n\nVoici un modèle à suivre. Pour le diagramme suivant :\n\n\n:A:Bexecute(3)result = setItem(\"Fred\")\nFigure 26.1: Exemple de diagramme de séquence.\n\n\nOn code les classes suivantes en TypeScript :\nclass A {\n    b: B;  // A envoie un message à B, visibilité d'attribut\n    execute(arg0:number):any {\n        const result = this.b.setItem(\"Fred\");\n    }\n}\n\nclass B {\n    setItem(arg0:string):any {\n        //...\n    }\n}\n\nÉcrire le code pour la figure suivante.\n:Bernard:Aliceinitallô(12)create:Autre\"oui\"15\n\n\nÉcrire le code pour la figure suivante décrivant la création de la collection de Vente (tirée de Larman 2005, figure. 17.6).\n:Registreselon Créateur etContrôleurcréerNouvelleVenteRegistre crée uneVente selon Créateurcreate:Venteselon Créateur, Vente crée unecollection vide (par exemple uneList) destinée a mémoriser lesinstances de LigneArticlesl'activation de Vente est implicitement dansle constructeur de l'instance de VentecreatelignesArticles :List<LigneArticles>\n\n\nÉcrire le code pour la figure suivante décrivant l’utilisation d’un Cornet dans le jeu de Monopoly (tirée de Larman 2005, fig. F22.9)\nj : Joueur: Cornet: Plateaupos : CaseSelon Fabrication pureprendreTourlancervalTot = getTotalpos = getCase( pos, valTot )atterrirSur( j )\n\n\nÉcrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode atterrirSur dans le jeu de Monopoly (tirées de Larman 2005, fig. F22.6 et F22.7)\n: CaseImpôtsj : JoueuratterrirSur(j)selon Polymorphismec = getCashselon ExpertdiminuerCash(min(200, 10% de c))selon Expert\n: CaseAllezEnPrisonj : JoueuratterrirSur(j)selon PolymorphismesetPosition(prison)selon Expert\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+    "text": "Astuce\n\n\n\nVous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n’est pas forcément permis lors d’un examen.\n\n\nVoici un modèle à suivre. Pour le diagramme suivant :\n\n\n:A:Bexecute(3)result = setItem(\"Fred\")\nFigure 25.1: Exemple de diagramme de séquence.\n\n\nOn code les classes suivantes en TypeScript :\nclass A {\n    b: B;  // A envoie un message à B, visibilité d'attribut\n    execute(arg0:number):any {\n        const result = this.b.setItem(\"Fred\");\n    }\n}\n\nclass B {\n    setItem(arg0:string):any {\n        //...\n    }\n}\n\nÉcrire le code pour la figure suivante.\n:Bernard:Aliceinitallô(12)create:Autre\"oui\"15\n\n\nÉcrire le code pour la figure suivante décrivant la création de la collection de Vente (tirée de Larman 2005, figure. 17.6).\n:Registreselon Créateur etContrôleurcréerNouvelleVenteRegistre crée uneVente selon Créateurcreate:Venteselon Créateur, Vente crée unecollection vide (par exemple uneList) destinée a mémoriser lesinstances de LigneArticlesl'activation de Vente est implicitement dansle constructeur de l'instance de VentecreatelignesArticles :List<LigneArticles>\n\n\nÉcrire le code pour la figure suivante décrivant l’utilisation d’un Cornet dans le jeu de Monopoly (tirée de Larman 2005, fig. F22.9)\nj : Joueur: Cornet: Plateaupos : CaseSelon Fabrication pureprendreTourlancervalTot = getTotalpos = getCase( pos, valTot )atterrirSur( j )\n\n\nÉcrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode atterrirSur dans le jeu de Monopoly (tirées de Larman 2005, fig. F22.6 et F22.7)\n: CaseImpôtsj : JoueuratterrirSur(j)selon Polymorphismec = getCashselon ExpertdiminuerCash(min(200, 10% de c))selon Expert\n: CaseAllezEnPrisonj : JoueuratterrirSur(j)selon PolymorphismesetPosition(prison)selon Expert\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "Exercice_Adaptateur_pour_Maps_CF.html",
     "href": "Exercice_Adaptateur_pour_Maps_CF.html",
-    "title": "27  Adaptateur pour Maps",
+    "title": "26  Adaptateur pour Maps",
     "section": "",
     "text": "Google Maps\nBing Maps\nApple Maps\n\nLe système veut obtenir une liste d’étapes (des directions) pour se rendre à une destination à partir d’un point de départ. L’utilisateur du système pourra décider lequel des services lui convient dans les préférences.\nLe but de l’exercice est de déterminer l’interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d’itinéraires. Cela peut être un diagramme de classe réalisé avec PlantUML."
   },
@@ -754,5 +754,68 @@
     "title": "Appendix A — Cas d’utilisation - Réserver un livre de la bibliothèque",
     "section": "",
     "text": "Le membre choisit la fonction « recherche » et saisit du texte décrivant le livre (par exemple, une partie du titre, « UML »).\nLe système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, « UML2 et le design patterns, Craig Larman, 2005 » et « UML par la pratique, Pascal Rocques, 2009 ».\nLe membre choisit un livre parmi les résultats, par exemple, « UML2 et les design patterns, Craig Larman, 2005 ».\nLe système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre « UML2 et les design patterns », un avec l’identificateur d’exemplaire « 1 » qui est disponible et un avec l’identificateur d’exemplaire « 2 » qui n’est pas disponible.\nLe membre réserve un exemplaire du livre qui est disponible.\nLe système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.\n\nExtensions (scénarios alternatifs) :\n\nAucun livre ne correspond au texte de la recherche.\n\nLe système affiche un message indiquant qu’aucun livre n’a été trouvé.\nLe membre lance une nouvelle recherche.\n\n\n\n\nTous les exemplaires ne sont pas disponibles.\n\nLe système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.\nLe membre lance une nouvelle recherche."
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Traiter_vente.html",
+    "href": "Annexe_Cas_utilisation_Traiter_vente.html",
+    "title": "Appendix B — Cas d’utilisation - Traiter une vente",
+    "section": "",
+    "text": "Voici des artefacts en PlantUML proposés pour le cas d’utilisation Traiter une vente documenté par Larman (2005)."
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Traiter_vente.html#sec-DSS_traiter_vente",
+    "href": "Annexe_Cas_utilisation_Traiter_vente.html#sec-DSS_traiter_vente",
+    "title": "Appendix B — Cas d’utilisation - Traiter une vente",
+    "section": "B.1 DSS",
+    "text": "B.1 DSS\n\n\nDSS pour le scénarioTraiter vente:Caissier:SystèmedémarrerVenteloop[reste des articles]saisirArticle(codeArticle:int, quantité:int)description, totalterminerSale()total with taxesfairePaiement(montant:Monnaie)rendu de monnaie, reçu\nDSS pour le scénario Traiter Vente de Larman (2005)"
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Traiter_vente.html#mdd-partiel",
+    "href": "Annexe_Cas_utilisation_Traiter_vente.html#mdd-partiel",
+    "title": "Appendix B — Cas d’utilisation - Traiter une vente",
+    "section": "B.2 MDD partiel",
+    "text": "B.2 MDD partiel\nLigneArticlequantité:intVentedateHeure: DateHeureestTerminée : booleanPaiementmontant:MonnaieMagasinnom:Stringadresse:StringDescriptionProduitdescription : Stringprix : MoneycodeArticle : intCatalogueProduitRegistreContient1..*1Héberge1..*1Saisie-sur11Payée-par111*Décrite-par*1\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Ouvrir_caisse.html",
+    "href": "Annexe_Cas_utilisation_Ouvrir_caisse.html",
+    "title": "Appendix C — Cas d’utilisation - Ouvrir la caisse",
+    "section": "",
+    "text": "Le contexte est l’étude de cas du système POS NextGen, notamment le scénario principal du cas d’utilisation Ouvrir la caisse (anglais Cash In). C’est l’acte d’un caissier ou d’une caissière qui arrive avec son tiroir-caisse contenant déjà de l’argent, qui s’authentifie sur la caisse (le registre) et saisit le montant en espèces dans le tiroir-caisse."
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Ouvrir_caisse.html#terminologie",
+    "href": "Annexe_Cas_utilisation_Ouvrir_caisse.html#terminologie",
+    "title": "Appendix C — Cas d’utilisation - Ouvrir la caisse",
+    "section": "C.1 Terminologie",
+    "text": "C.1 Terminologie\nQuelques termes du domaine d’affaires doivent être compris avant de procéder :\n\n\n\nPlateau-billets et tiroir-caisse. Capture d’écran de la vidéo sur YouTube.\n\n\n\nTiroir-caisse\n\nC’est la partie de la caisse qui s’ouvre, dans laquelle on peut placer un plateau-billets.\n\nPlateau-billets\n\nC’est un conteneur pour les billets d’argent et des pièces de monnaie qui facilite le changement de personnel à une caisse. Chaque caissier ou caissière possède un plateau-billets et l’apporte lorsqu’il commence ou termine un quart de travail."
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Ouvrir_caisse.html#cas-dutilisation-ouvrir-la-caisse",
+    "href": "Annexe_Cas_utilisation_Ouvrir_caisse.html#cas-dutilisation-ouvrir-la-caisse",
+    "title": "Appendix C — Cas d’utilisation - Ouvrir la caisse",
+    "section": "C.2 Cas d’utilisation : Ouvrir la caisse",
+    "text": "C.2 Cas d’utilisation : Ouvrir la caisse\nActeur principal : Caissier\nPréconditions : La caisse est libre et son tiroir-caisse est vide (il n’y a pas de plateau dedans).\nGaranties de succès (postconditions) : Le caissier ou la caissière est authentifiée. Son plateau-billets est placé dans le tiroir-caisse et son identificateur est enregistré. Le montant d’argent du plateau est enregistré. L’heure de l’arrivée du caissier est enregistrée.\nScénario principal (succès)\n\nLe Caissier ou la caissière arrive à la caisse avec son plateau-billets.\nLe Caissier ou la caissière saisit son identifiant et son mot de passe dans la boîte de dialogue d’authentification.\nLe Système authentifie le Caissier ou la caissière.\nLe Système ouvre le tiroir-caisse et demande au Caissier ou à la caissière de poser son plateau dans le tiroir-caisse.\nLe Caissier ou la caissière pose son plateau dans le tiroir-caisse.\nLe Système reconnaît l’identificateur du plateau.\nLe Système demande au Caissier ou à la caissière de saisir le montant d’argent du plateau.\nLe Caissier ou la caissière saisit le montant d’argent du plateau.\nLe Système demande au Caissier ou à la caissière de fermer le tiroir-caisse.\nLe Caissier ou la caissière ferme le tiroir-caisse.\n\nSpécifications particulières :\nLes caisses sont configurées avec un modèle de plateau-billets comme celui-ci : (voir exemple sur Youtube)\nFréquence d’occurrence : Normalement, au début du quart de travail de chaque caissier."
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Ouvrir_caisse.html#modèle-du-domaine-partiel",
+    "href": "Annexe_Cas_utilisation_Ouvrir_caisse.html#modèle-du-domaine-partiel",
+    "title": "Appendix C — Cas d’utilisation - Ouvrir la caisse",
+    "section": "C.3 Modèle du domaine partiel",
+    "text": "C.3 Modèle du domaine partiel\nVoici un exemple pour le système POS NextGen. Noter les nouvelles classes conceptuelles PlateauBillets (un objet physique) et MisePlateau (une transaction) faisant partie du scénario d’Ouvrir la caisse.\n\n\n\nModèle du domaine partiel\n\n\nOn remarque que lorsqu’un Registre (Caisse) n’a pas de Caissier (l’état du système au début du cas d’utilisation), l’objet Registre n’est associé à aucun objet Caissier. Nous avons donc modifié les cardinalités de l’association en conséquence. C’est une différence par rapport au modèle du domaine de base présenté par Larman, qui n’avait pas considéré ce cas d’utilisation, bien qu’il est dans l’ensemble des spécifications du système.\nLes associations en rouge sont celles qui sont affectées par la dynamique de ce cas d’utilisation."
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Ouvrir_caisse.html#diagramme-de-séquence-système-dss",
+    "href": "Annexe_Cas_utilisation_Ouvrir_caisse.html#diagramme-de-séquence-système-dss",
+    "title": "Appendix C — Cas d’utilisation - Ouvrir la caisse",
+    "section": "C.4 Diagramme de séquence système (DSS)",
+    "text": "C.4 Diagramme de séquence système (DSS)\nLa figure C.2 est le diagramme de séquence système (DSS) pour le scénario « Ouvrir la caisse ».\n\n\nScénario: Ouvrir la caisse:Caissier:SystèmedémarrerOuvrirCaisse()authentifier(identifiant : String, mdp : String)confirmation, ouverture du tiroirposerPlateau(identifiant : String)saisirMontant(montant : Monnaie)fermerTiroir()\nFigure C.2: Diagramme de séquence système (DSS) pour le scénario « Ouvrir la caisse »"
+  },
+  {
+    "objectID": "Annexe_Cas_utilisation_Ouvrir_caisse.html#contrats-dopération",
+    "href": "Annexe_Cas_utilisation_Ouvrir_caisse.html#contrats-dopération",
+    "title": "Appendix C — Cas d’utilisation - Ouvrir la caisse",
+    "section": "C.5 Contrats d’opération",
+    "text": "C.5 Contrats d’opération\nVoici les contrats pour chaque opération système.\nOpération : démarrerOuvrirCaisse()\nPostconditions :\n\nUne instance mp de MisePlateau a été créée.\n\nOpération : authentifier(identifiant : String, mdp : String)\nPostconditions :\n\nmp a été associé à un Caissier, sur la base de correspondance avec identifiant.\nLe Registre en cours a été associé à un Caissier, sur la base de correspondance avec identifiant.\n\nOpération : poserPlateau(identifiant : String)\nPostconditions\n\nmp a été associé à un PlateauBillets, sur la base de correspondance avec identifiant.\nLe Registre en cours a été associé à un PlateauBillets, sur la base de correspondance avec identifiant.\n\nOpération : saisirMontant(montant : Monnaie)\nPostconditions\n\nmp.montant est devenu montant.\n\nOpération : fermerTiroir()\nPostconditions :\n\nmp.dateHeure est devenue la date et l’heure actuelle.\nmp a été associé à GrandLivre.\nmp a été associé à Registre.\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   }
 ]

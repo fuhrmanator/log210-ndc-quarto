@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Analyse et conception de logiciels - Appendix C — Cas d’utilisation - Ouvrir la caisse</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Annexe_Cas_utilisation_Traiter_vente.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+<style type="text/css">
+  @font-face {
+    font-family: 'xkcd Script';
+    src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
+  }
+</style>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Appendix C — Cas d’utilisation - Ouvrir la caisse</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span id="sec-CU_Ouvrir_caisse" class="quarto-section-identifier d-none d-lg-block">Appendix C — Cas d’utilisation - Ouvrir la caisse</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Théorie</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'activités.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes d'états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Diagrammes de déploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Exercices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Diagramme_états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Diagramme d’états</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Diagramme_activité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Diagramme d’activité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Identifier_GRASP_dans_GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Identifier GRASP dans GoF</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Annexes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#terminologie" id="toc-terminologie" class="nav-link active" data-scroll-target="#terminologie"><span class="toc-section-number">C.1</span>  Terminologie</a></li>
+  <li><a href="#cas-dutilisation-ouvrir-la-caisse" id="toc-cas-dutilisation-ouvrir-la-caisse" class="nav-link" data-scroll-target="#cas-dutilisation-ouvrir-la-caisse"><span class="toc-section-number">C.2</span>  Cas <span style="white-space:nowrap">d’utilisation :</span> Ouvrir la caisse</a></li>
+  <li><a href="#modèle-du-domaine-partiel" id="toc-modèle-du-domaine-partiel" class="nav-link" data-scroll-target="#modèle-du-domaine-partiel"><span class="toc-section-number">C.3</span>  Modèle du domaine partiel</a></li>
+  <li><a href="#diagramme-de-séquence-système-dss" id="toc-diagramme-de-séquence-système-dss" class="nav-link" data-scroll-target="#diagramme-de-séquence-système-dss"><span class="toc-section-number">C.4</span>  Diagramme de séquence système (DSS)</a></li>
+  <li><a href="#contrats-dopération" id="toc-contrats-dopération" class="nav-link" data-scroll-target="#contrats-dopération"><span class="toc-section-number">C.5</span>  Contrats d’opération</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Le contexte est l’étude de cas du système POS NextGen, notamment le scénario principal du cas d’utilisation <em>Ouvrir la caisse</em> (anglais <em>Cash In</em>). C’est l’acte d’un caissier ou d’une caissière qui arrive avec son tiroir-caisse contenant déjà de l’argent, qui s’authentifie sur la caisse (le registre) et saisit le montant en espèces dans le tiroir-caisse.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En effet, ce cas d’utilisation n’est pas présenté en détail par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>, bien qu’il soit mentionné dans son livre dans un diagramme de cas d’utilisation. Alors, nous proposons pour cet exercice des modifications au modèle du domaine présenté par Larman à fin de modéliser cette fonctionnalité additionnelle du logiciel.</p>
+</div>
+</div>
+<div id="fig-DCU_ouvrir_la_caisse" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="281px" preserveaspectratio="none" style="width:271px;height:281px;background:#00000000;" version="1.1" viewbox="0 0 271 281" width="271px" zoomandpan="magnify"><defs></defs><g><!--MD5=[02e3d66293b677af131207678fb6369e]
+cluster NextGen--><g id="cluster_NextGen"><rect height="257" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.5;fill:none;" width="106" x="80.5" y="3.5"></rect><text fill="#000000" font-family="Arial" font-size="7" font-weight="bold" lengthadjust="spacing" textlength="34" x="116.5" y="10.9976">NextGen</text></g><g id="elem_other"><ellipse cx="133.4853" cy="28.5118" fill="#F1F1F1" rx="9.9853" ry="7.2618" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="6" x="130.4853" y="29.9352">...</text></g><g id="elem_TV"><ellipse cx="133.3919" cy="133.4284" fill="#F1F1F1" rx="39.8919" ry="9.1784" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="59" x="103.0178" y="135.1306">Traiter une vente</text></g><g id="elem_TR"><ellipse cx="133.4727" cy="97.5945" fill="#F1F1F1" rx="40.7227" ry="9.3445" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="61" x="102.4054" y="99.2045">Traiter les retours</text></g><g id="elem_OLC"><ellipse cx="133.4172" cy="62.0834" fill="#FFFF00" rx="36.9172" ry="8.5834" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="51.5" x="106.1672" y="63.9572">Ouvrir la caisse</text></g><g id="elem_AA"><ellipse cx="133.4826" cy="169.5965" fill="#F1F1F1" rx="39.4826" ry="9.0965" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="58" x="103.45" y="171.3443">Analyser l'activité</text></g><g id="elem_GS"><ellipse cx="133.5775" cy="243.5155" fill="#F1F1F1" rx="39.0775" ry="9.0155" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="57" x="103.8829" y="245.3083">Gérer la sécurité</text></g><g id="elem_GU"><ellipse cx="133.5572" cy="206.4614" fill="#F1F1F1" rx="45.0572" ry="10.2114" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="71" x="98.0572" y="207.8848">Gérer les utilisateurs</text></g><!--MD5=[0ba5ee7700168656dc1b457c6fe9fdac]
+entity Client--><g id="elem_Client"><ellipse cx="31" cy="73.25" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,77.25 L31,90.75 M24.5,81.25 L37.5,81.25 M31,90.75 L24.5,98.25 M31,90.75 L37.5,98.25 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="19.5" x="21.25" y="105.4976">Client</text></g><!--MD5=[84eb184a08144e15816666ccc309fe96]
+entity Caissier--><g id="elem_Caissier"><ellipse cx="31" cy="17.75" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,21.75 L31,35.25 M24.5,25.75 L37.5,25.75 M31,35.25 L24.5,42.75 M31,35.25 L37.5,42.75 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="27" x="17.5" y="49.9976">Caissier</text></g><!--MD5=[327d8b0cc9017ef0d2f4054fa6547e20]
+entity Manager--><g id="elem_Manager"><ellipse cx="31" cy="128.75" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,132.75 L31,146.25 M24.5,136.75 L37.5,136.75 M31,146.25 L24.5,153.75 M31,146.25 L37.5,153.75 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="30" x="16" y="160.9976">Manager</text></g><!--MD5=[cd81128ed1873346d3678821c65bf0c5]
+entity SV--><g id="elem_SV"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="55" x="3.5" y="180.25"></rect><text fill="#000000" font-family="Arial" font-size="7" font-style="italic" lengthadjust="spacing" textlength="31" x="15.5" y="191.7476">«acteur»</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="45" x="8.5" y="199.896">Système des</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="23.5" x="19.25" y="208.0444">ventes</text></g><!--MD5=[4ec5e0198a45b1576103bd8a641ef52b]
+entity AS--><g id="elem_AS"><ellipse cx="31" cy="236.5" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,240.5 L31,254 M24.5,244.5 L37.5,244.5 M31,254 L24.5,261.5 M31,254 L37.5,261.5 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="50" x="6" y="268.7476">Administrateur</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="29.5" x="16.25" y="276.896">système</text></g><!--MD5=[68f06c1af5a9d7c9720ef620a835ad6b]
+entity SAP--><g id="elem_SAP"><ellipse cx="238.25" cy="191" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M238.25,195 L238.25,208.5 M231.75,199 L244.75,199 M238.25,208.5 L231.75,216 M238.25,208.5 L244.75,216 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="25" x="225.75" y="223.2476">Service</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="46.5" x="215" y="231.396">d'autorisation</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="51.5" x="212.5" y="239.5444">des paiements</text></g><!--MD5=[87439e3fb2bd72484276c19727d934ee]
+entity CT--><g id="elem_CT"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="59.5" x="208.5" y="82.75"></rect><text fill="#000000" font-family="Arial" font-size="7" font-style="italic" lengthadjust="spacing" textlength="31" x="222.75" y="94.2476">«acteur»</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="49.5" x="213.5" y="102.396">Calculateur de</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="18.5" x="229" y="110.5444">taxes</text></g><!--MD5=[8b944653c655024075d894af29a33c78]
+entity SC--><g id="elem_SC"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="52" x="212.25" y="134.75"></rect><text fill="#000000" font-family="Arial" font-size="7" font-style="italic" lengthadjust="spacing" textlength="31" x="222.75" y="146.2476">«acteur»</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="41" x="217.75" y="154.396">Système de</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="42" x="217.25" y="162.5444">comptabilité</text></g><!--MD5=[25475f53477c62fccaf4519fe1cb9018]
+entity SRH--><g id="elem_SRH"><rect fill="#F1F1F1" height="42.5938" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="51" x="212.75" y="22.75"></rect><text fill="#000000" font-family="Arial" font-size="7" font-style="italic" lengthadjust="spacing" textlength="31" x="222.75" y="34.2476">«acteur»</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="41" x="217.75" y="42.396">Système de</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="39" x="218.75" y="50.5444">ressources</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="34" x="221.25" y="58.6929">humaines</text></g><!--MD5=[a4af6c79cd77509d2577919071b95e7c]
+link Client to TV--><g id="link_Client_TV"><path d="M40.79,94.595 C49.64,100.65 63.51,109.565 76.5,115.5 C86.1,119.885 97.07,123.645 106.77,126.575 " fill="none" id="Client-TV" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[cf5b8f814adf84dfcbf45a21f211ce2b]
+link Client to TR--><g id="link_Client_TR"><path d="M40.865,88.875 C53.285,90.04 75.925,92.16 95.655,94.005 " fill="none" id="Client-TR" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[24ae2b25fb851abacb8a601b9cb4c3ca]
+link Caissier to TV--><g id="link_Caissier_TV"><path d="M44.52,43.38 C49.465,48.07 54.79,53.88 58.5,60 C71.94,82.175 58.115,97.21 76.5,115.5 C82.775,121.745 91.21,125.825 99.65,128.49 " fill="none" id="Caissier-TV" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[3fa274815b395ef88746e5a565fab111]
+link Caissier to TR--><g id="link_Caissier_TR"><path d="M44.595,45.74 C49.025,50.25 53.995,55.33 58.5,60 C66.575,68.375 66.67,72.78 76.5,79 C84.87,84.3 94.91,88.225 104.19,91.065 " fill="none" id="Caissier-TR" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[40119df1e303bb9a1170037612dea804]
+link Caissier to OLC--><g id="link_Caissier_OLC"><path d="M44.56,36.295 C61.105,41.105 89.895,49.47 110.12,55.35 " fill="none" id="Caissier-OLC" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[8e42c7eeb2009627d76712832af49bfa]
+link Manager to TV--><g id="link_Manager_TV"><path d="M46.04,142.065 C59.2,140.77 79.125,138.81 96.59,137.085 " fill="none" id="Manager-TV" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[d1f4d62583eb8949925c41e5bc7d220d]
+link Manager to TR--><g id="link_Manager_TR"><path d="M46.18,133.065 C54.735,127.325 65.89,120.4 76.5,115.5 C85.985,111.12 96.835,107.385 106.47,104.47 " fill="none" id="Manager-TR" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[4e0d39716b8bb5f208a166f93dc7913d]
+link TV to SAP--><g id="link_TV_SAP"><path d="M164.8,139.31 C173.685,142 182.995,145.895 190.5,151.5 C201.91,160.015 200.005,166.575 208.5,178 C210.615,180.845 212.865,183.77 215.145,186.675 " fill="none" id="TV-SAP" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[b5a9bc19ca11d201cb2d4e288f702200]
+link TV to CT--><g id="link_TV_CT"><path d="M157.52,126.055 C167.67,122.83 179.675,119 190.5,115.5 C196.29,113.63 202.475,111.61 208.4,109.67 " fill="none" id="TV-CT" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[98879b5508afbf305f514b14e556b3bc]
+link TV to SC--><g id="link_TV_SC"><path d="M165.41,139.1 C180.38,141.77 198.06,144.92 212.19,147.44 " fill="none" id="TV-SC" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[fa9d3fc64d25e813f9d56b5c9fe306a1]
+link OLC to SRH--><g id="link_OLC_SRH"><path d="M163.315,56.915 C178.895,54.21 197.845,50.925 212.725,48.34 " fill="none" id="OLC-SRH" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[9ef5e90fa4eb89e3ee34273dcb7c9dcd]
+link SV to AA--><g id="link_SV_AA"><path d="M58.565,190.035 C73.895,185.805 92.935,180.55 107.925,176.415 " fill="none" id="SV-AA" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[b64e204c3aac8d777ae244bd2bcae980]
+link AS to GS--><g id="link_AS_GS"><path d="M56.07,252.595 C68.86,251.085 84.705,249.21 98.685,247.555 " fill="none" id="AS-GS" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[614cbf76f86735ef8f82518016377b70]
+link AS to GU--><g id="link_AS_GU"><path d="M56.025,237.465 C62.485,233.19 69.59,228.89 76.5,225.5 C85.37,221.145 95.49,217.395 104.685,214.405 " fill="none" id="AS-GU" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[5d4ce0f0ab1b32aefee780ccb2822a69]
+@startuml
+skinparam style strictuml
+skinparam defaultFontName Arial
+skinparam backgroundcolor transparent
+scale 0.5
+left to right direction
+skinparam packageStyle rect
+skinparam defaulttextalignment center
+actor Client
+actor Caissier
+actor Manager
+rectangle "Système des\nventes" <<acteur>> as SV
+actor "Administrateur\nsystème" as AS
+actor "Service\nd'autorisation\ndes paiements" as SAP
+rectangle "Calculateur de\ntaxes" <<acteur>> as CT
+rectangle "Système de\ncomptabilité" <<acteur>> as SC
+rectangle "Système de\nressources\nhumaines" <<acteur>> as SRH
+rectangle "NextGen" {
+  (...) as other
+  (Traiter une vente) as TV
+  (Traiter les retours) as TR
+  (Ouvrir la caisse) as OLC #yellow
+  (Analyser l'activité) as AA
+  (Gérer la sécurité) as GS
+  (Gérer les utilisateurs) as GU
+  Client -d- TV
+  Client -d- TR
+  Caissier -d- TV
+  Caissier -d- TR
+  Caissier -d- OLC
+  Manager -d- TV
+  Manager -d- TR
+  TV -d- SAP
+  TV -d- CT
+  TV -d- SC
+  OLC -d- SRH
+  SV -d- AA
+  AS -d- GS
+  AS -d- GU
+}
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;C.1: Diagramme de cas d’utilisation pour le système NextGen</figcaption><p></p>
+</figure>
+</div>
+<section id="terminologie" class="level2" data-number="C.1">
+<h2 data-number="C.1" class="anchored" data-anchor-id="terminologie"><span class="header-section-number">C.1</span> Terminologie</h2>
+<p>Quelques termes du domaine d’affaires doivent être compris avant de <span style="white-space:nowrap">procéder :</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Series4000CashDrawerProductTrainingVideo_screenshot_youtube.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Plateau-billets et tiroir-caisse. Capture d’écran de la vidéo sur <a href="https://youtu.be/lth_lAacXVQ?t=34">YouTube</a>.</figcaption><p></p>
+</figure>
+</div>
+<dl>
+<dt>Tiroir-caisse</dt>
+<dd>
+C’est la partie de la caisse qui s’ouvre, dans laquelle on peut placer un plateau-billets.
+</dd>
+<dt>Plateau-billets</dt>
+<dd>
+C’est un conteneur pour les billets d’argent et des pièces de monnaie qui facilite le changement de personnel à une caisse. Chaque caissier ou caissière possède un plateau-billets et l’apporte lorsqu’il commence ou termine un quart de travail.
+</dd>
+</dl>
+</section>
+<section id="cas-dutilisation-ouvrir-la-caisse" class="level2" data-number="C.2">
+<h2 data-number="C.2" class="anchored" data-anchor-id="cas-dutilisation-ouvrir-la-caisse"><span class="header-section-number">C.2</span> Cas <span style="white-space:nowrap">d’utilisation :</span> Ouvrir la caisse</h2>
+<p><strong>Acteur principal : Caissier</strong></p>
+<p><strong>Préconditions :</strong> La caisse est libre et son tiroir-caisse est vide (il n’y a pas de plateau dedans).</p>
+<p><strong>Garanties de succès (postconditions) :</strong> Le caissier ou la caissière est authentifiée. Son plateau-billets est placé dans le tiroir-caisse et son identificateur est enregistré. Le montant d’argent du plateau est enregistré. L’heure de l’arrivée du caissier est enregistrée.</p>
+<p><strong>Scénario principal (succès)</strong></p>
+<ol type="1">
+<li><p>Le Caissier ou la caissière arrive à la caisse avec son plateau-billets.</p></li>
+<li><p>Le Caissier ou la caissière saisit son identifiant et son mot de passe dans la boîte de dialogue d’authentification.</p></li>
+<li><p>Le Système authentifie le Caissier ou la caissière.</p></li>
+<li><p>Le Système ouvre le tiroir-caisse et demande au Caissier ou à la caissière de poser son plateau dans le tiroir-caisse.</p></li>
+<li><p>Le Caissier ou la caissière pose son plateau dans le tiroir-caisse.</p></li>
+<li><p>Le Système reconnaît l’identificateur du plateau.</p></li>
+<li><p>Le Système demande au Caissier ou à la caissière de saisir le montant d’argent du plateau.</p></li>
+<li><p>Le Caissier ou la caissière saisit le montant d’argent du plateau.</p></li>
+<li><p>Le Système demande au Caissier ou à la caissière de fermer le tiroir-caisse.</p></li>
+<li><p>Le Caissier ou la caissière ferme le tiroir-caisse.</p></li>
+</ol>
+<p><strong>Spécifications particulières :</strong></p>
+<p>Les caisses sont configurées avec un modèle de plateau-billets comme <span style="white-space:nowrap">celui-ci :</span> <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=lth_lAacXVQ#t=32s">(voir exemple sur Youtube)</a></p>
+<p><strong>Fréquence d’occurrence :</strong> Normalement, au début du quart de travail de chaque caissier.</p>
+</section>
+<section id="modèle-du-domaine-partiel" class="level2" data-number="C.3">
+<h2 data-number="C.3" class="anchored" data-anchor-id="modèle-du-domaine-partiel"><span class="header-section-number">C.3</span> Modèle du domaine partiel</h2>
+<p>Voici un exemple pour le système POS NextGen. Noter les nouvelles classes conceptuelles <strong>PlateauBillets</strong> (un objet physique) et <strong>MisePlateau</strong> (une transaction) faisant partie du scénario d’<em>Ouvrir la caisse</em>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/MDD_POS_NextGen.drawio.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Modèle du domaine partiel</figcaption><p></p>
+</figure>
+</div>
+<p>On remarque que lorsqu’un Registre (Caisse) n’a pas de Caissier (l’état du système au début du cas d’utilisation), l’objet Registre n’est associé à aucun objet Caissier. Nous avons donc modifié les cardinalités de l’association en conséquence. C’est une différence par rapport au modèle du domaine de base présenté par Larman, qui n’avait pas considéré ce cas d’utilisation, bien qu’il est dans l’ensemble des spécifications du système.</p>
+<p>Les associations en rouge sont celles qui sont affectées par la dynamique de ce cas d’utilisation.</p>
+</section>
+<section id="diagramme-de-séquence-système-dss" class="level2" data-number="C.4">
+<h2 data-number="C.4" class="anchored" data-anchor-id="diagramme-de-séquence-système-dss"><span class="header-section-number">C.4</span> Diagramme de séquence système (DSS)</h2>
+<p>La <a href="#fig-DSS_ouvrir_la_caisse">figure&nbsp;<span>C.2</span></a> est le diagramme de séquence système (DSS) pour le scénario «&nbsp;Ouvrir la caisse&nbsp;».</p>
+<div id="fig-DSS_ouvrir_la_caisse" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="320px" preserveaspectratio="none" style="width:390px;height:320px;background:#FFFFFF;" version="1.1" viewbox="0 0 390 320" width="390px" zoomandpan="magnify"><defs></defs><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="212" x="88" y="10"></rect><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="202" x="93" y="27.9951">Scénario: Ouvrir la caisse</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="37" x2="37" y1="118.5938" y2="313.3906"></line><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="344" x2="344" y1="118.5938" y2="313.3906"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="59" x="5" y="115.292">:Caissier</text><ellipse cx="37.5" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"></ellipse><path d="M37.5,58.7969 L37.5,85.7969 M24.5,66.7969 L50.5,66.7969 M37.5,85.7969 L24.5,100.7969 M37.5,85.7969 L50.5,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"></path><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="305" y="87.2969"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="65" x="312" y="107.292">:Système</text><polygon fill="#181818" points="332.5,145.7266,342.5,149.7266,332.5,153.7266" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="149.7266" y2="149.7266"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="150" x="116" y="144.6606">démarrerOuvrirCaisse()</text><polygon fill="#181818" points="332.5,174.8594,342.5,178.8594,332.5,182.8594" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="178.8594" y2="178.8594"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="283" x="49.5" y="173.7935">authentifier(identifiant : String, mdp : String)</text><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="203.9922"></line><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="211.9922"></line><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="37.5" x2="343.5" y1="207.9922" y2="207.9922"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="203" x="89.5" y="202.9263">confirmation, ouverture du tiroir</text><polygon fill="#181818" points="332.5,233.125,342.5,237.125,332.5,241.125" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="237.125" y2="237.125"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="207" x="87.5" y="232.0591">poserPlateau(identifiant : String)</text><polygon fill="#181818" points="332.5,262.2578,342.5,266.2578,332.5,270.2578" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="266.2578" y2="266.2578"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="217" x="82.5" y="261.1919">saisirMontant(montant : Monnaie)</text><polygon fill="#181818" points="332.5,291.3906,342.5,295.3906,332.5,299.3906" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="295.3906" y2="295.3906"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="84" x="149" y="290.3247">fermerTiroir()</text><!--MD5=[59e5c52b5a02813a0257a7fc16f7c4ae]
+@startuml
+skinparam style strictuml
+skinparam defaultFontName Arial
+skinparam SequenceMessageAlign center
+title Scénario: Ouvrir la caisse
+actor ":Caissier" as C
+participant ":Système" as S
+C->S: démarrerOuvrirCaisse()
+C->S: authentifier(identifiant : String, mdp : String)
+C<<- -S: confirmation, ouverture du tiroir
+C->S: poserPlateau(identifiant : String)
+C->S: saisirMontant(montant : Monnaie)
+C->S: fermerTiroir()
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;C.2: Diagramme de séquence système (DSS) pour le scénario «&nbsp;Ouvrir la caisse&nbsp;»</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="contrats-dopération" class="level2" data-number="C.5">
+<h2 data-number="C.5" class="anchored" data-anchor-id="contrats-dopération"><span class="header-section-number">C.5</span> Contrats d’opération</h2>
+<p>Voici les contrats pour chaque opération système.</p>
+<p><strong><span style="white-space:nowrap">Opération :</span> démarrerOuvrirCaisse()</strong></p>
+<p><strong><span style="white-space:nowrap">Postconditions :</span></strong></p>
+<ul>
+<li>Une instance <em>mp</em> de MisePlateau a été créée.</li>
+</ul>
+<p><strong><span style="white-space:nowrap">Opération :</span> authentifier(identifiant : String, mdp : String)</strong></p>
+<p><strong><span style="white-space:nowrap">Postconditions :</span></strong></p>
+<ul>
+<li><em>mp</em> a été associé à un Caissier, sur la base de correspondance avec <strong>identifiant</strong>.</li>
+<li>Le Registre en cours a été associé à un Caissier, sur la base de correspondance avec <strong>identifiant</strong>.</li>
+</ul>
+<p><strong><span style="white-space:nowrap">Opération :</span> poserPlateau(identifiant : String)</strong></p>
+<p><strong>Postconditions</strong></p>
+<ul>
+<li><em>mp</em> a été associé à un PlateauBillets, sur la base de correspondance avec <strong>identifiant</strong>.</li>
+<li>Le Registre en cours a été associé à un PlateauBillets, sur la base de correspondance avec <strong>identifiant</strong>.</li>
+</ul>
+<p><strong><span style="white-space:nowrap">Opération :</span> saisirMontant(montant : Monnaie)</strong></p>
+<p><strong>Postconditions</strong></p>
+<ul>
+<li><em>mp.montant</em> est devenu <strong>montant</strong>.</li>
+</ul>
+<p><strong><span style="white-space:nowrap">Opération :</span> fermerTiroir()</strong></p>
+<p><strong><span style="white-space:nowrap">Postconditions :</span></strong></p>
+<ul>
+<li><em>mp.dateHeure</em> est devenue la date et l’heure actuelle.</li>
+<li><em>mp</em> a été associé à GrandLivre.</li>
+<li><em>mp</em> a été associé à Registre.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
