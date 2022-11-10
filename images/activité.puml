@@ -1,0 +1,10 @@
+@startuml Diagramme_Activté
+start
+:Démarrer;
+if (en français) then (oui)
+  :Bonjour;
+else (non)
+  :Hi;
+endif
+stop
+@enduml
