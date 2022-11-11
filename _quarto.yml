@@ -45,10 +45,10 @@ book:
       - Outils-UML.qmd
       - GRASP-GoF.qmd
       - Fiabilité.qmd
-      - Diagrammes d'activités.qmd
-      - Diagrammes d'états.qmd
+      - DiagrammesActivites.qmd
+      - DiagrammesEtats.qmd
       - ConceptionPackages.qmd
-      - Diagrammes de déploiement.qmd
+      - DiagrammesDeploiement.qmd
       - Laboratoires.qmd
       - references.qmd
     - part: Exercices
