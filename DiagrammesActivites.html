@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Analyse et conception de logiciels - 16&nbsp; Diagrammes d’activités</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./DiagrammesEtats.html" rel="next">
+<link href="./Fiabilité.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+<style type="text/css">
+  @font-face {
+    font-family: 'xkcd Script';
+    src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
+  }
+</style>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Théorie</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesActivites.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesDeploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Exercices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Annexes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#diagrammes-de-flot-de-données-dfd" id="toc-diagrammes-de-flot-de-données-dfd" class="nav-link active" data-scroll-target="#diagrammes-de-flot-de-données-dfd"><span class="toc-section-number">16.1</span>  Diagrammes de flot de données (DFD)</a></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">16.2</span>  Exercices</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Ce chapitre contient des informations sur les diagrammes d’activités en UML. Les détails se trouvent dans le chapitre F25/A28&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Les diagrammes d’activités servent à modéliser des processus d’affaires (de métier), des enchaînements d’activités (workflows), des flots de données et des algorithmes complexes.</p>
+</div>
+</div>
+</div>
+<p>Voici les éléments <span style="white-space:nowrap">importants :</span></p>
+<ul>
+<li>début et fin (activité)</li>
+<li>partition</li>
+<li>action</li>
+<li>nœud d’objet</li>
+<li>débranchement et jointure (parallélisme)</li>
+<li>décision et fusion (exclusion mutuelle)</li>
+</ul>
+<p>La <a href="#fig-ActivityDiagramExampleGitCommit">figure&nbsp;<span>16.1</span></a> présente un exemple de diagramme d’activité décrivant de manière générale une partie du processus de travail d’une personne utilisant <code>git</code> pour la gestion de code source.</p>
+<div id="fig-ActivityDiagramExampleGitCommit" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="440px" preserveaspectratio="none" style="width:535px;height:440px;background:#FFFFFF;" version="1.1" viewbox="0 0 535 440" width="535px" zoomandpan="magnify"><defs></defs><g><path d="M232.25,10 L232.25,18.5664 L212.25,22.5664 L232.25,26.5664 L232.25,35.1328 A0,0 0 0 0 232.25,35.1328 L292.25,35.1328 A0,0 0 0 0 292.25,35.1328 L292.25,20 L282.25,10 L232.25,10 A0,0 0 0 0 232.25,10 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M282.25,10 L282.25,20 L292.25,20 L282.25,10 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="39" x="238.25" y="27.0669">Début</text><ellipse cx="202.25" cy="22.5664" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"></ellipse><path d="M273.75,59.5508 L273.75,68.1172 L253.75,72.1172 L273.75,76.1172 L273.75,84.6836 A0,0 0 0 0 273.75,84.6836 L341.75,84.6836 A0,0 0 0 0 341.75,84.6836 L341.75,69.5508 L331.75,59.5508 L273.75,59.5508 A0,0 0 0 0 273.75,59.5508 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M331.75,59.5508 L331.75,69.5508 L341.75,69.5508 L331.75,59.5508 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="47" x="279.75" y="76.6177">Activité</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="103" x="150.75" y="55.1328"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="83" x="160.75" y="76.2715">Rédiger code</text><path d="M272.75,113.5195 L272.75,122.0859 L252.75,126.0859 L272.75,130.0859 L272.75,138.6523 A0,0 0 0 0 272.75,138.6523 L379.75,138.6523 A0,0 0 0 0 379.75,138.6523 L379.75,123.5195 L369.75,113.5195 L272.75,113.5195 A0,0 0 0 0 272.75,113.5195 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M369.75,113.5195 L369.75,123.5195 L379.75,123.5195 L369.75,113.5195 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="86" x="278.75" y="130.5864">Nœud d'objet</text><rect fill="#F1F1F1" height="33.9688" style="stroke:#181818;stroke-width:0.5;" width="101" x="151.75" y="109.1016"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="81" x="161.75" y="130.2402">Code modifié</text><path d="M389.75,268.2305 L389.75,293.3633 L523.75,293.3633 L523.75,278.2305 L513.75,268.2305 L389.75,268.2305 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M513.75,268.2305 L513.75,278.2305 L523.75,278.2305 L513.75,268.2305 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="113" x="395.75" y="285.2974">Décision et fusion</text><polygon fill="#F1F1F1" points="161.25,163.0703,243.25,163.0703,255.25,175.875,243.25,188.6797,161.25,188.6797,149.25,175.875,161.25,163.0703" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="Arial" font-size="11" lengthadjust="spacing" textlength="40" x="182.25" y="173.2808">Garder</text><text fill="#000000" font-family="Arial" font-size="11" lengthadjust="spacing" textlength="82" x="161.25" y="186.0854">modifications?</text><text fill="#000000" font-family="Arial" font-size="11" lengthadjust="spacing" textlength="19" x="130.25" y="173.2808">Oui</text><text fill="#000000" font-family="Arial" font-size="11" lengthadjust="spacing" textlength="22" x="255.25" y="173.2808">Non</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="163" x="25" y="198.6797"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="143" x="35" y="219.8184">Ajouter code à staging</text><rect fill="#F1F1F1" height="33.9688" style="stroke:#181818;stroke-width:0.5;" width="110" x="51.5" y="266.6172"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="90" x="61.5" y="287.7559">Code "staged"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="191" x="11" y="320.5859"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="171" x="21" y="341.7246">Faire "commit" au dépôt git</text><rect fill="#F1F1F1" height="47.9375" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="152" x="222" y="198.6797"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="132" x="232" y="219.8184">Défaire modifications</text><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="51" x="272.5" y="233.7871">au code</text><polygon fill="#F1F1F1" points="202.25,360.5547,214.25,372.5547,202.25,384.5547,190.25,372.5547,202.25,360.5547" style="stroke:#181818;stroke-width:0.5;"></polygon><path d="M233.25,402.9883 L233.25,411.5547 L213.25,415.5547 L233.25,419.5547 L233.25,428.1211 A0,0 0 0 0 233.25,428.1211 L272.25,428.1211 A0,0 0 0 0 272.25,428.1211 L272.25,412.9883 L262.25,402.9883 L233.25,402.9883 A0,0 0 0 0 233.25,402.9883 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M262.25,402.9883 L262.25,412.9883 L272.25,412.9883 L262.25,402.9883 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="18" x="239.25" y="420.0552">Fin</text><ellipse cx="202.25" cy="415.5547" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;fill:none;"></ellipse><ellipse cx="202.25" cy="415.5547" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"></ellipse><line style="stroke:#181818;stroke-width:1.0;" x1="202.25" x2="202.25" y1="32.5664" y2="55.1328"></line><polygon fill="#181818" points="198.25,45.1328,202.25,55.1328,206.25,45.1328,202.25,49.1328" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="202.25" x2="202.25" y1="89.1016" y2="109.1016"></line><polygon fill="#181818" points="198.25,99.1016,202.25,109.1016,206.25,99.1016,202.25,103.1016" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="106.5" x2="106.5" y1="232.6484" y2="266.6172"></line><polygon fill="#181818" points="102.5,256.6172,106.5,266.6172,110.5,256.6172,106.5,260.6172" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="106.5" x2="106.5" y1="300.5859" y2="320.5859"></line><polygon fill="#181818" points="102.5,310.5859,106.5,320.5859,110.5,310.5859,106.5,314.5859" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="149.25" x2="106.5" y1="175.875" y2="175.875"></line><line style="stroke:#181818;stroke-width:1.0;" x1="106.5" x2="106.5" y1="175.875" y2="198.6797"></line><polygon fill="#181818" points="102.5,188.6797,106.5,198.6797,110.5,188.6797,106.5,192.6797" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="255.25" x2="298" y1="175.875" y2="175.875"></line><line style="stroke:#181818;stroke-width:1.0;" x1="298" x2="298" y1="175.875" y2="198.6797"></line><polygon fill="#181818" points="294,188.6797,298,198.6797,302,188.6797,298,192.6797" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="106.5" x2="106.5" y1="354.5547" y2="372.5547"></line><line style="stroke:#181818;stroke-width:1.0;" x1="106.5" x2="190.25" y1="372.5547" y2="372.5547"></line><polygon fill="#181818" points="180.25,368.5547,190.25,372.5547,180.25,376.5547,184.25,372.5547" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="298" x2="298" y1="246.6172" y2="372.5547"></line><line style="stroke:#181818;stroke-width:1.0;" x1="298" x2="214.25" y1="372.5547" y2="372.5547"></line><polygon fill="#181818" points="224.25,368.5547,214.25,372.5547,224.25,376.5547,220.25,372.5547" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="202.25" x2="202.25" y1="143.0703" y2="163.0703"></line><polygon fill="#181818" points="198.25,153.0703,202.25,163.0703,206.25,153.0703,202.25,157.0703" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="202.25" x2="202.25" y1="384.5547" y2="404.5547"></line><polygon fill="#181818" points="198.25,394.5547,202.25,404.5547,206.25,394.5547,202.25,398.5547" style="stroke:#181818;stroke-width:1.0;"></polygon><!--MD5=[9a4888c586da9a16d4f5ef3c105ff9d6]
+@startuml
+skinparam style strictuml
+skinparam DefaultTextAlignment center
+skinparam defaultFontName Arial
+start
+note right : Début
+:Rédiger code;
+note right : Activité
+:Code modifié]
+note right : Nœud d'objet
+
+if (Garder\nmodifications?) then (Oui)
+    note right : Décision et fusion
+    :Ajouter code à staging;
+    :Code "staged"]
+    :Faire "commit" au dépôt git;    
+else (Non)
+    :Défaire modifications
+    au code;
+endif
+stop
+note right : Fin
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;16.1: Diagramme d’activités pour un processus simple avec git. <a href="http://www.plantuml.com/plantuml/uml/VL9BRjj03DtFAGXlRE_QhRreZAG9ya5QH6wxoc8yGqcC98unmscIS_G2tVeSGkzLoWfGEq0j29Gmxv5yV9op93PAxbgJ6kAjZRQ39AyjQepatY4RwvegXipUXJP4a6WvAOGiPWfIKm9zBTIM_NCa4MGe0miGmmzY7vwJcVuhvx6qkPM1mRP3k8sKXfJhzRcPhcjC245gZ0dQ41ge8jfzgUBx5SmwswZ8757xukjKlyGwJDkYrvuHLdTtyAtu_50SD8UF7-Rc__sJhOR09qLUSmCt8KUsxIdQI-Cy52xILaxHlgAQ5DE1g4Fl96OyW2x6v3M-oAgbYZlr7Pm6ZAVMDspOS124I5Kji82BVhV9OXOF_SvJXH5SyBWyvgoSq4-IVcSMvuf25poLrEyUZsdtVtvb3tuQDayenb09ioiRlTOS4vmL2fm-pOSrCSo-P9eRqEUz84T9YO02PHx-zgJ5wYbaUHC8_MyTorR4rN94zy8cXPwXdpoEPvUMz2vCNEWwaWdO3BxVROD0HR8S60PRlLYp-y2Za8KsB_T9Huhtc6QFrY0hf5Q6xV7ubyJcJ44r-Yy0">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<section id="diagrammes-de-flot-de-données-dfd" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="diagrammes-de-flot-de-données-dfd"><span class="header-section-number">16.1</span> Diagrammes de flot de données (DFD)</h2>
+<p>Pour la modélisation de flot de données, il existe une notation pour les <a href="https://fr.wikipedia.org/wiki/Diagramme_de_flux_de_donn%C3%A9es">diagrammes de flots de données (DFD)</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>. Il ne s’agit pas de l’UML, mais cette notation est encore utilisée (depuis les années 1970).</p>
+<p>Un exemple de diagramme d’activité dans le cadre d’un cours de programmation utilisant GitHub Classrooms est dans la <a href="#fig-GitHubClassroomActivities">figure&nbsp;<span>16.2</span></a>. Ce diagramme qui explique comment GitHub Classrooms permet à l’étudiant qui accepte un devoir (<em>assignment</em> en anglais) sur GitHub Classrooms de choisir son identité universitaire, mais seulement si l’enseignant a téléversé la liste de classe <em>avant</em> d’envoyer les invitations aux étudiants.</p>
+<div id="fig-GitHubClassroomActivities" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="637px" preserveaspectratio="none" style="width:745px;height:637px;background:#FFFFFF;" version="1.1" viewbox="0 0 745 637" width="745px" zoomandpan="magnify"><defs></defs><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="523" x="109.5" y="15"></rect><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="301" x="114.5" y="32.9951">Enchaînement d'activités pour chaque</text><text fill="#000000" font-family="Arial" font-size="14" font-style="italic" font-weight="bold" lengthadjust="spacing" textlength="82" x="420.5" y="32.9951">Classroom</text><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="120" x="507.5" y="32.9951">(groupe-cours)</text><ellipse cx="141.5" cy="85.9951" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"></ellipse><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="123" x="80" y="115.9951"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="103" x="90" y="137.1338">Créer Classroom</text><rect fill="#FFDDDD" height="47.9375" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="167" x="58" y="169.9639"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="147" x="68" y="191.1025">Importer liste de classe</text><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="129" x="77" y="205.0713">(Identifiants Moodle)</text><rect fill="#F1F1F1" height="47.9375" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="131" x="76" y="237.9014"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="111" x="86" y="259.04">Créer Assignment</text><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="106" x="88.5" y="273.0088">(Individual/Team)</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="241" x="21" y="305.8389"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="221" x="31" y="326.9775">Partager (courriel) l'URL d'invitation</text><line style="stroke:#000000;stroke-width:1.5;" x1="15" x2="15" y1="50.042" y2="625.6201"></line><rect fill="#DDFFDD" height="575.5781" style="stroke:#DDFFDD;stroke-width:1.0;" width="233" x="266" y="50.042"></rect><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="343.5" y="359.8076"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="60" x="353.5" y="380.9463">Open URL</text><rect fill="#FFDDDD" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="178" x="294.5" y="413.7764"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="158" x="304.5" y="434.915">Choisir identifiant Moodle</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="223" x="272" y="467.7451"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="203" x="282" y="488.8838">Choisir équipe (ou créer équipe)</text><line style="stroke:#000000;stroke-width:1.5;" x1="266" x2="266" y1="50.042" y2="625.6201"></line><rect fill="#F1F1F1" height="61.9063" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="216" x="505" y="521.7139"></rect><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="154" x="536" y="542.8525">Dupliquer (fork) le dépôt</text><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="170" x="528" y="556.8213">(au besoin, avec le compte</text><text fill="#000000" font-family="Arial" font-size="12" lengthadjust="spacing" textlength="196" x="515" y="570.79">d'un membre de l'organisation)</text><ellipse cx="613" cy="614.6201" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;fill:none;"></ellipse><ellipse cx="613" cy="614.6201" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"></ellipse><line style="stroke:#000000;stroke-width:1.5;" x1="499" x2="499" y1="50.042" y2="625.6201"></line><line style="stroke:#000000;stroke-width:1.5;" x1="725" x2="725" y1="50.042" y2="625.6201"></line><line style="stroke:#181818;stroke-width:1.0;" x1="141.5" x2="141.5" y1="95.9951" y2="115.9951"></line><polygon fill="#181818" points="137.5,105.9951,141.5,115.9951,145.5,105.9951,141.5,109.9951" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="141.5" x2="141.5" y1="149.9639" y2="169.9639"></line><polygon fill="#181818" points="137.5,159.9639,141.5,169.9639,145.5,159.9639,141.5,163.9639" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="141.5" x2="141.5" y1="217.9014" y2="237.9014"></line><polygon fill="#181818" points="137.5,227.9014,141.5,237.9014,145.5,227.9014,141.5,231.9014" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="141.5" x2="141.5" y1="285.8389" y2="305.8389"></line><polygon fill="#181818" points="137.5,295.8389,141.5,305.8389,145.5,295.8389,141.5,299.8389" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="383.5" x2="383.5" y1="393.7764" y2="413.7764"></line><polygon fill="#181818" points="379.5,403.7764,383.5,413.7764,387.5,403.7764,383.5,407.7764" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="383.5" x2="383.5" y1="447.7451" y2="467.7451"></line><polygon fill="#181818" points="379.5,457.7451,383.5,467.7451,387.5,457.7451,383.5,461.7451" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="613" x2="613" y1="583.6201" y2="603.6201"></line><polygon fill="#181818" points="609,593.6201,613,603.6201,617,593.6201,613,597.6201" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="141.5" x2="141.5" y1="339.8076" y2="344.8076"></line><line style="stroke:#181818;stroke-width:1.0;" x1="141.5" x2="383.5" y1="344.8076" y2="344.8076"></line><line style="stroke:#181818;stroke-width:1.0;" x1="383.5" x2="383.5" y1="344.8076" y2="359.8076"></line><polygon fill="#181818" points="379.5,349.8076,383.5,359.8076,387.5,349.8076,383.5,353.8076" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="383.5" x2="383.5" y1="501.7139" y2="506.7139"></line><line style="stroke:#181818;stroke-width:1.0;" x1="383.5" x2="613" y1="506.7139" y2="506.7139"></line><line style="stroke:#181818;stroke-width:1.0;" x1="613" x2="613" y1="506.7139" y2="521.7139"></line><polygon fill="#181818" points="609,511.7139,613,521.7139,617,511.7139,613,515.7139" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Arial" font-size="18" lengthadjust="spacing" textlength="237" x="22" y="66.75">Enseignant ou Enseignante</text><text fill="#000000" font-family="Arial" font-size="18" lengthadjust="spacing" textlength="191" x="287" y="66.75">Étudiant ou Étudiante</text><text fill="#000000" font-family="Arial" font-size="18" lengthadjust="spacing" textlength="62" x="581" y="66.75">GitHub</text><!--MD5=[f9a328f0b1b5aae1aba29e25ceb61290]
+@startuml
+skinparam style strictuml
+skinparam DefaultTextAlignment center
+skinparam defaultFontName Arial
+title Enchaînement d'activités pour chaque //Classroom// (groupe-cours)
+|Enseignant ou Enseignante|
+start
+:Créer Classroom;
+#ffdddd:Importer liste de classe
+(Identifiants Moodle);
+:Créer Assignment
+(Individual/Team);
+:Partager (courriel) l'URL d'invitation;
+|#ddffdd|Étudiant ou Étudiante|
+:Open URL;
+#ffdddd:Choisir identifiant Moodle;
+:Choisir équipe (ou créer équipe);
+|GitHub|
+:Dupliquer (fork) le dépôt
+(au besoin, avec le compte
+d'un membre de l'organisation);
+stop
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;16.2: Diagramme d’activités pour les activités séquentielles de GitHub <em>Classrooms</em>. <a href="https://www.plantuml.com/plantuml/uml/NOzBYXin48RtEaN1B6n3Gk_jpHZF91d88uJ90SfIjQSOFMIfD2JG5yXHlCagD-YBfTenxJ2z4AZhrr_VTri5YxJWJNtccB5WW2e_FUbPsBwQt56FpSiZ_P2jvqCC50Mi7bJ-Ixb_gNSfocSC1Dl2w8smQEjzj4yu_evqVkeMQ8LVMCPJXPnQ0PqU6q7NxJpMMb8ANGVBGqajqrkhYReomtsifDjH6rA3wuq6SzOnwrqPJrHWBjcOcxvt-gqVGav5TEQv2Yahs2b4PldW58bxrg8Adr9odbQRkMfRwqLOaz4fj6lekqV2CAM-wbeyQ6uvGHOclmA_-FxjepfoL4CKJd5ZXXld9f9X_2NDyKLXlgZ1-akc2FhoohnxIbov05y9Bu0RCm_7qx5n9bXgdvsOvr_ADxnd-T3ssdxNikTZcqZxL9wLai2Dfpp-KJ5iiAUQEBu1V24xpMmAMSYuHOiGAEoBnadLKZbWv7hMqWLLKZQt55qBtlm5">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exercices" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="exercices"><span class="header-section-number">16.2</span> Exercices</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vous pouvez dessiner les diagrammes à la main et en prendre une photo avec une application comme Microsoft Lens (<a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officelens">Android</a>, <a href="https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059">iOS</a>).</p>
+<p>Vous pouvez également utiliser PlantUML. Voici des ressources à ce <span style="white-space:nowrap">propos :</span> <img src="images/Plantuml_Logo.svg" class="img-fluid" width="50" alt="Logo PlantUML"></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel VSCode sur YouTube</a><span style="white-space:nowrap"> ;</span></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">extension PlantUML pour VSCode</a><span style="white-space:nowrap"> ;</span></li>
+<li><a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571">PlantUML Gizmo</a>, module supplémentaire Google <span style="white-space:nowrap">Docs ;</span></li>
+<li><a href="https://www.planttext.com/">PlantText.com</a>.</li>
+</ul>
+<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la <a href="Outils-UML.html#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>).</p>
+</div>
+</div>
+<div id="exr-DevoirMoodle" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 16.1 (Soumission de devoir Moodle) </strong></span>Dessinez un diagramme d’activité qui modélise ce qui se passe lorsque vous faites un devoir dans Moodle. Votre diagramme doit comprendre les activités de l’enseignant et de l’étudiant (dans les partitions séparées). Le devoir doit être un <em>objet</em> dans le diagramme.</p>
+</div>
+<div id="exr-DevoirGoogleClassroom" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 16.2 (Soumission de devoir Google Classrooms) </strong></span>Dessinez un diagramme d’activité qui modélise ce qui se passe lorsque vous faites un devoir dans Google Classrooms. Votre diagramme doit comprendre les activités de l’enseignant et de l’étudiant (dans les partitions séparées). Le devoir doit être un <em>objet</em> dans le diagramme.</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Fiabilité.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./DiagrammesEtats.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

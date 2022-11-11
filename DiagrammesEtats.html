@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Analyse et conception de logiciels - 17&nbsp; Diagrammes d’état</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ConceptionPackages.html" rel="next">
+<link href="./DiagrammesActivites.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+<style type="text/css">
+  @font-face {
+    font-family: 'xkcd Script';
+    src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
+  }
+</style>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Théorie</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesActivites.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesDeploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Exercices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Annexes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link active" data-scroll-target="#exercices"><span class="toc-section-number">17.1</span>  Exercices</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Ce chapitre contient des informations sur les diagrammes d’état en UML. Le sujet est traité dans le chapitre A29/F25&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<p>Il s’agit de la modélisation. Un état est une simplification de la réalité de quelque chose qui évolue dans le temps.</p>
+<p>Les points <span style="white-space:nowrap">importants :</span></p>
+<ul>
+<li>Un diagramme d’état sert à modéliser les comportements. Un concept <span style="white-space:nowrap">préalable :</span> <a href="https://fr.wikipedia.org/wiki/Automate_fini#Automates_UML">Automate fini</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i></li>
+<li>Un diagramme d’état contient des éléments <span style="white-space:nowrap">suivants :</span>
+<ul>
+<li>Événement
+<ul>
+<li>occurrence d’un fait significatif ou remarquable</li>
+</ul></li>
+<li>État
+<ul>
+<li>la condition d’un objet à un moment donné, jusqu’à l’arrivée d’un nouvel événement</li>
+</ul></li>
+<li>Transition
+<ul>
+<li>relation état-événement-état</li>
+<li>indique que l’objet change d’état</li>
+</ul></li>
+</ul></li>
+<li>La différence entre les objets
+<ul>
+<li>Un objet répondant de la même manière à un événement donné est un objet <em>état-indépendant</em> (par rapport à l’événement)</li>
+<li>Un objet répondant différemment, selon son l’état, à un événement donné est un objet état-dépendant</li>
+</ul></li>
+<li>Les transitions peuvent avoir des <em>actions</em> et des <em>conditions de garde</em></li>
+<li>Dans la notation, il y a également la possibilité de faire les <em>états imbriqués</em></li>
+</ul>
+<p>La <a href="#fig-DiagrammeEtat">figure&nbsp;<span>17.1</span></a> est un exemple tiré du livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> et fait en PlantUML.</p>
+<div id="fig-DiagrammeEtat" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="423px" preserveaspectratio="none" style="width:549px;height:423px;background:#00000000;" version="1.1" viewbox="0 0 549 423" width="549px" zoomandpan="magnify"><defs></defs><g><ellipse cx="32" cy="16" fill="#222222" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"></ellipse><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="7" y="232"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="40" x="12" y="256.8467">Inactif</text><path d="M234.5,87 L523,87 A12.5,12.5 0 0 1 535.5,99.5 L535.5,113.2969 L222,113.2969 L222,99.5 A12.5,12.5 0 0 1 234.5,87 " fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.0;"></path><rect height="330.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;fill:none;" width="313.5" x="222" y="87"></rect><line style="stroke:#181818;stroke-width:0.5;fill:none;" x1="222" x2="535.5" y1="113.2969" y2="113.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="29" x="364.25" y="104.9951">Actif</text><ellipse cx="405.5" cy="134.2969" fill="#222222" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"></ellipse><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="342" y="181.2969"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="117" x="347" y="206.1436">ÉmissionTonalité</text><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="353.5" y="274.2969"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="94" x="358.5" y="299.1436">Numérotation</text><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="284.5" y="367.2969"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="74" x="289.5" y="392.1436">Connexion</text><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="101" x="234" y="274.2969"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="91" x="239" y="299.1436">Conversation</text><!--MD5=[b9f85486b19284de941aeb7c86ce9de7]
+link *start*Actif to ÉmissionTonalité--><g id="link_*start*Actif_ÉmissionTonalité"><path d="M405.5,144.3369 C405.5,152.4869 405.5,164.8569 405.5,175.8969 " fill="none" id="*start*Actif-to-ÉmissionTonalité" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="405.5,181.1869,409.5,172.1869,405.5,176.1869,401.5,172.1869,405.5,181.1869" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[acbac6d036b73b2f02e0ae6cfbce441b]
+link ÉmissionTonalité to Numérotation--><g id="link_ÉmissionTonalité_Numérotation"><path d="M405.5,221.5969 C405.5,235.3469 405.5,253.9469 405.5,268.7569 " fill="none" id="ÉmissionTonalité-to-Numérotation" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="405.5,274.0269,409.5,265.0269,405.5,269.0269,401.5,265.0269,405.5,274.0269" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="39" x="406.5" y="252.3638">chiffre</text></g><!--MD5=[5e1ee4bac5ee5f5694dc3a74d4efa1e7]
+link Numérotation to Connexion--><g id="link_Numérotation_Connexion"><path d="M392.12,314.3369 C384.41,324.9269 374.32,338.1869 364.5,349.2969 C360.31,354.0369 355.62,358.9069 351.02,363.4769 " fill="none" id="Numérotation-to-Connexion" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="347.18,367.2469,356.4076,363.8044,350.7511,363.7472,350.8082,358.0907,347.18,367.2469" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="50" x="378.5" y="345.3638">terminé</text></g><!--MD5=[316bc6b0eef654ea28480b31466ba288]
+link Numérotation to Numérotation--><g id="link_Numérotation_Numérotation"><path d="M457.7,286.0269 C468.09,286.9569 475.5,289.7169 475.5,294.2969 C475.5,298.0869 470.42,300.6369 462.77,301.9269 " fill="none" id="Numérotation-to-Numérotation" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="457.7,302.5669,467.1317,305.403,462.6603,301.9379,466.1253,297.4665,457.7,302.5669" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="39" x="481.5" y="298.8638">chiffre</text></g><!--MD5=[9d79d2dc66b9c5518c5b8f506ac51d4e]
+reverse link Conversation to Connexion--><g id="link_Conversation_Connexion"><path d="M291.69,319.2869 C294.87,328.8169 298.92,339.7569 303.5,349.2969 C306.38,355.2969 310,361.5469 313.5,367.1569 " fill="none" id="Conversation-backto-Connexion" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="290.11,314.4469,289.1082,324.2447,291.6654,319.1988,296.7113,321.756,290.11,314.4469" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="59" x="304.5" y="345.3638">connecté</text></g><!--MD5=[ad21a0b369ff78cf72d16255db6a3eb3]
+link *start to Inactif--><g id="link_*start_Inactif"><path d="M32,26.17 C32,59.67 32,176.06 32,226.91 " fill="none" id="*start-to-Inactif" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="32,231.91,36,222.91,32,226.91,28,222.91,32,231.91" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[50490104954312acf7906c38a5b4ba3f]
+link Inactif to Actif--><g id="link_Inactif_Actif"><path d="M57.23,252 C91.29,252 154.82,252 216.5,252 " fill="none" id="Inactif-to-Actif" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="221.69,252,212.69,248,216.69,252,212.69,256,221.69,252" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="124" x="75.5" y="230.0669">décrocher / tonalité</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="99" x="92" y="245.1997">[abonné valide]</text></g><!--MD5=[a5e14a1594c6945bdbd03e2702af3155]
+link Actif to Inactif--><g id="link_Actif_Inactif"><path d="M221.88,274.63 C183.39,277.1 142.38,277.13 104.5,272 C90.34,270.08 75.03,266.15 62.15,262.27 " fill="none" id="Actif-to-Inactif" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="57.15,260.74,64.577,267.2083,61.9292,262.2094,66.9281,259.5616,57.15,260.74" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="68" x="105.5" y="268.0669">raccrocher</text></g><!--MD5=[24c9b8754c8682a18c57516798f0c032]
+@startuml
+skinparam style strictuml
+skinparam backgroundcolor transparent
+skinparam DefaultTextAlignment center
+hide empty description
+[*] - -> Inactif
+Inactif -> Actif : décrocher / tonalité \n [abonné valide]
+Actif -> Inactif : raccrocher
+state Actif {
+[*] - -> ÉmissionTonalité
+ÉmissionTonalité - -> Numérotation : chiffre
+Numérotation - -> Connexion: terminé
+Numérotation - -> Numérotation : chiffre
+Connexion -u-> Conversation : connecté
+}
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;17.1: Diagramme d’états (figure A29.3/F25.10 ). <a href="http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<section id="exercices" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="exercices"><span class="header-section-number">17.1</span> Exercices</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vous pouvez dessiner les diagrammes à la main et en prendre une photo avec une application comme Microsoft Lens (<a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officelens">Android</a>, <a href="https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059">iOS</a>).</p>
+<p>Vous pouvez également utiliser PlantUML. Voici des ressources à ce <span style="white-space:nowrap">propos :</span> <img src="images/Plantuml_Logo.svg" class="img-fluid" width="50" alt="Logo PlantUML"></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel VSCode sur YouTube</a><span style="white-space:nowrap"> ;</span></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">extension PlantUML pour VSCode</a><span style="white-space:nowrap"> ;</span></li>
+<li><a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571">PlantUML Gizmo</a>, module supplémentaire Google <span style="white-space:nowrap">Docs ;</span></li>
+<li><a href="https://www.planttext.com/">PlantText.com</a>.</li>
+</ul>
+<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la <a href="Outils-UML.html#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>).</p>
+</div>
+</div>
+<div id="exr-etats_telephone" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 17.1 (États d’un téléphone) </strong></span>Faire un diagramme d’états en UML modélisant les états d’un téléphone intelligent. Considérer une dynamique simplifiée, avec seulement trois états correspondant aux images <span style="white-space:nowrap">suivantes :</span></p>
+<p><img src="images/Trois%C3%89tasT%C3%A9l%C3%A9phone.png" class="img-fluid"></p>
+<p>Pour simplifier encore le modèle, le bouton en haut à droite sert pour éteindre et pour allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint.</p>
+</div>
+<div id="exr-etats_bancomat" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 17.2 (Guichet automatique) </strong></span>Faire un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format <span style="white-space:nowrap">bref) :</span></p>
+<p><strong>S’authentifier.</strong> Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.</p>
+<p><strong>Gérer guichet</strong>. L’Administrateur démarre le système et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre.</p>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./DiagrammesActivites.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ConceptionPackages.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

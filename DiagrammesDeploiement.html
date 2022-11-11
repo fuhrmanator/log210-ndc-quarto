@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Analyse et conception de logiciels - 19&nbsp; Diagrammes de déploiement et de composants</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Laboratoires.html" rel="next">
+<link href="./ConceptionPackages.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+<style type="text/css">
+  @font-face {
+    font-family: 'xkcd Script';
+    src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
+  }
+</style>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Analyse et conception de logiciels</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Préface</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Théorie</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./AnalyseConception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analyse et conception de logiciels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesActivites.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesDeploiement.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Bibliographie</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Exercices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Annexes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#diagrammes-de-déploiement" id="toc-diagrammes-de-déploiement" class="nav-link active" data-scroll-target="#diagrammes-de-déploiement"><span class="toc-section-number">19.1</span>  Diagrammes de déploiement</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Ce chapitre&nbsp; contient des informations sur les diagrammes de déploiement et de composants en UML. Les détails se trouvent dans le chapitre F31/A37&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<section id="diagrammes-de-déploiement" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="diagrammes-de-déploiement"><span class="header-section-number">19.1</span> Diagrammes de déploiement</h2>
+<p>Un diagramme de déploiement présente le déploiement sur l’<strong>architecture physique</strong>. Il sert à <span style="white-space:nowrap">documenter :</span></p>
+<ol type="1">
+<li>comment les fichiers exécutables seront affectés sur les nœuds de traitement et</li>
+<li>la communication entre composants physiques</li>
+</ol>
+<p>Voici les éléments <span style="white-space:nowrap">importants :</span></p>
+<ul>
+<li>Types de nœuds
+<ul>
+<li><strong>Nœud physique (équipement)</strong> : Ressource de traitement physique (ex. de l’électronique numérique), dotée de services de traitement et de mémoire destinés à exécuter un logiciel. Ordinateur classique, cellulaire, etc.</li>
+<li><strong>Nœud d’environnement d’exécution (EEN <em>execution environment node</em>)</strong> : Ressource de traitement logiciel qui s’exécute au sein d’un nœud externe (comme un ordinateur) et offrant lui-même un service pour héberger et exécuter d’autres logiciels, par <span style="white-space:nowrap">exemple :</span>
+<ul>
+<li>Système d’exploitation (OS) est un logiciel qui héberge et qui exécute des programmes</li>
+<li>Machine virtuelle (JVM ou .NET)</li>
+<li>Moteur de base de données (ex. PostgreSQL) exécute les requêtes SQL</li>
+<li>Navigateur Web héberge et exécute JavaScript, applets Flash/Java</li>
+<li>Moteur de workflow</li>
+<li>Conteneur de servlets ou conteneur d’EJB</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>La <a href="#fig-DiagrammeDeploiement">figure&nbsp;<span>19.1</span></a> est un exemple de diagramme de déploiement (laboratoire). La <a href="#fig-iTunesDiagrammeDeploiement">figure&nbsp;<span>19.2</span></a> est un exemple de diagramme de déploiement pour le logiciel iTunes d’Apple.</p>
+<div id="fig-DiagrammeDeploiement" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="580px" preserveaspectratio="none" style="width:565px;height:580px;background:#FFFFFF;" version="1.1" viewbox="0 0 565 580" width="565px" zoomandpan="magnify"><defs></defs><g><!--MD5=[b02ba6fdf0f59e0142cfc0c33806eebc]
+cluster Browser moderne--><g id="cluster_Browser moderne"><polygon points="276,26.5,286,16.5,530,16.5,530,157.5,520,167.5,276,167.5,276,26.5" style="stroke:#181818;stroke-width:1.0;fill:none;"></polygon><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="520" x2="530" y1="26.5" y2="16.5"></line><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="276" x2="520" y1="26.5" y2="26.5"></line><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="520" x2="520" y1="26.5" y2="167.5"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="143" x="327.5" y="42.4951">Browser moderne</text></g><!--MD5=[0c5ebc11d1f9055b162fb809766bcc2a]
+cluster Système de gestion\ndes apprentissages\n(SGA)--><g id="cluster_Système de gestion\ndes apprentissages\n(SGA)"><polygon points="16,16,26,6,249,6,249,553.5,239,563.5,16,563.5,16,16" style="stroke:#181818;stroke-width:1.0;fill:none;"></polygon><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="239" x2="249" y1="16" y2="6"></line><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="16" x2="239" y1="16" y2="16"></line><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="239" x2="239" y1="16" y2="563.5"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="78" x="89.5" y="31.9951">«Système»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="157" x="50" y="48.292">Système de gestion</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="156" x="50.5" y="64.5889">des apprentissages</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="45" x="106" y="80.8857">(SGA)</text></g><!--MD5=[a7e36d4aa44b43fc8fb02c9c2fa0b819]
+cluster SGB--><g id="cluster_SGB"><polygon fill="#999999" points="313,218.5,323,208.5,548,208.5,548,420.5,538,430.5,313,430.5,313,218.5" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="538" x2="548" y1="218.5" y2="208.5"></line><line style="stroke:#181818;stroke-width:1.0;" x1="313" x2="538" y1="218.5" y2="218.5"></line><line style="stroke:#181818;stroke-width:1.0;" x1="538" x2="538" y1="218.5" y2="430.5"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="78" x="387.5" y="234.4951">«Système»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="157" x="348" y="250.792">Système de gestion</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="116" x="368.5" y="267.0889">des borderaux</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="44" x="404.5" y="283.3857">(SGB)</text></g><!--MD5=[beb5ad5244d3d849df9473931f7c2e5e]
+entity GUI--><g id="elem_GUI"><rect fill="#F1F1F1" height="95.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="223" x="291.5" y="56.5"></rect><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="494.5" y="61.5"></rect><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="492.5" y="63.5"></rect><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="492.5" y="67.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="131" x="306.5" y="89.4951">Application frontale</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="170" x="306.5" y="105.792">minimaliste, par exemple</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="183" x="306.5" y="122.0889">les pages web (templates)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="158" x="306.5" y="138.3857">et un peu de JavaScript</text></g><!--MD5=[953a8c67cfe21abaf9bf45dad8506ca8]
+entity Router--><g id="elem_Router"><ellipse cx="132" cy="104" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="59" x="102.5" y="133.9951">Routage</text></g><!--MD5=[6e8f311b0aa23032184ffba0ef926f91]
+entity App--><g id="elem_App"><rect fill="#F1F1F1" height="78.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="193" x="35.5" y="316.5"></rect><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="208.5" y="321.5"></rect><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="206.5" y="323.5"></rect><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="206.5" y="327.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="131" x="50.5" y="349.4951">Application conçue</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="153" x="50.5" y="365.792">selon la méthodologie</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="147" x="50.5" y="382.0889">proposée par Larman</text></g><!--MD5=[0f236602209a03542e21b89873b828ef]
+entity SimpleDB--><g id="elem_SimpleDB"><path d="M94,495.5 C94,485.5 132,485.5 132,485.5 C132,485.5 170,485.5 170,495.5 L170,537.0938 C170,547.0938 132,547.0938 132,547.0938 C132,547.0938 94,547.0938 94,537.0938 L94,495.5 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><path d="M94,495.5 C94,505.5 132,505.5 132,505.5 C132,505.5 170,505.5 170,495.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="56" x="104" y="522.4951">Solution</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="45" x="104" y="538.792">simple</text></g><g id="elem_SGBNote"><path d="M356,305.5 L356,406.2969 L524,406.2969 L524,315.5 L514,305.5 L356,305.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M514,305.5 L514,315.5 L524,315.5 L514,305.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"></path><path d="M367.3333,313.7161 C364.9392,313.7161 363,315.6553 363,318.0495 C363,320.4436 364.9392,322.3828 367.3333,322.3828 C369.7275,322.3828 371.6667,320.4436 371.6667,318.0495 C371.6667,315.6553 369.7275,313.7161 367.3333,313.7161 M367.3333,314.7995 L367.3333,316.9661 L370.5833,316.9661 L370.5833,319.1328 L367.3333,319.1328 L367.3333,321.2995 L364.0833,318.0495 L367.3333,314.7995 " fill="#000000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="100" x="376.6667" y="322.5669">Source pour les</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="119" x="362" y="337.6997">infos sur les cours,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="114" x="362" y="352.8325">les étudiants, etc.</text><path d="M367.3333,359.1146 C364.9392,359.1146 363,361.0538 363,363.4479 C363,365.8421 364.9392,367.7813 367.3333,367.7813 C369.7275,367.7813 371.6667,365.8421 371.6667,363.4479 C371.6667,361.0538 369.7275,359.1146 367.3333,359.1146 M367.3333,360.1979 L370.5833,363.4479 L367.3333,366.6979 L367.3333,364.5313 L364.0833,364.5313 L364.0833,362.3646 L367.3333,362.3646 L367.3333,360.1979 " fill="#000000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="128" x="376.6667" y="367.9653">Destination pour les</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="147" x="362" y="383.0981">résultats des question-</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="110" x="362" y="398.231">naires et devoirs.</text></g><!--MD5=[56b72e7de0968c0cf25972f053180467]
+reverse link Router to GUI--><g id="link_Router_GUI"><path d="M151.05,104 C180.27,104 238.35,104 291.39,104 " fill="none" id="Router-backto-GUI" style="stroke:#181818;stroke-width:1.0;"></path><path d="M144.0982,112.4572 A9,9 0 0 0 144.0982 95.5428" fill="none" style="stroke:#181818;stroke-width:1.5;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="114" x="159.25" y="97.0669">API REST niveau 1</text></g><!--MD5=[ee207bd21a41d647759085e7fca34991]
+link Router to App--><g id="link_Router_App"><path d="M132,113.03 C132,143.87 132,255.94 132,316.14 " fill="none" id="Router-App" style="stroke:#181818;stroke-width:1.0;"></path></g><!--MD5=[b87fad3cf41de54d892cd606074f6fe5]
+link App to SimpleDB--><g id="link_App_SimpleDB"><path d="M132,395.77 C132,423.36 132,459.89 132,485.31 " fill="none" id="App-SimpleDB" style="stroke:#181818;stroke-width:1.0;"></path></g><!--MD5=[8ceabf8ea623773f41dcf93e05bd7474]
+link App to SGB--><g id="link_App_SGB"><path d="M228.71,356 C250.51,356 272.15,356 288.99,356 C297.41,356 304.63,356 310.07,356 C310.75,356 311.4022,356 312.0254,356 C312.3371,356 312.6414,356 312.9384,356 " fill="none" id="App-SGB" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="56" x="246.57" y="349.0669">API REST</text></g><!--MD5=[825f9798b9cd53697d6c01c64fbf73c9]
+@startuml
+skinparam style strictuml
+skinparam componentStyle uml2
+
+node "Browser moderne" {
+    component [Application frontale\nminimaliste, par exemple\nles pages web (templates)\net un peu de JavaScript] as GUI
+}
+
+node "Système de gestion\ndes apprentissages\n(SGA)" <<Système>> {
+    interface Routage as Router
+
+    [Application conçue\nselon la méthodologie\nproposée par Larman] as App
+
+    database "Solution\nsimple" as SimpleDB {
+    } 
+}
+
+node "Système de gestion\ndes borderaux\n(SGB)" as SGB <<Système>> #999999 {
+note as SGBNote
+<&arrow-circle-left> Source pour les
+infos sur les cours, 
+les étudiants, etc.
+<&arrow-circle-right> Destination pour les
+résultats des question-
+naires et devoirs.
+end note
+}
+
+
+GUI -left-( Router : API REST niveau 1
+Router -down- App
+App -down- SimpleDB
+App -right- SGB : API REST
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;19.1: Diagramme de déploiement du système à développer pour le laboratoire. <a href="http://www.plantuml.com/plantuml/uml/ZLDHQnin37xthn0PZ1HwXUrj8uGcT8IECKPlUrhseDmfgPbFzcGxQHdzFLj-H_vOvRkaetsQuUuaMVxqwPFlCYQKb3jdua_B0GKxYEdUaRx5DYzs6jy5pyIfxbDqywqnx5k2qLpyBf90fvumZU2t0LrF9-3xB0Hd6qpMCwp5Sq97I-uismwTZOdEGQi0tL4NoewZg86DldUqWd4gOKmKpvPC2J93e0nQ-YDkiMx4XlG3CCBYsxLvEB6gxsCw_Esev2bIgRtaLY4n155MDiPIOSdZUZ4x6y5aSZendHuxi9n8rjWGtFYSDBiKAIQ9wHEUDTPuFlp9oZwIKzSXT8TzklMjTtvZDHx41nyFU-gR_OJI8VUy5MN0Qp7X2cDXxrqUA4TRD1cLlBeth-P7UW_m7zsklEXKCD_rZSxF1g35_7c_hzxrIu7P9pgcV5RJJ5wZw7ohnahZg7AqJbEeVHPL9UW7T5R6yjf7Y8EdGcI9vs2AhGharY8d3L1gBbxYYTtSAk1LeSo3Za-eSjZ7x1Ac2AMJNtdegpACLZIWLw6bhRSIBmnn2uLwKSJeFO2UQJK-ZWlUm-pBDTnygBy2sorXXZVck5MrViTLFmHzJkv9wo7MqwnwtVuXcKkjgZ_28m00">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+<div id="fig-iTunesDiagrammeDeploiement" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="653px" preserveaspectratio="none" style="width:1155px;height:653px;background:#FFFFFF;" version="1.1" viewbox="0 0 1155 653" width="1155px" zoomandpan="magnify"><defs></defs><g><!--MD5=[0c66e72a6fdf26ca31f48edd7abc94ce]
+cluster Apple Web Server--><g id="cluster_Apple Web Server"><polygon fill="#AFEEEE" points="870,16,880,6,1138,6,1138,446,1128,456,870,456,870,16" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="1128" x2="1138" y1="16" y2="6"></line><line style="stroke:#181818;stroke-width:1.0;" x1="870" x2="1128" y1="16" y2="16"></line><line style="stroke:#181818;stroke-width:1.0;" x1="1128" x2="1128" y1="16" y2="456"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="64" x="968" y="31.9951">«device»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="143" x="928.5" y="48.292">Apple Web Server</text></g><!--MD5=[26052e9c019f88957908c6792eb0578c]
+cluster iTW--><g id="cluster_iTW"><polygon fill="#FFA07A" points="902,88,912,78,1106,78,1106,231,1096,241,902,241,902,88" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="1096" x2="1106" y1="88" y2="78"></line><line style="stroke:#181818;stroke-width:1.0;" x1="902" x2="1096" y1="88" y2="88"></line><line style="stroke:#181818;stroke-width:1.0;" x1="1096" x2="1096" y1="88" y2="241"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="71" x="964.5" y="103.9951">«website»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="53" x="973.5" y="120.292">iTunes</text></g><!--MD5=[150c6e6063e4bcd3089a67876cebe34d]
+cluster iTS--><g id="cluster_iTS"><polygon fill="#FFA07A" points="915.5,291,925.5,281,1092.5,281,1092.5,414,1082.5,424,915.5,424,915.5,291" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="1082.5" x2="1092.5" y1="291" y2="281"></line><line style="stroke:#181818;stroke-width:1.0;" x1="915.5" x2="1082.5" y1="291" y2="291"></line><line style="stroke:#181818;stroke-width:1.0;" x1="1082.5" x2="1082.5" y1="291" y2="424"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="71" x="964.5" y="306.9951">«website»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="101" x="949.5" y="323.292">iTunes Store</text></g><!--MD5=[3bb3c26011a900458e6e129ce4506cc0]
+cluster HC--><g id="cluster_HC"><polygon fill="#FFA07A" points="207,164,217,154,411,154,411,457,401,467,207,467,207,164" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="401" x2="411" y1="164" y2="154"></line><line style="stroke:#181818;stroke-width:1.0;" x1="207" x2="401" y1="164" y2="164"></line><line style="stroke:#181818;stroke-width:1.0;" x1="401" x2="401" y1="164" y2="467"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="64" x="273" y="179.9951">«device»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="128" x="241" y="196.292">Home Computer</text></g><!--MD5=[5811b25a55944475dd63195b77327fcf]
+cluster MD--><g id="cluster_MD"><polygon fill="#FFA07A" points="489,404,499,394,692,394,692,626,682,636,489,636,489,404" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="682" x2="692" y1="404" y2="394"></line><line style="stroke:#181818;stroke-width:1.0;" x1="489" x2="682" y1="404" y2="404"></line><line style="stroke:#181818;stroke-width:1.0;" x1="682" x2="682" y1="404" y2="636"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="114" x="529.5" y="419.9951">«mobile device»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="127" x="523" y="436.292">iPhone/iPad/etc.</text></g><!--MD5=[168a53d818c6a1178540cd923bd9aef1]
+entity iTuneseSetup.exe--><g id="elem_iTuneseSetup.exe"><rect fill="#F1F1F1" height="55.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="156" x="926" y="142"></rect><polygon fill="#F1F1F1" points="1065,147,1065,161,1077,161,1077,153,1071,147,1065,147" style="stroke:#181818;stroke-width:0.5;"></polygon><line style="stroke:#181818;stroke-width:0.5;" x1="1071" x2="1071" y1="147" y2="153"></line><line style="stroke:#181818;stroke-width:0.5;" x1="1077" x2="1071" y1="153" y2="153"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="92" x="953" y="167.9951">«application»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="126" x="936" y="184.292">iTuneseSetup.exe</text></g><!--MD5=[179788470a8aff7c66bc088ac16c3958]
+entity Media Library--><g id="elem_Media Library"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="949.5" y="345"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="89" x="959.5" y="367.9951">Media Library</text></g><!--MD5=[cc6593c7725ff0aed46a7b076a6ae0ec]
+entity wb--><g id="elem_wb"><polygon fill="#FFA07A" points="236,228,246,218,382,218,382,254.2969,372,264.2969,236,264.2969,236,228" style="stroke:#181818;stroke-width:0.5;"></polygon><line style="stroke:#181818;stroke-width:0.5;" x1="372" x2="382" y1="228" y2="218"></line><line style="stroke:#181818;stroke-width:0.5;" x1="236" x2="372" y1="228" y2="228"></line><line style="stroke:#181818;stroke-width:0.5;" x1="372" x2="372" y1="228" y2="264.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="106" x="251" y="250.9951">«web browser»</text></g><!--MD5=[686e85796b441ac30743a46b3a198feb]
+entity iT--><g id="elem_iT"><rect fill="#FF0000" height="52.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="112" x="253" y="299.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="92" x="263" y="322.4951">«application»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="47" x="285.5" y="338.792">iTunes</text></g><!--MD5=[8e94227e8949fb09569a9347976a54a0]
+entity ML1--><g id="elem_ML1"><rect fill="#32CD32" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="254.5" y="388"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="89" x="264.5" y="410.9951">Media Library</text></g><!--MD5=[cd867fbea90289f1d940f296e4758e7e]
+entity MDOS--><g id="elem_MDOS"><polygon fill="#FFA07A" points="551.5,487.5,561.5,477.5,629.5,477.5,629.5,530.0938,619.5,540.0938,551.5,540.0938,551.5,487.5" style="stroke:#181818;stroke-width:0.5;"></polygon><line style="stroke:#181818;stroke-width:0.5;" x1="619.5" x2="629.5" y1="487.5" y2="477.5"></line><line style="stroke:#181818;stroke-width:0.5;" x1="551.5" x2="619.5" y1="487.5" y2="487.5"></line><line style="stroke:#181818;stroke-width:0.5;" x1="619.5" x2="619.5" y1="487.5" y2="540.0938"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="38" x="566.5" y="510.4951">«OS»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="23" x="574" y="526.792">iOS</text></g><!--MD5=[6c7eef7b00c1b270a46fece4fa1edf4a]
+entity ML2--><g id="elem_ML2"><rect fill="#32CD32" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="536" y="576"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="89" x="546" y="598.9951">Media Library</text></g><g id="elem_N1"><path d="M6,493.5 L6,564.0313 L152,564.0313 L152,503.5 L142,493.5 L6,493.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M142,493.5 L142,503.5 L152,503.5 L142,493.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="117" x="12" y="510.5669">Media libraries are</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="84" x="12" y="525.6997">synchronized</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="125" x="12" y="540.8325">between devices by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="41" x="12" y="555.9653">iTunes</text></g><!--MD5=[0e4de8fb3a36651fdce8ff388019daed]
+link N1 to ML1--><g id="link_N1_ML1"><path d="M109.85,493.15 C130.37,470.91 159.52,443.68 191,428 C210.52,418.28 233.82,412.83 254.47,409.79 " fill="none" id="N1-ML1" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"></path></g><!--MD5=[d181fc5edc414a57f8bdcaaf81538a52]
+link N1 to ML2--><g id="link_N1_ML2"><path d="M152.19,538.21 C255.68,551.41 443.87,575.42 535.91,587.16 " fill="none" id="N1-ML2" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"></path></g><!--MD5=[057bf042cab822e62a1d1d5450331ca8]
+link HC to MD--><g id="link_HC_MD"><path d="M411.5109,452.8273 C415.6638,452.5747 419.8655,452.3191 424.0997,452.0615 C432.568,451.5463 441.1666,451.0231 449.765,450.5 C458.3634,449.9769 466.9618,449.4538 475.4299,448.9385 C479.6639,448.6809 483.8654,448.4253 488.018,448.1727 C488.2776,448.1569 488.5369,448.1411 488.7961,448.1253 " fill="none" id="HC-MD" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="28" x="436" y="446.0669">USB</text></g><!--MD5=[e8cf868d6ce6b08077fe18f25b2a5b73]
+link iT to iTS--><g id="link_iT_iTS"><path d="M365.25,333.18 C446.695,343.755 604.2875,364.22 742.43,382.16 C776.9656,386.645 810.2856,390.9722 840.8963,394.9476 C856.2016,396.9353 870.8296,398.835 884.5936,400.6226 C891.4755,401.5163 898.1415,402.3821 904.5681,403.2167 C907.7814,403.634 910.9349,404.0436 914.0256,404.445 " fill="none" id="iT-iTS" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="68" x="556.5" y="329.0669">«protocol»</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="136" x="522.5" y="344.1997">iTunes Store Protocol</text></g><!--MD5=[b313425349e1e71fbdc3244b7ba8d655]
+link wb to iTW--><g id="link_wb_iTW"><path d="M382.2,240.17 C470.255,239.15 623.7275,237.3775 756.04,235.85 C789.1181,235.4681 820.8738,235.1016 849.9541,234.7659 C864.4943,234.5981 878.3656,234.438 891.3991,234.2875 C894.6574,234.2499 897.8634,234.2129 901.0144,234.1765 " fill="none" id="wb-iTW" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="68" x="556.5" y="218.0669">«protocol»</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="32" x="574.5" y="233.1997">HTTP</text></g><!--MD5=[be83e7c0c87979d0240f77e6b346c479]
+link MDOS to iTS--><g id="link_MDOS_iTS"><path d="M629.84,500.33 C680.52,488.88 772.755,468.035 852.8413,449.935 C892.8844,440.885 929.8903,432.5213 957.1461,426.3613 C960.5531,425.5913 963.8077,424.8557 966.8969,424.1575 " fill="none" id="MDOS-iTS" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="122" x="724" y="433.0669">«wireless protocol»</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="136" x="717" y="448.1997">iTunes Store Protocol</text></g><!--MD5=[69dd71aeaa9c70c1c5367ece45a774ff]
+@startuml
+left to right direction
+node "Apple Web Server" <<device>>#PaleTurquoise {
+    node iTunes as iTW <<website>>#LightSalmon {
+        artifact iTuneseSetup.exe <<application>>
+    }
+    node "iTunes Store" as iTS <<website>>#LightSalmon {
+        rectangle "Media Library"
+    }
+}
+'iTW -down- iTS
+node "Home Computer" as HC <<device>>#LightSalmon {
+    node " " as wb <<web browser>>#LightSalmon
+    rectangle iTunes as iT <<application>>#red
+    rectangle "Media Library" as ML1 #LimeGreen
+}
+node "iPhone/iPad/etc." as MD <<mobile device>>#LightSalmon {
+    node "iOS" as MDOS <<OS>>#LightSalmon
+    rectangle "Media Library" as ML2 #LimeGreen
+}
+note as N1
+Media libraries are
+synchronized
+between devices by
+iTunes
+end note
+N1 .. ML1
+N1 .. ML2
+' HC *- - ML1
+' HC *-l- wb
+HC - - MD : USB
+'iT .u.> HC
+iT - - iTS : <<protocol>>\niTunes Store Protocol
+' MD *- - MDOS
+' MD *- - ML2
+wb - - iTW : <<protocol>>\nHTTP
+MDOS - - iTS : <<wireless protocol>>\niTunes Store Protocol
+@enduml
+
+@startuml
+left to right direction
+node "Apple Web Server" <<device>>#PaleTurquoise {
+    node iTunes as iTW <<website>>#LightSalmon {
+        artifact iTuneseSetup.exe <<application>>
+    }
+    node "iTunes Store" as iTS <<website>>#LightSalmon {
+        rectangle "Media Library"
+    }
+}
+node "Home Computer" as HC <<device>>#LightSalmon {
+    node " " as wb <<web browser>>#LightSalmon
+    rectangle iTunes as iT <<application>>#red
+    rectangle "Media Library" as ML1 #LimeGreen
+}
+node "iPhone/iPad/etc." as MD <<mobile device>>#LightSalmon {
+    node "iOS" as MDOS <<OS>>#LightSalmon
+    rectangle "Media Library" as ML2 #LimeGreen
+}
+note as N1
+Media libraries are
+synchronized
+between devices by
+iTunes
+end note
+N1 .. ML1
+N1 .. ML2
+HC - - MD : USB
+iT - - iTS : <<protocol>>\niTunes Store Protocol
+wb - - iTW : <<protocol>>\nHTTP
+MDOS - - iTS : <<wireless protocol>>\niTunes Store Protocol
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;19.2: Diagramme de déploiement pour iTunes d’Apple, inspiré de <a href="https://www.uml-diagrams.org/apple-itunes-uml-deployment-diagram-example.html">ceci</a>. <a href="http://www.plantuml.com/plantuml/uml/ZLF9JkGm4BtxAqhXW3HIWfeZGX6RH1yQEb9wr9UvE4b1MtBiO3k4dX7_FbM91M4Hu9ENUlKMssS-I1VwLWkDTm621QVkTm4QvR0EoXfXR8EGd7UTHjXY1IMwHtG9d9us-AXgpFE3GchSzEwXjyeZ_1D0OuIfJM_GW_Gqsn9YmCghm90LivHIjzP400-Iekva7I8GImnzb-4J4bQI0bLBrfJd8-BvbIY9J6Mm3fE9iFm18PkKvfwi9JVOA0ahLJdfzaaaU1Q7h3njx61IxXdZMDeMuTAsNHyu2-9RNiuJ-SWsuM2i7Qf96bJE3XxTMu1uAsoUuViO3XmsuaiVZBjPBO08MhnsY8OynSYAdJLuf0hP766eiwdsYZXQMobgzQqRjIuZQCrXhyilZNogxFYzie1ySBiGKxKUgnK7u53ulQbtpXhrbtnN60P2HPaUghsOiX9e6k1EudO1MSR-NsR7uf2lwbUQZjjneLEw4q5Jthw24_XTNl3DGzPdEPLGOpxYDtL2HZjdWwsjplC_Plxme8W7r9VQZ2GKpMn5_7JvOwljXrRBpQOGOvOphe4-eaRluNlIC_9DF_a_">(PlantUML)</a></figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./ConceptionPackages.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Laboratoires.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
