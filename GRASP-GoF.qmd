@@ -6,7 +6,22 @@ Craig Larman a proposé les GRASP pour faciliter la compréhension des forces es
 
 Le chapitre A26/F23\ \faBook<i class="fa-solid fa-book"></i>\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (@fig-Fig23_1 tirée du livre de Larman, Figure A26.3/F23.3).
 
-![Le pattern Adaptateur.](images/Fig23.1.png "Figure A26.1/F23.1 du livre de Larman"){#fig-Fig23_1}
+```{.plantuml #fig-Fig23_1 caption="Le pattern Adaptateur."}
+    @startuml
+    skinparam class {
+        BackgroundColor White
+        FontSize 20
+    }
+
+    interface       IAdaptateurCalculTaxes
+    class           AdaptateurTaxMaster implements IAdaptateurCalculTaxes
+    class           AdaptateurGoodAsGoldTaxPro implements IAdaptateurCalculTaxes
+
+    IAdaptateurCalculTaxes : getTaxes( Vente ) : Liste de ligneTaxes
+    AdaptateurTaxMaster : getTaxes( Vente ) : Liste de ligneTaxes
+    AdaptateurGoodAsGoldTaxPro : getTaxes( Vente ) : Liste de ligneTaxes
+    @enduml
+    ```
 
 ## Imaginer le code sans le pattern GoF
 
