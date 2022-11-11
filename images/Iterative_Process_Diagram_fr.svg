@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 952.76192 473.97488"
+   version="1.1"
+   id="svg208"
+   sodipodi:docname="Iterative_Process_Diagram_fr.svg"
+   width="952.7619"
+   height="473.97488"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview210"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.2812069"
+     inkscape:cx="492.11412"
+     inkscape:cy="269.27735"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_2" />
+  <defs
+     id="defs4">
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect547" />
+    <style
+       id="style2">.cls-1{fill:#cbdb2a;}.cls-2{fill:#fdb913;}.cls-3{fill:#6dc8bf;}.cls-4{fill:#f15a22;}</style>
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect605" />
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect605-9" />
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect644" />
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect644-1" />
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect605-9-9" />
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect605-9-9-2" />
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect761" />
+    <rect
+       x="569.77527"
+       y="28.879021"
+       width="261.4722"
+       height="34.342617"
+       id="rect767" />
+  </defs>
+  <title
+     id="title6">Artboard 1</title>
+  <path
+     class="cls-1"
+     d="m 908.16176,344.85244 h -7.14 v -20.8 a 102.57,102.57 0 0 0 -102.57,-102.56 h -47.43 a 4.5,4.5 0 0 0 -4.5,4.5 v 24 a 4.49,4.49 0 0 0 4.5,4.5 h 47.43 a 69.57,69.57 0 0 1 69.57,69.57 v 20.8 h -7.15 a 5.35,5.35 0 0 0 -4.63,8 l 23.65,40.95 a 5.34,5.34 0 0 0 9.26,0 l 23.65,-40.95 a 5.35,5.35 0 0 0 -4.64,-8.01 z"
+     id="path8" />
+  <path
+     class="cls-2"
+     d="m 217.85176,233.86244 -40.95,-23.65 a 5.35,5.35 0 0 0 -8,4.63 v 7.15 h -20.8 a 69.57,69.57 0 0 1 -69.569995,-69.57 v -47.43 a 4.49,4.49 0 0 0 -4.49,-4.5 h -24 a 4.5,4.5 0 0 0 -4.5,4.5 v 47.43 a 102.57,102.57 0 0 0 102.529995,102.57 h 20.8 v 7.14 a 5.35,5.35 0 0 0 8,4.63 l 40.95,-23.64 a 5.35,5.35 0 0 0 0.03,-9.26 z"
+     id="path10" />
+  <path
+     class="cls-3"
+     d="m 467.86176,24.342436 -40.95,-23.63999958 a 5.35,5.35 0 0 0 -8,4.62999998 v 7.1599996 h -20.83 a 102.56,102.56 0 0 0 -102.56,102.550004 v 72.81 a 4.5,4.5 0 0 0 4.5,4.5 h 24 a 4.5,4.5 0 0 0 4.5,-4.5 v -72.81 a 69.56,69.56 0 0 1 69.56,-69.550004 h 20.81 v 7.14 a 5.35,5.35 0 0 0 8,4.63 l 40.95,-23.64 a 5.35,5.35 0 0 0 0.02,-9.28 z"
+     id="path12" />
+  <path
+     class="cls-4"
+     d="m 644.02176,278.49244 h -24 a 4.49,4.49 0 0 0 -4.5,4.5 v 75.93 a 69.56,69.56 0 0 1 -69.57,69.57 h -33.8 v -7.14 a 5.35,5.35 0 0 0 -8,-4.63 l -41,23.64 a 5.35,5.35 0 0 0 0,9.27 l 41,23.64 a 5.35,5.35 0 0 0 8,-4.63 v -7.15 h 33.8 a 102.57,102.57 0 0 0 102.57,-102.55 v -75.93 a 4.49,4.49 0 0 0 -4.5,-4.52 z"
+     id="path14" />
+  <path
+     class="cls-4"
+     d="m 440.52176,428.49244 h -42.44 a 69.56,69.56 0 0 1 -69.56,-69.56 v -28.8 h 7.15 a 5.35,5.35 0 0 0 4.63,-8 l -23.65,-40.95 a 5.35,5.35 0 0 0 -9.26,0 l -23.65,40.93 a 5.35,5.35 0 0 0 4.63,8 h 7.15 v 28.8 a 102.56,102.56 0 0 0 102.56,102.58 h 42.44 a 4.5,4.5 0 0 0 4.5,-4.49 v -24 a 4.51,4.51 0 0 0 -4.5,-4.51 z"
+     id="path16" />
+  <path
+     class="cls-3"
+     d="m 655.67176,140.84244 h -7.15 v -25.8 a 102.57,102.57 0 0 0 -102.57,-102.550004 h -55.43 a 4.5,4.5 0 0 0 -4.5,4.49 v 24 a 4.51,4.51 0 0 0 4.5,4.5 h 55.43 a 69.56,69.56 0 0 1 69.57,69.560004 v 25.8 h -7.18 a 5.35,5.35 0 0 0 -4.63,8 l 23.65,41 a 5.35,5.35 0 0 0 9.26,0 l 23.65,-41 a 5.35,5.35 0 0 0 -4.6,-8 z"
+     id="path18" />
+  <g
+     id="Layer_2"
+     data-name="Layer 2"
+     transform="translate(17.341765,-26.507564)">
+    <rect
+       class="cls-2"
+       x="216.17999"
+       y="234"
+       width="158.19594"
+       height="56"
+       rx="5.3125501"
+       ry="4.5"
+       id="rect71"
+       style="stroke-width:1.08654" />
+    <rect
+       class="cls-1"
+       x="518.17999"
+       y="234"
+       width="196"
+       height="56"
+       rx="4.5"
+       ry="4.5"
+       id="rect89" />
+    <text
+       xml:space="preserve"
+       id="text545"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect547)"
+       transform="translate(37.220562,35.788363)"><tspan
+         x="583.10156"
+         y="50.497012"
+         id="tspan4661">Analyse et conception</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text603"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect605)"
+       transform="translate(167.71309,405.18423)"><tspan
+         x="633.14062"
+         y="50.497012"
+         id="tspan4663">Déploiement</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text603-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect605-9)"
+       transform="translate(-405.33337,220.09869)"><tspan
+         x="635.80664"
+         y="50.497012"
+         id="tspan4665">Planification</tspan></text>
+    <g
+       id="g755"
+       transform="translate(-28.537478,9.707711)">
+      <text
+         xml:space="preserve"
+         id="text603-6-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect605-9-9)"
+         transform="translate(-626.46249,23.661871)"><tspan
+           x="635.80664"
+           y="50.497012"
+           id="tspan4667">Planification</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text603-6-9-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect605-9-9-2)"
+         transform="translate(-626.66171,52.540891)"><tspan
+           x="666.49219"
+           y="50.497012"
+           id="tspan4669">initiale</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       id="text642"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect644)"
+       transform="translate(-543.9067,35.788363)"
+       x="35.947266"
+       y="0"><tspan
+         x="720.51758"
+         y="50.497012"
+         id="tspan4671">Exigences</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text642-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect644-1)"
+       transform="translate(-84.624695,217.75494)"><tspan
+         x="618.46875"
+         y="50.497012"
+         id="tspan4673">Implémentation</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text759"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect761)"
+       transform="translate(-60.490378,418.77268)"><tspan
+         x="672.50391"
+         y="50.497012"
+         id="tspan4675">Tests</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text765"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect767)"
+       transform="translate(-531.92087,420.94065)"
+       x="54.263672"
+       y="0"><tspan
+         x="719.16992"
+         y="50.497012"
+         id="tspan4677">Évaluation</tspan></text>
+  </g>
+</svg>
