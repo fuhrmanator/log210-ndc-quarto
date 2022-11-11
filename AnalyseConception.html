@@ -349,7 +349,7 @@ div.csl-indent {
 
 <p>Comment développer un logiciel dans un domaine où l’équipe de développement n’a pas forcément une expérience <span style="white-space:nowrap">importante ?</span> Comment faire une bonne conception d’un tel <span style="white-space:nowrap">logiciel ?</span> Cette œuvre vise à décrire une méthodologie de développement de logiciel qui répond à ces questions.</p>
 <p>Nous suivrons une approche systématique permettant de modéliser un domaine d’application et de concevoir un logiciel avec des abstractions (des classes) plus intuitives. Dans le fond, c’est faire une <em>analyse</em> d’un domaine d’application et proposer une <em>conception</em> du logiciel à développer dans le domaine visé.</p>
-<p>Puisqu’une conception doit être réalisée (codée) pour être validée, nous appliquerons une approche de programmation pilotée par les tests (<em>test-driven development</em> ou <em>TDD</em> en anglais). Le TDD est un élément essentiel dans le <a href="https://fr.wikipedia.org/wiki/Devops">devops</a>, une approche permettant de livrer et de faire évoluer rapidement les logiciels de manière robuste.</p>
+<p>Puisqu’une conception doit être réalisée (codée) pour être validée, nous appliquerons une approche de programmation pilotée par les tests (<em>test-driven development</em> ou <em>TDD</em> en anglais). Le TDD est un élément essentiel dans le <a href="https://fr.wikipedia.org/wiki/Devops">Devops</a>, une approche permettant de livrer et de faire évoluer rapidement les logiciels de manière robuste.</p>
 <p>Orthogonalement, surtout pour faire face à la complexité, la méthodologie propose ces activités en itérations ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction. C’est une approche dite «&nbsp;agile&nbsp;», ayant une base pédagogique neutre, nommée le «&nbsp;processus unifié&nbsp;».</p>
 <p>Dans ce chapitre, nous présentons en détail ces dimensions du développement de logiciel.</p>
 <section id="analyse-vs-conception" class="level2" data-number="1.1">
@@ -631,15 +631,27 @@ Country: null
 </section>
 <section id="développement-itératif-évolutif-et-agile" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="développement-itératif-évolutif-et-agile"><span class="header-section-number">1.5</span> Développement itératif, évolutif et agile</h2>
-<p>Nous adaptons également un processus moderne de développement avec des itérations, selon une méthodologie «&nbsp;agile&nbsp;». Dans le chapitre 2 du livre de Craig Larman, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du «&nbsp;Processus Unifié&nbsp;», qui est une représentation générique de cette stratégie de développement.</p>
+<p>Nous adoptons également un processus moderne de développement avec des itérations, selon une méthodologie «&nbsp;agile&nbsp;». Dans le chapitre 2 du livre de Craig Larman, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du «&nbsp;Processus Unifié&nbsp;», qui est une représentation générique de cette stratégie de développement.</p>
 <p>Nous résumons les points importants <span style="white-space:nowrap">ainsi :</span></p>
 <ul>
 <li>Le développement itératif et évolutif implique de programmer et de tester précocement un système partiel dans des cycles répétitifs.</li>
-<li>Un cycle est nommé une itération et dure un temps fixe (par exemple, trois semaines) comprenant les activités d’analyse, de conception, de programmation et de test, ainsi qu’une démonstration pour solliciter des rétroactions du client (voir la <a href="#fig-DevIteratifIncremental">figure&nbsp;<span>1.6</span></a>).</li>
+<li>Un cycle est nommé une itération et dure un temps fixe (par exemple, trois semaines) comprenant les activités d’analyse, de conception, de programmation et de test, ainsi qu’une démonstration pour solliciter des rétroactions du client (voir la <a href="#fig-IteratifEvolutif">figure&nbsp;<span>1.7</span></a>).</li>
 <li>La durée d’une itération est limitée dans le temps (<em>timeboxed</em> en anglais), de 2 à 6 semaines. Il n’est pas permis d’ajouter du temps à la durée d’une itération si le projet avance plus lentement que prévu, car cela impliquerait un retard de la rétroaction du client. Si le respect des délais semble compromis, on supprime plutôt des tâches ou des spécifications et on les reprend éventuellement dans une itération ultérieure.</li>
-<li>Les premières itérations peuvent sembler chaotiques, car elles sont loin de la «&nbsp;bonne voie&nbsp;». Avec la rétroaction du client et l’adaptation, le système à développer converge vers une solution appropriée (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.7</span></a>). Cette instabilité peut être particulièrement prononcée dans un contexte d’entreprise en démarrage.</li>
-<li>Dans une itération, la modélisation (par exemple, avec l’UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n’est pas triviale (voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.8</span></a>). Selon le contexte du projet (voir le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), on peut décider de ne pas faire de la modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l’on appelle la <a href="DetteTechnique.html">dette technique</a>.</li>
+<li>Les premières itérations peuvent sembler chaotiques, car elles sont loin de la «&nbsp;bonne voie&nbsp;». Avec la rétroaction du client et l’adaptation, le système à développer converge vers une solution appropriée (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.8</span></a>). Cette instabilité peut être particulièrement prononcée dans un contexte d’entreprise en démarrage.</li>
+<li>Dans une itération, la modélisation (par exemple, avec l’UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n’est pas triviale (voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.9</span></a>). Selon le contexte du projet (voir le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), on peut décider de ne pas faire de la modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l’on appelle la <a href="DetteTechnique.html">dette technique</a>.</li>
 </ul>
+<div id="fig-Modèle_processus_itératif" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/Iterative_Process_Diagram_fr.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.6: Un processus itératif permet de gérer les complexités, car la planification d’une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent. (Cette œuvre, «&nbsp;Modèle du processus itératif&nbsp;», est un dérivé de <a href="https://commons.wikimedia.org/w/index.php?curid=104924876">«&nbsp;Iterative development model&nbsp;»</a> de <a href="https://commons.wikimedia.org/wiki/User:Krupadeluxe">Krupadeluxe</a>, utilisé sous <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>. «&nbsp;Modèle de processus itératif&nbsp;» est sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> par Christopher Fuhrman.)</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-IteratifEvolutif" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/F2.1_adaptée.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.7: Processus itératif et incrémental (évolutif).</figcaption><p></p>
+</figure>
+</div>
 <p>Le développement itératif et incrémental amène plusieurs avantages selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
 <div class="callout callout callout-style-simple no-icon">
 <div class="callout-body d-flex">
@@ -658,39 +670,31 @@ Country: null
 </div>
 </div>
 </div>
-<div id="fig-DevIteratifIncremental" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/A2.1.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.6: Le développement itératif et incrémental <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. 2.1</a>)</span>.</figcaption><p></p>
-</figure>
-</div>
 <div id="fig-StabiliteDansLesIterations" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/F2.2.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.7: Rétroaction et adaptation itératives convergent vers le système souhaité <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. 2.2</a>)</span>.</figcaption><p></p>
+<p><img src="images/F2.2_adaptée.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.8: La rétroaction et la rectification itératives font diminuer l’instabilité des exigences à mesure que le projet avance, car le système à développer converge vers les spécifications et la conception les plus appropriées <span class="citation" data-cites="craig_uml_2005">(adaptation de <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. 2.2</a>)</span>.</figcaption><p></p>
 </figure>
 </div>
+<p>Cependant, il y a des défis associés à ce genre de <span style="white-space:nowrap">développement :</span></p>
+<ul>
+<li><strong>Instabilité apparente au début</strong>: Dans les itérations initiales, puisqu’on n’a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des specifications et la conception sont loin de la «&nbsp;bonne voie&nbsp;». La conséquence est que les évaluations et les rétroactions peuvent sembler rudes et cela peut être déstabilisantes pour des personnes qui ne sont pas familières avec le processus. La bonne nouvelle est que normalement cette instabilité diminue au fur et à mesure que le projet avance (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.8</span></a>).</li>
+<li><strong>Modifications des objectifs de l’itération en cours au besoin</strong>: Il arrive souvent que dans une itération, les choses ne se passent pas comme on a imaginé. Par exemple, l’ensemble des récits utilisateur ou des scénarios de cas d’utilisation visé pour l’itération nécessite plus de travail que prévu. La tendance dans ce cas est de se donner plus de temps pour terminer. Mais cela voudrait dire que la rétroaction de toute l’itération sera retardée. Il serait nécessaire de changer la planification de démonstration avec le client (qui a souvent peu de disponibilités). Donc, le processus nous impose de toujours respecter le délai des itérations. Il s’agit d’une <a href="https://fr.wikipedia.org/wiki/Timeboxing">gestion par blocs de temps</a> (en anglais <em>timeboxing</em>). Que faire alors si dans une itération on n’arrivera pas à tout <span style="white-space:nowrap">faire ?</span> La résolution est de demander à l’équipe après la moitié de l’itération si les objectifs d’origine peuvent être atteints. Si la réponse est non, on priorise les objectifs en plaçant les objectifs secondaires dans la catégorie «&nbsp;choses à faire&nbsp;» (qui seront faites à une itération ultérieure éventuellement). Voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.9</span></a>. Selon une étude menée par <span class="citation" data-cites="blincoe2019high">Blincoe et al. (<a href="references.html#ref-blincoe2019high" role="doc-biblioref">2019</a>)</span> sur trois gros projets itératifs d’IBM, jusqu’à <span style="white-space:nowrap">54 %</span> des exigences de haut niveau ont été déplacées de cette manière. Le but ultime de cette stratégie est de pouvoir faire une démonstration à la fin de l’itération, même si elle ne comprend pas toutes les fonctionnalités visées au début, car la rétroaction régulière sur des choses qui fonctionnent est essentielle.</li>
+</ul>
+<!-- ![Le développement itératif et incrémental [@craig_uml_2005, figure 2.1].](images/A2.1.svg){#fig-DevIteratifIncremental} -->
 <div id="fig-AnalyseConceptionDansLesIterations" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/F2.4.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.8: Analyse et conception évolutives, majoritairement effectuées dans les premières itérations <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. 2.4</a>)</span>.</figcaption><p></p>
+<p><img src="images/F2.4_adaptée.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.9: Pour respecter la méthode du temps limité, on peut modifier les objectifs d’une itération si le travail est trop important <span class="citation" data-cites="craig_uml_2005">(adaptation de <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman 2005, fig. 2.4</a>)</span>.</figcaption><p></p>
 </figure>
 </div>
-<div id="fig-IteratifEvolutif" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/iteratif-evolutif.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.9: Processus itératif et évolutif.</figcaption><p></p>
-</figure>
-</div>
-<div id="fig-nuageDeMots" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/wordle_ordre_alph.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.10: Nuage de mots importants.</figcaption><p></p>
-</figure>
-</div>
+<!-- ![Nuage de mots importants.](images/wordle_ordre_alph.png){#fig-nuageDeMots} -->
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-blincoe2019high" class="csl-entry" role="doc-biblioentry">
+Blincoe, Kelly, Ali Dehghan, Abdoul-Djawadou Salaou, Adam Neal, Johan Linaker, et Daniela Damian. 2019. <span>«&nbsp;High-level software requirements and iteration changes: a predictive model&nbsp;»</span>. <em>Empirical Software Engineering</em> 24 (3): 1610‑48.
+</div>
 <div id="ref-GoF1994" class="csl-entry" role="doc-biblioentry">
 Gamma, Erich, Richard Helm, Ralph Johnson, et John Vlissides. 1994. <em>Design <span>Patterns</span>: <span>Elements</span> of <span>Reusable</span> <span>Object</span>-<span>Oriented</span> <span>Software</span></em>. 1ʳᵉ éd. Reading, Mass: Addison-Wesley Professional. <a href="http://amazon.com/o/ASIN/0201633612/">http://amazon.com/o/ASIN/0201633612/</a>.
 </div>
