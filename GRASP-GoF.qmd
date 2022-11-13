@@ -17,9 +17,9 @@ Alors, pour mieux comprendre l'application des patterns GoF, on doit imaginer la
 ```Java
 /* calculateurTaxes est le nom du calculateur utilisé actuellement */
 if(calculateurTaxes == "GoodAsGoldTaxPro") {
-    /* série d'instructions pour intéragir avec le calculateur */
+    /* série d'instructions pour interagir avec le calculateur */
 } else if(calculateurTaxes == "TaxMaster") {
-    /* série d'instructions pour intéragir avec le calculateur */
+    /* série d'instructions pour interagir avec le calculateur */
 } else if /* ainsi de suite pour chacun des calculateurs */
     /* ... */
 }
