@@ -45,10 +45,10 @@ book:
       - Outils-UML.qmd
       - GRASP-GoF.qmd
       - Fiabilité.qmd
-      - Diagrammes d'activités.qmd
-      - Diagrammes d'états.qmd
+      - DiagrammesActivites.qmd
+      - DiagrammesEtats.qmd
       - ConceptionPackages.qmd
-      - Diagrammes de déploiement.qmd
+      - DiagrammesDeploiement.qmd
       - Laboratoires.qmd
       - references.qmd
     - part: Exercices
@@ -57,9 +57,9 @@ book:
       # - Exercice_Diagramme_de_classes_conceptuelles_MDD.qmd
       # - Exercice_Contrats_d_opération.qmd
       # - Exercice_DSS_Diagrammes-de-séquence-système.qmd
-      - Exercice_Diagramme_états.qmd
-      - Exercice_Diagramme_activité.qmd
-      - Exercice_Identifier_GRASP_dans_GoF.qmd
+      # - Exercice_Diagramme_états.qmd
+      # - Exercice_Diagramme_activité.qmd
+      # - Exercice_Identifier_GRASP_dans_GoF.qmd
       - Exercice_Critique_d-une_conception.qmd
       - Exercice_Coder_des_méthodes_des_DS.qmd
       - Exercice_Adaptateur_pour_Maps_CF.qmd

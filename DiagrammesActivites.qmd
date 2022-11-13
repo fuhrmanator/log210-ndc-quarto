@@ -77,3 +77,27 @@ stop
 @enduml
 ```
 
+## Exercices
+
+{{< include _callout_conseils_diagrammes.qmd >}}
+
+::: {#exr-DevoirMoodle}
+
+### Soumission de devoir Moodle
+
+Dessinez un diagramme d'activité qui modélise ce qui se passe lorsque vous faites un devoir dans Moodle.
+Votre diagramme doit comprendre les activités de l'enseignant et de l'étudiant (dans les partitions séparées). 
+Le devoir doit être un _objet_ dans le diagramme.
+
+:::
+
+::: {#exr-DevoirGoogleClassroom}
+
+### Soumission de devoir Google Classrooms
+
+Dessinez un diagramme d'activité qui modélise ce qui se passe lorsque vous faites un devoir dans Google Classrooms.
+Votre diagramme doit comprendre les activités de l'enseignant et de l'étudiant (dans les partitions séparées). 
+Le devoir doit être un _objet_ dans le diagramme.
+
+:::
+

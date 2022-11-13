@@ -32,9 +32,9 @@ Alors, pour mieux comprendre l'application des patterns GoF, on doit imaginer la
 ```Java
 /* calculateurTaxes est le nom du calculateur utilisé actuellement */
 if(calculateurTaxes == "GoodAsGoldTaxPro") {
-    /* série d'instructions pour intéragir avec le calculateur */
+    /* série d'instructions pour interagir avec le calculateur */
 } else if(calculateurTaxes == "TaxMaster") {
-    /* série d'instructions pour intéragir avec le calculateur */
+    /* série d'instructions pour interagir avec le calculateur */
 } else if /* ainsi de suite pour chacun des calculateurs */
     /* ... */
 }
@@ -133,3 +133,104 @@ Alors, un IDE qui automatise les *refactorings* peut vous aider à appliquer cer
 - GRASP Polymorphisme est relié à [Replace Type Code with Subclasses](https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html) et [Replace conditional with polymorphism](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html) -- attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (`switch`) répétées à plusieurs endroits dans le code.
 - GRASP Fabrication pure est relié à [Extract class](https://refactoring.com/catalog/extractClass.html).
 - GRASP Indirection est relié à [Extract function](https://refactoring.com/catalog/extractFunction.html) et [Move function](https://refactoring.com/catalog/moveFunction.html).
+
+## Exercices
+
+Pour ces exercices, suivre le modèle pour décortiquer le patron Adaptateur, illustré à la @fig-Ex_Fig23_3.
+
+Une bonne ressource pour les patterns GoF est la suivante:
+
+[https://fuhrmanator.github.io/oodp-horstmann/htm/index\_fr\_en.html](https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html)
+
+::: {.callout-tip}
+Il se peut que certains principes GRASP ne s'appliquent pas à un patron GoF!
+:::
+
+::: {#exr-GRASP_iterateur}
+
+### Itérateur
+
+Identifiez les 4 principes GRASP dans le patron
+[Itérateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Patron-,iterateur,-Contexte),
+selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_observateur}
+
+### Observateur
+
+Identifiez les 4 principes GRASP dans le patron
+[Observateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Contr%C3%B4leur-,patron%20observateur,-Mod%C3%A8le),
+selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_strategie}
+
+### Stratégie
+
+Identifiez les 4 principes GRASP dans le patron
+[Stratégie](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=page-,patron%20strategie,-Strat%C3%A9gie),
+selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_composite}
+
+### Composite
+
+Identifiez les 4 principes GRASP dans le patron
+[Composite](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=composants-,patron%20composite,-Contexte),
+selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_decorateur}
+
+### Décorateur
+
+Identifiez les 4 principes GRASP dans le patron [Décorateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte),
+selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_methode_template}
+
+### Méthode Template
+Identifiez les 4 principes GRASP dans le patron [Méthode Template](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte),
+selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_commande}
+
+### Commande
+
+Identifiez les 4 principes GRASP dans le patron [Commande](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte), selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_methode_fabrique}
+
+### Méthode Fabrique
+
+Identifiez les 4 principes GRASP dans le patron [Méthode fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)), selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_proxy}
+
+### Proxy
+
+Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe), selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
+
+::: {#exr-GRASP_facade}
+
+### Façade
+
+Identifiez les 4 principes GRASP dans le patron [Façade](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte), selon les directives à la @sec-GRASP_Adaptateur.
+
+:::
