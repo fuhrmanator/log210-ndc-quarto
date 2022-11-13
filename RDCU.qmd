@@ -283,11 +283,22 @@ Vous pouvez en lire plus dans [cette réponse sur StackOverflow](https://stackov
 
 Dans la section F30.8/A33.7\ \faBook<i class="fa-solid fa-book"></i>, Larman mentionne le pattern "Faire soi-même" de Peter Coad [-@coad97a] qui permet de réduire le [Décalage des représentations](#sec-DecalageRepresentations), même s'il ne représente pas exactement la réalité des objets (voir la @fig-main_des):
 
-::: {.callout}
-**Faire soi-même**: "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction"
+::: {#fig-RDCU_faire_soi_meme layout-ncol=2 layout-valign="bottom"}
+
+![Dés dans la vraie vie (["Hand of chance"](https://www.flickr.com/photos/aerust/9590772048/) [(CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/) par [Alexandra E Rust](https://www.flickr.com/people/aerust/)).](images/flickr_aerust_hand_of_chance.jpg){width=80% #fig-main_des}
+
+```{#fig-de_logiciel .plantuml caption="Dé dans un logiciel selon *Faire soi-même*" }
+!include ecriture.pumlinclude
+hide empty methods
+class Dé {
+    +face : int
+    brasser()
+}
+```
+
+**Faire soi-même**: "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction" de @coad97a
 :::
 
-![Dans la vraie vie, les dés sont lancés par une main (["Hand of chance"](https://www.flickr.com/photos/aerust/9590772048/) [(CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/) par [Alexandra E Rust](https://www.flickr.com/people/aerust/)).](images/flickr_aerust_hand_of_chance.jpg){width=80% #fig-main_des}
 
 ## Exercices
 
