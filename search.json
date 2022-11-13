@@ -375,7 +375,7 @@
     "href": "RDCU.html#sec-FaireSoiMeme",
     "title": "9  Réalisations de cas d’utilisation (RDCU)",
     "section": "9.8 Pattern « Faire soi-même »",
-    "text": "9.8 Pattern « Faire soi-même »\nDans la section F30.8/A33.7 , Larman mentionne le pattern « Faire soi-même » de Peter Coad (1997) qui permet de réduire le Décalage des représentations, même s’il ne représente pas exactement la réalité des objets (voir la figure 9.7 ):\n\n\n\n\n\n\nFaire soi-même: « Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction »\n\n\n\n\n\n\nFigure 9.7: Dans la vraie vie, les dés sont lancés par une main (« Hand of chance » (CC BY 2.0) par Alexandra E Rust)."
+    "text": "9.8 Pattern « Faire soi-même »\nDans la section F30.8/A33.7 , Larman mentionne le pattern « Faire soi-même » de Peter Coad (1997) qui permet de réduire le Décalage des représentations, même s’il ne représente pas exactement la réalité des objets (voir la figure 9.7 (a) ):\n\n\n\n\n\n\n\n(a) Dés dans la vraie vie (« Hand of chance » (CC BY 2.0) par Alexandra E Rust).\n\n\n\n\n\n\nDéface : intbrasser()\n(b) Dé dans un logiciel selon Faire soi-même\n\n\n\n\nFigure 9.7: Faire soi-même: « Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction » de Coad (1997)"
   },
   {
     "objectID": "RDCU.html#exercices",

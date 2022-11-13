@@ -806,21 +806,58 @@ Mise en garde
 </section>
 <section id="sec-FaireSoiMeme" class="level2" data-number="9.8">
 <h2 data-number="9.8" class="anchored" data-anchor-id="sec-FaireSoiMeme"><span class="header-section-number">9.8</span> Pattern «&nbsp;Faire soi-même&nbsp;»</h2>
-<p>Dans la section F30.8/A33.7&nbsp;<i class="fa-solid fa-book"></i>, Larman mentionne le pattern «&nbsp;Faire soi-même&nbsp;» de Peter Coad <span class="citation" data-cites="coad97a">(<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span> qui permet de réduire le <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a>, même s’il ne représente pas exactement la réalité des objets (voir la <a href="#fig-main_des">figure&nbsp;<span>9.7</span></a><span style="white-space:nowrap"> ):</span></p>
-<div class="callout callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Faire soi-même</strong>: «&nbsp;Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction&nbsp;»</p>
-</div>
-</div>
-</div>
+<p>Dans la section F30.8/A33.7&nbsp;<i class="fa-solid fa-book"></i>, Larman mentionne le pattern «&nbsp;Faire soi-même&nbsp;» de Peter Coad <span class="citation" data-cites="coad97a">(<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span> qui permet de réduire le <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a>, même s’il ne représente pas exactement la réalité des objets (voir la <a href="#fig-main_des">figure&nbsp;<span>9.7 (a)</span></a><span style="white-space:nowrap"> ):</span></p>
+<div id="fig-RDCU_faire_soi_meme" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-main_des" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/flickr_aerust_hand_of_chance.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;9.7: Dans la vraie vie, les dés sont lancés par une main (<a href="https://www.flickr.com/photos/aerust/9590772048/">«&nbsp;Hand of chance&nbsp;»</a> <a href="https://creativecommons.org/licenses/by/2.0/">(CC BY 2.0)</a> par <a href="https://www.flickr.com/people/aerust/">Alexandra E Rust</a>).</figcaption><p></p>
+<p><img src="images/flickr_aerust_hand_of_chance.jpg" class="img-fluid figure-img" data-ref-parent="fig-RDCU_faire_soi_meme"></p>
+<p></p><figcaption class="figure-caption">(a) Dés dans la vraie vie (<a href="https://www.flickr.com/photos/aerust/9590772048/">«&nbsp;Hand of chance&nbsp;»</a> <a href="https://creativecommons.org/licenses/by/2.0/">(CC BY 2.0)</a> par <a href="https://www.flickr.com/people/aerust/">Alexandra E Rust</a>).</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-de_logiciel" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="105px" preserveaspectratio="none" style="width:101px;height:105px;background:#00000000;" version="1.1" viewbox="0 0 101 105" width="101px" zoomandpan="magnify"><defs></defs><g><!--MD5=[18e074f27103afc71028bba2a4f1683f]
+class Dé--><g id="elem_Dé"><polygon fill="#F1F1F1" points="9.5,7,9.5,7.2102,18.875,6.5857,28.25,7.1933,37.625,7.3997,47,6.2866,56.375,6.9223,65.75,6.5735,75.125,6.6165,84.5,7,84.4913,6.979,84.7654,6.9335,85.2777,7.4634,85.4803,7.2452,85.889,7.5249,86.2678,7.7322,86.4008,7.7873,86.3878,8.0748,86.5817,8.448,86.6973,8.7888,86.9085,9.1692,87,9.5,87.2391,9.5,87.5857,19.4173,87.6711,29.3346,87.6793,39.2519,87.2546,49.1692,87.4636,59.0865,87.7022,69.0038,86.2788,78.9211,87,88.8384,87.209,88.925,86.7622,89.1542,86.8715,89.6136,86.4082,89.8359,86.3931,90.2439,86.2678,90.6062,86.3624,90.8346,85.908,90.7376,85.5741,90.9315,85.2503,91.1498,84.9066,91.3202,84.5,91.3384,84.5,91.3345,75.125,91.6256,65.75,90.766,56.375,91.6228,47,91.8866,37.625,91.783,28.25,91.9514,18.875,90.8553,9.5,91.3384,9.4168,91.1376,9.0672,91.0006,8.7854,91.0274,8.4143,90.8386,8.1727,90.9625,7.7322,90.6062,7.6784,90.5839,7.4801,90.2089,7.5096,89.9282,7.0875,89.4605,6.9866,89.1258,7,88.8384,7.649,88.8384,7.4357,78.9211,7.7345,69.0038,6.6782,59.0865,7.3192,49.1692,7.5904,39.2519,6.5276,29.3346,6.9041,19.4173,7,9.5,7.0388,9.5161,7.3472,9.2296,7.2916,8.7924,7.5818,8.4983,7.4152,8.0151,7.7322,7.7322,7.6458,7.5237,8.15,7.7409,8.3479,7.2186,8.8578,7.4496,9.1728,7.2101,9.5,7" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="15" x="39.5" y="27.2593">Dé</text><path d="M8,36.4461 L8,36.7264 L17.75,35.8937 L27.5,36.7039 L37.25,36.979 L47,35.4949 L56.75,36.3425 L66.5,35.8775 L76.25,35.9348 L86,36.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><polygon fill="none" points="21.0166,48.1759,20.5768,48.7767,20.0567,49.6568,19.3128,50.2499,18.5311,50.5742,17.9078,50.6024,17.1067,50.1967,16.3509,49.9318,15.7771,49.3937,15.4762,48.7778,15.2977,48.2874,15.1229,47.6468,14.8391,47.0955,15.0572,46.5573,15.2482,45.9677,15.9653,45.5015,16.4697,44.8964,17.0941,44.6955,17.8364,44.5225,18.7883,44.6253,19.3097,44.8712,19.9158,44.9826,20.6529,45.7378,20.9098,46.5349,21.0214,47.0789,20.895,47.9752" style="stroke:#038048;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="54" x="27" y="55.7054">face : int</text><path d="M8,63.8923 L8,64.1725 L17.75,63.3399 L27.5,64.15 L37.25,64.4252 L47,62.9411 L56.75,63.7887 L66.5,63.3236 L76.25,63.3809 L86,63.8923 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="56" x="13" y="83.1515">brasser()</text></g><!--MD5=[5c437375f43726f8400680cf3656ec74]
+@startuml
+!include ecriture.pumlinclude
+hide empty methods
+class Dé {
+    +face : int
+    brasser()
+}
+@enduml
+
+@startuml
+skinparam style strictuml
+skinparam backgroundcolor transparent
+skinparam defaultfontname xkcd Script
+skinparam handwritten true
+hide empty methods
+class Dé {
+    +face : int
+    brasser()
+}
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">(b) Dé dans un logiciel selon <em>Faire soi-même</em></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.7: <strong>Faire soi-même</strong>: «&nbsp;Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction&nbsp;» de <span class="citation" data-cites="coad97a">Coad (<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span></figcaption><p></p>
 </figure>
 </div>
 </section>
