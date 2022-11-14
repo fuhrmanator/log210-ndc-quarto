@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -96,6 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta">
 
       
+    
       
     </div>
     
@@ -409,6 +410,7 @@ Country: null
 </section>
 <section id="exercices" class="level2" data-number="16.2">
 <h2 data-number="16.2" class="anchored" data-anchor-id="exercices"><span class="header-section-number">16.2</span> Exercices</h2>
+<p>Ces exercices devraient vous aider à comprendre les diagrammes d’activités en UML. Vous devez vous référer au livre du cours pour la bonne notation (Chapitre F25/A28).</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -427,14 +429,25 @@ Note
 <li><a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571">PlantUML Gizmo</a>, module supplémentaire Google <span style="white-space:nowrap">Docs ;</span></li>
 <li><a href="https://www.planttext.com/">PlantText.com</a>.</li>
 </ul>
-<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la <a href="Outils-UML.html#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>).</p>
+<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la <a href="Outils-UML.html#fig-LucidchartUML">figure&nbsp;<span>13.5</span></a>).</p>
 </div>
+</div>
+<div id="exr-locationVoitures" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 16.1 (Location de voitures) </strong></span>Esquissez le diagramme d’activités lors de la réception de voitures louées (après la location) dans une compagnie. Pour le diagramme, faites attention à la <strong>notation UML</strong>: cela comprend les objets (pour la voiture et pour la facture), le début et la fin de l’activité, les débranchements, les jointures, les décisions et les fusions.</p>
+<ul>
+<li>Les rôles sont le client, le réceptionniste (qui gère la documentation et le paiement de la location) et l’agent (qui gère le traitement des voitures avant la prochaine location).</li>
+<li>Le client rend la voiture et les clés.</li>
+<li>Le réceptionniste note le kilométrage et le niveau d’essence pour calculer la facture.</li>
+<li>Le client paye sa location, selon le montant sur la facture.</li>
+<li>L’agent inspecte la voiture pour la propreté. Si elle n’est pas assez propre, alors l’agent doit laver, rincer et sécher l’extérieur et nettoyer l’intérieur. Ce travail devrait commencer le plus vite possible, après que le réceptionniste ait fini de noter les informations pour la facture.</li>
+</ul>
+<p>Voir <a href="http://www.plantuml.com/plantuml/uml/PP71QeH038RlUOf0B_eAqqDtAHGAPIaMsbCFWnirg9dfJ1GMV26VmnVhwEuMf9U1_FcI_CaSejgWGzz1R5cy3RR7g9UEqXkut3BJSySaEi76WYb8pe4GFXth4EWHfeUZAFyCzDMmqbGiSqbUsObmJ36O6uca26MtpF4RpCaf1MpxJHGUoGv8CPAKgMFbGWkcNcPPvf0mg6nvctKtOrwkKchrRYyxPgr6MriMc8xrbNwLwAbSHy9uzyqLPZuu7-WfHsr8C7C3vq1T9Cp4IGxcpOwx6bDmShXJFjA-pLuwaQhRJB5eMe5f270cx2p-GUcANC7_QoKTj_sZEW-75AwVy0i0">une solution avec PlantUML</a>.</p>
 </div>
 <div id="exr-DevoirMoodle" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 16.1 (Soumission de devoir Moodle) </strong></span>Dessinez un diagramme d’activité qui modélise ce qui se passe lorsque vous faites un devoir dans Moodle. Votre diagramme doit comprendre les activités de l’enseignant et de l’étudiant (dans les partitions séparées). Le devoir doit être un <em>objet</em> dans le diagramme.</p>
+<p><span class="theorem-title"><strong>Exercice 16.2 (Soumission de devoir Moodle) </strong></span>Dessinez un diagramme d’activité qui modélise ce qui se passe lorsque vous faites un devoir dans Moodle. Votre diagramme doit comprendre les activités de l’enseignant et de l’étudiant (dans les partitions séparées). Le devoir doit être un <em>objet</em> dans le diagramme.</p>
 </div>
 <div id="exr-DevoirGoogleClassroom" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 16.2 (Soumission de devoir Google Classrooms) </strong></span>Dessinez un diagramme d’activité qui modélise ce qui se passe lorsque vous faites un devoir dans Google Classrooms. Votre diagramme doit comprendre les activités de l’enseignant et de l’étudiant (dans les partitions séparées). Le devoir doit être un <em>objet</em> dans le diagramme.</p>
+<p><span class="theorem-title"><strong>Exercice 16.3 (Soumission de devoir Google Classrooms) </strong></span>Dessinez un diagramme d’activité qui modélise ce qui se passe lorsque vous faites un devoir dans Google Classrooms. Votre diagramme doit comprendre les activités de l’enseignant et de l’étudiant (dans les partitions séparées). Le devoir doit être un <em>objet</em> dans le diagramme.</p>
 </div>
 
 
@@ -482,7 +495,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -518,24 +548,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -543,7 +591,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

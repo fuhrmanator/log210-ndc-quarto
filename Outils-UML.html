@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -178,6 +178,7 @@ div.csl-indent {
   <div class="quarto-title-meta">
 
       
+    
       
     </div>
     
@@ -389,10 +390,27 @@ div.csl-indent {
 
 <p>Le chapitre F20/A22&nbsp;<i class="fa-solid fa-book"></i>&nbsp;définit quelques termes importants pour la modélisation avec UML et les outils.</p>
 <p>En mode esquisse, lorsqu’on dessine un modèle sur un tableau blanc ou un papier, un outil pratique pour numériser le tout est <strong>Microsoft Lens</strong> (<a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&amp;hl=fr_CA">Android</a> ou <a href="https://apps.apple.com/ca/app/microsoft-office-lens-pdf-scan/id975925059">iOS</a>). Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.</p>
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-OfficeLens" class="quarto-layout-panel">
 <figure class="figure">
-<p><img src="images/OfficeLensWhiteBoard.jpg" class="img-fluid figure-img" width="200"></p>
-<p></p><figcaption class="figure-caption">Microsoft Lens peut détecter le cadre d’un dessin sur un tableau blanc ou papier et le transformer, même si on n’est pas droit devant le dessin.</figcaption><p></p>
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-beforeLens" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/Before-Office_Lens.jpg" class="img-fluid figure-img" data-ref-parent="fig-OfficeLens" width="300"></p>
+<p></p><figcaption class="figure-caption">(a) Reconnaissance du cadre d’image sur une feuille</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-afterLens" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/After-Office_Lens.jpg" class="img-fluid figure-img" data-ref-parent="fig-OfficeLens" width="300"></p>
+<p></p><figcaption class="figure-caption">(b) Transformation vers un résultat plus lisible</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.1: Microsoft Lens peut détecter le cadre d’un dessin sur un tableau blanc ou papier et le transformer, même si on n’est pas droit devant le dessin.</figcaption><p></p>
 </figure>
 </div>
 <div class="callout-caution callout callout-style-default callout-captioned">
@@ -410,33 +428,33 @@ Mise en garde
 </div>
 <p>Dans la méthodologie de ce manuel, on exploite l’outil PlantUML pour faire beaucoup de modèles. C’est un outil qui a plusieurs <span style="white-space:nowrap">avantages :</span></p>
 <ul>
-<li>il est basé sur un langage dédié simple (anglais <em>domain specific language</em> ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version <span style="white-space:nowrap">(git) ;</span></li>
+<li>il est basé sur un langage spécifique à un domaine (anglais <em>domain-specific language</em> ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version <span style="white-space:nowrap">(git) ;</span></li>
 <li>il est basé sur du code <span style="white-space:nowrap">libre ;</span></li>
 <li>il s’occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est <span style="white-space:nowrap">complexe) ;</span></li>
 <li>il est populaire (utilisé par des ingénieurs chez Google pour documenter Android, Pay, <span style="white-space:nowrap">etc.) ;</span></li>
 <li>il existe plusieurs supports pour les outils de <span style="white-space:nowrap">documentation :</span>
 <ul>
-<li>extension <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">PlantUML pour VisualStudio Code</a> (<a href="#fig-PlantUMLVSCode">figure&nbsp;<span>13.1</span></a>) avec <a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel</a>&nbsp;<i class="fa-brands fa-youtube"></i>;</li>
-<li>extension <a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&amp;hl=en">PlantUML Gizmo</a> pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l’ÉTS (<a href="#fig-PlantUMLGizmo">figure&nbsp;<span>13.2</span></a>)</li>
+<li>extension <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">PlantUML pour VisualStudio Code</a> (<a href="#fig-PlantUMLVSCode">figure&nbsp;<span>13.2</span></a>) avec <a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel</a>&nbsp;<i class="fa-brands fa-youtube"></i>;</li>
+<li>extension <a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&amp;hl=en">PlantUML Gizmo</a> pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l’ÉTS (<a href="#fig-PlantUMLGizmo">figure&nbsp;<span>13.3</span></a>)</li>
 </ul></li>
 </ul>
 <div id="fig-PlantUMLVSCode" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/PlantUMLVSCode.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.1: L’extension PlantUML pour VisualStudio Code.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.2: L’extension PlantUML pour VisualStudio Code.</figcaption><p></p>
 </figure>
 </div>
 <p>Pour un débutant, le langage PlantUML peut sembler plus compliqué qu’utiliser un outil graphique comme Lucidchart. Cependant, pour beaucoup de diagrammes (comme les diagrammes de séquence), ça peut être plus long à créer ou à modifier. Bien que ces outils aient des gabarits ou des modes «&nbsp;UML&nbsp;», ceux-ci ne sont pas toujours conviviaux ou complets. C’est souvent juste des objets groupés et le vrai sens de la notation UML n’est pas considéré.</p>
-<p>Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l’orienter dans n’importe quel sens. Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n’ont aucun sens en UML (voir la <a href="#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>). Il est possible de corriger le diagramme, mais en combien de <span style="white-space:nowrap">clics ?</span> C’est très vite tannant.</p>
+<p>Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l’orienter dans n’importe quel sens. Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n’ont aucun sens en UML (voir la <a href="#fig-LucidchartUML">figure&nbsp;<span>13.5</span></a>). Il est possible de corriger le diagramme, mais en combien de <span style="white-space:nowrap">clics ?</span> C’est très vite agaçant.</p>
 <section id="exemples-de-diagramme-avec-plantuml" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="exemples-de-diagramme-avec-plantuml"><span class="header-section-number">13.1</span> Exemples de diagramme avec PlantUML</h2>
-<p>Dans le menu «&nbsp;Select sample diagram&nbsp;» de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> (voir la <a href="#fig-GizmoSamples">figure&nbsp;<span>13.3</span></a>).</p>
+<p>Dans le menu «&nbsp;Select sample diagram&nbsp;» de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> (voir la <a href="#fig-GizmoSamples">figure&nbsp;<span>13.4</span></a>).</p>
 </section>
 <section id="astuces-plantuml" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="astuces-plantuml"><span class="header-section-number">13.2</span> Astuces PlantUML</h2>
 <ul>
 <li><a href="https://stackoverflow.com/q/32203610/1168342">Comment intégrer PlantUML dans le <code>Readme.md</code> de <span style="white-space:nowrap">GitHub/GitLab ?</span></a>&nbsp;<i class="fa-brands fa-stack-overflow"></i></li>
-<li>Le serveur de PlantUML.com génère un diagramme à partir d’un <span style="white-space:nowrap">URL :</span><br>
+<li>Le serveur de PlantUML.com génère un diagramme à partir d’une <span style="white-space:nowrap">URL :</span><br>
 <code>https://plantuml.com/plantuml/{forme}/{clé}</code> qui contient une clé comme<br>
 <code>Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00</code>.<br>
 La clé est en fait une représentation compressée du code source.</li>
@@ -445,7 +463,7 @@ La clé est en fait une représentation compressée du code source.</li>
 <li><code>{forme}</code> → <code>png</code>, <code>img</code> ou <code>svg</code> : représentation graphique <span style="white-space:nowrap">correspondante ;</span></li>
 <li><code>{forme}</code> → <code>uml</code> : récupération du code source PlantUML (ça marche avec <code>http:</code> <span style="white-space:nowrap">seulement) ;</span></li>
 </ul></li>
-<li>On peut également récupérer le code source d’un URL avec l’outil PlantUML localement avec l’option <code>-decodeurl {clé}</code> de la ligne de <span style="white-space:nowrap">commande :</span></li>
+<li>On peut également récupérer le code source d’une URL avec l’outil PlantUML localement avec l’option <code>-decodeurl {clé}</code> de la ligne de <span style="white-space:nowrap">commande :</span></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> java <span class="at">-jar</span> plantuml.jar <span class="at">-decodeurl</span> Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@startuml</span></span>
@@ -453,7 +471,7 @@ La clé est en fait une représentation compressée du code source.</li>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Bob</span> <span class="at">--</span><span class="op">&gt;</span> Alice: Authentication Response</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">@enduml</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Les images <code>png</code> générées par le serveur ou par l’outil contiennent une copie du code source dans les meta-données PNG.
+<li>Les images <code>png</code> générées par le serveur ou par l’outil contiennent une copie du code source dans les métadonnées PNG.
 <ul>
 <li>On peut <a href="https://twitter.com/thefuhrmanator/status/1193565869227556868">récupérer le code source PlantUML à partir d’une image PNG</a> avec un outil sur le Web comme <a href="http://exif.regex.info/exif.cgi">ceci</a>.</li>
 <li>On peut également utiliser l’option <code>-metadata</code> de la ligne de commande <span style="white-space:nowrap">PlantUML :</span></li>
@@ -463,19 +481,19 @@ La clé est en fait une représentation compressée du code source.</li>
 <div id="fig-PlantUMLGizmo" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/PlantUMLGizmoSlides.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.2: PlantUML Gizmo pour Google Docs et Google Slides.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.3: PlantUML Gizmo pour Google Docs et Google Slides.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-GizmoSamples" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/SelectSampleDiagramGizmo.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.3: PlantUML Gizmo offre plusieurs exemples de diagramme UML.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.4: PlantUML Gizmo offre plusieurs exemples de diagramme UML.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-LucidchartUML" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/LucidchartDSSBotched.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.4: Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidcharts. C’est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n’y a pas de sémantique UML dans l’outil. Par exemple, un «&nbsp;message&nbsp;» UML dans un diagramme de séquence dans Lucidcharts est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d’autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloc «&nbsp;loop&nbsp;». La ligne de vie de l’acteur Étudiant se transforme en diagonale lorsque l’acteur est déplacé à droite. Un vrai message UML est normalement toujours à l’horizontale et une vraie ligne de vie est toujours à la verticale. Puisque Lucidcharts ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d’outil.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.5: Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidcharts. C’est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n’y a pas de sémantique UML dans l’outil. Par exemple, un «&nbsp;message&nbsp;» UML dans un diagramme de séquence dans Lucidcharts est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d’autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloc «&nbsp;loop&nbsp;». La ligne de vie de l’acteur Étudiant se transforme en diagonale lorsque l’acteur est déplacé à droite. Un vrai message UML est normalement toujours à l’horizontale et une vraie ligne de vie est toujours à la verticale. Puisque Lucidcharts ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d’outil.</figcaption><p></p>
 </figure>
 </div>
 
@@ -529,7 +547,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -565,24 +600,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -590,7 +643,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

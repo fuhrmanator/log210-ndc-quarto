@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -115,6 +178,7 @@ div.csl-indent {
   <div class="quarto-title-meta">
 
       
+    
       
     </div>
     
@@ -317,6 +381,7 @@ div.csl-indent {
   <li><a href="#tbl-GRASPTable" id="toc-tbl-GRASPTable" class="nav-link" data-scroll-target="#tbl-GRASPTable"><span class="toc-section-number">6.2</span>  Tableau des principes GRASP</a></li>
   <li><a href="#grasp-et-rdcu" id="toc-grasp-et-rdcu" class="nav-link" data-scroll-target="#grasp-et-rdcu"><span class="toc-section-number">6.3</span>  GRASP et RDCU</a></li>
   <li><a href="#grasp-et-patterns-gof" id="toc-grasp-et-patterns-gof" class="nav-link" data-scroll-target="#grasp-et-patterns-gof"><span class="toc-section-number">6.4</span>  GRASP et Patterns GoF</a></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">6.5</span>  Exercices</a></li>
   </ul>
 </nav>
     </div>
@@ -451,7 +516,7 @@ Country: null
 <p>À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l’on nomme «&nbsp;Hacking cowboy&nbsp;». C’est le cas lors d’un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement). Vous ne feriez pas un logiciel avec 10 patrons GoF ou les diagrammes UML pour réfléchir à votre architecture. Mais vous savez aussi que le code qui est produit lors d’un hackathon ne sera pas facile à maintenir. Le seul but est de faire du code qui marche pour montrer une idée intéressante.</p>
 <p>Au fait, dans certains contextes d’entreprise (par exemple une entreprise en démarrage qui a seulement six mois de financement), c’est une situation similaire. Si une solution de <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">«&nbsp;produit minimum viable&nbsp;» (MVP en anglais)</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>&nbsp;n’existe pas à la fin de la période de financement, l’entreprise n’existera plus, car il n’y aura pas une deuxième période de financement. Si la compagnie est financée pour une deuxième période, la conception du code pourrait avoir besoin de beaucoup de soins, car elle a été négligée. Cette négligence à la conception (pour la maintenabilité) est aussi nommée la <a href="DetteTechnique.html">dette technique</a>.</p>
 <p>À l’autre extrémité du spectre, c’est beaucoup d’effort dépensé sur la conception, que l’on nomme «&nbsp;Cascade pure&nbsp;». Dans le cycle de vie en cascade, on met un temps fixe, par exemple plusieurs mois, à étudier la conception. Comme toute chose poussée à l’extrême, ce n’est pas idéal non plus. Dans son livre, <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> explique en détail des problèmes posés par une approche en cascade. Dans certains domaines, par exemple les logiciels pour le contrôle d’avion ou des appareils médicaux, une approche en cascade est encore utilisée, en dépit des problèmes dus à l’approche. La sécurité et la robustesse des logiciels sont très importantes, alors on passe beaucoup de temps à vérifier et valider la conception. Puisque les exigences sont plus stables (et les développeurs ont <em>a priori</em> une meilleure compréhension du domaine), l’approche en cascade n’est pas si mal. Pourtant le coût pour produire des logiciels certifiés est énorme.</p>
-<p>Le spectre de la conception est très important pour le monde réel, parce que une ingénieure ou un ingénieur devrait pouvoir s’adapter selon les attentes de son travail. Le dogme sur «&nbsp;la bonne manière&nbsp;» de développer un logiciel est souvent sans contexte. C’est le contexte de l’entreprise pour laquelle vous travaillez qui peut déterminer combien d’effort à mettre sur la conception. Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l’extrémité «&nbsp;hacking cowboy&nbsp;» du spectre), même si on vous dit que c’est «&nbsp;agile&nbsp;». <!-- Si vous négligez complètement la conception, vous pouvez peut-être produire du code qui fonctionne plus vite à court terme.
+<p>Le spectre de la conception est très important pour le monde réel, parce qu’une ingénieure ou un ingénieur devrait pouvoir s’adapter selon les attentes de son travail. Le dogme sur «&nbsp;la bonne manière&nbsp;» de développer un logiciel est souvent sans contexte. C’est le contexte de l’entreprise pour laquelle vous travaillez qui peut déterminer combien d’effort à mettre sur la conception. Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l’extrémité «&nbsp;hacking cowboy&nbsp;» du spectre), même si on vous dit que c’est «&nbsp;agile&nbsp;». <!-- Si vous négligez complètement la conception, vous pouvez peut-être produire du code qui fonctionne plus vite à court terme.
 Mais il faudra repayer la dette technique un jour.
 Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). --></p>
 </section>
@@ -519,11 +584,58 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <section id="grasp-et-patterns-gof" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="grasp-et-patterns-gof"><span class="header-section-number">6.4</span> GRASP et Patterns GoF</h2>
 <p>On peut voir les principes GRASP comme des généralisations (principes de base) des patterns GoF. Voir la section <a href="GRASP-GoF.html">Décortiquer les patterns GoF avec GRASP</a> pour plus d’informations.</p>
+</section>
+<section id="exercices" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="exercices"><span class="header-section-number">6.5</span> Exercices</h2>
+<div id="exr-polymorphisme" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 6.1 (GRASP Polymorphisme) </strong></span>Soit le diagramme de classe modélisant l’exemple de <span class="citation" data-cites="Fowl18a">Fowler (<a href="references.html#ref-Fowl18a" role="doc-biblioref">2018</a>)</span> à <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace Conditional with Polymorphism</em></a><span style="white-space:nowrap"> :</span></p>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="128px" preserveaspectratio="none" style="width:236px;height:128px;background:#FFFFFF;" version="1.1" viewbox="0 0 236 128" width="236px" zoomandpan="magnify"><defs></defs><g><!--MD5=[90f66edba3ee2ef2943b92b287a7e5d6]
+class Bird--><g id="elem_Bird"><rect codeline="2" fill="#F1F1F1" height="107.4844" id="Bird" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="215" x="7" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="27" x="101" y="24.9951">Bird</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="221" y1="33.2969" y2="33.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="83" x="13" y="50.292">type : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="203" x="13" y="66.5889">numberOfCoconuts : number</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="117" x="13" y="82.8857">voltage : number</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="221" y1="90.1875" y2="90.1875"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="146" x="13" y="107.1826">getPlumage() : String</text></g><!--MD5=[d8a7c2e25b0ec0a96a7ccdc4bd90c337]
+@startuml
+skinparam style strictuml
+class Bird {
+    type : String
+    numberOfCoconuts : number
+    voltage : number
+
+    getPlumage() : String
+}
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p>Appliquez GRASP Polymorphisme pour le code <span style="white-space:nowrap">suivant :</span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>get <span class="fu">plumage</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span> <span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">type</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="er">'</span>EuropeanSwallow<span class="er">'</span><span class="op">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"average"</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="er">'</span>AfricanSwallow<span class="er">'</span><span class="op">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">numberOfCoconuts</span> <span class="op">&amp;</span>gt<span class="op">;</span> <span class="dv">2</span><span class="op">)</span> <span class="op">?</span> <span class="st">"tired"</span> <span class="op">:</span> <span class="st">"average"</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="er">'</span>NorwegianBlueParrot<span class="er">'</span><span class="op">:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">voltage</span> <span class="op">&amp;</span>gt<span class="op">;</span> <span class="dv">100</span><span class="op">)</span> <span class="op">?</span> <span class="st">"scorched"</span> <span class="op">:</span> <span class="st">"beautiful"</span><span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">default</span><span class="op">:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"unknown"</span><span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-Ford2009" class="csl-entry" role="doc-biblioentry">
 Ford, Neal. 2009. <span>«&nbsp;Evolutionary architecture and emergent design: <span>Investigating</span> architecture and design&nbsp;»</span>. {CT}316. <a href="http://www.ibm.com/developerworks/library/j-eaed1/">http://www.ibm.com/developerworks/library/j-eaed1/</a>.
+</div>
+<div id="ref-Fowl18a" class="csl-entry" role="doc-biblioentry">
+Fowler, Martin. 2018. <em>Refactoring: Improving the Design of Existing Code</em>. 2 edition. Boston: Addison-Wesley Professional.
 </div>
 <div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
 Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
@@ -573,7 +685,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -609,24 +738,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -634,7 +781,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
