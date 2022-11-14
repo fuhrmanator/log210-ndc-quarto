@@ -271,7 +271,7 @@ Plus une solution ressemble à la description du problème, plus elle sera facil
 ::: {.callout-caution}
 Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n'ayant aucun lien avec le modèle du domaine.
 Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine.
-Il faut vérifier auprès d'une personne expérimentée (l'architecte du projet si possible) que l'application du pattern est justifiée, qu'elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées.
+Il faut vérifier avec une personne expérimentée (l'architecte du projet si possible) que l'application du pattern est justifiée, qu'elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées.
 Chaque fois qu'on propose des classes logicielles qui n'ont pas de liens avec la représentation du problème du domaine, on *augmente le décalage des représentations* et on rend la solution un peu plus difficile à comprendre.
 C'est aussi une forme de [Complexité circonstancielle (provenant des choix de conception)](#sec-ComplexiteCirc).
 Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels.
@@ -283,60 +283,24 @@ Vous pouvez en lire plus dans [cette réponse sur StackOverflow](https://stackov
 
 Dans la section F30.8/A33.7\ \faBook<i class="fa-solid fa-book"></i>, Larman mentionne le pattern "Faire soi-même" de Peter Coad [-@coad97a] qui permet de réduire le [Décalage des représentations](#sec-DecalageRepresentations), même s'il ne représente pas exactement la réalité des objets (voir la @fig-main_des):
 
-::: {.callout}
-**Faire soi-même**: "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction"
-:::
+::: {#fig-RDCU_faire_soi_meme layout-ncol=2 layout-valign="bottom"}
 
-![Dans la vraie vie, les dés sont lancés par une main (["Hand of chance"](https://www.flickr.com/photos/aerust/9590772048/) [(CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/) par [Alexandra E Rust](https://www.flickr.com/people/aerust/)).](images/flickr_aerust_hand_of_chance.jpg){width=80% #fig-main_des}
+![Dés dans la vraie vie (["Hand of chance"](https://www.flickr.com/photos/aerust/9590772048/) [(CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/) par [Alexandra E Rust](https://www.flickr.com/people/aerust/)).](images/flickr_aerust_hand_of_chance.jpg){width=80% #fig-main_des}
 
-## Exercices
-
-::: {#exr-Flot_Visbilité}
-
-### Flot et visibilité dans les RDCU
-
-Le diagramme suivant a été fait avec PlantUML pour une RDCU dont l'intention était la suivante (à partir d'un contrat):
-
-- Une instance `e` de la classe `E` a été créée.
-- `e` a été associé à `:B` et à `:D` (la relation est que `B` et `D` contiennent des instances de `E`).
-
-Le résultat contient des erreurs de logique (dans le flot) et de conception (la visibilité).
-
-```{.plantuml}
-@startuml
-skinparam style strictuml
-skinparam sequenceMessageAlign center
-participant ":A" as A
-participant ":B" as B
-participant ":C" as C
-participant ":D" as D
-participant "e:E" as E
-
--> A : m1
-A -> C : m2
-
-create E
-C -->> E : e=create
-A -> B : add(e)
-C -> D : add(e)
-<<-- A : "ok"
-@enduml
+```{#fig-de_logiciel .plantuml caption="Dé dans un logiciel selon *Faire soi-même*" }
+!include ecriture.pumlinclude
+hide empty methods
+class Dé {
+    +face : int
+    brasser()
+}
 ```
 
-Le code source en PlantUML de ce diagramme est disponible [ici](http://www.plantuml.com/plantuml/uml/NS-n3eCW40RW_PxYmjGE3Ereh17HiGznmOiXAhM0Gz--Y4DJ5lB_7tz8Q4Ca7_TrWJ1Rjv6d5KFyB9nERqrvm--TdU4dXq0JgyLE3Wsxo1xI8bfZDt8HHQK4Ka1LQ9UrArHdrONsMVj_vMh8F0381XLMkDv0OShwo7S0uvaYfu56APi6X-JyEFLSTabe72zy1Ntq_jVhMihygdZD0bfsO_h_5m00).
-
-Cependant, **il sera impossible de coder cette RDCU en TypeScript** telle quelle, pour plusieurs raisons.
-Les voyez-vous?
-
-::: {.callout-tip}
-Il y a des problèmes de séquencement de message (flot) et aussi de visibilité d'objets (`e:E`).
+**Faire soi-même**: "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction" de @coad97a
 :::
 
-1.  Quel est le problème avec le message `add(e)` de `:A` à `:B`?
-2.  Quel est le problème avec le message `add(e)` de `:C` à `:D`?
-3.  Proposez une solution (plusieurs sont possibles) pour corriger les erreurs dans le diagramme.
 
-:::
+## Exercices
 
 ::: {#exr-RDCU-Ouvrir-caisse}
 
