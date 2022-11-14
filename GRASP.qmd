@@ -121,21 +121,21 @@ On peut voir les principes GRASP comme des généralisations (principes de base)
 
 ## Exercice GRASP Polymorphisme
 
-Soit le diagramme de classe modélisant l’exemple à [<u>Replace Conditional with Polymorphism</u>](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html):
+Soit le diagramme de classe modélisant l'exemple de @Fowl18a à [_Replace Conditional with Polymorphism_](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html):
 
 
 ```{.plantuml}
-    @startuml
+@startuml
+skinparam style strictuml
+class Bird {
+    type : String
+    numberOfCoconuts : number
+    voltage : number
 
-    class Bird
+    getPlumage() : String
+}
 
-    Bird : type : String
-    Bird : numberOfCoconuts : number
-    Bird : voltage : number
-
-    Bird : getPlumage() : String
-    
-    @enduml
+@enduml
 ```
 
 Appliquez GRASP Polymorphisme pour le code suivant:
