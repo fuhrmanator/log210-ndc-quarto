@@ -26,4 +26,30 @@ L'utilisation de services dans le nuage (infonuagique) amène une redondance de 
 Cependant, même un service web a besoin de [redondance dans les zones géographiques](https://aws.amazon.com/about-aws/global-infrastructure/), car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourrait affecter toute une grappe de serveurs.
 :::
 
+## Exercices
 
+::: {#exr-faute_erreur_echec}
+
+### Faute, Erreur, Échec
+
+Pour chaque scénario, indiquez la faute, l'erreur et l'échec (selon les
+définitions dans les notes de cours):
+
+**Scénario 1: Guichet automatique**
+
+Lors de son contrôle d'un guichet automatique, un technicien constate
+qu'il n'y a plus de billets. Alors, il remet des billets de 20$ et 50\$. Le prochain client qui utilise ce guichet automatique indique qu'il veut retirer 100\$, mais il est surpris quand il reçoit 5 billets de 50$ (pour 250$).
+
+-   Faute: <!-- Le technicien a mal posé les billets -->
+-   Erreur: <!-- Client constate qu'il reçoit plus d'argent que demandé -->
+-   Échec: <!-- Trop d'argent a été versé vers le client -->
+
+**Scénario 2: Vaisseau spatial**
+
+Une mise à jour du logiciel de contrôle sur un vaisseau spatial est effectuée par un ingénieur sur Terre. Ce nouveau programme contient une mauvaise référence pour stocker les valeurs de configuration du réacteur. Lorsque le programme effectue ce stockage, il y a une corruption du programme qui contrôle l'orientation de l'antenne pour la communication avec Terre. Ensuite, l'antenne ne pointe plus vers Terre et la communication est coupée à jamais.
+
+-   Faute:
+-   Erreur:
+-   Échec:
+
+:::

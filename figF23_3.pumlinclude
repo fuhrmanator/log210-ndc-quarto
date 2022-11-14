@@ -23,7 +23,7 @@ rectangle " " {
     class "Mécanisme de\n**faible couplage**" as FCoup
     class "Mécanisme de\n**forte cohésion**" as FCoh
     class "Exemple de\n**polymorphisme**" as Poly
-    class "Mecanisme\nd'**indirection**" as Indir
+    class "Mécanisme\nd'**indirection**" as Indir
     class "**Fabrication**\n**pure**" as FP
 note as GRASP
 **Principes**
