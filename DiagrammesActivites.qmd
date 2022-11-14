@@ -79,7 +79,36 @@ stop
 
 ## Exercices
 
+Ces exercices devraient vous aider à comprendre les diagrammes
+d'activités en UML. Vous devez vous référer au livre du cours pour la
+bonne notation (Chapitre F25/A28).
+
 {{< include _callout_conseils_diagrammes.qmd >}}
+
+
+::: {#exr-locationVoitures}
+
+### Location de voitures
+
+Esquissez le diagramme d'activités lors de la réception de voitures louées (après la location) dans une compagnie.
+Pour le diagramme, faites attention à la **notation UML**: cela comprend les objets (pour la voiture et pour la facture), le début et la fin de l'activité, les débranchements, les jointures, les décisions et les fusions.
+
+-   Les rôles sont le client, le réceptionniste (qui gère la
+    documentation et le paiement de la location) et l'agent (qui gère le
+    traitement des voitures avant la prochaine location).
+-   Le client rend la voiture et les clés.
+-   Le réceptionniste note le kilométrage et le niveau d'essence
+    pour calculer la facture.
+-   Le client paye sa location, selon le montant sur la facture.
+-   L'agent inspecte la voiture pour la propreté. Si elle n'est pas
+    assez propre, alors l'agent doit laver, rincer et sécher
+    l'extérieur et nettoyer l'intérieur. Ce travail devrait
+    commencer le plus vite possible, après que le réceptionniste ait
+    fini de noter les informations pour la facture.
+
+Voir [une solution avec PlantUML](http://www.plantuml.com/plantuml/uml/PP71QeH038RlUOf0B_eAqqDtAHGAPIaMsbCFWnirg9dfJ1GMV26VmnVhwEuMf9U1_FcI_CaSejgWGzz1R5cy3RR7g9UEqXkut3BJSySaEi76WYb8pe4GFXth4EWHfeUZAFyCzDMmqbGiSqbUsObmJ36O6uca26MtpF4RpCaf1MpxJHGUoGv8CPAKgMFbGWkcNcPPvf0mg6nvctKtOrwkKchrRYyxPgr6MriMc8xrbNwLwAbSHy9uzyqLPZuu7-WfHsr8C7C3vq1T9Cp4IGxcpOwx6bDmShXJFjA-pLuwaQhRJB5eMe5f270cx2p-GUcANC7_QoKTj_sZEW-75AwVy0i0).
+
+:::
 
 ::: {#exr-DevoirMoodle}
 
@@ -100,4 +129,5 @@ Votre diagramme doit comprendre les activités de l'enseignant et de l'étudiant
 Le devoir doit être un _objet_ dans le diagramme.
 
 :::
+
 
