@@ -34,7 +34,7 @@ définitions dans les notes de cours):
 ### Scénario 1: Guichet automatique{.unnumbered}
 
 Lors de son contrôle d’un guichet automatique, un technicien constate
-qu’il n’y a plus de billets. Alors, il remet des billets de 20$ et 50$. Le prochain client qui utilise ce guichet automatique indique qu’il veut retirer 100$, mais il est surpris quand il reçoit 5 billets de 50$ (pour 250$).
+qu’il n’y a plus de billets. Alors, il remet des billets de 20$ et 50\$. Le prochain client qui utilise ce guichet automatique indique qu’il veut retirer 100\$, mais il est surpris quand il reçoit 5 billets de 50$ (pour 250$).
 
 -   Faute: Le technicien a mal posé les billets
 
