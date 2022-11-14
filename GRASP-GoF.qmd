@@ -57,13 +57,13 @@ On peut donc voir le pattern adaptateur comme *une spécialisation* de plusieurs
 - Forte cohésion
 - Protection des variations
 
-Êtes-vous en mesure d'expliquer dans ce contexte comment Adaptateur est relié à ces principes? C'est-à-dire, pouvez-vous identifier les GRASP dans le pattern Adaptateur?
+Êtes-vous en mesure d'expliquer dans ce contexte comment Adaptateur est relié à ces principes? Pouvez-vous identifier les GRASP dans le pattern Adaptateur?
 
 ## Identifier les GRASP dans les GoF {#sec-GRASP_Adaptateur}
 
-Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d'imaginer le problème qui pourrait exister et comment le principe (et le pattern GoF) résout le problème.
+Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d'imaginer le problème qui pouvait exister éventuellement. Ensuite, on explique comment le principe (et le pattern GoF) résout le problème.
 
-Référez-vous à la @fig-Fig23_1 du pattern Adaptateur pour les sections suivantes.
+Consultez la @fig-Fig23_1 du pattern Adaptateur pour les sections suivantes.
 
 ### Polymorphisme
 
@@ -127,13 +127,13 @@ Quant aux "responsabilités" à affecter, c'est la fonctionnalité commune de to
 Il y a des liens entre les GRASP et les activités de [Réusinage (Refactorisation)](#sec-Refactoring). 
 Alors, un IDE qui automatise les *refactorings* peut vous aider à appliquer certains GRASP.
 
-- GRASP Polymorphisme est relié à [Replace Type Code with Subclasses](https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html) et [Replace conditional with polymorphism](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html) -- attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (`switch`) répétées à plusieurs endroits dans le code.
-- GRASP Fabrication pure est relié à [Extract class](https://refactoring.com/catalog/extractClass.html).
-- GRASP Indirection est relié à [Extract function](https://refactoring.com/catalog/extractFunction.html) et [Move function](https://refactoring.com/catalog/moveFunction.html).
+- GRASP Polymorphisme est relié à [_Replace Type Code with Subclasses_](https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html) et [_Replace conditional with polymorphism_](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html) -- attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (`switch`) répétées à plusieurs endroits dans le code.
+- GRASP Fabrication pure est relié à [_Extract class_](https://refactoring.com/catalog/extractClass.html).
+- GRASP Indirection est relié à [_Extract function_](https://refactoring.com/catalog/extractFunction.html) et [_Move function_](https://refactoring.com/catalog/moveFunction.html).
 
 ## Exercices
 
-Pour ces exercices, suivre le modèle pour décortiquer le patron Adaptateur, illustré à la @fig-Ex_Fig23_3.
+Pour ces exercices, suivez le modèle pour décortiquer le patron Adaptateur, illustré à la @fig-Fig23_3.
 
 Une bonne ressource pour les patterns GoF est la suivante:
 

@@ -23,7 +23,7 @@ Pour cette raison, il vaut mieux pratiquer dessiner les modèles en mode esquiss
 
 Dans la méthodologie de ce manuel, on exploite l'outil PlantUML pour faire beaucoup de modèles. C'est un outil qui a plusieurs avantages:
 
-- il est basé sur un langage dédié simple (anglais *domain specific language* ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version (git);
+- il est basé sur un langage spécifique à un domaine (anglais *domain-specific language* ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version (git);
 - il est basé sur du code libre;
 - il s'occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est complexe);
 - il est populaire (utilisé par des ingénieurs chez Google pour documenter Android, Pay, etc.);
@@ -41,7 +41,7 @@ C'est souvent juste des objets groupés et le vrai sens de la notation UML n'est
 Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l'orienter dans n'importe quel sens. 
 Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n'ont aucun sens en UML (voir la @fig-LucidchartUML).
 Il est possible de corriger le diagramme, mais en combien de clics?
-C'est très vite tannant.
+C'est très vite agaçant.
 
 ## Exemples de diagramme avec PlantUML
 
@@ -50,14 +50,14 @@ Dans le menu "Select sample diagram" de PlantUML Gizmo (Google Docs), il y a plu
 ## Astuces PlantUML
 
 - [Comment intégrer PlantUML dans le `Readme.md` de GitHub/GitLab?](https://stackoverflow.com/q/32203610/1168342)\ \faStackOverflow<i class="fa-brands fa-stack-overflow"></i>
-- Le serveur de PlantUML.com génère un diagramme à partir d'un URL:  
+- Le serveur de PlantUML.com génère un diagramme à partir d'une URL:  
 `https://plantuml.com/plantuml/{forme}/{clé}` qui contient une clé comme  
 `Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00`.  
 La clé est en fait une représentation compressée du code source.
 - On peut changer la forme du diagramme en changeant la partie `{forme}` de l'URL:
   - `{forme}` → `png`, `img` ou `svg` : représentation graphique correspondante;
   - `{forme}` → `uml` : récupération du code source PlantUML (ça marche avec `http:` seulement);
-- On peut également récupérer le code source d'un URL avec l'outil PlantUML localement avec l'option `-decodeurl {clé}` de la ligne de commande:
+- On peut également récupérer le code source d'une URL avec l'outil PlantUML localement avec l'option `-decodeurl {clé}` de la ligne de commande:
 ```bash
 $ java -jar plantuml.jar -decodeurl Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00
 @startuml
@@ -65,7 +65,7 @@ Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 @enduml
 ```
-- Les images `png` générées par le serveur ou par l'outil contiennent une copie du code source dans les meta-données PNG. 
+- Les images `png` générées par le serveur ou par l'outil contiennent une copie du code source dans les métadonnées PNG. 
   - On peut [récupérer le code source PlantUML à partir d'une image PNG](https://twitter.com/thefuhrmanator/status/1193565869227556868) avec un outil sur le Web comme [ceci](http://exif.regex.info/exif.cgi).
   - On peut également utiliser l'option `-metadata` de la ligne de commande PlantUML:
 ```bash

@@ -271,7 +271,7 @@ Plus une solution ressemble à la description du problème, plus elle sera facil
 ::: {.callout-caution}
 Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n'ayant aucun lien avec le modèle du domaine.
 Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine.
-Il faut vérifier avec une personne expérimentée (l'architecte du projet si possible) que l'application du pattern est justifiée, qu'elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées.
+Il faut vérifier auprès d'une personne expérimentée (l'architecte du projet si possible) que l'application du pattern est justifiée, qu'elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées.
 Chaque fois qu'on propose des classes logicielles qui n'ont pas de liens avec la représentation du problème du domaine, on *augmente le décalage des représentations* et on rend la solution un peu plus difficile à comprendre.
 C'est aussi une forme de [Complexité circonstancielle (provenant des choix de conception)](#sec-ComplexiteCirc).
 Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels.
@@ -297,10 +297,10 @@ Dans la section F30.8/A33.7\ \faBook<i class="fa-solid fa-book"></i>, Larman men
 
 Le diagramme suivant a été fait avec PlantUML pour une RDCU dont l'intention était la suivante (à partir d'un contrat):
 
-- Une instance `e` de la classe `E` a été crééé.
+- Une instance `e` de la classe `E` a été créée.
 - `e` a été associé à `:B` et à `:D` (la relation est que `B` et `D` contiennent des instances de `E`).
 
-Le résultation contient des erreurs de logique (flot) et de conception (visibilité).
+Le résultat contient des erreurs de logique (dans le flot) et de conception (la visibilité).
 
 ```{.plantuml}
 @startuml
@@ -329,7 +329,7 @@ Cependant, **il sera impossible de coder cette RDCU en TypeScript** telle quelle
 Les voyez-vous?
 
 ::: {.callout-tip}
-Il y a des problèmes de séquencement de message (flot) et aussi de visibilité d’objets (`e:E`).
+Il y a des problèmes de séquencement de message (flot) et aussi de visibilité d'objets (`e:E`).
 :::
 
 1.  Quel est le problème avec le message `add(e)` de `:A` à `:B`?
