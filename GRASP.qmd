@@ -118,3 +118,42 @@ Voir la section [Réalisations de cas d'utilisation (RDCU)](#sec-RDCU) pour plus
 ## GRASP et Patterns GoF
 
 On peut voir les principes GRASP comme des généralisations (principes de base) des patterns GoF. Voir la section [Décortiquer les patterns GoF avec GRASP](#sec-GRASP-GoF) pour plus d'informations.
+
+## Exercice GRASP Polymorphisme
+
+Soit le diagramme de classe modélisant l’exemple à [<u>Replace Conditional with Polymorphism</u>](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html):
+
+
+```{.plantuml}
+    @startuml
+
+    class Bird
+
+    Bird : type : String
+    Bird : numberOfCoconuts : number
+    Bird : voltage : number
+
+    Bird : getPlumage() : String
+    
+    @enduml
+```
+
+Appliquez GRASP Polymorphisme pour le code suivant:
+
+```java
+get plumage() {
+    switch (this.type) {
+        case 'EuropeanSwallow':
+            return "average";
+        
+        case 'AfricanSwallow':
+            return (this.numberOfCoconuts &gt; 2) ? "tired" : "average";
+        
+        case 'NorwegianBlueParrot':
+            return (this.voltage &gt; 100) ? "scorched" : "beautiful";
+        
+        default:
+            return "unknown";
+    }
+}
+```
