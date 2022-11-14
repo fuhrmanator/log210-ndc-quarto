@@ -7,9 +7,9 @@ Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.
 
 ::: {#fig-OfficeLens layout-ncol=2 layout-valign="bottom"}
 
-![Capture](images/Before-Office_Lens.jpg){#fig-beforeLens}
+![Reconnaissance du cadre d'image sur une feuille](images/Before-Office_Lens.jpg){#fig-beforeLens width="300px"}
 
-![Résultat](images/After-Office_Lens.jpg){#fig-afterLens}
+![Transformation vers un résultat plus lisible](images/After-Office_Lens.jpg){#fig-afterLens width="300px"}
 
 Microsoft Lens peut détecter le cadre d'un dessin sur un tableau blanc ou papier et le transformer, même si on n'est pas droit devant le dessin.
 :::
