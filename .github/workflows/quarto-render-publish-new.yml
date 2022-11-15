@@ -1,0 +1,63 @@
+on:  
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+# PR will "overwrite" the GitHub pages; not good!
+#   pull_request:
+#     branches: main
+
+name: Render and Publish (Docker image from texlive)
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        # with:
+        #   # To install LaTeX to build PDF book 
+        #   tinytex: true 
+          # uncomment below and fill to pin a version
+          # version: 0.9.600
+      
+      # add software dependencies here
+
+      - name: Install java (for PlantUML)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '11'
+
+      - name: Configure TeXLive
+        uses: xu-cheng/texlive-action/full@v1
+        # with:
+        #   run: |
+        #     ls
+          
+      # - name: Install rsvg-convert, latexmk, TeXLive
+      #   run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra texlive-lang-french
+
+      - name: wget PlantUML.jar
+        uses: wei/wget@v1
+        with:
+          args: -O plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2022.6/plantuml-1.2022.6.jar
+
+      - name: Set PLANTUML environment
+        run: export PLANTUML=./plantuml.jar
+
+      - name: install Graphviz
+        uses: tlylt/install-graphviz@v1
+
+      - name: Install xkcd font
+        run: mkdir -p /usr/share/fonts/TTF && cp web-resources/xkcd-font/xkcd-script.ttf /usr/share/fonts/TTF && export JAVA_FONTS="/usr/share/fonts/TTF"
+
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+      
