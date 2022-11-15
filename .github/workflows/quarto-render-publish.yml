@@ -1,7 +1,7 @@
 on:  
   workflow_dispatch:
   push:
-    branches: main
+    branches: [main]
 # PR will "overwrite" the GitHub pages; not good!
 #   pull_request:
 #     branches: main
@@ -10,7 +10,7 @@ name: Render and Publish
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
