@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -295,7 +314,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#quest-ce-quun-contrat-dopération" id="toc-quest-ce-quun-contrat-dopération" class="nav-link active" data-scroll-target="#quest-ce-quun-contrat-dopération"><span class="toc-section-number">8.1</span>  Qu’est-ce qu’un contrat d’opération</a></li>
+  <li><a href="#les-contrats-en-bref" id="toc-les-contrats-en-bref" class="nav-link active" data-scroll-target="#les-contrats-en-bref"><span class="toc-section-number">8.1</span>  Les contrats en bref</a></li>
   <li><a href="#sec-contrat_exemple" id="toc-sec-contrat_exemple" class="nav-link" data-scroll-target="#sec-contrat_exemple"><span class="toc-section-number">8.2</span>  <span style="white-space:nowrap">Exemple :</span> Contrats d’opération pour Attaquer un pays</a></li>
   <li><a href="#feuille-de-référence" id="toc-feuille-de-référence" class="nav-link" data-scroll-target="#feuille-de-référence"><span class="toc-section-number">8.3</span>  Feuille de référence</a></li>
   <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">8.4</span>  Exercices</a></li>
@@ -308,23 +327,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Les contrats d’opération sont le sujet du chapitre 11&nbsp;<i class="fa-solid fa-book"></i>. Voici les points importants pour la <span style="white-space:nowrap">méthodologie :</span></p>
-<ul>
-<li>On ne spécifie pas les préconditions dans les contrats.</li>
-<li>Un contrat d’opération correspond à une opération système provenant d’un DSS.</li>
-<li>Ne pas confondre les postconditions d’un contrat d’opération et d’un cas d’utilisation. Ce sont deux choses différentes.</li>
-<li>Une postcondition décrit les modifications de l’état des objets dans le modèle du domaine après une opération système.</li>
-<li>Le vocabulaire pour les postconditions provient du modèle du domaine. Il s’agit des noms de classes, d’attributs et d’associations qu’on trouve dans le MDD.</li>
-<li>Chaque postcondition doit avoir la bonne <span style="white-space:nowrap">forme :</span>
-<ul>
-<li>création (ou suppression) <span style="white-space:nowrap">d’instances ;</span></li>
-<li>modification des valeurs des <span style="white-space:nowrap">attributs ;</span></li>
-<li>formation (ou rupture) d’associations.</li>
-</ul></li>
-<li>En rédigeant les contrats, il est normal de découvrir dans le modèle du domaine des incohérences ou des éléments manquants. Il <em>faut</em> les corriger (il faut changer le MDD), car cela fait partie d’un processus itératif et évolutif.</li>
-</ul>
-<section id="quest-ce-quun-contrat-dopération" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="quest-ce-quun-contrat-dopération"><span class="header-section-number">8.1</span> Qu’est-ce qu’un contrat d’opération</h2>
 <p>Un contrat d’opération est un document décrivant ce qui est arrivé après l’exécution d’une opération système. Cette description est présentée sous forme de postconditions utilisant le vocabulaire du modèle du domaine.</p>
 <p>Le MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente) mais aussi des <em>instances</em> de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clients qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque client.</p>
 <p>Dans la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter Vente</em>. Elle correspond au moment où le caissier démarre une nouvelle vente pour un client. Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec le passé composé en <span style="white-space:nowrap">français) :</span> «&nbsp;une instance <em>v</em> de Vente a été créée&nbsp;».</p>
@@ -335,6 +337,24 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figcaption class="figure-caption">Figure&nbsp;8.1: Pendant l’opération système <code>créerNouvelleVente</code>, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition.</figcaption><p></p>
 </figure>
 </div>
+<section id="les-contrats-en-bref" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="les-contrats-en-bref"><span class="header-section-number">8.1</span> Les contrats en bref</h2>
+<p>Les contrats d’opération sont le sujet du chapitre 11&nbsp;<i class="fa-solid fa-book"></i>&nbsp;<span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Voici les points importants pour la méthodologie enseignée dans le présent <span style="white-space:nowrap">manuel :</span></p>
+<ul>
+<li>Un contrat d’opération correspond à une opération système provenant d’un DSS.</li>
+<li>On fait des contrats surtout pour les opérations système ayant une certaine complexité.</li>
+<li>Une postcondition décrit les modifications de l’état des objets dans le modèle du domaine après une opération système.</li>
+<li>Le vocabulaire pour les postconditions provient du modèle du domaine. Il s’agit des noms de classes, d’attributs et d’associations qu’on trouve dans le MDD.</li>
+<li>Chaque postcondition doit avoir la bonne <span style="white-space:nowrap">forme :</span>
+<ul>
+<li>création (ou suppression) <span style="white-space:nowrap">d’instances ;</span></li>
+<li>modification des valeurs des <span style="white-space:nowrap">attributs ;</span></li>
+<li>formation (ou rupture) d’associations.</li>
+</ul></li>
+<li>On ne spécifie pas les préconditions dans les contrats (Larman ne donne pas beaucoup de directives claires à ce propos).</li>
+<li>Ne pas confondre les postconditions d’un contrat d’opération et d’un cas d’utilisation. Ce sont deux choses différentes.</li>
+<li>En rédigeant les contrats, il est normal de découvrir dans le modèle du domaine des incohérences ou des éléments manquants. Il <em>faut</em> les corriger (il faut changer le MDD), car cela fait partie d’un processus itératif et évolutif.</li>
+</ul>
 </section>
 <section id="sec-contrat_exemple" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="sec-contrat_exemple"><span class="header-section-number">8.2</span> <span style="white-space:nowrap">Exemple :</span> Contrats d’opération pour Attaquer un pays</h2>
@@ -372,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Occupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysAttaquant.</li>
 <li>Occupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysDéfendant.</li>
 </ul>
-<!-- Draw.io svg contient du texte en SVG 1.1 qui pose problème. Alors j'exporte manuellement en PDF avec l'outil draw.io sur le web. -->
+<!-- Draw.io svg contient du texte en SVG qui pose problème. Alors j'exporte manuellement une version ayant du bon texte "convert labels to SVG" -->
 <div id="fig-MDD-risk-objets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/MDD-Risk-contrats_export_from_drawio_as_SVG_convert_labels_to_SVG.svg" class="img-fluid figure-img"></p>
@@ -395,7 +415,7 @@ ul.task-list li input[type="checkbox"] {
 <li>modifier attributs.</li>
 </ol></li>
 <li>Utiliser <em>le vocabulaire du modèle du domaine</em> dans les postconditions. Ça veut dire qu’il faut parler d’instances de classes conceptuelles, de leurs attributs et des associations entre ces classes.</li>
-<li>Ne pas créer une instance de classe qui existe déjà, par exemple un produit (connu) dans un magasin, un acteur (connu) qui se connecte au système, ou (dans l’exemple de Risk) un Pays (voir la partie basse de la <a href="#fig-MDD-risk-objets">figure&nbsp;<span>8.2</span></a>).</li>
+<li>Ne pas créer une instance de classe qui existe déjà, par exemple un produit (connu) dans un magasin, un acteur (connu) qui se connecte au système, ou (dans l’exemple de Risk) un Pays (voir la partie inférieure de la <a href="#fig-MDD-risk-objets">figure&nbsp;<span>8.2</span></a>).</li>
 <li>Ne rien oublier. Marquer le MDD ou dessiner un diagramme d’objets, comme à la partie basse de la <a href="#fig-MDD-risk-objets">figure&nbsp;<span>8.2</span></a> si nécessaire.</li>
 </ol>
 </section>
@@ -409,6 +429,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
