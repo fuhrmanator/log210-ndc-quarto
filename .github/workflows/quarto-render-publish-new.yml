@@ -33,9 +33,9 @@ jobs:
 
       - name: Configure TeXLive
         uses: xu-cheng/texlive-action/full@v1
-        # with:
-        #   run: |
-        #     ls
+        with:
+          run: |
+            sudo apt-get install -y -q librsvg2-bin latexmk
           
       # - name: Install rsvg-convert, latexmk, TeXLive
       #   run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra texlive-lang-french
