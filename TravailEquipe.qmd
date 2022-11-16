@@ -107,7 +107,7 @@ C'est le nombre minimum de membres à perdre (par exemple, ils ont été heurté
 Par exemple, dans un projet de stage, si c'est vous qui écrivez tout le code, alors c'est un *bus factor* de 1.
 Si vous n'êtes plus là, le projet s'arrête!
 
-![*Facteur de bus* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné. [@fitzpatrick_team_2012] ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E](images/DALL-E_2022-11-06 21.03.49_Male_and_Female_software_engineers_in_front_of_a_bus_at_a_crosswalk_flat lighting_tilt_shift_photography.png){width="500px"}
+![*Facteur de bus* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné. [@fitzpatrick_team_2012] ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E](images/DALL-E_BusFactor.png){width="500px"}
 
 Dans le cas d'une équipe, un membre de l'équipe peut être absent ou moins disponible pour beaucoup de raisons.
 Par exemple, il part en vacances, il tombe malade, il prend un congé parental, il change d'emploi, il abandonne le cours (contexte de projet universitaire), etc.
