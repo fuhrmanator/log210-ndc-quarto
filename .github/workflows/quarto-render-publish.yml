@@ -32,7 +32,7 @@ jobs:
           java-version: '11'
 
       - name: Install rsvg-convert, latexmk, TeXLive
-        run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra texlive-lang-french texlive-cascadia-code
+        run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra texlive-lang-french
 
       - name: wget PlantUML.jar
         uses: wei/wget@v1
