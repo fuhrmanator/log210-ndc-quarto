@@ -203,7 +203,7 @@ Voici les éléments importants documentés dans ce manuel (voir la @fig-SurvolM
 - pour gérer la dette technique (@sec-DetteTechnique) on fait du réusinage (@sec-Refactoring) au besoin;
 - le tout se fait de manière évolutive, en itérations courtes selon le _Processus unifié_.
 
-![Survol de la méthodologie.](images/Methodologie-survol-export_from_drawio_as_SVG_convert_labels_to_SVG.svg){#fig-SurvolMethodologie}
+![Survol de la méthodologie.](images/Methodologie-survol_export.svg){#fig-SurvolMethodologie}
 
 ## Développement itératif, évolutif et agile
 

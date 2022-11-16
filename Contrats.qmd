@@ -8,7 +8,7 @@ Dans la @fig-ContratExempleCreerNouvelleVente, l'opération système `créerNouv
 
 Un contrat d'opération permet de spécifier tous les changements dans le MDD qui doivent avoir lieu lors de l'opération système. Les postconditions du contrat saisissent l'évolution du MDD.
 
-![Pendant l'opération système `créerNouvelleVente`, une instance de Vente doit être créée. Le contrat d'opération le spécifie dans une postcondition.](images/Contrats-survol_export_from_drawio_as_SVG_convert_labels_to_SVG.svg){#fig-ContratExempleCreerNouvelleVente}
+![Pendant l'opération système `créerNouvelleVente`, une instance de Vente doit être créée. Le contrat d'opération le spécifie dans une postcondition.](images/Contrats-survol_export.svg){#fig-ContratExempleCreerNouvelleVente}
 
 ## Les contrats en bref
 
@@ -58,7 +58,7 @@ Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du 
 - Occupation.nbRégiments est ajusté selon le résultat des valeurs sur une base de correspondance avec paysDéfendant.
 
 <!-- Draw.io svg contient du texte en SVG qui pose problème. Alors j'exporte manuellement une version ayant du bon texte "convert labels to SVG" -->
-![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets)](images/MDD-Risk-contrats_export_from_drawio_as_SVG_convert_labels_to_SVG.svg){#fig-MDD-risk-objets}
+![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets)](images/MDD-Risk-contrats_export.svg){#fig-MDD-risk-objets}
 
 ## Feuille de référence
 
