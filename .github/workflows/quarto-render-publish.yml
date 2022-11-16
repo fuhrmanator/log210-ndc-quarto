@@ -10,7 +10,7 @@ name: Render and Publish
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -32,7 +32,7 @@ jobs:
           java-version: '11'
 
       - name: Install rsvg-convert, latexmk, TeXLive
-        run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra texlive-lang-french
+        run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra texlive-lang-french texlive-cascadia-code
 
       - name: wget PlantUML.jar
         uses: wei/wget@v1
