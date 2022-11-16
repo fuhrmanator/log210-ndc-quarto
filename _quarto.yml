@@ -43,8 +43,8 @@ book:
       - Réusinage.qmd
       - TravailEquipe.qmd
       - Outils-UML.qmd
-      - GRASP-GoF.qmd
-      - Fiabilité.qmd
+     # - GRASP-GoF.qmd
+     # - Fiabilité.qmd
       - DiagrammesActivites.qmd
       - DiagrammesEtats.qmd
       - ConceptionPackages.qmd
