@@ -30,7 +30,7 @@ book:
     - index.qmd # Preface
     - part: Théorie
       chapters:
-      - AnalyseConception.qmd
+     # - AnalyseConception.qmd
      # - Besoins.qmd
      # - CasUtilisation.qmd
      # - MDD.qmd
@@ -45,10 +45,10 @@ book:
      # - Outils-UML.qmd
      # - GRASP-GoF.qmd
      # - Fiabilité.qmd
-      - DiagrammesActivites.qmd
-      - DiagrammesEtats.qmd
-      - ConceptionPackages.qmd
-      - DiagrammesDeploiement.qmd
+     # - DiagrammesActivites.qmd
+     # - DiagrammesEtats.qmd
+     # - ConceptionPackages.qmd
+     # - DiagrammesDeploiement.qmd
       - Laboratoires.qmd
       - references.qmd
     - part: Exercices
