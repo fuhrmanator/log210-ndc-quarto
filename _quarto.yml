@@ -31,18 +31,18 @@ book:
     - part: Théorie
       chapters:
       - AnalyseConception.qmd
-      - Besoins.qmd
-      - CasUtilisation.qmd
-      - MDD.qmd
-      - DSS.qmd
-      - GRASP.qmd
-      - DetteTechnique.qmd
-      - Contrats.qmd
-      - RDCU.qmd
-      - TDD.qmd
-      - Réusinage.qmd
-      - TravailEquipe.qmd
-      - Outils-UML.qmd
+     # - Besoins.qmd
+     # - CasUtilisation.qmd
+     # - MDD.qmd
+     # - DSS.qmd
+     # - GRASP.qmd
+     # - DetteTechnique.qmd
+     # - Contrats.qmd
+     # - RDCU.qmd
+     # - TDD.qmd
+     # - Réusinage.qmd
+     # - TravailEquipe.qmd
+     # - Outils-UML.qmd
      # - GRASP-GoF.qmd
      # - Fiabilité.qmd
       - DiagrammesActivites.qmd
