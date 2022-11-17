@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="143.72833mm"
+   width="131.25287mm"
    height="66.616989mm"
-   viewBox="0 0 143.72833 66.616987"
+   viewBox="0 0 131.25287 66.616987"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="F2.4_adaptée.svg"
+   sodipodi:docname="Modifier_objectifs_mi_iteration.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,12 +23,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.0964011"
-     inkscape:cx="334.14408"
-     inkscape:cy="104.94175"
+     inkscape:zoom="1.4823794"
+     inkscape:cx="229.02368"
+     inkscape:cy="-2.0237734"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
@@ -170,9 +170,9 @@
      id="layer1"
      transform="translate(-40.593633,-35.897411)">
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:0.233955;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        clip-path="none"
-       d="M 56.662338,65.122975 H 184.17197 v -6.75759 H 56.662338 Z"
+       d="M 56.629316,65.155997 H 133.42585 V 58.332363 H 56.629316 Z"
        id="path830" />
     <g
        clip-path="url(#clipEmfPath1)"
@@ -210,81 +210,40 @@
        d="m 219.24974,86.555611 v 2.317555 h -0.10076 v 0.100763 h -0.10076 -0.10076 l -0.10075,-0.100763 v 0 -2.317555 -0.100763 h 0.10075 0.10076 0.10076 v 0 z m 0,3.929766 v 2.216791 l -0.10076,0.100764 v 0 0 l -0.10076,0.100763 -0.10076,-0.100763 v 0 h -0.10075 v -0.100764 -2.216791 -0.100763 l 0.10075,-0.100763 v 0 h 0.10076 0.10076 v 0 0.100763 z m 0,3.829003 v 2.216791 l -0.10076,0.100763 v 0 0.100763 h -0.10076 -0.10076 v -0.100763 h -0.10075 V 96.531171 94.31438 94.213617 h 0.10075 v -0.100764 h 0.10076 0.10076 v 0.100764 0 z m 0,3.829003 v 2.317557 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.317557 0 l 0.10075,-0.100764 v 0 h 0.10076 0.10076 v 0 0.100764 z m 0,3.929767 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10077 -0.10076,-0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31756 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10077 -0.10076,-0.10077 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.2168 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.2168 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10077 -2.21679 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.2168 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10077 -2.21679 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.829 v 2.2168 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 1.41069 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -1.41069 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z"
        id="path842-3"
        transform="matrix(0.02877537,0,0,0.02877537,101.48696,56.032593)" />
-    <g
-       clip-path="url(#clipEmfPath1)"
-       id="g882"
-       transform="matrix(0.26458333,0,0,0.26458333,24.325052,-18.48414)">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         transform="translate(243.53245,307.4286)"
-         x="0"
-         y="0"
-         id="text856"><tspan
-           sodipodi:role="line"
-           x="0"
-           y="0"
-           id="tspan854"><tspan
-             dx="0"
-             dy="0"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.75px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
-             id="tspan850">Itération </tspan><tspan
-             dx="0"
-             dy="0"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.75px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
-             id="tspan852">2</tspan></tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;line-height:125%;font-family:Helvetica;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         transform="translate(243.53245,307.4286)"
-         x="96.727829"
-         y="0"
-         id="text864"><tspan
-           sodipodi:role="line"
-           x="96.727829"
-           y="0"
-           id="tspan862"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.75px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
-             dx="0 0 0 0 0 0 0 0 0 0 0"
-             dy="0 0 0 0 0 0 0 0 0 0 0"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.75px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
-             id="tspan858">Itération 3</tspan></tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;line-height:125%;font-family:Helvetica;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         transform="translate(243.53245,307.4286)"
-         x="193.45566"
-         y="0"
-         id="text872"><tspan
-           sodipodi:role="line"
-           x="193.45566"
-           y="0"
-           id="tspan870"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
-             dx="0 0 0 0 0 0 0 0 0 0 0"
-             dy="0 0 0 0 0 0 0 0 0 0 0"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000"
-             id="tspan866">Itération 4</tspan></tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;line-height:125%;font-family:Helvetica;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         transform="translate(243.53245,307.4286)"
-         x="284.138"
-         y="0"
-         id="text880"><tspan
-           sodipodi:role="line"
-           x="284.138"
-           y="0"
-           id="tspan878"><tspan
-             dx="0"
-             dy="0"
-             style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;font-family:Helvetica;fill:#000000"
-             id="tspan874">Itération </tspan><tspan
-             dx="0"
-             dy="0"
-             style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;font-family:Helvetica;fill:#000000"
-             id="tspan876">5</tspan></tspan></text>
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.84427px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="88.759682"
+       y="62.856342"
+       id="text856"><tspan
+         sodipodi:role="line"
+         x="88.759682"
+         y="62.856342"
+         id="tspan854"
+         style="stroke-width:0.264583"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.84427px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
+           id="tspan850">Itération </tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.84427px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
+           id="tspan852">2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:400;font-size:2.84427px;line-height:125%;font-family:Helvetica;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="114.35225"
+       y="62.856342"
+       id="text864"><tspan
+         sodipodi:role="line"
+         x="114.35225"
+         y="62.856342"
+         id="tspan862"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.84427px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"><tspan
+           dx="0 0 0 0 0 0 0 0 0 0 0"
+           dy="0 0 0 0 0 0 0 0 0 0 0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.84427px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
+           id="tspan858">Itération 3</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.755906;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        clip-path="url(#clipEmfPath1)"
@@ -369,52 +328,12 @@
        d="m 134.41138,14.006088 h 24.18195 V 1.9145013 h -24.18195 z"
        id="path1338"
        transform="matrix(0.26458333,0,0,0.26458333,24.325052,35.490866)" />
-    <g
-       clip-path="url(#clipEmfPath1)"
-       id="g1346"
-       transform="matrix(0.26458333,0,0,0.26458333,24.325052,35.490866)">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         transform="translate(143.47961,11.184718)"
-         x="0"
-         y="0"
-         id="text1344"><tspan
-           sodipodi:role="line"
-           x="0"
-           y="0"
-           id="tspan1342"><tspan
-             dx="0"
-             dy="0"
-             style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;font-family:Arial;fill:#000000"
-             id="tspan1340">4</tspan></tspan></text>
-    </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.755906;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        clip-path="url(#clipEmfPath1)"
        d="m 158.59333,14.006088 h 24.18196 V 1.9145013 h -24.18196 z"
        id="path1348"
        transform="matrix(0.26458333,0,0,0.26458333,24.325052,35.490866)" />
-    <g
-       clip-path="url(#clipEmfPath1)"
-       id="g1356"
-       transform="matrix(0.26458333,0,0,0.26458333,24.325052,35.490866)">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         transform="translate(167.66156,11.184718)"
-         x="0"
-         y="0"
-         id="text1354"><tspan
-           sodipodi:role="line"
-           x="0"
-           y="0"
-           id="tspan1352"><tspan
-             dx="0"
-             dy="0"
-             style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;font-family:Arial;fill:#000000"
-             id="tspan1350">5</tspan></tspan></text>
-    </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.755906;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        clip-path="url(#clipEmfPath1)"
@@ -424,7 +343,7 @@
     <g
        clip-path="url(#clipEmfPath1)"
        id="g1366"
-       transform="matrix(0.26458333,0,0,0.26458333,24.325052,35.490866)">
+       transform="matrix(0.26458333,0,0,0.26458333,11.625044,35.490866)">
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.75px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -557,7 +476,7 @@
          y="0"
          id="text1418"><tspan
            sodipodi:role="line"
-           x="24.468323"
+           x="24.468325"
            y="0"
            id="tspan1416"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000"
@@ -725,10 +644,10 @@
        id="text1716"><tspan
          x="108.8188"
          y="119.30366"
-         id="tspan26300">À la mi-itération, on peut décider de modifier le périmètre </tspan><tspan
+         id="tspan776">À la mi-itération, on peut décider de modifier le périmètre </tspan><tspan
          x="108.8188"
          y="132.10146"
-         id="tspan26302">et les objectifs de l'itération si le travail est trop important.</tspan></text>
+         id="tspan778">et les objectifs de l'itération si le travail est trop important.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:400;font-size:10px;line-height:119.979%;font-family:Helvetica;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:361.698;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -854,33 +773,21 @@
          id="text7219"><tspan
            x="24.468323"
            y="0"
-           id="tspan26310"><tspan
-             style="font-size:9.33333px"
-             id="tspan26304">Une itération de</tspan><tspan
-             style="font-size:9.33333px"
-             id="tspan26306"> </tspan><tspan
-             style="font-size:9.33333px"
-             id="tspan26308">deux</tspan><tspan
-             y="0"
-             id="tspan26312"> </tspan></tspan><tspan
+           id="tspan786"><tspan
+   style="font-size:9.33333px"
+   id="tspan780">Une itération de</tspan><tspan
+   style="font-size:9.33333px"
+   id="tspan782"> </tspan><tspan
+   style="font-size:9.33333px"
+   id="tspan784">deux</tspan><tspan
+   y="0"
+   id="tspan788"> </tspan></tspan><tspan
            x="24.468323"
            y="13.828152"
-           id="tspan26316"><tspan
+           id="tspan792"><tspan
              style="font-size:9.33333px"
-             id="tspan26314">semaines</tspan></tspan></text>
+             id="tspan790">semaines</tspan></tspan></text>
     </g>
-    <path
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10.4256;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       clip-path="url(#clipEmfPath1-4)"
-       d="m 219.24974,86.555611 v 2.317555 h -0.10076 v 0.100763 h -0.10076 -0.10076 l -0.10075,-0.100763 v 0 -2.317555 -0.100763 h 0.10075 0.10076 0.10076 v 0 z m 0,3.929766 v 2.216791 l -0.10076,0.100764 v 0 0 l -0.10076,0.100763 -0.10076,-0.100763 v 0 h -0.10075 v -0.100764 -2.216791 -0.100763 l 0.10075,-0.100763 v 0 h 0.10076 0.10076 v 0 0.100763 z m 0,3.829003 v 2.216791 l -0.10076,0.100763 v 0 0.100763 h -0.10076 -0.10076 v -0.100763 h -0.10075 V 96.531171 94.31438 94.213617 h 0.10075 v -0.100764 h 0.10076 0.10076 v 0.100764 0 z m 0,3.829003 v 2.317557 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.317557 0 l 0.10075,-0.100764 v 0 h 0.10076 0.10076 v 0 0.100764 z m 0,3.929767 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10077 -0.10076,-0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31756 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10077 -0.10076,-0.10077 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.2168 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.2168 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10077 -2.21679 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.2168 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10077 -2.21679 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.829 v 2.2168 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 1.41069 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -1.41069 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z"
-       id="path842-2"
-       transform="matrix(0.02877537,0,0,0.02877537,127.17035,55.969489)" />
-    <path
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10.4256;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       clip-path="url(#clipEmfPath1-8)"
-       d="m 219.24974,86.555611 v 2.317555 h -0.10076 v 0.100763 h -0.10076 -0.10076 l -0.10075,-0.100763 v 0 -2.317555 -0.100763 h 0.10075 0.10076 0.10076 v 0 z m 0,3.929766 v 2.216791 l -0.10076,0.100764 v 0 0 l -0.10076,0.100763 -0.10076,-0.100763 v 0 h -0.10075 v -0.100764 -2.216791 -0.100763 l 0.10075,-0.100763 v 0 h 0.10076 0.10076 v 0 0.100763 z m 0,3.829003 v 2.216791 l -0.10076,0.100763 v 0 0.100763 h -0.10076 -0.10076 v -0.100763 h -0.10075 V 96.531171 94.31438 94.213617 h 0.10075 v -0.100764 h 0.10076 0.10076 v 0.100764 0 z m 0,3.829003 v 2.317557 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.317557 0 l 0.10075,-0.100764 v 0 h 0.10076 0.10076 v 0 0.100764 z m 0,3.929767 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10077 -0.10076,-0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31756 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10077 -0.10076,-0.10077 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10076 h 0.10075 v -0.10077 h 0.10076 0.10076 v 0.10077 0 z m 0,3.829 v 2.31756 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31756 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.21679 -0.10077 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.21679 l -0.10076,0.10076 v 0 0.10077 h -0.10076 -0.10076 v -0.10077 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.2168 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10076 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10076 -2.2168 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92977 v 2.21679 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 h -0.10076 -0.10076 l -0.10075,-0.10077 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.92976 v 2.2168 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.82901 v 2.21679 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.21679 -0.10077 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.829 v 2.31755 h -0.10076 v 0.10077 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10077 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10077 -2.21679 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10076 v 0 h 0.10076 0.10076 v 0 0.10076 z m 0,3.829 v 2.2168 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10077 -2.21679 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 h -0.10076 -0.10076 l -0.10075,-0.10076 v 0 -2.31755 -0.10077 h 0.10075 0.10076 0.10076 v 0 z m 0,3.92976 v 2.21679 l -0.10076,0.10077 v 0 0 l -0.10076,0.10076 -0.10076,-0.10076 v 0 h -0.10075 v -0.10077 -2.21679 -0.10076 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.829 v 2.2168 l -0.10076,0.10076 v 0 0.10076 h -0.10076 -0.10076 v -0.10076 h -0.10075 v -0.10076 -2.2168 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z m 0,3.82901 v 2.31755 h -0.10076 v 0.10076 0 h -0.10076 -0.10076 v 0 l -0.10075,-0.10076 v 0 -2.31755 0 l 0.10075,-0.10077 v 0 h 0.10076 0.10076 v 0 0.10077 z m 0,3.92976 v 1.41069 l -0.10076,0.10076 v 0 l -0.10076,0.10076 -0.10076,-0.10076 h -0.10075 v -0.10076 -1.41069 -0.10076 h 0.10075 v -0.10076 h 0.10076 0.10076 v 0.10076 0 z"
-       id="path842-1"
-       transform="matrix(0.02877537,0,0,0.02877537,152.7591,56.00104)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.11666, 2.11666;stroke-dashoffset:0;stroke-opacity:1"
        d="M 82.390718,65.300868 54.624877,81.01381 v 0"
@@ -896,7 +803,7 @@
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.11666, 2.11666;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 184.26136,58.384552 72.673155,39.250338 v 0"
+       d="M 133.49882,58.313657 59.936938,39.253374 v 0"
        id="path12582"
        sodipodi:nodetypes="ccc" />
     <path
@@ -911,17 +818,17 @@
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
-       transform="matrix(0.26458333,0,0,0.26458333,33.970865,43.051695)"
+       transform="matrix(0.26458333,0,0,0.26458333,21.800024,43.051695)"
        id="text1341"
        style="font-size:10.6667px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1343);display:inline"
        x="-110.4691"
        y="0"><tspan
          x="372.375"
          y="209.28777"
-         id="tspan26318">Démonstrations d'un système fonctionnel </tspan><tspan
+         id="tspan794">Démonstrations d'un système fonctionnel </tspan><tspan
          x="372.375"
          y="222.62114"
-         id="tspan26320">et planification de la prochaine itération</tspan></text>
+         id="tspan796">et planification de la prochaine itération</tspan></text>
     <g
        id="g24894"
        transform="translate(-47.967997,25.211087)">
