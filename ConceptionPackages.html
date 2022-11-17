@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.233">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyse et conception de logiciels - 4&nbsp; Conception de packages</title>
+<title>Analyse et conception de logiciels - 18&nbsp; Conception de packages</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Conception de packages</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Conception de packages</span></h1>
+      <h1 class="title d-none d-lg-block"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></h1>
                       </div>
   </div>
     
@@ -199,27 +199,97 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DiagrammesActivites.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  <a href="./Besoins.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Besoins (exigences)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  <a href="./CasUtilisation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cas d’utilisation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  <a href="./MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modèle du domaine (MDD, modèle conceptuel)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DiagrammesDeploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  <a href="./DSS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
+  <a href="./GRASP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Principes GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DetteTechnique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dette technique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Contrats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contrats d’opération</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RDCU.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Réalisations de cas d’utilisation (RDCU)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Développement piloté par les tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Réusinage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Réusinage (Refactorisation)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Outils-UML.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Outils pour la modélisation UML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GRASP-GoF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Décortiquer les patterns GoF avec GRASP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Fiabilité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fiabilité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesActivites.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diagrammes d’activités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ConceptionPackages.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conception de packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DiagrammesDeploiement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Laboratoires.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Laboratoires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -239,17 +309,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
+  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Critique d’une conception</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
+  <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
+  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
   </div>
 </li>
       </ul>
@@ -288,11 +358,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#sec-NamespaceTypeScript" id="toc-sec-NamespaceTypeScript" class="nav-link active" data-scroll-target="#sec-NamespaceTypeScript"><span class="toc-section-number">4.1</span>  Absense de package dans TypeScript</a>
+  <li><a href="#sec-NamespaceTypeScript" id="toc-sec-NamespaceTypeScript" class="nav-link active" data-scroll-target="#sec-NamespaceTypeScript"><span class="toc-section-number">18.1</span>  Absense de package dans TypeScript</a>
   <ul class="collapse">
-  <li><a href="#organisation-des-éléments-du-code" id="toc-organisation-des-éléments-du-code" class="nav-link" data-scroll-target="#organisation-des-éléments-du-code"><span class="toc-section-number">4.1.1</span>  Organisation des éléments du code</a></li>
-  <li><a href="#noms-sans-conflit" id="toc-noms-sans-conflit" class="nav-link" data-scroll-target="#noms-sans-conflit"><span class="toc-section-number">4.1.2</span>  Noms sans conflit</a></li>
-  <li><a href="#namespaces" id="toc-namespaces" class="nav-link" data-scroll-target="#namespaces"><span class="toc-section-number">4.1.3</span>  Namespaces</a></li>
+  <li><a href="#organisation-des-éléments-du-code" id="toc-organisation-des-éléments-du-code" class="nav-link" data-scroll-target="#organisation-des-éléments-du-code"><span class="toc-section-number">18.1.1</span>  Organisation des éléments du code</a></li>
+  <li><a href="#noms-sans-conflit" id="toc-noms-sans-conflit" class="nav-link" data-scroll-target="#noms-sans-conflit"><span class="toc-section-number">18.1.2</span>  Noms sans conflit</a></li>
+  <li><a href="#namespaces" id="toc-namespaces" class="nav-link" data-scroll-target="#namespaces"><span class="toc-section-number">18.1.3</span>  Namespaces</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -303,7 +373,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<p>Le chapitre A36/F29&nbsp;<i class="fa-solid fa-book"></i>&nbsp;contient des directives pour la conception de packages. Notez que la notion de package n’existe pas en TypeScript (et Javascript), mais le principe de <em>namespace</em> existe. La <a href="#sec-NamespaceTypeScript"><span>Section&nbsp;4.1</span></a> explique quelques pratiques pour la gestion des namespaces en TypeScript.</p>
+<p>Le chapitre A36/F29&nbsp;<i class="fa-solid fa-book"></i>&nbsp;contient des directives pour la conception de packages. Notez que la notion de package n’existe pas en TypeScript (et Javascript), mais le principe de <em>namespace</em> existe. La <a href="#sec-NamespaceTypeScript"><span>Section&nbsp;18.1</span></a> explique quelques pratiques pour la gestion des namespaces en TypeScript.</p>
 <p>Les points importants sont les suivants (les détails se trouvent dans le <span style="white-space:nowrap">livre) :</span></p>
 <ul>
 <li>La notation UML des diagrammes de package</li>
@@ -315,7 +385,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Utiliser <strong>fabrique</strong> (factory) pour limiter la dépendance aux packages concrets</li>
 <li>Comment rompre les cycles dans les packages</li>
 </ul>
-<p>La <a href="#fig-DiagrammePackage">figure&nbsp;<span>4.1</span></a> est un exemple d’un diagramme de package.</p>
+<p>La <a href="#fig-DiagrammePackage">figure&nbsp;<span>18.1</span></a> est un exemple d’un diagramme de package.</p>
 <div id="fig-DiagrammePackage" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="245.6px" preserveaspectratio="none" style="width:358px;height:245px;background:#00000000;" version="1.1" viewbox="0 0 358 245" width="358.4px" zoomandpan="magnify"><defs></defs><g><!--MD5=[2e8987c52304ead4414887c2e3c78ede]
@@ -395,19 +465,19 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.1: Diagramme de packages (tiré de la figure F12.6 ). <a href="http://www.plantuml.com/plantuml/uml/XPDHRzGm3CVVA-qxM9FGjeT9yC0BcgOXRaE3IKoqZ0V4WqbyhTNKEPoKku7sWVOvziLmji4Ac-wgo4tZN-A_xVGePTGy3g5AFSi25GT8-JAGMMLNF5iJrpTqVQjn5EzYY0fPKPAvIF9MjGEvumGs43eKlrJEcGJcKJAmm6SM7vV9m8S3FSrn3BaWWWF1U-LKzfmsRunhEae4CNUa2KACFRHAU7jOVV4MTWViJUYeP97fSiVUB9PG2EGjgiBhipFuL1z_h2VXuSNplMbA_oj8s1OZwtMUIW_lugY2OIstwfs7sYalybhkdAnKcgR2fYNCEb9bUSNbm2kMjbfO8uhGxPhq1pjAq93hXB-FbBO14zGD71oSnE193m_XLmNs_DbqRf6ip2YE7aDN_w3rpRKRJSJDzIRolXgSC7EKf-YhlwfdSK0MAZfdQsH-g3VAoz7rQHFLu8hIqugg6UpxBnrxJ_9rtwfMsJL-w46WbiINBYN-IV3Id7TBuEpAazht2GSgBNm5p-RtqzqzMo_G7LjLHsRjJ_eD">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;18.1: Diagramme de packages (tiré de la figure F12.6 ). <a href="http://www.plantuml.com/plantuml/uml/XPDHRzGm3CVVA-qxM9FGjeT9yC0BcgOXRaE3IKoqZ0V4WqbyhTNKEPoKku7sWVOvziLmji4Ac-wgo4tZN-A_xVGePTGy3g5AFSi25GT8-JAGMMLNF5iJrpTqVQjn5EzYY0fPKPAvIF9MjGEvumGs43eKlrJEcGJcKJAmm6SM7vV9m8S3FSrn3BaWWWF1U-LKzfmsRunhEae4CNUa2KACFRHAU7jOVV4MTWViJUYeP97fSiVUB9PG2EGjgiBhipFuL1z_h2VXuSNplMbA_oj8s1OZwtMUIW_lugY2OIstwfs7sYalybhkdAnKcgR2fYNCEb9bUSNbm2kMjbfO8uhGxPhq1pjAq93hXB-FbBO14zGD71oSnE193m_XLmNs_DbqRf6ip2YE7aDN_w3rpRKRJSJDzIRolXgSC7EKf-YhlwfdSK0MAZfdQsH-g3VAoz7rQHFLu8hIqugg6UpxBnrxJ_9rtwfMsJL-w46WbiINBYN-IV3Id7TBuEpAazht2GSgBNm5p-RtqzqzMo_G7LjLHsRjJ_eD">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
-<section id="sec-NamespaceTypeScript" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="sec-NamespaceTypeScript"><span class="header-section-number">4.1</span> Absense de package dans TypeScript</h2>
+<section id="sec-NamespaceTypeScript" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="sec-NamespaceTypeScript"><span class="header-section-number">18.1</span> Absense de package dans TypeScript</h2>
 <p>En effet TypeScript n’a pas la notion de package comme dans C# ou Java. Cependant, il y a des pratiques pour organiser logiquement le code et pour éviter les conflits (les collisions) de noms. Rappelons que la notion de package existe dans Java <span style="white-space:nowrap">pour :</span></p>
 <ol type="1">
 <li><strong>Organiser logiquement le code</strong>: le type interface <code>java.util.List</code> est disponible dans la <em>bibliothèque</em> <code>java.util</code>)</li>
 <li><strong>Éviter les conflits de nom</strong>: les classes <code>java.util.List</code> et <code>ca.etsmtl.log121.fuhrman.projet2.List</code> ont le même nom de base, mais puisqu’elles sont dans deux packages différents, elles peuvent être utilisées dans le même programme (leur «&nbsp;fully qualified name&nbsp;» est différent)</li>
 </ol>
 <p>En TypeScript, on peut atteindre les mêmes objectifs.</p>
-<section id="organisation-des-éléments-du-code" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="organisation-des-éléments-du-code"><span class="header-section-number">4.1.1</span> Organisation des éléments du code</h3>
+<section id="organisation-des-éléments-du-code" class="level3" data-number="18.1.1">
+<h3 data-number="18.1.1" class="anchored" data-anchor-id="organisation-des-éléments-du-code"><span class="header-section-number">18.1.1</span> Organisation des éléments du code</h3>
 <p>L’organisation peut être réalisée grâce aux modules avec les mots-clés <code>export</code> et <code>import</code>. Par <span style="white-space:nowrap">exemple :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// maClasse.ts</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">class</span> MaClasse {</span>
@@ -417,15 +487,15 @@ Country: null
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { MaClasse } <span class="im">from</span> <span class="st">'./maClasse'</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On organise les fichiers, <em>e.g.</em>, <code>maClasse.ts</code> dans les répertoires.</p>
 </section>
-<section id="noms-sans-conflit" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="noms-sans-conflit"><span class="header-section-number">4.1.2</span> Noms sans conflit</h3>
+<section id="noms-sans-conflit" class="level3" data-number="18.1.2">
+<h3 data-number="18.1.2" class="anchored" data-anchor-id="noms-sans-conflit"><span class="header-section-number">18.1.2</span> Noms sans conflit</h3>
 <p>Dans l’exemple plus haut, il ne serait pas possible d’avoir deux fichiers nommés <code>maClasse.ts</code> dans le même répertoire, alors il est impossible d’avoir une collision avec le nom du fichier. Donc, on pourrait importer la classe <code>MaClasse</code> de <code>maClasse.ts</code> et la classe <code>MaClasse</code> de <code>lib/projet2/maClasse.ts</code> dans le même programme. Cependant, pour éviter un conflit de nom, on emploie le mot-clé <code>as</code> pour renommer la classe (<code>MaClasseP2</code>) lorsqu’on <span style="white-space:nowrap">l’importe :</span></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// client.ts</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { MaClasse } <span class="im">from</span> <span class="st">'./maClasse'</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { MaClasse <span class="im">as</span> MaClasseP2 } <span class="im">from</span> <span class="st">'./lib/projet2/maClasse'</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="namespaces" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="namespaces"><span class="header-section-number">4.1.3</span> Namespaces</h3>
+<section id="namespaces" class="level3" data-number="18.1.3">
+<h3 data-number="18.1.3" class="anchored" data-anchor-id="namespaces"><span class="header-section-number">18.1.3</span> Namespaces</h3>
 <p>TypeScript offre une autre manière d’organiser et d’éviter les conflits de noms avec <a href="https://www.typescriptlang.org/docs/handbook/namespaces.html">namespaces</a> (anciennement les <em>modules internes</em>). L’<a href="https://www.typescriptlang.org/docs/handbook/namespaces.html#namespaced-validators">exemple de Validators</a> est intéressant puisqu’il s’agit d’un namespace commun réparti dans plusieurs fichiers. C’est à utiliser surtout lorsqu’on ne veut pas centraliser tout le code dans un seul (gros) fichier (avec <code>export</code>). Mais comme vous voyez dans l’exemple avec les commentaires dans le code de certains fichiers, <em>e.g.</em>, <code>/// &lt;reference path="Validation.ts" /&gt;</code>, il est plus compliqué à maintenir.</p>
 
 
@@ -583,12 +653,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./DiagrammesEtats.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./DiagrammesDeploiement.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammes de déploiement et de composants</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
