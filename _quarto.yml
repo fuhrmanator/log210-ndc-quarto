@@ -50,7 +50,7 @@ book:
      # - ConceptionPackages.qmd
      # - DiagrammesDeploiement.qmd
      # - Laboratoires.qmd
-    - references.qmd
+   # - references.qmd
    # - part: Exercices
      # chapters:
       # - Exercice_Classes_conceptuelles_dans_le_MDD.qmd
