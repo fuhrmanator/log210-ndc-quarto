@@ -5,7 +5,7 @@
    viewBox="0 0 178.08728 44.599309"
    version="1.1"
    id="svg8"
-   sodipodi:docname="F2.2_adaptée.svg"
+   sodipodi:docname="Instabilite_diminue_iterations.svg"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -19,8 +19,8 @@
     <rect
        x="137.09032"
        y="141.86244"
-       width="201.731"
-       height="32.103428"
+       width="571.35426"
+       height="22.559166"
        id="rect15548" />
     <marker
        style="overflow:visible"
@@ -65,7 +65,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1525249"
-     inkscape:cx="177.87034"
+     inkscape:cx="169.62757"
      inkscape:cy="31.235768"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -73,7 +73,7 @@
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:showpageshadow="2"
@@ -437,14 +437,13 @@
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
-       transform="matrix(0.26458333,0,0,0.26458333,160.41492,107.2115)"
+       transform="matrix(0.26458333,0,0,0.26458333,164.77672,106.52279)"
        id="text15546"
        style="font-size:10.6667px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect15548);display:inline"><tspan
-         x="154.6459"
-         y="151.47136"
-         id="tspan19719">Une itération : analyse, conception, </tspan><tspan
-         x="152.28651"
-         y="164.80473"
-         id="tspan19721">implémentation, tests et rétroactions</tspan></text>
+         x="167.07617"
+         y="156.27535"
+         id="tspan1038"><tspan
+           style="font-size:16px"
+           id="tspan1036">Une itération : analyse, conception, implémentation, tests et rétroactions</tspan></tspan></text>
   </g>
 </svg>
