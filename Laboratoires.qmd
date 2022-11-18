@@ -3,9 +3,19 @@
 
 Ce chapitre contient des informations sur le volet technique des laboratoires.
 
+## TypeScript
+
+Qu'est-ce que TypeScript?
+Selon @goldberg_learning_2022, TypeScript comprend quatre éléments:
+
+- Un **langage de programmation** ayant toute la syntaxe de JavaScript, plus une syntaxe propre à TypeScript pour définir et utiliser les types.
+- Un **vérificateur de type** pouvant décortiquer un ensemble de fichiers en JavaScript et TypeScript définissant des variables, les fonctions, etc. afin d'indiquer des problèmes éventuels de configuration.
+- Un **compilateur** qui 1)\ invoque le vérificateur de type, 2)\ signale des problèmes le cas échéant et 3)\ finalement génère du code en JavaScript équivalent.
+- Un **service de langage** qui transmet des informations provenant du vérificateur de type à l'IDE pour que ce dernier puisse faciliter le développement.
+
 ## JavaScript/TypeScript
 
-Pour la personne ayant déjà des connaissances Java (de LOG121), il est recommandé d'apprendre les choses dans cet ordre:
+Pour la personne ayant déjà des connaissances Java et des patrons de conception de la Bande des quatre @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
 
 - **JavaScript** - un tutoriel intéressant (et libre) est sur [fr.javascript.info](https://fr.javascript.info/). Je vous recommande de contribuer à des [traductions en français sur GitHub](https://github.com/javascript-tutorial/fr.javascript.info#readme). 
 - **TypeScript** - [ce tutoriel](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html) est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C\#.
@@ -27,7 +37,7 @@ Mais en TypeScript, c'est facile de déclarer un type comme une *union* de plusi
 - Les gabarits (templates) PUG (anciennement Jade) : [Tutoriel (court)](https://www.youtube.com/watch?v=DSp9ExFw3Ig), [Tutoriel (plus complet)](https://www.youtube.com/watch?v=kt3cEjjkCZA)
 - Bootstrap (mise en page avec CSS) : [Tutoriel (attention, il faut appliquer les éléments dans les gabarits PUG)](https://www.youtube.com/watch?v=MrgGq3fob4o)
 
-Le **`lab 0`** aborde plusieurs de ces aspects, mais certaines notions sont plus complexes et nécessitent une étude approfondie. 
+Le [lab 0](https://github.com/ets-log210/log210-enonce-lab0) aborde plusieurs de ces aspects, mais certaines notions sont plus complexes et nécessitent une étude approfondie. 
 Le but de cette section est de donner des tutoriels plus spécifiques.
 Enseigner la syntaxe ou les principes du langage TypeScript n'est pas le but de ce manuel, mais apprendre à trouver l'information soi-même est essentiel pour une personne travaillant dans les technologies de l'information.
 
