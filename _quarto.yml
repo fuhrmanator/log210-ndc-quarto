@@ -61,7 +61,6 @@ book:
       # - Exercice_Diagramme_activité.qmd
       # - Exercice_Identifier_GRASP_dans_GoF.qmd
       - Exercice_Critique_d-une_conception.qmd
-      - Exercice_Coder_des_méthodes_des_DS.qmd
   appendices:
     - Annexe_Cas_utilisation_Réserver_livre.qmd
     - Annexe_Cas_utilisation_Traiter_vente.qmd
