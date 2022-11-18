@@ -85,6 +85,7 @@ format:
 
   epub: 
     epub-cover-image: images/cover.png
+    fig-format: png
 
   html:
     title-block-banner: true
