@@ -81,7 +81,7 @@ La sécurité et la robustesse des logiciels sont très importantes, alors on pa
 Puisque les exigences sont plus stables (et les développeurs ont *a priori* une meilleure compréhension du domaine), l'approche en cascade n'est pas si mal.
 Pourtant le coût pour produire des logiciels certifiés est énorme.
 
-Le spectre de la conception est très important pour le monde réel, parce que une ingénieure ou un ingénieur devrait pouvoir s'adapter selon les attentes de son travail.
+Le spectre de la conception est très important pour le monde réel, parce qu’une ingénieure ou un ingénieur devrait pouvoir s'adapter selon les attentes de son travail.
 Le dogme sur "la bonne manière" de développer un logiciel est souvent sans contexte.
 C'est le contexte de l'entreprise pour laquelle vous travaillez qui peut déterminer combien d'effort à mettre sur la conception.
 Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l'extrémité "hacking cowboy" du spectre), même si on vous dit que c'est "agile".
@@ -119,23 +119,26 @@ Voir la section [Réalisations de cas d'utilisation (RDCU)](#sec-RDCU) pour plus
 
 On peut voir les principes GRASP comme des généralisations (principes de base) des patterns GoF. Voir la section [Décortiquer les patterns GoF avec GRASP](#sec-GRASP-GoF) pour plus d'informations.
 
-## Exercice GRASP Polymorphisme
+## Exercices 
 
-Soit le diagramme de classe modélisant l’exemple à [<u>Replace Conditional with Polymorphism</u>](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html):
+::: {#exr-polymorphisme}
+### GRASP Polymorphisme
+
+Soit le diagramme de classe modélisant l'exemple de @Fowl18a à [_Replace Conditional with Polymorphism_](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html):
 
 
 ```{.plantuml}
-    @startuml
+@startuml
+skinparam style strictuml
+class Bird {
+    type : String
+    numberOfCoconuts : number
+    voltage : number
 
-    class Bird
+    getPlumage() : String
+}
 
-    Bird : type : String
-    Bird : numberOfCoconuts : number
-    Bird : voltage : number
-
-    Bird : getPlumage() : String
-    
-    @enduml
+@enduml
 ```
 
 Appliquez GRASP Polymorphisme pour le code suivant:
@@ -157,3 +160,4 @@ get plumage() {
     }
 }
 ```
+:::
