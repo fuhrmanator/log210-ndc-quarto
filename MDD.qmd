@@ -269,7 +269,7 @@ end note
 
 ## Classes d'association
 
-Les classes d'association dans le MDD sont le sujet de la section A32.10/F26.10 \faBook<i class="fa-solid fa-book"></i>.
+Les classes d'association dans un MDD sont le sujet de la section A31.10/F26.10 \faBook<i class="fa-solid fa-book"></i>.
 
 ::: {.callout}
 Une classe d'association permet de traiter une association comme une classe, et de la modéliser avec des attributs...
@@ -314,7 +314,7 @@ Joueur "1" -- "1..*" Pays : Contrôle >
 ## Affinement du MDD
 
 Lorsqu'on modélise un domaine, il est normal de commencer avec un modèle simple (à partir d'un ou deux cas d'utilisation) et ensuite on l'affine dans les itérations suivantes, où on y intègre d'autres éléments plus subtils ou complexes du problème qu'on étudie.
-Les détails de cette approche sont présentés dans le chapitre F26/A32 \faBook<i class="fa-solid fa-book"></i>.
+Les détails de cette approche sont présentés dans le chapitre F26/A31 \faBook<i class="fa-solid fa-book"></i>.
 Bien que la matière soit présentée plus tard dans le livre, ce sont des choses à savoir pour la modélisation d'un domaine, même dans une première itération.
 
 Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus haut:
