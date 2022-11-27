@@ -63,6 +63,7 @@ book:
   # repo-actions: [source, issue]
 
 bibliography: references.bib
+csl: ets
 citations-hover: true
 citation-location: document
 link-citations: true # pandoc setting
