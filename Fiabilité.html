@@ -324,7 +324,7 @@ div.csl-indent {
 
 
 
-<p>Le chapitre A35/F30&nbsp;<i class="fa-solid fa-book"></i>&nbsp;présente le problème de la fiabilité pour le système NextGen POS. C’est le basculement sur un service local en cas d’échec d’un service distant.</p>
+<p>Le chapitre A36/F30&nbsp;<i class="fa-solid fa-book"></i>&nbsp;présente le problème de la fiabilité pour le système NextGen POS. C’est le basculement sur un service local en cas d’échec d’un service distant.</p>
 <div id="fig-PanneConnexionService" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figure class="figure">
@@ -335,7 +335,7 @@ div.csl-indent {
 </div>
 <p>Voici les points <span style="white-space:nowrap">importants :</span></p>
 <ul>
-<li>Définitions des termes, A35.3/F30.3&nbsp;<i class="fa-solid fa-book"></i>:
+<li>Définitions des termes, A36.3/F30.3&nbsp;<i class="fa-solid fa-book"></i>:
 <ul>
 <li><strong>Faute.</strong> La cause première du problème</li>
 <li><strong>Erreur.</strong> La manifestation de la faute lors de l’exécution. Les erreurs sont détectées (ou non).</li>
@@ -343,10 +343,10 @@ div.csl-indent {
 </ul></li>
 <li>Les solutions proposées par l’architecte système et documentées par Larman impliquent les concepts <span style="white-space:nowrap">suivants :</span>
 <ul>
-<li>Mise en cache locale d’informations recherchées au service distant, A35.2/F30.2&nbsp;<i class="fa-solid fa-book"></i></li>
-<li>Utilisation d’<em>Adaptateur [GoF]</em> pour réaliser le service redondant (lecture d’information), A35.2/F30.2&nbsp;<i class="fa-solid fa-book"></i></li>
-<li>Réalisation d’un scénario dans le cas d’utilisation pour supporter l’échec de tout (rien ne va plus) en permettant au Caissier de saisir l’information (description et prix), A35.3/F30.3&nbsp;<i class="fa-solid fa-book"></i>. Dans ce cas, il faut bien gérer les exceptions.</li>
-<li>Utilisation de <em>Procuration (Proxy) de redirection [GoF]</em> pour basculer sur un service local en cas de panne (écriture d’information), A35.4/F30.4&nbsp;<i class="fa-solid fa-book"></i></li>
+<li>Mise en cache locale d’informations recherchées au service distant, A36.2/F30.2&nbsp;<i class="fa-solid fa-book"></i></li>
+<li>Utilisation d’<em>Adaptateur [GoF]</em> pour réaliser le service redondant (lecture d’information), A36.2/F30.2&nbsp;<i class="fa-solid fa-book"></i></li>
+<li>Réalisation d’un scénario dans le cas d’utilisation pour supporter l’échec de tout (rien ne va plus) en permettant au Caissier de saisir l’information (description et prix), A36.3/F30.3&nbsp;<i class="fa-solid fa-book"></i>. Dans ce cas, il faut bien gérer les exceptions.</li>
+<li>Utilisation de <em>Procuration (Proxy) de redirection [GoF]</em> pour basculer sur un service local en cas de panne (écriture d’information), A36.4/F30.4&nbsp;<i class="fa-solid fa-book"></i></li>
 </ul></li>
 </ul>
 <div class="callout-important callout callout-style-default callout-captioned">
