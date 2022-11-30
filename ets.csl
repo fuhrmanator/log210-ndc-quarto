@@ -35,6 +35,7 @@
         <single>p.</single>
         <multiple>pp.</multiple>
       </term>
+      <term name="et-al">et coll.</term>
     </terms>
   </locale>
   <macro name="container-contributors">
