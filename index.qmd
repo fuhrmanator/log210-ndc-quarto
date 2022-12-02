@@ -27,9 +27,9 @@ Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels libres
 - Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022] qui font partie des composantes exploitées par Quarto; 
 - PlantUML [-@noauthor_plantuml_2022] pour les figures sous forme de texte (faciles à actualiser).
 
-Autant possibles, les figures sont créés dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche.
+Autant que possible, les figures sont créées dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche.
 
-Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'information, pour donner une meilleure inclusivité des personnes apprenantes et enseignantes.  
+Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'information et pour permettre une meilleure inclusivité des personnes apprenantes et enseignantes.  
 
 # Prérequis
 
@@ -38,10 +38,10 @@ Le contenu de ce manuel est organisé pour les personnes ayant déjà une base e
 - la programmation dans un langage orienté objet (Java, C#, C++, Python, TypeScript, etc.);
 - les concepts de modélisation orientée objet (les classes, les interfaces, les instances, l'héritage, la composition, le polymorphisme, etc.);
 - les tests unitaires (avec un cadriciel comme JUnit);
-- application des patrons de conception de la "bande des quatre" (Gang of Four): Gamma, Helm, Johnson et Vlissides @GoF1994.
+- l'application des patrons de conception de la "bande des quatre" (Gang of Four): Gamma, Helm, Johnson et Vlissides @GoF1994.
 
 La notation UML (*Unified Modeling Language*) est utilisée partout dans ce manuel.
-Nous faisons une hypothèse que les personnes suivant ce manuel aient déjà vu cette notation avant, mais la familiarité avec UML n'est pas un préalable.
+Nous faisons l'hypothèse que les personnes suivant ce manuel ont déjà vu cette notation avant, mais la familiarité avec UML n'est pas un préalable.
 
 <!-- Voici le descriptif du cours, selon le plan de cours:
 
@@ -59,14 +59,13 @@ Séances de laboratoire axées sur l'application des notions d'analyse, de conce
 
 ## Livre complémentaire
 
-Ce manuel suit la méthodologie d'analyse et de conception proposée par Craig Larman dans son livre "UML 2 et les Design Patterns" @craig_uml_2005.
-Le livre est encore populaire et pertinent, mais malheureusement il n'a pas été actualisé depuis sa 3^e^ édition (2005).
-La traduction française du livre n'est plus en stocke au Québec depuis plusieurs années.
-Beaucoup de choses ont évolué depuis bientôt vingt ans!
+Ce manuel suit la méthodologie d'analyse et de conception proposée par Craig Larman dans son livre UML 2 et les design patterns @craig_uml_2005.
+Le livre est encore populaire et pertinent, mais, malheureusement, il n'a pas été actualisé depuis sa 3^e^ édition (en 2005).
+De plus, la traduction française du livre n'est plus en stock au Québec depuis plusieurs années, Beaucoup de choses ont évolué depuis bientôt vingt ans!
 
 ::: {.callout-note}
 Au besoin, des références au livre de Larman sont indiquées par l'icône du livre \faBook<i class="fa-solid fa-book"></i>.
-Puisqu'il est disponible en français et en anglais, puis il y a des différences avec les numéros de chapitres, nous indiquons une référence avec **F** et **A** pour signifier la langue du livre.
+Puisqu'il est disponible en français et en anglais, et qu'il y a des différences avec les numéros de chapitres, nous indiquons une référence avec **F** et **A** pour signifier la langue du livre.
 Par exemple, la matière sur les principes GRASP est dans le chapitre 17 dans la version en anglais.
 Cependant, à cause des fusions de contenu lors de la traduction, la matière sur GRASP est dans le chapitre 16 dans la version en français.
 Dans ce cas, à cause des différences de chapitres, **F16.10/A17.10** indique la section **16.10 du livre en français** et la section **17.10 du livre en anglais.**
