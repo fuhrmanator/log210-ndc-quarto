@@ -1,30 +1,30 @@
 # Préface {.unnumbered}
 
-Cet ouvrage a commencé comme des notes de cours pour le cours _Analyse et conception de logiciel (LOG210)_ dans les programmes de baccalauréat en Génie logiciel (LOG) et en Génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal au Québec.
-À l'origine, la communauté étudiante dans ces programmes provenaient des "Collèges d'enseignement général et professionnel" (CÉGEP), ayant donc déjà reçu au diplôme d'études collégiales (DEC) dans un programme technique. 
+Cet ouvrage a commencé comme notes de cours pour le cours _Analyse et conception de logiciel (LOG210)_ dans les programmes de baccalauréat en génie logiciels (LOG) et en génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal, au Québec.
+À l'origine, la communauté étudiante dans ces programmes provenait des collèges d'enseignement général et professionnel (cégeps), ayant donc déjà reçu un diplôme d'études collégiales (DEC) dans un programme technique. 
 Ainsi, ces personnes ont déjà appris à programmer dans un langage orienté objet.
-En effet, cette démarche correspond à l'approche "Computer-Science-first" (CS-first) pour enseigner le génie logiciel @SE_Curriculum_ACM_2014.
+En effet, cette démarche correspond à l'approche "computer science first" (CS-first) pour enseigner le génie logiciel @SE_Curriculum_ACM_2014.
 
-LOG210 a été mis sur pied au début des années 2000 et le livre obligatoire a toujours été le fameux _Applying UML and Patterns_ de Craig Larman qui était à sa 2^e^ édition [-@larman_applying_2001] à l'époque.
-En 2005 la 3^e^ édition a été publiée avec plusieurs traductions, notamment celle en français [-@craig_uml_2005].
-Pendant plus de 10 ans, le livre de Larman a été fort apprécié par les personnes étudiantes.
+LOG210 a été mis sur pied au début des années 2000, et le livre obligatoire a toujours été le fameux _Applying UML and Patterns_ de Craig Larman, qui en était à sa 2^e^ édition [-@larman_applying_2001] à l'époque.
+En 2005, la 3^e^ édition a été publiée avec plusieurs traductions, notamment celle en français [-@craig_uml_2005].
+Pendant plus de dix ans, le livre de Larman a été fort apprécié par les personnes étudiantes.
 
 Mais pour le corps enseignant donnant le cours, le manque d'exercices dans le livre a toujours été un gros inconvénient.
-En plus, certains sujets (comme les cas d'utilisation, les précondition des contrats d'opération et les diagrammes de communication) dans le livre de Larman sont moins pertinents en industrie aujourd'hui, puis d'autres sujets (comme le développement piloté par les tests, le travail en équipe, les cadriciels Web) sont devenus plus importants.
+En plus, certains sujets (comme les cas d'utilisation, les préconditions des contrats d'opération et les diagrammes de communication) dans le livre de Larman sont moins pertinents en industrie aujourd'hui, puis d'autres sujets (comme le développement piloté par les tests, le travail en équipe et les cadriciels Web) sont devenus plus importants.
 Une 4^e^ édition n'a jamais été publiée. 
-Finalement, la traduction française du livre est en rupture de stocke depuis 2019.
+Finalement, la traduction française du livre est en rupture de stock depuis 2019.
 Le présent manuel essaie de pallier tous ces problèmes, sous forme de ressource éducative libre (REL).
 
 ## Pourquoi une ressource éducative libre? {.unnumbered}
 
-Aujourd'hui les logiciels libres sont très répandus.
-Dans le cadre de l'enseignement, nous utilisons les dépôts de code source libre comme GitHub et GitLab, car ces plateformes permettent de collaborer, d'évaluer et de valider des logiciels dans les communautés de logiciel libre.
+Aujourd'hui, les logiciels libres sont très répandus.
+Dans le cadre de l'enseignement, nous utilisons les dépôts de code source libre comme GitHub et GitLab, car ces plateformes permettent car ces plateformes permettent d'évaluer et de valider des logiciels et de collaborer dans les communautés de logiciel libre.
 Il est donc naturel d'imaginer une forme analogique pour le contenu de ce manuel, soit une **ressource éducative libre (REL)**, qui est également développée à travers un dépôt libre (GitHub dans ce cas). 
 
 Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels libres:
 
 - Quarto [-@noauthor_quarto_2022] (le langage source du texte est [Markdown](https://quarto.org/docs/authoring/markdown-basics.html));
-- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022] font partie des composantes exploitées par Quarto; 
+- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022] qui font partie des composantes exploitées par Quarto; 
 - PlantUML [-@noauthor_plantuml_2022] pour les figures sous forme de texte (faciles à actualiser).
 
 Autant possibles, les figures sont créés dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche.
