@@ -243,19 +243,19 @@ Le développement itératif et incrémental amène plusieurs avantages selon @cr
 
 Cependant, il y a des défis associés à ce genre de développement:
 
-- **Instabilité apparente au début**: Dans les itérations initiales, puisqu'on n'a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des specifications et la conception sont loin de la "bonne voie".
-La conséquence est que les évaluations et les rétroactions peuvent sembler rudes et cela peut être déstabilisantes pour des personnes qui ne sont pas familières avec le processus.
-La bonne nouvelle est que normalement cette instabilité diminue au fur et à mesure que le projet avance (voir la @fig-StabiliteDansLesIterations).
-- **Modifications des objectifs de l'itération en cours au besoin**: Il arrive souvent que dans une itération, les choses ne se passent pas comme on a imaginé.
-Par exemple, l'ensemble des récits utilisateur ou des scénarios de cas d'utilisation visé pour l'itération nécessite plus de travail que prévu.
-La tendance dans ce cas est de se donner plus de temps pour terminer.
+- **Instabilité apparente au début** : Dans les itérations initiales, puisqu'on n'a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la "bonne voie".
+La conséquence est que les évaluations et les rétroactions peuvent sembler rudes, et cela peut être déstabilisant pour des personnes qui ne sont pas familières avec le processus.
+La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la @fig-StabiliteDansLesIterations).
+- **Modifications des objectifs de l'itération en cours au besoin** : Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l'avons imaginé.
+Par exemple, l'ensemble des récits utilisateur ou des scénarios de cas d'utilisation visés pour l'itération nécessite plus de travail que prévu.
+La tendance dans ce cas est de nous donner plus de temps pour terminer.
 Mais cela voudrait dire que la rétroaction de toute l'itération sera retardée.
 Il serait nécessaire de changer la planification de démonstration avec le client (qui a souvent peu de disponibilités).
 Donc, le processus nous impose de toujours respecter le délai des itérations.
 Il s'agit d'une [gestion par blocs de temps](https://fr.wikipedia.org/wiki/Timeboxing) (en anglais *timeboxing*).
-Que faire alors si dans une itération on n'arrivera pas à tout faire?
+Que faire alors si, dans une itération, nous n'arriverons pas à tout faire?
 La résolution est de demander à l'équipe après la moitié de l'itération si les objectifs d'origine peuvent être atteints.
-Si la réponse est non, on priorise les objectifs en plaçant les objectifs secondaires dans la catégorie "choses à faire" (qui seront faites à une itération ultérieure éventuellement).
+Si la réponse est non, nous priorisons les objectifs en plaçant les objectifs secondaires dans la catégorie des "choses à faire" (qui seront éventuellement faites à une itération ultérieure).
 Voir la @fig-AnalyseConceptionDansLesIterations.
 Selon une étude menée par @blincoe2019high sur trois gros projets itératifs d'IBM, jusqu'à 54% des exigences de haut niveau ont été déplacées de cette manière.
 Le but ultime de cette stratégie est de pouvoir faire une démonstration à la fin de l'itération, même si elle ne comprend pas toutes les fonctionnalités visées au début, car la rétroaction régulière sur des choses qui fonctionnent est essentielle.
