@@ -2,18 +2,18 @@
 
 Comment développer un logiciel dans un domaine où l'équipe de développement n'a pas forcément une expérience importante?
 Comment faire une bonne conception d'un tel logiciel?
-Cette œuvre vise à décrire une méthodologie de développement de logiciel qui répond à ces questions.
+Ce manuel vise à décrire une méthodologie de développement de logiciels qui répond à ces questions.
 
 Nous suivrons une approche systématique permettant de modéliser un domaine d'application et de concevoir un logiciel avec des abstractions (des classes) plus intuitives.
-Dans le fond, c'est faire une _analyse_ d'un domaine d'application et proposer une _conception_ du logiciel à développer dans le domaine visé.
+Au fond, il s'agit de faire une _analyse_ d'un domaine d'application et proposer une _conception_ du logiciel à développer dans le domaine visé.
 
 Puisqu'une conception doit être réalisée (codée) pour être validée, nous appliquerons une approche de programmation pilotée par les tests (_test-driven development_ ou _TDD_ en anglais).
 Le TDD est un élément essentiel dans le [Devops](https://fr.wikipedia.org/wiki/Devops), une approche permettant de livrer et de faire évoluer rapidement les logiciels de manière robuste.
 
-Orthogonalement, surtout pour faire face à la complexité, la méthodologie propose ces activités en itérations ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction.
+Parallèlement, surtout pour faire face à la complexité, la méthodologie propose des activités en itération ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction.
 C'est une approche dite "agile", ayant une base pédagogique neutre, nommée le "processus unifié".
 
-Dans ce chapitre, nous présentons en détail ces dimensions du développement de logiciel.
+Dans ce chapitre, nous présentons en détail ces dimensions du développement de logiciels.
 
 ## Analyse vs Conception
 
@@ -74,8 +74,8 @@ JeuDeDés -r- "[nom]" Joueur : "        "
 ```
 
 Imaginez un jeu qui est joué dans la vraie vie avec deux dés à six faces.
-Ensuite, on veut construire un logiciel pour ce jeu et donc on peut spécifier la règle du jeu, dont un de nombreux besoins est de générer un nombre aléatoire entre 1 et 6 (comme un dé à six faces).
-On peut aussi modéliser ce besoin (un élément du problème) par une classe conceptuelle `Dé` ayant un attribut `face` dont sa valeur est un type `int`.
+Ensuite, on veut construire un logiciel pour ce jeu et, donc, on peut spécifier la règle du jeu, dont un des nombreux besoins est de générer un nombre aléatoire entre 1 et 6 (comme un dé à six faces).
+On peut aussi modéliser ce besoin (un élément du problème) par une classe conceptuelle `Dé` ayant un attribut `face` dont la valeur est un type `int`.
 Les personnes travaillant sur un projet vont facilement comprendre ce modèle, car les gens comprennent les objets qui représentent des aspects de la vraie vie.
 
 Dans l'approche proposée par ce manuel une modélisation orientée objet est utilisée et pour l'analyse (classes conceptuelles décrivant le problème et les besoins comme à la @fig-mddDes) et pour la conception (classes logicielles proposant une solution dont sa représentation est proche de la modélisation du problème comme à la @fig-ddcDes).
