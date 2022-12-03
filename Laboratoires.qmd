@@ -102,10 +102,170 @@ C'est souvent un piège en JavaScript quand on considère les variables qui peuv
 Par exemple, si on fait `if (maVariable)` pour tester si une variable est définie, si la variable est définie et a sa valeur est `0`, la condition sera `false`.
 :::
 
+## Git
+
+Git est un logiciel de gestion des versions permettant de stocker un ensemble de fichiers en conservant la chronologie de tous les changements ayant été effectués dessus.
+Ce genre de logiciel permet de retrouver les différentes versions d'un lot de fichiers connexes.
+Depuis 2010, Git est le logiciel de gestion des versions le plus populaire, disponible sur les environnements Windows, Mac et Linux.
+Il s'agit d'un logiciel libre et gratuit, créé en 2005 par Linus Torvalds, fondateur du noyau Linux.
+Linus Torvalds prononce Git avec un _g_ dur [@google_tech_2007].
+
+Git est particulier parce qu'il est décentralisé, utilisant un système de connexion pair à pair.
+Les fichiers informatiques sont stockés sur l'ordinateur de chaque personne qui contribue au projet et ils peuvent également l'être sur un serveur dédié comme [GitHub](https://github.com/), [GitLab](https://gitlab.com/), [BitBucket](https://bitbucket.org/), etc.
+
+Puisque chaque personne est libre à modifier les fichiers comme elle veut, sans être bloquée par les autres contributeurs, il est nécessaire de synchroniser et de fusionner les contributions de temps en temps. 
+Cette synchronisation peut être plus ou moins compliquée, selon les travaux réalisés par chacun, par exemple lorsque deux personnes ont modifié un même fichier sur son ordinateur.
+Une des forces de Git est l'ensemble des fonctionnalités permettant de gérer tous les cas synchronisation.
+Mais cet avantage peut aussi faire en sorte que Git soit compliqué à utiliser.
+La @fig-git_fonctionnement présente un survol des concepts et opérations de base de Git.
+
+Ce manuel ne rentre pas dans les détails de chaque opération Git; il existe plusieurs tutoriels pour Git sur Internet.
+Il y a beaucoup de scénarios où Git peut être utile, par exemple pour récupérer une version antérieure d'un fichier ou pour savoir qui a apporté une modification à un fichier, etc.
+Apprendre tous les cas d'utilisation de Git serait long et pas très intéressant.
+Il n'est pas nécessaire de tout comprendre pour commencer.
+
+```{.plantuml #fig-git_fonctionnement caption='Concepts et opérations de base de Git. (Cette œuvre, "Concepts et opérations de base de Git", est un dérivé de ["Basic git concepts and operations"](https://graphviz.org/Gallery/directed/git.html) de [Costa Shulyupin](https://gitlab.com/makelinux), utilisé sous [EPL](https://en.wikipedia.org/wiki/Eclipse_Public_License).'}
+@startuml
+digraph git_basics {
+	graph [
+'		label = "Basic git concepts and operations\n\n"
+'		labelloc = t
+'		fontname = "Helvetica,Arial,sans-serif"
+'		fontsize = 20
+		layout = dot
+		rankdir = LR
+		newrank = true
+	]
+	node [
+		style=filled
+		shape=rect
+		pencolor="#00000044" // frames color
+		fontname="Helvetica,Arial,sans-serif"
+		shape=plaintext
+	]
+	edge [
+		arrowsize=0.5
+		fontname="Helvetica,Arial,sans-serif"
+		labeldistance=3
+		labelfontcolor="#00000080"
+		penwidth=2
+		style=dotted // dotted style symbolizes data transfer
+	]
+	changes [
+		color="#88000022"
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+			<tr> <td> <b>changes</b><br/>in the working tree </td> </tr>
+			<tr> <td align="left"><i>To view: </i><br align="left"/>
+			git diff
+			<br align="left"/></td> </tr>
+		</table>>
+		shape=plain
+	]
+	staging [
+		fillcolor="#ff880022"
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+			<tr> <td> <b>staging area</b><br/>(cache, index)</td> </tr>
+			<tr> <td align="left"><i>To view: </i><br align="left"/>
+			git diff --staged
+			<br align="left"/></td> </tr>
+		</table>>
+		shape=plain
+	]
+	staging -> HEAD:push [label="git commit" weight=1000 color="#88000088"]
+	stash [
+		fillcolor="#0044ff22"
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+			<tr> <td> <b>stash</b></td> </tr>
+			<tr> <td align="left"><i>To view:</i><br align="left"/>
+			git stash list
+			<br align="left"/></td> </tr>
+		</table>>
+		shape=plain
+	]
+	stash_push [
+		label="git stash [push]"
+		style=""
+		shape=plain
+		color="transparent"
+	]
+	{
+		edge [arrowhead=none color="#00008844"]
+		changes ->  stash_push
+		stash_push -> staging
+	}
+	changes -> stash [
+		dir=back
+		taillabel="git stash pop"
+    labelfontcolor="black"
+'    labelfloat=true
+    labeldistance=2.4
+    labelangle=0
+		color="#00000088"
+    weight=0]
+	stash_push -> stash [xdir=back color="#00008844" minlen=0]
+	HEAD [
+		fillcolor="#88ff0022"
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+			<tr> <td port="push" sides="ltr"> <b>HEAD </b>of</td> </tr>
+			<tr> <td port="pull" sides="lbr"> the current branch</td> </tr>
+			<tr> <td port="switch" align="left">
+				<i>To view:</i>
+				<br align="left"/>
+				git show<br align="left"/>
+				git log
+				<br align="left"/>
+			</td> </tr>
+			<tr> <td align="left">
+				<i>To change branch:</i><br align="left"/>
+				git switch ...
+				<br align="left"/>
+				git checkout ...
+				<br align="left"/>
+			</td> </tr>
+		</table>>
+		shape=plain
+	]
+	remote [
+		label="remote branch"
+		shape=box
+		color="#00000022"
+		fillcolor="#00ff0022"
+	]
+
+	HEAD:push -> remote [label="git push" color="#88000088"]
+	HEAD:pull -> remote [dir=back label="git pull" color="#00440088"]
+	branches [
+		fillcolor="#00888822"
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+			<tr> <td> <b>local branches</b> </td> </tr>
+			<tr> <td align="left"><i>To view:</i><br align="left"/>
+			git branch [--list]
+			<br align="left"/></td> </tr>
+			</table>>
+		shape=plain
+	]
+	changes -> staging [label="git add ...    \ngit reset      " color="#88000088"]
+	discard [shape=plaintext style=""]
+	changes -> discard [label="git restore ..." color="#88000088"]
+	{rank=same changes discard}
+	// UML style aggregation
+	HEAD:switch -> branches [
+		dir=back
+		style=""
+		penwidth=1
+		arrowtail=odiamond
+		arrowhead=none
+		color="#00000088"
+	]
+}
+// © 2022 Costa Shulyupin, licensed under EPL
+@enduml
+```
+
 ## Évaluer les contributions des membres de l'équipe {#sec-ContributionsEquipe}
 
 Il existe un outil nommé `gitinspector` qui peut indiquer le niveau d'implication des membres de l'équipe dans un projet sur GitHub.
-Étant donné que les laboratoires de ce manuel utilise un squelette avec les tests, les fichiers `src` de TypeScript, les modèles PlantUML et le README.md, il est possible d'utiliser `gitinspector` pour voir des rapports de contribution sur chacun des volets.
+Étant donné que les laboratoires de ce manuel utilisent un squelette avec les tests, les fichiers `src` de TypeScript, les modèles PlantUML et le README.md, il est possible d'utiliser `gitinspector` pour voir des rapports de contribution sur chacun des volets.
 
 Pour faciliter l'utilisation de l'outil, le professeur Fuhrman a créé un [script en bash](https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853). Voici comment l'utiliser:
 
