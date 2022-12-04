@@ -46,7 +46,7 @@ Alors, nous proposons les étapes (les interactions entre les acteurs et le syst
 
 La @fig-uc est un exemple de diagramme de cas d'utilisation.
 
-Un diagramme de cas d'utilisation n'etant q'une sorte de *table des matières* des fonctionnalités, il ne montre qu'une faible partie des détails trouvés dans le texte de chaque cas d'utilisation.
+Un diagramme de cas d'utilisation n'étant q'une sorte de *table des matières* des fonctionnalités, il ne montre qu'une faible partie des détails trouvés dans le texte de chaque cas d'utilisation.
 Le diagramme ne peut donc remplacer la documentation textuelle.
 
 Dans la @fig-uc, le cas d'utilisation "..." signifie qu'il y a d'autres cas d'utilisation à spécifier concrètement, c'est-à-dire tous les autres cas d'utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.
