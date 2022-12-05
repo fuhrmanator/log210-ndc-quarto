@@ -19,18 +19,18 @@ Il y a trois stratégies pour identifier les classes conceptuelles:
 
 **Catégorie** | **Exemples**
 :----------|:----------
-**Transactions d'affaires** : Elles sont essentielles, commencez l'analyse par les transactions. | *Vente*, *Attaque*, *Réservation*, *Inscription*, *EmpruntVélo*
-**Lignes d'une transaction** : Éléments compris dans une transaction. |  *LigneArticles*, *ExemplaireLivre*, *GroupeCours*
-**Produit ou service lié à une transaction ou à une ligne de transaction** : Pour quel concept sont faites des transactions?  |*Article*, *Vélo*, *Vol*, *Livre*, *Cours*
+**Transactions d'affaires**: Elles sont essentielles, commencez l'analyse par les transactions. | *Vente*, *Attaque*, *Réservation*, *Inscription*, *EmpruntVélo*
+**Lignes d'une transaction**: Éléments compris dans une transaction. |  *LigneArticles*, *ExemplaireLivre*, *GroupeCours*
+**Produit ou service lié à une transaction ou à une ligne de transaction**: Pour quel concept sont faites des transactions?  |*Article*, *Vélo*, *Vol*, *Livre*, *Cours*
 **Où la transaction est-elle enregistrée?** | *Caisse*, *GrandLivre*, *ManifesteDeVol*
-**Rôle des personnes liées à la transaction** : Qui sont les parties impliquées dans une transaction?  | *Caissier*, *Client*, *JoueurDeMonopoly*, *Passager*
+**Rôle des personnes liées à la transaction**: Qui sont les parties impliquées dans une transaction?  | *Caissier*, *Client*, *JoueurDeMonopoly*, *Passager*
 **Organisations liées à la transaction** : Quelles sont les organisations impliquées dans une transaction? | *Magasin*, *CompagnieAérienne*, *Bibliothèque*, *Université*
 **Lieu de la transaction, lieu du service**  | *Magasin*, *Aéroport*, *Avion*, *Siège*, *LocalCours*
 **Événements notables, à mémoriser**  | *Vente*, *Paiement*, *JeuDeMonopoly*, *Vol*
 **Objets physiques** :  Important surtout lorsqu'il s'agit d'un logiciel de contrôle d'équipements ou de simulation.  | *Article*, *Caisse*, *Plateau*, *Pion*, *Dé*, *Vélo*
-**Description d'entités** : Voir section 9.13 pour plus d'informations. | *DescriptionProduit*, *DescriptionVol*, *Livre* (en opposition avec *Exemplaire*), *Cours* (en opposition avec *CoursGroupe*)
-**Catalogues** : Les descriptions se trouvent souvent dans des catalogues.  | *CatalogueProduits*, *CatalogueVols*, *CatalogueLivres*, *CatalogueCours*
-**Conteneurs** : Un conteneur peut contenir des objets physiques ou des informations.  | *Magasin*, *Rayonnage*, *Plateau*, *Avion*, *Bibliothèque*
+**Description d'entités**: Voir section 9.13 pour plus d'informations. | *DescriptionProduit*, *DescriptionVol*, *Livre* (en opposition avec *Exemplaire*), *Cours* (en opposition avec *CoursGroupe*)
+**Catalogues**: Les descriptions se trouvent souvent dans des catalogues.  | *CatalogueProduits*, *CatalogueVols*, *CatalogueLivres*, *CatalogueCours*
+**Conteneurs**: Un conteneur peut contenir des objets physiques ou des informations.  | *Magasin*, *Rayonnage*, *Plateau*, *Avion*, *Bibliothèque*
 **Contenu d'un conteneur**  | *Article*, *Case (sur un Plateau de jeu)*, *Passager*, *Exemplaire*
 **Autres systèmes externes**  | *SystèmeAutorisationPaiementsACrédit*, *SystèmeGestionBordereaux*
 **Documents financiers, contrats, documents légaux**  | *Reçus*, *GrandLivre*, *JournalDeMaintenance*
@@ -42,7 +42,7 @@ Il y a trois stratégies pour identifier les classes conceptuelles:
 Les attributs sont le sujet de la section 9.16 \faBook<i class="fa-solid fa-book"></i>.
 Comme c'est le cas pour les classes et les associations, on fait figurer les attributs *quand les cas d'utilisation suggèrent la nécessité de mémoriser des informations*.
 
-Pour l'UML, la syntaxe complète d'un attribut est :
+Pour l'UML, la syntaxe complète d'un attribut est:
 
 **visibilité nom : type multiplicité = défaut {propriété}**
 
@@ -54,7 +54,9 @@ Voici des points importants:
 - De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, dans la @fig-MDD-jeu-de-risk, la classe `Pays` n'a pas un *attribut* `joueur:Joueur` (qui contrôle le Pays); elle a plutôt une *association* avec la classe `Joueur` et un verbe `contrôle`.
 
 ::: {.callout-warning appearance="simple"}
-Il est vrai que dans un langage de programmation comme Java, les associations doivent être les attributs dans les classes, car il s'agit des classes *logicielles*. Cependant, dans un modèle du domaine on évite des attributs si une association peut mieux décrire la relation. La relation relie visuellement les deux classes conceptuelles et elle est décrite avec un verbe.
+Il est vrai que dans un langage de programmation comme Java, les associations doivent être les attributs dans les classes, car il s'agit des classes *logicielles*.
+Cependant, dans un modèle du domaine on évite des attributs si une association peut mieux décrire la relation.
+La relation relie visuellement les deux classes conceptuelles et elle est décrite avec un verbe.
 :::
 
 ## Associations
@@ -275,7 +277,7 @@ Les classes d'association dans un MDD sont le sujet de la section A31.10/F26.10�
 Une classe d'association permet de traiter une association comme une classe et de la modéliser avec des attributs...
 :::
 
-Il pourrait être utile d'avoir une classe d'association dans un MDD :
+Il pourrait être utile d'avoir une classe d'association dans un MDD:
 
 - si un attribut est lié à une association;
 - si la durée de vie des instances de la classe d'association dépend de l'association;

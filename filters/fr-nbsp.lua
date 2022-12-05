@@ -25,8 +25,8 @@ local function space_high_punctuation_and_quotes(inlines)
             inlines[i].text = string.gsub(inlines[i].text, "«", "«" .. nbsp)
         end
         -- special cases where punctuation can follow
-        if inlines[i+1] and (inlines[i].t == 'Quoted' or inlines[i].t == 'Cite' or inlines[i].t == 'Link') 
-            and inlines[i+1].t == 'Str' 
+        if inlines[i+1] and (inlines[i].t == 'Quoted' or inlines[i].t == 'Cite' or inlines[i].t == 'Link' or inlines[i].t == 'Emph' or inlines[i].t == 'Strong' or inlines[i].t == 'Strikeout' or inlines[i].t == 'Code' or inlines[i].t == 'RawInline')
+            and inlines[i+1].t == 'Str'
             and inlines[i+1].text:match(ascii_punctuation_pattern) then
                 inlines[i+1].text = nbsp .. inlines[i+1].text
             -- skip the item we just spaced

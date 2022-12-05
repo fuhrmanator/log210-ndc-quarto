@@ -85,11 +85,11 @@ La [fabriqueREL](https://fabriquerel.org) (ressources éducatives libres) a sout
 Les conseils avec la dimension _Creative Commons_ de la licence du contenu ont été fort utiles.
 Nous remercions les membres du suivi du projet dans le cadre de ce travail pris en charge par la fabriqueREL de leur soutien:
 
-- Marianne Dubé, conseillère pédagogique à l'Université de Sherbrooke et coordonnatrice de la fabriqueREL ;
-- Mouna Moumene, bibliothécaire à l'École de technologie supérieure (ÉTS) ;
-- Marjolaine Lewis, conseillère pédagogique et technopédagogique à l'École de technologie supérieure (ÉTS) ;
-- Claude Potvin, conseiller en formation à l'Université Laval ;
-- Stéphane Roux, directeur général du service de soutien à la formation à l'Université de Sherbrooke ;
+- Marianne Dubé, conseillère pédagogique à l'Université de Sherbrooke et coordonnatrice de la fabriqueREL;
+- Mouna Moumene, bibliothécaire à l'École de technologie supérieure (ÉTS);
+- Marjolaine Lewis, conseillère pédagogique et technopédagogique à l'École de technologie supérieure (ÉTS);
+- Claude Potvin, conseiller en formation à l'Université Laval;
+- Stéphane Roux, directeur général du service de soutien à la formation à l'Université de Sherbrooke;
 - Serge Allary, vice-recteur adjoint aux études de l'Université de Sherbrooke.
 
 La fabriqueREL est également une vitrine de rayonnement importante pour les REL au Québec.
@@ -101,9 +101,9 @@ Leurs suggestions et leurs commentaires constructifs ont permis d'améliorer les
 
 Nous remercions les membres du comité de révision (2023) pour leurs rétroactions constructives:
 
-- à compléter, étudiant.e en génie logiciel à l'ÉTS ;
-- à compléter, étudiant.e en génie des technologies de l'information à l'ÉTS ;
-- Roberto Erick Lopez Herrejon, professeur au département de génie logiciel et des TI à l'ÉTS.
+- à compléter, étudiant.e en génie logiciel à l'ÉTS;
+- à compléter, étudiant.e en génie des technologies de l'information à l'ÉTS;
+- Roberto Erick Lopez-Herrejon, professeur au département de génie logiciel et des TI à l'ÉTS.
 
 Finalement, nous remercions "à déterminer", réviseur.e linguistique à "(à déterminer)", pour la révision du manuel.
 

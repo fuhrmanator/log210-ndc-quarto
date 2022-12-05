@@ -130,7 +130,7 @@ par exemple un *framework* comme Angular ou React pour développer un *front-end
 Notez que la complexité d'un algorithme peut parfois apporter des gains de performance.
 Mais le codage, le débogage et la maintenance d'une implémentation d'un algorithme complexe seront plus coûteux.
 - Un *patron de conception* peut être complexe, par exemple les patrons Visiteur, Décorateur, Médiateur, etc., des GoF [-@GoF1994].
-Un patron définit des rôles et parfois du code et des classes supplémentaires supplémentaires à créer.
+Un patron définit des rôles et parfois du code et des classes supplémentaires à créer.
 Le tout doit s'intégrer dans un design existant (qui a son propre niveau de complexité).
 - Un *environnement* peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l'environnement sans fil, des écrans tactiles de tailles différentes, de l'alimentation limitée, etc.
 
@@ -147,7 +147,7 @@ Exemple: un logiciel qui aide à faire des déclarations de revenus aura une com
 ### Complexité circonstancielle (provenant des choix de conception) {#sec-ComplexiteCirc}
 
 Les choix que font les ingénieur(e)s dans un projet peuvent amener de la complexité circonstancielle.
-En tant qu'ingénieur(e)s, nous avons un devoir de contrôler cette forme de complexité, par exemple en choisissant soigneusement un cadriciel Web ou d'architecture logicielle.
+En tant qu'ingénieur(e)s, nous avons un devoir de contrôler cette forme de complexité, par exemple en choisissant soigneusement un cadriciel Web ou une architecture logicielle.
 La complexité circonstancielle peut aussi être due à des contraintes imposées sur la conception, comme l'utilisation obligatoire d'une vieille base de données ou d'une bibliothèque logicielle héritée, d'un langage de programmation, etc.
 La complexité circonstancielle (aussi appelée accidentelle) peut être gérée avec des technologies, par exemple les débogueurs, les patrons de conception (un Adaptateur pour les bases de données différentes), etc.
 
@@ -194,12 +194,12 @@ La méthodologie d'analyse et de conception proposée dans ce manuel se base sur
 
 Voici les éléments importants documentés dans ce manuel (voir la @fig-SurvolMethodologie, qui est une adaptation de plusieurs figures de @craig_uml_2005) :
 
-- Il y a une spécification explicite des besoins (@sec-besoins) dans le modèle de cas d'utilisation ;
-- À partir de chaque cas d'utilisation (@sec-cu), il y a une conception de haut niveau (l'API du système à développer) documentée sous forme de diagramme de séquence système (DSS) (@sec-dss) ;
-- À partir de chaque DSS, on peut définir un ensemble de contrats d'opération (@sec-contrats), surtout pour les opérations complexes ;
-- À partir de l'ensemble des besoins, on construit un modèle du domaine (MDD) (@sec-mdd) ;
+- Il y a une spécification explicite des besoins (@sec-besoins) dans le modèle de cas d'utilisation;
+- À partir de chaque cas d'utilisation (@sec-cu), il y a une conception de haut niveau (l'API du système à développer) documentée sous forme de diagramme de séquence système (DSS) (@sec-dss);
+- À partir de chaque DSS, on peut définir un ensemble de contrats d'opération (@sec-contrats), surtout pour les opérations complexes;
+- À partir de l'ensemble des besoins, on construit un modèle du domaine (MDD) (@sec-mdd);
 - Pour faire une conception intuitive et facile à adapter, on propose un modèle de conception sous forme de plusieurs RDCU (@sec-rdcu) qui sont cohérentes avec le MDD (pour diminuer le décalage des représentations) et avec les contrats;
-- Pour implémenter les conceptions, on développe du code à partir des diagrammes dans le modèle de conception, ainsi que du code pour tester tout ça selon le développement piloté par les tests (@sec-tdd) ;
+- Pour implémenter les conceptions, on développe du code à partir des diagrammes dans le modèle de conception, ainsi que du code pour tester tout ça selon le développement piloté par les tests (@sec-tdd);
 - Pour gérer la dette technique (@sec-DetteTechnique) on fait du réusinage (@sec-Refactoring) au besoin;
 - Le tout se fait de manière évolutive, en itérations courtes selon le _Processus unifié_.
 
@@ -243,7 +243,7 @@ Le développement itératif et incrémental amène plusieurs avantages selon @cr
 
 Cependant, il y a des défis associés à ce genre de développement:
 
-- **Instabilité apparente au début** : Dans les itérations initiales, puisqu'on n'a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la "bonne voie".
+- **Instabilité apparente au début**: Dans les itérations initiales, puisqu'on n'a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la "bonne voie".
 La conséquence est que les évaluations et les rétroactions peuvent sembler rudes, et cela peut être déstabilisant pour des personnes qui ne sont pas familières avec le processus.
 La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la @fig-StabiliteDansLesIterations).
 - **Modifications des objectifs de l'itération en cours au besoin** : Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l'avons imaginé.
