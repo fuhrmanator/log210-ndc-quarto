@@ -27,7 +27,7 @@ Il y a trois stratégies pour identifier les classes conceptuelles:
 **Organisations liées à la transaction** : Quelles sont les organisations impliquées dans une transaction? | *Magasin*, *CompagnieAérienne*, *Bibliothèque*, *Université*
 **Lieu de la transaction, lieu du service**  | *Magasin*, *Aéroport*, *Avion*, *Siège*, *LocalCours*
 **Événements notables, à mémoriser**  | *Vente*, *Paiement*, *JeuDeMonopoly*, *Vol*
-**Objets physiques** :  Important surtout lorsqu'il s'agit d'un logiciel de contrôle d'équipements ou de simulation.  | *Article*, *Caisse*, *Plateau*, *Pion*, *Dé*, *Vélo*
+**Objets physiques**:  Important surtout lorsqu'il s'agit d'un logiciel de contrôle d'équipements ou de simulation.  | *Article*, *Caisse*, *Plateau*, *Pion*, *Dé*, *Vélo*
 **Description d'entités**: Voir section 9.13 pour plus d'informations. | *DescriptionProduit*, *DescriptionVol*, *Livre* (en opposition avec *Exemplaire*), *Cours* (en opposition avec *CoursGroupe*)
 **Catalogues**: Les descriptions se trouvent souvent dans des catalogues.  | *CatalogueProduits*, *CatalogueVols*, *CatalogueLivres*, *CatalogueCours*
 **Conteneurs**: Un conteneur peut contenir des objets physiques ou des informations.  | *Magasin*, *Rayonnage*, *Plateau*, *Avion*, *Bibliothèque*
@@ -322,9 +322,9 @@ Bien que la matière soit présentée plus tard dans le livre, ce sont des chose
 Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus haut:
 
 - Composition, par exemple la classe Continent qui groupe les Pays dans la @fig-MDD-jeu-de-risk. Larman propose d'utiliser la composition lorsque:
-  - la durée de vie du composant est limitée à celle du composite (lorsqu'un objet Continent est instancié, ça doit grouper des instances de Pays pour être cohérent), il existe une dépendance création-suppression de la partie avec le tout (ça ne fait pas de sens de supprimer un objet Pays d'une instance de Continent dans le jeu Risk) ;
-  - il existe un assemblage logique ou physique évident entre le tout et les parties (on ne peut construire un Continent sans les Pays) ;
-  - certaines propriétés du composite, comme son emplacement, s'étendent aux composants ;
+  - la durée de vie du composant est limitée à celle du composite (lorsqu'un objet Continent est instancié, ça doit grouper des instances de Pays pour être cohérent), il existe une dépendance création-suppression de la partie avec le tout (ça ne fait pas de sens de supprimer un objet Pays d'une instance de Continent dans le jeu Risk);
+  - il existe un assemblage logique ou physique évident entre le tout et les parties (on ne peut construire un Continent sans les Pays);
+  - certaines propriétés du composite, comme son emplacement, s'étendent aux composants;
   - les opérations que l'on peut appliquer au composite, telles que destruction, déplacement et enregistrement, se propagent aux composants.
 - Généralisation/spécialisation, voir le livre pour les exemples et les directives, notamment la règle des 100% (conformité à la définition) et la règle "est-un" (appartenance à l'ensemble).
 - Attribut dérivé, par exemple, `/nbPaysOccupés` dans la classe Joueur est un attribut dérivé de l'association entre Joueur et Pays (@fig-MDD-attribut-derive).
@@ -347,9 +347,9 @@ Par exemple, la version initiale du MDD (chapitre 9 \faBook<i class="fa-solid f
 Les classes conceptuelles modélisant la problématique de paiement par carte de crédit sont absentes dans le MDD initial.
 Plus tard (après plusieurs itérations, dans le chapitre sur le raffinement du MDD), on voit un MDD beaucoup plus riche qui reflète la modélisation des concepts reliés à des fonctionnalités comme les paiements par carte de crédit, les demandes d'autorisation de paiement, etc.
 
-### Un **modèle du domaine** est-il la même chose qu'un **modèle de données** ?{#mdd_donnees}
+### Un **modèle du domaine** est-il la même chose qu'un **modèle de données**? {#mdd_donnees}
 
-Voici la réponse de Craig Larman [-@craig_uml_2005] dans la section 9.2 \faBook<i class="fa-solid fa-book"></i> :
+Voici la réponse de Craig Larman [-@craig_uml_2005] dans la section 9.2 \faBook<i class="fa-solid fa-book"></i>:
 
 ::: {.callout}
 Un **modèle du domaine** n'est pas un **modèle de données** (qui représente par définition des objets persistants stockés quelque part).
