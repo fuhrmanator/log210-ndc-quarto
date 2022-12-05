@@ -1,24 +1,24 @@
 # Principes GRASP
 
-GRASP est un acronyme de l'expression anglaise "General Responsibility Assignment Software Patterns" c'est-à-dire les principes pour affecter les responsabilités logicielles dans les classes.
+GRASP est un acronyme de l'expression anglaise "General Responsibility Assignment Software Patterns", c'est-à-dire les principes pour affecter les responsabilités logicielles dans les classes.
 
 Une approche GRASP devrait amener un design vers la modularité et la maintenabilité.
 
-L'acronyme d'une expression vulgarisée pourrait être POMM: "Principes pour déterminer Où Mettre une Méthode".
+L'acronyme d'une expression vulgarisée pourrait être POMM: "Principes pour déterminer Où Mettre une Méthode. "
 
-En tant qu'ingénieur logiciel, vous devez décider souvent où placer une méthode (dans quelle classe) et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d'ingénierie favorisant la modularité.
+En tant qu'ingénieur(e) logiciel, vous devez décider souvent où placer une méthode (dans quelle classe), et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d'ingénierie favorisant la modularité.
 
-Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et des classes plus cohésives.
+Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et avec des classes plus cohésives.
 Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.
 
 ::: {.callout-tip appearance="minimal"}
 \faHatCowboySide<i class="fa-solid fa-hat-cowboy-side"></i>\ Avez-vous déjà une bonne expérience en programmation?
 Avez-vous l'habitude de coder rapidement des solutions qui fonctionnent?
 Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous.
-Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception et cela va vous ralentir au début (reflèxe du "hacking cowboy" peut-être?).
-Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui soit également facile à maintenir.
+Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception, et cela va vous ralentir au début (réflexe du "hacking cowboy" peut-être?).
+Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui est également facile à maintenir.
 C'est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes.
-Une fois que vous avez l'habitude à utiliser les GRASP, vous serez encore rapide avec votre développement, mais en plus votre design sera meilleur sur le plan de la maintenabilité et vous aurez plus de confiance dans vos choix.
+Une fois que vous aurez l'habitude d'utiliser les GRASP, vous serez encore rapide avec votre développement, mais, en plus, votre design sera meilleur sur le plan de la maintenabilité, et vous aurez plus de confiance dans vos choix.
 :::
 
 ## Spectre de la conception {#sec-SpectreDeLaConception}
@@ -61,30 +61,30 @@ hacking <-d[dashed]- Nh
 @enduml
 ```
 
-À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l'on nomme "Hacking cowboy".
+À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l'on nomme "Hacking Cowboy".
 C'est le cas lors d'un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement).
 Vous ne feriez pas un logiciel avec 10 patrons GoF ou les diagrammes UML pour réfléchir à votre architecture.
 Mais vous savez aussi que le code qui est produit lors d'un hackathon ne sera pas facile à maintenir.
 Le seul but est de faire du code qui marche pour montrer une idée intéressante.
 
 Au fait, dans certains contextes d'entreprise (par exemple une entreprise en démarrage qui a seulement six mois de financement), c'est une situation similaire.
-Si une solution de ["produit minimum viable" (MVP en anglais)](https://en.wikipedia.org/wiki/Minimum_viable_product)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>\ n'existe pas à la fin de la période de financement, l'entreprise n'existera plus, car il n'y aura pas une deuxième période de financement.
-Si la compagnie est financée pour une deuxième période, la conception du code pourrait avoir besoin de beaucoup de soins, car elle a été négligée.
+Si une solution de ["produit minimum viable" (MVP en anglais)](https://en.wikipedia.org/wiki/Minimum_viable_product)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>\ n'existe pas à la fin de la période de financement, l'entreprise n'existera plus, car il n'y aura pas une seconde période de financement.
+Si l'entreprise est financée pour une seconde période, la conception du code pourrait avoir besoin de beaucoup de soin, car elle a aura été négligée.
 Cette négligence à la conception (pour la maintenabilité) est aussi nommée la [dette technique](#sec-DetteTechnique).
 
 À l'autre extrémité du spectre, c'est beaucoup d'effort dépensé sur la conception, que l'on nomme "Cascade pure".
 Dans le cycle de vie en cascade, on met un temps fixe, par exemple plusieurs mois, à étudier la conception.
 Comme toute chose poussée à l'extrême, ce n'est pas idéal non plus.
 Dans son livre, @craig_uml_2005 explique en détail des problèmes posés par une approche en cascade.
-Dans certains domaines, par exemple les logiciels pour le contrôle d'avion ou des appareils médicaux, une approche en cascade est encore utilisée, en dépit des problèmes dus à l'approche.
-La sécurité et la robustesse des logiciels sont très importantes, alors on passe beaucoup de temps à vérifier et valider la conception.
-Puisque les exigences sont plus stables (et les développeurs ont *a priori* une meilleure compréhension du domaine), l'approche en cascade n'est pas si mal.
-Pourtant le coût pour produire des logiciels certifiés est énorme.
+Dans certains domaines, par exemple les logiciels pour le contrôle d'avions ou d'appareils médicaux, une approche en cascade est encore utilisée, en dépit des problèmes dus à l'approche.
+La sécurité et la robustesse des logiciels sont très importantes, alors on passe beaucoup de temps à vérifier et à valider la conception.
+Puisque les exigences sont plus stables (et les développeurs(euses) ont *a priori* une meilleure compréhension du domaine), l'approche en cascade n'est pas si mal.
+Pourtant, le coût pour produire des logiciels certifiés est énorme.
 
 Le spectre de la conception est très important pour le monde réel, parce qu’une ingénieure ou un ingénieur devrait pouvoir s'adapter selon les attentes de son travail.
 Le dogme sur "la bonne manière" de développer un logiciel est souvent sans contexte.
 C'est le contexte de l'entreprise pour laquelle vous travaillez qui peut déterminer combien d'effort à mettre sur la conception.
-Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l'extrémité "hacking cowboy" du spectre), même si on vous dit que c'est "agile".
+Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l'extrémité "hacking cowboy" du spectre), même si l'on vous dit que c'est "agile".
 <!-- Si vous négligez complètement la conception, vous pouvez peut-être produire du code qui fonctionne plus vite à court terme.
 Mais il faudra repayer la dette technique un jour.
 Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). -->
