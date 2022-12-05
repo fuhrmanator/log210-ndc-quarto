@@ -108,7 +108,7 @@ Mais elle permet aussi de faire des calculs concernant ce qui s'est passé dans 
 
 Cependant, si vous avez une boucle pour indiquer la possibilité de répéter une action (par exemple ajouter des produits dans un système d'inventaire) et que vous n'avez pas besoin de faire un calcul à la fin, alors une opération système pour terminer une telle boucle n'est pas nécessaire (surtout avec une application Web).
 
-### Comment faire si un cas d'utilisation a des *scénarios alternatifs* ?
+### Comment faire si un cas d'utilisation a des *scénarios alternatifs*?
 
 ::: {.callout}
 Fait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs `opt` et `alt`) pour montrer des flots différents dans le même DSS?
