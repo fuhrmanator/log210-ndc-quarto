@@ -143,17 +143,17 @@ class Bird {
 
 Appliquez GRASP Polymorphisme pour le code suivant:
 
-```java
+```javascript
 get plumage() {
     switch (this.type) {
         case 'EuropeanSwallow':
             return "average";
         
         case 'AfricanSwallow':
-            return (this.numberOfCoconuts &gt; 2) ? "tired" : "average";
+            return (this.numberOfCoconuts > 2) ? "tired" : "average";
         
         case 'NorwegianBlueParrot':
-            return (this.voltage &gt; 100) ? "scorched" : "beautiful";
+            return (this.voltage > 100) ? "scorched" : "beautiful";
         
         default:
             return "unknown";
