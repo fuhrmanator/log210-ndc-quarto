@@ -53,7 +53,7 @@ Connexion -u-> Conversation : connecté
 Faire un diagramme d'états en UML modélisant les états d'un téléphone intelligent.
 Considérer une dynamique simplifiée, avec seulement trois états correspondant aux images suivantes:
 
-![](images/Trois%C3%89tasT%C3%A9l%C3%A9phone.png)
+![](images/Trois%C3%89tatsT%C3%A9l%C3%A9phone.png)
 
 Pour simplifier encore le modèle, le bouton en haut à droite sert pour
 éteindre et pour allumer l'écran. Le téléphone est initialement éteint.
