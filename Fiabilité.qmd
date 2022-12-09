@@ -1,6 +1,6 @@
 # Fiabilité
 
-Le chapitre A36/F30\ \faBook<i class="fa-solid fa-book"></i>\ présente le problème de la fiabilité pour le système NextGen POS.
+Le chapitre A36/F30\ {{< fa solid book >}} présente le problème de la fiabilité pour le système NextGen POS.
 C'est le basculement sur un service local en cas d'échec d'un service distant.
 
 ![Comment tolérer une panne de connexion ou de service?](images/PanneConnexionService.svg "Comment tolérer une panne de connexion ou de service?"){width=70% #fig-PanneConnexionService}
