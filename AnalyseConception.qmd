@@ -21,7 +21,7 @@ L'**analyse** met l'accent sur une investigation du problème et des besoins plu
 
 La **conception** sous-entend l'élaboration d'une solution conceptuelle répondant aux besoins plutôt que la mise en œuvre de cette solution.
 
-<!-- Pour plus de détails, vous pouvez consulter le chapitre 1 \faBook<i class="fa-solid fa-book"></i>. -->
+<!-- Pour plus de détails, vous pouvez consulter le chapitre 1\ {{< fa solid book >}}. -->
 
 ```{.plantuml #fig-mddDes caption="Diagramme de *classes conceptuelles* décrivant le *problème* d'un jeu de dés [adapté du Jeu de dés de @craig_uml_2005, chap. 1]. Ceci est élaboré lors d'une activité d'analyse."}
 @startuml
@@ -102,7 +102,7 @@ La différence entre la représentation d'un problème et la représentation de 
 C'est un terme complexe pour un principe très intuitif.
 Méfiez-vous des classes importantes dont leur nom est difficile à tracer au problème.
 Elles vont rendre votre solution plus difficile à comprendre.
-Pour des explications de Larman, lisez la section 9.3 \faBook<i class="fa-solid fa-book"></i>.
+Pour des explications de Larman, lisez la section 9.3\ {{< fa solid book >}}.
 
 L'exemple du jeu est trivial, puisque le problème est relativement simple.
 Réduire le décalage des représentations est un principe très important surtout lorsque le problème à résoudre est complexe.

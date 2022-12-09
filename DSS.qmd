@@ -1,7 +1,7 @@
 # Diagrammes de séquence système (DSS) {#sec-dss}
 
 Un diagramme de séquence système (DSS) est un diagramme UML (diagramme de séquence) limité à un acteur (provenant du scénario d'un cas d'utilisation) et le Système.
-Les DSS sont expliqués en détail dans le chapitre 10\ \faBook<i class="fa-solid fa-book"></i>, mais voici des points importants pour la méthodologie de ce manuel:
+Les DSS sont expliqués en détail dans le chapitre 10\ {{< fa solid book >}}, mais voici des points importants pour la méthodologie de ce manuel:
 
 - Le DSS a toujours un titre.
 - L'acteur est indiqué dans la notation par un bonhomme et est représenté comme une *instance* de la classe du bonhomme, comme `:Joueur` dans la @fig-dssattaquerunpays (le ":" signifie une instance).

@@ -8,16 +8,16 @@ C'est le basculement sur un service local en cas d'échec d'un service distant.
 
 Voici les points importants:
 
-- Définitions des termes, A36.3/F30.3\ \faBook<i class="fa-solid fa-book"></i>:
+- Définitions des termes, A36.3/F30.3\ {{< fa solid book >}}:
   - **Faute.** La cause première du problème
   - **Erreur.** La manifestation de la faute lors de l'exécution. Les erreurs sont détectées (ou non).
   - **Échec.** Déni de service causé par une erreur.
 - Les solutions proposées par l'architecte système et documentées par Larman impliquent les concepts suivants:
-  - Mise en cache locale d'informations recherchées au service distant, A36.2/F30.2\ \faBook<i class="fa-solid fa-book"></i>
-  - Utilisation d'*Adaptateur \[GoF\]* pour réaliser le service redondant (lecture d'information), A36.2/F30.2\ \faBook<i class="fa-solid fa-book"></i>
-  - Réalisation d'un scénario dans le cas d'utilisation pour supporter l'échec de tout (rien ne va plus) en permettant au Caissier de saisir l'information (description et prix), A36.3/F30.3\ \faBook<i class="fa-solid fa-book"></i>.
+  - Mise en cache locale d'informations recherchées au service distant, A36.2/F30.2\ {{< fa solid book >}}
+  - Utilisation d'*Adaptateur \[GoF\]* pour réaliser le service redondant (lecture d'information), A36.2/F30.2\ {{< fa solid book >}}
+  - Réalisation d'un scénario dans le cas d'utilisation pour supporter l'échec de tout (rien ne va plus) en permettant au Caissier de saisir l'information (description et prix), A36.3/F30.3\ {{< fa solid book >}}.
   Dans ce cas, il faut bien gérer les exceptions.
-  - Utilisation de *Procuration (Proxy) de redirection \[GoF\]* pour basculer sur un service local en cas de panne (écriture d'information), A36.4/F30.4\ \faBook<i class="fa-solid fa-book"></i>
+  - Utilisation de *Procuration (Proxy) de redirection \[GoF\]* pour basculer sur un service local en cas de panne (écriture d'information), A36.4/F30.4\ {{< fa solid book >}}
 
 ::: {.callout-important}
 Faire une conception pour la fiabilité nécessite de l'expérience (ou l'utilisation des patterns). Un bon livre est celui de @hanmer_patterns_2007.

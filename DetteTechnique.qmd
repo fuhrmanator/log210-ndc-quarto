@@ -1,6 +1,6 @@
 # Dette technique {#sec-DetteTechnique}
 
-Ce chapitre contient des informations sur le concept de la [dette technique](https://fr.wikipedia.org/wiki/Dette_technique)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>, qui n'est pas un sujet abordé explicitement par @craig_uml_2005.
+Ce chapitre contient des informations sur le concept de la [dette technique](https://fr.wikipedia.org/wiki/Dette_technique)\ {{< fa brands wikipedia-w >}}, qui n'est pas un sujet abordé explicitement par @craig_uml_2005.
 
 Pour rajouter une nouvelle fonctionnalité à un système, les développeurs ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le "hacking cowboy" sur le [Spectre de la conception](#sec-SpectreDeLaConception)), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur.
 L'autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir.

@@ -12,7 +12,7 @@ Un contrat d'opération permet de spécifier tous les changements dans le MDD qu
 
 ## Les contrats en bref
 
-Les contrats d'opération sont le sujet du chapitre 11\ \faBook<i class="fa-solid fa-book"></i>\ [-@craig_uml_2005].
+Les contrats d'opération sont le sujet du chapitre 11\ {{< fa solid book >}}\ [-@craig_uml_2005].
 Voici les points importants pour la méthodologie enseignée dans le présent manuel:
 
 - Un contrat d'opération correspond à une opération système provenant d'un DSS.
