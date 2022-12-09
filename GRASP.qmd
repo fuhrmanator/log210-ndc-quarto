@@ -12,7 +12,7 @@ Alors, les GRASP sont les directives qui vous aident à prendre des décisions d
 Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.
 
 ::: {.callout-tip appearance="minimal"}
-\ {{< fa solid hat-cowboy-side >}} Avez-vous déjà une bonne expérience en programmation?
+{{< fa solid hat-cowboy-side >}} Avez-vous déjà une bonne expérience en programmation?
 Avez-vous l'habitude de coder rapidement des solutions qui fonctionnent?
 Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous.
 Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception et cela va vous ralentir au début (reflèxe du "hacking cowboy" peut-être?).
