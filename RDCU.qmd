@@ -125,15 +125,14 @@ end loop
 
 Dans tous les cas, si un message est envoyé à un objet, ce dernier doit être *visible* à l'objet qui lui envoie le message.
 Régler les problèmes de visibilité nécessite de la créativité.
-Il est difficile à enseigner cette démarche, mais les points suivants peuvent aider:
+Il est difficile d'enseigner cette démarche, mais les points suivants peuvent aider:
 
-- Pour un objet racine (par exemple `Université`) il peut s'agir d'un objet Singleton, qui aura une visibilité globale.
-C'est-à-dire que n'importe quel objet pourrait lui envoyer un message.
+- Pour un objet racine (par exemple `Université`), il peut s'agir d'un objet Singleton, qui aura une visibilité globale, c'est-à-dire que n'importe quel objet pourrait lui envoyer un message.
 Cependant, les objets Singleton posent des problèmes de conception, notamment pour les tests.
 Il vaut mieux éviter ce choix, si possible.  
-Voir [cette réponse sur stackoverflow](https://stackoverflow.com/a/2085988/1168342)\ \faStackOverflow<i class="fa-brands fa-stack-overflow"></i>.
+Voir [cette réponse sur Stack Overflow](https://stackoverflow.com/a/2085988/1168342)\ \faStackOverflow<i class="fa-brands fa-stack-overflow"></i>.
 - Sinon, il faudra que l'objet émetteur ait une référence de l'objet récepteur.
-Par exemple dans la @fig-RDCU_Visibilite1, la référence à *b* peut être:
+Par exemple, dans la @fig-RDCU_Visibilite1, la référence à *b* peut être:
   - stockée comme un attribut de *a*,
   - passée comme un argument dans un message antérieur, ou
   - affectée dans une variable locale de la méthode où `unMessage()` sera envoyé.
@@ -179,17 +178,17 @@ R -> v : saisirClientPourRemise(c:Client)
 ```
 La @sec-UtilisationMap explique comment implémenter la transformation avec un tableau associatif.
 
-## Utilisation de tableau associatif (`Map<clé, objet>`) {#sec-UtilisationMap}
+## Utilisation d'un tableau associatif (`Map<clé, objet>`) {#sec-UtilisationMap}
 
-Pour *transformer un ID en objets*, il est pratique d'utiliser un [tableau associatif (aussi appelé dictionnaire ou map en anglais)](https://fr.wikipedia.org/wiki/Tableau_associatif)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
+Pour *transformer un ID en objets*, il est pratique d'utiliser un [tableau associatif (aussi appelé dictionnaire ou *map* en anglais)](https://fr.wikipedia.org/wiki/Tableau_associatif)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
 L'exemple du livre de @craig_uml_2005 concerne le problème de repérer une `Case` Monopoly à partir de son nom (`String`).
 C'est la figure A17.7/F17.7\ \faBook<i class="fa-solid fa-book"></i>. 
 
-Notez que les exemples de @craig_uml_2005 ne montrent qu'un seul *type* dans le tableau associatif, par exemple `Map<Case>`, tandis que normalement il faut spécifier aussi le type de la clé, par exemple `Map<String, Case>`.
+Notez que les exemples de @craig_uml_2005 ne montrent qu'un seul *type* dans le tableau associatif, par exemple `Map<Case>`, tandis que, normalement, il faut spécifier aussi le type de la clé, par exemple `Map<String, Case>`.
 
 Un tableau associatif fournit une méthode `get` ou `find` pour rechercher un objet à partir de sa clé (son identifiant). La @fig-Map_Case_Monopoly en est un exemple.
 
-```{.plantuml #fig-Map_Case_Monopoly  caption="Exemple de l'utilisation de tableau associatif pour trouver une Case Monopoly à partir de son nom. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLBBQjn04BmB_0-DBsj3OhpN9J4s9WI_G4IRvE9BPzIM1erwvEcUEFuZvplsnz8Z6wBai21QYAgfggdMkIWcpMEePF0yOS8HH9y3sKpU5UHW0Vr0DtGfPcvT33619cGnY5WFgXLexmNiGUYHswVaLOdX8RA2P_ZkkOrFOiI_WYqzO0vQA8mZmKtoKivSRI-Dj-r92ABsb0H2Z0DqYN0MQxvzXgCH1mkQ4vapFQ_ixTak50ArvfhWulOMlZQVlZGBUrYV7Y-lz7y2mQuCtf_pYWUuZZanXhsyNuDheN79JxgNLvDLbMGPR5cXfaoLEBIzh4_MortHOoPsT4TIWby4tp4uMmUboXZgdP_GwZ_Sr06LC1y22jJ_OkuEftlUsFpGsDQvUtU9GcSpTQpUdq4D6n3u21rfGOuuZiSLHoL8lklLq3Trm2xjNgn0ZLd9TaPop-M802bCKMJtqX9aXjaIVv834mCNHol1XTtlasfLmvjboVNgkftbPg5gXiS2ls9p6liiQ7LEtDe_-mS0)" }
+```{.plantuml #fig-Map_Case_Monopoly  caption="Exemple de l'utilisation d'un tableau associatif pour trouver une Case Monopoly à partir de son nom. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLBBQjn04BmB_0-DBsj3OhpN9J4s9WI_G4IRvE9BPzIM1erwvEcUEFuZvplsnz8Z6wBai21QYAgfggdMkIWcpMEePF0yOS8HH9y3sKpU5UHW0Vr0DtGfPcvT33619cGnY5WFgXLexmNiGUYHswVaLOdX8RA2P_ZkkOrFOiI_WYqzO0vQA8mZmKtoKivSRI-Dj-r92ABsb0H2Z0DqYN0MQxvzXgCH1mkQ4vapFQ_ixTak50ArvfhWulOMlZQVlZGBUrYV7Y-lz7y2mQuCtf_pYWUuZZanXhsyNuDheN79JxgNLvDLbMGPR5cXfaoLEBIzh4_MortHOoPsT4TIWby4tp4uMmUboXZgdP_GwZ_Sr06LC1y22jJ_OkuEftlUsFpGsDQvUtU9GcSpTQpUdq4D6n3u21rfGOuuZiSLHoL8lklLq3Trm2xjNgn0ZLd9TaPop-M802bCKMJtqX9aXjaIVv834mCNHol1XTtlasfLmvjboVNgkftbPg5gXiS2ls9p6liiQ7LEtDe_-mS0)" }
 @startuml
 !include ecriture.pumlinclude
 scale 1.1
@@ -214,8 +213,8 @@ Voici quelques points importants:
 
 - Le lancement d'une application dépend du langage de programmation et du système d'exploitation.
 - À chaque nouvelle RDCU, on doit possiblement actualiser la RDCU "Démarrer" pour tenir compte des hypothèses faites dans la dernière RDCU. Elle est assez "instable" pour cette raison. Larman recommande de faire sa conception en dernier lieu.
-- Il faut choisir l'objet du domaine initial, qui est souvent l'objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses "enfants" directs, puis chaque enfant aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu de Risk à la @fig-MDD-jeu-de-risk, `JeuRisk` pourrait être l'objet racine, qui devra créer l'objet `PlateauRisk` et les cinq instances de `Dé`. L'objet `PlateauRisk`, lors de son initialisation, pourra instancier les 42 objets `Pays` et les six objets `Continent`, en passant à chaque `Continent` leurs objets `Pays` lors de son initialisation. Si `PlateauRisk` fournit une méthode `getPays(nom)` qui dépend d'un tableau associatif selon [Transformer identifiants en objets](#sec-TransformerIDenObjets), alors c'est dans l'initialisation de cette classe où l'instance de `Map<String,Pays>` sera créée.
-- Selon l'application, les objets peuvent être chargés en mémoire à partir d'un système de persistance, par exemple une base de données ou un fichier. Pour l'exemple de Risk, `PlateauRisk` pourrait charger, à partir d'un fichier JSON, des données pour initialiser toutes les instances de `Pays`. Pour une application d'inscription de cours à l'université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d'une base de données. Une base de données amène un lot d'avantages et d'inconvénients, et elle n'est pas toujours nécessaire. Dans la méthodologie de ce manuel, on n'aborde pas le problème de base de données (c'est le sujet d'un autre cours).
+- Il faut choisir l'objet du domaine initial, qui est souvent l'objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses "enfants" directs, puis chaque "enfant" aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu Risk à la @fig-MDD-jeu-de-risk, `JeuRisk` pourrait être l'objet racine, qui devra créer l'objet `PlateauRisk` et les cinq instances de `Dé`. L'objet `PlateauRisk`, lors de son initialisation, pourra instancier les 42 objets `Pays` et les six objets `Continent`, en passant à chaque `Continent` ses objets `Pays` lors de son initialisation. Si `PlateauRisk` fournit une méthode `getPays(nom)` qui dépend d'un tableau associatif selon [Transformer identifiants en objets](#sec-TransformerIDenObjets), alors c'est dans l'initialisation de cette classe que l'instance de `Map<String,Pays>` sera créée.
+- Selon l'application, les objets peuvent être chargés en mémoire à partir d'un système de persistance, par exemple une base de données ou un fichier. Pour l'exemple de Risk, `PlateauRisk` pourrait charger, à partir d'un fichier JSON, des données pour initialiser toutes les instances de `Pays`. Pour une application d'inscription de cours à l'université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d'une base de données. Une base de données amène un lot d'avantages et d'inconvénients, et elle n'est pas toujours nécessaire. Dans la méthodologie de ce manuel, on n'aborde pas le problème des bases de données (c'est le sujet d'un autre cours).
 
 ```{.plantuml #fig-DemarrerRisk  caption="Exemple de l'initialisation partielle du jeu de Risk. [(PlantUML)](http://www.plantuml.com/plantuml/uml/ZLLDJzj04BrRuZ-Ck2H88Ig7NYoAG6bLGQ4WGji3uR3i3lR6zknsTqrBVr7pE_B7EdPYnvYF8aKRP-VDcpTlHiwX3yA5iiWZdscomea2V7Z8aK-dPHNPweHkXSmIPqfIqkJ6GN22F8UGmbOqW91g3_mHa0fIlvmE0Gdk30NG13yqAVFBCt13gF1Eb7ce82GAX2zE-ohd-6h2kAiKFO89AJeFkJ4P90v5JJRz_Xc6XSXOQEcGA-F3WByrSKDvZeghEZWwFOLlqq-Nqqvvs7ktqssfhy2Bf3heTPt7bC69AHs9_5NSxqmgc4gdRNWLTu5ibVDTOLqBWokHqwNWmUoDzxh3mfybaiGpz9Noermd19BdWIvYHD1IMy7-RyVdjtCCPqBJDWWFfWnUA-nXJh2yr3wh4VC-mSVbeWwetlr5BWAAJQBj9qwuIqsigGxBnr4RNuW7lqhiHSw4dL7Cv_wKbv6IqOmgx44DBY9PxG9MEjVDmExkmG7_XXXMiOWC0vnEqX33kZT07o0VcCeDS4Aoi8XNouBUVzzGgeX9QZB5N6gvyDVw1ZuyOZNtwBZMICN0gc7YbWkEbMv6JI6HkELVNYRsBK9IrGBRfW9xr9ImVRqDitN_fUvOtp0NaLqJ5ynRUVYSSEj6HOyzxhAr5JhkrzxNx8tePgx-w1vb5RvcbsOaK-4IT9CduSuyE7soWa6El5E6QBb0FoCrAFcLeMMgENGoFV_AxvLDeMPKJqkFlVw3ZGcoDK6svWwVaQjlncIA4Op7uvt7xiWtkTEskD8rtt--Xkthiwq-MmsfdT3mvVph-OjQxPkqrWDOJQ_Q3A7KqEwiB-JcejtKzk6Gd_X_u1y0)" }
 @startuml
