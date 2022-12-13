@@ -68,7 +68,7 @@ Duplicated Code | Extract Function, Slide Statements, Pull Up Method
 Long Function | Extract Function, Replace Temp with Query, Introduce Parameter Object, Preserve Whole Object, Replace Function with Command, Decompose Conditional, Replace Conditional with Polymorphism, Split Loop
 Long Parameter List | Replace Parameter with Query, Preserve Whole Object, Introduce Parameter Object, Remove Flag Argument, Combine Functions into Class
 Global Data | Encapsulate Variable
-Mutable Data | Encapsulate Variable, Split Variable, Slide Statements, Extract Function, Separate Query from Modifier, Remove Setting Method, Replace Derived Variable with Query, Use Combine Functions into Class, Combine functions into Transform, Change Reference to Value
+Mutable Data | Encapsulate Variable, Split Variable, Slide Statements, Extract Function, Separate Query from Modifier, Remove Setting Method, Replace Derived Variable with Query, Use Combine Functions into Class, Combine Functions into Transform, Change Reference to Value
 Divergent Change | Split Phase, Move Function, Extract Function, Extract Class
 Shotgun Surgery | Move Function, Move Field, Combine Functions into Class, Combine Functions into Transform, Split Phase, Inline Function, Inline Class
 Feature Envy | Move Function, Extract Function
@@ -90,16 +90,16 @@ Comments | Extract Function, Change Function Declaration, Introduce Assertion
 
 ## Automatisation du réusinage par les IDE
 
-À la **section F19.2/A22.2** du livre de @craig_uml_2005, le sujet de réusinage est abordé.
+À la **section F19.2/A22.2** du livre de @craig_uml_2005, le sujet du réusinage est abordé.
 Il y a plusieurs exemples de base détaillés qui sont automatisés par les IDE dominants tels que Eclipse, IntelliJ IDEA, WebStorm, JetBrains PyCharm, Visual Studio Code, etc.
-Il se peut que dans un avenir proche le réusinage (l'amélioration du design) devienne une activité réalisée par des algorithmes d'intelligence artificielle.
+Il se peut que, dans un avenir proche, le réusinage (l'amélioration du design) devienne une activité réalisée par des algorithmes d'intelligence artificielle.
 
 Pour plus d'activités de réusinage, il y a le catalogue du site [refactoring.com](https://refactoring.com/catalog/).
 
-Voir [cette page web pour savoir comment les activités de réusinage sont faites dans Visual Studio Code](https://code.visualstudio.com/docs/editor/refactoring). D'autres automatisations sont implémentées par des extensions.
+Voir [cette page Web pour savoir comment les activités de réusinage sont faites dans Visual Studio Code](https://code.visualstudio.com/docs/editor/refactoring). D'autres automatisations sont implémentées par des extensions.
 
 ## Impropriété
 
-Si quelqu'un dit que son code est cassé pendant plusieurs jours parce qu'il fait du réusinage, ce n'est pas la bonne utilisation du terme [selon Martin Fowler](https://martinfowler.com/bliki/RefactoringMalapropism.html). Il s'agit de la *restructuration* dans ce cas. 
+Si quelqu'un dit que son code est cassé pendant plusieurs jours parce qu'il fait du réusinage, ce n'est pas la bonne utilisation du terme [selon Martin Fowler](https://martinfowler.com/bliki/RefactoringMalapropism.html). Il s'agit de *restructuration* dans ce cas. 
 
 Le réusinage est basé sur les petites transformations qui ne changent pas le comportement du logiciel. 
