@@ -4,7 +4,11 @@ Un contrat d'opération est un document décrivant ce qui est arrivé après l'e
 
 Le MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente), mais aussi des *instances* de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S'il y a eu 72 clients(es) qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque client(e).
 
-Dans la @fig-ContratExempleCreerNouvelleVente, l'opération système `créerNouvelleVente()` provient d'un diagramme de séquence système lié au cas d'utilisation *Traiter Vente*. Elle correspond au moment où le(a) caissier(e) démarre une nouvelle vente pour un(e) client(e). Avant l'exécution de cette opération, l'instance de la classe Vente indiquée dans le modèle du domaine n'existe pas. Cependant, après l'exécution de l'opération système, l'instance de Vente devrait exister. Le contrat d'opération spécifie ce fait dans une postcondition (avec la voix passive en français): "une instance *v* de Vente a été créée".
+Dans la @fig-ContratExempleCreerNouvelleVente, l'opération système `créerNouvelleVente()` provient d'un diagramme de séquence système lié au cas d'utilisation *Traiter Vente*.
+Elle correspond au moment où le(a) caissier(e) démarre une nouvelle vente pour un(e) client(e).
+Avant l'exécution de cette opération, l'instance de la classe Vente indiquée dans le modèle du domaine n'existe pas.
+Cependant, après l'exécution de l'opération système, l'instance de Vente devrait exister.
+Le contrat d'opération spécifie ce fait dans une postcondition (avec la voix passive au passé composé en français): "une instance *v* de Vente a été créée".
 
 Un contrat d'opération permet de spécifier tous les changements dans le MDD qui doivent avoir lieu lors de l'opération système. Les postconditions du contrat saisissent l'évolution du MDD.
 
@@ -34,28 +38,28 @@ Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du 
 
 ### Attaquer un pays {.unnumbered .unlisted}
 
-#### Opération: `démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)` {.unnumbered .unlisted}.
+#### Opération: `démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)` {.unnumbered .unlisted}
 
-#### Postconditions {.unnumbered .unlisted} :
+#### Postconditions: {.unnumbered .unlisted}
 
 - Une nouvelle instance *a* de Attaque a été créée.
-- *a* a été associée au Pays, sur la base de correspondance avec paysAttaquant.
-- *a* a été associée au Pays, sur la base de correspondance avec paysDéfenseur.
+- *a* a été associée au Pays correspondant à paysAttaquant.
+- *a* a été associée au Pays correspondant à paysDéfenseur.
 
-#### Opération: `annoncerAttaque(nbRégimentsAttaquant:int)` {.unnumbered .unlisted}.
+#### Opération: `annoncerAttaque(nbRégimentsAttaquant:int)` {.unnumbered .unlisted}
 
-#### Postcondition {.unnumbered .unlisted}:
+#### Postcondition: {.unnumbered .unlisted}
 
-- a.nbAttaquant est devenue nbRégimentsAttaquant.
+- a.nbAttaquant est devenu nbRégimentsAttaquant.
 
-#### Opération: `annoncerDéfense(nbRégimentsDéfendant:int)` {.unnumbered .unlisted}.
+#### Opération: `annoncerDéfense(nbRégimentsDéfendant:int)` {.unnumbered .unlisted}
 
-#### Postconditions {.unnumbered .unlisted}:
+#### Postconditions: {.unnumbered .unlisted}
 
-- a.nbDéfendant est devenue nbRégimentsDéfendant.
+- a.nbDéfendant est devenu nbRégimentsDéfendant.
 - L'attribut valeur des d1 à d5 est devenu un nombre entier aléatoire entre 1 et 6.
-- Occupation.nbRégiments est ajustée selon le résultat des valeurs, sur la base de correspondance avec paysAttaquant.
-- Occupation.nbRégiments est ajustée selon le résultat des valeurs, sur la base de correspondance avec paysDéfendant.
+- Occupation.nbRégiments est ajusté selon le résultat des valeurs correspondant à paysAttaquant.
+- Occupation.nbRégiments est ajusté selon le résultat des valeurs correspondant à paysDéfenseur.
 
 <!-- Draw.io svg contient du texte en SVG qui pose problème. Alors j'exporte manuellement une version ayant du bon texte "convert labels to SVG" -->
 ![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets).](images/MDD-Risk-contrats_export.svg){#fig-MDD-risk-objets}

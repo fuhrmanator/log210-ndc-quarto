@@ -2,7 +2,8 @@
 
 Ce chapitre contient des informations sur le concept de la [dette technique](https://fr.wikipedia.org/wiki/Dette_technique)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>, qui n'est pas un sujet abordé explicitement par @craig_uml_2005.
 
-Pour ajouter une nouvelle fonctionnalité à un système, les développeurs(euses) ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le "hacking cowboy" sur le [Spectre de la conception](#sec-SpectreDeLaConception)), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur.
+Pour ajouter une nouvelle fonctionnalité à un système, les développeurs(euses) ont souvent un choix entre deux façons de procéder. 
+La première est facile à mettre en place (le "hacking cowboy" sur le [Spectre de la conception](#sec-SpectreDeLaConception)), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur.
 L'autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir.
 Comment prendre la décision?
 La *dette technique* est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.
@@ -70,7 +71,7 @@ La dette peut être classifiée dans un quadrant comme dans le @tbl-DetteQuadran
 **Dette** | \cellcolor{red!15}**Imprudente** | \cellcolor{green!15}**Prudente**
 :--|:----------|:----------
 Délibérée | \cellcolor{red!15}"*On n'a pas le temps pour la conception!*" \newline Cette forme de dette est rarement rentable.  |  \cellcolor{green!15}"*Il faut livrer maintenant puis en assumer les conséquences.*" \newline Exemple: La dette est due à une partie limitée du code.
-Involontaire | \cellcolor{red!15}"*C'est quoi, la séparation en couches?*" \newline Il s'agit de l'ignorance de bonnes pratiques. | \cellcolor{green!15}"*Maintenant on sait comment, on aurait dû le faire.*" \newline C'est tenter une solution malgré une compréhension limitée du problème.
+Involontaire | \cellcolor{red!15}"*C'est quoi, la séparation en couches?*" \newline Il s'agit de l'ignorance de bonnes pratiques. | \cellcolor{green!15}"*Maintenant, nous savons comment nous aurions dû le faire.*" \newline C'est tenter une solution malgré une compréhension limitée du problème.
 
 
 ## Résumé
