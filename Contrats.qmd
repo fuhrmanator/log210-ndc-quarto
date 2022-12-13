@@ -58,7 +58,7 @@ Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du 
 - Occupation.nbRégiments est ajustée selon le résultat des valeurs, sur la base de correspondance avec paysDéfendant.
 
 <!-- Draw.io svg contient du texte en SVG qui pose problème. Alors j'exporte manuellement une version ayant du bon texte "convert labels to SVG" -->
-![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets)](images/MDD-Risk-contrats_export.svg){#fig-MDD-risk-objets}
+![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets).](images/MDD-Risk-contrats_export.svg){#fig-MDD-risk-objets}
 
 ## Feuille de référence
 
@@ -67,30 +67,29 @@ Pour faire des contrats, voici une démarche générale:
 1. Faire un contrat pour chaque opération système.
 1. Porter une attention à sa signature (les arguments et leur type).
 1. Rappeler les formes de postconditions:
-   a) créer/supprimer instance;
-   a) former/briser association;
+   a) créer/supprimer instances;
+   a) former/briser associations;
    a) modifier attributs.
 1. Utiliser *le vocabulaire du modèle du domaine* dans les postconditions.
 Ça veut dire qu'il faut parler d'instances de classes conceptuelles, de leurs attributs et des associations entre ces classes.
 1. Ne pas créer une instance de classe qui existe déjà, par exemple un produit (connu) dans un magasin, un acteur (connu) qui se connecte au système, ou (dans l'exemple de Risk) un Pays (voir la partie inférieure de la @fig-MDD-risk-objets).
-1. Ne rien oublier. Marquer le MDD ou dessiner un diagramme d'objets, comme à la partie basse de la @fig-MDD-risk-objets si nécessaire.
+1. Ne rien oublier. Marquer le MDD ou dessiner un diagramme d'objets, comme à la partie inférieure de la @fig-MDD-risk-objets si nécessaire.
 
 ## Exercices
 
 ::: {#exr-contrat_Terminer_attaque}
 ### terminerAttaque
 
-Rédiger le contrat d'opération pour `terminerAttaque()`.
-Il faut considérer le cas où une attaque a réussi.
-C'est-à-dire le `paysDéfenseur` change de Joueur (celui du `paysAttaquant`).
-Suivez les exemples de contrat d'opération à la @sec-contrat_exemple.
+Rédigez le contrat d'opération pour `terminerAttaque()`.
+Il faut considérer le cas où une attaque a réussi, c'est-à-dire que le `paysDéfenseur` change de Joueur (celui du `paysAttaquant`).
+Suivez les exemples de contrats d'opération à la @sec-contrat_exemple.
 :::
 
 ::: {#exr-contrats-Traiter-vente}
 
 ### Contrats d'opération pour Traiter une vente
 
-Rédigez **un contrat d'opération pour chacune des opérations système** dans le DSS (et qui soit cohérent avec le MDD) dans la @sec-DSS_traiter_vente. 
-Suivez les exemples de contrat d'opération à la @sec-contrat_exemple.
+Rédigez **un contrat d'opération pour chacune des opérations système** dans le DSS (et qui est cohérent avec le MDD) de la @sec-DSS_traiter_vente. 
+Suivez les exemples de contrats d'opération à la @sec-contrat_exemple.
 
 :::

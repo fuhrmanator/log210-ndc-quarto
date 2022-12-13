@@ -5,35 +5,35 @@ Voici les points importants pour la méthodologie:
 
 - Une RDCU est une synthèse des informations spécifiées dans le MDD, le DSS et les contrats d'opération.
 Elle sert à esquisser une solution (qui n'est pas encore codée) afin de rendre plus explicite l'activité impliquant des choix de conception.
-Si vous n'avez pas bien compris les autres éléments (MDD, DSS, etc.), il est difficile de réussir les RDCU.
-Il est normal de ne pas tout comprendre au début, alors posez les questions si vous ne comprenez pas.
+Si vous n'avez pas bien compris les autres éléments (MDD, DSS, etc.), il vous sera difficile de réussir les RDCU.
+Il est normal de ne pas tout comprendre au début, alors posez des questions si vous ne comprenez pas.
 - De manière générale, toute bonne RDCU doit faire les choses suivantes:
   - spécifier un contrôleur (pour la première opération système dans un DSS, qui sera le même pour le reste des opérations dans le DSS);
   - satisfaire les postconditions du contrat d'opération correspondant;
   - rechercher les informations qui sont éventuellement rendues à l'acteur dans le DSS.
 - Il s'agit d'un diagramme de séquence en UML.
 Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique la notation de manière agile:
-  - Il n'est pas nécessaire de faire les boîtes d'activation, car ça prend du temps à les faire correctement lorsqu'on dessine à la main un diagramme.
-  - On doit se servir des annotations pour documenter les choix (GRASP).
-  - On dessine à la main des diagrammes puisqu'on peut faire ça en équipe à un tableau blanc. Mais aussi, à l'examen vous devez faire des diagrammes à la main.
-  - Au lieu d'un message pointillé indiquant le retour d'une valeur à la fin de l'exécution d'une méthode, on utilise l'affectation sur le message (comme dans la programmation), par exemple `c = getClient(...)` à la @fig-RDCU_ID_en_objets
+  - Il n'est pas nécessaire de faire les boîtes d'activation, car ça prend du temps les faire correctement lorsqu'on dessine à la main un diagramme ;
+  - On doit se servir des annotations pour documenter les choix (GRASP) ;
+  - On dessine à la main des diagrammes puisqu'on peut faire ça en équipe sur un tableau blanc, mais aussi, à l'examen, vous devez faire des diagrammes à la main ;
+  - Au lieu d'un message pointillé indiquant le retour d'une valeur à la fin de l'exécution d'une méthode, on utilise l'affectation sur le message (comme dans la programmation), par exemple `c = getClient(...)` à la @fig-RDCU_ID_en_objets.
 - Le livre de @craig_uml_2005 présente quelques RDCU qui sont des *diagrammes de communication*. 
 Cette notation n'est pas utilisée dans ce manuel, car elle est plus complexe à utiliser et elle est comparable à la notation des diagrammes de séquence.
-- Faire des RDCU est plus agile que coder, car dans un diagramme on peut voir le flux de plusieurs messages à travers plusieurs classes.
-Dans une solution codée, il serait nécessaire d'ouvrir plusieurs fichiers afin de voir le code de chaque méthode (message) et on ne peut pas voir toute la dynamique de la même manière.
-Faire des changements à un diagramme (avant de le coder) est en principe plus facile que changer le code source.
+- Faire des RDCU est plus agile que coder, car, dans un diagramme, on peut voir le flux de plusieurs messages à travers plusieurs classes.
+Dans une solution codée, il serait nécessaire d'ouvrir plusieurs fichiers afin de voir le code de chaque méthode (message), et on ne peut pas voir toute la dynamique de la même manière.
+Faire des changements à un diagramme (avant de le coder) est en principe plus facile que de changer le code source.
 On peut également se servir des structures (`List`, `Array`, `Map`, etc.) dans un diagramme, avant que celles-ci ne soient créées.
 - Faire des RDCU est une activité créative.
 Un diagramme dynamique en UML peut avoir une mauvaise logique, car il s'agit d'un dessin.
 *Le codage dans un langage de programmation est la seule manière de valider une RDCU*.
 Évidemment, la programmation prend beaucoup plus de temps et n'est pas insignifiante.
 Faire une RDCU est comme faire un *plan* pour un bâtiment, tandis que faire de la programmation est comme *construire* le bâtiment.
-Si un plan contient des erreurs de conception, on va les savoir lors de la construction.
-Alors, votre RDCU sera en doute jusqu'à ce que vous la traduisiez en code exécuté et testé.
+Si un plan contient des erreurs de conception, on va les connaître lors de la construction.
+Alors, votre RDCU sera incertaine jusqu'à ce que vous la traduisiez en code exécuté et testé.
 
 Tout le processus de proposer une solution (RDCU) peut être visualisé comme un diagramme d'activités, comme dans la @fig-RDCU_Aide_Memoire.
 
-```{.plantuml #fig-RDCU_Aide_Memoire caption="Aide mémoire pour faire une RDCU. L'étape en rouge nécessite beaucoup de pratique, selon la complexité des postconditions. Vous pouvez vous attendre à ne pas la réussir du premier coup. [(PlantUML)](http://www.plantuml.com/plantuml/uml/TLHDJnin4BtxLqp3WMILBaALMXGG8YLjLQb55RGzSJ7hsOsBrtOzTg3_gBdt7-mVwtYJG8BWubtPy_7clMUVKPGXfjQ0s7-bRMMIGYZBWzg55alF1-jDGRVQUXba2pINojrfsq0j3MsVl9VLRHDSikhS6HTWhfL2knKmmrec4x_ZVPmQtTWMROIA5mnRKHSkucw8mJgA7Yg8W1ubVoUNk70wWDbtlbi66RMpG7yeTdzRF0PXkGe4tSpZ1F2-XC6WAAhGBJ5SkBH0O_1dRZmS5SLW8FQKgckb9hDkoM1QRP4h8rJEnj3zCvZ2yKx5gVT6_quSLHIVBgTNt-3yCRGehktmV2wzZW7Xu-7Ryl3DmVJm7Nz66RZq7irM0nv7RKtn1FmN96xY7KKELZf7K56Cyr3ZQmklVrW4RPaTMo6SwDF5oO4-1TQndmyay4ZT4lBiF7tEU0ZQd4aYLsa-1PdW4XjD33n7phYtZ37ecnGfrtn8PTphP6qPapIQkYLjv15xcKtcarcfLZeDCKAGTPsf7K6oeBHiMEuMUNYTBI2hF9lmBhsWwfXv8DwYMcgI322w597944LX6EbJZa2bPma6Z9mHaDE3pNKC0yYMNxT3mokBqoAHR1WVzYrM2QkoiwkhSQ-V9AQXcdTBhhDj4V6CGrW16Nj_Z45iTZ_SUmmnRnN5vncW1NVp2sEMM62iIjWnqb7leoE1La5kjhaETtFDQ8O1AMQyJxd81baJnuHTMvSWJynXZ1zjvRZycWzs0OtWnRgFBDA3BXnEqNbXiCcuyc--mnF8rYHdKa-hOhj8RKos6PU37WlqQbTpoKp1CvAN86PieJ5emmaf0jTYgwqkpre4seXCEoht-doTCQNv0I7X0xzbsdFuYlXLPmJEN32kCdEwca2SyS9ltty0)"  }
+```{.plantuml #fig-RDCU_Aide_Memoire caption="Aide-mémoire pour faire une RDCU. L'étape en rouge nécessite beaucoup de pratique, selon la complexité des postconditions. Vous pouvez vous attendre à ne pas la réussir du premier coup. [(PlantUML)](http://www.plantuml.com/plantuml/uml/TLHDJnin4BtxLqp3WMILBaALMXGG8YLjLQb55RGzSJ7hsOsBrtOzTg3_gBdt7-mVwtYJG8BWubtPy_7clMUVKPGXfjQ0s7-bRMMIGYZBWzg55alF1-jDGRVQUXba2pINojrfsq0j3MsVl9VLRHDSikhS6HTWhfL2knKmmrec4x_ZVPmQtTWMROIA5mnRKHSkucw8mJgA7Yg8W1ubVoUNk70wWDbtlbi66RMpG7yeTdzRF0PXkGe4tSpZ1F2-XC6WAAhGBJ5SkBH0O_1dRZmS5SLW8FQKgckb9hDkoM1QRP4h8rJEnj3zCvZ2yKx5gVT6_quSLHIVBgTNt-3yCRGehktmV2wzZW7Xu-7Ryl3DmVJm7Nz66RZq7irM0nv7RKtn1FmN96xY7KKELZf7K56Cyr3ZQmklVrW4RPaTMo6SwDF5oO4-1TQndmyay4ZT4lBiF7tEU0ZQd4aYLsa-1PdW4XjD33n7phYtZ37ecnGfrtn8PTphP6qPapIQkYLjv15xcKtcarcfLZeDCKAGTPsf7K6oeBHiMEuMUNYTBI2hF9lmBhsWwfXv8DwYMcgI322w597944LX6EbJZa2bPma6Z9mHaDE3pNKC0yYMNxT3mokBqoAHR1WVzYrM2QkoiwkhSQ-V9AQXcdTBhhDj4V6CGrW16Nj_Z45iTZ_SUmmnRnN5vncW1NVp2sEMM62iIjWnqb7leoE1La5kjhaETtFDQ8O1AMQyJxd81baJnuHTMvSWJynXZ1zjvRZycWzs0OtWnRgFBDA3BXnEqNbXiCcuyc--mnF8rYHdKa-hOhj8RKos6PU37WlqQbTpoKp1CvAN86PieJ5emmaf0jTYgwqkpre4seXCEoht-doTCQNv0I7X0xzbsdFuYlXLPmJEN32kCdEwca2SyS9ltty0)"  }
 @startuml 
 '!include ecriture.pumlinclude
 skinparam shadowing false
@@ -96,7 +96,7 @@ Une erreur potentielle est de donner la responsabilité de créer à un contrôl
 Pour les postconditions où il faut former une association entre un objet *a* et *b*, il y a plusieurs façons de faire.
 
 - S'il y a une agrégation entre les objets, il s'agit probablement d'une méthode `add()` sur l'objet qui agrège.
-- S'il y a une association simple, il faut considérer la navigabilité de l'association. Est-ce qu'il faut pouvoir retrouver l'objet *a* à partir de l'objet *b* ou vice-versa? Il s'agira d'une méthode `setB(b)` sur l'objet `a` (pour trouver *b* à partir de *a*), etc.
+- S'il y a une association simple, il faut considérer la navigabilité de l'association. Est-ce qu'il faut pouvoir retrouver l'objet *a* à partir de l'objet *b*, ou vice-versa? Il s'agira d'une méthode `setB(b)` sur l'objet `a` (pour trouver *b* à partir de *a*), etc.
 - S'il faut former une association entre un objet et un autre "sur une base de correspondance avec" un identifiant passé comme argument, alors il faut repérer le bon objet d'abord. Voir la section [Transformer identifiants en objets](#sec-TransformerIDenObjets).
 
 Dans la plupart des cas, la justification GRASP pour former une association est Expert, défini dans le \nameref{tab_GRASPExpert}. Il faut faire attention à la [visibilité](#sec-Visibilite)\ \faLowVision<i class="fa-solid fa-low-vision"></i>.
@@ -107,7 +107,7 @@ Pour les postconditions où il faut modifier un attribut, c'est assez évident. 
 
 Lorsque l'attribut d'un objet doit être modifié juste après la création de ce dernier, ça peut se faire dans le constructeur, comme on voit dans la @fig-RDCU_Constructeur_Modification.
 
-```{.plantuml #fig-RDCU_Constructeur_Modification  caption="Combiner la création d'instance et une modification de son attribut dans un constructeur. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VL9DRy8m3BrNuZzON833fg7TEA0XD4riJ48hsyvUQjgegTCvhXZ_VYuxhEA053aVxyL-Vib3KXJjcf2bsdEBWWqaFGMoADxro6W0VQ6hIuaT5ow6AA22d0mYrb4s0Qry0Xi85N9n5AzA38V82fxXqtCHZyc8_maBEc0NjASmDWGlubD_PxDV6szVKIA8Mf4a237MK0hXELd-yGJJ1ciJsWbPPJfDRFPi3OL0XLKLM6sty9u_lkM3yZ2_cmrRkbIGiEm3NzUvuHgUOoUCuIhlftO5v4vygrTvEpAh90s53IrKwIXB3krTvhVtmxUYxuxOqIkbNlWg-98Xq44pmzKxtwAPFrxi0YfXDmPCq5vWQqnq1bnc7hUPwpqcsxLmiro2WmNy7KqvDhECk80pxy5MzZz-0G00)" }
+```{.plantuml #fig-RDCU_Constructeur_Modification  caption="Combiner la création d'une instance et une modification de son attribut dans un constructeur. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VL9DRy8m3BrNuZzON833fg7TEA0XD4riJ48hsyvUQjgegTCvhXZ_VYuxhEA053aVxyL-Vib3KXJjcf2bsdEBWWqaFGMoADxro6W0VQ6hIuaT5ow6AA22d0mYrb4s0Qry0Xi85N9n5AzA38V82fxXqtCHZyc8_maBEc0NjASmDWGlubD_PxDV6szVKIA8Mf4a237MK0hXELd-yGJJ1ciJsWbPPJfDRFPi3OL0XLKLM6sty9u_lkM3yZ2_cmrRkbIGiEm3NzUvuHgUOoUCuIhlftO5v4vygrTvEpAh90s53IrKwIXB3krTvhVtmxUYxuxOqIkbNlWg-98Xq44pmzKxtwAPFrxi0YfXDmPCq5vWQqnq1bnc7hUPwpqcsxLmiro2WmNy7KqvDhECk80pxy5MzZz-0G00)" }
 @startuml
 !include ecriture.pumlinclude
 scale 1.3
