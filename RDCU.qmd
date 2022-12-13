@@ -216,7 +216,7 @@ Voici quelques points importants:
 - Il faut choisir l'objet du domaine initial, qui est souvent l'objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses "enfants" directs, puis chaque "enfant" aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu Risk à la @fig-MDD-jeu-de-risk, `JeuRisk` pourrait être l'objet racine, qui devra créer l'objet `PlateauRisk` et les cinq instances de `Dé`. L'objet `PlateauRisk`, lors de son initialisation, pourra instancier les 42 objets `Pays` et les six objets `Continent`, en passant à chaque `Continent` ses objets `Pays` lors de son initialisation. Si `PlateauRisk` fournit une méthode `getPays(nom)` qui dépend d'un tableau associatif selon [Transformer identifiants en objets](#sec-TransformerIDenObjets), alors c'est dans l'initialisation de cette classe que l'instance de `Map<String,Pays>` sera créée.
 - Selon l'application, les objets peuvent être chargés en mémoire à partir d'un système de persistance, par exemple une base de données ou un fichier. Pour l'exemple de Risk, `PlateauRisk` pourrait charger, à partir d'un fichier JSON, des données pour initialiser toutes les instances de `Pays`. Pour une application d'inscription de cours à l'université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d'une base de données. Une base de données amène un lot d'avantages et d'inconvénients, et elle n'est pas toujours nécessaire. Dans la méthodologie de ce manuel, on n'aborde pas le problème des bases de données (c'est le sujet d'un autre cours).
 
-```{.plantuml #fig-DemarrerRisk  caption="Exemple de l'initialisation partielle du jeu de Risk. [(PlantUML)](http://www.plantuml.com/plantuml/uml/ZLLDJzj04BrRuZ-Ck2H88Ig7NYoAG6bLGQ4WGji3uR3i3lR6zknsTqrBVr7pE_B7EdPYnvYF8aKRP-VDcpTlHiwX3yA5iiWZdscomea2V7Z8aK-dPHNPweHkXSmIPqfIqkJ6GN22F8UGmbOqW91g3_mHa0fIlvmE0Gdk30NG13yqAVFBCt13gF1Eb7ce82GAX2zE-ohd-6h2kAiKFO89AJeFkJ4P90v5JJRz_Xc6XSXOQEcGA-F3WByrSKDvZeghEZWwFOLlqq-Nqqvvs7ktqssfhy2Bf3heTPt7bC69AHs9_5NSxqmgc4gdRNWLTu5ibVDTOLqBWokHqwNWmUoDzxh3mfybaiGpz9Noermd19BdWIvYHD1IMy7-RyVdjtCCPqBJDWWFfWnUA-nXJh2yr3wh4VC-mSVbeWwetlr5BWAAJQBj9qwuIqsigGxBnr4RNuW7lqhiHSw4dL7Cv_wKbv6IqOmgx44DBY9PxG9MEjVDmExkmG7_XXXMiOWC0vnEqX33kZT07o0VcCeDS4Aoi8XNouBUVzzGgeX9QZB5N6gvyDVw1ZuyOZNtwBZMICN0gc7YbWkEbMv6JI6HkELVNYRsBK9IrGBRfW9xr9ImVRqDitN_fUvOtp0NaLqJ5ynRUVYSSEj6HOyzxhAr5JhkrzxNx8tePgx-w1vb5RvcbsOaK-4IT9CduSuyE7soWa6El5E6QBb0FoCrAFcLeMMgENGoFV_AxvLDeMPKJqkFlVw3ZGcoDK6svWwVaQjlncIA4Op7uvt7xiWtkTEskD8rtt--Xkthiwq-MmsfdT3mvVph-OjQxPkqrWDOJQ_Q3A7KqEwiB-JcejtKzk6Gd_X_u1y0)" }
+```{.plantuml #fig-DemarrerRisk  caption="Exemple de l'initialisation partielle du jeu Risk. [(PlantUML)](http://www.plantuml.com/plantuml/uml/ZLLDJzj04BrRuZ-Ck2H88Ig7NYoAG6bLGQ4WGji3uR3i3lR6zknsTqrBVr7pE_B7EdPYnvYF8aKRP-VDcpTlHiwX3yA5iiWZdscomea2V7Z8aK-dPHNPweHkXSmIPqfIqkJ6GN22F8UGmbOqW91g3_mHa0fIlvmE0Gdk30NG13yqAVFBCt13gF1Eb7ce82GAX2zE-ohd-6h2kAiKFO89AJeFkJ4P90v5JJRz_Xc6XSXOQEcGA-F3WByrSKDvZeghEZWwFOLlqq-Nqqvvs7ktqssfhy2Bf3heTPt7bC69AHs9_5NSxqmgc4gdRNWLTu5ibVDTOLqBWokHqwNWmUoDzxh3mfybaiGpz9Noermd19BdWIvYHD1IMy7-RyVdjtCCPqBJDWWFfWnUA-nXJh2yr3wh4VC-mSVbeWwetlr5BWAAJQBj9qwuIqsigGxBnr4RNuW7lqhiHSw4dL7Cv_wKbv6IqOmgx44DBY9PxG9MEjVDmExkmG7_XXXMiOWC0vnEqX33kZT07o0VcCeDS4Aoi8XNouBUVzzGgeX9QZB5N6gvyDVw1ZuyOZNtwBZMICN0gc7YbWkEbMv6JI6HkELVNYRsBK9IrGBRfW9xr9ImVRqDitN_fUvOtp0NaLqJ5ynRUVYSSEj6HOyzxhAr5JhkrzxNx8tePgx-w1vb5RvcbsOaK-4IT9CduSuyE7soWa6El5E6QBb0FoCrAFcLeMMgENGoFV_AxvLDeMPKJqkFlVw3ZGcoDK6svWwVaQjlncIA4Op7uvt7xiWtkTEskD8rtt--Xkthiwq-MmsfdT3mvVph-OjQxPkqrWDOJQ_Q3A7KqEwiB-JcejtKzk6Gd_X_u1y0)" }
 @startuml
 !include ecriture.pumlinclude
 'scale 1.1
@@ -268,7 +268,7 @@ Lorsqu'on fait l'ébauche d'une RDCU, on peut réduire le décalage des représe
 Plus une solution ressemble à la description du problème, plus elle sera facile à comprendre.
 
 ::: {.callout-caution}
-Une application de pattern GoF à la solution peut nuire à ce principe, car ces patterns rajoutent souvent des classes logicielles n'ayant aucun lien avec le modèle du domaine.
+Une application de patterns GoF à la solution peut nuire à ce principe, car ces patterns ajoutent souvent des classes logicielles n'ayant aucun lien avec le modèle du domaine.
 Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine.
 Il faut vérifier avec une personne expérimentée (l'architecte du projet si possible) que l'application du pattern est justifiée, qu'elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées.
 Chaque fois qu'on propose des classes logicielles qui n'ont pas de liens avec la représentation du problème du domaine, on *augmente le décalage des représentations* et on rend la solution un peu plus difficile à comprendre.
@@ -286,7 +286,7 @@ Dans la section F30.8/A33.7\ \faBook<i class="fa-solid fa-book"></i>, Larman men
 
 ![Dés dans la vraie vie (["Hand of chance"](https://www.flickr.com/photos/aerust/9590772048/) [(CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/) par [Alexandra E Rust](https://www.flickr.com/people/aerust/)).](images/flickr_aerust_hand_of_chance.jpg){width=80% #fig-main_des}
 
-```{#fig-de_logiciel .plantuml caption="Dé dans un logiciel selon *Faire soi-même*" }
+```{#fig-de_logiciel .plantuml caption="Dé dans un logiciel selon *Faire soi-même*." }
 !include ecriture.pumlinclude
 hide empty methods
 class Dé {
@@ -295,7 +295,7 @@ class Dé {
 }
 ```
 
-**Faire soi-même**: "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction" de @coad97a
+**Faire soi-même** : "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction" de @coad97a.
 :::
 
 
