@@ -1,6 +1,6 @@
 @startuml Adaptateur_GRASP
 skinparam style strictuml
-skinparam defaultfontname Arial
+skinparam defaultfontname "Helvetica,Arial,sans-serif"
 hide empty members
 left to right direction
 skinparam rectangle {
