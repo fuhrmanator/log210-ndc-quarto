@@ -79,7 +79,7 @@ Quelques exemples concrets d'humilité dans le développement:
 - Les membres de l'équipe qui ont pris une mauvaise décision (technique ou autre) vont l'avouer. Elles et ils savent que les autres ne sont pas là pour les attaquer (il y a du respect).
 - Un(e) membre de l'équipe va travailler fort pour que *son équipe* réussisse.
 - Un(e) membre de l'équipe qui reçoit une critique ne va pas la prendre personnellement.
-Il sait que la qualité de son code n'équivaut pas à son estime de soi (cela n'est pas toujours facile !).
+Il ou elle sait que la qualité de son code n'équivaut pas à son estime de soi (cela n'est pas toujours facile !).
 
 ### Respect
 
@@ -91,31 +91,31 @@ Une personne démontrant du respect pense ainsi [@fitzpatrick_team_2012]:
 
 ### Confiance
 
-Une personne démontrant la confiance pense ainsi [@fitzpatrick_team_2012]:
+Une personne démontrant de la confiance pense ainsi [@fitzpatrick_team_2012]:
 
-- Je crois que les autres membres de l'équipe sont compétents et qu'ils feront la bonne chose.
-- Je suis à l'aise lorsqu'ils prennent le volant, le cas échéant.
+- Je crois que les autres membres de l'équipe font preuve de compétence et de bon jugement.
+- Je suis à l'aise lorsque les autres (membres de l'équipe) prennent le volant, le cas échéant.
 
-Le dernier point peut être extrêmement difficile si vous avez déjà été déçu par une personne incompétente à qui vous avez délégué une tâche.
+Le dernier point peut être extrêmement difficile si, par le passé, une personne (incompétente) à qui vous aviez délégué une tâche n'a pas répondu à vos attentes.
 
-## Redondance des compétences dans l'équipe (Bus Factor) {#sec-Bus_Factor}
+## Redondance des compétences dans l'équipe (bus factor) {#sec-Bus_Factor}
 
 Pour qu'une équipe soit robuste, il faut une redondance des compétences.
-Sinon, la perte d'un membre de l'équipe (pour une raison quelconque) peut engendrer de graves conséquences, voire arrêter carrément le développement.
-Ce principe a été nommé en anglais *Bus factor*.
-C'est le nombre minimum de membres à perdre (par exemple, ils ont été heurtés par un bus) pour arrêter le projet par manque de personnel bien informé ou compétent.
+Sinon, la perte d'un(e) membre de l'équipe (pour une raison quelconque) peut engendrer de graves conséquences, voire arrêter carrément le développement.
+Ce principe a été nommé en anglais *bus factor*.
+C'est le nombre minimum de personnes à perdre (par exemple, elles ont été heurtés par un bus) pour arrêter le projet par manque de personnel bien informé ou compétent.
 Par exemple, dans un projet de stage, si c'est vous qui écrivez tout le code, alors c'est un *bus factor* de 1.
 Si vous n'êtes plus là, le projet s'arrête!
 
 ![*Facteur de bus* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné. [@fitzpatrick_team_2012] ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E](images/DALL-E_BusFactor.png){width="500px"}
 
-Dans le cas d'une équipe, un membre de l'équipe peut être absent ou moins disponible pour beaucoup de raisons.
-Par exemple, il part en vacances, il tombe malade, il prend un congé parental, il change d'emploi, il abandonne le cours (contexte de projet universitaire), etc.
+Dans le cas d'une équipe, un(e) membre de l'équipe peut s'absenter ou être moins disponible pour beaucoup de raisons.
+Par exemple, cette personne part en vacances, tombe malade, prend un congé parental, change d'emploi, abandonne le cours (contexte de projet universitaire), etc.
 Cherchez à répartir les responsabilités dans l'équipe afin d'avoir un *bus factor* d'au moins 2.
 Partagez des compétences pour maintenir une équipe robuste.
 
 Vous pouvez également garder votre solution *simple* et garder la documentation de votre conception à jour.
-L'automatisation des tests dans un processus de construction de logiciel (*build process*) à la devops (@sec-tdd) aide aussi, car l'équipe ne dépend pas d'une personne pour construire la solution, rouler les tests, etc.
+L'automatisation des tests dans un processus de construction de logiciels (*build process*) à la devops (@sec-tdd) aide aussi, car l'équipe ne dépend pas d'une personne pour construire la solution, rouler les tests, etc.
 Ces pratiques vont également faciliter l'intégration de nouvelles personnes dans l'équipe.
 
 ::: {.callout-warning}
