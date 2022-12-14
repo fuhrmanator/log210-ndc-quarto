@@ -1,67 +1,67 @@
-# Développement de logiciel en équipe
+# Développement de logiciels en équipe
 
 Le développement de logiciels se fait souvent en équipe.
 Cependant, il y a des défis pour travailler en équipe.
-Souvent, avant l'université on apprend comment s'organiser en équipe, faire des rencontres, répartir le travail, planifier, etc.
+Souvent, avant l'université, on apprend comment s'organiser en équipe, faire des rencontres, répartir le travail, planifier, etc.
 Pourtant, il y a d'autres défis dans ce travail, des défis sur le plan humain.
-C'est le sujet du livre "Team Geek" [-@fitzpatrick_team_2012] écrit par Brian W. Fitzpatrick (ancien employé de Google) et Ben Collins-Sussman (développeur fondateur du système de contrôle de version Subversion, employé de Google).
+C'est le sujet du livre "*Team Geek*" [-@fitzpatrick_team_2012], écrit par Brian W. Fitzpatrick (ancien employé de Google) et Ben Collins-Sussman (développeur fondateur du système de contrôle de version Subversion, employé de Google).
 
 Aujourd'hui, la demande pour le talent en technologies de l'information est importante.
-Les technologies évoluent constamment et le temps que vous investissez pour maîtriser une technologie est important.
+Les technologies évoluent constamment, et le temps que vous investissez pour maîtriser une technologie est important.
 Pourtant, il y a des risques avec certains investissements de temps à long terme.
-Par exemple, qui développe du code encore pour [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>?
-Cette technologie est maintenant désuète et ça ne vaut pas beaucoup de mentionner cette compétence sur un CV.
+Par exemple, qui développe encore du code pour [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i> ?
+Cette technologie est maintenant désuète, et ça ne vaut pas beaucoup de mentionner cette compétence sur un CV.
 
 La bonne nouvelle est qu'une "technologie" ne changera jamais: le comportement humain.
 Donc, il est toujours rentable d'investir du temps pour mieux maîtriser cet aspect du développement.
-Les entreprises en technologies de l'information sont toujours à la recherche de développeurs qui ont également des compétences générales (*soft skills*).
+Les entreprises en technologies de l'information sont toujours à la recherche de développeurs(euses) qui ont également des compétences générales (*soft skills*).
 
-@fitzpatrick_team_2012 abordent des problèmes dus aux tendances comportementales chez les développeurs.
+@fitzpatrick_team_2012 abordent des problèmes dus aux tendances comportementales chez les développeurs(euses).
 Par exemple, une personne n'a pas toujours envie de montrer son code source aux autres membres de l'équipe pour plusieurs raisons:
 
 - Son code n'est pas fini.
 - Elle a peur d'être jugée.
 - Elle a peur que quelqu'un vole son idée.
 
-Dans tous ces cas, il s'agit de l'insécurité et c'est tout à fait normal.
+Dans tous ces cas, il s'agit d'insécurité, et c'est tout à fait normal.
 Par contre, ce genre de comportement augmente certains risques dans le développement:
 
 - de faire des erreurs dans la conception initiale;
 - de "réinventer la roue";
 - de terminer le travail plus tard que son compétiteur, qui, lui, a collaboré avec son équipe.
 
-@fitzpatrick_team_2012 le disent et c'est un fait: si nous sommes tous plus ou moins compétents sur le plan technique, ce qui fera la différence importante dans une carrière est notre habileté à collaborer avec les autres.
+@fitzpatrick_team_2012 le disent, et c'est un fait: si nous sommes, dans l'ensemble, plus ou moins compétent(e)s sur le plan technique, ce qui fera la différence importante dans une carrière est notre habileté à collaborer avec les autres.
 
 ![Pratiquement tout conflit social est dû à un manque d'humilité, de respect ou de confiance.](images/HRC_venn.svg){width=40% #fig-HRC_venn}
 
-## Humilité, Respect, Confiance
+## Humilité, respect, confiance
 
 L'humilité, le respect et la confiance (voir la @fig-HRC_venn) sont les qualités de base pour le bon travail en équipe.
 Cette section présente ces aspects en détail.
 
 ### Humilité
 
-Voici la définition d'*humilité* selon Antidote:
+Voici la définition d'*humilité* selon *Antidote* :
 
 ::: {.callout}
-*Disposition à s'abaisser volontairement, par sentiment de sa propre faiblesse.*
+Disposition à s'abaisser volontairement, par sentiment de sa propre faiblesse.
 :::
 
 Une personne humble pense ainsi [@fitzpatrick_team_2012]:
 
 - Je ne suis pas le centre de l'univers.
-- Je ne suis ni omniscient ni infaillible.
-- Je suis ouvert à m'améliorer.
+- Je ne suis ni omnisciente ni infaillible.
+- Je suis ouverte à m'améliorer.
 
 ::: {.callout-important}
-L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte d'être mal traité.e par les autres". Voir la section [Proposer des solutions au besoin](#sec-solution_problemes_equipes).
+L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte d'être mal traité(e) par les autres". Voir la section [Proposer des solutions au besoin](#sec-solution_problemes_equipes).
 :::
 
 ![Éviter d'être le ["Centre de l'univers"](https://www.flickr.com/photos/diamondduste/466060240/) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)) par [Diamondduste](https://www.flickr.com/people/diamondduste/).](images/flickr_diamondduste_center.jpg){width="200px"}
 
 ![["Missing"](https://www.flickr.com/photos/smkybear/2705041322/) ([CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)) par [smkybear](https://www.flickr.com/people/smkybear/).](images/flickr_smkybear_missing.jpg){width="200px"}
 
-```{.plantuml #fig-moi_inf_equipe caption="Un membre de l'équipe humble va accepter une décision prise par l'équipe, même s'il n'est pas en accord à 100%. [(PlantUML)](http://www.plantuml.com/plantuml/uml/JO_1IWH134Jl_HLXFIpCHIzUP1aMFViHcUxqJfZkT9jaq1L_mE_onvn1aArJKQyegBCvgg-rX2DqZWiWv2OEBE0pGMfn8JqQsDMSQh25fQDYXKGPr-9xMR0IV2mnWKNbxZSjfUWebqBFJHFfIojDmHN5DaxYOUP4GBNx5IhLYTJ-eiWQ2zqisOoflRDS86Cn2l_BS3WPVzBJuyCu33_VRojtWX5U6m_3wNv7um7kSfusVKtJRiAP96sVVm40)" }
+```{.plantuml #fig-moi_inf_equipe caption="Un(e) membre de l'équipe humble va accepter une décision prise par l'équipe, même s'il ou elle n'est pas en accord à 100%. [(PlantUML)](http://www.plantuml.com/plantuml/uml/JO_1IWH134Jl_HLXFIpCHIzUP1aMFViHcUxqJfZkT9jaq1L_mE_onvn1aArJKQyegBCvgg-rX2DqZWiWv2OEBE0pGMfn8JqQsDMSQh25fQDYXKGPr-9xMR0IV2mnWKNbxZSjfUWebqBFJHFfIojDmHN5DaxYOUP4GBNx5IhLYTJ-eiWQ2zqisOoflRDS86Cn2l_BS3WPVzBJuyCu33_VRojtWX5U6m_3wNv7um7kSfusVKtJRiAP96sVVm40)" }
 @startuml
 ' pick a font in the docker's system
 skinparam defaultfontname xkcd script
@@ -75,11 +75,11 @@ rectangle "<size:50>**Équipe > Moi**</size>" #ffbbbb|bbffbb
 
 Quelques exemples concrets d'humilité dans le développement:
 
-- Un membre de l'équipe débutant en JavaScript, git, etc. va le reconnaître et va même faire des exercices sur Internet pour s'améliorer.
-- Un membre de l'équipe (même le chef d'équipe) qui a pris une mauvaise décision (technique ou autre) va l'avouer. Il sait que les autres ne sont pas là pour l'attaquer (ils le respectent).
-- Un membre de l'équipe va travailler fort pour que *son équipe* réussisse.
-- Un membre de l'équipe qui reçoit une critique ne va pas la prendre personnellement.
-Il sait que la qualité de son code n'équivaut pas à son estime de soi. (Cela n'est pas toujours facile!)
+- Un(e) membre de l'équipe débutant en JavaScript, Git, etc. vont le reconnaître et vont même faire des exercices sur Internet pour s'améliorer.
+- Les membres de l'équipe qui ont pris une mauvaise décision (technique ou autre) vont l'avouer. Elles et ils savent que les autres ne sont pas là pour les attaquer (il y a du respect).
+- Un(e) membre de l'équipe va travailler fort pour que *son équipe* réussisse.
+- Un(e) membre de l'équipe qui reçoit une critique ne va pas la prendre personnellement.
+Il sait que la qualité de son code n'équivaut pas à son estime de soi (cela n'est pas toujours facile !).
 
 ### Respect
 
