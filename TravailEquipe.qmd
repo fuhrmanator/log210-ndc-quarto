@@ -107,7 +107,7 @@ C'est le nombre minimum de personnes à perdre (par exemple, elles ont été heu
 Par exemple, dans un projet de stage, si c'est vous qui écrivez tout le code, alors c'est un *bus factor* de 1.
 Si vous n'êtes plus là, le projet s'arrête!
 
-![*Facteur de bus* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné. [@fitzpatrick_team_2012] ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E](images/DALL-E_BusFactor.png){width="500px"}
+![*Facteur de bus* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné [@fitzpatrick_team_2012]. ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E](images/DALL-E_BusFactor.png){width="500px"}.
 
 Dans le cas d'une équipe, un(e) membre de l'équipe peut s'absenter ou être moins disponible pour beaucoup de raisons.
 Par exemple, cette personne part en vacances, tombe malade, prend un congé parental, change d'emploi, abandonne le cours (contexte de projet universitaire), etc.
@@ -119,28 +119,28 @@ L'automatisation des tests dans un processus de construction de logiciels (*buil
 Ces pratiques vont également faciliter l'intégration de nouvelles personnes dans l'équipe.
 
 ::: {.callout-warning}
-Si un membre de l'équipe quitte en cours du trimestre, il n'est pas facile de maintenir le même rythme.
-Cependant, les enseignantes ou les enseignants et les auxiliaires de laboratoire s'attendront à ce que vous ayez pensé à un "plan B" avant de perdre le membre de l'équipe.
-Au moins un autre membre de l'équipe doit être au courant de ce que faisait l'ancien membre de l'équipe, pour que le projet ne soit pas complètement arrêté.
+Si un(e) membre de l'équipe quitte en cours de trimestre, il n'est pas facile de maintenir le même rythme.
+Cependant, les enseignant(e)s et les auxiliaires de laboratoire s'attendront à ce que vous ayez pensé à un "plan B" avant cette perte.
+Au moins une autre personne dans l'équipe doit être au courant de ce que faisait l'ancien(ne) membre de l'équipe, pour que le projet ne soit pas complètement arrêté.
 :::
 
 ## Mentorat
 
-Pour les raisons pédagogiques [@oakley2004turning], c'est l'enseignant qui décide la composition des équipes.
-Ça veut dire que forcément certains membres de l'équipe ont plus d'expérience et de facilité à faire certaines tâches que d'autres.
+Pour des raisons pédagogiques [@oakley2004turning], c'est l'enseignant(e) qui décide la composition des équipes.
+Ça veut dire que, forcément certaines personne de l'équipe ont plus d'expérience et de facilité à faire certaines tâches que d'autres.
 Les équipes doivent composer avec cette diversité.
 
 Selon @fitzpatrick_team_2012:
 
 ::: {.callout}
-Si vous avez déjà un bon bagage en programmation, ça peut être pénible de voir un autre membre de l'équipe moins expérimenté tente un travail qui lui prendra beaucoup de temps lorsque vous savez que ça vous prendra juste quelques minutes.
-Apprendre à quelqu'un comment faire une tâche et lui donner l'occasion d'évoluer tout seul est un défi au début, mais cela est une caractéristique importante du leadership.
+Si vous avez déjà un bon bagage en programmation, ça peut être pénible de voir une autre personne moins expérimentée dans l'équipe tenter un travail qui lui prendra beaucoup de temps lorsque vous savez que ça vous prendrait juste quelques minutes.
+Apprendre à quelqu'un comment faire une tâche et lui donner l'occasion d'évoluer tout seul sont un défi au début, mais cela est une caractéristique importante du leadership.
 :::
 
-Si les plus forts n'aident pas les autres, ils risquent de les éloigner de l'équipe et de se trouver seuls sur le plan des contributions techniques. 
-Voir la section sur la [Redondance des compétences dans l'équipe (Bus Factor)](#sec-Bus_Factor).
+Si les personnes plus fortes n'aident pas les autres, ils risquent de les éloigner de l'équipe et de se retrouver seules sur le plan des contributions techniques. 
+Voir la section sur la [Redondance des compétences dans l'équipe (*bus factor*)](#sec-Bus_Factor).
 
-Encadrer un membre de l'équipe au début du trimestre peut prendre beaucoup de temps.
+Encadrer un(e) membre de l'équipe au début du trimestre peut prendre beaucoup de temps.
 Mais, si la personne devient plus autonome, c'est un gain pour toute l'équipe.
 Cela augmente également le facteur de bus.
 
@@ -148,11 +148,11 @@ Voici quelques conseils pour le mentorat:
 
 - avoir les compétences sur un plan technique;
 - être capable d'expliquer des choses à quelqu'un d'autre;
-- savoir combien d'aide à donner à la personne encadrée.
+- savoir combien d'aide donner à la personne encadrée.
 
-Le dernier point est important parce que si vous donnez trop d'informations, la personne peut vous ignorer plutôt que vous dire gentiment qu'elle a compris [@fitzpatrick_team_2012].
-En plus, donner un faible niveau d'orientation à une personne ayant déjà une expérience est plus efficace que donner une orientation explicite [@oakley2021uncommon;@chen2017expertise].
-Un bon mentor doit pouvoir estimer le niveau de la personne et lui donner une orientation appropriée, ce qui n'est pas toujours facile.
+Le dernier point est important parce que, si vous donnez trop d'informations, la personne peut vous ignorer plutôt que de vous dire gentiment qu'elle a compris [@fitzpatrick_team_2012].
+En plus, donner un faible niveau d'orientation à une personne ayant déjà de l'expérience est plus efficace que de donner une orientation explicite [@oakley2021uncommon;@chen2017expertise].
+Un bon(ne) mentor(e) doit pouvoir estimer le niveau de la personne et lui donner une orientation appropriée, ce qui n'est pas toujours facile.
 Mais sachez que "moins est plus" dans certains cas.
 
 ![Encadrer les membres de l'équipe est une habileté à mettre sur son CV ["CultureTECH BT Monster Dojo"](https://www.flickr.com/photos/24498081@N06/10081683216/) ([CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) par [connor2nz](https://www.flickr.com/people/24498081@N06/).](https://farm8.static.flickr.com/7459/10081683216_2b02836f82_b.jpg){width="400px"}
