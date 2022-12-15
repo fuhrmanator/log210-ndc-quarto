@@ -48,7 +48,7 @@ Le pattern Adaptateur comprend les principes GRASP Faible couplage, Forte cohés
 ```{.plantuml #fig-Fig23_3 caption="Adaptateur et principes GRASP [voir @craig_uml_2005, figure **A26.3/F23.3**]"}
 @startuml Adaptateur_GRASP
 skinparam style strictuml
-'skinparam defaultfontname Helvetica,Arial,sans-serif,SansSerif
+skinparam defaultfontname Helvetica,Arial,sans-serif,SansSerif
 hide empty members
 left to right direction
 skinparam rectangle {
