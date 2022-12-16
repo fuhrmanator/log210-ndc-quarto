@@ -119,7 +119,7 @@ Selon @craig_uml_2005:
 **Solution:** Identifiez les points de variation ou d'instabilité prévisibles et affectez les responsabilités afin de créer une "interface" stable autour d'eux.
 :::
 
-Les "variations ou l'instabilité" sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs(euses) du projet (ce sont des modules externes ayant chacun une API différente). Quant à l'" impact négatif sur les autres", il s'agit des modifications que les développeurs(euses) auraient à faire sur la classe Vente chaque fois que l'on décide de supporter un autre calculateur de taxes (ou si l'API de ce dernier évolue). 
+Les "variations ou l'instabilité" sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeur(e)s du projet (ce sont des modules externes ayant chacun une API différente). Quant à l'" impact négatif sur les autres", il s'agit des modifications que les développeur(e)s auraient à faire sur la classe Vente chaque fois que l'on décide de supporter un autre calculateur de taxes (ou si l'API de ce dernier évolue). 
 
 Quant aux "responsabilités" à affecter, c'est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de l'" interface stable", il s'agit de la méthode `getTaxes()`, qui ne changera jamais. Elle est définie dans le type-interface IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API). 
 
@@ -128,9 +128,9 @@ Quant aux "responsabilités" à affecter, c'est la fonctionnalité commune de to
 Il y a des liens entre les GRASP et les activités de [Réusinage (Refactorisation)](#sec-Refactoring). 
 Alors, un IDE qui automatise les *refactorings* peut vous aider à appliquer certains GRASP.
 
-- GRASP Polymorphisme est relié à [_Replace Type Code with Subclasses_](https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html) et [_Replace conditional with polymorphism_](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html) -- attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (`switch`) répétées à plusieurs endroits dans le code.
-- GRASP Fabrication pure est relié à [_Extract class_](https://refactoring.com/catalog/extractClass.html).
-- GRASP Indirection est relié à [_Extract function_](https://refactoring.com/catalog/extractFunction.html) et [_Move function_](https://refactoring.com/catalog/moveFunction.html).
+- GRASP Polymorphisme est relié à [_Replace Type Code with Subclasses_](https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html) et à [_Replace Conditional with Polymorphism_](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html) -- attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (`switch`) répétées à plusieurs endroits dans le code.
+- GRASP Fabrication pure est relié à [_Extract Class_](https://refactoring.com/catalog/extractClass.html).
+- GRASP Indirection est relié à [_Extract Function_](https://refactoring.com/catalog/extractFunction.html) et à [_Move Function_](https://refactoring.com/catalog/moveFunction.html).
 
 ## Exercices
 
@@ -213,7 +213,7 @@ Identifiez les 4 principes GRASP dans le patron [Commande](https://fuhrmanator.g
 
 ### Méthode Fabrique
 
-Identifiez les 4 principes GRASP dans le patron [Méthode fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)), selon les directives à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le patron [Méthode de fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)), selon les directives à la @sec-GRASP_Adaptateur.
 
 :::
 
