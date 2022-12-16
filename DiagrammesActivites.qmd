@@ -3,7 +3,7 @@
 Ce chapitre contient des informations sur les diagrammes d'activités en UML. Les détails se trouvent dans le chapitre F25/A28\ \faBook<i class="fa-solid fa-book"></i>.
 
 ::: {.callout}
-Les diagrammes d'activités servent à modéliser des processus d'affaires (de métier), des enchaînements d'activités (workflows), des flots de données et des algorithmes complexes.
+Les diagrammes d'activités servent à modéliser des processus d'affaires (de métier), des enchaînements d'activités (*workflows*), des flots de données et des algorithmes complexes.
 :::
 
 Voici les éléments importants:
@@ -17,7 +17,7 @@ Voici les éléments importants:
 
 La @fig-ActivityDiagramExampleGitCommit présente un exemple de diagramme d'activité décrivant de manière générale une partie du processus de travail d'une personne utilisant `git` pour la gestion de code source. 
 
-```{.plantuml #fig-ActivityDiagramExampleGitCommit caption="Diagramme d'activités pour un processus simple avec git. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VL9BRjj03DtFAGXlRE_QhRreZAG9ya5QH6wxoc8yGqcC98unmscIS_G2tVeSGkzLoWfGEq0j29Gmxv5yV9op93PAxbgJ6kAjZRQ39AyjQepatY4RwvegXipUXJP4a6WvAOGiPWfIKm9zBTIM_NCa4MGe0miGmmzY7vwJcVuhvx6qkPM1mRP3k8sKXfJhzRcPhcjC245gZ0dQ41ge8jfzgUBx5SmwswZ8757xukjKlyGwJDkYrvuHLdTtyAtu_50SD8UF7-Rc__sJhOR09qLUSmCt8KUsxIdQI-Cy52xILaxHlgAQ5DE1g4Fl96OyW2x6v3M-oAgbYZlr7Pm6ZAVMDspOS124I5Kji82BVhV9OXOF_SvJXH5SyBWyvgoSq4-IVcSMvuf25poLrEyUZsdtVtvb3tuQDayenb09ioiRlTOS4vmL2fm-pOSrCSo-P9eRqEUz84T9YO02PHx-zgJ5wYbaUHC8_MyTorR4rN94zy8cXPwXdpoEPvUMz2vCNEWwaWdO3BxVROD0HR8S60PRlLYp-y2Za8KsB_T9Huhtc6QFrY0hf5Q6xV7ubyJcJ44r-Yy0)"  }
+```{.plantuml #fig-ActivityDiagramExampleGitCommit caption="Diagramme d'activité pour un processus simple avec Git. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VL9BRjj03DtFAGXlRE_QhRreZAG9ya5QH6wxoc8yGqcC98unmscIS_G2tVeSGkzLoWfGEq0j29Gmxv5yV9op93PAxbgJ6kAjZRQ39AyjQepatY4RwvegXipUXJP4a6WvAOGiPWfIKm9zBTIM_NCa4MGe0miGmmzY7vwJcVuhvx6qkPM1mRP3k8sKXfJhzRcPhcjC245gZ0dQ41ge8jfzgUBx5SmwswZ8757xukjKlyGwJDkYrvuHLdTtyAtu_50SD8UF7-Rc__sJhOR09qLUSmCt8KUsxIdQI-Cy52xILaxHlgAQ5DE1g4Fl96OyW2x6v3M-oAgbYZlr7Pm6ZAVMDspOS124I5Kji82BVhV9OXOF_SvJXH5SyBWyvgoSq4-IVcSMvuf25poLrEyUZsdtVtvb3tuQDayenb09ioiRlTOS4vmL2fm-pOSrCSo-P9eRqEUz84T9YO02PHx-zgJ5wYbaUHC8_MyTorR4rN94zy8cXPwXdpoEPvUMz2vCNEWwaWdO3BxVROD0HR8S60PRlLYp-y2Za8KsB_T9Huhtc6QFrY0hf5Q6xV7ubyJcJ44r-Yy0)"  }
 @startuml
 skinparam style strictuml
 skinparam DefaultTextAlignment center
@@ -29,11 +29,11 @@ note right : Activité
 :Code modifié]
 note right : Nœud d'objet
 
-if (Garder\nmodifications?) then (Oui)
+if (Garder\nmodifications ?) then (Oui)
     note right : Décision et fusion
-    :Ajouter code à staging;
+    :Ajouter code à *staging*;
     :Code "staged"]
-    :Faire "commit" au dépôt git;    
+    :Faire "commit" au dépôt Git;    
 else (Non)
     :Défaire modifications
     au code;
@@ -43,20 +43,20 @@ note right : Fin
 @enduml
 ```
 
-## Diagrammes de flot de données (DFD)
+## Diagrammes de flots de données (DFD)
 
-Pour la modélisation de flot de données, il existe une notation pour les [diagrammes de flots de données (DFD)](https://fr.wikipedia.org/wiki/Diagramme_de_flux_de_donn%C3%A9es)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
+Pour la modélisation de flots de données, il existe une notation pour les [diagrammes de flots de données (DFD)](https://fr.wikipedia.org/wiki/Diagramme_de_flux_de_donn%C3%A9es)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i>.
 Il ne s'agit pas de l'UML, mais cette notation est encore utilisée (depuis les années 1970).
 
-Un exemple de diagramme d'activité dans le cadre d'un cours de programmation utilisant GitHub Classrooms est dans la @fig-GitHubClassroomActivities.
-Ce diagramme qui explique comment GitHub Classrooms permet à l'étudiant qui accepte un devoir (*assignment* en anglais) sur GitHub Classrooms de choisir son identité universitaire, mais seulement si l'enseignant a téléversé la liste de classe *avant* d'envoyer les invitations aux étudiants.
+Un exemple de diagramme d'activités dans le cadre d'un cours de programmation utilisant GitHub Classroom est dans la @fig-GitHubClassroomActivities.
+Ce diagramme explique comment GitHub Classroom permet à l'étudiant(e) qui accepte un devoir (*assignment* en anglais) sur GitHub Classroom de choisir son identité universitaire, mais seulement si l'enseignant(e) a téléversé la liste de classe *avant* d'envoyer les invitations aux étudiant(e)s.
 
-```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub _Classrooms_. [(PlantUML)](https://www.plantuml.com/plantuml/uml/NOzBYXin48RtEaN1B6n3Gk_jpHZF91d88uJ90SfIjQSOFMIfD2JG5yXHlCagD-YBfTenxJ2z4AZhrr_VTri5YxJWJNtccB5WW2e_FUbPsBwQt56FpSiZ_P2jvqCC50Mi7bJ-Ixb_gNSfocSC1Dl2w8smQEjzj4yu_evqVkeMQ8LVMCPJXPnQ0PqU6q7NxJpMMb8ANGVBGqajqrkhYReomtsifDjH6rA3wuq6SzOnwrqPJrHWBjcOcxvt-gqVGav5TEQv2Yahs2b4PldW58bxrg8Adr9odbQRkMfRwqLOaz4fj6lekqV2CAM-wbeyQ6uvGHOclmA_-FxjepfoL4CKJd5ZXXld9f9X_2NDyKLXlgZ1-akc2FhoohnxIbov05y9Bu0RCm_7qx5n9bXgdvsOvr_ADxnd-T3ssdxNikTZcqZxL9wLai2Dfpp-KJ5iiAUQEBu1V24xpMmAMSYuHOiGAEoBnadLKZbWv7hMqWLLKZQt55qBtlm5)"  }
+```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classrooms. [(PlantUML)](https://www.plantuml.com/plantuml/uml/NOzBYXin48RtEaN1B6n3Gk_jpHZF91d88uJ90SfIjQSOFMIfD2JG5yXHlCagD-YBfTenxJ2z4AZhrr_VTri5YxJWJNtccB5WW2e_FUbPsBwQt56FpSiZ_P2jvqCC50Mi7bJ-Ixb_gNSfocSC1Dl2w8smQEjzj4yu_evqVkeMQ8LVMCPJXPnQ0PqU6q7NxJpMMb8ANGVBGqajqrkhYReomtsifDjH6rA3wuq6SzOnwrqPJrHWBjcOcxvt-gqVGav5TEQv2Yahs2b4PldW58bxrg8Adr9odbQRkMfRwqLOaz4fj6lekqV2CAM-wbeyQ6uvGHOclmA_-FxjepfoL4CKJd5ZXXld9f9X_2NDyKLXlgZ1-akc2FhoohnxIbov05y9Bu0RCm_7qx5n9bXgdvsOvr_ADxnd-T3ssdxNikTZcqZxL9wLai2Dfpp-KJ5iiAUQEBu1V24xpMmAMSYuHOiGAEoBnadLKZbWv7hMqWLLKZQt55qBtlm5)"  }
 @startuml
 skinparam style strictuml
 skinparam DefaultTextAlignment center
 skinparam defaultFontName Arial
-title Enchaînement d'activités pour chaque //Classroom// (groupe-cours)
+title Enchaînement d'activités pour chaque //classroom// (groupe-cours)
 |Enseignant ou Enseignante|
 start
 :Créer Classroom;
@@ -81,7 +81,7 @@ stop
 
 Ces exercices devraient vous aider à comprendre les diagrammes
 d'activités en UML. Vous devez vous référer au livre du cours pour la
-bonne notation (Chapitre F25/A28).
+bonne notation (chapitre F25/A28) \faBook<i class="fa-solid fa-book"></i>.
 
 {{< include _callout_conseils_diagrammes.qmd >}}
 
@@ -91,7 +91,7 @@ bonne notation (Chapitre F25/A28).
 ### Location de voitures
 
 Esquissez le diagramme d'activités lors de la réception de voitures louées (après la location) dans une compagnie.
-Pour le diagramme, faites attention à la **notation UML**: cela comprend les objets (pour la voiture et pour la facture), le début et la fin de l'activité, les débranchements, les jointures, les décisions et les fusions.
+Pour le diagramme, faites attention à la **notation UML** : cela comprend les objets (pour la voiture et pour la facture), le début et la fin de l'activité, les débranchements, les jointures, les décisions et les fusions.
 
 -   Les rôles sont le client, le réceptionniste (qui gère la
     documentation et le paiement de la location) et l'agent (qui gère le
@@ -103,8 +103,7 @@ Pour le diagramme, faites attention à la **notation UML**: cela comprend les ob
 -   L'agent inspecte la voiture pour la propreté. Si elle n'est pas
     assez propre, alors l'agent doit laver, rincer et sécher
     l'extérieur et nettoyer l'intérieur. Ce travail devrait
-    commencer le plus vite possible, après que le réceptionniste ait
-    fini de noter les informations pour la facture.
+    commencer le plus vite possible, après que le réceptionniste a fini de noter les informations pour la facture.
 
 Voir [une solution avec PlantUML](http://www.plantuml.com/plantuml/uml/PP71QeH038RlUOf0B_eAqqDtAHGAPIaMsbCFWnirg9dfJ1GMV26VmnVhwEuMf9U1_FcI_CaSejgWGzz1R5cy3RR7g9UEqXkut3BJSySaEi76WYb8pe4GFXth4EWHfeUZAFyCzDMmqbGiSqbUsObmJ36O6uca26MtpF4RpCaf1MpxJHGUoGv8CPAKgMFbGWkcNcPPvf0mg6nvctKtOrwkKchrRYyxPgr6MriMc8xrbNwLwAbSHy9uzyqLPZuu7-WfHsr8C7C3vq1T9Cp4IGxcpOwx6bDmShXJFjA-pLuwaQhRJB5eMe5f270cx2p-GUcANC7_QoKTj_sZEW-75AwVy0i0).
 
@@ -114,7 +113,7 @@ Voir [une solution avec PlantUML](http://www.plantuml.com/plantuml/uml/PP71QeH03
 
 ### Soumission de devoir Moodle
 
-Dessinez un diagramme d'activité qui modélise ce qui se passe lorsque vous faites un devoir dans Moodle.
+Dessinez un diagramme d'activités qui modélise ce qui se passe lorsque vous faites un devoir dans Moodle.
 Votre diagramme doit comprendre les activités de l'enseignant et de l'étudiant (dans les partitions séparées). 
 Le devoir doit être un _objet_ dans le diagramme.
 
@@ -122,9 +121,9 @@ Le devoir doit être un _objet_ dans le diagramme.
 
 ::: {#exr-DevoirGoogleClassroom}
 
-### Soumission de devoir Google Classrooms
+### Soumission de devoir Google Classroom
 
-Dessinez un diagramme d'activité qui modélise ce qui se passe lorsque vous faites un devoir dans Google Classrooms.
+Dessinez un diagramme d'activités qui modélise ce qui se passe lorsque vous faites un devoir dans Google Classroom.
 Votre diagramme doit comprendre les activités de l'enseignant et de l'étudiant (dans les partitions séparées). 
 Le devoir doit être un _objet_ dans le diagramme.
 

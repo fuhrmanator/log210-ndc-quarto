@@ -26,7 +26,7 @@ Dans la méthodologie de ce manuel, on exploite l'outil PlantUML pour faire beau
 - Il est basé sur un langage spécifique à un domaine (en anglais *domain-specific language* ou DSL), dont les fichiers peuvent être facilement mis sur un contrôle de version (Git);
 - Il est basé sur du code libre;
 - Il s'occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est complexe);
-- Il est populaire (utilisé par des ingénieurs(euses) chez Google pour documenter Android, Pay, etc.);
+- Il est populaire (utilisé par des ingénieur(e)s chez Google pour documenter Android, Pay, etc.);
 - Il existe plusieurs supports pour les outils de documentation:
   - extension [PlantUML pour Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) (@fig-PlantUMLVSCode) avec [tutoriel](https://www.youtube.com/watch?v=xkwJ9GwgZJU)\ \faYoutube<i class="fa-brands fa-youtube"></i> ;
   - extension [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&hl=en) pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l'ÉTS (@fig-PlantUMLGizmo).
