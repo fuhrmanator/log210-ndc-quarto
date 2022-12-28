@@ -176,16 +176,16 @@ Une personne exclue de cette manière va probablement abandonner le cours, et vo
 - Est-ce que certains membres travaillent excessivement, sans donner la chance aux autres de contribuer?
 N'oubliez pas que les laboratoires sont une manière d'apprendre à pratiquer la matière de ce manuel. 
 Laisser un ou deux membres de l'équipe faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l'examen final pour les membres qui ont moins contribué).
-Il y a aussi un risque sur le plan de la [Redondance des compétences dans l'équipe (Bus Factor)](#sec-Bus_Factor), surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il travaille trop.
-- Est-ce que tout le monde utilise un moyen de communiquer de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n'est pas l'outil idéal pour coordonner un travail en équipe.
-- etc.
+Il y a aussi un risque sur le plan de la [Redondance des compétences dans l'équipe (*bus Factor*)](#sec-Bus_Factor), surtout si un(e) membre qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il (elle) travaille trop.
+- Est-ce que tout le monde utilise un moyen de communication de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n'est pas l'outil idéal pour coordonner un travail en équipe.
+- Etc.
 
-Dans le bilan il faut *constater les faits* et *proposer des solutions* pour éviter des inégalités importantes sur le plan de la contribution dans les prochaines itérations. 
-Ainsi, vous gérez les problèmes de manière plus proactive.
+Dans le bilan, il faut *constater les faits* et *proposer des solutions* pour éviter des inégalités importantes sur le plan de la contribution dans les prochaines itérations. 
+Ainsi, vous gérerez les problèmes de manière plus proactive.
 
 ### FAQ pour gitinspector
 
-**Q: Comment fusionner le travail réalisé par le même coéquipier, mais avec plusieurs comptes (courriels) différents?**
+**Q: Comment fusionner le travail réalisé par une même personne, mais avec plusieurs comptes (courriels) différents?**
 
 **R:** La solution est avec le fichier `.mailmap`. Vous pouvez rapidement générer un fichier de base avec la commande:
 
@@ -196,10 +196,10 @@ git shortlog -se | sed "s/^.*\\t//"  > .mailmap
 Ensuite, modifiez le fichier `.mailmap` pour respecter ce format:
 
 ```email
-Prénom Nom Désirés <courriel> Prénom Nom Non-Désirés <courriel>
+Prénom Nom Désirés <courriel> Prénom Nom Non Désirés <courriel>
 ```
 
-Par exemple, soit le `.mailmap` initial qui contient quatres entrées pour le même auteur:
+Par exemple, le `.mailmap` initial qui contient quatre entrées pour le même auteur:
 
 ```email
 C. Fuhrman <christopher.fuhrman@etsmtl.ca>
@@ -221,12 +221,12 @@ C. Fuhrman <christopher.fuhrman@etsmtl.ca> Cris Fuhrman <fuhrmanator+git@gmail.c
 
 Le nom que vous mettez sera celui qui apparaît dans les rapports la prochaine fois qu'ils seront générés.
 
-**Q: Comment exclure le travail réalisé par un chargé de laboratoire (par exemple le clone initial dans GitHub Classroom)?**
+**Q: Comment exclure le travail réalisé par un(e) chargé(e) de laboratoire (par exemple le clone initial dans GitHub Classroom)?**
 
-**R:** La solution est d'ajouter le nom de l'auteur dans le tableau du script `contributions.sh` à la ligne suivante avec `authorsToExcludeArray`. Attention:
+**R:** La solution est d'ajouter le nom de l'auteur(e) dans le tableau du script `contributions.sh` à la ligne suivante avec `authorsToExcludeArray`. Attention:
 
 - Il n'y a pas de `,` entre les éléments des tableaux en bash.
-- Le nom d'un auteur ayant un accent ne sera pas reconnu. Il faut changer le nom dans le `.mailmap` pour qu'il n'y ait pas d'accents, ou utiliser une chaîne partielle comme `"Benjamin Le"` pour exclure les contributions de `"Benjamin Le Dû"`.
+- Le nom d'un(e) auteur(e) contenant un accent ne sera pas reconnu. Il faut changer le nom dans le `.mailmap` pour qu'il n'y ait pas d'accents, ou utiliser une chaîne partielle comme `"Benjamin Le"` pour exclure les contributions de `"Benjamin Le Dû"`.
 
 ```bash
 authorsToExcludeArray=("C. Fuhrman" "Benjamin Le" "Yvan Ross")
