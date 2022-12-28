@@ -1,14 +1,14 @@
 # Cas d'utilisation - Ouvrir la caisse {#sec-CU_Ouvrir_caisse}
 
-Le contexte est l'étude de cas du système POS NextGen, notamment le scénario principal du cas d'utilisation *Ouvrir la caisse* (anglais *Cash In*).
-C'est l'acte d'un caissier ou d'une caissière qui arrive avec son tiroir-caisse contenant déjà de l'argent, qui s'authentifie sur la caisse (le registre) et saisit le montant en espèces dans le tiroir-caisse.
+Le contexte est l'étude de cas du système POS NextGen, notamment le scénario principal du cas d'utilisation *Ouvrir la caisse* (en anglais *Cash In*).
+C'est l'acte d'un caissier ou d'une caissière qui arrive avec son tiroir-caisse contenant déjà de l'argent, qui s'authentifie sur la caisse (le registre) et qui saisit le montant en espèces dans le tiroir-caisse.
 
 ::: {.callout-note}
 En effet, ce cas d'utilisation n'est pas présenté en détail par @craig_uml_2005, bien qu'il soit mentionné dans son livre dans un diagramme de cas d'utilisation.
-Alors, nous proposons pour cet exercice des modifications au modèle du domaine présenté par Larman à fin de modéliser cette fonctionnalité additionnelle du logiciel.
+Alors, nous proposons pour cet exercice des modifications au modèle du domaine présenté par Larman afin de modéliser cette fonctionnalité additionnelle du logiciel.
 :::
 
-```{.plantuml #fig-DCU_ouvrir_la_caisse caption='Diagramme de cas d\'utilisation pour le système NextGen'}
+```{.plantuml #fig-DCU_ouvrir_la_caisse caption='Diagramme de cas d\'utilisation pour le système NextGen.'}
 @startuml
 skinparam style strictuml
 skinparam defaultFontName Arial
@@ -60,22 +60,22 @@ Quelques termes du domaine d'affaires doivent être compris avant de procéder:
 
 \filbreak
 Tiroir-caisse
-: C'est la partie de la caisse qui s'ouvre, dans laquelle on peut placer un plateau-billets.
+. C'est la partie de la caisse qui s'ouvre, dans laquelle on peut placer un plateau-billets.
 
 Plateau-billets
-: C'est un conteneur pour les billets d'argent et des pièces de monnaie qui facilite le changement de personnel à une caisse.
-Chaque caissier ou caissière possède un plateau-billets et l'apporte lorsqu'il commence ou termine un quart de travail.
+. C'est un contenant pour les billets de banque et les pièces de monnaie qui facilite le changement de personnel à une caisse.
+Chaque caissier ou caissière possède un plateau-billets et l'apporte lorsqu'il est au début ou à la fin de son quart de travail.
 
 ## Cas d'utilisation: Ouvrir la caisse
 
-**Acteur principal : Caissier**
+**Acteur principal : Caissier ou Caissière**
 
 **Préconditions :** La caisse est libre et son tiroir-caisse est vide (il n'y a pas de plateau dedans).
 
-**Garanties de succès (postconditions) :** Le caissier ou la caissière est authentifiée.
-Son plateau-billets est placé dans le tiroir-caisse et son identificateur est enregistré.
+**Garanties de succès (postconditions) :** La caissière ou le caissier est authentifié.
+Son plateau-billets est placé dans le tiroir-caisse, et son identificateur est enregistré.
 Le montant d'argent du plateau est enregistré.
-L'heure de l'arrivée du caissier est enregistrée.
+L'heure de l'arrivée du caissier ou de la caissière est enregistrée.
 
 **Scénario principal (succès)**
 
@@ -102,21 +102,21 @@ L'heure de l'arrivée du caissier est enregistrée.
 **Spécifications particulières :**
 
 Les caisses sont configurées avec un modèle de plateau-billets comme celui-ci: [(voir exemple sur
-Youtube)](http://www.youtube.com/watch?feature=player_detailpage&v=lth_lAacXVQ#t=32s)
+YouTube.)](http://www.youtube.com/watch?feature=player_detailpage&v=lth_lAacXVQ#t=32s)
 
-**Fréquence d'occurrence :** Normalement, au début du quart de travail de chaque caissier.
+**Fréquence d'occurrence :** Normalement, au début du quart de travail de chaque caissier ou caissière.
 
 ## Modèle du domaine partiel
 
 Voici un exemple pour le système POS NextGen. 
-Noter les nouvelles classes conceptuelles **PlateauBillets** (un objet physique) et **MisePlateau** (une transaction) faisant partie du scénario d'*Ouvrir la caisse*.
+Notez les nouvelles classes conceptuelles **Plateau-billets** (un objet physique) et **MisePlateau** (une transaction) faisant partie du scénario d'*Ouvrir la caisse*.
 
 ![Modèle du domaine partiel](images/MDD_POS_NextGen.drawio.svg)
 
 On remarque que lorsqu'un Registre (Caisse) n'a pas de Caissier (l'état du système au début du cas d'utilisation), l'objet Registre n'est associé à
 aucun objet Caissier. 
 Nous avons donc modifié les cardinalités de l'association en conséquence. 
-C'est une différence par rapport au modèle du domaine de base présenté par Larman, qui n'avait pas considéré ce cas d'utilisation, bien qu'il est dans l'ensemble des spécifications du système.
+C'est une différence par rapport au modèle du domaine de base présenté par Larman, qui n'avait pas considéré ce cas d'utilisation, bien qu'il soit dans l'ensemble des spécifications du système.
 
 Les associations en rouge sont celles qui sont affectées par la dynamique de ce cas d'utilisation.
 
@@ -126,12 +126,12 @@ Les associations en rouge sont celles qui sont affectées par la dynamique de ce
 
 La @fig-DSS_ouvrir_la_caisse est le diagramme de séquence système (DSS) pour le scénario "Ouvrir la caisse". 
 
-```{.plantuml #fig-DSS_ouvrir_la_caisse caption='Diagramme de séquence système (DSS) pour le scénario "Ouvrir la caisse"'}
+```{.plantuml #fig-DSS_ouvrir_la_caisse caption='Diagramme de séquence système (DSS) pour le scénario "Ouvrir la caisse".'}
 @startuml
 skinparam style strictuml
 skinparam defaultFontName Arial
 skinparam SequenceMessageAlign center
-title Scénario: Ouvrir la caisse
+title Scénario : Ouvrir la caisse
 actor ":Caissier" as C
 participant ":Système" as S
 C->S: démarrerOuvrirCaisse()
@@ -149,37 +149,37 @@ C->S: fermerTiroir()
 
 Voici les contrats pour chaque opération système.
 
-**Opération: démarrerOuvrirCaisse()**
+**Opération: démarrerOuvrirCaisse().**
 
-**Postconditions:**
+**Postcondition :**
 
 -   Une instance *mp* de MisePlateau a été créée.
 
 **Opération: authentifier(identifiant : String, mdp : String)**
 
-**Postconditions:**
+**Postconditions :**
 
--   *mp* a été associé à un Caissier, sur la base de correspondance avec **identifiant**.
+-   *mp* a été associée à un Caissier, sur la base de correspondance avec **identifiant**.
 -   Le Registre en cours a été associé à un Caissier, sur la base de correspondance avec **identifiant**.
 
-**Opération: poserPlateau(identifiant : String)**
+**Opération: poserPlateau(identifiant : String).**
 
-**Postconditions**
+**Postconditions :**
 
--   *mp* a été associé à un PlateauBillets, sur la base de correspondance avec **identifiant**.
--   Le Registre en cours a été associé à un PlateauBillets, sur la base de correspondance avec **identifiant**.
+-   *mp* a été associée à un Plateau-Billets, sur la base de correspondance avec **identifiant**.
+-   Le Registre en cours a été associé à un Plateau-Billets, sur la base de correspondance avec **identifiant**.
 
-**Opération: saisirMontant(montant : Monnaie)**
+**Opération: saisirMontant(montant : Monnaie).**
 
-**Postconditions**
+**Postcondition :**
 
 -   *mp.montant* est devenu **montant**.
 
-**Opération: fermerTiroir()**
+**Opération: fermerTiroir().**
 
 **Postconditions:**
 
--   *mp.dateHeure* est devenue la date et l'heure actuelle.
--   *mp* a été associé à GrandLivre.
--   *mp* a été associé à Registre.
+-   *mp.dateHeure* est devenue la date et l'heure actuelles.
+-   *mp* a été associée à GrandLivre.
+-   *mp* a été associée à Registre.
 

@@ -4,7 +4,7 @@ Voici des artefacts en PlantUML proposés pour le cas d'utilisation *Traiter une
 
 ## DSS {#sec-DSS_traiter_vente}
 
-```{.plantuml caption="DSS pour le scénario Traiter Vente de @craig_uml_2005"}
+```{.plantuml caption="DSS pour le scénario Traiter vente de @craig_uml_2005."}
 @startuml
 skinparam style strictuml
 skinparam SequenceMessageAlign center
@@ -20,7 +20,7 @@ end loop
 c->s : terminerSale()
 c<<--s : total with taxes
 c->s : fairePaiement(montant:Monnaie)
-c<<--s : rendu de monnaie, reçu
+c<<--s : remise de monnaie, reçu
 @enduml
 ```
 
@@ -35,18 +35,18 @@ skinparam style strictuml
 skinparam backgroundcolor transparent
 
 class "LigneArticle" as SLI {
-  quantité:int
+  quantité : int
 }
 class Vente {
-  dateHeure: DateHeure
+  dateHeure : DateHeure
   estTerminée : boolean
 }
 class Paiement {
-  montant:Monnaie
+  montant : Monnaie
 }
 class Magasin {
-  nom:String
-  adresse:String
+  nom : String
+  adresse : String
 }
 class "Description\nProduit" as PD {
   description : String
