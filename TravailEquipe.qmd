@@ -41,7 +41,7 @@ Cette section présente ces aspects en détail.
 
 ### Humilité
 
-Voici la définition d'*humilité* selon *Antidote* :
+Voici la définition d'*humilité* selon *Antidote*:
 
 ::: {.callout}
 Disposition à s'abaisser volontairement, par sentiment de sa propre faiblesse.
@@ -54,7 +54,7 @@ Une personne humble pense ainsi [@fitzpatrick_team_2012]:
 - Je suis ouverte à m'améliorer.
 
 ::: {.callout-important}
-L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte d'être mal traité(e) par les autres". Voir la section [Proposer des solutions au besoin](#sec-solution_problemes_equipes).
+L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte les attaques de la part des autres". Voir la section [Proposer des solutions au besoin](#sec-solution_problemes_equipes).
 :::
 
 ![Éviter d'être le ["Centre de l'univers"](https://www.flickr.com/photos/diamondduste/466060240/) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)) par [Diamondduste](https://www.flickr.com/people/diamondduste/).](images/flickr_diamondduste_center.jpg){width="200px"}
@@ -75,11 +75,11 @@ rectangle "<size:50>**Équipe > Moi**</size>" #ffbbbb|bbffbb
 
 Quelques exemples concrets d'humilité dans le développement:
 
-- Un(e) membre de l'équipe débutant en JavaScript, Git, etc. vont le reconnaître et vont même faire des exercices sur Internet pour s'améliorer.
+- Les membres de l'équipe qui débutent en JavaScript, Git, etc. vont le reconnaître et vont même faire des exercices sur Internet pour s'améliorer.
 - Les membres de l'équipe qui ont pris une mauvaise décision (technique ou autre) vont l'avouer. Elles et ils savent que les autres ne sont pas là pour les attaquer (il y a du respect).
 - Un(e) membre de l'équipe va travailler fort pour que *son équipe* réussisse.
 - Un(e) membre de l'équipe qui reçoit une critique ne va pas la prendre personnellement.
-Il ou elle sait que la qualité de son code n'équivaut pas à son estime de soi (cela n'est pas toujours facile !).
+Il ou elle sait que la qualité de son code n'équivaut pas à son estime de soi (cela n'est pas toujours facile!).
 
 ### Respect
 
@@ -127,7 +127,7 @@ Au moins une autre personne dans l'équipe doit être au courant de ce que faisa
 ## Mentorat
 
 Pour des raisons pédagogiques [@oakley2004turning], c'est l'enseignant(e) qui décide la composition des équipes.
-Ça veut dire que, forcément certaines personne de l'équipe ont plus d'expérience et de facilité à faire certaines tâches que d'autres.
+Ça veut dire que, forcément certaines personnes de l'équipe ont plus d'expérience et de facilité à faire certaines tâches que d'autres.
 Les équipes doivent composer avec cette diversité.
 
 Selon @fitzpatrick_team_2012:
@@ -169,7 +169,7 @@ Considérez les volets HRC lorsque vous vous trouvez dans une des situations sui
 - Un ou deux membres d'une équipe abandonnent le cours après les évaluations de mi-trimestre, par crainte d'échec.
 - Un membre de l'équipe suit cinq (!) cours en même temps et n'a pas le temps suffisant pour travailler correctement dans les laboratoires de cette matière.
 - Plusieurs membres de l'équipe ont de l'expérience, mais ont de la difficulté à s'entendre sur l'orientation du projet.
-- L'équipe n'est pas cohésive : chaque membre fait avancer sa partie, mais le code ne fonctionne pas ensemble.
+- L'équipe n'est pas cohésive: chaque membre fait avancer sa partie, mais le code ne fonctionne pas ensemble.
 
 Vous devez en parler avec votre équipe.
 Si la situation ne s'améliore pas, vous devez en parler avec une personne ressource, comme votre superviseur(e) (en stage), les auxiliaires de laboratoire ou l'enseignant(e).

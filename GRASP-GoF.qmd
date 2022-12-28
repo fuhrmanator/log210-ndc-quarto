@@ -119,9 +119,9 @@ Selon @craig_uml_2005:
 **Solution:** Identifiez les points de variation ou d'instabilité prévisibles et affectez les responsabilités afin de créer une "interface" stable autour d'eux.
 :::
 
-Les "variations ou l'instabilité" sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeur(e)s du projet (ce sont des modules externes ayant chacun une API différente). Quant à l'" impact négatif sur les autres", il s'agit des modifications que les développeur(e)s auraient à faire sur la classe Vente chaque fois que l'on décide de supporter un autre calculateur de taxes (ou si l'API de ce dernier évolue). 
+Les "variations ou l'instabilité" sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs(euses) du projet (ce sont des modules externes ayant chacun une API différente). Quant à l'" impact négatif sur les autres", il s'agit des modifications que les développeurs(euses) auraient à faire sur la classe Vente chaque fois que l'on décide de supporter un autre calculateur de taxes (ou si l'API de ce dernier évolue). 
 
-Quant aux "responsabilités" à affecter, c'est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de l'" interface stable", il s'agit de la méthode `getTaxes()`, qui ne changera jamais. Elle est définie dans le type-interface IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API). 
+Quant aux "responsabilités" à affecter, c'est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de l'"interface stable", il s'agit de la méthode `getTaxes()`, qui ne changera (probablement) jamais. Elle est définie dans le type-interface IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API). 
 
 ## GRASP et réusinage
 
