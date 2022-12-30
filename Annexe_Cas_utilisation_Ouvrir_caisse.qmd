@@ -60,10 +60,10 @@ Quelques termes du domaine d'affaires doivent être compris avant de procéder:
 
 \filbreak
 Tiroir-caisse
-. C'est la partie de la caisse qui s'ouvre, dans laquelle on peut placer un plateau-billets.
+: C'est la partie de la caisse qui s'ouvre, dans laquelle on peut placer un plateau-billets.
 
 Plateau-billets
-. C'est un contenant pour les billets de banque et les pièces de monnaie qui facilite le changement de personnel à une caisse.
+: C'est un contenant pour les billets de banque et les pièces de monnaie qui facilite le changement de personnel à une caisse.
 Chaque caissier ou caissière possède un plateau-billets et l'apporte lorsqu'il est au début ou à la fin de son quart de travail.
 
 ## Cas d'utilisation: Ouvrir la caisse
@@ -149,33 +149,33 @@ C->S: fermerTiroir()
 
 Voici les contrats pour chaque opération système.
 
-**Opération: démarrerOuvrirCaisse().**
+**Opération: démarrerOuvrirCaisse()**
 
-**Postcondition :**
+**Postconditions:**
 
 -   Une instance *mp* de MisePlateau a été créée.
 
 **Opération: authentifier(identifiant : String, mdp : String)**
 
-**Postconditions :**
+**Postconditions:**
 
 -   *mp* a été associée à un Caissier, sur la base de correspondance avec **identifiant**.
 -   Le Registre en cours a été associé à un Caissier, sur la base de correspondance avec **identifiant**.
 
-**Opération: poserPlateau(identifiant : String).**
+**Opération: poserPlateau(identifiant : String)**
 
-**Postconditions :**
+**Postconditions:**
 
--   *mp* a été associée à un Plateau-Billets, sur la base de correspondance avec **identifiant**.
--   Le Registre en cours a été associé à un Plateau-Billets, sur la base de correspondance avec **identifiant**.
+-   *mp* a été associée à un PlateauBillets, sur la base de correspondance avec **identifiant**.
+-   Le Registre en cours a été associé à un PlateauBillets, sur la base de correspondance avec **identifiant**.
 
-**Opération: saisirMontant(montant : Monnaie).**
+**Opération: saisirMontant(montant : Monnaie)**
 
-**Postcondition :**
+**Postcondition:**
 
 -   *mp.montant* est devenu **montant**.
 
-**Opération: fermerTiroir().**
+**Opération: fermerTiroir()**
 
 **Postconditions:**
 

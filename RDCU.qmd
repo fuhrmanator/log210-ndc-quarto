@@ -13,9 +13,9 @@ Il est normal de ne pas tout comprendre au début, alors posez des questions si 
   - rechercher les informations qui sont éventuellement rendues à l'acteur dans le DSS.
 - Il s'agit d'un diagramme de séquence en UML.
 Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique la notation de manière agile:
-  - Il n'est pas nécessaire de faire les boîtes d'activation, car ça prend du temps les faire correctement lorsqu'on dessine à la main un diagramme ;
-  - On doit se servir des annotations pour documenter les choix (GRASP) ;
-  - On dessine à la main des diagrammes puisqu'on peut faire ça en équipe sur un tableau blanc, mais aussi, à l'examen, vous devez faire des diagrammes à la main ;
+  - Il n'est pas nécessaire de faire les boîtes d'activation, car ça prend du temps les faire correctement lorsqu'on dessine à la main un diagramme;
+  - On doit se servir des annotations pour documenter les choix (GRASP);
+  - On dessine à la main des diagrammes puisqu'on peut faire ça en équipe sur un tableau blanc, mais aussi, à l'examen, vous devez faire des diagrammes à la main;
   - Au lieu d'un message pointillé indiquant le retour d'une valeur à la fin de l'exécution d'une méthode, on utilise l'affectation sur le message (comme dans la programmation), par exemple `c = getClient(...)` à la @fig-RDCU_ID_en_objets.
 - Le livre de @craig_uml_2005 présente quelques RDCU qui sont des *diagrammes de communication*. 
 Cette notation n'est pas utilisée dans ce manuel, car elle est plus complexe à utiliser et elle est comparable à la notation des diagrammes de séquence.

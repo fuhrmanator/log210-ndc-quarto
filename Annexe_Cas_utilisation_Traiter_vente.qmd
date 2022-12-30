@@ -4,7 +4,7 @@ Voici des artefacts en PlantUML proposés pour le cas d'utilisation *Traiter une
 
 ## DSS {#sec-DSS_traiter_vente}
 
-```{.plantuml caption="DSS pour le scénario Traiter vente de @craig_uml_2005."}
+```{.plantuml caption="DSS pour le scénario Traiter une vente de @craig_uml_2005."}
 @startuml
 skinparam style strictuml
 skinparam SequenceMessageAlign center

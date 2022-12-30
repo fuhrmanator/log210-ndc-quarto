@@ -1,6 +1,6 @@
 # Cas d'utilisation - Réserver un livre de la bibliothèque {#sec-CU_Réserver_livre}
 
-**Parties prenantes et intérêts** :  
+**Parties prenantes et intérêts**:  
 - **La personne membre.** Elle veut un moyen de recherche exact et rapide et ne
 veut pas que la Bibliothèque mémorise des informations sur ses
 recherches (confidentialité). Elle veut pouvoir réaliser des réservations
