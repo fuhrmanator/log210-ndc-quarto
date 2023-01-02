@@ -161,3 +161,107 @@ get plumage() {
 }
 ```
 :::
+
+
+::: {#exr-cohesion}
+### GRASP Cohésion
+- Lesquelles des classes suivantes ont de multiples responsabilités ?
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+class Jeu {
+
+    login()
+    inscrire()
+    déplacer()
+    tirer()
+    rester()
+}
+
+class Joueur {
+
+    setNom()
+    setAdresse()
+    setNuméroTéléphone()
+    sauvegarder()
+    charger()
+}
+
+class Téléphone {
+
+    composer()
+    raccrocher()
+    parler()
+    envoyerDonnées()
+    flash()
+}
+
+class JeuCartes {
+
+    hasNext()
+    next()
+    remove()
+    addCard()
+    removeCard()
+    shuffle()
+}
+
+class Panier {
+
+    ajouter()
+    enlever()
+    encaisser()
+    sauvegarder()
+}
+
+class Iterator {
+
+    hasNext()
+    next()
+    remove()
+}
+
+@enduml
+```
+
+
+- Déterminez si ces classes ont une cohésion forte ou faible :
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+class Jeu {
+
+    login()
+    inscrire()
+    déplacer()
+    tirer()
+    rester()
+    getMeilleureScore()
+    getNom()
+}
+
+class SessionPartie {
+
+    login()
+    inscrire()
+}
+
+class ActionsJoueur {
+
+    déplacer()
+    tirer()
+    rester()
+}
+
+class Joueur {
+
+    getMeilleurScore()
+    getNom()
+}
+
+@enduml
+```
+
+:::
