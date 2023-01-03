@@ -268,7 +268,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciels en équipe</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -293,7 +293,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’états</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -380,7 +380,7 @@ div.csl-indent {
   <li><a href="#sec-SpectreDeLaConception" id="toc-sec-SpectreDeLaConception" class="nav-link active" data-scroll-target="#sec-SpectreDeLaConception"><span class="toc-section-number">6.1</span>  Spectre de la conception</a></li>
   <li><a href="#tbl-GRASPTable" id="toc-tbl-GRASPTable" class="nav-link" data-scroll-target="#tbl-GRASPTable"><span class="toc-section-number">6.2</span>  Tableau des principes GRASP</a></li>
   <li><a href="#grasp-et-rdcu" id="toc-grasp-et-rdcu" class="nav-link" data-scroll-target="#grasp-et-rdcu"><span class="toc-section-number">6.3</span>  GRASP et RDCU</a></li>
-  <li><a href="#grasp-et-patterns-gof" id="toc-grasp-et-patterns-gof" class="nav-link" data-scroll-target="#grasp-et-patterns-gof"><span class="toc-section-number">6.4</span>  GRASP et Patterns GoF</a></li>
+  <li><a href="#grasp-et-patterns-gof" id="toc-grasp-et-patterns-gof" class="nav-link" data-scroll-target="#grasp-et-patterns-gof"><span class="toc-section-number">6.4</span>  GRASP et patterns GoF</a></li>
   <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">6.5</span>  Exercices</a></li>
   </ul>
 </nav>
@@ -391,18 +391,18 @@ div.csl-indent {
 
 
 
-<p>GRASP est un acronyme de l’expression anglaise «&nbsp;General Responsibility Assignment Software Patterns&nbsp;» c’est-à-dire les principes pour affecter les responsabilités logicielles dans les classes.</p>
+<p>GRASP est un acronyme de l’expression anglaise «&nbsp;General Responsibility Assignment Software Patterns&nbsp;», c’est-à-dire les principes pour affecter les responsabilités logicielles dans les classes.</p>
 <p>Une approche GRASP devrait amener un design vers la modularité et la maintenabilité.</p>
-<p>L’acronyme d’une expression vulgarisée pourrait être <span style="white-space:nowrap">POMM :</span> «&nbsp;Principes pour déterminer Où Mettre une Méthode&nbsp;».</p>
-<p>En tant qu’ingénieur logiciel, vous devez décider souvent où placer une méthode (dans quelle classe) et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d’ingénierie favorisant la modularité.</p>
-<p>Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et des classes plus cohésives. Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.</p>
+<p>L’acronyme d’une expression vulgarisée pourrait être <span style="white-space:nowrap">POMM :</span> «&nbsp;Principes pour déterminer Où Mettre une Méthode.&nbsp;»</p>
+<p>En tant qu’ingénieur(e) logiciel, vous devez décider souvent où placer une méthode (dans quelle classe), et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d’ingénierie favorisant la modularité.</p>
+<p>Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et avec des classes plus cohésives. Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.</p>
 <div class="callout-tip callout callout-style-simple no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><i class="fa-solid fa-hat-cowboy-side"></i>&nbsp;Avez-vous déjà une bonne expérience en <span style="white-space:nowrap">programmation ?</span> Avez-vous l’habitude de coder rapidement des solutions qui <span style="white-space:nowrap">fonctionnent ?</span> Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous. Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception et cela va vous ralentir au début (reflèxe du «&nbsp;hacking cowboy&nbsp;» peut-être?). Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui soit également facile à maintenir. C’est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes. Une fois que vous avez l’habitude à utiliser les GRASP, vous serez encore rapide avec votre développement, mais en plus votre design sera meilleur sur le plan de la maintenabilité et vous aurez plus de confiance dans vos choix.</p>
+<p><i class="fa-solid fa-hat-cowboy-side"></i>&nbsp;Avez-vous déjà une bonne expérience en <span style="white-space:nowrap">programmation ?</span> Avez-vous l’habitude de coder rapidement des solutions qui <span style="white-space:nowrap">fonctionnent ?</span> Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous. Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception, et cela va vous ralentir au début (réflexe du «&nbsp;hacking cowboy&nbsp;» peut-être?). Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui est également facile à maintenir. C’est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes. Une fois que vous aurez l’habitude d’utiliser les GRASP, vous serez encore rapide avec votre développement, mais, en plus, votre design sera meilleur sur le plan de la maintenabilité, et vous aurez plus de confiance dans vos choix.</p>
 </div>
 </div>
 </div>
@@ -513,10 +513,10 @@ Country: null
 <p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Spectre de la conception, adapté de <span class="citation" data-cites="Ford2009">Ford (<a href="references.html#ref-Ford2009" role="doc-biblioref">2009</a>)</span>. <a href="http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
-<p>À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l’on nomme «&nbsp;Hacking cowboy&nbsp;». C’est le cas lors d’un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement). Vous ne feriez pas un logiciel avec 10 patrons GoF ou les diagrammes UML pour réfléchir à votre architecture. Mais vous savez aussi que le code qui est produit lors d’un hackathon ne sera pas facile à maintenir. Le seul but est de faire du code qui marche pour montrer une idée intéressante.</p>
-<p>Au fait, dans certains contextes d’entreprise (par exemple une entreprise en démarrage qui a seulement six mois de financement), c’est une situation similaire. Si une solution de <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">«&nbsp;produit minimum viable&nbsp;» (MVP en anglais)</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>&nbsp;n’existe pas à la fin de la période de financement, l’entreprise n’existera plus, car il n’y aura pas une deuxième période de financement. Si la compagnie est financée pour une deuxième période, la conception du code pourrait avoir besoin de beaucoup de soins, car elle a été négligée. Cette négligence à la conception (pour la maintenabilité) est aussi nommée la <a href="DetteTechnique.html">dette technique</a>.</p>
-<p>À l’autre extrémité du spectre, c’est beaucoup d’effort dépensé sur la conception, que l’on nomme «&nbsp;Cascade pure&nbsp;». Dans le cycle de vie en cascade, on met un temps fixe, par exemple plusieurs mois, à étudier la conception. Comme toute chose poussée à l’extrême, ce n’est pas idéal non plus. Dans son livre, <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> explique en détail des problèmes posés par une approche en cascade. Dans certains domaines, par exemple les logiciels pour le contrôle d’avion ou des appareils médicaux, une approche en cascade est encore utilisée, en dépit des problèmes dus à l’approche. La sécurité et la robustesse des logiciels sont très importantes, alors on passe beaucoup de temps à vérifier et valider la conception. Puisque les exigences sont plus stables (et les développeurs ont <em>a priori</em> une meilleure compréhension du domaine), l’approche en cascade n’est pas si mal. Pourtant le coût pour produire des logiciels certifiés est énorme.</p>
-<p>Le spectre de la conception est très important pour le monde réel, parce qu’une ingénieure ou un ingénieur devrait pouvoir s’adapter selon les attentes de son travail. Le dogme sur «&nbsp;la bonne manière&nbsp;» de développer un logiciel est souvent sans contexte. C’est le contexte de l’entreprise pour laquelle vous travaillez qui peut déterminer combien d’effort à mettre sur la conception. Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l’extrémité «&nbsp;hacking cowboy&nbsp;» du spectre), même si on vous dit que c’est «&nbsp;agile&nbsp;». <!-- Si vous négligez complètement la conception, vous pouvez peut-être produire du code qui fonctionne plus vite à court terme.
+<p>À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l’on nomme «&nbsp;Hacking Cowboy&nbsp;». C’est le cas lors d’un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement). Vous ne feriez pas un logiciel avec 10 patrons GoF ou les diagrammes UML pour réfléchir à votre architecture. Mais vous savez aussi que le code qui est produit lors d’un hackathon ne sera pas facile à maintenir. Le seul but est de faire du code qui marche pour montrer une idée intéressante.</p>
+<p>Au fait, dans certains contextes d’entreprise (par exemple une entreprise en démarrage qui a seulement six mois de financement), c’est une situation similaire. Si une solution de <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">«&nbsp;produit minimum viable&nbsp;» (MVP en anglais)</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>&nbsp;n’existe pas à la fin de la période de financement, l’entreprise n’existera plus, car il n’y aura pas une seconde période de financement. Si l’entreprise est financée pour une seconde période, la conception du code pourrait avoir besoin de beaucoup de soin, car elle a aura été négligée. Cette négligence à la conception (pour la maintenabilité) est aussi nommée la <a href="DetteTechnique.html">dette technique</a>.</p>
+<p>À l’autre extrémité du spectre, c’est beaucoup d’effort dépensé sur la conception, que l’on nomme «&nbsp;Cascade pure&nbsp;». Dans le cycle de vie en cascade, on met un temps fixe, par exemple plusieurs mois, à étudier la conception. Comme toute chose poussée à l’extrême, ce n’est pas idéal non plus. Dans son livre, <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> explique en détail des problèmes posés par une approche en cascade. Dans certains domaines, par exemple les logiciels pour le contrôle d’avions ou d’appareils médicaux, une approche en cascade est encore utilisée, en dépit des problèmes dus à l’approche. La sécurité et la robustesse des logiciels sont très importantes, alors on passe beaucoup de temps à vérifier et à valider la conception. Puisque les exigences sont plus stables (et les développeurs(euses) ont <em>a priori</em> une meilleure compréhension du domaine), l’approche en cascade n’est pas si mal. Pourtant, le coût pour produire des logiciels certifiés est énorme.</p>
+<p>Le spectre de la conception est très important pour le monde réel, parce qu’une ingénieure ou un ingénieur devrait pouvoir s’adapter selon les attentes de son travail. Le dogme sur «&nbsp;la bonne manière&nbsp;» de développer un logiciel est souvent sans contexte. C’est le contexte de l’entreprise pour laquelle vous travaillez qui peut déterminer combien d’effort à mettre sur la conception. Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l’extrémité «&nbsp;hacking cowboy&nbsp;» du spectre), même si l’on vous dit que c’est «&nbsp;agile&nbsp;». <!-- Si vous négligez complètement la conception, vous pouvez peut-être produire du code qui fonctionne plus vite à court terme.
 Mais il faudra repayer la dette technique un jour.
 Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). --></p>
 </section>
@@ -539,7 +539,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Expert en information<br><em>F16.11/A17.11</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Un principe général de conception d’objets et d’affectation des responsabilités. Affecter une responsabilité à l’expert – la classe qui possède les informations nécessaires pour s’en acquitter. <br></td>
+<td style="text-align: left;">Un principe général de conception d’objets et d’affectation des responsabilités. Affectez une responsabilité à l’expert – la classe qui possède les informations nécessaires pour s’en acquitter. <br></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Créateur<br><em>F16.10/A17.10</em> <i class="fa-solid fa-book"></i></td>
@@ -559,7 +559,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 </tr>
 <tr class="even">
 <td style="text-align: left;">Polymorphisme<br><em>F22.1/A25.1</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span> <br><br> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types pour lesquels le comportement varie. <br></td>
+<td style="text-align: left;">Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span> <br><br> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types selon lesquels le comportement varie. <br></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Fabrication Pure <br> <em>F22.2/A25.2</em> <i class="fa-solid fa-book"></i></td>
@@ -582,7 +582,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <p>Les principes GRASP sont utilisés dans les réalisations de cas d’utilisation (RDCU). On s’en sert pour annoter les décisions de conception, pour rendre explicites (documenter) les choix. Voir la section <a href="RDCU.html">Réalisations de cas d’utilisation (RDCU)</a> pour plus d’informations.</p>
 </section>
 <section id="grasp-et-patterns-gof" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="grasp-et-patterns-gof"><span class="header-section-number">6.4</span> GRASP et Patterns GoF</h2>
+<h2 data-number="6.4" class="anchored" data-anchor-id="grasp-et-patterns-gof"><span class="header-section-number">6.4</span> GRASP et patterns GoF</h2>
 <p>On peut voir les principes GRASP comme des généralisations (principes de base) des patterns GoF. Voir la section <a href="GRASP-GoF.html">Décortiquer les patterns GoF avec GRASP</a> pour plus d’informations.</p>
 </section>
 <section id="exercices" class="level2" data-number="6.5">
@@ -612,21 +612,21 @@ Language: en
 Country: null
 --></g></svg></p>
 <p>Appliquez GRASP Polymorphisme pour le code <span style="white-space:nowrap">suivant :</span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>get <span class="fu">plumage</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span> <span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">type</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="er">'</span>EuropeanSwallow<span class="er">'</span><span class="op">:</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>get <span class="fu">plumage</span>() {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span> (<span class="kw">this</span><span class="op">.</span><span class="at">type</span>) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">'EuropeanSwallow'</span><span class="op">:</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"average"</span><span class="op">;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="er">'</span>AfricanSwallow<span class="er">'</span><span class="op">:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">numberOfCoconuts</span> <span class="op">&amp;</span>gt<span class="op">;</span> <span class="dv">2</span><span class="op">)</span> <span class="op">?</span> <span class="st">"tired"</span> <span class="op">:</span> <span class="st">"average"</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">'AfricanSwallow'</span><span class="op">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> (<span class="kw">this</span><span class="op">.</span><span class="at">numberOfCoconuts</span> <span class="op">&gt;</span> <span class="dv">2</span>) <span class="op">?</span> <span class="st">"tired"</span> <span class="op">:</span> <span class="st">"average"</span><span class="op">;</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="er">'</span>NorwegianBlueParrot<span class="er">'</span><span class="op">:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">voltage</span> <span class="op">&amp;</span>gt<span class="op">;</span> <span class="dv">100</span><span class="op">)</span> <span class="op">?</span> <span class="st">"scorched"</span> <span class="op">:</span> <span class="st">"beautiful"</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">'NorwegianBlueParrot'</span><span class="op">:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> (<span class="kw">this</span><span class="op">.</span><span class="at">voltage</span> <span class="op">&gt;</span> <span class="dv">100</span>) <span class="op">?</span> <span class="st">"scorched"</span> <span class="op">:</span> <span class="st">"beautiful"</span><span class="op">;</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">default</span><span class="op">:</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">default</span><span class="op">:</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"unknown"</span><span class="op">;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

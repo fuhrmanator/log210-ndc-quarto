@@ -205,7 +205,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciels en équipe</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -230,7 +230,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’états</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -316,7 +316,7 @@ div.csl-indent {
   <ul>
   <li><a href="#kata-tdd" id="toc-kata-tdd" class="nav-link active" data-scroll-target="#kata-tdd"><span class="toc-section-number">10.1</span>  Kata TDD</a>
   <ul class="collapse">
-  <li><a href="#exemple-de-kata-tdd-fizzbuzz" id="toc-exemple-de-kata-tdd-fizzbuzz" class="nav-link" data-scroll-target="#exemple-de-kata-tdd-fizzbuzz"><span class="toc-section-number">10.1.1</span>  Exemple de Kata TDD FizzBuzz</a></li>
+  <li><a href="#exemple-de-kata-tdd-fizzbuzz" id="toc-exemple-de-kata-tdd-fizzbuzz" class="nav-link" data-scroll-target="#exemple-de-kata-tdd-fizzbuzz"><span class="toc-section-number">10.1.1</span>  Exemple de kata TDD FizzBuzz</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -327,12 +327,12 @@ div.csl-indent {
 
 
 
-<p>Si on écrivait des logiciels pouvant se tester <span style="white-space:nowrap">automatiquement ?</span> Le développement piloté par les tests (anglais <em>test-driven development, TDD</em>) est une pratique populaire et intéressante. Il s’agit d’écrire des logiciels avec un composant d’autovalidation (des tests automatisés). Mais, écrire beaucoup de tests n’est pas toujours une tâche agréable pour des développeurs. Historiquement, si on attend la fin d’un projet pour écrire des tests, il ne reste plus beaucoup de temps et l’équipe laisse tomber les tests. Pour pallier ce problème, le développement piloté par les tests propose de travailler <strong>en petits pas</strong>. C’est-à-dire écrire un test simple (en premier), puis écrire la partie du logiciel pour passer le test de manière simple (le plus simple). Ça fait moins de codage entre les validations et c’est possiblement même plus stimulant pour les développeurs.</p>
-<p>Ainsi, il y a toujours des tests pour les fonctionnalités et le développement se fait en petits incréments qui sont validés par les tests. Faire les <em>petits pas</em> réduit le risque associé à de gros changements dans un logiciel sans validation intermédiaire. Au fur et à mesure qu’on développe un logiciel, on développe également quelques tests de ce dernier. Puisque les tests sont automatiques, ils sont aussi faciles à exécuter que le compilateur.</p>
-<p>Il y a une discipline imposée dans le TDD qui nécessite d’écrire un <em>test en premier</em>, c’est-à-dire <em>avant</em> d’écrire le code. La démarche est illustrée par la <a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>. Beaucoup d’outils (IDE) favorisent ce genre de développement. Nous pouvons écrire un test qui appelle à une fonction qui n’existe pas encore et l’IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour même. Un puriste du TDD insistera sur le fait que le test soit écrit toujours en <span style="white-space:nowrap">premier !</span> Cette discipline est parfois culturelle.</p>
-<p>Plusieurs chercheurs ont mené des expériences, par exemple <span class="citation" data-cites="Karac_TDD_2018">Karac &amp; Turhan (<a href="references.html#ref-Karac_TDD_2018" role="doc-biblioref">2018</a>)</span>, pour voir si <em>tester en premier</em> avait un vrai bénéfice. Les résultats de leurs analyses n’ont pas toujours montré que c’est le cas (ce genre d’expérience est difficile de faire, en partie parce qu’il n’y a pas beaucoup de développeurs en industrie qui le pratiquent). Les chercheurs ont trouvé que faire un petit test <em>après</em> avoir écrit le code a aussi un bénéfice sur le plan de la qualité. Dans tous les cas, des chercheurs ont trouvé que le fait de travailler en <em>petits pas</em> apporte <em>toujours</em> un avantage sur le plan de la qualité. Travailler en <em>petits pas</em> est utile, même sans faire du TDD de manière dogmatique.</p>
-<p>Sachez qu’il existe beaucoup d’intergiciels (anglais <em>frameworks</em>) pour faciliter l’exécution automatique des tests réalisés dans le cadre du TDD. Pour Java il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements. En ce qui concerne le squelette pour le laboratoire, il s’agit de <a href="https://jestjs.io/">Jest</a>. <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). --></p>
-<p>L’exécution de tests peut être même faite à chaque commit du code dans un dépôt comme GitHub.</p>
+<p>Si l’on écrivait des logiciels pouvant se tester <span style="white-space:nowrap">automatiquement ?</span> Le développement piloté par les tests (en anglais <em>test-driven development, TDD</em>) est une pratique populaire et intéressante. Il s’agit d’écrire des logiciels avec un composant d’autovalidation (des tests automatisés). Mais écrire beaucoup de tests n’est pas toujours une tâche agréable pour des développeur(euses). Historiquement, si l’on attend la fin d’un projet pour écrire des tests, il ne reste plus beaucoup de temps, et l’équipe laisse tomber les tests. Pour pallier ce problème, le développement piloté par les tests propose de travailler <strong>en petits pas</strong>, c’est-à-dire écrire un test simple (en premier), puis écrire la partie du logiciel pour passer le test de manière simple (le plus simple). Ça fait moins de codage entre les validations et c’est possiblement même plus stimulant pour les développeurs(euses).</p>
+<p>Ainsi, il y a toujours des tests pour les fonctionnalités, et le développement se fait en petits incréments qui sont validés par les tests. Faire les <em>petits pas</em> réduit le risque associé à de gros changements dans un logiciel sans validation intermédiaire. Au fur et à mesure qu’on développe un logiciel, on développe également quelques tests de ce dernier. Puisque les tests sont automatiques, ils sont aussi faciles à exécuter que le compilateur.</p>
+<p>Il y a une discipline imposée dans le TDD qui nécessite d’écrire un <em>test en premier</em>, c’est-à-dire <em>avant</em> d’écrire le code. La démarche est illustrée par la <a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>. Beaucoup d’outils (IDE) favorisent ce genre de développement. Nous pouvons écrire un test qui appelle à une fonction qui n’existe pas encore, et l’IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour même. Des puristes du TDD insisteront sur le fait que le test soit écrit toujours en <span style="white-space:nowrap">premier !</span> Cette discipline est parfois culturelle.</p>
+<p>Plusieurs chercheurs(euses) ont mené des expériences, par exemple <span class="citation" data-cites="Karac_TDD_2018">Karac &amp; Turhan (<a href="references.html#ref-Karac_TDD_2018" role="doc-biblioref">2018</a>)</span>, pour voir si <em>tester en premier</em> avait un vrai bénéfice. Les résultats de leurs analyses n’ont pas toujours montré que c’est le cas (ce genre d’expérience est difficile à faire, en partie parce qu’il n’y a pas beaucoup de développeurs(euses) en industrie qui le pratiquent). Les chercheurs(euses) ont trouvé que faire un petit test <em>après</em> avoir écrit le code a aussi un bénéfice sur le plan de la qualité. Dans tous les cas, des chercheurs(euses) ont trouvé que le fait de travailler en <em>petits pas</em> apporte <em>toujours</em> un avantage sur le plan de la qualité. Travailler en <em>petits pas</em> est utile, même sans faire du TDD de manière dogmatique.</p>
+<p>Sachez qu’il existe beaucoup d’intergiciels (en anglais <em>frameworks</em>) pour faciliter l’exécution automatique des tests réalisés dans le cadre du TDD. Pour Java, il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements. En ce qui concerne le squelette pour le laboratoire, il s’agit de <a href="https://jestjs.io/">Jest</a>. <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). --></p>
+<p>L’exécution de tests peut même être faite à chaque <em>commit</em> du code dans un dépôt comme GitHub.</p>
 <p>Il est possible de mesurer la <a href="https://fr.wikipedia.org/wiki/Couverture_de_code">couverture de code</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>&nbsp;atteinte par les tests (mais ce sujet sort du cadre de la matière de ce manuel).</p>
 <div id="fig-TDD_states" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -341,7 +341,7 @@ link *start to Rouge--><g id="link_*start_Rouge"><path d="M26.43,70.2734 C45.99,
 link Rouge to Vert--><g id="link_Rouge_Vert"><path d="M220.52,70.2734 C262.49,70.2734 324.63,70.2734 367.75,70.2734 " fill="none" id="Rouge-to-Vert" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="372.91,70.2734,363.91,66.2734,367.91,70.2734,363.91,74.2734,372.91,70.2734" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="88" x="252.75" y="23.125">Écrire code</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="76" x="258.75" y="41.75">pour faire</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="109" x="238.75" y="62.8828">passer test(s)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="7" x="347.75" y="57.5903">‡</text></g><!--MD5=[a457bc01392046f2809774e6aff8375f]
 reverse link Rouge to Vert--><g id="link_Rouge_Vert"><path d="M204.84,107.5934 C220.09,123.6834 240.1,140.7334 262.25,149.2734 C276.56,154.7834 316.97,154.8534 331.25,149.2734 C355.01,139.9934 376.15,120.7134 391.5,103.5234 " fill="none" id="Rouge-backto-Vert" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="201.06,103.5334,204.2598,112.848,204.465,107.1949,210.1181,107.4,201.06,103.5334" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="5" x="294.25" y="89.125">&nbsp;</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="43" x="275.25" y="107.75">Créer</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="67" x="263.25" y="126.375">nouveau</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="30" x="281.75" y="145">test</text></g><!--MD5=[30e98dbec254e049169f7efa29786e02]
 link Vert to Vert--><g id="link_Vert_Vert"><path d="M461.27,56.9134 C480.02,55.9034 496,60.3634 496,70.2734 C496,79.2534 482.88,83.7534 466.46,83.7734 " fill="none" id="Vert-to-Vert" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="461.27,83.6334,470.1639,87.8641,466.2683,83.7623,470.3701,79.8668,461.27,83.6334" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#008000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="130" x="502" y="65.625">Faire une activité</text><text fill="#008000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="100" x="513.5" y="86.7578">de réusinage</text><text fill="#008000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="7" x="613.5" y="81.4653">†</text></g><!--MD5=[d28d1e13e76e2eeb62326f2a527a2c12]
-link Vert to PasTDD--><g id="link_Vert_PasTDD"><path d="M417,103.3834 C417,125.6734 417,155.3334 417,178.1534 " fill="none" id="Vert-to-PasTDD" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="417,183.2034,421,174.2034,417,178.2034,413,174.2034,417,183.2034" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="165" x="418" y="149.125">Écrire code sans test</text></g><rect fill="#DDDDDD" height="114.7969" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.0;" width="367" x="132" y="256.8984"></rect><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacing" textlength="6" x="138" y="273.1089">†</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="349" x="144" y="278.4014">Une activité de réusinage n'est pas censée causer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="334" x="138" y="294.6982">un problème avec un test. Cependant, cela peut</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="326" x="138" y="310.9951">arriver que les tests ne passent plus et il faudra</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="165" x="138" y="327.292">corriger des problèmes.</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacing" textlength="6" x="138" y="340.8042">‡</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="334" x="144" y="346.0967">Il peut arriver qu'un test soit mal codé (il contient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="355" x="138" y="362.3936">un bogue). Dans ce cas, on corrige le code du test.</text><!--MD5=[e0bee9525107e1f885f2c88195f4f1e7]
+link Vert to PasTDD--><g id="link_Vert_PasTDD"><path d="M417,103.3834 C417,125.6734 417,155.3334 417,178.1534 " fill="none" id="Vert-to-PasTDD" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="417,183.2034,421,174.2034,417,178.2034,413,174.2034,417,183.2034" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="165" x="418" y="149.125">Écrire code sans test</text></g><rect fill="#DDDDDD" height="114.7969" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.0;" width="367" x="132" y="256.8984"></rect><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacing" textlength="6" x="138" y="273.1089">†</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="349" x="144" y="278.4014">Une activité de réusinage n'est pas censée causer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="334" x="138" y="294.6982">un problème avec un test. Cependant, cela peut</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="330" x="138" y="310.9951">arriver que les tests ne passent plus, et il faudra</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="165" x="138" y="327.292">corriger des problèmes.</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacing" textlength="6" x="138" y="340.8042">‡</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="334" x="144" y="346.0967">Il peut arriver qu'un test soit mal codé (il contient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="355" x="138" y="362.3936">un bogue). Dans ce cas, on corrige le code du test.</text><!--MD5=[d1af29fad067d3e2e5469cf884a10ec4]
 @startuml
 hide empty description
 skinparam style strictuml
@@ -362,7 +362,7 @@ Vert - ->  PasTDD : Écrire code sans test
 legend center
 <sup>†</sup>Une activité de réusinage n'est pas censée causer
 un problème avec un test. Cependant, cela peut
-arriver que les tests ne passent plus et il faudra
+arriver que les tests ne passent plus, et il faudra
 corriger des problèmes.
 <sup>‡</sup>Il peut arriver qu'un test soit mal codé (il contient
 un bogue). Dans ce cas, on corrige le code du test.
@@ -388,7 +388,7 @@ Vert - ->  PasTDD : Écrire code sans test
 legend center
 <sup>†</sup>Une activité de réusinage n'est pas censée causer
 un problème avec un test. Cependant, cela peut
-arriver que les tests ne passent plus et il faudra
+arriver que les tests ne passent plus, et il faudra
 corriger des problèmes.
 <sup>‡</sup>Il peut arriver qu'un test soit mal codé (il contient
 un bogue). Dans ce cas, on corrige le code du test.
@@ -413,15 +413,15 @@ Country: null
 <div id="fig-KataBasaiDai" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/karate.jpg" class="img-fluid figure-img" style="width:40.0%"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;10.2: Étudiante de karaté faisant le kata <em>Basai Dai</em> (photo <a href="https://www.flickr.com/photos/the-consortium/4507180302/">«&nbsp;Karate&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/the-consortium/">The Consortium</a>).</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;10.2: Étudiante de karaté faisant le kata <em>Bassai Dai</em> (photo <a href="https://www.flickr.com/photos/the-consortium/4507180302/">«&nbsp;Karate&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/the-consortium/">The Consortium</a>).</figcaption><p></p>
 </figure>
 </div>
-<p>Alors, le «&nbsp;kata TDD&nbsp;» a été proposé par Dave Thomas et le but est de développer la fluidité avec le développement piloté par les tests. Un kata TDD se pratique avec un IDE (environnement de développement logiciel) et un support pour les tests (par exemple JUnit). Pratiquer le même kata peut améliorer votre habileté de programmation. On peut pratiquer le même kata dans un langage différent ou avec un IDE ou environnement de test différent. Le kata vous permet d’avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour test et pour l’application, API de l’environnement de test, etc.).</p>
+<p>Alors, le «&nbsp;kata TDD&nbsp;» a été proposé par Dave Thomas, et le but est de développer la fluidité avec le développement piloté par les tests. Un kata TDD se pratique avec un IDE (environnement de développement logiciel) et un support pour les tests (par exemple JUnit). Pratiquer le même kata peut améliorer votre habileté de programmation. On peut pratiquer le même kata dans un langage différent ou avec un IDE ou un environnement de test différents. Le kata vous permet d’avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour le test et pour l’application, API de l’environnement de test, etc.).</p>
 <p>En plus, les activités de réusinage sont normalement intégrées dans un kata. Le fait de travailler en <em>petits pas</em> peut faire en sorte que la dette technique s’accumule. Les IDE facilitent l’application des activités de réusinage. Un langage fortement typé comme Java permet d’avoir plus de fonctionnalités automatisées de réusinage dans un IDE qu’un langage dynamique comme JavaScript ou Python. Une activité de base de réusinage est le renommage d’une variable ou d’une fonction. Le réusinage rend le code plus facile à comprendre et à maintenir.</p>
 <section id="exemple-de-kata-tdd-fizzbuzz" class="level3" data-number="10.1.1">
-<h3 data-number="10.1.1" class="anchored" data-anchor-id="exemple-de-kata-tdd-fizzbuzz"><span class="header-section-number">10.1.1</span> Exemple de Kata TDD FizzBuzz</h3>
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="exemple-de-kata-tdd-fizzbuzz"><span class="header-section-number">10.1.1</span> Exemple de kata TDD FizzBuzz</h3>
 <p>L’inspiration de cet exercice vient de <a href="http://codingdojo.org/kata/FizzBuzz/">codingdojo.org</a>.</p>
-<p>Dans cet exercice, il faut écrire par le développement piloté par les tests un programme qui imprime les nombres de 1 à 100. Mais pour les multiples de trois, il faut imprimer <code>Fizz</code> au lieu du nombre et pour les multiples de cinq, il faut imprimer <code>Buzz</code>. Pour les nombres étant des multiples de trois et de cinq il faut imprimer <code>FizzBuzz</code>. Voici un exemple des <span style="white-space:nowrap">sorties :</span></p>
+<p>Dans cet exercice, il faut écrire par le développement piloté par les tests un programme qui imprime les nombres de 1 à 100. Mais, pour les multiples de trois, il faut imprimer <code>Fizz</code> au lieu du nombre et, pour les multiples de cinq, il faut imprimer <code>Buzz</code>. Pour les nombres étant des multiples de trois et de cinq, il faut imprimer <code>FizzBuzz</code>. Voici un exemple des <span style="white-space:nowrap">sorties :</span></p>
 <pre><code>1
 2
 Fizz
@@ -445,11 +445,11 @@ Buzz
 ... etc. jusqu'à 100</code></pre>
 <section id="préalables" class="level4" data-number="10.1.1.1">
 <h4 data-number="10.1.1.1" class="anchored" data-anchor-id="préalables"><span class="header-section-number">10.1.1.1</span> Préalables</h4>
-<p>Il faut installer un IDE qui supporte les activités de réusinage (refactorings) comme VisualStudio Code, Eclipse, IntelliJ, etc. puis un framework de test (JUnit, Mocha/Chai, jest, unittest, etc.). Pour un exemple qui fonctionne en TypeScript, vous pouvez cloner le code à <a href="https://github.com/fuhrmanator/kata_jest_ts_fizzbuzz">ce dépôt</a>.</p>
+<p>Il faut installer un IDE qui supporte les activités de réusinage (<em>refactorings</em>) comme Visual Studio Code, Eclipse, IntelliJ, etc. puis un <em>framework</em> de test (JUnit, Mocha/Chai, Jest, unittest, etc.). Pour un exemple qui fonctionne en TypeScript, vous pouvez cloner le code à <a href="https://github.com/fuhrmanator/kata_jest_ts_fizzbuzz">ce dépôt</a>.</p>
 </section>
 <section id="déroulement" class="level4" data-number="10.1.1.2">
 <h4 data-number="10.1.1.2" class="anchored" data-anchor-id="déroulement"><span class="header-section-number">10.1.1.2</span> Déroulement</h4>
-<p>Cet exercice peut se faire individuellement ou en équipe de deux. En équipe, une personne écrit le test et l’autre écrit le code pour passer le test (c’est la variante ping-pong). Chacun réfléchit aux activités de réusinage éventuelles lorsque le projet est dans l’état vert (<a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>). Les membres de l’équipe peuvent changer de rôle (testeur, codeur) après un certain nombre d’étapes, ou après avoir terminé le kata entier.</p>
+<p>Cet exercice peut se faire individuellement ou en équipe de deux. En équipe, une personne écrit le test, et l’autre écrit le code pour passer le test (c’est la variante ping-pong). Chacune réfléchit aux activités de réusinage éventuelles lorsque le projet est dans l’état vert (<a href="#fig-TDD_states">figure&nbsp;<span>10.1</span></a>). Les membres de l’équipe peuvent changer de rôle (testeur(euse), codeur(euse)) après un certain nombre d’étapes, ou après avoir terminé le kata entier.</p>
 <p>Pour respecter la philosophie de <em>petits pas,</em> il vaut <span style="white-space:nowrap">mieux :</span></p>
 <ul>
 <li>ne lire que l’étape <span style="white-space:nowrap">courante ;</span></li>
@@ -459,21 +459,21 @@ Buzz
 </section>
 <section id="kata-pour-fizzbuzz" class="level4" data-number="10.1.1.3">
 <h4 data-number="10.1.1.3" class="anchored" data-anchor-id="kata-pour-fizzbuzz"><span class="header-section-number">10.1.1.3</span> Kata pour FizzBuzz</h4>
-<p>Les étapes sont simples et précises. Il s’agit de créer une classe ayant une méthode acceptant un entier et retournant une valeur selon les exigences de FizzBuzz décrite plus haut.</p>
+<p>Les étapes sont simples et précises. Il s’agit de créer une classe ayant une méthode acceptant un entier et retournant une valeur selon les exigences de FizzBuzz décrites plus haut.</p>
 <ol type="1">
 <li><p>Un argument de 1 retourne <code>1</code>.</p></li>
-<li><p>Un argument de 2 retourne <code>2</code></p></li>
-<li><p>Un argument de 3 retourne <code>Fizz</code></p></li>
-<li><p>Un argument de 6 retourne <code>Fizz</code></p></li>
-<li><p>Un argument de 5 retourne <code>Buzz</code></p></li>
-<li><p>Un argument de 10 retourne <code>Buzz</code></p></li>
-<li><p>Un argument de 15 retourne <code>FizzBuzz</code></p></li>
-<li><p>Un argument de 30 retourne <code>FizzBuzz</code></p></li>
+<li><p>Un argument de 2 retourne <code>2</code>.</p></li>
+<li><p>Un argument de 3 retourne <code>Fizz</code>.</p></li>
+<li><p>Un argument de 6 retourne <code>Fizz</code>.</p></li>
+<li><p>Un argument de 5 retourne <code>Buzz</code>.</p></li>
+<li><p>Un argument de 10 retourne <code>Buzz</code>.</p></li>
+<li><p>Un argument de 15 retourne <code>FizzBuzz</code>.</p></li>
+<li><p>Un argument de 30 retourne <code>FizzBuzz</code>.</p></li>
 <li><p>Supporter des exigences qui évoluent. Attention aux conflits dans les <span style="white-space:nowrap">exigences :</span></p>
 <ol type="a">
-<li>Il faut imprimer Fizz au lieu du nombre si le nombre est un multiple de 3 ou contient un 3 (ex. 13 → <code>Fizz</code>).</li>
-<li>Il faut imprimer Buzz au lieu du nombre si le nombre est un multiple de 5 ou contient un 5 (ex. 59 → <code>Fizz</code>).</li>
-<li>Il faut imprimer FizzBuzz si le nombre est un multiple de 5 et de 3 ou contient un 5 et un 3 (ex. 53 → <code>FizzBuzz</code>).</li>
+<li>Il faut imprimer Fizz au lieu du nombre si le nombre est un multiple de 3 ou contient un 3 (ex. : 13 → <code>Fizz</code>).</li>
+<li>Il faut imprimer Buzz au lieu du nombre si le nombre est un multiple de 5 ou contient un 5 (ex. : 59 → <code>Fizz</code>).</li>
+<li>Il faut imprimer FizzBuzz si le nombre est un multiple de 5 et de 3 ou contient un 5 et un 3 (ex. : 53 → <code>FizzBuzz</code>).</li>
 </ol></li>
 </ol>
 

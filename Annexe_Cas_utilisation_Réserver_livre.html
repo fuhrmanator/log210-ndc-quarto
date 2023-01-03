@@ -186,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciels en équipe</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -211,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’états</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -299,17 +299,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><strong>Parties prenantes et intérêts</strong>:<br>
-- <strong>Le Membre.</strong> Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.<br>
+<p><strong>Parties prenantes et intérêts</strong><span style="white-space:nowrap"> :</span><br>
+- <strong>La personne membre.</strong> Elle veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Elle veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Elle veut également une preuve de réservation.<br>
 - <strong>La Bibliothèque.</strong> Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.<br>
-<strong>Préconditions</strong>: Le Membre est identifié et authentifié<br>
-<strong>Acteur <span style="white-space:nowrap">principal :</span> Membre</strong></p>
+<strong>Préconditions</strong><span style="white-space:nowrap"> :</span> La personne membre est identifiée et authentifiée<br>
+<strong>Acteur <span style="white-space:nowrap">principal :</span> Personne membre</strong></p>
 <ol type="1">
-<li>Le membre choisit la fonction «&nbsp;recherche&nbsp;» et saisit du texte décrivant le livre (par exemple, une partie du titre, «&nbsp;UML&nbsp;»).</li>
-<li>Le système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, «&nbsp;UML2 et le design patterns, Craig Larman, 2005&nbsp;» et «&nbsp;UML par la pratique, Pascal Rocques, 2009&nbsp;».</li>
-<li>Le membre choisit un livre parmi les résultats, par exemple, «&nbsp;UML2 et les design patterns, Craig Larman, 2005&nbsp;».</li>
-<li>Le système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre «&nbsp;UML2 et les design patterns&nbsp;», un avec l’identificateur d’exemplaire «&nbsp;1&nbsp;» qui est disponible et un avec l’identificateur d’exemplaire «&nbsp;2&nbsp;» qui n’est pas disponible.</li>
-<li>Le membre réserve un exemplaire du livre qui est disponible.</li>
+<li>La personne membre choisit la fonction «&nbsp;recherche&nbsp;» et saisit du texte décrivant le livre (par exemple, une partie du titre, «&nbsp;UML&nbsp;»).</li>
+<li>Le système affiche une liste de livres (le titre, l’auteur(e) et l’année) correspondant à la recherche, par exemple «&nbsp;UML 2 et les design patterns, Craig Larman, 2005&nbsp;» et «&nbsp;UML par la pratique, Pascal Rocques, 2009&nbsp;».</li>
+<li>La personne membre choisit un livre parmi les résultats, par exemple «&nbsp;UML 2 et les designs patterns, Craig Larman, 2005&nbsp;».</li>
+<li>Le système affiche les informations détaillées du livre (le titre, l’auteur(e), le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple deux exemplaires du livre «&nbsp;UML 2 et les design patterns&nbsp;», un avec l’identificateur d’exemplaire «&nbsp;1&nbsp;» qui est disponible et un avec l’identificateur d’exemplaire «&nbsp;2&nbsp;» qui n’est pas disponible.</li>
+<li>La personne membre réserve un exemplaire du livre qui est disponible.</li>
 <li>Le système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.</li>
 </ol>
 <p>Extensions (scénarios <span style="white-space:nowrap">alternatifs) :</span></p>
@@ -317,15 +317,15 @@ ul.task-list li input[type="checkbox"] {
 <li>Aucun livre ne correspond au texte de la recherche.
 <ol type="1">
 <li>Le système affiche un message indiquant qu’aucun livre n’a été trouvé.</li>
-<li>Le membre lance une nouvelle recherche.</li>
+<li>La personne membre lance une nouvelle recherche.</li>
 </ol></li>
 </ol>
 <!-- -->
 <ol start="4" type="1">
-<li>Tous les exemplaires ne sont pas disponibles.
+<li>Tous les exemplaires sont indisponibles.
 <ol type="1">
 <li>Le système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.</li>
-<li>Le membre lance une nouvelle recherche.</li>
+<li>La personne membre lance une nouvelle recherche.</li>
 </ol></li>
 </ol>
 

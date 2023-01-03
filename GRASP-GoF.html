@@ -268,7 +268,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciels en équipe</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -293,7 +293,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’états</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -397,10 +397,10 @@ div.csl-indent {
 
 
 
-<p>Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée-objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C’est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF.</p>
+<p>Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C’est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF.</p>
 <section id="exemple-avec-adaptateur" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="exemple-avec-adaptateur"><span class="header-section-number">14.1</span> Exemple avec Adaptateur</h2>
-<p>Le chapitre A26/F23&nbsp;<i class="fa-solid fa-book"></i>&nbsp;présente l’exemple du pattern Adaptateur pour les calculateurs de taxes (<a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> tirée du livre de Larman, Figure A26.1/F23.1).</p>
+<p>Le chapitre A26/F23&nbsp;<i class="fa-solid fa-book"></i>&nbsp;présente l’exemple du pattern Adaptateur pour les calculateurs de taxes (<a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> tirée du livre de Larman, figure A26.1/F23.1).</p>
 <div id="fig-Fig23_1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="205px" preserveaspectratio="none" style="width:617px;height:205px;background:#FFFFFF;" version="1.1" viewbox="0 0 617 205" width="617px" zoomandpan="magnify"><defs></defs><g><!--MD5=[e9ac33031c6558390ce847f6c943aa64]
@@ -436,8 +436,8 @@ Country: null
 </section>
 <section id="imaginer-le-code-sans-le-pattern-gof" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="imaginer-le-code-sans-le-pattern-gof"><span class="header-section-number">14.2</span> Imaginer le code sans le pattern GoF</h2>
-<p>Chaque principe GRASP est défini avec un énoncé d’un problème de conception et une solution pour le résoudre. Pourtant, beaucoup d’exemples dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> sont des patterns déjà appliqués (et le problème initial n’est pas toujours expliqué en détail).</p>
-<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on serait obligé de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme <span style="white-space:nowrap">ceci :</span></p>
+<p>Chaque principe GRASP est défini avec un énoncé d’un problème de conception et avec une solution pour le résoudre. Pourtant, beaucoup d’exemples dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> sont des patterns déjà appliqués (et le problème initial n’est pas toujours expliqué en détail).</p>
+<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on serait obligé de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si l’on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme <span style="white-space:nowrap">ceci :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* calculateurTaxes est le nom du calculateur utilisé actuellement */</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span><span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"GoodAsGoldTaxPro"</span><span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour interagir avec le calculateur */</span></span>
@@ -446,7 +446,7 @@ Country: null
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="co">/* ainsi de suite pour chacun des calculateurs */</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* ... */</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Pour supporter un nouveau calculateur de taxes, il faudrait coder une nouvelle branche dans le bloc de <code>if/then</code>. Ça nuirait à la lisibilité du code et la méthode qui contient tout ce code deviendrait de plus en plus longue. Même si on faisait une méthode pour encapsuler le code de chaque branche, ça ferait toujours augmenter les responsabilités de la classe Vente. Elle est responsable de connaître tous les détails (l’API distinct et immuable) de chaque calculateur de taxe externe, puisqu’elle communique directement (il y a du couplage) à ces derniers.</p>
+<p>Pour supporter un nouveau calculateur de taxes, il faudrait coder une nouvelle branche dans le bloc de <code>if/then</code>. Ça nuirait à la lisibilité du code, et la méthode qui contient tout ce code deviendrait de plus en plus longue. Même si l’on faisait une méthode pour encapsuler le code de chaque branche, ça ferait toujours augmenter les responsabilités de la classe Vente. Elle est responsable de connaître tous les détails (l’API distincte et immuable) de chaque calculateur de taxes externe, puisqu’elle communique directement (il y a du couplage) à ces derniers.</p>
 <p>Le pattern Adaptateur comprend les principes GRASP Faible couplage, Forte cohésion, Polymorphisme, Indirection, Fabrication pure et Protection des variations. La <a href="#fig-Fig23_3">figure&nbsp;<span>14.2</span></a> (tirée du livre de Larman, Figure A26.3/F23.3) démontre la relation entre ces principes dans le cas d’Adaptateur.</p>
 <div id="fig-Fig23_3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -534,7 +534,7 @@ Country: null
 <p></p><figcaption class="figure-caption">Figure&nbsp;14.2: Adaptateur et principes GRASP <span class="citation" data-cites="craig_uml_2005">(voir <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman, 2005, fig. A26.3/F23.3</a>)</span></figcaption><p></p>
 </figure>
 </div>
-<p>On peut donc voir le pattern adaptateur comme <em>une spécialisation</em> de plusieurs principes <span style="white-space:nowrap">GRASP :</span></p>
+<p>On peut donc voir le pattern Adaptateur comme <em>une spécialisation</em> de plusieurs principes <span style="white-space:nowrap">GRASP :</span></p>
 <ul>
 <li>Polymorphisme</li>
 <li>Indirection</li>
@@ -547,7 +547,7 @@ Country: null
 </section>
 <section id="sec-GRASP_Adaptateur" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="sec-GRASP_Adaptateur"><span class="header-section-number">14.3</span> Identifier les GRASP dans les GoF</h2>
-<p>Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d’imaginer le problème qui pouvait exister éventuellement. Ensuite, on explique comment le principe (et le pattern GoF) résout le problème.</p>
+<p>Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d’imaginer le problème qui pourrait exister éventuellement. Ensuite, on explique comment le principe (et le pattern GoF) résout le problème.</p>
 <p>Consultez la <a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> du pattern Adaptateur pour les sections suivantes.</p>
 <section id="polymorphisme" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="polymorphisme"><span class="header-section-number">14.3.1</span> Polymorphisme</h3>
@@ -559,11 +559,11 @@ Country: null
 </div>
 <div class="callout-body-container">
 <p><strong><span style="white-space:nowrap">Problème :</span></strong> Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span><br>
-<strong><span style="white-space:nowrap">Solution :</span></strong> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types pour lesquels le comportement varie.</p>
+<strong><span style="white-space:nowrap">Solution :</span></strong> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types selon lesquels le comportement varie.</p>
 </div>
 </div>
 </div>
-<p>Le «&nbsp;comportement qui varie&nbsp;» est la manière d’adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode <code>getTaxes()</code>. Alors, cette «&nbsp;responsabilité&nbsp;» est affectée au type interface <code>IAdaptateurCalculTaxes</code> (et ces implémentations) dans l’opération polymorphe <code>getTaxes()</code>.</p>
+<p>Le «&nbsp;comportement qui varie&nbsp;» est la manière d’adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode <code>getTaxes()</code>. Alors, cette «&nbsp;responsabilité&nbsp;» est affectée au type interface <code>IAdaptateurCalculTaxes</code> (et à ses implémentations) dans l’opération polymorphe <code>getTaxes()</code>.</p>
 </section>
 <section id="fabrication-pure" class="level3" data-number="14.3.2">
 <h3 data-number="14.3.2" class="anchored" data-anchor-id="fabrication-pure"><span class="header-section-number">14.3.2</span> Fabrication pure</h3>
@@ -580,7 +580,7 @@ Country: null
 </div>
 </div>
 <p>La Fabrication pure est la classe «&nbsp;comportementale et artificielle&nbsp;» qui est la hiérarchie <code>IAdaptateurCalculTaxes</code> (comprenant chaque adaptateur concret). Elle est comportementale puisqu’elle ne fait qu’adapter des appels. Elle est artificielle puisqu’elle ne représente pas un élément dans le modèle du domaine.</p>
-<p>L’ensemble des adaptateurs concrets ont des «&nbsp;responsabilités cohésives&nbsp;» qui sont la manière d’adapter la méthode <code>getTaxes()</code> aux méthodes (immuables) des calculateurs de taxes externes. Elles ne font que ça. La cohésion est augmentée aussi dans la classe Vente qui n’a plus la responsabilité de s’adapter aux calculateurs de taxes externes. C’est le travail qui a été donné aux adaptateurs concrets.</p>
+<p>L’ensemble des adaptateurs concrets ont des «&nbsp;responsabilités cohésives&nbsp;» qui sont la manière d’adapter la méthode <code>getTaxes()</code> aux méthodes (immuables) des calculateurs de taxes externes. Elles ne font que ça. La cohésion est augmentée aussi dans la classe Vente, qui n’a plus la responsabilité de s’adapter aux calculateurs de taxes externes. C’est le travail qui a été donné aux adaptateurs concrets.</p>
 <p>Le couplage est diminué, car la classe Vente n’est plus couplée directement aux calculateurs de taxes externes. La réutilisation des calculateurs est facilitée, car la classe Vente ne doit plus être modifiée si l’on veut utiliser un autre calculateur externe. Il suffit de créer un adaptateur pour ce dernier.</p>
 </section>
 <section id="indirection" class="level3" data-number="14.3.3">
@@ -613,17 +613,17 @@ Country: null
 </div>
 </div>
 </div>
-<p>Les «&nbsp;variations ou l’instabilité&nbsp;» sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs du projet (ce sont des modules externes ayant chacun une API différente). Quant à «&nbsp;l’impact négatif sur les autres&nbsp;», il s’agit des modifications que les développeurs auraient à faire sur la classe Vente chaque fois que l’on décide de supporter un autre calculateur de taxes (ou si l’API de ce dernier évolue).</p>
-<p>Quant aux «&nbsp;responsabilités&nbsp;» à affecter, c’est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de «&nbsp;l’interface stable&nbsp;», il s’agit de la méthode <code>getTaxes()</code> qui ne changera jamais. Elle est définie dans le type-interface IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API).</p>
+<p>Les «&nbsp;variations ou l’instabilité&nbsp;» sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs(euses) du projet (ce sont des modules externes ayant chacun une API différente). Quant à l’” impact négatif sur les autres”, il s’agit des modifications que les développeurs(euses) auraient à faire sur la classe Vente chaque fois que l’on décide de supporter un autre calculateur de taxes (ou si l’API de ce dernier évolue).</p>
+<p>Quant aux «&nbsp;responsabilités&nbsp;» à affecter, c’est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de l’«&nbsp;interface stable&nbsp;», il s’agit de la méthode <code>getTaxes()</code>, qui ne changera (probablement) jamais. Elle est définie dans le type-interface IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API).</p>
 </section>
 </section>
 <section id="grasp-et-réusinage" class="level2" data-number="14.4">
 <h2 data-number="14.4" class="anchored" data-anchor-id="grasp-et-réusinage"><span class="header-section-number">14.4</span> GRASP et réusinage</h2>
 <p>Il y a des liens entre les GRASP et les activités de <a href="Réusinage.html">Réusinage (Refactorisation)</a>. Alors, un IDE qui automatise les <em>refactorings</em> peut vous aider à appliquer certains GRASP.</p>
 <ul>
-<li>GRASP Polymorphisme est relié à <a href="https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html"><em>Replace Type Code with Subclasses</em></a> et <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace conditional with polymorphism</em></a> – attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (<code>switch</code>) répétées à plusieurs endroits dans le code.</li>
-<li>GRASP Fabrication pure est relié à <a href="https://refactoring.com/catalog/extractClass.html"><em>Extract class</em></a>.</li>
-<li>GRASP Indirection est relié à <a href="https://refactoring.com/catalog/extractFunction.html"><em>Extract function</em></a> et <a href="https://refactoring.com/catalog/moveFunction.html"><em>Move function</em></a>.</li>
+<li>GRASP Polymorphisme est relié à <a href="https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html"><em>Replace Type Code with Subclasses</em></a> et à <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace Conditional with Polymorphism</em></a> – attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (<code>switch</code>) répétées à plusieurs endroits dans le code.</li>
+<li>GRASP Fabrication pure est relié à <a href="https://refactoring.com/catalog/extractClass.html"><em>Extract Class</em></a>.</li>
+<li>GRASP Indirection est relié à <a href="https://refactoring.com/catalog/extractFunction.html"><em>Extract Function</em></a> et à <a href="https://refactoring.com/catalog/moveFunction.html"><em>Move Function</em></a>.</li>
 </ul>
 </section>
 <section id="exercices" class="level2" data-number="14.5">
@@ -666,7 +666,7 @@ Astuce
 <p><span class="theorem-title"><strong>Exercice 14.7 (Commande) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte">Commande</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_methode_fabrique" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.8 (Méthode Fabrique) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)">Méthode fabrique</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.8 (Méthode Fabrique) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)">Méthode de fabrique</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_proxy" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 14.9 (Proxy) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe">Proxy</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>

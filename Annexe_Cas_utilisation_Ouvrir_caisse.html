@@ -204,7 +204,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciel en équipe</span></a>
+  <a href="./TravailEquipe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Développement de logiciels en équipe</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -229,7 +229,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’état</span></a>
+  <a href="./DiagrammesEtats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Diagrammes d’états</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -327,7 +327,7 @@ div.csl-indent {
 
 
 
-<p>Le contexte est l’étude de cas du système POS NextGen, notamment le scénario principal du cas d’utilisation <em>Ouvrir la caisse</em> (anglais <em>Cash In</em>). C’est l’acte d’un caissier ou d’une caissière qui arrive avec son tiroir-caisse contenant déjà de l’argent, qui s’authentifie sur la caisse (le registre) et saisit le montant en espèces dans le tiroir-caisse.</p>
+<p>Le contexte est l’étude de cas du système POS NextGen, notamment le scénario principal du cas d’utilisation <em>Ouvrir la caisse</em> (en anglais <em>Cash In</em>). C’est l’acte d’un caissier ou d’une caissière qui arrive avec son tiroir-caisse contenant déjà de l’argent, qui s’authentifie sur la caisse (le registre) et qui saisit le montant en espèces dans le tiroir-caisse.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -338,7 +338,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>En effet, ce cas d’utilisation n’est pas présenté en détail par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>, bien qu’il soit mentionné dans son livre dans un diagramme de cas d’utilisation. Alors, nous proposons pour cet exercice des modifications au modèle du domaine présenté par Larman à fin de modéliser cette fonctionnalité additionnelle du logiciel.</p>
+<p>En effet, ce cas d’utilisation n’est pas présenté en détail par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>, bien qu’il soit mentionné dans son livre dans un diagramme de cas d’utilisation. Alors, nous proposons pour cet exercice des modifications au modèle du domaine présenté par Larman afin de modéliser cette fonctionnalité additionnelle du logiciel.</p>
 </div>
 </div>
 <div id="fig-DCU_ouvrir_la_caisse" class="quarto-figure quarto-figure-center anchored">
@@ -418,7 +418,7 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;C.1: Diagramme de cas d’utilisation pour le système NextGen</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;C.1: Diagramme de cas d’utilisation pour le système NextGen.</figcaption><p></p>
 </figure>
 </div>
 <section id="terminologie" class="level2" data-number="C.1">
@@ -437,15 +437,15 @@ C’est la partie de la caisse qui s’ouvre, dans laquelle on peut placer un pl
 </dd>
 <dt>Plateau-billets</dt>
 <dd>
-C’est un conteneur pour les billets d’argent et des pièces de monnaie qui facilite le changement de personnel à une caisse. Chaque caissier ou caissière possède un plateau-billets et l’apporte lorsqu’il commence ou termine un quart de travail.
+C’est un contenant pour les billets de banque et les pièces de monnaie qui facilite le changement de personnel à une caisse. Chaque caissier ou caissière possède un plateau-billets et l’apporte lorsqu’il est au début ou à la fin de son quart de travail.
 </dd>
 </dl>
 </section>
 <section id="cas-dutilisation-ouvrir-la-caisse" class="level2" data-number="C.2">
 <h2 data-number="C.2" class="anchored" data-anchor-id="cas-dutilisation-ouvrir-la-caisse"><span class="header-section-number">C.2</span> Cas <span style="white-space:nowrap">d’utilisation :</span> Ouvrir la caisse</h2>
-<p><strong>Acteur principal : Caissier</strong></p>
+<p><strong>Acteur principal : Caissier ou Caissière</strong></p>
 <p><strong>Préconditions :</strong> La caisse est libre et son tiroir-caisse est vide (il n’y a pas de plateau dedans).</p>
-<p><strong>Garanties de succès (postconditions) :</strong> Le caissier ou la caissière est authentifiée. Son plateau-billets est placé dans le tiroir-caisse et son identificateur est enregistré. Le montant d’argent du plateau est enregistré. L’heure de l’arrivée du caissier est enregistrée.</p>
+<p><strong>Garanties de succès (postconditions) :</strong> La caissière ou le caissier est authentifié. Son plateau-billets est placé dans le tiroir-caisse, et son identificateur est enregistré. Le montant d’argent du plateau est enregistré. L’heure de l’arrivée du caissier ou de la caissière est enregistrée.</p>
 <p><strong>Scénario principal (succès)</strong></p>
 <ol type="1">
 <li><p>Le Caissier ou la caissière arrive à la caisse avec son plateau-billets.</p></li>
@@ -460,19 +460,19 @@ C’est un conteneur pour les billets d’argent et des pièces de monnaie qui f
 <li><p>Le Caissier ou la caissière ferme le tiroir-caisse.</p></li>
 </ol>
 <p><strong>Spécifications particulières :</strong></p>
-<p>Les caisses sont configurées avec un modèle de plateau-billets comme <span style="white-space:nowrap">celui-ci :</span> <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=lth_lAacXVQ#t=32s">(voir exemple sur Youtube)</a></p>
-<p><strong>Fréquence d’occurrence :</strong> Normalement, au début du quart de travail de chaque caissier.</p>
+<p>Les caisses sont configurées avec un modèle de plateau-billets comme <span style="white-space:nowrap">celui-ci :</span> <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=lth_lAacXVQ#t=32s">(voir exemple sur YouTube.)</a></p>
+<p><strong>Fréquence d’occurrence :</strong> Normalement, au début du quart de travail de chaque caissier ou caissière.</p>
 </section>
 <section id="modèle-du-domaine-partiel" class="level2" data-number="C.3">
 <h2 data-number="C.3" class="anchored" data-anchor-id="modèle-du-domaine-partiel"><span class="header-section-number">C.3</span> Modèle du domaine partiel</h2>
-<p>Voici un exemple pour le système POS NextGen. Noter les nouvelles classes conceptuelles <strong>PlateauBillets</strong> (un objet physique) et <strong>MisePlateau</strong> (une transaction) faisant partie du scénario d’<em>Ouvrir la caisse</em>.</p>
+<p>Voici un exemple pour le système POS NextGen. Notez les nouvelles classes conceptuelles <strong>Plateau-billets</strong> (un objet physique) et <strong>MisePlateau</strong> (une transaction) faisant partie du scénario d’<em>Ouvrir la caisse</em>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/MDD_POS_NextGen.drawio.svg" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Modèle du domaine partiel</figcaption><p></p>
 </figure>
 </div>
-<p>On remarque que lorsqu’un Registre (Caisse) n’a pas de Caissier (l’état du système au début du cas d’utilisation), l’objet Registre n’est associé à aucun objet Caissier. Nous avons donc modifié les cardinalités de l’association en conséquence. C’est une différence par rapport au modèle du domaine de base présenté par Larman, qui n’avait pas considéré ce cas d’utilisation, bien qu’il est dans l’ensemble des spécifications du système.</p>
+<p>On remarque que lorsqu’un Registre (Caisse) n’a pas de Caissier (l’état du système au début du cas d’utilisation), l’objet Registre n’est associé à aucun objet Caissier. Nous avons donc modifié les cardinalités de l’association en conséquence. C’est une différence par rapport au modèle du domaine de base présenté par Larman, qui n’avait pas considéré ce cas d’utilisation, bien qu’il soit dans l’ensemble des spécifications du système.</p>
 <p>Les associations en rouge sont celles qui sont affectées par la dynamique de ce cas d’utilisation.</p>
 </section>
 <section id="diagramme-de-séquence-système-dss" class="level2" data-number="C.4">
@@ -480,12 +480,12 @@ C’est un conteneur pour les billets d’argent et des pièces de monnaie qui f
 <p>La <a href="#fig-DSS_ouvrir_la_caisse">figure&nbsp;<span>C.2</span></a> est le diagramme de séquence système (DSS) pour le scénario «&nbsp;Ouvrir la caisse&nbsp;».</p>
 <div id="fig-DSS_ouvrir_la_caisse" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="320px" preserveaspectratio="none" style="width:390px;height:320px;background:#FFFFFF;" version="1.1" viewbox="0 0 390 320" width="390px" zoomandpan="magnify"><defs></defs><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="212" x="88" y="10"></rect><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="202" x="93" y="27.9951">Scénario: Ouvrir la caisse</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="37" x2="37" y1="118.5938" y2="313.3906"></line><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="344" x2="344" y1="118.5938" y2="313.3906"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="59" x="5" y="115.292">:Caissier</text><ellipse cx="37.5" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"></ellipse><path d="M37.5,58.7969 L37.5,85.7969 M24.5,66.7969 L50.5,66.7969 M37.5,85.7969 L24.5,100.7969 M37.5,85.7969 L50.5,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"></path><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="305" y="87.2969"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="65" x="312" y="107.292">:Système</text><polygon fill="#181818" points="332.5,145.7266,342.5,149.7266,332.5,153.7266" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="149.7266" y2="149.7266"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="150" x="116" y="144.6606">démarrerOuvrirCaisse()</text><polygon fill="#181818" points="332.5,174.8594,342.5,178.8594,332.5,182.8594" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="178.8594" y2="178.8594"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="283" x="49.5" y="173.7935">authentifier(identifiant : String, mdp : String)</text><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="203.9922"></line><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="211.9922"></line><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="37.5" x2="343.5" y1="207.9922" y2="207.9922"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="203" x="89.5" y="202.9263">confirmation, ouverture du tiroir</text><polygon fill="#181818" points="332.5,233.125,342.5,237.125,332.5,241.125" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="237.125" y2="237.125"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="207" x="87.5" y="232.0591">poserPlateau(identifiant : String)</text><polygon fill="#181818" points="332.5,262.2578,342.5,266.2578,332.5,270.2578" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="266.2578" y2="266.2578"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="217" x="82.5" y="261.1919">saisirMontant(montant : Monnaie)</text><polygon fill="#181818" points="332.5,291.3906,342.5,295.3906,332.5,299.3906" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="295.3906" y2="295.3906"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="84" x="149" y="290.3247">fermerTiroir()</text><!--MD5=[59e5c52b5a02813a0257a7fc16f7c4ae]
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="320px" preserveaspectratio="none" style="width:390px;height:320px;background:#FFFFFF;" version="1.1" viewbox="0 0 390 320" width="390px" zoomandpan="magnify"><defs></defs><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="217" x="85.5" y="10"></rect><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="207" x="90.5" y="27.9951">Scénario : Ouvrir la caisse</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="37" x2="37" y1="118.5938" y2="313.3906"></line><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="344" x2="344" y1="118.5938" y2="313.3906"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="59" x="5" y="115.292">:Caissier</text><ellipse cx="37.5" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"></ellipse><path d="M37.5,58.7969 L37.5,85.7969 M24.5,66.7969 L50.5,66.7969 M37.5,85.7969 L24.5,100.7969 M37.5,85.7969 L50.5,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"></path><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="305" y="87.2969"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="65" x="312" y="107.292">:Système</text><polygon fill="#181818" points="332.5,145.7266,342.5,149.7266,332.5,153.7266" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="149.7266" y2="149.7266"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="150" x="116" y="144.6606">démarrerOuvrirCaisse()</text><polygon fill="#181818" points="332.5,174.8594,342.5,178.8594,332.5,182.8594" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="178.8594" y2="178.8594"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="283" x="49.5" y="173.7935">authentifier(identifiant : String, mdp : String)</text><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="203.9922"></line><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="211.9922"></line><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="37.5" x2="343.5" y1="207.9922" y2="207.9922"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="203" x="89.5" y="202.9263">confirmation, ouverture du tiroir</text><polygon fill="#181818" points="332.5,233.125,342.5,237.125,332.5,241.125" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="237.125" y2="237.125"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="207" x="87.5" y="232.0591">poserPlateau(identifiant : String)</text><polygon fill="#181818" points="332.5,262.2578,342.5,266.2578,332.5,270.2578" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="266.2578" y2="266.2578"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="217" x="82.5" y="261.1919">saisirMontant(montant : Monnaie)</text><polygon fill="#181818" points="332.5,291.3906,342.5,295.3906,332.5,299.3906" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="295.3906" y2="295.3906"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="84" x="149" y="290.3247">fermerTiroir()</text><!--MD5=[2c369dc6e7c302c561efa77ec932638e]
 @startuml
 skinparam style strictuml
 skinparam defaultFontName Arial
 skinparam SequenceMessageAlign center
-title Scénario: Ouvrir la caisse
+title Scénario : Ouvrir la caisse
 actor ":Caissier" as C
 participant ":Système" as S
 C->S: démarrerOuvrirCaisse()
@@ -504,7 +504,7 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;C.2: Diagramme de séquence système (DSS) pour le scénario «&nbsp;Ouvrir la caisse&nbsp;»</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;C.2: Diagramme de séquence système (DSS) pour le scénario «&nbsp;Ouvrir la caisse&nbsp;».</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -519,26 +519,26 @@ Country: null
 <p><strong><span style="white-space:nowrap">Opération :</span> authentifier(identifiant : String, mdp : String)</strong></p>
 <p><strong><span style="white-space:nowrap">Postconditions :</span></strong></p>
 <ul>
-<li><em>mp</em> a été associé à un Caissier, sur la base de correspondance avec <strong>identifiant</strong>.</li>
+<li><em>mp</em> a été associée à un Caissier, sur la base de correspondance avec <strong>identifiant</strong>.</li>
 <li>Le Registre en cours a été associé à un Caissier, sur la base de correspondance avec <strong>identifiant</strong>.</li>
 </ul>
 <p><strong><span style="white-space:nowrap">Opération :</span> poserPlateau(identifiant : String)</strong></p>
-<p><strong>Postconditions</strong></p>
+<p><strong><span style="white-space:nowrap">Postconditions :</span></strong></p>
 <ul>
-<li><em>mp</em> a été associé à un PlateauBillets, sur la base de correspondance avec <strong>identifiant</strong>.</li>
+<li><em>mp</em> a été associée à un PlateauBillets, sur la base de correspondance avec <strong>identifiant</strong>.</li>
 <li>Le Registre en cours a été associé à un PlateauBillets, sur la base de correspondance avec <strong>identifiant</strong>.</li>
 </ul>
 <p><strong><span style="white-space:nowrap">Opération :</span> saisirMontant(montant : Monnaie)</strong></p>
-<p><strong>Postconditions</strong></p>
+<p><strong><span style="white-space:nowrap">Postcondition :</span></strong></p>
 <ul>
 <li><em>mp.montant</em> est devenu <strong>montant</strong>.</li>
 </ul>
 <p><strong><span style="white-space:nowrap">Opération :</span> fermerTiroir()</strong></p>
 <p><strong><span style="white-space:nowrap">Postconditions :</span></strong></p>
 <ul>
-<li><em>mp.dateHeure</em> est devenue la date et l’heure actuelle.</li>
-<li><em>mp</em> a été associé à GrandLivre.</li>
-<li><em>mp</em> a été associé à Registre.</li>
+<li><em>mp.dateHeure</em> est devenue la date et l’heure actuelles.</li>
+<li><em>mp</em> a été associée à GrandLivre.</li>
+<li><em>mp</em> a été associée à Registre.</li>
 </ul>
 
 
