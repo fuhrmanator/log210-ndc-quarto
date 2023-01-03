@@ -165,6 +165,8 @@ get plumage() {
 
 ::: {#exr-cohesion}
 ### GRASP Cohésion
+Il est tiré du livre de @freeman_head_2021.
+
 - Lesquelles des classes suivantes ont de multiples responsabilités ?
 
 ```{.plantuml}
