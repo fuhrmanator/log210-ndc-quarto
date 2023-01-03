@@ -1,23 +1,23 @@
 # Critique d'une conception
 
 Dans cet exercice, l'objectif est de vous sensibiliser à la facilité de comprendre une conception à partir d'un problème.
-Un objectif secondaire est de considérer les choix de conception sur un plan de la cohésion et du couplage. 
-Ici, il s'agit du jeu de Monopoly, qui est un exemple proposé par @craig_uml_2005 pour lequel il a également proposé un modèle du domaine et une conception, selon la méthodologie.
+Un objectif secondaire est de considérer les choix de conception sur le plan de la cohésion et du couplage. 
+Ici, il s'agit du jeu Monopoly, qui est un exemple proposé par @craig_uml_2005, pour lequel il a également proposé un modèle du domaine et une conception, selon la méthodologie.
 
-Pour cet exercice, nous examinerons une conception orientée objet réelle du jeu de Monopoly disponible sur GitHub, soit [Emojiopoly](https://github.com/Chuzzy/Emojiopoly). Voici le travail à faire.
+Pour cet exercice, nous examinerons une conception orientée objet réelle du jeu Monopoly disponible sur GitHub, soit [Emojiopoly](https://github.com/Chuzzy/Emojiopoly). Voici le travail à faire.
 
 - Considérez les deux artefacts:
-    - un [modèle du domaine de Monopoly](#sec-MDD_Monopoly) proposé par @craig_uml_2005 (il y a une version en français et en anglais, puisque le code TypeScript est en anglais) et 
+    - un [modèle du domaine de Monopoly](#sec-MDD_Monopoly) proposé par @craig_uml_2005 (il y a une version en français et une en anglais, puisque le code TypeScript est en anglais) et 
     - un [modèle d'une solution](#sec-DDC_Emojiopoly) sous forme de diagramme de classes logicielles, créé à partir du code TypeScript dans le dépôt mentionné ci-haut). 
-- Nous faisons une hypothèse que l'équipe qui a développé Emojiopoly n'ait pas commencé avec le MDD de Larman.
-- Comparez ces deux artefacts et faites des remarques sur la conception, **surtout par rapport au MDD et le décalage des représentations**.
+- Nous faisons une hypothèse que l'équipe qui a développé Emojiopoly n'a pas commencé avec le MDD de Larman.
+- Comparez ces deux artefacts et faites des remarques sur la conception, **surtout par rapport au MDD et au décalage des représentations**.
 - Faites des remarques sur la solution concernant la cohésion et le couplage.
 
 ## Diagramme de classes d'Emojiopoly {#sec-DDC_Emojiopoly .unnumbered .unlisted}
 
 Pour visualiser la conception, nous avons généré un diagramme des classes en UML avec l'outil [tplant](https://github.com/bafolts/tplant):
 
-```{.plantuml caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly](https://github.com/Chuzzy/Emojiopoly)" #fig-Emojiopoly_classes}
+```{.plantuml caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly].(https://github.com/Chuzzy/Emojiopoly)" #fig-Emojiopoly_classes}
 @startuml
 ' généré avec tplant a partir d'un clone de https://github.com/Chuzzy/Emojiopoly :
 ' tplant --input src/monopoly/**/*.ts --output Emojiopoly.puml -A
@@ -143,7 +143,7 @@ Puisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle d
 !include ecriture.pumlinclude
 hide empty members
 'left to right direction
-class "JeuDeMonopoly" as MG {
+class "JeuMonopoly" as MG {
     compteurRonds
 }
 class "Dé" as D {

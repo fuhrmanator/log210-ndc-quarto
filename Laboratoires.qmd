@@ -8,17 +8,17 @@ Ce chapitre contient des informations sur le volet technique des laboratoires.
 Qu'est-ce que TypeScript?
 Selon @goldberg_learning_2022, TypeScript comprend quatre éléments:
 
-- Un **langage de programmation** ayant toute la syntaxe de JavaScript, plus une syntaxe propre à TypeScript pour définir et utiliser les types.
-- Un **vérificateur de type** pouvant décortiquer un ensemble de fichiers en JavaScript et TypeScript définissant des variables, les fonctions, etc. afin d'indiquer des problèmes éventuels de configuration.
-- Un **compilateur** qui 1)\ invoque le vérificateur de type, 2)\ signale des problèmes le cas échéant et 3)\ finalement génère du code en JavaScript équivalent.
+- Un **langage de programmation** ayant toute la syntaxe de JavaScript, plus une syntaxe propre à TypeScript pour définir et utiliser les types;
+- Un **vérificateur de type** pouvant décortiquer un ensemble de fichiers en JavaScript et en TypeScript définissant des variables, les fonctions, etc., afin d'indiquer des problèmes éventuels de configuration;
+- Un **compilateur** qui 1)\ invoque le vérificateur de type, 2)\ signale des problèmes le cas échéant et 3)\ finalement génère du code en JavaScript équivalent;
 - Un **service de langage** qui transmet des informations provenant du vérificateur de type à l'IDE pour que ce dernier puisse faciliter le développement.
 
 ## JavaScript/TypeScript
 
 Pour la personne ayant déjà des connaissances Java et des patrons de conception de la Bande des quatre @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
 
-- **JavaScript** - un tutoriel intéressant (et libre) est sur [fr.javascript.info](https://fr.javascript.info/). Je vous recommande de contribuer à des [traductions en français sur GitHub](https://github.com/javascript-tutorial/fr.javascript.info#readme). 
-- **TypeScript** - [ce tutoriel](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html) est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C\#.
+- **JavaScript**: un tutoriel intéressant (et libre) est sur [fr.javascript.info](https://fr.javascript.info/). Nous vous recommandons de contribuer à des [traductions en français sur GitHub](https://github.com/javascript-tutorial/fr.javascript.info#readme). 
+- **TypeScript**: [ce tutoriel](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html) est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C\#.
 
 Voici des points importants pour le projet de laboratoire, organisés pour quelqu'un ayant déjà des connaissances en Java:
 
@@ -26,16 +26,16 @@ Voici des points importants pour le projet de laboratoire, organisés pour quelq
 - Pour convertir une chaîne en nombre, pour lire ou écrire un fichier sur disque, etc., on utilise des opérations en JavaScript.
 - Un *type* en TypeScript est comme *un ensemble de valeurs* plutôt qu'une définition hiérarchique.
 En Java, il n'est pas possible d'avoir un type pouvant être soit une chaîne soit un nombre.
-Mais en TypeScript, c'est facile de déclarer un type comme une *union* de plusieurs types, p. ex. `string | number`. 
-- JavaScript a des notions de "truthy" et "falsy" (conversion d'une expression à une valeur booléenne) permettant de vérifier avec moins de code si une variable est définie ou initialisée, etc.
-- [L'opérateur d'égalité stricte (`===`)](https://fr.javascript.info/comparison#egalite-stricte) (sans conversion de type)
-- [Les fonctions fléchées](https://fr.javascript.info/arrow-functions-basics) (*fat arrow functions* en anglais)
-- [Le traitement asynchrone en JavaScript](https://fr.javascript.info/callbacks)
-  - Promesses et [`async`/`await`](https://fr.javascript.info/async-await)
-- Les services REST (GET vs PUT)
-- Environnement de test (Jest)
-- Les gabarits (templates) PUG (anciennement Jade) : [Tutoriel (court)](https://www.youtube.com/watch?v=DSp9ExFw3Ig), [Tutoriel (plus complet)](https://www.youtube.com/watch?v=kt3cEjjkCZA)
-- Bootstrap (mise en page avec CSS) : [Tutoriel (attention, il faut appliquer les éléments dans les gabarits PUG)](https://www.youtube.com/watch?v=MrgGq3fob4o)
+Mais en TypeScript, c'est facile de déclarer un type comme une *union* de plusieurs types, par exemple `string | number`. 
+- JavaScript a des notions de "truthy" et "falsy" (conversion d'une expression en une valeur booléenne) permettant de vérifier avec moins de code si une variable est définie ou initialisée, etc.
+- [L'opérateur d'égalité stricte (`===`)](https://fr.javascript.info/comparison#egalite-stricte) (sans conversion de type).
+- [Les fonctions fléchées](https://fr.javascript.info/arrow-functions-basics) (*fat arrow functions* en anglais).
+- [Le traitement asynchrone en JavaScript](https://fr.javascript.info/callbacks):
+  - Promesses et [`async`/`await`](https://fr.javascript.info/async-await).
+- Les services REST (GET vs PUT).
+- Environnement de test (Jest).
+- Les gabarits (*templates*) Pug (anciennement Jade): [Tutoriel (court)](https://www.youtube.com/watch?v=DSp9ExFw3Ig), [Tutoriel (plus complet)](https://www.youtube.com/watch?v=kt3cEjjkCZA)
+- Bootstrap (mise en page avec CSS): [Tutoriel (attention, il faut appliquer les éléments dans les gabarits Pug).](https://www.youtube.com/watch?v=MrgGq3fob4o)
 
 Le [lab 0](https://github.com/ets-log210/log210-enonce-lab0) aborde plusieurs de ces aspects, mais certaines notions sont plus complexes et nécessitent une étude approfondie. 
 Le but de cette section est de donner des tutoriels plus spécifiques.
@@ -62,7 +62,7 @@ if (maVariable != undefined
 ```
 
 On vérifie trois possibilités pour `maVariable` avant de l'utiliser. 
-Ce genre de situation arrive souvent en JavaScript, puisque les objets peuvent prendre les valeurs différentes selon le contexte. 
+Ce genre de situation arrive souvent en JavaScript, puisque les objets peuvent prendre des valeurs différentes selon le contexte. 
 Il serait bien de pouvoir réduire la quantité de code dans ces cas.
 
 Grâce à la notion de conversion de valeur selon la règle de "truthy" et "falsy", JavaScript permet de simplifier les instructions en une seule condition, sans ET (`&&`), en convertissant la valeur de `maVariable` en booléenne `true` ou `false`:
@@ -70,7 +70,7 @@ Grâce à la notion de conversion de valeur selon la règle de "truthy" et "fals
 ```Javascript
 // conversion booléenne selon la règle de "truthy" et "falsy"
 if (maVariable) {
-  // on peut faire quelque chose avec maVariable ...
+  // on peut faire quelque chose avec maVariable...
 }
 ```
 
@@ -99,7 +99,7 @@ Tout ce qui n'est pas converti en `false` (expliqué ci-dessus) est converti en 
 ::: {.callout-caution}
 N'oubliez pas que la valeur de `0` est "falsy" dans une condition. 
 C'est souvent un piège en JavaScript quand on considère les variables qui peuvent avoir une valeur numérique.
-Par exemple, si on fait `if (maVariable)` pour tester si une variable est définie, si la variable est définie et a sa valeur est `0`, la condition sera `false`.
+Par exemple, si l'on fait `if (maVariable)` pour tester si une variable est définie, si la variable est définie et que sa valeur est `0`, la condition sera `false`.
 :::
 
 ## Git
@@ -269,8 +269,8 @@ Il existe un outil nommé `gitinspector` qui peut indiquer le niveau d'implicati
 
 Pour faciliter l'utilisation de l'outil, le professeur Fuhrman a créé un [script en bash](https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853). Voici comment l'utiliser:
 
-- Installer `gitinspector` dans npm avec la commande `npm install -g gitinspector`
-- Télécharger le script 
+- Installer `gitinspector` dans npm avec la commande `npm install -g gitinspector`;
+- Télécharger le script:
 ```bash
 git clone \
 https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853 \
@@ -291,7 +291,7 @@ cd contributions
 ./contributions.sh ../sga-equipe-g02-equipe-4/
 ```
 ```
-gitinspector running on ../sga-equipe-g02-equipe-4/ : patience...
+gitinspector running on ../sga-equipe-g02-equipe-4/: patience...
 ContributionsÉquipeTest.html
 ContributionsÉquipeModèles.html
 ContributionsÉquipeDocs.html
@@ -301,51 +301,51 @@ ContributionsÉquipeViews.html
 
 Les fichiers `.html` sont créés pour les contributions `Test`, `Modèles`, `Docs`, `TypeScript` et `Views`. Chaque rapport indique les contributions selon deux perspectives:
 
-1. Le nombre de soumissions par auteur (activité git)
-2. Le nombre de lignes par auteur encore présentes et intactes dans la version HEAD
+1. Le nombre de soumissions par auteur(e) (activité Git);
+2. Le nombre de lignes par auteur(e) encore présentes et intactes dans la version HEAD.
 
-Vous pouvez voir un exemple du rapport à la @fig-GitinspectorOutput.
+Vous pouvez voir un exemple de rapport à la @fig-GitinspectorOutput.
 
 ![Exemple de rapport généré par `gitinspector`.](images/gitinspector_output.png){#fig-GitinspectorOutput}
 
-### Faire le bilan de la contribution de chacun
+### Faire le bilan de la contribution de chaque membre
 
-Après l'évaluation à la fin de chaque itération, il est important de considérer combien chacun a contribué au projet et de valider avec les responsabilités prévues dans le plan de l'itération.
+Après l'évaluation à la fin de chaque itération, il est important de considérer combien chaque membre a contribué au projet et de valider avec les responsabilités prévues dans le plan de l'itération.
 Il est normal d'avoir un écart entre le travail prévu et le travail effectué. 
 Un des objectifs du bilan est d'essayer d'expliquer les gros écarts et de corriger ou mitiger les problèmes.
 
-Par exemple, on peut voir à la @fig-GitinspectorOutput que les deux coéquipiers Anne et Justin ont fait une contribution beaucoup plus importante que les autres coéquipiers Francis et Mélanie. 
+Par exemple, on peut voir à la @fig-GitinspectorOutput que Anne et Justin ont fait une contribution beaucoup plus importante que Francis et Mélanie. 
 Dans le bilan de l'itération, **on doit indiquer explicitement ce fait, même avec des pourcentages**. 
 
 ::: {.callout-important}
-Une phrase vague comme "certains ont travaillé plus que d'autres" est une formulation diplomatique, mais elle n'est pas assez explicite et n'est pas une résolution proactive du problème le cas échéant.
+Une phrase vague comme "des membres ont travaillé plus que d'autres" est une formulation diplomatique, mais elle n'est pas assez explicite et n'est pas une résolution proactive du problème, le cas échéant.
 :::
 
-### Proposer des solutions si besoin {#sec-solution_problemes_equipes}
+### Proposer des solutions au besoin {#sec-solution_problemes_equipes}
 
 Une inégalité importante dans les contributions est un signal d'alarme. On doit agir, mais on commence par poser des questions, par exemple:
 
-- Est-ce que Francis et Mélanie sont à l'aise avec les technologies utilisées dans le lab, ont-ils besoin de coaching?
-- Sont-ils des "parasites" ou "mollassons" [@oakley_coping_2004] ([traduction française de l'article](https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub))? 
+- Est-ce que Francis et Mélanie sont à l'aise avec les technologies utilisées dans le lab? Ont-ils besoin de coaching?
+- Sont-ils des "parasites" ou des "mollassons" [@oakley_coping_2004] ([traduction française de l'article](https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub))? 
 À certaines universités, le plan de cours vous permet d'exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais **seulement s'ils n'ont rien fait du tout** (ce qui n'est pas le cas dans l'exemple ci-dessus).
-Une personne exclue de cette manière va probablement abandonner le cours et vous perdrez définitivement un coéquipier.
-- Est-ce que Anne et Justin ont laissé suffisamment de liberté aux autres pour faire une contribution importante? Font-ils assez confiance aux autres? 
-- Avez-vous fait un plan d'itération assez détaillé pour que chacun puisse contribuer adéquatement? Dans l'exemple ci-dessus, peut-être Francis et Mélanie ont-ils trouvé ça difficile de savoir où contribuer?
+Une personne exclue de cette manière va probablement abandonner le cours, et vous perdrez définitivement un membre de l'équipe.
+- Est-ce qu'Anne et Justin ont laissé suffisamment de liberté aux autres pour faire une contribution importante? Font-ils assez confiance aux autres? 
+- Avez-vous fait un plan d'itération assez détaillé pour que chaque membre puisse contribuer adéquatement? Dans l'exemple ci-dessus, peut-être Francis et Mélanie ont-ils trouvé ça difficile de savoir où contribuer?
 - Est-ce que tout le monde assiste aux séances de laboratoire?
 - Est-ce que tout le monde travaille *au moins 6 heures en dehors des séances encadrées*?
-- Est-ce que certains coéquipiers travaillent excessivement, sans donner la chance aux autres de contribuer?
+- Est-ce que certains membres travaillent excessivement, sans donner la chance aux autres de contribuer?
 N'oubliez pas que les laboratoires sont une manière d'apprendre à pratiquer la matière de ce manuel. 
-Laisser un ou deux coéquipiers faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l'examen final pour ceux qui ont moins contribué).
-Il y a aussi un risque sur le plan de la [Redondance des compétences dans l'équipe (Bus Factor)](#sec-Bus_Factor), surtout si un coéquipier qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il travaille trop.
-- Est-ce que tout le monde utilise un moyen de communiquer de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n'est pas l'outil idéal pour coordonner un travail en équipe.
-- etc.
+Laisser un ou deux membres de l'équipe faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l'examen final pour les membres qui ont moins contribué).
+Il y a aussi un risque sur le plan de la [Redondance des compétences dans l'équipe (*bus Factor*)](#sec-Bus_Factor), surtout si un(e) membre qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il (elle) travaille trop.
+- Est-ce que tout le monde utilise un moyen de communication de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n'est pas l'outil idéal pour coordonner un travail en équipe.
+- Etc.
 
-Dans le bilan il faut *constater les faits* et *proposer des solutions* pour éviter des inégalités importantes sur le plan de la contribution dans les prochaines itérations. 
-Ainsi, vous gérez les problèmes de manière plus proactive.
+Dans le bilan, il faut *constater les faits* et *proposer des solutions* pour éviter des inégalités importantes sur le plan de la contribution dans les prochaines itérations. 
+Ainsi, vous gérerez les problèmes de manière plus proactive.
 
 ### FAQ pour gitinspector
 
-**Q: Comment fusionner le travail réalisé par le même coéquipier, mais avec plusieurs comptes (courriels) différents?**
+**Q: Comment fusionner le travail réalisé par une même personne, mais avec plusieurs comptes (courriels) différents?**
 
 **R:** La solution est avec le fichier `.mailmap`. Vous pouvez rapidement générer un fichier de base avec la commande:
 
@@ -356,10 +356,10 @@ git shortlog -se | sed "s/^.*\\t//"  > .mailmap
 Ensuite, modifiez le fichier `.mailmap` pour respecter ce format:
 
 ```email
-Prénom Nom Désirés <courriel> Prénom Nom Non-Désirés <courriel>
+Prénom Nom Désirés <courriel> Prénom Nom Non Désirés <courriel>
 ```
 
-Par exemple, soit le `.mailmap` initial qui contient quatres entrées pour le même auteur:
+Par exemple, le `.mailmap` initial qui contient quatre entrées pour le même auteur:
 
 ```email
 C. Fuhrman <christopher.fuhrman@etsmtl.ca>
@@ -381,12 +381,12 @@ C. Fuhrman <christopher.fuhrman@etsmtl.ca> Cris Fuhrman <fuhrmanator+git@gmail.c
 
 Le nom que vous mettez sera celui qui apparaît dans les rapports la prochaine fois qu'ils seront générés.
 
-**Q: Comment exclure le travail réalisé par un chargé de laboratoire (par exemple le clone initial dans GitHub Classroom)?**
+**Q: Comment exclure le travail réalisé par un(e) chargé(e) de laboratoire (par exemple le clone initial dans GitHub Classroom)?**
 
-**R:** La solution est d'ajouter le nom de l'auteur dans le tableau du script `contributions.sh` à la ligne suivante avec `authorsToExcludeArray`. Attention:
+**R:** La solution est d'ajouter le nom de l'auteur(e) dans le tableau du script `contributions.sh` à la ligne suivante avec `authorsToExcludeArray`. Attention:
 
 - Il n'y a pas de `,` entre les éléments des tableaux en bash.
-- Le nom d'un auteur ayant un accent ne sera pas reconnu. Il faut changer le nom dans le `.mailmap` pour qu'il n'y ait pas d'accents, ou utiliser une chaîne partielle comme `"Benjamin Le"` pour exclure les contributions de `"Benjamin Le Dû"`.
+- Le nom d'un(e) auteur(e) contenant un accent ne sera pas reconnu. Il faut changer le nom dans le `.mailmap` pour qu'il n'y ait pas d'accents, ou utiliser une chaîne partielle comme `"Benjamin Le"` pour exclure les contributions de `"Benjamin Le Dû"`.
 
 ```bash
 authorsToExcludeArray=("C. Fuhrman" "Benjamin Le" "Yvan Ross")
