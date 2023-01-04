@@ -18,13 +18,13 @@ Le présent manuel essaie de pallier tous ces problèmes, sous forme de ressourc
 ## Pourquoi une ressource éducative libre? {.unnumbered}
 
 Aujourd'hui, les logiciels libres sont très répandus.
-Dans le cadre de l'enseignement, nous utilisons les dépôts de code source libre comme GitHub et GitLab, car ces plateformes permettent car ces plateformes permettent d'évaluer et de valider des logiciels et de collaborer dans les communautés de logiciel libre.
+Dans le cadre de l'enseignement, nous utilisons les dépôts de code source libre comme GitHub et GitLab, car ces plateformes permettent d'évaluer et de valider des logiciels ainsi que de collaborer dans les communautés de logiciel libre.
 Il est donc naturel d'imaginer une forme analogique pour le contenu de ce manuel, soit une **ressource éducative libre (REL)**, qui est également développée à travers un dépôt libre (GitHub dans ce cas). 
 
 Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels libres:
 
 - Quarto [-@noauthor_quarto_2022] (le langage source du texte est [Markdown](https://quarto.org/docs/authoring/markdown-basics.html));
-- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022] qui font partie des composantes exploitées par Quarto; 
+- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022], qui font partie des composantes exploitées par Quarto; 
 - PlantUML [-@noauthor_plantuml_2022] pour les figures sous forme de texte (faciles à actualiser).
 
 Autant que possible, les figures sont créées dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche.
