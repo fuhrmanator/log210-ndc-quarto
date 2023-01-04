@@ -3,7 +3,7 @@
 Cet ouvrage a commencé comme notes de cours pour le cours _Analyse et conception de logiciel (LOG210)_ dans les programmes de baccalauréat en génie logiciels (LOG) et en génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal, au Québec.
 À l'origine, la communauté étudiante dans ces programmes provenait des collèges d'enseignement général et professionnel (cégeps), ayant donc déjà reçu un diplôme d'études collégiales (DEC) dans un programme technique. 
 Ainsi, ces personnes ont déjà appris à programmer dans un langage orienté objet.
-En effet, cette démarche correspond à l'approche "computer science first" (CS-first) pour enseigner le génie logiciel @SE_Curriculum_ACM_2014.
+En effet, cette démarche correspond à l'approche "computer science first" (CS-first) pour enseigner le génie logiciel [@SE_Curriculum_ACM_2014].
 
 LOG210 a été mis sur pied au début des années 2000, et le livre obligatoire a toujours été le fameux _Applying UML and Patterns_ de Craig Larman, qui en était à sa 2^e^ édition [-@larman_applying_2001] à l'époque.
 En 2005, la 3^e^ édition a été publiée avec plusieurs traductions, notamment celle en français [-@craig_uml_2005].
