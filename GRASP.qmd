@@ -267,3 +267,12 @@ class Joueur {
 ```
 
 :::
+
+::: {#exr-contrôleur}
+### GRASP Contrôleur
+
+- Expliquez pourquoi le principe du GRASP Contrôleur (lorsqu'il s'agit d'un contrôleur de session ou de cas d’utilisation) est une Fabrication Pure. 
+
+- Soit un contrôleur de session GestionnaireVentes, quelle est la "situation désespérée" que résout cette Fabrication pure?
+
+:::
