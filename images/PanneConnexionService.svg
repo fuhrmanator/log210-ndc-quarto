@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="PanneConnexionService.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    id="svg8"
    version="1.1"
    viewBox="0 0 192.11918 98.64357"
    height="98.64357mm"
-   width="192.11919mm">
+   width="192.11919mm"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2">
     <clipPath
@@ -69,7 +69,7 @@
   <sodipodi:namedview
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
-     inkscape:window-x="1272"
+     inkscape:window-x="-8"
      inkscape:window-height="1017"
      inkscape:window-width="1920"
      fit-margin-bottom="0"
@@ -80,15 +80,18 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="210.49492"
-     inkscape:cx="506.52701"
+     inkscape:cy="210.71429"
+     inkscape:cx="408.57143"
      inkscape:zoom="1.4"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base" />
+     id="base"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -97,7 +100,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -523,19 +526,19 @@
            id="tspan1014">Panne de serveur</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:400;font-size:7.06107px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="452.52472"
+       style="font-style:normal;font-variant:normal;font-weight:400;font-size:7.06107px;line-height:125%;font-family:Tahoma;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="468.08115"
        y="73.008575"
        id="text1024"><tspan
-         style="stroke-width:0.264583"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
          sodipodi:role="line"
-         x="452.52472"
+         x="468.08115"
          y="73.008575"
          id="tspan1022"><tspan
            dx="0"
            dy="0"
-           style="font-style:normal;font-variant:normal;font-weight:400;font-size:7.06107px;font-family:Tahoma;fill:#ff0c0c;stroke-width:0.264583"
-           id="tspan1020">ou service</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:7.06107px;font-family:Tahoma;text-align:center;text-anchor:middle;fill:#ff0c0c;stroke-width:0.264583"
+           id="tspan1020">ou de service</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.174519px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 352.40088,133.54123 62.54134,15.29424"
@@ -739,28 +742,24 @@
            dy="0"
            style="font-style:normal;font-variant:normal;font-weight:400;font-size:8.46667px;font-family:Tahoma;fill:#000000;stroke-width:0.264583"
            id="tspan1104">descriptifs</tspan></tspan></text>
-    <text
+    <g
+       aria-label=""
        id="text1258"
-       y="116.02645"
-       x="379.21634"
-       style="font-size:29.3264px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;opacity:0.64;fill:#ff0000;stroke-width:0.733161"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Webdings;-inkscape-font-specification:Webdings;fill:#ff0000;stroke-width:0.733161"
-         y="116.02645"
-         x="379.21634"
-         id="tspan1285"
-         sodipodi:role="line"></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:49.1012px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;opacity:0.64;fill:#ff0000;stroke-width:1.22753"
-       x="454.58914"
-       y="112.27026"
-       id="text1289"><tspan
-         sodipodi:role="line"
-         id="tspan1287"
-         x="454.58914"
-         y="112.27026"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Webdings;-inkscape-font-specification:Webdings;fill:#ff0000;stroke-width:1.22753"></tspan></text>
+       style="font-size:29.3264px;line-height:1.25;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;opacity:0.64;fill:#ff0000;stroke-width:0.733161">
+      <path
+         d="m 393.65043,105.61615 -3.45101,2.10497 2.07633,3.23622 -2.97846,0.20047 1.20284,3.78036 -4.26722,-1.81858 -1.9045,2.33408 -2.4916,-1.89018 -2.63479,2.17657 -2.62047,-2.17657 -2.47728,1.89018 -1.9045,-2.33408 -4.26722,1.81858 1.20284,-3.78036 -2.97846,-0.20047 2.07633,-3.23622 -3.45101,-2.10497 3.45101,-2.03337 -2.13361,-3.10734 3.03574,-0.28639 -1.20284,-3.766038 4.26722,1.818581 1.9045,-2.348403 2.47728,1.904497 2.64911,-2.190888 2.60615,2.190888 2.4916,-1.904497 0.84485,1.031006 5.08344,-3.766037 -2.79231,4.668167 3.03574,-1.403314 -1.20284,3.766038 3.03574,0.28639 -2.13361,3.10734 z M 388.209,95.392006 q -2.54887,1.947456 -7.80414,6.085804 l -1.18852,-3.193259 -7.9903,13.274209 7.9187,-6.73018 1.37468,3.70876 z"
+         style="font-family:Webdings;-inkscape-font-specification:Webdings"
+         id="path421" />
+    </g>
+    <g
+       aria-label=""
+       id="text1289"
+       style="font-size:49.1012px;line-height:1.25;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;opacity:0.64;fill:#ff0000;stroke-width:1.22753">
+      <path
+         d="m 478.75614,94.840297 -5.77802,3.524353 3.4764,5.41839 -4.98684,0.33566 2.01392,6.32945 -7.14461,-3.04485 -3.1887,3.90796 -4.17169,-3.16473 -4.41143,3.64423 -4.38746,-3.64423 -4.14771,3.16473 -3.1887,-3.90796 -7.14461,3.04485 2.01391,-6.32945 -4.98684,-0.33566 3.47641,-5.41839 -5.77803,-3.524353 5.77803,-3.404478 -3.57231,-5.202617 5.08274,-0.479504 -2.01391,-6.305477 7.14461,3.04485 3.1887,-3.931932 4.14771,3.188701 4.43541,-3.668205 4.36348,3.668205 4.17169,-3.188701 1.41453,1.726214 8.5112,-6.305476 -4.67517,7.815913 5.08275,-2.349569 -2.01392,6.305477 5.08274,0.479504 -3.5723,5.202617 z m -9.11058,-17.11829 q -4.26758,3.260627 -13.06648,10.189458 l -1.98994,-5.346468 -13.37816,22.225003 13.25829,-11.268339 2.30161,6.209575 z"
+         style="font-family:Webdings;-inkscape-font-specification:Webdings"
+         id="path418" />
+    </g>
     <path
        id="path982-9"
        d="m 435.78242,142.85957 c 0,-7.9094 12.01372,-14.32862 26.83345,-14.32862 14.81973,0 26.83346,6.41922 26.83346,14.32862 0,7.91896 -12.01373,14.32863 -26.83346,14.32863 -14.81973,0 -26.83345,-6.40967 -26.83345,-14.32863"
