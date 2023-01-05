@@ -1,16 +1,16 @@
 # Cas d'utilisation {#sec-cu}
 
 Les cas d'utilisation sont des documents textuels décrivant l'interaction entre un système (un logiciel à développer) et un ou plusieurs acteurs (les utilisateurs ou systèmes externes).
-Le cas d'utilisation décrit plusieurs scénarios, mais en général il y a un scénario principal (*"Happy Path"*) représentant ce qui se passe lorsqu'il n'y a pas d'anomalie.
+Le cas d'utilisation décrit plusieurs scénarios, mais, en général, il y a un scénario principal *"Happy Path"* représentant ce qui se passe lorsqu'il n'y a pas d'anomalie.
 
-Les cas d'utilisation sont une manière de documenter les fonctionalités (les exigences fonctionnelles).
+Les cas d'utilisation sont une manière de documenter les fonctionnalités (les exigences fonctionnelles).
 
 ::: {.callout-note}
 
-D'autres méthodologies de développement peuvent déterminer les besoins avec les récits utilisateur (*user stories*), qui sont généralement plus courts et moins préscriptifs que des cas d'utilisation.
-Par exemple, dans un récit utilisateur on ne spécifie pas un ordre d'interactions entre l'acteur et le système.
+D'autres méthodologies de développement peuvent déterminer les besoins avec les récits utilisateur (*user stories*), qui sont généralement plus courts et moins prescriptifs que des cas d'utilisation.
+Par exemple, dans un récit utilisateur, on ne spécifie pas un ordre d'interactions entre l'acteur et le système.
 Une raison pour ne pas spécifier autant de détails est que ça peut changer beaucoup (surtout au début du projet).
-Voir [cette discussion sur stackexchange.com](https://softwareengineering.stackexchange.com/q/113381/51948) pour savoir plus sur les différences.
+Voir [cette discussion sur stackexchange.com](https://softwareengineering.stackexchange.com/q/113381/51948) pour en savoir plus sur les différences.
 
 :::
 
@@ -18,11 +18,11 @@ La théorie sur *comment écrire* les cas d'utilisation ne fait pas partie de ce
 
 La notation UML inclut les diagrammes de cas d'utilisation, qui sont comme une table des matières pour les fonctionnalités d'un système.
 
-## Exemple: jeu de Risk{#exemple-jeu-de-risk}
+## Exemple: Le jeu Risk{#exemple-jeu-de-risk}
 
-Nous décrivons un cas d'utilisation à l'aide d'un exemple concernant le jeu de Risk.
+Nous décrivons un cas d'utilisation à l'aide d'un exemple concernant le jeu Risk.
 
-![Cinq dés utilisés dans le jeu de Risk.  By Val42 - [https://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg](http://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/ "Creative Commons Attribution-Share Alike 3.0") [Link](https://commons.wikimedia.org/w/index.php?curid=3272090)](images/Risk-dice-example.jpg){width="300px"}
+![Cinq dés utilisés dans le jeu Risk.  Par Val42 - [https://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg](http://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/ "Creative Commons Attribution-Share Alike 3.0") [Link](https://commons.wikimedia.org/w/index.php?curid=3272090).](images/Risk-dice-example.jpg){width="300px"}
 
 Selon "Risk". 2019. [Wikipédia](https://fr.wikipedia.org/w/index.php?title=Risk&oldid=164264587). (accédé le 9 décembre 2019):
 
@@ -30,15 +30,15 @@ Selon "Risk". 2019. [Wikipédia](https://fr.wikipedia.org/w/index.php?title=Risk
 L'attaquant jette un à trois dés suivant le nombre de régiments qu'il désire engager (avec un maximum de trois régiments engagés, et en considérant qu'un régiment au moins doit rester libre d'engagements sur le territoire attaquant) et le défenseur deux dés (un s'il n'a plus qu'un régiment). On compare le dé le plus fort de l'attaquant au dé le plus fort du défenseur et le deuxième dé le plus fort de l'attaquant au deuxième dé du défenseur. Chaque fois que le dé du défenseur est supérieur ou égal à celui de l'attaquant, l'attaquant perd un régiment; dans le cas contraire, c'est le défenseur qui en perd un.
 :::
 
-Alors, nous proposon les étapes (les interactions entre les acteurs et le système) pour ce scénario:
+Alors, nous proposons les étapes (les interactions entre les acteurs et le système) pour ce scénario:
 
 ### Scénario: Attaquer un pays
 
 1. Le Joueur attaquant choisit d'attaquer un pays voisin du Joueur défenseur.
 2. Le Joueur attaquant annonce combien de régiments il va utiliser pour son attaque.
 3. Le Joueur défenseur annonce combien de régiments il va utiliser pour sa défense.
-4. Les deux Joueurs jettent le nombre de dés selon leur stratégie choisie aux étapes précédentes.
-5. Le Système compare les dés et élimine les régiments de l'attaquant ou du défenseur selon les règles et affiche le résultat.
+4. Les deux Joueurs jettent le nombre de dés selon leur stratégie, choisie aux étapes précédentes.
+5. Le Système compare les dés, élimine les régiments de l'attaquant ou du défenseur selon les règles et affiche le résultat.
 
 *Les Joueurs répètent les étapes 2 à 5 jusqu'à ce que l'attaquant ne puisse plus attaquer ou ne veuille plus attaquer.*
 
@@ -46,12 +46,10 @@ Alors, nous proposon les étapes (les interactions entre les acteurs et le syst�
 
 La @fig-uc est un exemple de diagramme de cas d'utilisation.
 
-Un diagramme de cas d'utilisation n'est qu'une sorte de *table des matières* des fonctionnalités.
-Le diagramme ne montre qu'une faible partie des détails trouvés dans le texte de chaque cas d'utilisation.
+Un diagramme de cas d'utilisation n'étant q'une sorte de *table des matières* des fonctionnalités, il ne montre qu'une faible partie des détails trouvés dans le texte de chaque cas d'utilisation.
 Le diagramme ne peut donc remplacer la documentation textuelle.
 
-Dans la @fig-uc, le cas d'utilisation "..." signifie qu'il y a d'autres cas d'utilisation à spécifier concrètement.
-C'est à dire tous les autres cas d'utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.
+Dans la @fig-uc, le cas d'utilisation "..." signifie qu'il y a d'autres cas d'utilisation à spécifier concrètement, c'est-à-dire tous les autres cas d'utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.
 
 Le cas d'utilisation *Démarrer* n'est pas normalement indiqué dans un diagramme.
 C'est une astuce pédagogique proposée par Larman @craig_uml_2005, car il faudra concevoir et coder ce scénario, bien qu'il ne soit pas une fonctionnalité connue par l'utilisateur.

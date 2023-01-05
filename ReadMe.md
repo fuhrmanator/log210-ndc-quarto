@@ -23,6 +23,6 @@ Versions construites avec GitHub actions:
 - [PDF](https://fuhrmanator.github.io/log210-ndc-quarto/Analyse-et-conception-de-logiciels.pdf)
 - [EPUB](https://fuhrmanator.github.io/log210-ndc-quarto/Analyse-et-conception-de-logiciels.epub)
 
-[CI badge]: https://img.shields.io/github/workflow/status/fuhrmanator/log210-ndc-quarto/Render%20and%20Publish?logo=github
+[CI badge]: https://img.shields.io/github/actions/workflow/status/fuhrmanator/log210-ndc-quarto/quarto-render-publish.yml?branch=main&logo=github
 
 [CI workflow]: https://github.com/fuhrmanator/log210-ndc-quarto/actions/workflows/quarto-render-publish.yml

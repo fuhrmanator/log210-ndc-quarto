@@ -7,8 +7,8 @@ Vous pouvez également utiliser PlantUML.
 Voici des ressources à ce propos: 
 <!-- ![Logo PlantUML](images/Plantuml_Logo.svg){width=50px} -->
 
-- [tutoriel VSCode sur YouTube](https://www.youtube.com/watch?v=xkwJ9GwgZJU);
-- [extension PlantUML pour VSCode](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml);
+- [tutoriel VS Code sur YouTube](https://www.youtube.com/watch?v=xkwJ9GwgZJU);
+- [extension PlantUML pour VS Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml);
 - [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571), module supplémentaire Google Docs;
 - [PlantText.com](https://www.planttext.com/).
 

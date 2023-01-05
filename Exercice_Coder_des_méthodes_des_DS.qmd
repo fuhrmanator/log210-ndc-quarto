@@ -1,10 +1,10 @@
 # Coder des méthodes à partir des diagrammes de séquence
 
-Pour chacun des diagrammes suivants, écrire les classes TypeScript avec les méthodes indiquées dans le diagramme. 
-[Cet exercice complémente le livre de @craig_uml_2005 à la section F18.6/A20.4.]
+Pour chacun des diagrammes suivants, écrivez les classes TypeScript avec les méthodes indiquées dans le diagramme.  
+[Cet exercice complémente le livre de @craig_uml_2005 à la section F18.6/A20.4.].
 
 ::: {.callout-tip}
-Vous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n'est pas forcément permis lors d'un examen.
+Vous pouvez utiliser VS Code pour vous aider avec le TypeScript, mais cet outil ne sera pas forcément permis lors d'un examen.
 :::
 
 Voici un modèle à suivre. Pour le diagramme suivant:
@@ -45,7 +45,7 @@ class B {
 
 \filbreak
 
-1. Écrire le code pour la figure suivante.
+1. Écrivez le code pour la figure suivante.
 
     ```{.plantuml}
     @startuml
@@ -71,7 +71,7 @@ class B {
 
 \filbreak
 
-2. Écrire le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
+2. Écrivez le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
 
     ```{.plantuml}
     @startuml
@@ -89,7 +89,7 @@ class B {
     note right of s
     selon Créateur, Vente crée une 
     collection vide (par exemple une
-    List) destinée a mémoriser les
+    Liste) destinée à mémoriser les
     instances de LigneArticles
     end note
     note left of s
@@ -106,7 +106,7 @@ class B {
 
 \filbreak
 
-3. Écrire le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu de Monopoly [tirée de @craig_uml_2005, figure F22.9]
+3. Écrivez le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu de Monopoly [tirée de @craig_uml_2005, figure F22.9]
 
     ```{.plantuml}
     @startuml
@@ -129,7 +129,7 @@ class B {
 
 \filbreak
 
-4. Écrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu de Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7]
+4. Écrivez le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7]
 
     ```{.plantuml}
     @startuml
@@ -141,7 +141,7 @@ class B {
     note left: selon Polymorphisme
     im -> j : c = getCash
     note right : selon Expert
-    im -> j : diminuerCash(min(200, 10% de c))
+    im -> j : diminuerCash(min(200, 10 % de c))
     note right : selon Expert
     @enduml
     ```
