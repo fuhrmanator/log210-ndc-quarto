@@ -1,4 +1,4 @@
-@startuml Diagramme_Activté
+@startuml Diagramme_Activité
 start
 :Démarrer;
 if (en français) then (oui)

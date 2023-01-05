@@ -6,20 +6,20 @@ Ce chapitre\ {{< fa truck-loading >}} contient des informations sur les diagramm
 
 Un diagramme de déploiement présente le déploiement sur l'**architecture physique**. Il sert à documenter:
 
-1. comment les fichiers exécutables seront affectés sur les nœuds de traitement et
-2. la communication entre composants physiques
+1. comment les fichiers exécutables seront affectés sur les nœuds de traitement, et
+2. la communication entre composants physiques.
 
 Voici les éléments importants:
 
-- Types de nœuds
-  - **Nœud physique (équipement)** : Ressource de traitement physique (ex. de l'électronique numérique), dotée de services de traitement et de mémoire destinés à exécuter un logiciel. Ordinateur classique, cellulaire, etc.
-  - **Nœud d'environnement d'exécution  (EEN *execution environment node*)** : Ressource de traitement logiciel qui s'exécute au sein d'un nœud externe (comme un ordinateur) et offrant lui-même un service pour héberger et exécuter d'autres logiciels, par exemple:
-    - Système d'exploitation (OS) est un logiciel qui héberge et qui exécute des programmes
-    - Machine virtuelle (JVM ou .NET)
-    - Moteur de base de données (ex. PostgreSQL) exécute les requêtes SQL
-    - Navigateur Web héberge et exécute JavaScript, applets Flash/Java
-    - Moteur de workflow
-    - Conteneur de servlets ou conteneur d'EJB
+- Types de nœuds :
+  - **Nœud physique (équipement)** : Ressource de traitement physique (ex. : de l'électronique numérique) dotée de services de traitement et de mémoire destinés à exécuter un logiciel. Ordinateur classique, cellulaire, etc.
+  - **Nœud d'environnement d'exécution  (EEN, *execution environment node*)** : Ressource de traitement logiciel qui s'exécute au sein d'un nœud externe (comme un ordinateur) et offrant elle-même un service pour héberger et exécuter d'autres logiciels, par exemple:
+    - un système d'exploitation (OS), est un logiciel qui héberge et qui exécute des programmes ;
+    - une machine virtuelle (JVM ou .NET) ;
+    - un moteur de base de données (ex. PostgreSQL) exécute les requêtes SQL ;
+    - un navigateur Web qui héberge et qui exécute JavaScript, les applets Flash/Java ;
+    - un moteur de *workflow* ;
+    - un conteneur de servlets ou conteneur d'EJB.
 
 La @fig-DiagrammeDeploiement est un exemple de diagramme de déploiement (laboratoire). 
 La @fig-iTunesDiagrammeDeploiement est un exemple de diagramme de déploiement pour le logiciel iTunes d'Apple. 
@@ -66,7 +66,7 @@ App -right- SGB : API REST
 left to right direction
 node "Apple Web Server" <<device>>#PaleTurquoise {
     node iTunes as iTW <<website>>#LightSalmon {
-        artifact iTuneseSetup.exe <<application>>
+        artifact iTunesSetup.exe <<application>>
     }
     node "iTunes Store" as iTS <<website>>#LightSalmon {
         rectangle "Media Library"
@@ -86,7 +86,7 @@ note as N1
 Media libraries are
 synchronized
 between devices by
-iTunes
+iTunes.
 end note
 N1 .. ML1
 N1 .. ML2

@@ -2,7 +2,7 @@
 
 Le chapitre F20/A22\ {{< fa solid book >}}\ définit quelques termes importants pour la modélisation avec UML et les outils.
 
-En mode esquisse, lorsqu'on dessine un modèle sur un tableau blanc ou un papier, un outil pratique pour numériser le tout est **Microsoft Lens** ([Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&hl=fr_CA) ou [iOS](https://apps.apple.com/ca/app/microsoft-office-lens-pdf-scan/id975925059)).
+En mode esquisse, lorsqu'on dessine un modèle sur un tableau blanc ou sur papier, un outil pratique pour numériser le tout est **Microsoft Lens** ([Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&hl=fr_CA) ou [iOS](https://apps.apple.com/ca/app/microsoft-office-lens-pdf-scan/id975925059)).
 Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.
 
 ::: {#fig-OfficeLens layout-ncol=2 layout-valign="bottom"}
@@ -11,47 +11,47 @@ Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.
 
 ![Transformation vers un résultat plus lisible](images/After-Office_Lens.jpg){#fig-afterLens width="300px"}
 
-Microsoft Lens peut détecter le cadre d'un dessin sur un tableau blanc ou papier et le transformer, même si on n'est pas droit devant le dessin.
+Microsoft Lens peut détecter le cadre d'un dessin sur un tableau blanc ou sur papier et le transformer, même si l'on n'est pas droit devant le dessin.
 :::
 
 
 
 ::: {.callout-caution}
 Tous les travaux demandés pour les **examens** (de LOG210 à l'École de technologie supérieure) doivent être faits *à la main*.
-Pour cette raison, il vaut mieux pratiquer dessiner les modèles en mode esquisse (à la main).
+Pour cette raison, il vaut mieux pratiquer à dessiner les modèles en mode esquisse (à la main).
 :::
 
 Dans la méthodologie de ce manuel, on exploite l'outil PlantUML pour faire beaucoup de modèles. C'est un outil qui a plusieurs avantages:
 
-- il est basé sur un langage spécifique à un domaine (anglais *domain-specific language* ou DSL), dont les fichiers peuvent être facilement mis sur contrôle de version (git);
-- il est basé sur du code libre;
-- il s'occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est complexe);
-- il est populaire (utilisé par des ingénieurs chez Google pour documenter Android, Pay, etc.);
-- il existe plusieurs supports pour les outils de documentation:
-  - extension [PlantUML pour VisualStudio Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) (@fig-PlantUMLVSCode) avec [tutoriel](https://www.youtube.com/watch?v=xkwJ9GwgZJU)\ {{< fa brands youtube >}};
-  - extension [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&hl=en) pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l'ÉTS (@fig-PlantUMLGizmo)
+- Il est basé sur un langage spécifique à un domaine (en anglais *domain-specific language* ou DSL), dont les fichiers peuvent être facilement mis sur un contrôle de version (Git);
+- Il est basé sur du code libre;
+- Il s'occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est complexe);
+- Il est populaire (utilisé par des ingénieur(e)s chez Google pour documenter Android, Pay, etc.);
+- Il existe plusieurs supports pour les outils de documentation:
+  - extension [PlantUML pour Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) (@fig-PlantUMLVSCode) avec [tutoriel](https://www.youtube.com/watch?v=xkwJ9GwgZJU)\ {{< fa brands youtube >}};
+  - extension [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&hl=en) pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l'ÉTS (@fig-PlantUMLGizmo).
 
-![L'extension PlantUML pour VisualStudio Code.](images/PlantUMLVSCode.png){#fig-PlantUMLVSCode}
+![L'extension PlantUML pour Visual Studio Code.](images/PlantUMLVSCode.png){#fig-PlantUMLVSCode}
 
-Pour un débutant, le langage PlantUML peut sembler plus compliqué qu'utiliser un outil graphique comme Lucidchart.
+Pour une personne débutante, le langage PlantUML peut sembler plus compliqué que d'utiliser un outil graphique comme Lucidchart.
 Cependant, pour beaucoup de diagrammes (comme les diagrammes de séquence), ça peut être plus long à créer ou à modifier.
 Bien que ces outils aient des gabarits ou des modes "UML", ceux-ci ne sont pas toujours conviviaux ou complets.
-C'est souvent juste des objets groupés et le vrai sens de la notation UML n'est pas considéré. 
+Ce sont souvent juste des objets groupés, et le vrai sens de la notation UML n'est pas considéré. 
 
 Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l'orienter dans n'importe quel sens. 
-Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n'ont aucun sens en UML (voir la @fig-LucidchartUML).
+Ça peut prendre beaucoup de clics pour effectuer une modification, et on peut obtenir des résultats intermédiaires qui n'ont aucun sens en UML (voir la @fig-LucidchartUML).
 Il est possible de corriger le diagramme, mais en combien de clics?
 C'est très vite agaçant.
 
-## Exemples de diagramme avec PlantUML
+## Exemples de diagrammes avec PlantUML
 
-Dans le menu "Select sample diagram" de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et le livre de @craig_uml_2005 (voir la @fig-GizmoSamples).
+Dans le menu "Select sample diagram" de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et du livre de @craig_uml_2005 (voir la @fig-GizmoSamples).
 
 ## Astuces PlantUML
 
 - [Comment intégrer PlantUML dans le `Readme.md` de GitHub/GitLab?](https://stackoverflow.com/q/32203610/1168342)\ {{< fa brands stack-overflow >}}
-- Le serveur de PlantUML.com génère un diagramme à partir d'une URL:  
-`https://plantuml.com/plantuml/{forme}/{clé}` qui contient une clé comme  
+- Le serveur de PlantUML.com génère un diagramme à partir d'une URL,  
+`https://plantuml.com/plantuml/{forme}/{clé}`, qui contient une clé comme  
 `Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00`.  
 La clé est en fait une représentation compressée du code source.
 - On peut changer la forme du diagramme en changeant la partie `{forme}` de l'URL:
@@ -74,7 +74,7 @@ $ java -jar plantuml.jar -metadata diagram.png > diagram.puml
 
 ![PlantUML Gizmo pour Google Docs et Google Slides.](images/PlantUMLGizmoSlides.png){#fig-PlantUMLGizmo}
 
-![PlantUML Gizmo offre plusieurs exemples de diagramme UML.](images/SelectSampleDiagramGizmo.png){#fig-GizmoSamples}
+![PlantUML Gizmo offre plusieurs exemples de diagrammes UML.](images/SelectSampleDiagramGizmo.png){#fig-GizmoSamples}
 
-![Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidcharts. C'est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n'y a pas de sémantique UML dans l'outil. Par exemple, un "message" UML dans un diagramme de séquence dans Lucidcharts est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d'autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloc "loop". La ligne de vie de l'acteur Étudiant se transforme en diagonale lorsque l'acteur est déplacé à droite. Un vrai message UML est normalement toujours à l'horizontale et une vraie ligne de vie est toujours à la verticale. Puisque Lucidcharts ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d'outil.](images/LucidchartDSSBotched.png){#fig-LucidchartUML}
+![Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidchart. C'est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n'y a pas de sémantique UML dans l'outil. Par exemple, un "message" UML dans un diagramme de séquence dans Lucidchart est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d'autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloc "loop". La ligne de vie de l'acteur Étudiant se transforme en diagonale lorsque l'acteur est déplacé à droite. Un vrai message UML est normalement toujours à l'horizontale, et une vraie ligne de vie est toujours à la verticale. Puisque Lucidchart ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d'outil.](images/LucidchartDSSBotched.png){#fig-LucidchartUML}
 

@@ -1,29 +1,29 @@
 # Fiabilité
 
 Le chapitre A36/F30\ {{< fa solid book >}} présente le problème de la fiabilité pour le système NextGen POS.
-C'est le basculement sur un service local en cas d'échec d'un service distant.
+C'est le basculement vers un service local en cas d'échec d'un service distant.
 
 ![Comment tolérer une panne de connexion ou de service?](images/PanneConnexionService.svg "Comment tolérer une panne de connexion ou de service?"){width=70% #fig-PanneConnexionService}
 
 
 Voici les points importants:
 
-- Définitions des termes, A36.3/F30.3\ {{< fa solid book >}}:
-  - **Faute.** La cause première du problème
+- Définition des termes, A36.3/F30.3\ {{< fa solid book >}} :
+  - **Faute.** La cause première du problème.
   - **Erreur.** La manifestation de la faute lors de l'exécution. Les erreurs sont détectées (ou non).
   - **Échec.** Déni de service causé par une erreur.
 - Les solutions proposées par l'architecte système et documentées par Larman impliquent les concepts suivants:
-  - Mise en cache locale d'informations recherchées au service distant, A36.2/F30.2\ {{< fa solid book >}}
-  - Utilisation d'*Adaptateur \[GoF\]* pour réaliser le service redondant (lecture d'information), A36.2/F30.2\ {{< fa solid book >}}
+  - Mise en cache locale d'informations recherchées au service distant, A36.2/F30.2\ {{< fa solid book >}}.
+  - Utilisation d'*Adaptateur \[GoF\]* pour réaliser le service redondant (lecture d'information), A36.2/F30.2\ {{< fa solid book >}}.
   - Réalisation d'un scénario dans le cas d'utilisation pour supporter l'échec de tout (rien ne va plus) en permettant au Caissier de saisir l'information (description et prix), A36.3/F30.3\ {{< fa solid book >}}.
   Dans ce cas, il faut bien gérer les exceptions.
-  - Utilisation de *Procuration (Proxy) de redirection \[GoF\]* pour basculer sur un service local en cas de panne (écriture d'information), A36.4/F30.4\ {{< fa solid book >}}
+  - Utilisation de *Procuration (Proxy) de redirection \[GoF\]* pour basculer vers un service local en cas de panne (écriture d'information), A36.4/F30.4\ {{< fa solid book >}}.
 
 ::: {.callout-important}
-Faire une conception pour la fiabilité nécessite de l'expérience (ou l'utilisation des patterns). Un bon livre est celui de @hanmer_patterns_2007.
+Faire une conception pour la fiabilité nécessite de l'expérience (ou l'utilisation des patterns). Un bon livre sur le sujet est celui de @hanmer_patterns_2007.
 
 L'utilisation de services dans le nuage (infonuagique) amène une redondance de serveurs. 
-Cependant, même un service web a besoin de [redondance dans les zones géographiques](https://aws.amazon.com/about-aws/global-infrastructure/), car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourrait affecter toute une grappe de serveurs.
+Cependant, même un service Web a besoin de [redondance dans les zones géographiques](https://aws.amazon.com/about-aws/global-infrastructure/), car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourraient affecter toute une grappe de serveurs.
 :::
 
 ## Exercices
@@ -33,20 +33,20 @@ Cependant, même un service web a besoin de [redondance dans les zones géograph
 ### Faute, Erreur, Échec
 
 Pour chaque scénario, indiquez la faute, l'erreur et l'échec (selon les
-définitions dans les notes de cours):
+définitions dans les notes de cours).
 
 **Scénario 1: Guichet automatique**
 
-Lors de son contrôle d'un guichet automatique, un technicien constate
-qu'il n'y a plus de billets. Alors, il remet des billets de 20$ et 50\$. Le prochain client qui utilise ce guichet automatique indique qu'il veut retirer 100\$, mais il est surpris quand il reçoit 5 billets de 50$ (pour 250$).
+Lors de son contrôle d'un guichet automatique, une technicienne constate
+qu'il n'y a plus de billets. Alors, elle remet des billets de 20 $ et de 50 \$. La prochaine personne qui utilise ce guichet automatique indique qu'elle veut retirer 100 \$, mais elle est surprise quand elle reçoit 5 billets de 50 $ (pour 250 $).
 
--   Faute: <!-- Le technicien a mal posé les billets -->
--   Erreur: <!-- Client constate qu'il reçoit plus d'argent que demandé -->
--   Échec: <!-- Trop d'argent a été versé vers le client -->
+-   Faute: <!-- La technicienne a mal posé les billets -->
+-   Erreur: <!-- personne constate qu'elle reçoit plus d'argent que demandé -->
+-   Échec: <!-- Trop d'argent a été versé vers la personne -->
 
 **Scénario 2: Vaisseau spatial**
 
-Une mise à jour du logiciel de contrôle sur un vaisseau spatial est effectuée par un ingénieur sur Terre. Ce nouveau programme contient une mauvaise référence pour stocker les valeurs de configuration du réacteur. Lorsque le programme effectue ce stockage, il y a une corruption du programme qui contrôle l'orientation de l'antenne pour la communication avec Terre. Ensuite, l'antenne ne pointe plus vers Terre et la communication est coupée à jamais.
+Une mise à jour du logiciel de contrôle sur un vaisseau spatial est effectuée par un(e) ingénieur(e) sur Terre. Ce nouveau programme contient une mauvaise référence pour stocker les valeurs de configuration du réacteur. Lorsque le programme effectue ce stockage, il y a une corruption du programme qui contrôle l'orientation de l'antenne pour la communication avec la Terre. Ensuite, l'antenne ne pointe plus vers la Terre, et la communication est coupée à jamais.
 
 -   Faute:
 -   Erreur:
