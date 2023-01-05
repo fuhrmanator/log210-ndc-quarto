@@ -66,7 +66,7 @@ App -right- SGB : API REST
 left to right direction
 node "Apple Web Server" <<device>>#PaleTurquoise {
     node iTunes as iTW <<website>>#LightSalmon {
-        artifact iTuneseSetup.exe <<application>>
+        artifact iTunesSetup.exe <<application>>
     }
     node "iTunes Store" as iTS <<website>>#LightSalmon {
         rectangle "Media Library"
@@ -86,7 +86,7 @@ note as N1
 Media libraries are
 synchronized
 between devices by
-iTunes
+iTunes.
 end note
 N1 .. ML1
 N1 .. ML2

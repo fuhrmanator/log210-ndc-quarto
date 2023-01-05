@@ -8,8 +8,6 @@ L'autre est une solution élégante et donc plus difficile à rendre opérationn
 Comment prendre la décision?
 La *dette technique* est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.
 
-!["Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l'un avec une bonne conception et l'autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu'il s'agisse de conception initiale ou de techniques agiles. Comme aucun effort n'est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ." [@fowl07a]](images/FowlerPseuoGraphFunctionaltyTime.svg){#fig-FowlerDesignStaminaHypothesis}
-
 Martin Fowler [-@fowl07a] a posé la question "Est-ce que ça vaut la peine de faire du bon design?" -- peut-on en faire moins pour développer plus vite?
 Il a proposé un pseudographique comparant la fonctionnalité cumulative (élément difficile à mesurer) avec le temps (voir la @fig-FowlerDesignStaminaHypothesis).
 Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que de mois.
@@ -22,9 +20,12 @@ Voici une courte définition complémentaire de la dette technique [@avge16a]:
 Un ensemble de constructions ou de mises en œuvre de conception qui sont utiles à court terme, mais qui mettent en place un contexte technique qui peut rendre les changements futurs plus coûteux ou impossibles.
 :::
 
+!["Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l'un avec une bonne conception et l'autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu'il s'agisse de conception initiale ou de techniques agiles. Comme aucun effort n'est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ." [@fowl07a]](images/FowlerPseuoGraphFunctionaltyTime.svg){#fig-FowlerDesignStaminaHypothesis}
+
 ## Origine
 
-La dette technique est une forme de risque qui peut apporter des bénéfices ou des pertes. Tout dépend de la quantité d'intérêt à payer. L'inventeur du wiki, Ward Cunningham, a utilisé la métaphore de la dette dans un projet de développement de logiciel de gestion de portefeuille réalisé dans une variante du langage Smalltalk:
+La dette technique est une forme de risque qui peut apporter des bénéfices ou des pertes. Tout dépend de la quantité d'intérêt à payer.
+L'inventeur du wiki, Ward Cunningham, a utilisé la métaphore de la dette dans un projet de développement de logiciel de gestion de portefeuille réalisé dans une variante du langage Smalltalk [-@Cunningham1992TheWP]:
 
 ::: {.callout}
 Un autre piège plus sérieux est l'échec à consolider [un design].

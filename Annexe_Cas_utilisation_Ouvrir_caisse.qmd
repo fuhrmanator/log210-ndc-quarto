@@ -109,12 +109,11 @@ YouTube.)](http://www.youtube.com/watch?feature=player_detailpage&v=lth_lAacXVQ#
 ## Modèle du domaine partiel
 
 Voici un exemple pour le système POS NextGen. 
-Notez les nouvelles classes conceptuelles **Plateau-billets** (un objet physique) et **MisePlateau** (une transaction) faisant partie du scénario d'*Ouvrir la caisse*.
+Notez les nouvelles classes conceptuelles **PlateauBillets** (un objet physique) et **MisePlateau** (une transaction) faisant partie du scénario d'*Ouvrir la caisse*.
 
-![Modèle du domaine partiel](images/MDD_POS_NextGen.drawio.svg)
+![Modèle du domaine partiel du système POS NextGen avec deux nouvelles classes conceptuelles MisePlateau et PlateauBillets, qui modélisent des éléments du cas d'utilisation "Ouvrir la caisse".](images/MDD_POS_NextGen_export.svg)
 
-On remarque que lorsqu'un Registre (Caisse) n'a pas de Caissier (l'état du système au début du cas d'utilisation), l'objet Registre n'est associé à
-aucun objet Caissier. 
+On remarque que lorsqu'un Registre (Caisse) n'a pas de Caissier (l'état du système au début du cas d'utilisation), l'objet Registre n'est associé à aucun objet Caissier. 
 Nous avons donc modifié les cardinalités de l'association en conséquence. 
 C'est une différence par rapport au modèle du domaine de base présenté par Larman, qui n'avait pas considéré ce cas d'utilisation, bien qu'il soit dans l'ensemble des spécifications du système.
 

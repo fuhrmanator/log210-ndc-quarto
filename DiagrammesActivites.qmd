@@ -31,9 +31,9 @@ note right : Nœud d'objet
 
 if (Garder\nmodifications ?) then (Oui)
     note right : Décision et fusion
-    :Ajouter code à *staging*;
-    :Code "staged"]
-    :Faire "commit" au dépôt Git;    
+    :Ajouter code à //staging//;
+    :Code « staged »]
+    :Faire « commit » au dépôt Git;    
 else (Non)
     :Défaire modifications
     au code;
@@ -51,28 +51,28 @@ Il ne s'agit pas de l'UML, mais cette notation est encore utilisée (depuis les 
 Un exemple de diagramme d'activités dans le cadre d'un cours de programmation utilisant GitHub Classroom est dans la @fig-GitHubClassroomActivities.
 Ce diagramme explique comment GitHub Classroom permet à l'étudiant(e) qui accepte un devoir (*assignment* en anglais) sur GitHub Classroom de choisir son identité universitaire, mais seulement si l'enseignant(e) a téléversé la liste de classe *avant* d'envoyer les invitations aux étudiant(e)s.
 
-```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classrooms. [(PlantUML)](https://www.plantuml.com/plantuml/uml/NOzBYXin48RtEaN1B6n3Gk_jpHZF91d88uJ90SfIjQSOFMIfD2JG5yXHlCagD-YBfTenxJ2z4AZhrr_VTri5YxJWJNtccB5WW2e_FUbPsBwQt56FpSiZ_P2jvqCC50Mi7bJ-Ixb_gNSfocSC1Dl2w8smQEjzj4yu_evqVkeMQ8LVMCPJXPnQ0PqU6q7NxJpMMb8ANGVBGqajqrkhYReomtsifDjH6rA3wuq6SzOnwrqPJrHWBjcOcxvt-gqVGav5TEQv2Yahs2b4PldW58bxrg8Adr9odbQRkMfRwqLOaz4fj6lekqV2CAM-wbeyQ6uvGHOclmA_-FxjepfoL4CKJd5ZXXld9f9X_2NDyKLXlgZ1-akc2FhoohnxIbov05y9Bu0RCm_7qx5n9bXgdvsOvr_ADxnd-T3ssdxNikTZcqZxL9wLai2Dfpp-KJ5iiAUQEBu1V24xpMmAMSYuHOiGAEoBnadLKZbWv7hMqWLLKZQt55qBtlm5)"  }
+```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classroom (contexte de l'ÉTS avec Moodle). [(PlantUML)](https://www.plantuml.com/plantuml/uml/NOzBYXin48RtEaN1B6n3Gk_jpHZF91d88uJ90SfIjQSOFMIfD2JG5yXHlCagD-YBfTenxJ2z4AZhrr_VTri5YxJWJNtccB5WW2e_FUbPsBwQt56FpSiZ_P2jvqCC50Mi7bJ-Ixb_gNSfocSC1Dl2w8smQEjzj4yu_evqVkeMQ8LVMCPJXPnQ0PqU6q7NxJpMMb8ANGVBGqajqrkhYReomtsifDjH6rA3wuq6SzOnwrqPJrHWBjcOcxvt-gqVGav5TEQv2Yahs2b4PldW58bxrg8Adr9odbQRkMfRwqLOaz4fj6lekqV2CAM-wbeyQ6uvGHOclmA_-FxjepfoL4CKJd5ZXXld9f9X_2NDyKLXlgZ1-akc2FhoohnxIbov05y9Bu0RCm_7qx5n9bXgdvsOvr_ADxnd-T3ssdxNikTZcqZxL9wLai2Dfpp-KJ5iiAUQEBu1V24xpMmAMSYuHOiGAEoBnadLKZbWv7hMqWLLKZQt55qBtlm5)"  }
 @startuml
 skinparam style strictuml
 skinparam DefaultTextAlignment center
-skinparam defaultFontName Arial
-title Enchaînement d'activités pour chaque //classroom// (groupe-cours)
+skinparam defaultFontName Helvetica,Arial,sans-serif
+'title Enchaînement d'activités pour chaque //classroom// (groupe-cours)
 |Enseignant ou Enseignante|
 start
-:Créer Classroom;
+:Créer //Classroom//;
 #ffdddd:Importer liste de classe
 (Identifiants Moodle);
-:Créer Assignment
-(Individual/Team);
+:Créer //Assignment//
+(//Individual/Team//);
 :Partager (courriel) l'URL d'invitation;
 |#ddffdd|Étudiant ou Étudiante|
-:Open URL;
+:Ouvrir URL;
 #ffdddd:Choisir identifiant Moodle;
 :Choisir équipe (ou créer équipe);
 |GitHub|
-:Dupliquer (fork) le dépôt
+:Dupliquer (//fork//) le dépôt
 (au besoin, avec le compte
-d'un membre de l'organisation);
+d'un(e) membre de l'organisation);
 stop
 @enduml
 ```
