@@ -518,12 +518,14 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <section id="tbl-GRASPTable" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="tbl-GRASPTable"><span class="header-section-number">6.2</span> Tableau des principes GRASP</h2>
 <p>Voici un extrait du livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
+
+<!-- Attention: le tableau suivant a été généré avec l'éditeur "Visual" de RStudio -->
 <div id="tbl-tableGRASP" class="anchored">
 <table class="table">
 <caption>Tableau&nbsp;6.1: Patterns (principes) GRASP</caption>
 <colgroup>
-<col style="width: 20%">
-<col style="width: 80%">
+<col style="width: 25%">
+<col style="width: 75%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -533,40 +535,70 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Expert en information<br><em>F16.11/A17.11</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Un principe général de conception d’objets et d’affectation des responsabilités. Affectez une responsabilité à l’expert – la classe qui possède les informations nécessaires pour s’en acquitter. <br></td>
+<td style="text-align: left;">Expert en information<br>
+<em>F16.11/A17.11</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>Un principe général de conception d’objets et d’affectation des responsabilités.</p>
+<p>Affectez une responsabilité à l’expert – la classe qui possède les informations nécessaires pour s’en acquitter.</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Créateur<br><em>F16.10/A17.10</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Qui <span style="white-space:nowrap">crée ?</span> (Notez que Fabrique Concrète est une solution de rechange courante.) Affectez à la classe B la responsabilité de créer une instance de la classe A si l’une des assertions suivantes est <span style="white-space:nowrap">vraie :</span><br>&nbsp; 1. B contient A<br>&nbsp;2. B agrège A<br>&nbsp;3. B a les données pour initialiser A<br>&nbsp;4. B enregistre A<br>&nbsp;5. B utilise étroitement A <br></td>
+<td style="text-align: left;">Créateur<br>
+<em>F16.10/A17.10</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>Qui <span style="white-space:nowrap">crée ?</span> (Notez que Fabrique Concrète est une solution de rechange courante.)</p>
+<p>Affectez à la classe B la responsabilité de créer une instance de la classe A si l’une des assertions suivantes est <span style="white-space:nowrap">vraie :</span></p>
+<ol type="1">
+<li>B contient A</li>
+<li>B agrège A</li>
+<li>B a les données pour initialiser A</li>
+<li>B enregistre A</li>
+<li>B utilise étroitement A</li>
+</ol></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Contrôleur<br><em>F16.13/A17.13</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Quel est le premier objet en dehors de la couche présentation qui reçoit et coordonne («&nbsp;contrôle&nbsp;») les opérations <span style="white-space:nowrap">système ?</span> <br><br> Affectez une responsabilité à la classe qui correspond à l’une de ces <span style="white-space:nowrap">définitions :</span> <br>&nbsp;1. Elle représente le système global, un «&nbsp;objet racine&nbsp;», un équipement ou un sous-système (contrôleur de façade). <br>&nbsp;2. Elle représente un scénario de cas d’utilisation dans lequel l’opération système se produit (<em>contrôleur de session</em> ou contrôleur de cas d’utilisation). On la nomme GestionnaireX, où X est le nom du cas d’utilisation. <br></td>
+<td style="text-align: left;">Contrôleur<br>
+<em>F16.13/A17.13</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>Quel est le premier objet en dehors de la couche présentation qui reçoit et coordonne («&nbsp;contrôle&nbsp;») les opérations <span style="white-space:nowrap">système ?</span></p>
+<p>Affectez une responsabilité à la classe qui correspond à l’une de ces <span style="white-space:nowrap">définitions :</span></p>
+<ol type="1">
+<li>Elle représente le système global, un «&nbsp;objet racine&nbsp;», un équipement ou un sous-système (contrôleur de façade).</li>
+<li>Elle représente un scénario de cas d’utilisation dans lequel l’opération système se produit (<em>contrôleur de session</em> ou contrôleur de cas d’utilisation). On la nomme GestionnaireX, où X est le nom du cas d’utilisation.</li>
+</ol></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Faible Couplage <br>(évaluation) <br><em>F16.12/A17.12</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Comment minimiser les <span style="white-space:nowrap">dépendances ?</span> <br><br> Affectez les responsabilités de sorte que le couplage (inutile) demeure faible. Employez ce principe pour évaluer les alternatives. <br></td>
+<td style="text-align: left;">Faible Couplage<br>
+(évaluation)<br>
+<em>F16.12/A17.12</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>Comment minimiser les <span style="white-space:nowrap">dépendances ?</span></p>
+<p>Affectez les responsabilités de sorte que le couplage (inutile) demeure faible. Employez ce principe pour évaluer les alternatives.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Forte Cohésion<br>(évaluation)<br><em>F16.14/A17.14</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Comment conserver les objets cohésifs, compréhensibles, gérables et, en conséquence, obtenir un Faible <span style="white-space:nowrap">Couplage ?</span> <br><br> Affectez les responsabilités de sorte que les classes demeurent cohésives. Employez ce principe pour évaluer les différentes solutions. <br></td>
+<td style="text-align: left;">Forte Cohésion<br>
+(évaluation)<br>
+<em>F16.14/A17.14</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>Comment conserver les objets cohésifs, compréhensibles, gérables et, en conséquence, obtenir un Faible <span style="white-space:nowrap">Couplage ?</span></p>
+<p>Affectez les responsabilités de sorte que les classes demeurent cohésives. Employez ce principe pour évaluer les différentes solutions.</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Polymorphisme<br><em>F22.1/A25.1</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span> <br><br> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types selon lesquels le comportement varie. <br></td>
+<td style="text-align: left;">Polymorphisme<br>
+<em>F22.1/A25.1</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span></p>
+<p>Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types selon lesquels le comportement varie.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Fabrication Pure <br> <em>F22.2/A25.2</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte <span style="white-space:nowrap">cohésion ?</span> <br><br> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine — une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation. <br></td>
+<td style="text-align: left;">Fabrication Pure <em>F22.2/A25.2</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte <span style="white-space:nowrap">cohésion ?</span></p>
+<p>Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine — une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Indirection <br> <em>F22.3/A25.3</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Comment affecter les responsabilités pour éviter le couplage <span style="white-space:nowrap">direct ?</span> <br><br> Affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services. <br></td>
+<td style="text-align: left;">Indirection<br>
+<em>F22.3/A25.3</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>Comment affecter les responsabilités pour éviter le couplage <span style="white-space:nowrap">direct ?</span></p>
+<p>Affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Protection des variations <br><em>F22.4/A25.4</em> <i class="fa-solid fa-book"></i></td>
-<td style="text-align: left;">Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span> <br><br> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</td>
+<td style="text-align: left;">Protection des variations<br>
+<em>F22.4/A25.4</em>&nbsp;<i class="fa-solid fa-book"></i></td>
+<td style="text-align: left;"><p>Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span></p>
+<p>Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p></td>
 </tr>
 </tbody>
 </table>
