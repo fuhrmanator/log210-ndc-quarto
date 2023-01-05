@@ -6,13 +6,13 @@ La @sec-NamespaceTypeScript explique quelques pratiques pour la gestion des *nam
 
 Les points importants sont les suivants (les détails se trouvent dans le livre):
 
-- La notation UML des diagrammes de packages ;
-- Organiser les packages par **cohésion** ;
-- Organiser les packages en une **famille d'interface** (convention Java) ;
-- Créer un package par **tâche** et par **groupe de classes instables** (Branches) ;
-- Les packages les plus responsables sont les plus stables ;
-- Factoriser les types indépendants ;
-- Utiliser **fabrique** (*factory*) pour limiter la dépendance aux packages concrets ;
+- La notation UML des diagrammes de packages;
+- Organiser les packages par **cohésion**;
+- Organiser les packages en une **famille d'interface** (convention Java);
+- Créer un package par **tâche** et par **groupe de classes instables** (Branches);
+- Les packages les plus responsables sont les plus stables;
+- Factoriser les types indépendants;
+- Utiliser **fabrique** (*factory*) pour limiter la dépendance aux packages concrets;
 - Comment rompre les cycles dans les packages .
 
 La @fig-DiagrammePackage est un exemple d'un diagramme de packages.
@@ -55,8 +55,8 @@ En effet, TypeScript n'a pas la notion de package comme dans C\# ou Java.
 Cependant, il y a des pratiques pour organiser logiquement le code et pour éviter les conflits (les collisions) de noms.
 Rappelons que la notion de package existe dans Java pour:
 
-  1. **Organiser logiquement le code** : le type interface `java.util.List` est disponible dans la *bibliothèque* `java.util`) ;
-  2. **Éviter les conflits de noms** : les classes `java.util.List` et `ca.etsmtl.log121.fuhrman.projet2.List` ont le même nom de base, mais puisqu'elles sont dans deux packages différents, elles peuvent être utilisées dans le même programme (leur "fully qualified name" est différent).
+  1. **Organiser logiquement le code**: le type interface `java.util.List` est disponible dans la *bibliothèque* `java.util`);
+  2. **Éviter les conflits de noms**: les classes `java.util.List` et `ca.etsmtl.log121.fuhrman.projet2.List` ont le même nom de base, mais puisqu'elles sont dans deux packages différents, elles peuvent être utilisées dans le même programme (leur "fully qualified name" est différent).
 
 En TypeScript, on peut atteindre les mêmes objectifs.
 

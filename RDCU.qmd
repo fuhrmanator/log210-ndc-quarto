@@ -155,7 +155,7 @@ Pour initialiser les références nécessaires pour la bonne visibilité, Larman
 
 ## Transformer identifiants en objets {#sec-TransformerIDenObjets}
 
-La directive d'utiliser les types primitifs pour les opérations système nous mène à un problème récurrent dans les RDCU : transformer un identifiant (souvent de type `String` ou `int`) en objet.
+La directive d'utiliser les types primitifs pour les opérations système nous mène à un problème récurrent dans les RDCU: transformer un identifiant (souvent de type `String` ou `int`) en objet.
 Larman vous propose un idiome (pas vraiment un patron) nommé **Transformer identifiant en objet** qui sert à repérer la référence d'un objet qui correspond à l'identifiant.
 
 Il y a un exemple à la @fig-RDCU_ID_en_objets provenant du chapitre sur **l'Application des patterns GoF (Figure 23.18)**\ {{< fa solid book >}}.
@@ -295,7 +295,7 @@ class Dé {
 }
 ```
 
-**Faire soi-même** : "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction" de @coad97a.
+**Faire soi-même**: "Moi, objet logiciel, je fais moi-même ce qu'on fait normalement à l'objet réel dont je suis une abstraction" de @coad97a.
 :::
 
 

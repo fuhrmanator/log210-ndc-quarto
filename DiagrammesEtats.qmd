@@ -55,12 +55,10 @@ Considérez une dynamique simplifiée, avec seulement trois états correspondant
 
 ![](images/Trois%C3%89tatsT%C3%A9l%C3%A9phone.png)
 
-Pour simplifier encore le modèle : le bouton en haut à droite sert à
-éteindre et à allumer l'écran. Le téléphone est initialement éteint.
-Vous pouvez ignorer l'autre bouton rond au centre en bas. On peut
-brancher l'alimentation pour charger le téléphone à tout moment, mais le
-bouton n'a aucun effet sur l'écran lorsque le téléphone est connecté à
-l'alimentation. Lorsque l'on débranche l'alimentation, l'écran est
+Pour simplifier encore le modèle: le bouton en haut à droite sert à éteindre et à allumer l'écran. Le téléphone est initialement éteint.
+Vous pouvez ignorer l'autre bouton rond au centre en bas.
+On peut brancher l'alimentation pour charger le téléphone à tout moment, mais le bouton n'a aucun effet sur l'écran lorsque le téléphone est connecté à l'alimentation.
+Lorsque l'on débranche l'alimentation, l'écran est
 toujours éteint.
 
 :::

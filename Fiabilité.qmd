@@ -8,7 +8,7 @@ C'est le basculement vers un service local en cas d'échec d'un service distant.
 
 Voici les points importants:
 
-- Définition des termes, A36.3/F30.3\ {{< fa solid book >}} :
+- Définition des termes, A36.3/F30.3\ {{< fa solid book >}}:
   - **Faute.** La cause première du problème.
   - **Erreur.** La manifestation de la faute lors de l'exécution. Les erreurs sont détectées (ou non).
   - **Échec.** Déni de service causé par une erreur.

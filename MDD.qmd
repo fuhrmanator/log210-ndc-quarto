@@ -24,7 +24,7 @@ Il y a trois stratégies pour identifier les classes conceptuelles:
 **Produit ou service lié à une transaction ou à une ligne de transaction**: Pour quel concept sont faites des transactions?  |*Article*, *Vélo*, *Vol*, *Livre*, *Cours*
 **Où la transaction est-elle enregistrée?** | *Caisse*, *GrandLivre*, *ManifesteDeVol*
 **Rôle des personnes liées à la transaction**: Qui sont les parties impliquées dans une transaction?  | *Caissier*, *Client*, *JoueurDeMonopoly*, *Passager*
-**Organisations liées à la transaction** : Quelles sont les organisations impliquées dans une transaction? | *Magasin*, *CompagnieAérienne*, *Bibliothèque*, *Université*
+**Organisations liées à la transaction**: Quelles sont les organisations impliquées dans une transaction? | *Magasin*, *CompagnieAérienne*, *Bibliothèque*, *Université*
 **Lieu de la transaction, lieu du service**  | *Magasin*, *Aéroport*, *Avion*, *Siège*, *LocalCours*
 **Événements notables, à mémoriser**  | *Vente*, *Paiement*, *JeuDeMonopoly*, *Vol*
 **Objets physiques**:  Important surtout lorsqu'il s'agit d'un logiciel de contrôle d'équipements ou de simulation.  | *Article*, *Caisse*, *Plateau*, *Pion*, *Dé*, *Vélo*
@@ -44,7 +44,7 @@ Comme c'est le cas pour les classes et les associations, on fait figurer les att
 
 Pour l'UML, la syntaxe complète d'un attribut est:
 
-**visibilité nom : type multiplicité = défaut {propriété}**
+**visibilité nom: type multiplicité = défaut {propriété}**
 
 Voici des points importants:
 
@@ -240,7 +240,7 @@ Attention de ne pas faire l'erreur naïve d'utiliser une classe de description s
 :::
 
 
-```{.plantuml #fig-MDD-ErreurDescription caption="Erreur fréquente : utiliser une classe de description sans justification."}
+```{.plantuml #fig-MDD-ErreurDescription caption="Erreur fréquente: utiliser une classe de description sans justification."}
 @startuml
 '!include ecriture.pumlinclude
 skinparam defaultFontName Arial

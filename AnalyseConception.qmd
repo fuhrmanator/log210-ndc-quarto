@@ -115,7 +115,7 @@ Mais qu'est-ce que la complexité? La @fig-complexity est une image de la compl
 Voici une définition de la complexité:
 
 ::: {.callout}
-**Complexité** : Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.
+**Complexité**: Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.
 :::
 
 ![["Complexity"](https://www.flickr.com/photos/lytfyre/6489338411/) [(CC BY-SA 2.0)](https://creativecommons.org/licenses/by-sa/2.0/) par [lytfyre](https://www.flickr.com/people/lytfyre/).](images/flickr_lytfyre_complexity.jpg){width=80% #fig-complexity}
@@ -192,7 +192,7 @@ C --> E
 
 La méthodologie d'analyse et de conception proposée dans ce manuel se base sur celle présentée par @craig_uml_2005.
 
-Voici les éléments importants documentés dans ce manuel (voir la @fig-SurvolMethodologie, qui est une adaptation de plusieurs figures de @craig_uml_2005) :
+Voici les éléments importants documentés dans ce manuel (voir la @fig-SurvolMethodologie, qui est une adaptation de plusieurs figures de @craig_uml_2005):
 
 - Il y a une spécification explicite des besoins (@sec-besoins) dans le modèle de cas d'utilisation;
 - À partir de chaque cas d'utilisation (@sec-cu), il y a une conception de haut niveau (l'API du système à développer) documentée sous forme de diagramme de séquence système (DSS) (@sec-dss);
@@ -246,7 +246,7 @@ Cependant, il y a des défis associés à ce genre de développement:
 - **Instabilité apparente au début**: Dans les itérations initiales, puisqu'on n'a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la "bonne voie".
 La conséquence est que les évaluations et les rétroactions peuvent sembler rudes, et cela peut être déstabilisant pour des personnes qui ne sont pas familières avec le processus.
 La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la @fig-StabiliteDansLesIterations).
-- **Modifications des objectifs de l'itération en cours au besoin** : Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l'avons imaginé.
+- **Modifications des objectifs de l'itération en cours au besoin**: Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l'avons imaginé.
 Par exemple, l'ensemble des récits utilisateur ou des scénarios de cas d'utilisation visés pour l'itération nécessite plus de travail que prévu.
 La tendance dans ce cas est de nous donner plus de temps pour terminer.
 Mais cela voudrait dire que la rétroaction de toute l'itération sera retardée.

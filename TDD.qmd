@@ -152,6 +152,6 @@ Il s'agit de créer une classe ayant une méthode acceptant un entier et retourn
 8. Un argument de 30 retourne `FizzBuzz`.
 9. Supporter des exigences qui évoluent. Attention aux conflits dans les exigences:
 
-    a. Il faut imprimer Fizz au lieu du nombre si le nombre est un multiple de 3 ou contient un 3 (ex. : 13 → `Fizz`).
-    b. Il faut imprimer Buzz au lieu du nombre si le nombre est un multiple de 5 ou contient un 5 (ex. : 59 → `Fizz`).
-    c. Il faut imprimer FizzBuzz si le nombre est un multiple de 5 et de 3 ou contient un 5 et un 3 (ex. : 53 → `FizzBuzz`).
+    a. Il faut imprimer Fizz au lieu du nombre si le nombre est un multiple de 3 ou contient un 3 (ex.: 13 → `Fizz`).
+    b. Il faut imprimer Buzz au lieu du nombre si le nombre est un multiple de 5 ou contient un 5 (ex.: 59 → `Fizz`).
+    c. Il faut imprimer FizzBuzz si le nombre est un multiple de 5 et de 3 ou contient un 5 et un 3 (ex.: 53 → `FizzBuzz`).
