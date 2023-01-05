@@ -328,12 +328,6 @@ div.csl-indent {
 
 <p>Ce chapitre contient des informations sur le concept de la <a href="https://fr.wikipedia.org/wiki/Dette_technique">dette technique</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>, qui n’est pas un sujet abordé explicitement par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
 <p>Pour ajouter une nouvelle fonctionnalité à un système, les développeurs(euses) ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le «&nbsp;hacking cowboy&nbsp;» sur le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur. L’autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir. Comment prendre la <span style="white-space:nowrap">décision ?</span> La <em>dette technique</em> est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.</p>
-<div id="fig-FowlerDesignStaminaHypothesis" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/FowlerPseuoGraphFunctionaltyTime.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;7.1: «&nbsp;Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés <span style="white-space:nowrap">imaginaires :</span> l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.&nbsp;» <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler, 2007</a>)</span></figcaption><p></p>
-</figure>
-</div>
 <p>Martin Fowler <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">2007</a>)</span> a posé la question «&nbsp;Est-ce que ça vaut la peine de faire du bon <span style="white-space:nowrap">design ?</span>&nbsp;» – peut-on en faire moins pour développer plus <span style="white-space:nowrap">vite ?</span> Il a proposé un pseudographique comparant la fonctionnalité cumulative (élément difficile à mesurer) avec le temps (voir la <a href="#fig-FowlerDesignStaminaHypothesis">figure&nbsp;<span>7.1</span></a>). Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que de mois. Mais il avoue que c’est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d’évaluer ce qu’est un bon design. Le graphe sert à illustrer le principe que, à un certain moment, ignorer une conception va nuire à la performance des développeurs(euses) en ce qui concerne les nouvelles fonctionnalités.</p>
 <p>Voici une courte définition complémentaire de la dette technique <span class="citation" data-cites="avge16a">(<a href="references.html#ref-avge16a" role="doc-biblioref">Avgeriou, Kruchten, Ozkaya, &amp; Seaman, 2016</a>)</span><span style="white-space:nowrap"> :</span></p>
 <div class="callout callout callout-style-simple no-icon">
@@ -346,9 +340,15 @@ div.csl-indent {
 </div>
 </div>
 </div>
+<div id="fig-FowlerDesignStaminaHypothesis" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/FowlerPseuoGraphFunctionaltyTime.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7.1: «&nbsp;Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés <span style="white-space:nowrap">imaginaires :</span> l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.&nbsp;» <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler, 2007</a>)</span></figcaption><p></p>
+</figure>
+</div>
 <section id="origine" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="origine"><span class="header-section-number">7.1</span> Origine</h2>
-<p>La dette technique est une forme de risque qui peut apporter des bénéfices ou des pertes. Tout dépend de la quantité d’intérêt à payer. L’inventeur du wiki, Ward Cunningham, a utilisé la métaphore de la dette dans un projet de développement de logiciel de gestion de portefeuille réalisé dans une variante du langage <span style="white-space:nowrap">Smalltalk :</span></p>
+<p>La dette technique est une forme de risque qui peut apporter des bénéfices ou des pertes. Tout dépend de la quantité d’intérêt à payer. L’inventeur du wiki, Ward Cunningham, a utilisé la métaphore de la dette dans un projet de développement de logiciel de gestion de portefeuille réalisé dans une variante du langage Smalltalk <span class="citation" data-cites="Cunningham1992TheWP">(<a href="references.html#ref-Cunningham1992TheWP" role="doc-biblioref">1992</a>)</span><span style="white-space:nowrap"> :</span></p>
 <div class="callout callout callout-style-simple no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -438,6 +438,9 @@ La dette imprudente pourrait aussi être délibérée. Une équipe peut connaît
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-avge16a" class="csl-entry" role="doc-biblioentry">
 Avgeriou, P., Kruchten, P., Ozkaya, I., &amp; Seaman, C. (2016). <span>Managing Technical Debt in Software Engineering (Dagstuhl Seminar 16162)</span>. <em>Dagstuhl Reports</em>, <em>6</em>(4), 110‑138. <a href="https://doi.org/10.4230/DagRep.6.4.110">https://doi.org/10.4230/DagRep.6.4.110</a>
+</div>
+<div id="ref-Cunningham1992TheWP" class="csl-entry" role="doc-biblioentry">
+Cunningham, W. (1992). The WyCash portfolio management system. Dans <em>Conference on Object-Oriented Programming Systems, Languages, and Applications</em>.
 </div>
 <div id="ref-fowl07a" class="csl-entry" role="doc-biblioentry">
 Fowler, M. (2007, juin). Bliki: <span>DesignStaminaHypothesis</span>. <em>martinfowler.com</em>.

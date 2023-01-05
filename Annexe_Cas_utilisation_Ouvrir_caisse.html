@@ -465,11 +465,11 @@ C’est un contenant pour les billets de banque et les pièces de monnaie qui fa
 </section>
 <section id="modèle-du-domaine-partiel" class="level2" data-number="C.3">
 <h2 data-number="C.3" class="anchored" data-anchor-id="modèle-du-domaine-partiel"><span class="header-section-number">C.3</span> Modèle du domaine partiel</h2>
-<p>Voici un exemple pour le système POS NextGen. Notez les nouvelles classes conceptuelles <strong>Plateau-billets</strong> (un objet physique) et <strong>MisePlateau</strong> (une transaction) faisant partie du scénario d’<em>Ouvrir la caisse</em>.</p>
+<p>Voici un exemple pour le système POS NextGen. Notez les nouvelles classes conceptuelles <strong>PlateauBillets</strong> (un objet physique) et <strong>MisePlateau</strong> (une transaction) faisant partie du scénario d’<em>Ouvrir la caisse</em>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/MDD_POS_NextGen.drawio.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Modèle du domaine partiel</figcaption><p></p>
+<p><img src="images/MDD_POS_NextGen_export.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Modèle du domaine partiel du système POS NextGen avec deux nouvelles classes conceptuelles MisePlateau et PlateauBillets, qui modélisent des éléments du cas d’utilisation «&nbsp;Ouvrir la caisse&nbsp;».</figcaption><p></p>
 </figure>
 </div>
 <p>On remarque que lorsqu’un Registre (Caisse) n’a pas de Caissier (l’état du système au début du cas d’utilisation), l’objet Registre n’est associé à aucun objet Caissier. Nous avons donc modifié les cardinalités de l’association en conséquence. C’est une différence par rapport au modèle du domaine de base présenté par Larman, qui n’avait pas considéré ce cas d’utilisation, bien qu’il soit dans l’ensemble des spécifications du système.</p>
