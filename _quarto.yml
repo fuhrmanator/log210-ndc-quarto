@@ -19,7 +19,15 @@ book:
   title: "Analyse et conception de logiciels"
   cover-image: images/cover.png
   image: images/wordle_ordre_alph.png
-  
+
+  # web site options
+  favicon: images/favicon.ico
+  # twitter-card: true
+  search: true
+  repo-url: https://github.com/fuhrmanator/log210-ndc-quarto/
+  repo-actions: [issue]
+  downloads: [pdf, epub]
+
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
@@ -147,13 +155,6 @@ format:
 
     include-before-body: 
       - tex-hacks/redefine-parts-layout.tex
-    # web site options
-    favicon: images/favicon.ico
-    # twitter-card: true
-    site-url: https://example.com
-    search: true
-    repo-url: https://github.com/fuhrmanator/log210-ndc-quarto/
-    downloads: [pdf, epub]
 
 # filters must be run in the proper order here
 filters:
