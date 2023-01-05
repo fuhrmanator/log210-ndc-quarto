@@ -7,7 +7,7 @@
    viewBox="0 0 131.25287 66.616987"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="Modifier_objectifs_mi_iteration.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,11 +24,11 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.4823794"
-     inkscape:cx="229.02368"
-     inkscape:cy="-2.0237734"
+     inkscape:cx="222.95237"
+     inkscape:cy="159.8781"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="-8"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
@@ -644,10 +644,10 @@
        id="text1716"><tspan
          x="108.8188"
          y="119.30366"
-         id="tspan776">À la mi-itération, on peut décider de modifier le périmètre </tspan><tspan
+         id="tspan733">À la mi-itération, on peut décider de modifier le périmètre </tspan><tspan
          x="108.8188"
          y="132.10146"
-         id="tspan778">et les objectifs de l'itération si le travail est trop important.</tspan></text>
+         id="tspan735">et les objectifs de l'itération si le travail est trop important.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:400;font-size:10px;line-height:119.979%;font-family:Helvetica;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:361.698;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -773,20 +773,20 @@
          id="text7219"><tspan
            x="24.468323"
            y="0"
-           id="tspan786"><tspan
+           id="tspan743"><tspan
    style="font-size:9.33333px"
-   id="tspan780">Une itération de</tspan><tspan
+   id="tspan737">Une itération de</tspan><tspan
    style="font-size:9.33333px"
-   id="tspan782"> </tspan><tspan
+   id="tspan739"> </tspan><tspan
    style="font-size:9.33333px"
-   id="tspan784">deux</tspan><tspan
+   id="tspan741">deux</tspan><tspan
    y="0"
-   id="tspan788"> </tspan></tspan><tspan
+   id="tspan745"> </tspan></tspan><tspan
            x="24.468323"
            y="13.828152"
-           id="tspan792"><tspan
+           id="tspan749"><tspan
              style="font-size:9.33333px"
-             id="tspan790">semaines</tspan></tspan></text>
+             id="tspan747">semaines</tspan></tspan></text>
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.11666, 2.11666;stroke-dashoffset:0;stroke-opacity:1"
@@ -825,10 +825,10 @@
        y="0"><tspan
          x="372.375"
          y="209.28777"
-         id="tspan794">Démonstrations d'un système fonctionnel </tspan><tspan
+         id="tspan751">Démonstration d'un système fonctionnel </tspan><tspan
          x="372.375"
          y="222.62114"
-         id="tspan796">et planification de la prochaine itération</tspan></text>
+         id="tspan753">et planification de la prochaine itération</tspan></text>
     <g
        id="g24894"
        transform="translate(-47.967997,25.211087)">

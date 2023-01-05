@@ -5,8 +5,8 @@
    viewBox="0 0 211.34668 173.13"
    version="1.1"
    id="svg8"
-   sodipodi:docname="F2.1_adaptée.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Process_iteratif_et_incremental.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -70,15 +70,6 @@
        width="6"
        patternUnits="userSpaceOnUse"
        id="EMFhbasepattern" />
-    <clipPath
-       id="clip0">
-      <rect
-         x="153"
-         y="62"
-         width="191"
-         height="190"
-         id="rect4967" />
-    </clipPath>
     <marker
        style="overflow:visible"
        id="Arrow2-2"
@@ -194,6 +185,66 @@
          id="Dot1-1-3"
          sodipodi:nodetypes="sssss" />
     </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath556">
+      <g
+         id="g560"
+         transform="translate(-1.0291667e-5)">
+        <rect
+           x="156.1916"
+           y="23.109329"
+           width="50.535416"
+           height="50.270832"
+           id="rect558"
+           style="stroke-width:0.264583" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath562">
+      <g
+         id="g566"
+         transform="translate(-1.0291667e-5)">
+        <rect
+           x="156.1916"
+           y="23.109329"
+           width="50.535416"
+           height="50.270832"
+           id="rect564"
+           style="stroke-width:0.264583" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath568">
+      <g
+         id="g572"
+         transform="translate(-1.0291667e-5)">
+        <rect
+           x="156.1916"
+           y="23.109329"
+           width="50.535416"
+           height="50.270832"
+           id="rect570"
+           style="stroke-width:0.264583" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath574">
+      <g
+         id="g578"
+         transform="translate(-1.0291667e-5)">
+        <rect
+           x="156.1916"
+           y="23.109329"
+           width="50.535416"
+           height="50.270832"
+           id="rect576"
+           style="stroke-width:0.264583" />
+      </g>
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -202,11 +253,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="346.9874"
-     inkscape:cy="288.90363"
+     inkscape:zoom="1.4"
+     inkscape:cx="46.428571"
+     inkscape:cy="400.71429"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5022"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
@@ -243,87 +294,102 @@
     <g
        id="g5022"
        transform="rotate(-90,170.8004,57.807553)">
-      <g
-         clip-path="url(#clip0)"
-         transform="matrix(0.26458333,0,0,0.26458333,115.71035,6.705162)"
-         id="g4992">
-        <rect
-           x="153.5"
-           y="62.500099"
-           width="143"
-           height="47"
-           stroke="#4472c4"
-           stroke-width="1.33333"
-           stroke-miterlimit="8"
-           fill="#ffffff"
-           id="rect4972" />
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="400"
-           font-size="12px"
-           transform="translate(196.833,90)"
-           id="text4974">Exigences</text>
-        <rect
-           x="168.5"
-           y="109.5"
-           width="143"
-           height="48"
-           stroke="#4472c4"
-           stroke-width="1.33333"
-           stroke-miterlimit="8"
-           fill="#ffffff"
-           id="rect4976" />
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="400"
-           font-size="12px"
-           transform="translate(208.833,138)"
-           id="text4978">Conception</text>
-        <rect
-           x="184.5"
-           y="157.5"
-           width="143"
-           height="47"
-           stroke="#4472c4"
-           stroke-width="1.33333"
-           stroke-miterlimit="8"
-           fill="#ffffff"
-           id="rect4980" />
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="400"
-           font-size="12px"
-           transform="translate(194.5,178)"
-           id="text4982">Implémentation, Tests,</text>
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="400"
-           font-size="12px"
-           transform="translate(213.833,192)"
-           id="text4984">Intégration, etc.</text>
-        <rect
-           x="200.5"
-           y="204.5"
-           width="143"
-           height="47"
-           stroke="#4472c4"
-           stroke-width="1.33333"
-           stroke-miterlimit="8"
-           fill="#ffffff"
-           id="rect4986" />
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="400"
-           font-size="12px"
-           transform="translate(220.167,225)"
-           id="text4988">Intégration finale et</text>
-        <text
-           font-family="Arial, Arial_MSFontService, sans-serif"
-           font-weight="400"
-           font-size="12px"
-           transform="translate(235.5,239)"
-           id="text4990">Test système</text>
-      </g>
+      <rect
+         x="156.3239"
+         y="23.241646"
+         width="37.835415"
+         height="12.435416"
+         stroke="#4472c4"
+         stroke-width="0.352777"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         id="rect4972"
+         clip-path="url(#clipPath574)"
+         style="stroke:#818181;stroke-opacity:1;fill:none;stroke-width:0.353;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="3.175px"
+         id="text4974"
+         x="167.78908"
+         y="30.517662"
+         style="stroke-width:0.264583">Exigences</text>
+      <rect
+         x="160.29265"
+         y="35.677036"
+         width="37.835415"
+         height="12.7"
+         stroke="#4472c4"
+         stroke-width="0.352777"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         id="rect4976"
+         clip-path="url(#clipPath568)"
+         style="stroke:#818181;stroke-opacity:1;fill:none;stroke-width:0.353;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="3.175px"
+         id="text4978"
+         x="170.96408"
+         y="43.217663"
+         style="stroke-width:0.264583">Conception</text>
+      <rect
+         x="164.52597"
+         y="48.377037"
+         width="37.835415"
+         height="12.435416"
+         stroke="#4472c4"
+         stroke-width="0.352777"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         id="rect4980"
+         clip-path="url(#clipPath562)"
+         style="stroke:#818181;stroke-opacity:1;fill:none;stroke-width:0.353;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="3.175px"
+         id="text4982"
+         x="167.17181"
+         y="53.800995"
+         style="stroke-width:0.264583">Implémentation, tests,</text>
+      <text
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="3.175px"
+         id="text4984"
+         x="172.287"
+         y="57.505161"
+         style="stroke-width:0.264583">intégration, etc.</text>
+      <rect
+         x="168.75931"
+         y="60.812454"
+         width="37.835415"
+         height="12.435416"
+         stroke="#4472c4"
+         stroke-width="0.352777"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         id="rect4986"
+         clip-path="url(#clipPath556)"
+         style="stroke:#818181;stroke-opacity:1;fill:none;stroke-width:0.353;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="3.175px"
+         id="text4988"
+         x="173.96288"
+         y="66.236412"
+         style="stroke-width:0.264583">Intégration finale et</text>
+      <text
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="3.175px"
+         id="text4990"
+         x="178.01971"
+         y="69.940575"
+         style="stroke-width:0.264583">test système</text>
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.955683;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
@@ -367,10 +433,10 @@
        transform="translate(28.537203,-39.233929)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan14894">Fonctionnalités </tspan><tspan
+         id="tspan1134">Fonctionnalités </tspan><tspan
          x="111.19573"
          y="-33.57667"
-         id="tspan14896">du système</tspan></text>
+         id="tspan1136">du système</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:71.5914;display:inline;stroke-width:0.264583"
@@ -380,7 +446,7 @@
        transform="translate(25.82484,127.29448)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan14898">3 semaines (par exemple)</tspan></text>
+         id="tspan1138">3 semaines (par exemple)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:71.5914;display:inline;stroke-width:0.264583"
@@ -390,7 +456,7 @@
        transform="translate(131.37683,80.75955)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan14900">Rétroactions du client</tspan></text>
+         id="tspan1140">Rétroactions du client</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:71.5914;display:inline;stroke-width:0.264583"
@@ -400,9 +466,9 @@
        transform="translate(23.670184,66.915963)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan14904"><tspan
+         id="tspan1144"><tspan
            style="font-weight:bold;-inkscape-font-specification:'Arial, Bold'"
-           id="tspan14902">Itération 1</tspan></tspan></text>
+           id="tspan1142">Itération 1</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:71.5914;display:inline;stroke-width:0.264583"
@@ -412,9 +478,9 @@
        transform="translate(78.49119,16.498806)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan14908"><tspan
+         id="tspan1148"><tspan
            style="font-weight:bold;-inkscape-font-specification:'Arial, Bold'"
-           id="tspan14906">Itération 2</tspan></tspan></text>
+           id="tspan1146">Itération 2</tspan></tspan></text>
     <use
        x="0"
        y="0"
@@ -436,9 +502,9 @@
        transform="translate(133.03933,-34.568536)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan14912"><tspan
+         id="tspan1152"><tspan
            style="font-weight:bold;-inkscape-font-specification:'Arial, Bold'"
-           id="tspan14910">Itération 3</tspan></tspan></text>
+           id="tspan1150">Itération 3</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.490756;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        d="m 134.05871,72.919793 c 0.18202,11.153193 25.24051,-3.509687 27.06069,8.588686 2.36622,-12.098373 27.18048,2.753547 26.81645,-8.966754"
@@ -493,10 +559,10 @@
        transform="translate(34.006591,-12.556995)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan14914">Le système se construit </tspan><tspan
+         id="tspan1154">Le système se construit </tspan><tspan
          x="111.19573"
          y="-32.694722"
-         id="tspan14916">de façon incrémentale</tspan></text>
+         id="tspan1156">de façon incrémentale.</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.19999785,1.19999785;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Dot-1)"
        d="m 171.83716,-42.144502 c 0,0 -1.59805,11.616053 14.46784,15.632289"
@@ -516,12 +582,12 @@
        transform="translate(112.88937,100.94233)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan14918">La durée des itérations </tspan><tspan
+         id="tspan1158">La durée des itérations </tspan><tspan
          x="111.19573"
          y="-32.679296"
-         id="tspan14922">est fixe (<tspan
+         id="tspan1162">est fixe (<tspan
    style="font-style:italic;-inkscape-font-specification:'Arial, Italic'"
-   id="tspan14920">Timeboxing</tspan>)</tspan></text>
+   id="tspan1160">Timeboxing</tspan>).</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.2,1.2;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Dot)"
        d="m 222.22859,61.854002 c 0,0 -11.22532,8.68626 -34.61141,22.450641"
