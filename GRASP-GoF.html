@@ -336,11 +336,6 @@ div.csl-indent {
   <a href="./Exercice_Coder_des_méthodes_des_DS.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Coder des méthodes à partir des diagrammes de séquence</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Adaptateur pour Maps</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -673,6 +668,16 @@ Astuce
 </div>
 <div id="exr-GRASP_facade" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 14.10 (Façade) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte">Façade</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+</div>
+<div id="exr-Adaptateur_Maps" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 14.11 (Adaptateur pour Maps) </strong></span>Proposez une mise en oeuvre du patron GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul <span style="white-space:nowrap">d’itinéraires :</span></p>
+<ul>
+<li><a href="https://developers.google.com/maps/documentation/directions">Google Maps</a><span style="white-space:nowrap"> ;</span></li>
+<li><a href="https://www.microsoft.com/en-us/maps/routing#routing">Bing Maps</a><span style="white-space:nowrap"> ;</span></li>
+<li><a href="https://developer.apple.com/documentation/mapkitjs/">Apple Maps</a>.</li>
+</ul>
+<p>Le système veut obtenir une liste d’étapes (des directions) pour se rendre à une destination à partir d’un point de départ. L’utilisateur ou l’utilisatrice du système pourra décider lequel des services lui convient dans les préférences.</p>
+<p>Le but de l’exercice est de déterminer l’interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d’itinéraires. Cela peut être un diagramme de classes réalisé avec PlantUML.</p>
 </div>
 
 
