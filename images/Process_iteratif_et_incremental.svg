@@ -253,16 +253,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="408.60671"
-     inkscape:cy="373.75644"
+     inkscape:zoom="1.4"
+     inkscape:cx="91.428572"
+     inkscape:cy="400.71429"
      inkscape:document-units="mm"
      inkscape:current-layer="g5022"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:showpageshadow="2"
@@ -304,7 +304,8 @@
          stroke-miterlimit="8"
          fill="#ffffff"
          id="rect4972"
-         clip-path="url(#clipPath574)" />
+         clip-path="url(#clipPath574)"
+         style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:0.353;stroke-dasharray:0.35299998,0.35299998;stroke-dashoffset:0" />
       <text
          font-family="Arial, Arial_MSFontService, sans-serif"
          font-weight="400"
@@ -323,7 +324,8 @@
          stroke-miterlimit="8"
          fill="#ffffff"
          id="rect4976"
-         clip-path="url(#clipPath568)" />
+         clip-path="url(#clipPath568)"
+         style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:0.353;stroke-dasharray:0.35299998,0.35299998;stroke-dashoffset:0" />
       <text
          font-family="Arial, Arial_MSFontService, sans-serif"
          font-weight="400"
@@ -342,7 +344,8 @@
          stroke-miterlimit="8"
          fill="#ffffff"
          id="rect4980"
-         clip-path="url(#clipPath562)" />
+         clip-path="url(#clipPath562)"
+         style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:0.353;stroke-dasharray:0.35299998,0.35299998;stroke-dashoffset:0" />
       <text
          font-family="Arial, Arial_MSFontService, sans-serif"
          font-weight="400"
@@ -369,7 +372,8 @@
          stroke-miterlimit="8"
          fill="#ffffff"
          id="rect4986"
-         clip-path="url(#clipPath556)" />
+         clip-path="url(#clipPath556)"
+         style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:0.353;stroke-dasharray:0.35299998,0.35299998;stroke-dashoffset:0" />
       <text
          font-family="Arial, Arial_MSFontService, sans-serif"
          font-weight="400"
@@ -429,10 +433,10 @@
        transform="translate(28.537203,-39.233929)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan710">Fonctionnalités </tspan><tspan
+         id="tspan2725">Fonctionnalités </tspan><tspan
          x="111.19573"
          y="-33.57667"
-         id="tspan712">du système</tspan></text>
+         id="tspan2727">du système</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:71.5914;display:inline;stroke-width:0.264583"
@@ -442,7 +446,7 @@
        transform="translate(25.82484,127.29448)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan714">3 semaines (par exemple)</tspan></text>
+         id="tspan2729">3 semaines (par exemple)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:71.5914;display:inline;stroke-width:0.264583"
@@ -452,7 +456,7 @@
        transform="translate(131.37683,80.75955)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan716">Rétroactions du client</tspan></text>
+         id="tspan2731">Rétroactions du client</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:71.5914;display:inline;stroke-width:0.264583"
@@ -462,9 +466,9 @@
        transform="translate(23.670184,66.915963)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan720"><tspan
+         id="tspan2735"><tspan
            style="font-weight:bold;-inkscape-font-specification:'Arial, Bold'"
-           id="tspan718">Itération 1</tspan></tspan></text>
+           id="tspan2733">Itération 1</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:71.5914;display:inline;stroke-width:0.264583"
@@ -474,9 +478,9 @@
        transform="translate(78.49119,16.498806)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan724"><tspan
+         id="tspan2739"><tspan
            style="font-weight:bold;-inkscape-font-specification:'Arial, Bold'"
-           id="tspan722">Itération 2</tspan></tspan></text>
+           id="tspan2737">Itération 2</tspan></tspan></text>
     <use
        x="0"
        y="0"
@@ -498,9 +502,9 @@
        transform="translate(133.03933,-34.568536)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan728"><tspan
+         id="tspan2743"><tspan
            style="font-weight:bold;-inkscape-font-specification:'Arial, Bold'"
-           id="tspan726">Itération 3</tspan></tspan></text>
+           id="tspan2741">Itération 3</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.490756;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        d="m 134.05871,72.919793 c 0.18202,11.153193 25.24051,-3.509687 27.06069,8.588686 2.36622,-12.098373 27.18048,2.753547 26.81645,-8.966754"
@@ -555,10 +559,10 @@
        transform="translate(34.006591,-12.556995)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan730">Le système se construit </tspan><tspan
+         id="tspan2745">Le système se construit </tspan><tspan
          x="111.19573"
          y="-32.694722"
-         id="tspan732">de façon incrémentale.</tspan></text>
+         id="tspan2747">de façon incrémentale.</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.19999785,1.19999785;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Dot-1)"
        d="m 171.83716,-42.144502 c 0,0 -1.59805,11.616053 14.46784,15.632289"
@@ -578,12 +582,12 @@
        transform="translate(112.88937,100.94233)"><tspan
          x="111.19573"
          y="-40.632221"
-         id="tspan734">La durée des itérations </tspan><tspan
+         id="tspan2749">La durée des itérations </tspan><tspan
          x="111.19573"
          y="-32.679296"
-         id="tspan738">est fixe (<tspan
+         id="tspan2753">est fixe (<tspan
    style="font-style:italic;-inkscape-font-specification:'Arial, Italic'"
-   id="tspan736">Timeboxing</tspan>).</tspan></text>
+   id="tspan2751">Timeboxing</tspan>).</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.2,1.2;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Dot)"
        d="m 222.22859,61.854002 c 0,0 -11.22532,8.68626 -34.61141,22.450641"
