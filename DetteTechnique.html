@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.233">
+<meta name="generator" content="quarto-1.3.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,6 +60,8 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -313,7 +315,7 @@ div.csl-indent {
   <li><a href="#nuances-de-la-dette-technique" id="toc-nuances-de-la-dette-technique" class="nav-link" data-scroll-target="#nuances-de-la-dette-technique"><span class="toc-section-number">7.2</span>  Nuances de la dette technique</a></li>
   <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé"><span class="toc-section-number">7.3</span>  Résumé</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="DetteTechnique.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="DetteTechnique.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -321,7 +323,7 @@ div.csl-indent {
 
 
 
-<p>Ce chapitre contient des informations sur le concept de la <a href="https://fr.wikipedia.org/wiki/Dette_technique">dette technique</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>, qui n’est pas un sujet abordé explicitement par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
+<p>Ce chapitre contient des informations sur le concept de la <a href="https://fr.wikipedia.org/wiki/Dette_technique">dette technique</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>, qui n’est pas un sujet abordé explicitement par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
 <p>Pour ajouter une nouvelle fonctionnalité à un système, les développeurs(euses) ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le «&nbsp;hacking cowboy&nbsp;» sur le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur. L’autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir. Comment prendre la <span style="white-space:nowrap">décision ?</span> La <em>dette technique</em> est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.</p>
 <p>Martin Fowler <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">2007</a>)</span> a posé la question «&nbsp;Est-ce que ça vaut la peine de faire du bon <span style="white-space:nowrap">design ?</span>&nbsp;» – peut-on en faire moins pour développer plus <span style="white-space:nowrap">vite ?</span> Il a proposé un pseudographique comparant la fonctionnalité cumulative (élément difficile à mesurer) avec le temps (voir la <a href="#fig-FowlerDesignStaminaHypothesis">figure&nbsp;<span>7.1</span></a>). Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que de mois. Mais il avoue que c’est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d’évaluer ce qu’est un bon design. Le graphe sert à illustrer le principe que, à un certain moment, ignorer une conception va nuire à la performance des développeurs(euses) en ce qui concerne les nouvelles fonctionnalités.</p>
 <p>Voici une courte définition complémentaire de la dette technique <span class="citation" data-cites="avge16a">(<a href="references.html#ref-avge16a" role="doc-biblioref">Avgeriou, Kruchten, Ozkaya, &amp; Seaman, 2016</a>)</span><span style="white-space:nowrap"> :</span></p>

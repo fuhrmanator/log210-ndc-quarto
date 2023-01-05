@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.233">
+<meta name="generator" content="quarto-1.3.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,6 +60,8 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -314,7 +316,7 @@ div.csl-indent {
   <li><a href="#exemple-de-kata-tdd-fizzbuzz" id="toc-exemple-de-kata-tdd-fizzbuzz" class="nav-link" data-scroll-target="#exemple-de-kata-tdd-fizzbuzz"><span class="toc-section-number">10.1.1</span>  Exemple de kata TDD FizzBuzz</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="TDD.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="TDD.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -328,7 +330,7 @@ div.csl-indent {
 <p>Plusieurs chercheurs(euses) ont mené des expériences, par exemple <span class="citation" data-cites="Karac_TDD_2018">Karac &amp; Turhan (<a href="references.html#ref-Karac_TDD_2018" role="doc-biblioref">2018</a>)</span>, pour voir si <em>tester en premier</em> avait un vrai bénéfice. Les résultats de leurs analyses n’ont pas toujours montré que c’est le cas (ce genre d’expérience est difficile à faire, en partie parce qu’il n’y a pas beaucoup de développeurs(euses) en industrie qui le pratiquent). Les chercheurs(euses) ont trouvé que faire un petit test <em>après</em> avoir écrit le code a aussi un bénéfice sur le plan de la qualité. Dans tous les cas, des chercheurs(euses) ont trouvé que le fait de travailler en <em>petits pas</em> apporte <em>toujours</em> un avantage sur le plan de la qualité. Travailler en <em>petits pas</em> est utile, même sans faire du TDD de manière dogmatique.</p>
 <p>Sachez qu’il existe beaucoup d’intergiciels (en anglais <em>frameworks</em>) pour faciliter l’exécution automatique des tests réalisés dans le cadre du TDD. Pour Java, il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements. En ce qui concerne le squelette pour le laboratoire, il s’agit de <a href="https://jestjs.io/">Jest</a>. <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). --></p>
 <p>L’exécution de tests peut même être faite à chaque <em>commit</em> du code dans un dépôt comme GitHub.</p>
-<p>Il est possible de mesurer la <a href="https://fr.wikipedia.org/wiki/Couverture_de_code">couverture de code</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>&nbsp;atteinte par les tests (mais ce sujet sort du cadre de la matière de ce manuel).</p>
+<p>Il est possible de mesurer la <a href="https://fr.wikipedia.org/wiki/Couverture_de_code">couverture de code</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>&nbsp;atteinte par les tests (mais ce sujet sort du cadre de la matière de ce manuel).</p>
 <div id="fig-TDD_states" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="387px" preserveaspectratio="none" style="width:645px;height:387px;background:#FFFFFF;" version="1.1" viewbox="0 0 645 387" width="645px" zoomandpan="magnify"><defs></defs><g><rect fill="#FF0000" height="65.875" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="91" x="129.5" y="37.2734"></rect><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="81" x="134.5" y="57.125">Au moins</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="65" x="142.5" y="75.75">un test</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="65" x="142.5" y="94.375">échoue</text><rect fill="#008000" height="65.875" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="88" x="373" y="37.2734"></rect><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="43" x="395.5" y="57.125">Tous</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="78" x="378" y="75.75">les tests</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="71" x="381.5" y="94.375">passent</text><rect fill="#FFFF00" height="60.625" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="85" x="374.5" y="183.2734"></rect><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="75" x="379.5" y="203.125">Pas TDD</text><path d="M401,206.8984 L401,222.8984 L405,222.8984 L405,206.8984 L401,206.8984 M409,206.8984 L409,222.8984 C410.12,222.8984 411.12,223.2584 411.88,224.0184 C412.64,224.7784 416.48,232.4984 417,233.5384 C417.52,234.5784 418.56,235.0984 419.64,234.7784 C420.68,234.4584 421.24,233.3384 420.88,232.2584 C420.56,231.2184 419,225.8984 419,224.8984 C419,223.8984 419.88,222.8984 421,222.8984 L427,222.8984 C428.12,222.8984 429,222.0184 429,220.8984 C429,219.7784 424.88,208.1384 424.88,208.1384 C424.56,207.4184 423.84,206.8984 423,206.8984 L409,206.8984 " fill="#FF0000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"></path><ellipse cx="16" cy="70.2734" fill="#222222" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"></ellipse><!--MD5=[1a59c7f6df8481c56a7ef6a685f090c4]
@@ -404,7 +406,7 @@ Country: null
 <p>Les activités de réusinage sont expliquées dans la section <a href="Réusinage.html">Réusinage (Refactorisation)</a>.</p>
 <section id="kata-tdd" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="kata-tdd"><span class="header-section-number">10.1</span> Kata TDD</h2>
-<p>Pour apprendre à faire du développement piloté par les tests (et pour apprendre les cadriciels supportant l’automatisation des tests), il existe une activité nommée «&nbsp;kata TDD&nbsp;». <em>Kata</em> est un terme japonais désignant une séquence de techniques réalisée dans le vide dans les arts martiaux japonais. <a href="https://www.youtube.com/watch?v=DmPk_A-RU50">En voici une vidéo</a>&nbsp;<i class="fa-brands fa-youtube"></i>. C’est un outil de transmission de techniques et de principes de combat.</p>
+<p>Pour apprendre à faire du développement piloté par les tests (et pour apprendre les cadriciels supportant l’automatisation des tests), il existe une activité nommée «&nbsp;kata TDD&nbsp;». <em>Kata</em> est un terme japonais désignant une séquence de techniques réalisée dans le vide dans les arts martiaux japonais. <a href="https://www.youtube.com/watch?v=DmPk_A-RU50">En voici une vidéo</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>. C’est un outil de transmission de techniques et de principes de combat.</p>
 <div id="fig-KataBasaiDai" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/karate.jpg" class="img-fluid figure-img" style="width:40.0%"></p>
@@ -466,9 +468,9 @@ Buzz
 <li><p>Un argument de 30 retourne <code>FizzBuzz</code>.</p></li>
 <li><p>Supporter des exigences qui évoluent. Attention aux conflits dans les <span style="white-space:nowrap">exigences :</span></p>
 <ol type="a">
-<li>Il faut imprimer Fizz au lieu du nombre si le nombre est un multiple de 3 ou contient un 3 (ex. : 13 → <code>Fizz</code>).</li>
-<li>Il faut imprimer Buzz au lieu du nombre si le nombre est un multiple de 5 ou contient un 5 (ex. : 59 → <code>Fizz</code>).</li>
-<li>Il faut imprimer FizzBuzz si le nombre est un multiple de 5 et de 3 ou contient un 5 et un 3 (ex. : 53 → <code>FizzBuzz</code>).</li>
+<li>Il faut imprimer Fizz au lieu du nombre si le nombre est un multiple de 3 ou contient un 3 <span style="white-space:nowrap">(ex. :</span> 13 → <code>Fizz</code>).</li>
+<li>Il faut imprimer Buzz au lieu du nombre si le nombre est un multiple de 5 ou contient un 5 <span style="white-space:nowrap">(ex. :</span> 59 → <code>Fizz</code>).</li>
+<li>Il faut imprimer FizzBuzz si le nombre est un multiple de 5 et de 3 ou contient un 5 et un 3 <span style="white-space:nowrap">(ex. :</span> 53 → <code>FizzBuzz</code>).</li>
 </ol></li>
 </ol>
 

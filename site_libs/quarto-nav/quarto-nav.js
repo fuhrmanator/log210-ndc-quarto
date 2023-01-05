@@ -54,7 +54,6 @@ window.document.addEventListener("DOMContentLoaded", function () {
     const bodyOffset = topOffset + footerOffset();
     const bodyEl = window.document.body;
     bodyEl.setAttribute("data-bs-offset", topOffset);
-    bodyEl.style.paddingTop = topOffset + "px";
 
     // deal with sidebar offsets
     const sidebars = window.document.querySelectorAll(
@@ -88,6 +87,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
     let linkStyle = window.document.querySelector("#quarto-target-style");
     if (!linkStyle) {
       linkStyle = window.document.createElement("style");
+      linkStyle.setAttribute("id", "quarto-target-style");
       window.document.head.appendChild(linkStyle);
     }
     while (linkStyle.firstChild) {
@@ -147,6 +147,14 @@ window.document.addEventListener("DOMContentLoaded", function () {
       }
     };
   }
+
+  window.addEventListener(
+    "hashchange",
+    function (e) {
+      window.scrollTo(0, window.pageYOffset - headerOffset());
+    },
+    false
+  );
 
   // Observe size changed for the header
   const headerEl = window.document.querySelector("header.fixed-top");

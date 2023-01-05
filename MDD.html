@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.233">
+<meta name="generator" content="quarto-1.3.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,6 +60,8 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -327,7 +329,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">4.10</span>  Exercices</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="MDD.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="MDD.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -335,7 +337,7 @@ div.csl-indent {
 
 
 
-<p>Les MDD sont expliqués en détail dans le chapitre 9&nbsp;<i class="fa-solid fa-book"></i>, mais voici des points <span style="white-space:nowrap">importants :</span></p>
+<p>Les MDD sont expliqués en détail dans le chapitre 9&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>, mais voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li>Les classes conceptuelles ne sont pas des classes logicielles. Ainsi, selon la méthodologie de Larman, <em>elles n’ont pas de méthodes</em>.</li>
 <li>Les classes ont des noms commençant avec une lettre majuscule, par exemple <code>Joueur</code>, et elles ne sont jamais au pluriel, par exemple <del><code>Joueurs</code></del>.</li>
@@ -351,7 +353,7 @@ div.csl-indent {
 <section id="sec-categoriesClasses" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-categoriesClasses"><span class="header-section-number">4.1.1</span> Catégories pour identifier des classes conceptuelles</h3>
 <table class="table">
-<caption>Extrait du tableau 9.1&nbsp;<i class="fa-solid fa-book"></i></caption>
+<caption>Extrait du tableau 9.1&nbsp;<i class="fa-solid fa-book" aria-label="book"></i></caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -384,7 +386,7 @@ div.csl-indent {
 <td style="text-align: left;"><em>Caissier</em>, <em>Client</em>, <em>JoueurDeMonopoly</em>, <em>Passager</em></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Organisations liées à la transaction</strong> : Quelles sont les organisations impliquées dans une <span style="white-space:nowrap">transaction ?</span></td>
+<td style="text-align: left;"><strong>Organisations liées à la transaction</strong><span style="white-space:nowrap"> :</span> Quelles sont les organisations impliquées dans une <span style="white-space:nowrap">transaction ?</span></td>
 <td style="text-align: left;"><em>Magasin</em>, <em>CompagnieAérienne</em>, <em>Bibliothèque</em>, <em>Université</em></td>
 </tr>
 <tr class="odd">
@@ -437,14 +439,14 @@ div.csl-indent {
 </section>
 <section id="attributs" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="attributs"><span class="header-section-number">4.2</span> Attributs</h2>
-<p>Les attributs sont le sujet de la section 9.16&nbsp;<i class="fa-solid fa-book"></i>. Comme c’est le cas pour les classes et les associations, on fait figurer les attributs <em>quand les cas d’utilisation suggèrent la nécessité de mémoriser des informations</em>.</p>
+<p>Les attributs sont le sujet de la section 9.16&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Comme c’est le cas pour les classes et les associations, on fait figurer les attributs <em>quand les cas d’utilisation suggèrent la nécessité de mémoriser des informations</em>.</p>
 <p>Pour l’UML, la syntaxe complète d’un attribut <span style="white-space:nowrap">est :</span></p>
-<p><strong>visibilité nom : type multiplicité = défaut {propriété}</strong></p>
+<p><strong>visibilité <span style="white-space:nowrap">nom :</span> type multiplicité = défaut {propriété}</strong></p>
 <p>Voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li><em>Le type d’un attribut est important, et il faut le spécifier dans un MDD</em>, même si dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>, il y a plusieurs exemples sans type.</li>
 <li>On ne se soucie pas de la visibilité des attributs dans un MDD.</li>
-<li>Faites attention à la confusion des attributs et des classes. Si l’on ne pense pas un concept <em>X</em> en termes alphanumériques dans le monde réel, alors il s’agit probablement d’une classe conceptuelle. Par exemple, dans le monde réel, une université n’est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12&nbsp;<i class="fa-solid fa-book"></i>.</li>
+<li>Faites attention à la confusion des attributs et des classes. Si l’on ne pense pas un concept <em>X</em> en termes alphanumériques dans le monde réel, alors il s’agit probablement d’une classe conceptuelle. Par exemple, dans le monde réel, une université n’est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</li>
 <li>De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>, la classe <code>Pays</code> n’a pas un <em>attribut</em> <code>joueur:Joueur</code> (qui contrôle le <span style="white-space:nowrap">Pays) ;</span> elle a plutôt une <em>association</em> avec la classe <code>Joueur</code> et un verbe <code>contrôle</code>.</li>
 </ul>
 <div class="callout-warning callout callout-style-simple">
@@ -460,7 +462,7 @@ div.csl-indent {
 </section>
 <section id="associations" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="associations"><span class="header-section-number">4.3</span> Associations</h2>
-<p>Les associations dans le MDD sont le sujet de la section 9.14&nbsp;<i class="fa-solid fa-book"></i>. Il faut se référer au contenu du livre pour les détails. Une association est une relation entre des classes (ou des instances de classes). Elle indique une connexion significative ou intéressante. Voici des points <span style="white-space:nowrap">importants :</span></p>
+<p>Les associations dans le MDD sont le sujet de la section 9.14&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Il faut se référer au contenu du livre pour les détails. Une association est une relation entre des classes (ou des instances de classes). Elle indique une connexion significative ou intéressante. Voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li>Il est facile de trouver beaucoup d’associations, mais il faut se limiter à celles qui doivent être conservées un certain temps. Pensez à la <strong>mémorabilité</strong> d’une association dans le contexte du logiciel à développer. Par exemple, considérez les associations de la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a><span style="white-space:nowrap"> :</span>
 <ul>
@@ -478,7 +480,7 @@ div.csl-indent {
 </ul>
 <div id="tbl-associations-courantes" class="anchored">
 <table class="table">
-<caption>Tableau&nbsp;4.1: Extrait du tableau 9.2&nbsp;<i class="fa-solid fa-book"></i>&nbsp;(liste d’associations courantes)</caption>
+<caption>Tableau&nbsp;4.1: Extrait du tableau 9.2&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>&nbsp;(liste d’associations courantes)</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -694,7 +696,7 @@ Country: null
 </section>
 <section id="attributs-dérivés" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="attributs-dérivés"><span class="header-section-number">4.5</span> Attributs dérivés</h2>
-<p>Les attributs dérivés sont expliqués en détail dans la section 9.16&nbsp;<i class="fa-solid fa-book"></i>. Il s’agit des attributs qui sont calculés à partir d’autres informations reliées à la classe. Ils sont indiqués par le symbole <strong><code>/</code></strong> devant leur nom. L’exemple à la <a href="#fig-MDD-attribut-derive">figure&nbsp;<span>4.2</span></a> s’applique à la règle du jeu Risk spécifiant qu’un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé <code>/nbPaysOccupés</code> qui est calculé selon le nombre de Pays contrôlés par le joueur.</p>
+<p>Les attributs dérivés sont expliqués en détail dans la section 9.16&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Il s’agit des attributs qui sont calculés à partir d’autres informations reliées à la classe. Ils sont indiqués par le symbole <strong><code>/</code></strong> devant leur nom. L’exemple à la <a href="#fig-MDD-attribut-derive">figure&nbsp;<span>4.2</span></a> s’applique à la règle du jeu Risk spécifiant qu’un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé <code>/nbPaysOccupés</code> qui est calculé selon le nombre de Pays contrôlés par le joueur.</p>
 <div id="fig-MDD-attribut-derive" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="226px" preserveaspectratio="none" style="width:147px;height:226px;background:#00000000;" version="1.1" viewbox="0 0 147 226" width="147px" zoomandpan="magnify"><defs></defs><g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
@@ -746,7 +748,7 @@ Country: null
 </section>
 <section id="classes-de-description-et-de-catalogues" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="classes-de-description-et-de-catalogues"><span class="header-section-number">4.6</span> Classes de «&nbsp;description&nbsp;» et de catalogues</h2>
-<p>Deux catégories de classes conceptuelles qui vont de pair sont les <em>descriptions d’entités</em> et les <em>catalogues</em> qui agrègent les descriptions. Elles sont expliquées en détail dans la section 9.13 <i class="fa-solid fa-book"></i>. Voici des conditions pour utiliser correctement une classe de description d’une autre classe «&nbsp;X&nbsp;»<span style="white-space:nowrap"> :</span></p>
+<p>Deux catégories de classes conceptuelles qui vont de pair sont les <em>descriptions d’entités</em> et les <em>catalogues</em> qui agrègent les descriptions. Elles sont expliquées en détail dans la section 9.13&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Voici des conditions pour utiliser correctement une classe de description d’une autre classe «&nbsp;X&nbsp;»<span style="white-space:nowrap"> :</span></p>
 <ul>
 <li>Il faut disposer de la description d’un produit ou d’un service «&nbsp;X&nbsp;» indépendamment de l’existence actuelle des «&nbsp;X&nbsp;». Par exemple, il pourrait y avoir une rupture de stock d’un Produit (aucune instance actuelle), mais on a besoin de connaître son prix. La classe DescriptionProduit permet d’avoir cette information, même s’il n’y a plus d’instances de Produit. Un autre exemple est un trimestre où un cours <em>LOG711</em> ne se donne pas (il n’y a pas de GroupeCours de LOG711 dans le trimestre actuel). Alors, une classe Cours (qui joue le rôle de description) sert pour spécifier le nombre de crédits, les cours préalables, etc.</li>
 <li>La suppression d’instances de «&nbsp;X&nbsp;» entraîne la perte de l’information qui doit être mémorisée, mais a été incorrectement associée à l’entité en question.</li>
@@ -916,13 +918,13 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.4: Erreur fréquente : utiliser une classe de description sans justification.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.4: Erreur fréquente: utiliser une classe de description sans justification.</figcaption><p></p>
 </figure>
 </div>
 </section>
 <section id="classes-dassociation" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="classes-dassociation"><span class="header-section-number">4.7</span> Classes d’association</h2>
-<p>Les classes d’association dans un MDD sont le sujet de la section A31.10/F26.10&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<p>Les classes d’association dans un MDD sont le sujet de la section A31.10/F26.10&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</p>
 <div class="callout callout callout-style-simple no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1002,7 +1004,7 @@ Country: null
 </section>
 <section id="affinement-du-mdd" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="affinement-du-mdd"><span class="header-section-number">4.8</span> Affinement du MDD</h2>
-<p>Lorsqu’on modélise un domaine, il est normal de commencer avec un modèle simple (à partir d’un ou de deux cas d’utilisation) et ensuite de l’affiner dans les itérations suivantes, où on y intègre d’autres éléments plus subtils ou complexes du problème qu’on étudie. Les détails de cette approche sont présentés dans le chapitre F26/A31&nbsp;<i class="fa-solid fa-book"></i>. Bien que la matière soit présentée plus tard dans le livre, ce sont des choses à savoir pour la modélisation d’un domaine, même dans une première itération.</p>
+<p>Lorsqu’on modélise un domaine, il est normal de commencer avec un modèle simple (à partir d’un ou de deux cas d’utilisation) et ensuite de l’affiner dans les itérations suivantes, où on y intègre d’autres éléments plus subtils ou complexes du problème qu’on étudie. Les détails de cette approche sont présentés dans le chapitre F26/A31&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Bien que la matière soit présentée plus tard dans le livre, ce sont des choses à savoir pour la modélisation d’un domaine, même dans une première itération.</p>
 <p>Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus <span style="white-space:nowrap">haut :</span></p>
 <ul>
 <li>Composition, par exemple la classe Continent qui groupe les Pays dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>. Larman propose d’utiliser la composition <span style="white-space:nowrap">lorsque :</span>
@@ -1025,11 +1027,11 @@ Country: null
 <h3 data-number="4.9.1" class="anchored" data-anchor-id="mddchaquecasutilisation"><span class="header-section-number">4.9.1</span> Y a-t-il un MDD pour chaque cas <span style="white-space:nowrap">d’utilisation ?</span></h3>
 <p>Selon la méthodologie de ce manuel, bien qu’une application ait souvent plusieurs fonctionnalités (cas d’utilisation), il n’y a qu’un seul MDD.</p>
 <p>Cela dit, le MDD est comme un fichier de code source, puisque sa <em>version</em> peut évoluer avec le projet. Le MDD évoluera normalement après chaque itération, car on fait une nouvelle analyse pour les nouvelles fonctionnalités visées dans l’itération. Au début du projet, le MDD est plus simple, puisqu’il porte sur seulement les cas d’utilisation ciblés à la première itération. Le MDD devient plus riche au fur et à mesure qu’on avance dans les itérations, parce qu’il modélise davantage de concepts reliés aux problèmes traités par les nouvelles fonctionnalités à réaliser.</p>
-<p>Par exemple, la version initiale du MDD (chapitre 9&nbsp;<i class="fa-solid fa-book"></i>) ne traite pas la fonctionnalité de paiement par carte de crédit. Les classes conceptuelles modélisant la problématique de paiement par carte de crédit sont absentes dans le MDD initial. Plus tard (après plusieurs itérations, dans le chapitre sur le raffinement du MDD), on voit un MDD beaucoup plus riche qui reflète la modélisation des concepts reliés à des fonctionnalités comme les paiements par carte de crédit, les demandes d’autorisation de paiement, etc.</p>
+<p>Par exemple, la version initiale du MDD (chapitre 9&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>) ne traite pas la fonctionnalité de paiement par carte de crédit. Les classes conceptuelles modélisant la problématique de paiement par carte de crédit sont absentes dans le MDD initial. Plus tard (après plusieurs itérations, dans le chapitre sur le raffinement du MDD), on voit un MDD beaucoup plus riche qui reflète la modélisation des concepts reliés à des fonctionnalités comme les paiements par carte de crédit, les demandes d’autorisation de paiement, etc.</p>
 </section>
 <section id="mdd_donnees" class="level3" data-number="4.9.2">
 <h3 data-number="4.9.2" class="anchored" data-anchor-id="mdd_donnees"><span class="header-section-number">4.9.2</span> Un <strong>modèle du domaine</strong> est-il la même chose qu’un <strong>modèle de données</strong><span style="white-space:nowrap"> ?</span></h3>
-<p>Voici la réponse de Craig Larman <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> dans la section 9.2&nbsp;<i class="fa-solid fa-book"></i><span style="white-space:nowrap"> :</span></p>
+<p>Voici la réponse de Craig Larman <span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> dans la section 9.2&nbsp;{{&lt; fa solid book <span style="white-space:nowrap">&gt;}} :</span></p>
 <div class="callout callout callout-style-simple no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1051,7 +1053,7 @@ Country: null
 </div>
 </div>
 </div>
-<p>Vous pouvez aussi lire <a href="https://stackoverflow.com/q/3507671/1168342">cette question</a>&nbsp;<i class="fa-brands fa-stack-overflow"></i>.</p>
+<p>Vous pouvez aussi lire <a href="https://stackoverflow.com/q/3507671/1168342">cette question</a>&nbsp;<i class="fa-brands fa-stack-overflow" aria-label="stack-overflow"></i>.</p>
 </section>
 </section>
 <section id="exercices" class="level2" data-number="4.10">

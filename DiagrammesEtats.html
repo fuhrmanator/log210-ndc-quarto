@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.233">
+<meta name="generator" content="quarto-1.3.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,6 +60,8 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -311,7 +313,7 @@ div.csl-indent {
   <ul>
   <li><a href="#exercices" id="toc-exercices" class="nav-link active" data-scroll-target="#exercices"><span class="toc-section-number">17.1</span>  Exercices</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="DiagrammesEtats.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="DiagrammesEtats.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -319,34 +321,34 @@ div.csl-indent {
 
 
 
-<p>Ce chapitre contient des informations sur les diagrammes d’états en UML. Ce sujet est traité dans le chapitre A29/F25&nbsp;<i class="fa-solid fa-book"></i>.</p>
+<p>Ce chapitre contient des informations sur les diagrammes d’états en UML. Ce sujet est traité dans le chapitre A29/F25&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</p>
 <p>Il s’agit de la modélisation. Un état est une simplification de la réalité de quelque chose qui évolue dans le temps.</p>
 <p>Les points <span style="white-space:nowrap">importants :</span></p>
 <ul>
-<li>Un diagramme d’états sert à modéliser les comportements. Un concept <span style="white-space:nowrap">préalable :</span> <a href="https://fr.wikipedia.org/wiki/Automate_fini#Automates_UML">Automate fini</a>&nbsp;<i class="fa-brands fa-wikipedia-w"></i>.</li>
+<li>Un diagramme d’états sert à modéliser les comportements. Un concept <span style="white-space:nowrap">préalable :</span> <a href="https://fr.wikipedia.org/wiki/Automate_fini#Automates_UML">Automate fini</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>.</li>
 <li>Un diagramme d’états contient les éléments <span style="white-space:nowrap">suivants :</span>
 <ul>
-<li>Événement :
+<li><span style="white-space:nowrap">Événement :</span>
 <ul>
-<li>occurrence d’un fait significatif ou remarquable ;</li>
+<li>occurrence d’un fait significatif ou <span style="white-space:nowrap">remarquable ;</span></li>
 </ul></li>
-<li>État :
+<li><span style="white-space:nowrap">État :</span>
 <ul>
-<li>condition d’un objet à un moment donné, jusqu’à l’arrivée d’un nouvel événement ;</li>
+<li>condition d’un objet à un moment donné, jusqu’à l’arrivée d’un nouvel <span style="white-space:nowrap">événement ;</span></li>
 </ul></li>
-<li>Transition :
+<li><span style="white-space:nowrap">Transition :</span>
 <ul>
-<li>relation état-événement-état ;</li>
-<li>indique que l’objet change d’état .</li>
+<li>relation <span style="white-space:nowrap">état-événement-état ;</span></li>
+<li>indique que l’objet change d’état.</li>
 </ul></li>
 </ul></li>
-<li>La différence entre les objets :
+<li>La différence entre les <span style="white-space:nowrap">objets :</span>
 <ul>
-<li>Un objet répondant de la même manière à un événement donné est un objet <em>état-indépendant</em> (par rapport à l’événement) ;</li>
-<li>Un objet répondant différemment, selon son état, à un événement donné est un objet <em>état-dépendant</em> .</li>
+<li>Un objet répondant de la même manière à un événement donné est un objet <em>état-indépendant</em> (par rapport à <span style="white-space:nowrap">l’événement) ;</span></li>
+<li>Un objet répondant différemment, selon son état, à un événement donné est un objet <em>état-dépendant</em>.</li>
 </ul></li>
-<li>Les transitions peuvent avoir des <em>actions</em> et des <em>conditions de garde</em> .</li>
-<li>Dans la notation, il y a également la possibilité de faire des <em>états imbriqués</em> .</li>
+<li>Les transitions peuvent avoir des <em>actions</em> et des <em>conditions de garde</em>.</li>
+<li>Dans la notation, il y a également la possibilité de faire des <em>états imbriqués</em>.</li>
 </ul>
 <p>La <a href="#fig-DiagrammeEtat">figure&nbsp;<span>17.1</span></a> est un exemple tiré du livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> et est fait en PlantUML.</p>
 <div id="fig-DiagrammeEtat" class="quarto-figure quarto-figure-center anchored">
@@ -385,7 +387,7 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;17.1: Diagramme d’états (figure A29.3/F25.10 ). <a href="http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;17.1: Diagramme d’états (figure A29.3/F25.10 <i class="fa-solid fa-book" aria-label="book"></i>). <a href="http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <section id="exercices" class="level2" data-number="17.1">
@@ -414,7 +416,7 @@ Note
 <div id="exr-etats_telephone" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 17.1 (États d’un téléphone) </strong></span>Faites un diagramme d’états en UML modélisant les états d’un téléphone intelligent. Considérez une dynamique simplifiée, avec seulement trois états correspondant aux images <span style="white-space:nowrap">suivantes :</span></p>
 <p><img src="images/TroisÉtatsTéléphone.png" class="img-fluid"></p>
-<p>Pour simplifier encore le modèle : le bouton en haut à droite sert à éteindre et à allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint.</p>
+<p>Pour simplifier encore le <span style="white-space:nowrap">modèle :</span> le bouton en haut à droite sert à éteindre et à allumer l’écran. Le téléphone est initialement éteint. Vous pouvez ignorer l’autre bouton rond au centre en bas. On peut brancher l’alimentation pour charger le téléphone à tout moment, mais le bouton n’a aucun effet sur l’écran lorsque le téléphone est connecté à l’alimentation. Lorsque l’on débranche l’alimentation, l’écran est toujours éteint.</p>
 </div>
 <div id="exr-etats_bancomat" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 17.2 (Guichet automatique) </strong></span>Faites un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format <span style="white-space:nowrap">bref) :</span></p>
