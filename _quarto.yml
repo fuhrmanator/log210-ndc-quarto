@@ -104,8 +104,8 @@ format:
     
 
   pdf:
-    # has to be latexmk for .plantuml plugin to work (because it generates .svg files)
-    pdf-engine: latexmk
+    # PRE 1.3: has to be latexmk for .plantuml plugin to work (because it generates .svg files)
+    pdf-engine: pdflatex
 
     template: partials/template.tex
 
