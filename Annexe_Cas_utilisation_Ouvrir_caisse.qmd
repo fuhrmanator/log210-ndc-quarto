@@ -68,11 +68,11 @@ Chaque caissier ou caissière possède un plateau-billets et l'apporte lorsqu'il
 
 ## Cas d'utilisation: Ouvrir la caisse
 
-**Acteur principal : Caissier ou Caissière**
+**Acteur principal: Caissier ou Caissière**
 
-**Préconditions :** La caisse est libre et son tiroir-caisse est vide (il n'y a pas de plateau dedans).
+**Préconditions:** La caisse est libre et son tiroir-caisse est vide (il n'y a pas de plateau dedans).
 
-**Garanties de succès (postconditions) :** La caissière ou le caissier est authentifié.
+**Garanties de succès (postconditions):** La caissière ou le caissier est authentifié.
 Son plateau-billets est placé dans le tiroir-caisse, et son identificateur est enregistré.
 Le montant d'argent du plateau est enregistré.
 L'heure de l'arrivée du caissier ou de la caissière est enregistrée.
@@ -99,12 +99,12 @@ L'heure de l'arrivée du caissier ou de la caissière est enregistrée.
 
 10. Le Caissier ou la caissière ferme le tiroir-caisse.
 
-**Spécifications particulières :**
+**Spécifications particulières:**
 
 Les caisses sont configurées avec un modèle de plateau-billets comme celui-ci: [(voir exemple sur
 YouTube.)](http://www.youtube.com/watch?feature=player_detailpage&v=lth_lAacXVQ#t=32s)
 
-**Fréquence d'occurrence :** Normalement, au début du quart de travail de chaque caissier ou caissière.
+**Fréquence d'occurrence:** Normalement, au début du quart de travail de chaque caissier ou caissière.
 
 ## Modèle du domaine partiel
 
@@ -154,21 +154,21 @@ Voici les contrats pour chaque opération système.
 
 -   Une instance *mp* de MisePlateau a été créée.
 
-**Opération: authentifier(identifiant : String, mdp : String)**
+**Opération: authentifier(identifiant: String, mdp: String)**
 
 **Postconditions:**
 
 -   *mp* a été associée à un Caissier, sur la base de correspondance avec **identifiant**.
 -   Le Registre en cours a été associé à un Caissier, sur la base de correspondance avec **identifiant**.
 
-**Opération: poserPlateau(identifiant : String)**
+**Opération: poserPlateau(identifiant: String)**
 
 **Postconditions:**
 
 -   *mp* a été associée à un PlateauBillets, sur la base de correspondance avec **identifiant**.
 -   Le Registre en cours a été associé à un PlateauBillets, sur la base de correspondance avec **identifiant**.
 
-**Opération: saisirMontant(montant : Monnaie)**
+**Opération: saisirMontant(montant: Monnaie)**
 
 **Postcondition:**
 

@@ -1,6 +1,6 @@
 # Diagrammes de déploiement et de composants
 
-Ce chapitre\ \faIcon{truck-loading} contient des informations sur les diagrammes de déploiement et de composants en UML. Les détails se trouvent dans le chapitre F31/A37\ \faBook<i class="fa-solid fa-book"></i>.
+Ce chapitre\ {{< fa truck-loading >}} contient des informations sur les diagrammes de déploiement et de composants en UML. Les détails se trouvent dans le chapitre F31/A37\ {{< fa solid book >}}.
 
 ## Diagrammes de déploiement
 
@@ -11,14 +11,14 @@ Un diagramme de déploiement présente le déploiement sur l'**architecture phys
 
 Voici les éléments importants:
 
-- Types de nœuds :
-  - **Nœud physique (équipement)** : Ressource de traitement physique (ex. : de l'électronique numérique) dotée de services de traitement et de mémoire destinés à exécuter un logiciel. Ordinateur classique, cellulaire, etc.
-  - **Nœud d'environnement d'exécution  (EEN, *execution environment node*)** : Ressource de traitement logiciel qui s'exécute au sein d'un nœud externe (comme un ordinateur) et offrant elle-même un service pour héberger et exécuter d'autres logiciels, par exemple:
-    - un système d'exploitation (OS), est un logiciel qui héberge et qui exécute des programmes ;
-    - une machine virtuelle (JVM ou .NET) ;
-    - un moteur de base de données (ex. PostgreSQL) exécute les requêtes SQL ;
-    - un navigateur Web qui héberge et qui exécute JavaScript, les applets Flash/Java ;
-    - un moteur de *workflow* ;
+- Types de nœuds:
+  - **Nœud physique (équipement)**: Ressource de traitement physique (par exemple, de l'électronique numérique) dotée de services de traitement et de mémoire destinés à exécuter un logiciel. Ordinateur classique, cellulaire, etc.
+  - **Nœud d'environnement d'exécution  (EEN, *execution environment node*)**: Ressource de traitement logiciel qui s'exécute au sein d'un nœud externe (comme un ordinateur) et offrant elle-même un service pour héberger et exécuter d'autres logiciels, par exemple:
+    - un système d'exploitation (OS), est un logiciel qui héberge et qui exécute des programmes;
+    - une machine virtuelle (JVM ou .NET);
+    - un moteur de base de données (ex. PostgreSQL) exécute les requêtes SQL;
+    - un navigateur Web qui héberge et qui exécute JavaScript, les applets Flash/Java;
+    - un moteur de *workflow*;
     - un conteneur de servlets ou conteneur d'EJB.
 
 La @fig-DiagrammeDeploiement est un exemple de diagramme de déploiement (laboratoire). 

@@ -9,7 +9,7 @@ C'est le sujet du livre "*Team Geek*" [-@fitzpatrick_team_2012], écrit par Bria
 Aujourd'hui, la demande pour le talent en technologies de l'information est importante.
 Les technologies évoluent constamment, et le temps que vous investissez pour maîtriser une technologie est important.
 Pourtant, il y a des risques avec certains investissements de temps à long terme.
-Par exemple, qui développe encore du code pour [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash)\ \faWikipediaW<i class="fa-brands fa-wikipedia-w"></i> ?
+Par exemple, qui développe encore du code pour [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash)\ {{< fa brands wikipedia-w >}} ?
 Cette technologie est maintenant désuète, et ça ne vaut pas beaucoup de mentionner cette compétence sur un CV.
 
 La bonne nouvelle est qu'une "technologie" ne changera jamais: le comportement humain.

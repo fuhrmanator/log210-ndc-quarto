@@ -64,7 +64,7 @@ Le livre est encore populaire et pertinent, mais, malheureusement, il n'a pas é
 De plus, la traduction française du livre n'est plus en stock au Québec depuis plusieurs années, et beaucoup de choses ont évolué depuis bientôt vingt ans!
 
 ::: {.callout-note}
-Au besoin, des références au livre de Larman sont indiquées par l'icône du livre \faBook<i class="fa-solid fa-book"></i>.
+Au besoin, des références au livre de Larman sont indiquées par l'icône du livre\ {{< fa solid book >}}.
 Puisqu'il est disponible en français et en anglais, et qu'il y a des différences avec les numéros de chapitres, nous indiquons une référence avec **F** et **A** pour signifier la langue du livre.
 Par exemple, la matière sur les principes GRASP est dans le chapitre 17 dans la version en anglais.
 Cependant, à cause des fusions de contenu lors de la traduction, la matière sur GRASP est dans le chapitre 16 dans la version en français.

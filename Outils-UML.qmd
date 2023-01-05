@@ -1,6 +1,6 @@
 # Outils pour la modélisation UML
 
-Le chapitre F20/A22\ \faBook<i class="fa-solid fa-book"></i>\ définit quelques termes importants pour la modélisation avec UML et les outils.
+Le chapitre F20/A22\ {{< fa solid book >}}\ définit quelques termes importants pour la modélisation avec UML et les outils.
 
 En mode esquisse, lorsqu'on dessine un modèle sur un tableau blanc ou sur papier, un outil pratique pour numériser le tout est **Microsoft Lens** ([Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&hl=fr_CA) ou [iOS](https://apps.apple.com/ca/app/microsoft-office-lens-pdf-scan/id975925059)).
 Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.
@@ -28,7 +28,7 @@ Dans la méthodologie de ce manuel, on exploite l'outil PlantUML pour faire beau
 - Il s'occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est complexe);
 - Il est populaire (utilisé par des ingénieur(e)s chez Google pour documenter Android, Pay, etc.);
 - Il existe plusieurs supports pour les outils de documentation:
-  - extension [PlantUML pour Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) (@fig-PlantUMLVSCode) avec [tutoriel](https://www.youtube.com/watch?v=xkwJ9GwgZJU)\ \faYoutube<i class="fa-brands fa-youtube"></i>;
+  - extension [PlantUML pour Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) (@fig-PlantUMLVSCode) avec [tutoriel](https://www.youtube.com/watch?v=xkwJ9GwgZJU)\ {{< fa brands youtube >}};
   - extension [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&hl=en) pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l'ÉTS (@fig-PlantUMLGizmo).
 
 ![L'extension PlantUML pour Visual Studio Code.](images/PlantUMLVSCode.png){#fig-PlantUMLVSCode}
@@ -49,7 +49,7 @@ Dans le menu "Select sample diagram" de PlantUML Gizmo (Google Docs), il y a plu
 
 ## Astuces PlantUML
 
-- [Comment intégrer PlantUML dans le `Readme.md` de GitHub/GitLab?](https://stackoverflow.com/q/32203610/1168342)\ \faStackOverflow<i class="fa-brands fa-stack-overflow"></i>
+- [Comment intégrer PlantUML dans le `Readme.md` de GitHub/GitLab?](https://stackoverflow.com/q/32203610/1168342)\ {{< fa brands stack-overflow >}}
 - Le serveur de PlantUML.com génère un diagramme à partir d'une URL,  
 `https://plantuml.com/plantuml/{forme}/{clé}`, qui contient une clé comme  
 `Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUS2W00`.  

@@ -18,7 +18,7 @@ Les gestionnaires ont dit qu'ils y parviendraient ultérieurement.
 
 Le consultant a également montré ce qui se passait aux programmeurs(euses) travaillant sur la hiérarchie.
 Les programmeurs(euses) étaient enthousiastes et ont vu le problème.
-Ils savaient que ce n'était pas vraiment de leur faute : parfois, l'évaluation par une autre personne est nécessaire pour détecter le problème.
+Ils savaient que ce n'était pas vraiment de leur faute: parfois, l'évaluation par une autre personne est nécessaire pour détecter le problème.
 Les programmeurs(euses) ont donc passé un jour ou deux à nettoyer la hiérarchie.
 Une fois qu'ils eurent terminé, ils avaient supprimé la moitié du code de la hiérarchie sans réduire sa fonctionnalité.
 Ils étaient satisfaits du résultat et ont constaté qu'il était devenu plus rapide et plus facile d'ajouter de nouvelles classes et d'utiliser les classes dans le reste du système.
