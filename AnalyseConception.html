@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.24">
+<meta name="generator" content="quarto-1.3.86">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -51,6 +51,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./Besoins.html" rel="next">
 <link href="./index.html" rel="prev">
+<link href="./images/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -128,6 +129,24 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Analyse et conception de logiciels</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/fuhrmanator/log210-ndc-quarto/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Download" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-download"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./Analyse-et-conception-de-logiciels.pdf">
+            <i class="bi bi-bi-file-pdf pe-1"></i>
+          Download PDF
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./Analyse-et-conception-de-logiciels.epub">
+            <i class="bi bi-bi-journal pe-1"></i>
+          Download ePub
+          </a>
+        </li>
+    </ul>
+</div>
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -322,7 +341,7 @@ div.csl-indent {
   <li><a href="#survol-de-la-méthodologie" id="toc-survol-de-la-méthodologie" class="nav-link" data-scroll-target="#survol-de-la-méthodologie"><span class="toc-section-number">1.4</span>  Survol de la méthodologie</a></li>
   <li><a href="#développement-itératif-évolutif-et-agile" id="toc-développement-itératif-évolutif-et-agile" class="nav-link" data-scroll-target="#développement-itératif-évolutif-et-agile"><span class="toc-section-number">1.5</span>  Développement itératif, évolutif et agile</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="AnalyseConception.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="AnalyseConception.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fuhrmanator/log210-ndc-quarto/issues/new" class="toc-action">Signaler un problème</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -333,7 +352,7 @@ div.csl-indent {
 <p>Comment développer un logiciel dans un domaine où l’équipe de développement n’a pas forcément une expérience <span style="white-space:nowrap">importante ?</span> Comment faire une bonne conception d’un tel <span style="white-space:nowrap">logiciel ?</span> Ce manuel vise à décrire une méthodologie de développement de logiciels qui répond à ces questions.</p>
 <p>Nous suivrons une approche systématique permettant de modéliser un domaine d’application et de concevoir un logiciel avec des abstractions (des classes) plus intuitives. Au fond, il s’agit de faire une <em>analyse</em> d’un domaine d’application et proposer une <em>conception</em> du logiciel à développer dans le domaine visé.</p>
 <p>Puisqu’une conception doit être réalisée (codée) pour être validée, nous appliquerons une approche de programmation pilotée par les tests (<em>test-driven development</em> ou <em>TDD</em> en anglais). Le TDD est un élément essentiel dans le <a href="https://fr.wikipedia.org/wiki/Devops">Devops</a>, une approche permettant de livrer et de faire évoluer rapidement les logiciels de manière robuste.</p>
-<p>Parallèlement, surtout pour faire face à la complexité, la méthodologie propose des activités en itération ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction. C’est une approche dite «&nbsp;agile&nbsp;», ayant une base pédagogique neutre, nommée le «&nbsp;processus unifié&nbsp;».</p>
+<p>Parallèlement, surtout pour faire face à la complexité, la méthodologie propose des activités en itération ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction. C’est une approche dite “agile”, ayant une base pédagogique neutre, nommée le “processus unifié”.</p>
 <p>Dans ce chapitre, nous présentons en détail ces dimensions du développement de logiciels.</p>
 <section id="analyse-vs-conception" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="analyse-vs-conception"><span class="header-section-number">1.1</span> Analyse vs Conception</h2>
@@ -342,133 +361,13 @@ div.csl-indent {
 <!-- Pour plus de détails, vous pouvez consulter le chapitre 1\ . -->
 <div id="fig-mddDes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="246px" preserveaspectratio="none" style="width:290px;height:246px;background:#00000000;" version="1.1" viewbox="0 0 290 246" width="290px" zoomandpan="magnify"><defs></defs><g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
-class Joueur--><g id="elem_Joueur"><polygon fill="#F1F1F1" points="147.5,7,147.5,7.2102,157.7308,6.5857,167.9615,7.1933,178.1923,7.3997,188.4231,6.2866,198.6538,6.9223,208.8846,6.5735,219.1154,6.6165,229.3462,6.9318,239.5769,6.3086,249.8077,7.5536,260.0385,6.3697,270.2692,6.8022,280.5,7,280.5551,7.133,280.8426,7.12,281.2158,7.3139,281.5566,7.4295,281.937,7.6408,282.2678,7.7322,282.3414,7.7627,282.5946,8.1605,282.7673,8.5249,282.9163,8.8795,282.932,9.1789,283,9.5,283.4636,9.5,283.7022,19.5872,282.2788,29.6743,283.6785,39.7615,282.7035,49.8487,283.5338,59.9359,282.505,70.023,282.9315,80.1102,283.7416,90.1974,283,100.2846,282.985,100.2783,282.886,100.6515,282.8114,101.0349,282.6888,101.3983,282.413,101.6983,282.2678,102.0523,282.3044,102.1408,281.8412,102.0225,281.5969,102.4328,281.277,102.6605,280.9103,102.775,280.5,102.7846,280.5,103.3976,270.2692,102.3015,260.0385,102.1324,249.8077,102.1632,239.5769,102.7257,229.3462,102.588,219.1154,103.466,208.8846,102.6099,198.6538,102.4415,188.4231,103.0128,178.1923,102.1177,167.9615,102.2654,157.7308,103.4335,147.5,102.7846,147.5556,102.9187,147.2401,102.8643,146.7518,102.3926,146.4801,102.4435,146.1611,102.3806,145.7322,102.0523,145.5868,101.9921,145.5563,101.6865,145.4781,101.3613,145.4936,101.0748,145.1452,100.6376,145,100.2846,145.4626,100.2846,144.4462,90.1974,144.3227,80.1102,145.5036,70.023,144.2831,59.9359,145.509,49.8487,145.2066,39.7615,144.7321,29.6743,144.6462,19.5872,145,9.5,145.1413,9.5585,145.0543,9.1083,145.4752,8.8684,145.2691,8.3688,145.7759,8.1645,145.7322,7.7322,145.794,7.8814,146.117,7.6612,146.4454,7.4539,146.8856,7.5167,147.2247,7.3354,147.5,7" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="43" x="192.5" y="27.2593">Joueur</text><path d="M146,36.4461 L146,36.7264 L155.7143,35.8937 L165.4286,36.7039 L175.1429,36.979 L184.8571,35.4949 L194.5714,36.3425 L204.2857,35.8775 L214,35.9348 L223.7143,36.3553 L233.4286,35.5243 L243.1429,37.1843 L252.8571,35.6058 L262.5714,36.1825 L272.2857,37.0221 L282,36.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="71" x="151" y="55.7054">nom : String</text><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="85" x="151" y="75.1515">nbLancers : int</text><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="126" x="151" y="94.5977">nbLancersGagnés : int</text></g><!--MD5=[18e074f27103afc71028bba2a4f1683f]
-class Dé--><g id="elem_Dé"><polygon fill="#F1F1F1" points="9.5,183,9.5,183.2102,19.6667,182.5857,29.8333,183.1933,40,183.3997,50.1667,182.2866,60.3333,182.9223,70.5,183,70.4456,182.8687,70.8046,183.0283,71.1984,183.2719,71.4725,183.2264,71.9848,183.7563,72.2678,183.7322,72.0737,183.6518,72.3533,184.0606,72.6937,184.4944,72.6807,184.782,72.8746,185.1552,73,185.5,72.9681,185.5,73.1785,195.8785,73.2391,206.2569,73.5857,216.6354,73.6711,227.0138,73,237.3923,73.2092,237.4789,72.932,237.7783,72.8499,238.1585,72.7769,238.5425,72.1921,238.7145,72.2678,239.16,72.3543,239.369,71.8764,239.2152,71.6288,239.6173,71.144,239.4469,70.8448,239.7247,70.5,239.8923,70.5,240.6339,60.3333,239.8435,50.1667,239.9976,40,240.2309,29.8333,240.3085,19.6667,239.8884,9.5,239.8923,9.5366,239.9807,9.0734,239.5696,8.8292,239.687,8.5093,239.6218,8.1425,239.4434,7.7322,239.16,7.921,239.2382,7.437,238.7449,7.2385,238.3697,7.1015,238.0201,7.1283,237.7383,7,237.3923,6.8035,237.3923,7.6814,227.0138,6.8253,216.6354,6.6569,206.2569,7.2283,195.8785,7,185.5,6.7946,185.4149,6.9866,185.0802,7.4927,184.8757,7.5735,184.4949,7.812,184.1795,7.7322,183.7322,7.6912,183.6331,8.1265,183.6841,8.5147,183.6212,8.7326,183.1474,9.1342,183.1169,9.5,183" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="15" x="32.5" y="203.2593">Dé</text><path d="M8,212.4461 L8,212.7264 L18.6667,211.8937 L29.3333,212.7039 L40,212.979 L50.6667,211.4949 L61.3333,212.3425 L72,212.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="54" x="13" y="231.7054">face : int</text></g><!--MD5=[3f82ddbf4ff68524ab2929a496fcdbe9]
-class JeuDeDés--><g id="elem_JeuDeDés"><polygon fill="#F1F1F1" points="10.5,40.5,10.5,40.7102,20.3333,40.0857,30.1667,40.6933,40,40.8997,49.8333,39.7866,59.6667,40.4223,69.5,40.5,69.4456,40.3687,69.8046,40.5283,70.1984,40.7719,70.4725,40.7264,70.9848,41.2563,71.2678,41.2322,71.0737,41.1518,71.3533,41.5606,71.6937,41.9944,71.6807,42.282,71.8746,42.6552,72,43,71.9894,43,72.0595,47.8892,72.0797,52.7785,72.1952,57.6677,72.2237,62.5569,72,67.4461,72.2092,67.5328,71.932,67.8322,71.8499,68.2124,71.7769,68.5964,71.1921,68.7684,71.2678,69.2139,71.3543,69.4229,70.8764,69.269,70.6288,69.6712,70.144,69.5008,69.8448,69.7786,69.5,69.9461,69.5,70.6877,59.6667,69.8974,49.8333,70.0514,40,70.2848,30.1667,70.3624,20.3333,69.9422,10.5,69.9461,10.5366,70.0346,10.0734,69.6234,9.8292,69.7408,9.5093,69.6756,9.1425,69.4973,8.7322,69.2139,8.921,69.2921,8.437,68.7987,8.2385,68.4236,8.1015,68.074,8.1283,67.7922,8,67.4461,7.9345,67.4461,8.2271,62.5569,7.9418,57.6677,7.8856,52.7785,8.0761,47.8892,8,43,7.7946,42.9149,7.9866,42.5802,8.4927,42.3757,8.5735,41.9949,8.812,41.6795,8.7322,41.2322,8.6912,41.1331,9.1265,41.1841,9.5147,41.1212,9.7326,40.6474,10.1342,40.6169,10.5,40.5" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="58" x="11" y="60.7593">JeuDeDés</text></g><!--MD5=[cea1b6f057c68a44b89edb703cbc6a63]
-link JeuDeDés to Dé--><g id="link_JeuDeDés_Dé"><path d="M40,69.71 L40.2802,69.71 L39.4476,79.9991 L40.2577,90.2882 L40.5329,100.5773 L39.0488,110.8664 L39.8964,121.1555 L39.4313,131.4445 L39.4887,141.7336 L39.9091,152.0227 L39.0782,162.3118 L40.7382,172.6009 L40,182.89 " fill="none" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#000000" points="45,148.0287,45.0666,148.0503,45.4564,146.177,46.2368,144.4306,46.8901,142.6428,47.125,140.7191,47.9389,138.9836,47.9389,138.9577,46.7634,138.8414,45.5878,138.8558,44.4122,138.9609,43.2366,138.7531,42.0611,138.9836,42.2366,139.0406,42.449,140.7277,43.1739,142.5813,43.9614,144.4551,44.385,146.2108,45,148.0287" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="30" x="54" y="148.1695">inclut</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="4" x="35.2875" y="92.2569">1</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="7" x="32.2781" y="171.3195">2</text></g><!--MD5=[fe4526010a78db52d3eaf5acd7d5350a]
-link JeuDeDés to Joueur--><g id="link_JeuDeDés_Joueur"><path d="M72.32,55 L72.32,55.2802 L82.6643,54.4476 L93.0086,55.2577 L103.3529,55.5329 L113.6971,54.0488 L124.0414,54.8964 L134.3857,54.4313 L144.73,55 " fill="none" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#000000" points="89.5,42.0287,89.5216,42.0953,91.2663,42.4851,93.1379,43.2655,94.9682,43.9187,96.6626,44.1537,98.5451,44.9676,98.5192,44.9676,98.4029,43.792,98.4173,42.6165,98.5224,41.4409,98.3146,40.2653,98.5451,39.0898,98.6021,39.2653,96.6711,39.4777,94.9067,40.2026,93.1625,40.9901,91.3002,41.4137,89.5,42.0287" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="23" x="103.5" y="47.1695">joue</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="4" x="79.8275" y="49.1582">1</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="8" x="129.174" y="50.2554">*</text></g><!--MD5=[b4f20bb32617de3d5d97acec19a1dad1]
-@startuml
-!include ecriture.pumlinclude
-'left to right direction
-hide empty members
-class Joueur {
-  nom : String
-  nbLancers : int
-  nbLancersGagnés : int
-}
-class Dé {
-  face : int
-}
-class JeuDeDés
-
-JeuDeDés "1" - - "2" Dé : inclut > 
-Joueur "*" -l- "1" JeuDeDés : joue > 
-@enduml
-
-@startuml
-skinparam style strictuml
-skinparam backgroundcolor transparent
-skinparam defaultfontname xkcd Script
-skinparam handwritten true
-hide empty members
-class Joueur {
-  nom : String
-  nbLancers : int
-  nbLancersGagnés : int
-}
-class Dé {
-  face : int
-}
-class JeuDeDés
-
-JeuDeDés "1" - - "2" Dé : inclut > 
-Joueur "*" -l- "1" JeuDeDés : joue > 
-@enduml
-
-PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
-(GPL source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Default Encoding: UTF-8
-Language: en
-Country: null
---></g></svg></p>
+<p><img src="AnalyseConception_files/mediabag/2d335c997771f728c20e5ce302e24bfe2726bb62.svg" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;1.1: Diagramme de <em>classes conceptuelles</em> décrivant le <em>problème</em> d’un jeu de dés <span class="citation" data-cites="craig_uml_2005">(adapté du Jeu de dés de <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman, 2005, Chapitre 1</a>)</span>. Ceci est élaboré lors d’une activité d’analyse.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-ddcDes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="282px" preserveaspectratio="none" style="width:427px;height:282px;background:#00000000;" version="1.1" viewbox="0 0 427 282" width="427px" zoomandpan="magnify"><defs></defs><g><!--MD5=[18e074f27103afc71028bba2a4f1683f]
-class Dé--><g id="elem_Dé"><polygon fill="#F1F1F1" points="53,191,53,191.2102,62.375,190.5857,71.75,191.1933,81.125,191.3997,90.5,190.2866,99.875,190.9223,109.25,190.5735,118.625,190.6165,128,191,127.9913,190.979,128.2654,190.9335,128.7777,191.4634,128.9803,191.2452,129.389,191.5249,129.7678,191.7322,129.9008,191.7873,129.8878,192.0748,130.0817,192.448,130.1973,192.7888,130.4085,193.1692,130.5,193.5,130.7391,193.5,131.0857,203.4173,131.1711,213.3346,131.1793,223.2519,130.7546,233.1692,130.9636,243.0865,131.2022,253.0038,129.7788,262.9211,130.5,272.8384,130.709,272.925,130.2622,273.1542,130.3715,273.6136,129.9082,273.8359,129.8931,274.2439,129.7678,274.6062,129.8624,274.8346,129.408,274.7376,129.0741,274.9315,128.7503,275.1498,128.4066,275.3202,128,275.3384,128,275.3345,118.625,275.6256,109.25,274.766,99.875,275.6228,90.5,275.8866,81.125,275.783,71.75,275.9514,62.375,274.8553,53,275.3384,52.9168,275.1376,52.5672,275.0006,52.2854,275.0274,51.9143,274.8386,51.6727,274.9625,51.2322,274.6062,51.1784,274.5839,50.9801,274.2089,51.0096,273.9282,50.5875,273.4605,50.4866,273.1258,50.5,272.8384,51.149,272.8384,50.9357,262.9211,51.2345,253.0038,50.1782,243.0865,50.8192,233.1692,51.0904,223.2519,50.0276,213.3346,50.4041,203.4173,50.5,193.5,50.5388,193.5161,50.8472,193.2296,50.7916,192.7924,51.0818,192.4983,50.9152,192.0151,51.2322,191.7322,51.1458,191.5237,51.65,191.7409,51.8479,191.2186,52.3578,191.4496,52.6728,191.2101,53,191" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="15" x="83" y="211.2593">Dé</text><path d="M51.5,220.4461 L51.5,220.7264 L61.25,219.8937 L71,220.7039 L80.75,220.979 L90.5,219.4949 L100.25,220.3425 L110,219.8775 L119.75,219.9348 L129.5,220.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><polygon fill="none" points="64.5166,232.1759,64.0768,232.7767,63.5567,233.6568,62.8128,234.2499,62.0311,234.5742,61.4078,234.6024,60.6067,234.1967,59.8509,233.9318,59.2771,233.3937,58.9762,232.7778,58.7977,232.2874,58.6229,231.6468,58.3391,231.0955,58.5572,230.5573,58.7482,229.9677,59.4653,229.5015,59.9697,228.8964,60.5941,228.6955,61.3364,228.5225,62.2883,228.6253,62.8097,228.8712,63.4158,228.9826,64.1529,229.7378,64.4098,230.5349,64.5214,231.0789,64.395,231.9752" style="stroke:#038048;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="54" x="70.5" y="239.7054">face : int</text><path d="M51.5,247.8923 L51.5,248.1725 L61.25,247.3399 L71,248.15 L80.75,248.4252 L90.5,246.9411 L100.25,247.7887 L110,247.3236 L119.75,247.3809 L129.5,247.8923 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="56" x="56.5" y="267.1515">brasser()</text></g><!--MD5=[3f82ddbf4ff68524ab2929a496fcdbe9]
-class JeuDeDés--><g id="elem_JeuDeDés"><polygon fill="#F1F1F1" points="9.5,7,9.5,7.2102,19.625,6.5857,29.75,7.1933,39.875,7.3997,50,6.2866,60.125,6.9223,70.25,6.5735,80.375,6.6165,90.5,6.9318,100.625,6.3086,110.75,7.5536,120.875,6.3697,131,6.8022,141.125,7.4319,151.25,6.9142,161.375,7.0682,171.5,7,171.4959,6.9902,171.8763,7.2014,172.2376,7.3665,172.6354,7.6197,172.9998,7.7924,173.2678,7.7322,173.477,7.8189,173.4926,8.1183,173.7034,8.4985,173.9234,8.8825,173.6315,9.0545,174,9.5,174.6785,9.5,173.7035,19.3526,174.5338,29.2051,173.505,39.0577,173.9315,48.9102,174.7416,58.7628,173.9513,68.6154,174.1053,78.4679,174.3386,88.3205,174.4162,98.173,173.9961,108.0256,174.2872,117.8781,174,127.7307,173.8237,127.6577,173.9411,128.1205,173.8759,128.5077,173.6976,128.8481,173.603,129.2231,173.2678,129.4985,173.2061,129.3497,172.831,129.4441,172.4814,129.6,172.1996,129.9197,171.8285,130.0237,171.5,130.2307,171.5,130.9121,161.375,130.056,151.25,129.8876,141.125,130.459,131,129.5639,120.875,129.7116,110.75,130.8797,100.625,130.6664,90.5,130.9652,80.375,129.9089,70.25,130.5499,60.125,130.8211,50,129.7583,39.875,130.1348,29.75,130.3567,19.625,130.8825,9.5,130.2307,9.4995,130.2294,9.2055,130.2267,8.7223,129.7673,8.3529,129.5828,8.15,129.8,7.7322,129.4985,7.5114,129.407,7.7425,129.2098,7.503,128.8177,7.2104,128.4036,7.0375,128.0391,7,127.7307,7.4588,127.7307,6.7007,117.8781,7.5919,108.0256,6.4473,98.173,7.6174,88.3205,7.4843,78.4679,7.245,68.6154,7.0472,58.7628,7.7266,48.9102,7.6136,39.0577,7.1693,29.2051,7.2682,19.3526,7,9.5,6.9599,9.4834,7.3671,9.2378,7.3406,8.8126,7.4925,8.4614,7.3984,8.0082,7.7322,7.7322,7.6805,7.6074,8.1535,7.7492,8.4942,7.5717,8.7874,7.2797,9.1054,7.0472,9.5,7" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="58" x="61.5" y="27.2593">JeuDeDés</text><path d="M8,36.4461 L8,36.7264 L17.7059,35.8937 L27.4118,36.7039 L37.1176,36.979 L46.8235,35.4949 L56.5294,36.3425 L66.2353,35.8775 L75.9412,35.9348 L85.6471,36.3553 L95.3529,35.5243 L105.0588,37.1843 L114.7647,35.6058 L124.4706,36.1825 L134.1765,37.0221 L143.8824,36.3318 L153.5882,36.5371 L163.2941,36.4035 L173,36.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><path d="M8,44.4461 L8,44.7264 L17.7059,43.8937 L27.4118,44.7039 L37.1176,44.979 L46.8235,43.4949 L56.5294,44.3425 L66.2353,43.8775 L75.9412,43.9348 L85.6471,44.3553 L95.3529,43.5243 L105.0588,45.1843 L114.7647,43.6058 L124.4706,44.1825 L134.1765,45.0221 L143.8824,44.3318 L153.5882,44.5371 L163.2941,44.4035 L173,44.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="79" x="13" y="63.7054">getJoueurs()</text><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="155" x="13" y="83.1515">démarrerJeu(nom: string)</text><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="108" x="13" y="102.5977">jouer(nom: string)</text><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="150" x="13" y="122.0438">terminerJeu(nom: string)</text></g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
-class Joueur--><g id="elem_Joueur"><polygon fill="#F1F1F1" points="245,20.5,245,20.7102,255.1765,20.0857,265.3529,20.6933,275.5294,20.8997,285.7059,19.7866,295.8824,20.4223,306.0588,20.0735,316.2353,20.1165,326.4118,20.4318,336.5882,19.8086,346.7647,21.0536,356.9412,19.8697,367.1176,20.3022,377.2941,20.9319,387.4706,20.4142,397.6471,20.5682,407.8235,20.4681,418,20.5,418.0228,20.555,418.3841,20.7201,418.7818,20.9733,419.1463,21.146,419.5009,21.295,419.7678,21.2322,419.8462,21.2647,420.057,21.6449,420.2769,22.0289,419.985,22.2009,420.5625,22.733,420.5,23,420.2035,23,421.0338,33.0872,420.005,43.1743,420.4315,53.2615,421.2416,63.3487,420.4513,73.4359,420.6053,83.523,420.8386,93.6102,420.9162,103.6974,420.5,113.7846,420.4988,113.7841,420.442,114.1748,420.0308,114.4186,420.1482,114.8815,420.083,115.2687,419.7678,115.5523,419.8245,115.6892,419.4924,115.8876,418.999,115.6965,418.6239,115.7908,418.2743,115.9467,418,116.2846,418,116.2257,407.8235,116.088,397.6471,116.966,387.4706,116.1099,377.2941,115.9415,367.1176,116.5128,356.9412,115.6177,346.7647,115.7654,336.5882,116.9335,326.4118,116.7202,316.2353,117.0191,306.0588,115.9628,295.8824,116.6038,285.7059,116.875,275.5294,115.8122,265.3529,116.1887,255.1765,116.4105,245,116.2846,245.0831,116.4853,244.6459,116.1368,244.3519,116.1341,243.8687,115.6747,243.4994,115.4902,243.2322,115.5523,243.3873,115.6166,242.865,115.1073,243.0961,114.9101,242.8565,114.518,242.5639,114.1039,242.5,113.7846,242.1462,113.7846,242.9588,103.6974,242.2007,93.6102,243.0919,83.523,241.9473,73.4359,243.1174,63.3487,242.9843,53.2615,242.745,43.1743,242.5472,33.0872,242.5,23,242.7238,23.0927,242.8354,22.7247,242.845,22.3145,243.0219,21.9736,243.0457,21.5692,243.2322,21.2322,243.3236,21.4529,243.6055,21.1335,243.9614,20.9925,244.2153,20.6055,244.5948,20.5217,245,20.5" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="43" x="310" y="40.7593">Joueur</text><path d="M243.5,49.9461 L243.5,50.2264 L253.2778,49.3937 L263.0556,50.2039 L272.8333,50.479 L282.6111,48.9949 L292.3889,49.8425 L302.1667,49.3775 L311.9444,49.4348 L321.7222,49.8553 L331.5,49.0243 L341.2778,50.6843 L351.0556,49.1058 L360.8333,49.6825 L370.6111,50.5221 L380.3889,49.8318 L390.1667,50.0371 L399.9444,49.9035 L409.7222,50.1842 L419.5,49.9461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><polygon fill="none" points="256.5166,61.6759,256.0768,62.2767,255.5567,63.1568,254.8128,63.7499,254.0311,64.0742,253.4078,64.1024,252.6067,63.6967,251.8509,63.4318,251.2771,62.8937,250.9762,62.2778,250.7977,61.7874,250.6229,61.1468,250.3391,60.5955,250.5572,60.0573,250.7482,59.4677,251.4653,59.0015,251.9697,58.3964,252.5941,58.1955,253.3364,58.0225,254.2883,58.1253,254.8097,58.3712,255.4158,58.4826,256.1529,59.2378,256.4098,60.0349,256.5214,60.5789,256.395,61.4752" style="stroke:#038048;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="69" x="262.5" y="69.2054">nom : string</text><polygon fill="none" points="256.5166,81.122,256.0768,81.7229,255.5567,82.6029,254.8128,83.196,254.0311,83.5204,253.4078,83.5485,252.6067,83.1429,251.8509,82.8779,251.2771,82.3399,250.9762,81.7239,250.7977,81.2335,250.6229,80.5929,250.3391,80.0417,250.5572,79.5035,250.7482,78.9139,251.4653,78.4476,251.9697,77.8426,252.5941,77.6417,253.3364,77.4687,254.2883,77.5715,254.8097,77.8173,255.4158,77.9288,256.1529,78.6839,256.4098,79.4811,256.5214,80.025,256.395,80.9213" style="stroke:#038048;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="111" x="262.5" y="88.6515">nbLancers : number</text><polygon fill="none" points="256.5166,100.5681,256.0768,101.169,255.5567,102.0491,254.8128,102.6422,254.0311,102.9665,253.4078,102.9946,252.6067,102.589,251.8509,102.324,251.2771,101.786,250.9762,101.1701,250.7977,100.6797,250.6229,100.0391,250.3391,99.4878,250.5572,98.9496,250.7482,98.36,251.4653,97.8937,251.9697,97.2887,252.5941,97.0878,253.3364,96.9148,254.2883,97.0176,254.8097,97.2635,255.4158,97.3749,256.1529,98.1301,256.4098,98.9272,256.5214,99.4712,256.395,100.3675" style="stroke:#038048;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="152" x="262.5" y="108.0977">nbLancersGagnés : number</text></g><!--MD5=[cea1b6f057c68a44b89edb703cbc6a63]
-link JeuDeDés to Dé--><g id="link_JeuDeDés_Dé"><path d="M78.13,130.01 L78.2234,130.0123 L77.8784,132.7971 L78.0808,135.5952 L78.105,138.389 L77.5429,141.1686 L77.7923,143.9678 L77.7578,143.9678 L77.6041,146.7957 L77.6245,149.6236 L77.7659,152.4516 L77.4902,155.2794 L77.7987,158.1075 L78.0447,158.1137 L77.5886,160.8887 L77.8507,163.6817 L78.2004,166.4769 L78.0403,169.2593 L78.1483,172.0484 L78.1786,172.05 L78.2724,174.72 L78.5042,177.3972 L78.6695,180.0709 L78.9616,182.7511 L78.84,185.41 " fill="none" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="79.23,190.68,79.296,190.7036,79.764,188.779,80.6188,186.9928,81.3476,185.1615,81.6624,183.182,82.5503,181.4077,82.5307,181.3908,81.7042,182.1721,80.9767,183.0387,80.318,183.9645,79.4223,184.6862,78.8585,185.6938,78.979,185.8336,77.8642,184.7963,77.1011,184.1672,76.3808,183.5878,75.411,182.7187,74.5724,182.002,74.5925,182.0128,75.4946,183.7326,76.4879,185.5014,77.4372,187.2465,78.4705,189.0367,79.23,190.68" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="10" x="66.7387" y="178.9696">d1</text></g><!--MD5=[cea1b6f057c68a44b89edb703cbc6a63]
-link JeuDeDés to Dé--><g id="link_JeuDeDés_Dé"><path d="M103.6,130.01 L103.6934,130.0124 L103.4875,132.7968 L103.8291,135.5953 L103.9924,138.3892 L103.5694,141.1681 L103.958,143.9678 L103.9234,143.9678 L103.7671,146.7957 L103.7848,149.6236 L103.9236,152.4516 L103.6453,155.2794 L103.9512,158.1075 L104.1972,158.1141 L103.5968,160.8882 L103.7144,163.6815 L103.9198,166.4772 L103.6153,169.2592 L103.5789,172.0484 L103.6092,172.0501 L103.4169,174.72 L103.3626,177.3974 L103.2417,180.0712 L103.2477,182.7521 L102.84,185.41 " fill="none" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="102.43,190.68,102.4916,190.7133,103.245,188.8814,104.3596,187.2448,105.3566,185.5445,105.9666,183.6352,107.1123,182.0153,107.0954,181.9957,106.1605,182.6433,105.3105,183.3901,104.5195,184.2058,103.5251,184.7839,102.8157,185.6949,102.9558,185.8149,101.9202,184.6989,101.2938,183.9334,100.7173,183.2106,99.8503,182.239,99.1361,181.3983,99.1576,181.4059,99.7849,183.2511,100.5098,185.1309,101.1876,186.994,101.9552,188.8889,102.43,190.68" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="13" x="90.2615" y="178.9696">d2</text></g><!--MD5=[fe4526010a78db52d3eaf5acd7d5350a]
-link JeuDeDés to Joueur--><g id="link_JeuDeDés_Joueur"><path d="M174.11,68.5 L174.11,68.7802 L183.85,67.9476 L193.59,68.7577 L203.33,69.0329 L213.07,67.5488 L222.81,68.3964 L232.55,67.9313 L242.29,68.5 " fill="none" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="32" x="192.25" y="60.6695">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="31" x="203.6004" y="83.3404">[nom]</text></g><!--MD5=[d763c8031f21e05ba39d679274e298dd]
-@startuml
-!include ecriture.pumlinclude
-'left to right direction
-hide empty methods
-class Dé {
-    +face : int
-    brasser()
-}
-class JeuDeDés {
-    '-joueurs: Map<string, Joueur>;
-    ' -d1 : De;
-    ' -d2 : De;
-
-    getJoueurs()
-    démarrerJeu(nom: string)
-    jouer(nom: string)
-    terminerJeu(nom: string)
-}
-class Joueur {
-    +nom : string
-    +nbLancers : number
-    +nbLancersGagnés : number
-}
-JeuDeDés - -> "d1" Dé
-JeuDeDés - -> "d2" Dé
-JeuDeDés -r- "[nom]" Joueur : "        "
-@enduml
-
-@startuml
-skinparam style strictuml
-skinparam backgroundcolor transparent
-skinparam defaultfontname xkcd Script
-skinparam handwritten true
-hide empty methods
-class Dé {
-    +face : int
-    brasser()
-}
-class JeuDeDés {
-
-    getJoueurs()
-    démarrerJeu(nom: string)
-    jouer(nom: string)
-    terminerJeu(nom: string)
-}
-class Joueur {
-    +nom : string
-    +nbLancers : number
-    +nbLancersGagnés : number
-}
-JeuDeDés - -> "d1" Dé
-JeuDeDés - -> "d2" Dé
-JeuDeDés -r- "[nom]" Joueur : "        "
-@enduml
-
-PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
-(GPL source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Default Encoding: UTF-8
-Language: en
-Country: null
---></g></svg></p>
+<p><img src="AnalyseConception_files/mediabag/849cee8a973719e9f7d879b7e8e07f289271a678.svg" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;1.2: Diagramme de <em>classes logicielles</em> décrivant une <em>solution</em> au problème du jeu de dés. La conception s’inspire du modèle du problème, afin de faciliter sa compréhension.</figcaption><p></p>
 </figure>
 </div>
@@ -478,13 +377,13 @@ Country: null
 <section id="sec-DecalageRepresentations" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="sec-DecalageRepresentations"><span class="header-section-number">1.2</span> Décalage des représentations</h2>
 <p>Vous avez sûrement remarqué que le modèle du problème (<a href="#fig-mddDes">figure&nbsp;<span>1.1</span></a>) ressemble beaucoup au modèle de la solution (<a href="#fig-ddcDes">figure&nbsp;<span>1.2</span></a>) pour notre exemple de jeu de dés. Cependant, il y a des différences, car une solution comporte des détails sur la dynamique du jeu qui sera codée. Le modèle du problème et le modèle de la solution ne sont donc pas identiques.</p>
-<div class="callout-tip callout callout-style-simple">
+<div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Imaginez une autre solution n’ayant qu’une seule classe <code>Jeu</code> contenant toute la logique du jeu. Avez-vous déjà codé une solution simple comme <span style="white-space:nowrap">ça ?</span> C’est un bon design au départ, car il est simple. Mais au fur et à mesure que vous codez la logique du jeu, bien que ça fonctionne parfaitement, la classe <code>Jeu</code> grossit et devient difficile à comprendre. <!-- Par exemple, on voit une méthode `brasser()` dans la classe `Dé` qui montre que ce sera la responsabilité de cette classe de changer sa valeur quand ça sera le bon moment. --></p>
+<p>Imaginez une autre solution n’ayant qu’une seule classe <code>Jeu</code> contenant toute la logique du jeu. Avez-vous déjà codé une solution simple comme ça? C’est un bon design au départ, car il est simple. Mais au fur et à mesure que vous codez la logique du jeu, bien que ça fonctionne parfaitement, la classe <code>Jeu</code> grossit et devient difficile à comprendre. <!-- Par exemple, on voit une méthode `brasser()` dans la classe `Dé` qui montre que ce sera la responsabilité de cette classe de changer sa valeur quand ça sera le bon moment. --></p>
 </div>
 </div>
 </div>
@@ -494,22 +393,22 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 </section>
 <section id="la-complexité-et-ses-sources" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="la-complexité-et-ses-sources"><span class="header-section-number">1.3</span> La complexité et ses sources</h2>
-<p>Un(e) ingénieur(e) logiciel est constamment dans une bataille avec une adversaire dont le nom est la «&nbsp;complexité&nbsp;». Mais qu’est-ce que la <span style="white-space:nowrap">complexité ?</span> La&nbsp;<a href="#fig-complexity">figure&nbsp;<span>1.3</span></a> est une image de la complexité. Reconnaissez-vous le domaine d’où vient cette <span style="white-space:nowrap">image ?</span></p>
+<p>Un(e) ingénieur(e) logiciel est constamment dans une bataille avec une adversaire dont le nom est la “complexité”. Mais qu’est-ce que la <span style="white-space:nowrap">complexité ?</span> La&nbsp;<a href="#fig-complexity">figure&nbsp;<span>1.3</span></a> est une image de la complexité. Reconnaissez-vous le domaine d’où vient cette <span style="white-space:nowrap">image ?</span></p>
 <p>Voici une définition de la <span style="white-space:nowrap">complexité :</span></p>
-<div class="callout callout callout-style-simple no-icon">
+<div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Complexité</strong><span style="white-space:nowrap"> :</span> Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.</p>
+<p><strong>Complexité</strong>: Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.</p>
 </div>
 </div>
 </div>
 <div id="fig-complexity" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/flickr_lytfyre_complexity.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.3: <a href="https://www.flickr.com/photos/lytfyre/6489338411/">«&nbsp;Complexity&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/lytfyre/">lytfyre</a>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.3: <a href="https://www.flickr.com/photos/lytfyre/6489338411/">“Complexity”</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/lytfyre/">lytfyre</a>.</figcaption><p></p>
 </figure>
 </div>
 <p>En voici quelques exemples en développement de <span style="white-space:nowrap">logiciels :</span></p>
@@ -535,57 +434,7 @@ On comprend plus facilement les éléments dans ce modèle. --> Plus une solutio
 <p>Cette forme de complexité comprend des aspects d’une solution qui ne sont pas sous le contrôle des ingénieur(e)s. Dans un environnement d’exécution, il y a des dimensions comme le ramasse-miettes (<em>garbage collection</em>), l’ordonnancement des fils d’exécution (<em>threads</em>) sur un serveur, l’utilisation de <em>conteneurs</em> (à la Docker), etc. qui peuvent affecter la qualité d’un logiciel. Les ingénieur(e)s doivent gérer ces formes de complexité, mais il n’y a pas beaucoup de stratégies évidentes face aux technologies qui évoluent très vite.</p>
 <div id="fig-complexitySources" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="432px" preserveaspectratio="none" style="width:483px;height:432px;background:#00000000;" version="1.1" viewbox="0 0 483 432" width="483.2px" zoomandpan="magnify"><defs></defs><g><!--MD5=[ab4376919c0c48ac6244b94af79c3d81]
-cluster P--><g id="cluster_P"><path d="M77.6671,13.4512 C81.5814,7.8472 85.6523,8.4088 89.0506,13.977 C91.3941,7.109 96.1029,7.8791 100.5037,11.7913 C103.9685,5.5772 108.7165,5.0973 112.4386,11.5489 C116.184,6.2195 120.8458,5.7352 125.1346,10.8909 C127.5324,5.6998 132.8951,5.7604 135.948,10.1516 C139.6284,5.2264 143.1316,5.9196 146.7106,10.2693 C150.7749,4.98 154.472,4.8 158.4468,10.3662 C162.3713,5.3254 167.1373,6.9427 169.6686,11.9258 C173.5609,5.6189 178.5293,6.823 181.7268,12.6182 C185.3692,7.5151 190.298,8.4405 192.9404,13.7004 C196.3958,7.4053 200.7941,7.6668 204.4611,13.4994 C211.0105,8.2263 218.3521,9.7028 220,18.7996 C220.048,18.8115 220.075,18.8528 220.0341,18.8961 C225.8715,20.2609 227.4248,25.2109 222.4612,29.1358 C227.0553,31.3932 228.6849,35.7872 223.8418,39.3236 C228.527,41.9302 228.9248,46.6077 224.6894,49.9274 C230.0428,52.1835 229.7907,55.8559 225.7911,59.2208 C230.2142,62.9412 229.835,67.4157 224.6339,70.1135 C228.9876,73.4178 229.2053,78.4149 223.4217,80.5407 C226.5012,83.9613 225.9379,88.1541 221.2199,89.7002 C225.9317,97.8528 224.1184,102.942 214.4,104.3996 C214.9804,103.9033 215.4736,104.2277 215.5612,104.8925 C212.2144,111.3003 207.8407,110.4317 203.6395,105.8165 C200.1731,110.4884 196.1819,111.3114 193.0884,105.4432 C189.8562,110.9332 184.918,112.735 180.4511,106.8101 C177.5221,112.0431 172.9476,111.7571 169.9106,106.9232 C166.0746,113.0942 161.3137,112.3038 157.631,106.7624 C155.0711,111.7327 150.3657,111.1875 147.6144,106.9711 C144.4314,112.4991 139.5001,112.5432 135.9101,107.4182 C131.3346,113.2246 127.7085,111.4369 124.4652,106.0554 C120.7239,110.4285 117.3047,110.4243 113.8069,105.768 C110.4865,111.0819 106.2716,112.6306 101.9796,106.799 C98.6901,112.108 93.0811,111.8398 90.3951,106.1626 C80.0973,113.3848 75.0009,109.8074 72,98.7996 C72.7298,98.6781 73.1821,99.2005 72.9417,99.9053 C67.6514,97.1477 66.231,90.9967 72.0204,87.4213 C64.6509,83.8722 63.8869,79.4446 70.1558,74.0005 C64.5854,70.0121 64.6687,64.4814 70.4782,60.7703 C65.1879,56.7208 65.5527,49.9258 71.8164,46.999 C64.7098,43.5461 65.4889,36.986 71.7697,33.4869 C62.7049,24.1724 65.4911,16.4291 77.6,13.1996 C77.7593,13.2493 77.7634,13.3333 77.6671,13.4512 " style="stroke:#181818;stroke-width:0.8000000000000002;fill:none;"></path><text fill="#000000" font-family="Arial" font-size="11.2" font-weight="bold" lengthadjust="spacing" textlength="148" x="72" y="27.5957">Domaine (du problème)</text></g><!--MD5=[e964c2537204c4818a6857a4ece8a291]
-cluster C--><g id="cluster_C"><path d="M90.2587,194.8326 C92.5664,190.2746 97.5867,189.7979 100.7829,193.7313 C104.0146,187.4709 109.9061,186.5708 113.6569,193.2134 C116.2525,188.864 121.2023,188.2486 124.0825,192.8831 C128.0502,187.1973 133.231,186.0048 137.4056,192.6597 C140.2583,187.556 144.8799,186.8867 148.2509,192.1157 C150.6024,186.874 154.6304,184.3588 159.3873,189.5475 C164.561,184.8979 168.7795,184.0752 171.9939,191.5798 C175.6169,186.9923 180.447,186.7174 183.2783,192.4458 C187.1038,187.3866 190.9518,188.1538 194.2374,193.0407 C197.4501,186.0944 203.6784,186.379 207.3913,192.5387 C211.52,187.6545 215.9228,187.7087 218.9514,193.7073 C226.215,188.202 232.5633,190.8764 234.4,199.5996 C235.5963,199.1322 236.2504,199.585 236.116,200.8888 C243.6073,203.8859 244.1769,209.9004 237.4092,214.275 C244.1242,216.8299 245.0838,221.9288 239.3857,226.4919 C247.958,228.4335 247.6939,236.0134 242.4524,240.896 C247.8969,246.7673 246.8509,250.6071 239.6134,253.657 C244.3369,258.3524 244.2014,264.4964 236.9534,266.7618 C243.2505,275.1448 238.9089,284.0715 228.8,285.1996 C229.8161,285.4449 230.0992,286.1763 229.4134,287.0011 C226.1242,291.508 222.3389,291.5511 219.0145,287.0416 C216.0496,293.2077 210.4729,295.9293 205.4975,289.139 C202.4927,294.0422 199.4084,295.9389 194.8679,290.7579 C191.6989,296.5003 187.7499,297.7897 183.3249,292.0169 C178.9863,297.3751 174.7801,297.4484 170.674,291.7509 C167.4042,296.7038 163.2334,297.1673 159.3608,292.4566 C155.8788,297.3416 152.3542,297.8261 148.8366,292.4934 C144.1151,298.1224 139.4705,297.6949 136.2538,290.9617 C132.9814,296.1141 127.6403,295.9206 124.4483,290.8689 C120.7576,295.0096 116.377,294.9367 114.0072,289.4381 C108.6811,294.9378 103.9759,294.0633 101.1507,286.8992 C93.3023,292.4462 84.1596,290.993 83.2,279.5996 C84.302,279.1568 84.8564,279.5543 84.975,280.6991 C77.8206,278.3653 76.8478,271.7344 82.7371,267.2329 C76.9967,264.007 75.9692,258.4348 82.1284,254.634 C74.6127,250.6141 74.4142,246.2336 80.7543,240.834 C75.3087,236.5075 76.4436,231.452 81.9526,228.1613 C75.3048,223.7736 75.205,216.2817 83.0911,212.9843 C75.6777,204.5565 79.0589,197.2688 88.8,193.9996 C89.7201,193.4774 90.2201,193.8111 90.2587,194.8326 " fill="#90EE90" style="stroke:#181818;stroke-width:0.8000000000000002;"></path><text fill="#000000" font-family="Arial" font-size="11.2" font-weight="bold" lengthadjust="spacing" textlength="131.2" x="93.2" y="208.3957">Conception logicielle</text></g><!--MD5=[ae8e8d8430e8f8d0f717af7422021a23]
-cluster E--><g id="cluster_E"><rect height="104" rx="2" ry="2" style="stroke:#181818;stroke-width:0.8000000000000002;fill:none;" width="178.4" x="76.8" y="323.5996"></rect><text fill="#000000" font-family="Arial" font-size="11.2" font-weight="bold" lengthadjust="spacing" textlength="124.8" x="103.6" y="335.5957">Solution exécutable</text></g><!--MD5=[c31a855ebeac6ee3d0a2de96cc45ec0c]
-entity PP--><g id="elem_PP"><path d="M128.4343,48.0591 C131.278,43.5515 136.4122,43.2576 139.0108,48.3296 C141.1987,44.3705 144.8863,43.2288 147.8042,47.5549 C151.0321,43.2615 153.9174,42.4014 157.2514,47.4476 C159.4117,43.6124 162.2756,43.176 165.3668,46.3735 C168.8654,41.1738 173.3396,41.7652 175.525,47.5842 C178.3222,43.7625 181.764,43.6483 184.1542,48.0132 C187.6149,43.6653 190.458,44.0454 192.8856,48.9846 C195.8146,44.4273 199.0958,43.6232 202.9065,47.9953 C208.9165,50.8714 209.2716,54.3116 203.9672,58.347 C209.5347,59.473 209.3606,62.7344 206.9902,66.7247 C209.9967,70.5138 210.1424,74.3469 204.6078,75.924 C207.8484,80.204 207.3572,83.4148 202.0014,85.3069 C200.427,90.7638 196.6975,92.2827 192.4989,87.8208 C190.1871,93.0324 186.0065,92.762 183.1695,88.3288 C181.6453,92.8686 178.1999,94.3164 174.6878,90.2993 C173.3926,94.6745 170.1916,96.3845 166.2856,93.2016 C162.1507,97.7921 157.6916,97.1094 155.7843,91.0128 C152.6699,93.6864 149.6943,93.6584 148.1381,89.3149 C144.4852,93.1345 139.9844,92.7478 137.8048,87.6145 C134.4896,90.9825 131.0803,89.891 129.6901,85.5803 C124.1484,84.2495 122.7615,79.7226 127.233,75.8606 C122.1789,73.3502 121.5422,69.6269 126.4037,66.26 C123.3674,63.1913 123.118,60.2689 127.7035,58.4722 C122.4071,55.2595 123.8866,50.581 128.4343,48.0591 " fill="#FF0000" style="stroke:#181818;stroke-width:0.4000000000000001;"></path><text fill="#000000" font-family="Arial" font-size="11.2" lengthadjust="spacing" textlength="61.6" x="134" y="63.5957">Complexité</text><text fill="#000000" font-family="Arial" font-size="11.2" lengthadjust="spacing" textlength="53.6" x="138" y="76.6332">inhérente</text></g><!--MD5=[8ad42e69c823d91e931492f14bc2a1bb]
-entity S--><g id="elem_S"><rect fill="#F1F1F1" height="29.0375" rx="2" ry="2" style="stroke:#181818;stroke-width:0.4000000000000001;" width="155.2" x="5.6" y="139.5996"></rect><text fill="#000000" font-family="Arial" font-size="11.2" lengthadjust="spacing" textlength="139.2" x="13.6" y="157.9957">Spécification d'exigences</text></g><!--MD5=[36dc586d67e0f1d076b0ce70c9875d3e]
-entity CC--><g id="elem_CC"><path d="M118.7527,228.5559 C121.1122,223.5752 125.6495,224.5001 128.0279,228.5364 C130.7914,224.3016 134.9337,224.0535 137.6761,228.5597 C140.0818,222.7341 145.3301,222.524 148.2933,228.0378 C151.1548,223.281 153.9244,223.0145 157.0961,227.7503 C160.3525,223.135 164.253,222.9772 167.4691,227.7946 C170.5171,224.2733 173.6977,223.3654 176.4675,228.0979 C179.2896,223.0562 183.9033,224.0609 186.4704,228.3707 C189.0995,223.5726 193.178,223.399 196.0565,228.1195 C200.1401,223.7887 203.2194,224.1187 206.3071,229.2037 C209.0058,225.0311 213.4682,225.554 215.5902,229.8368 C219.5098,231.7348 219.967,234.9194 216.7922,237.8778 C221.2848,240.2715 221.5256,244.5324 217.3645,247.4438 C222.3898,250.9547 222.0664,254.1092 216.8315,257.0508 C220.9784,261.3253 220.3455,264.4108 215.0066,266.9338 C213.1869,270.9202 209.3347,270.9551 206.7234,267.8598 C203.2761,272.6768 200.2852,272.0074 196.8089,267.8919 C193.7549,272.5442 189.7622,273.2876 186.4113,268.2092 C184.5168,272.686 179.9326,274.7884 176.4114,269.9566 C174.1875,274.7877 171.2058,275.5194 167.6775,271.2018 C164.0473,275.7933 159.9521,275.6176 157.7836,269.8111 C154.6221,275.4224 150.5958,274.2801 147.425,269.8206 C144.2575,274.2682 139.8956,273.9444 137.6027,268.9141 C134.3249,271.8919 131.3125,271.7637 129.1906,267.5602 C125.7286,271.9788 120.6282,271.9786 118.3047,266.3292 C112.5796,264.4078 112.5513,260.5455 116.2017,256.598 C111.6742,254.9709 110.5851,252.1384 113.4018,248.0935 C110.1141,244.6807 110.8866,240.0086 115.9584,238.9275 C111.4691,233.9248 113.0678,230.8175 118.7527,228.5559 " fill="#FFC0CB" style="stroke:#181818;stroke-width:0.4000000000000001;"></path><text fill="#000000" font-family="Arial" font-size="11.2" lengthadjust="spacing" textlength="61.6" x="135.6" y="244.3957">Complexité</text><text fill="#000000" font-family="Arial" font-size="11.2" lengthadjust="spacing" textlength="85.6" x="123.6" y="257.4332">circonstancielle</text></g><!--MD5=[c8439cd5eaeefc99cddadab5367aafe8]
-entity EE--><g id="elem_EE"><path d="M119.2887,365.0787 C122.2539,360.6926 124.9829,361.117 127.9265,365.1009 C130.6292,360.2067 134.5376,360.1258 137.3264,365.0183 C139.3749,360.5994 143.7316,360.1491 146.0849,364.7214 C148.7868,360.2939 153.3857,360.0585 155.5161,365.28 C157.8865,360.5828 162.3841,361.1051 165.0747,364.9204 C168.0135,360.4087 170.876,360.8461 174.2824,364.3857 C177.5248,360.5171 180.6979,359.6592 183.4706,364.8616 C185.8525,360.6067 189.3126,359.9511 192.1937,364.3589 C195.4831,360.0102 198.5569,360.2961 201.4704,364.7548 C205.1335,360.6108 209.2997,359.342 212.2501,365.5006 C214.5261,361.0996 218.8408,360.8584 221.5468,365.0346 C224.2208,361.8612 227.3804,362.3101 229.4357,365.7705 C233.0592,367.9457 233.5248,371.0652 230.4003,374.0287 C235.0784,376.8821 235.7439,380.994 230.4587,383.9064 C234.6118,386.0693 235.9728,390.8504 231.1443,393.6456 C234.5218,396.8616 233.8788,400.0199 229.9369,402.2032 C227.5765,406.7273 224.024,406.9642 220.6373,403.3803 C218.5815,408.8475 215.4983,408.5482 211.733,405.0849 C208.2949,409.2852 204.1755,410.1154 201.4911,404.3132 C199.949,408.691 195.4952,410.0393 192.1525,406.4143 C189.5541,410.8737 186.8824,411.6907 183.2396,407.4891 C180.7134,412.0258 177.83,412.7279 174.5435,408.2201 C172.0925,411.865 167.9604,411.2996 165.9487,407.6991 C162.2125,411.6163 158.3017,410.295 156.4166,405.6407 C152.8477,410.6978 148.6235,409.5224 145.9446,404.6977 C143.2451,408.873 140.3416,408.0873 137.7401,404.5929 C134.4669,408.4253 131.0149,408.3447 128.0394,404.2295 C123.6901,408.3147 120.5994,407.0882 118.6829,401.8008 C114.9585,399.6457 114.3487,396.9461 117.4021,393.7171 C112.3863,392.0836 110.1539,387.6993 114.8801,383.63 C111.4229,380.6268 111.2198,376.3324 116.0468,374.3733 C112.9386,369.9555 113.3459,366.3395 119.2887,365.0787 " fill="#FFA500" style="stroke:#181818;stroke-width:0.4000000000000001;"></path><text fill="#000000" font-family="Arial" font-size="11.2" lengthadjust="spacing" textlength="61.6" x="142.8" y="380.3957">Complexité</text><text fill="#000000" font-family="Arial" font-size="11.2" lengthadjust="spacing" textlength="100" x="123.6" y="393.4332">environnementale</text></g><g id="elem_GMN4"><path d="M246,50.3996 L246,82.6121 L370,82.6121 L370,58.3996 L362,50.3996 L246,50.3996 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.4000000000000001;"></path><path d="M362,50.3996 L362,58.3996 L370,58.3996 L362,50.3996 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.8000000000000002;"></path><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="50.4" x="279.2" y="64.0532">Exemple :</text><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="107.2" x="250.8" y="76.1594">Lois fiscales (impôts)</text></g><g id="elem_GMN10"><path d="M260.4,218.7996 L260.4,275.2246 L458,275.2246 L458,226.7996 L450,218.7996 L260.4,218.7996 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.4000000000000001;"></path><path d="M450,218.7996 L450,226.7996 L458,226.7996 L450,218.7996 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.8000000000000002;"></path><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="56" x="327.6" y="232.4532">Exemples :</text><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="88" x="311.6" y="244.5594">Framework REST,</text><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="146.4" x="282.4" y="256.6657">utilisation du patron Visiteur,</text><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="180.8" x="265.2" y="268.7719">intégration avec un logiciel "ancien"</text></g><g id="elem_GMN15"><path d="M274.4,361.1996 L274.4,405.5184 L477.6,405.5184 L477.6,369.1996 L469.6,361.1996 L274.4,361.1996 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.4000000000000001;"></path><path d="M469.6,361.1996 L469.6,369.1996 L477.6,369.1996 L469.6,361.1996 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.8000000000000002;"></path><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="52.8" x="346" y="374.8532">Exemples:</text><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="96.8" x="324" y="386.9594">Application mobile,</text><text fill="#000000" font-family="Arial" font-size="10.4" lengthadjust="spacing" textlength="186.4" x="279.2" y="399.0657">déploiement dans conteneur Docker</text></g><!--MD5=[eca472c658097b46fecc867470fb1e43]
-link PP to GMN4--><g id="link_PP_GMN4"><path d="M207.872,66.3996 C220.52,66.3996 233.168,66.3996 245.808,66.3996 " fill="none" id="PP-GMN4" style="stroke:#181818;stroke-width:0.8000000000000002;stroke-dasharray:7.0,7.0;"></path></g><!--MD5=[54b466f033fc859a3a602351050995ee]
-link CC to GMN10--><g id="link_CC_GMN10"><path d="M221.376,247.1996 C234.296,247.1996 247.216,247.1996 260.144,247.1996 " fill="none" id="CC-GMN10" style="stroke:#181818;stroke-width:0.8000000000000002;stroke-dasharray:7.0,7.0;"></path></g><!--MD5=[2ef8a8103cbd0838e5f725f9a4a0927b]
-link GMN15 to EE--><g id="link_GMN15_EE"><path d="M274.312,383.1996 C261.432,383.1996 248.544,383.1996 235.664,383.1996 " fill="none" id="GMN15-EE" style="stroke:#181818;stroke-width:0.8000000000000002;stroke-dasharray:7.0,7.0;"></path></g><!--MD5=[c59cac793282cfdfc9d13a807a8fe753]
-link P to S--><g id="link_P_S"><path d="M83.2,111.0536 C83.2,111.2856 83.2,111.5175 83.2,111.7494 C83.2,112.6768 83.2,113.6033 83.2,114.5271 C83.2,121.9176 83.2,129.1356 83.2,135.2956 " fill="none" id="P-to-S" style="stroke:#181818;stroke-width:0.8000000000000002;"></path><polygon fill="#181818" points="83.2,139.3916,86.4,132.1916,83.2,135.3916,80,132.1916,83.2,139.3916" style="stroke:#181818;stroke-width:0.8000000000000002;"></polygon></g><!--MD5=[6e9e79cbd51b6e4ec2e6c7793813b079]
-link S to C--><g id="link_S_C"><path d="M83.2,168.7116 C83.2,171.8646 83.2,175.4179 83.2,179.2252 C83.2,181.1288 83.2,183.0959 83.2,185.1083 C83.2,185.6114 83.2,186.1173 83.2,186.6258 C83.2,186.88 83.2,187.1349 83.2,187.3903 " fill="none" id="S-to-C" style="stroke:#181818;stroke-width:0.8000000000000002;"></path><polygon fill="#181818" points="83.2,187.3903,86.4,180.1903,83.2,183.3903,80,180.1903,83.2,187.3903" style="stroke:#181818;stroke-width:0.8000000000000002;"></polygon></g><!--MD5=[311cdee09890d755c451d6c721b78759]
-link C to E--><g id="link_C_E"><path d="M83.2,292.0011 C83.2,292.2415 83.2,292.4823 83.2,292.7236 C83.2,293.2061 83.2,293.6904 83.2,294.1763 C83.2,295.1481 83.2,296.1265 83.2,297.1104 C83.2,299.0783 83.2,301.0686 83.2,303.0737 C83.2,307.084 83.2,311.1539 83.2,315.2236 C83.2,317.2585 83.2,319.2934 83.2,321.3207 C83.2,321.8276 83.2,322.3339 83.2,322.8397 C83.2,323.0926 83.2,323.3453 83.2,323.5979 " fill="none" id="C-to-E" style="stroke:#181818;stroke-width:0.8000000000000002;"></path><polygon fill="#181818" points="83.2,323.5979,86.4,316.3979,83.2,319.5979,80,316.3979,83.2,323.5979" style="stroke:#181818;stroke-width:0.8000000000000002;"></polygon></g><!--MD5=[77535289ff9596072bdf36bc953a14bd]
-@startuml
-scale 0.8
-skinparam style strictuml
-skinparam backgroundColor transparent
-skinparam packageBackgroundColor transparent
-skinparam defaultFontName Arial 
-skinparam defaultTextAlignment center
-cloud "Domaine (du problème)" as P {
- cloud "Complexité\ninhérente" as PP #red {
- }
-}
-note right of PP: Exemple :\nLois fiscales (impôts)
-rectangle "Spécification d'exigences" as S {
-}
-cloud "Conception logicielle" as C #lightgreen {
-cloud "Complexité\ncirconstancielle" as CC #pink {
-}
-}
-note right of CC: Exemples :\nFramework REST,\nutilisation du patron Visiteur,\nintégration avec un logiciel "ancien"
-rectangle "Solution exécutable" as E {
-cloud "Complexité\nenvironnementale" as EE #orange {
-}
-}
-note left of EE: Exemples:\nApplication mobile,\ndéploiement dans conteneur Docker
-P - -> S 
-S - -> C
-C - -> E
-@enduml
-
-PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
-(GPL source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Default Encoding: UTF-8
-Language: en
-Country: null
---></g></svg></p>
+<p><img src="AnalyseConception_files/mediabag/d72bd2c825a2062fb34d0fe2fb0754d67ede3e1a.svg" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;1.4: Sources de complexité.</figcaption><p></p>
 </figure>
 </div>
@@ -614,19 +463,19 @@ Country: null
 </section>
 <section id="développement-itératif-évolutif-et-agile" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="développement-itératif-évolutif-et-agile"><span class="header-section-number">1.5</span> Développement itératif, évolutif et agile</h2>
-<p>Nous adoptons également un processus moderne de développement avec des itérations, selon une méthodologie «&nbsp;agile&nbsp;». Dans le chapitre 2 du livre de Craig Larman, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du «&nbsp;processus unifié&nbsp;», qui est une représentation générique de cette stratégie de développement.</p>
+<p>Nous adoptons également un processus moderne de développement avec des itérations, selon une méthodologie “agile”. Dans le chapitre 2 du livre de Craig Larman, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du “processus unifié”, qui est une représentation générique de cette stratégie de développement.</p>
 <p>Nous résumons les points importants <span style="white-space:nowrap">ainsi :</span></p>
 <ul>
 <li>Le développement itératif et évolutif implique de programmer et de tester précocement un système partiel dans des cycles répétitifs.</li>
 <li>Un cycle est nommé une itération et dure un temps fixe (par exemple trois semaines) comprenant les activités d’analyse, de conception, de programmation et de test, ainsi qu’une démonstration pour solliciter des rétroactions du client (voir la <a href="#fig-IteratifEvolutif">figure&nbsp;<span>1.7</span></a>).</li>
 <li>La durée d’une itération est limitée dans le temps (<em>timeboxed</em> en anglais), de 2 à 6 semaines. Il n’est pas permis d’ajouter du temps à la durée d’une itération si le projet avance plus lentement que prévu, car cela impliquerait un retard de la rétroaction du client. Si le respect des délais semble compromis, on supprime plutôt des tâches ou des spécifications et on les reprend éventuellement dans une itération ultérieure.</li>
-<li>Les premières itérations peuvent sembler chaotiques, car elles sont loin de la «&nbsp;bonne voie&nbsp;». Avec la rétroaction du client et l’adaptation, le système à développer converge vers une solution appropriée (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.8</span></a>). Cette instabilité peut être particulièrement prononcée dans un contexte d’entreprise en démarrage.</li>
+<li>Les premières itérations peuvent sembler chaotiques, car elles sont loin de la “bonne voie”. Avec la rétroaction du client et l’adaptation, le système à développer converge vers une solution appropriée (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.8</span></a>). Cette instabilité peut être particulièrement prononcée dans un contexte d’entreprise en démarrage.</li>
 <li>Dans une itération, la modélisation (par exemple avec l’UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n’est pas triviale (voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.9</span></a>). Selon le contexte du projet (voir le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), on peut décider de ne pas faire de modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l’on appelle la <a href="DetteTechnique.html">dette technique</a>.</li>
 </ul>
 <div id="fig-Modèle_processus_itératif" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/Iterative_Process_Diagram_fr.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.6: Un processus itératif permet de gérer les complexités, car la planification d’une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent. (Cette œuvre, «&nbsp;Modèle du processus itératif&nbsp;», est un dérivé de <a href="https://commons.wikimedia.org/w/index.php?curid=104924876">«&nbsp;Iterative development model&nbsp;»</a> de <a href="https://commons.wikimedia.org/wiki/User:Krupadeluxe">Krupadeluxe</a>, utilisé sous <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>. «&nbsp;Modèle de processus itératif&nbsp;» est sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> par Christopher Fuhrman.)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.6: Un processus itératif permet de gérer les complexités, car la planification d’une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent. (Cette œuvre, “Modèle du processus itératif”, est un dérivé de <a href="https://commons.wikimedia.org/w/index.php?curid=104924876">“Iterative development model”</a> de <a href="https://commons.wikimedia.org/wiki/User:Krupadeluxe">Krupadeluxe</a>, utilisé sous <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>. “Modèle de processus itératif” est sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> par Christopher Fuhrman.)</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-IteratifEvolutif" class="quarto-figure quarto-figure-center anchored">
@@ -636,18 +485,18 @@ Country: null
 </figure>
 </div>
 <p>Le développement itératif et incrémental amène plusieurs avantages selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
-<div class="callout callout callout-style-simple no-icon">
+<div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
 <ul>
-<li>diminution d’échecs, une amélioration de la productivité et de la <span style="white-space:nowrap">qualité ;</span></li>
-<li>une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, <span style="white-space:nowrap">etc.) ;</span></li>
-<li>des progrès immédiatement <span style="white-space:nowrap">visibles ;</span></li>
-<li>la rétroaction, l’implication des utilisateurs et l’adaptation <span style="white-space:nowrap">précoces ;</span></li>
-<li>la complexité est gérée (restreinte à une <span style="white-space:nowrap">itération) ;</span></li>
+<li>diminution d’échecs, une amélioration de la productivité et de la qualité;</li>
+<li>une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.);</li>
+<li>des progrès immédiatement visibles;</li>
+<li>la rétroaction, l’implication des utilisateurs et l’adaptation précoces;</li>
+<li>la complexité est gérée (restreinte à une itération);</li>
 <li>la possibilité d’exploiter méthodiquement les leçons tirées d’une itération.</li>
 </ul>
 </div>
@@ -661,8 +510,8 @@ Country: null
 </div>
 <p>Cependant, il y a des défis associés à ce genre de <span style="white-space:nowrap">développement :</span></p>
 <ul>
-<li><strong>Instabilité apparente au début</strong><span style="white-space:nowrap"> :</span> Dans les itérations initiales, puisqu’on n’a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la «&nbsp;bonne voie&nbsp;». La conséquence est que les évaluations et les rétroactions peuvent sembler rudes, et cela peut être déstabilisant pour des personnes qui ne sont pas familières avec le processus. La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.8</span></a>).</li>
-<li><strong>Modifications des objectifs de l’itération en cours au besoin</strong><span style="white-space:nowrap"> :</span> Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l’avons imaginé. Par exemple, l’ensemble des récits utilisateur ou des scénarios de cas d’utilisation visés pour l’itération nécessite plus de travail que prévu. La tendance dans ce cas est de nous donner plus de temps pour terminer. Mais cela voudrait dire que la rétroaction de toute l’itération sera retardée. Il serait nécessaire de changer la planification de démonstration avec le client (qui a souvent peu de disponibilités). Donc, le processus nous impose de toujours respecter le délai des itérations. Il s’agit d’une <a href="https://fr.wikipedia.org/wiki/Timeboxing">gestion par blocs de temps</a> (en anglais <em>timeboxing</em>). Que faire alors si, dans une itération, nous n’arriverons pas à tout <span style="white-space:nowrap">faire ?</span> La résolution est de demander à l’équipe après la moitié de l’itération si les objectifs d’origine peuvent être atteints. Si la réponse est non, nous priorisons les objectifs en plaçant les objectifs secondaires dans la catégorie des «&nbsp;choses à faire&nbsp;» (qui seront éventuellement faites à une itération ultérieure). Voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.9</span></a>. Selon une étude menée par <span class="citation" data-cites="blincoe2019high">Blincoe et coll. (<a href="references.html#ref-blincoe2019high" role="doc-biblioref">2019</a>)</span> sur trois gros projets itératifs d’IBM, jusqu’à <span style="white-space:nowrap">54 %</span> des exigences de haut niveau ont été déplacées de cette manière. Le but ultime de cette stratégie est de pouvoir faire une démonstration à la fin de l’itération, même si elle ne comprend pas toutes les fonctionnalités visées au début, car la rétroaction régulière sur des choses qui fonctionnent est essentielle.</li>
+<li><strong>Instabilité apparente au début</strong><span style="white-space:nowrap"> :</span> Dans les itérations initiales, puisqu’on n’a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la “bonne voie”. La conséquence est que les évaluations et les rétroactions peuvent sembler rudes, et cela peut être déstabilisant pour des personnes qui ne sont pas familières avec le processus. La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la <a href="#fig-StabiliteDansLesIterations">figure&nbsp;<span>1.8</span></a>).</li>
+<li><strong>Modifications des objectifs de l’itération en cours au besoin</strong><span style="white-space:nowrap"> :</span> Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l’avons imaginé. Par exemple, l’ensemble des récits utilisateur ou des scénarios de cas d’utilisation visés pour l’itération nécessite plus de travail que prévu. La tendance dans ce cas est de nous donner plus de temps pour terminer. Mais cela voudrait dire que la rétroaction de toute l’itération sera retardée. Il serait nécessaire de changer la planification de démonstration avec le client (qui a souvent peu de disponibilités). Donc, le processus nous impose de toujours respecter le délai des itérations. Il s’agit d’une <a href="https://fr.wikipedia.org/wiki/Timeboxing">gestion par blocs de temps</a> (en anglais <em>timeboxing</em>). Que faire alors si, dans une itération, nous n’arriverons pas à tout <span style="white-space:nowrap">faire ?</span> La résolution est de demander à l’équipe après la moitié de l’itération si les objectifs d’origine peuvent être atteints. Si la réponse est non, nous priorisons les objectifs en plaçant les objectifs secondaires dans la catégorie des “choses à faire” (qui seront éventuellement faites à une itération ultérieure). Voir la <a href="#fig-AnalyseConceptionDansLesIterations">figure&nbsp;<span>1.9</span></a>. Selon une étude menée par <span class="citation" data-cites="blincoe2019high">Blincoe et coll. (<a href="references.html#ref-blincoe2019high" role="doc-biblioref">2019</a>)</span> sur trois gros projets itératifs d’IBM, jusqu’à <span style="white-space:nowrap">54 %</span> des exigences de haut niveau ont été déplacées de cette manière. Le but ultime de cette stratégie est de pouvoir faire une démonstration à la fin de l’itération, même si elle ne comprend pas toutes les fonctionnalités visées au début, car la rétroaction régulière sur des choses qui fonctionnent est essentielle.</li>
 </ul>
 <!-- ![Le développement itératif et incrémental [@craig_uml_2005, figure 2.1].](images/A2.1.svg){#fig-DevIteratifIncremental} -->
 <div id="fig-AnalyseConceptionDansLesIterations" class="quarto-figure quarto-figure-center anchored">
@@ -825,7 +674,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

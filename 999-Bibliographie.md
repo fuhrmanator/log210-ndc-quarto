@@ -1,2 +1,0 @@
-# Bibliographie
-\leavevmode

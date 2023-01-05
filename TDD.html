@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.24">
+<meta name="generator" content="quarto-1.3.86">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -51,6 +51,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./Réusinage.html" rel="next">
 <link href="./RDCU.html" rel="prev">
+<link href="./images/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -128,6 +129,24 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Analyse et conception de logiciels</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/fuhrmanator/log210-ndc-quarto/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Download" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-download"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./Analyse-et-conception-de-logiciels.pdf">
+            <i class="bi bi-bi-file-pdf pe-1"></i>
+          Download PDF
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./Analyse-et-conception-de-logiciels.epub">
+            <i class="bi bi-bi-journal pe-1"></i>
+          Download ePub
+          </a>
+        </li>
+    </ul>
+</div>
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -316,7 +335,7 @@ div.csl-indent {
   <li><a href="#exemple-de-kata-tdd-fizzbuzz" id="toc-exemple-de-kata-tdd-fizzbuzz" class="nav-link" data-scroll-target="#exemple-de-kata-tdd-fizzbuzz"><span class="toc-section-number">10.1.1</span>  Exemple de kata TDD FizzBuzz</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="TDD.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="TDD.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fuhrmanator/log210-ndc-quarto/issues/new" class="toc-action">Signaler un problème</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -333,87 +352,21 @@ div.csl-indent {
 <p>Il est possible de mesurer la <a href="https://fr.wikipedia.org/wiki/Couverture_de_code">couverture de code</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>&nbsp;atteinte par les tests (mais ce sujet sort du cadre de la matière de ce manuel).</p>
 <div id="fig-TDD_states" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="387px" preserveaspectratio="none" style="width:645px;height:387px;background:#FFFFFF;" version="1.1" viewbox="0 0 645 387" width="645px" zoomandpan="magnify"><defs></defs><g><rect fill="#FF0000" height="65.875" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="91" x="129.5" y="37.2734"></rect><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="81" x="134.5" y="57.125">Au moins</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="65" x="142.5" y="75.75">un test</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="65" x="142.5" y="94.375">échoue</text><rect fill="#008000" height="65.875" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="88" x="373" y="37.2734"></rect><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="43" x="395.5" y="57.125">Tous</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="78" x="378" y="75.75">les tests</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="71" x="381.5" y="94.375">passent</text><rect fill="#FFFF00" height="60.625" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="85" x="374.5" y="183.2734"></rect><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthadjust="spacing" textlength="75" x="379.5" y="203.125">Pas TDD</text><path d="M401,206.8984 L401,222.8984 L405,222.8984 L405,206.8984 L401,206.8984 M409,206.8984 L409,222.8984 C410.12,222.8984 411.12,223.2584 411.88,224.0184 C412.64,224.7784 416.48,232.4984 417,233.5384 C417.52,234.5784 418.56,235.0984 419.64,234.7784 C420.68,234.4584 421.24,233.3384 420.88,232.2584 C420.56,231.2184 419,225.8984 419,224.8984 C419,223.8984 419.88,222.8984 421,222.8984 L427,222.8984 C428.12,222.8984 429,222.0184 429,220.8984 C429,219.7784 424.88,208.1384 424.88,208.1384 C424.56,207.4184 423.84,206.8984 423,206.8984 L409,206.8984 " fill="#FF0000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"></path><ellipse cx="16" cy="70.2734" fill="#222222" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"></ellipse><!--MD5=[1a59c7f6df8481c56a7ef6a685f090c4]
-link *start to Rouge--><g id="link_*start_Rouge"><path d="M26.43,70.2734 C45.99,70.2734 89.34,70.2734 124.19,70.2734 " fill="none" id="*start-to-Rouge" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="129.26,70.2734,120.26,66.2734,124.26,70.2734,120.26,74.2734,129.26,70.2734" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="43" x="56.25" y="26.125">Créer</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="67" x="44.25" y="44.75">nouveau</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="30" x="62.75" y="63.375">test</text></g><!--MD5=[225968ad8b5d07bd11168a671cfc4882]
-link Rouge to Vert--><g id="link_Rouge_Vert"><path d="M220.52,70.2734 C262.49,70.2734 324.63,70.2734 367.75,70.2734 " fill="none" id="Rouge-to-Vert" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="372.91,70.2734,363.91,66.2734,367.91,70.2734,363.91,74.2734,372.91,70.2734" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="88" x="252.75" y="23.125">Écrire code</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="76" x="258.75" y="41.75">pour faire</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="109" x="238.75" y="62.8828">passer test(s)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="7" x="347.75" y="57.5903">‡</text></g><!--MD5=[a457bc01392046f2809774e6aff8375f]
-reverse link Rouge to Vert--><g id="link_Rouge_Vert"><path d="M204.84,107.5934 C220.09,123.6834 240.1,140.7334 262.25,149.2734 C276.56,154.7834 316.97,154.8534 331.25,149.2734 C355.01,139.9934 376.15,120.7134 391.5,103.5234 " fill="none" id="Rouge-backto-Vert" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="201.06,103.5334,204.2598,112.848,204.465,107.1949,210.1181,107.4,201.06,103.5334" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="5" x="294.25" y="89.125">&nbsp;</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="43" x="275.25" y="107.75">Créer</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="67" x="263.25" y="126.375">nouveau</text><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="30" x="281.75" y="145">test</text></g><!--MD5=[30e98dbec254e049169f7efa29786e02]
-link Vert to Vert--><g id="link_Vert_Vert"><path d="M461.27,56.9134 C480.02,55.9034 496,60.3634 496,70.2734 C496,79.2534 482.88,83.7534 466.46,83.7734 " fill="none" id="Vert-to-Vert" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="461.27,83.6334,470.1639,87.8641,466.2683,83.7623,470.3701,79.8668,461.27,83.6334" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#008000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="130" x="502" y="65.625">Faire une activité</text><text fill="#008000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="100" x="513.5" y="86.7578">de réusinage</text><text fill="#008000" font-family="sans-serif" font-size="13" lengthadjust="spacing" textlength="7" x="613.5" y="81.4653">†</text></g><!--MD5=[d28d1e13e76e2eeb62326f2a527a2c12]
-link Vert to PasTDD--><g id="link_Vert_PasTDD"><path d="M417,103.3834 C417,125.6734 417,155.3334 417,178.1534 " fill="none" id="Vert-to-PasTDD" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="417,183.2034,421,174.2034,417,178.2034,413,174.2034,417,183.2034" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="sans-serif" font-size="16" lengthadjust="spacing" textlength="165" x="418" y="149.125">Écrire code sans test</text></g><rect fill="#DDDDDD" height="114.7969" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.0;" width="367" x="132" y="256.8984"></rect><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacing" textlength="6" x="138" y="273.1089">†</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="349" x="144" y="278.4014">Une activité de réusinage n'est pas censée causer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="334" x="138" y="294.6982">un problème avec un test. Cependant, cela peut</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="330" x="138" y="310.9951">arriver que les tests ne passent plus, et il faudra</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="165" x="138" y="327.292">corriger des problèmes.</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacing" textlength="6" x="138" y="340.8042">‡</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="334" x="144" y="346.0967">Il peut arriver qu'un test soit mal codé (il contient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="355" x="138" y="362.3936">un bogue). Dans ce cas, on corrige le code du test.</text><!--MD5=[d1af29fad067d3e2e5469cf884a10ec4]
-@startuml
-hide empty description
-skinparam style strictuml
-skinparam StateBorderColor black
-skinparam StateFontColor white
-skinparam StateFontStyle bold
-skinparam StateFontSize 16
-skinparam StateArrowFontSize 16
-'title États du développement piloté par les tests
-state Rouge as "Au moins\nun test\néchoue" #red
-state Vert as "Tous\nles tests\npassent" #green
-state PasTDD as "<color red>Pas TDD\n<color red><size:48><&thumb-down></color>" #yellow
-[*] -right-> Rouge : Créer\nnouveau\ntest
-Rouge -r-> Vert : Écrire code\npour faire\npasser test(s)<sup>‡</sup>
-Vert -l-> Rouge : \nCréer\nnouveau\ntest
-Vert -> Vert : <color green>Faire une activité</color>\n<color green>de réusinage<sup>†</sup></color>
-Vert - ->  PasTDD : Écrire code sans test
-legend center
-<sup>†</sup>Une activité de réusinage n'est pas censée causer
-un problème avec un test. Cependant, cela peut
-arriver que les tests ne passent plus, et il faudra
-corriger des problèmes.
-<sup>‡</sup>Il peut arriver qu'un test soit mal codé (il contient
-un bogue). Dans ce cas, on corrige le code du test.
-end legend
-@enduml
-
-@startuml
-hide empty description
-skinparam style strictuml
-skinparam StateBorderColor black
-skinparam StateFontColor white
-skinparam StateFontStyle bold
-skinparam StateFontSize 16
-skinparam StateArrowFontSize 16
-state Rouge as "Au moins\nun test\néchoue" #red
-state Vert as "Tous\nles tests\npassent" #green
-state PasTDD as "<color red>Pas TDD\n<color red><size:48><&thumb-down></color>" #yellow
-[*] -right-> Rouge : Créer\nnouveau\ntest
-Rouge -r-> Vert : Écrire code\npour faire\npasser test(s)<sup>‡</sup>
-Vert -l-> Rouge : \nCréer\nnouveau\ntest
-Vert -> Vert : <color green>Faire une activité</color>\n<color green>de réusinage<sup>†</sup></color>
-Vert - ->  PasTDD : Écrire code sans test
-legend center
-<sup>†</sup>Une activité de réusinage n'est pas censée causer
-un problème avec un test. Cependant, cela peut
-arriver que les tests ne passent plus, et il faudra
-corriger des problèmes.
-<sup>‡</sup>Il peut arriver qu'un test soit mal codé (il contient
-un bogue). Dans ce cas, on corrige le code du test.
-end legend
-@enduml
-
-PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
-(GPL source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Default Encoding: UTF-8
-Language: en
-Country: null
---></g></svg></p>
+<p><img src="TDD_files/mediabag/6e2b07544553bb69a91d4c6619c86d21b18a7a70.svg" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;10.1: États du développement piloté par les tests. <a href="http://www.plantuml.com/plantuml/uml/RLJDQXin4BxhAGONwgJ43eLIYZ5B4fj0BgKqII_T7kJToLf4AsqraerxwhLlqTxgv_2Rz4awqgx_WY_BelbclX_DxXLvwNoejPYh4W7hng-WH2gSQhooHj2pCerqiWRoAutyTAf83VlAlPSURwmhqKsijWvcMXRFBm6trlYsl9mhZwVAzubYPdLvigf-8Bnz_x9qxPnT7jRxUy0KdsJGFbO_oXgXTu-LHNYyWvieiIVwNdcctFpYIGHbW7ApNg2sJOCr6W-DqjPlri3ZG2E1H_8aAFB2Pnig14dGkmvGMsKeDy4aI6usws9k0_RWbSEoQ_Y2pYVyWmsCtStBMIqHqp6wSeYcmt-Iz32TfevnaPBZMHcV0X_dvk1iJEnzzEv3Ddxjvw6U3KgxDDduCY4o7hj2hUrIV7tp3GPELNC_o3hz8vYupHfTRemD2vGXDr6KQAi3ny2aUyGXyLOuXCAMo99jSF0a-Q2JxvAPCpeVKsYoVp__Z2_ZYqZT0tr0c9lJb2ronzVvIubajv49Wk702wyMYYzbQs-NH8laDURfWPIH5NPQVhTQjXqT4rDjCpvs1oHDUpT2OuMcX89l1vqu7lTug0QEUC7qkPlNXc8hiLiePE2G16z8u-nCR_xoFie55j3jp10cs32NDFw2cxI41eCNqZcru72_1znl831pjpFGw4207fJcwmYbawAmt5Dn3t_8Up8QYkERkTE90VOC_KuAa5KUQgbZ6cpjJCKtunNpHGCpMmKy7y8qnbH4QtG1ra17p3hR6FbxIiv4ZB1DKbpnWtyV_m40">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <p>Les activités de réusinage sont expliquées dans la section <a href="Réusinage.html">Réusinage (Refactorisation)</a>.</p>
 <section id="kata-tdd" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="kata-tdd"><span class="header-section-number">10.1</span> Kata TDD</h2>
-<p>Pour apprendre à faire du développement piloté par les tests (et pour apprendre les cadriciels supportant l’automatisation des tests), il existe une activité nommée «&nbsp;kata TDD&nbsp;». <em>Kata</em> est un terme japonais désignant une séquence de techniques réalisée dans le vide dans les arts martiaux japonais. <a href="https://www.youtube.com/watch?v=DmPk_A-RU50">En voici une vidéo</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>. C’est un outil de transmission de techniques et de principes de combat.</p>
+<p>Pour apprendre à faire du développement piloté par les tests (et pour apprendre les cadriciels supportant l’automatisation des tests), il existe une activité nommée “kata TDD”. <em>Kata</em> est un terme japonais désignant une séquence de techniques réalisée dans le vide dans les arts martiaux japonais. <a href="https://www.youtube.com/watch?v=DmPk_A-RU50">En voici une vidéo</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>. C’est un outil de transmission de techniques et de principes de combat.</p>
 <div id="fig-KataBasaiDai" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/karate.jpg" class="img-fluid figure-img" style="width:40.0%"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;10.2: Étudiante de karaté faisant le kata <em>Bassai Dai</em> (photo <a href="https://www.flickr.com/photos/the-consortium/4507180302/">«&nbsp;Karate&nbsp;»</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/the-consortium/">The Consortium</a>).</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;10.2: Étudiante de karaté faisant le kata <em>Bassai Dai</em> (photo <a href="https://www.flickr.com/photos/the-consortium/4507180302/">“Karate”</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">(CC BY-SA 2.0)</a> par <a href="https://www.flickr.com/people/the-consortium/">The Consortium</a>).</figcaption><p></p>
 </figure>
 </div>
-<p>Alors, le «&nbsp;kata TDD&nbsp;» a été proposé par Dave Thomas, et le but est de développer la fluidité avec le développement piloté par les tests. Un kata TDD se pratique avec un IDE (environnement de développement logiciel) et un support pour les tests (par exemple JUnit). Pratiquer le même kata peut améliorer votre habileté de programmation. On peut pratiquer le même kata dans un langage différent ou avec un IDE ou un environnement de test différents. Le kata vous permet d’avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour le test et pour l’application, API de l’environnement de test, etc.).</p>
+<p>Alors, le “kata TDD” a été proposé par Dave Thomas, et le but est de développer la fluidité avec le développement piloté par les tests. Un kata TDD se pratique avec un IDE (environnement de développement logiciel) et un support pour les tests (par exemple JUnit). Pratiquer le même kata peut améliorer votre habileté de programmation. On peut pratiquer le même kata dans un langage différent ou avec un IDE ou un environnement de test différents. Le kata vous permet d’avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour le test et pour l’application, API de l’environnement de test, etc.).</p>
 <p>En plus, les activités de réusinage sont normalement intégrées dans un kata. Le fait de travailler en <em>petits pas</em> peut faire en sorte que la dette technique s’accumule. Les IDE facilitent l’application des activités de réusinage. Un langage fortement typé comme Java permet d’avoir plus de fonctionnalités automatisées de réusinage dans un IDE qu’un langage dynamique comme JavaScript ou Python. Une activité de base de réusinage est le renommage d’une variable ou d’une fonction. Le réusinage rend le code plus facile à comprendre et à maintenir.</p>
 <section id="exemple-de-kata-tdd-fizzbuzz" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="exemple-de-kata-tdd-fizzbuzz"><span class="header-section-number">10.1.1</span> Exemple de kata TDD FizzBuzz</h3>
@@ -622,7 +575,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

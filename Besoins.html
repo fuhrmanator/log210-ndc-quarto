@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.24">
+<meta name="generator" content="quarto-1.3.86">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -51,6 +51,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./CasUtilisation.html" rel="next">
 <link href="./AnalyseConception.html" rel="prev">
+<link href="./images/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -128,6 +129,24 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Analyse et conception de logiciels</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/fuhrmanator/log210-ndc-quarto/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Download" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-download"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./Analyse-et-conception-de-logiciels.pdf">
+            <i class="bi bi-bi-file-pdf pe-1"></i>
+          Download PDF
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./Analyse-et-conception-de-logiciels.epub">
+            <i class="bi bi-bi-journal pe-1"></i>
+          Download ePub
+          </a>
+        </li>
+    </ul>
+</div>
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -313,7 +332,7 @@ div.csl-indent {
   <ul>
   <li><a href="#furps" id="toc-furps" class="nav-link active" data-scroll-target="#furps"><span class="toc-section-number">2.1</span>  FURPS+</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="Besoins.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="Besoins.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fuhrmanator/log210-ndc-quarto/issues/new" class="toc-action">Signaler un problème</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -324,7 +343,7 @@ div.csl-indent {
 <p>Dans le développement de logiciels, il est normal de spécifier ce que le logiciel est censé faire. Selon la méthodologie proposée dans ce manuel, la spécification des besoins n’est pas <span style="white-space:nowrap">facultative !</span> La spécification des besoins est la base de la méthodologie de développement.</p>
 <p>D’abord, qu’est-ce qu’une <span style="white-space:nowrap">exigence ?</span> C’est une condition documentée à laquelle un logiciel (ou un système) doit satisfaire. C’est quelque chose qui facilite la vie d’un utilisateur ou qui amène une valeur socioéconomique.</p>
 <p>Voici un exemple d’une exigence d’un système de messagerie instantanée (comme Discord ou <span style="white-space:nowrap">Slack) :</span></p>
-<div class="callout callout callout-style-simple no-icon">
+<div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -335,11 +354,11 @@ div.csl-indent {
 </div>
 </div>
 <p>Cette fonctionnalité a une utilité <span style="white-space:nowrap">évidente :</span> la communication. Il s’agit d’une <em>exigence de fonctionnalité</em>.</p>
-<p>Si ces messages doivent être visibles à tous les personnes dans le canal en moins de 0,5 seconde, alors il s’agit d’une exigence sur <em>la qualité de la performance</em> du système. Lorsqu’il s’agit des qualités d’un système comme la performance, on peut les appeler <em>exigences non fonctionnelles</em>, car elles ne sont pas des fonctionnalités. Il y a beaucoup d’exemples d’exigences non fonctionnelles, par exemple sur <a href="https://en.wikipedia.org/wiki/Non-functional_requirement#Examples">Wikipedia</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>. Le nom porte à confusion, car une chose qui ne fonctionne pas est «&nbsp;non fonctionnelle&nbsp;». Pour cette raison, elles sont aussi appelées des exigences sur les qualités ou sur les contraintes. On peut aussi les appeler informellement les «&nbsp;ilités&nbsp;», car ces qualités sont souvent des aptitudes du <span style="white-space:nowrap">système :</span> la maintenabilité, la convivialité, la testabilité, etc.</p>
+<p>Si ces messages doivent être visibles à tous les personnes dans le canal en moins de 0,5 seconde, alors il s’agit d’une exigence sur <em>la qualité de la performance</em> du système. Lorsqu’il s’agit des qualités d’un système comme la performance, on peut les appeler <em>exigences non fonctionnelles</em>, car elles ne sont pas des fonctionnalités. Il y a beaucoup d’exemples d’exigences non fonctionnelles, par exemple sur <a href="https://en.wikipedia.org/wiki/Non-functional_requirement#Examples">Wikipedia</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>. Le nom porte à confusion, car une chose qui ne fonctionne pas est “non fonctionnelle”. Pour cette raison, elles sont aussi appelées des exigences sur les qualités ou sur les contraintes. On peut aussi les appeler informellement les “ilités”, car ces qualités sont souvent des aptitudes du <span style="white-space:nowrap">système :</span> la maintenabilité, la convivialité, la testabilité, etc.</p>
 <div id="fig-besoins" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/Pick-up-after-dog-1540480672.svg" class="img-fluid figure-img" style="width:60.0%"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2.1: Ramasser les besoins non <span style="white-space:nowrap">fonctionnels ?</span> «&nbsp;<a href="https://thenounproject.com/icon/dog-clean-up-21489/">Dog Clean Up</a>&nbsp;» de <a href="https://thenounproject.com/Luis">Luis Prado</a>, utilisé selon <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2.1: Ramasser les besoins non <span style="white-space:nowrap">fonctionnels ?</span> “<a href="https://thenounproject.com/icon/dog-clean-up-21489/">Dog Clean Up</a>” de <a href="https://thenounproject.com/Luis">Luis Prado</a>, utilisé selon <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></figcaption><p></p>
 </figure>
 </div>
 <section id="furps" class="level2" data-number="2.1">
@@ -506,7 +525,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

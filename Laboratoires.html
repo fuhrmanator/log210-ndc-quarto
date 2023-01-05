@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.24">
+<meta name="generator" content="quarto-1.3.86">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -114,6 +114,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./references.html" rel="next">
 <link href="./DiagrammesDeploiement.html" rel="prev">
+<link href="./images/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -189,6 +190,24 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Analyse et conception de logiciels</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/fuhrmanator/log210-ndc-quarto/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Download" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-download"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./Analyse-et-conception-de-logiciels.pdf">
+            <i class="bi bi-bi-file-pdf pe-1"></i>
+          Download PDF
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./Analyse-et-conception-de-logiciels.epub">
+            <i class="bi bi-bi-journal pe-1"></i>
+          Download ePub
+          </a>
+        </li>
+    </ul>
+</div>
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -387,7 +406,7 @@ div.csl-indent {
   <li><a href="#faq-pour-gitinspector" id="toc-faq-pour-gitinspector" class="nav-link" data-scroll-target="#faq-pour-gitinspector"><span class="toc-section-number">20.5.3</span>  FAQ pour gitinspector</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="Laboratoires.epub"><i class="bi bi-file"></i>ePub</a></li><li><a href="Laboratoires.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fuhrmanator/log210-ndc-quarto/issues/new" class="toc-action">Signaler un problème</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -415,10 +434,10 @@ div.csl-indent {
 </ul>
 <p>Voici des points importants pour le projet de laboratoire, organisés pour quelqu’un ayant déjà des connaissances en <span style="white-space:nowrap">Java :</span></p>
 <ul>
-<li>TypeScript se traduit («&nbsp;emit&nbsp;») en JavaScript, alors il faut comprendre le moteur d’exécution JavaScript.</li>
+<li>TypeScript se traduit (“emit”) en JavaScript, alors il faut comprendre le moteur d’exécution JavaScript.</li>
 <li>Pour convertir une chaîne en nombre, pour lire ou écrire un fichier sur disque, etc., on utilise des opérations en JavaScript.</li>
 <li>Un <em>type</em> en TypeScript est comme <em>un ensemble de valeurs</em> plutôt qu’une définition hiérarchique. En Java, il n’est pas possible d’avoir un type pouvant être soit une chaîne soit un nombre. Mais en TypeScript, c’est facile de déclarer un type comme une <em>union</em> de plusieurs types, par exemple <code>string | number</code>.</li>
-<li>JavaScript a des notions de «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;» (conversion d’une expression en une valeur booléenne) permettant de vérifier avec moins de code si une variable est définie ou initialisée, etc.</li>
+<li>JavaScript a des notions de “truthy” et “falsy” (conversion d’une expression en une valeur booléenne) permettant de vérifier avec moins de code si une variable est définie ou initialisée, etc.</li>
 <li><a href="https://fr.javascript.info/comparison#egalite-stricte">L’opérateur d’égalité stricte (<code>===</code>)</a> (sans conversion de type).</li>
 <li><a href="https://fr.javascript.info/arrow-functions-basics">Les fonctions fléchées</a> (<em>fat arrow functions</em> en anglais).</li>
 <li><a href="https://fr.javascript.info/callbacks">Le traitement asynchrone en JavaScript</a><span style="white-space:nowrap"> :</span>
@@ -446,12 +465,12 @@ div.csl-indent {
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// on peut faire quelque chose avec maVariable ...</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On vérifie trois possibilités pour <code>maVariable</code> avant de l’utiliser. Ce genre de situation arrive souvent en JavaScript, puisque les objets peuvent prendre des valeurs différentes selon le contexte. Il serait bien de pouvoir réduire la quantité de code dans ces cas.</p>
-<p>Grâce à la notion de conversion de valeur selon la règle de «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;», JavaScript permet de simplifier les instructions en une seule condition, sans ET (<code>&amp;&amp;</code>), en convertissant la valeur de <code>maVariable</code> en booléenne <code>true</code> ou <code>false</code><span style="white-space:nowrap"> :</span></p>
+<p>Grâce à la notion de conversion de valeur selon la règle de “truthy” et “falsy”, JavaScript permet de simplifier les instructions en une seule condition, sans ET (<code>&amp;&amp;</code>), en convertissant la valeur de <code>maVariable</code> en booléenne <code>true</code> ou <code>false</code><span style="white-space:nowrap"> :</span></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// conversion booléenne selon la règle de "truthy" et "falsy"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (maVariable) {</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// on peut faire quelque chose avec maVariable...</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Il faut comprendre la règle de conversion en valeur booléenne selon «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;». En fait, il est plus simple de commencer par les valeurs se traduisant en <code>false</code> («&nbsp;falsy&nbsp;»), car tout ce qui ne l’est pas est donc <code>true</code> («&nbsp;truthy&nbsp;»).</p>
+<p>Il faut comprendre la règle de conversion en valeur booléenne selon “truthy” et “falsy”. En fait, il est plus simple de commencer par les valeurs se traduisant en <code>false</code> (“falsy”), car tout ce qui ne l’est pas est donc <code>true</code> (“truthy”).</p>
 <section id="falsy" class="level3" data-number="20.3.1">
 <h3 data-number="20.3.1" class="anchored" data-anchor-id="falsy"><span class="header-section-number">20.3.1</span> Falsy</h3>
 <p>Les valeurs suivantes se convertissent en <code>false</code> dans une <span style="white-space:nowrap">condition :</span></p>
@@ -473,7 +492,7 @@ div.csl-indent {
 <li><code>-20</code></li>
 <li>etc.</li>
 </ul>
-<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-caution callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -483,7 +502,7 @@ Mise en garde
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>N’oubliez pas que la valeur de <code>0</code> est «&nbsp;falsy&nbsp;» dans une condition. C’est souvent un piège en JavaScript quand on considère les variables qui peuvent avoir une valeur numérique. Par exemple, si l’on fait <code>if (maVariable)</code> pour tester si une variable est définie, si la variable est définie et que sa valeur est <code>0</code>, la condition sera <code>false</code>.</p>
+<p>N’oubliez pas que la valeur de <code>0</code> est “falsy” dans une condition. C’est souvent un piège en JavaScript quand on considère les variables qui peuvent avoir une valeur numérique. Par exemple, si l’on fait <code>if (maVariable)</code> pour tester si une variable est définie, si la variable est définie et que sa valeur est <code>0</code>, la condition sera <code>false</code>.</p>
 </div>
 </div>
 </section>
@@ -496,171 +515,8 @@ Mise en garde
 <p>Ce manuel ne rentre pas dans les détails de chaque opération <span style="white-space:nowrap">Git ;</span> il existe plusieurs tutoriels pour Git sur Internet. Il y a beaucoup de scénarios où Git peut être utile, par exemple pour récupérer une version antérieure d’un fichier ou pour savoir qui a apporté une modification à un fichier, etc. Apprendre tous les cas d’utilisation de Git serait long et pas très intéressant. Il n’est pas nécessaire de tout comprendre pour commencer.</p>
 <div id="fig-git_fonctionnement" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
-
-<!-- Generated by graphviz version 2.43.0 (0)
- -->
-<!-- Title: git_basics Pages: 1 -->
-<svg width="1177pt" height="218pt" viewbox="0.00 0.00 1177.00 218.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 214)">
-<title>git_basics</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-214 1173,-214 1173,4 -4,4"></polygon>
-<!-- changes -->
-<g id="node1" class="node">
-<title>changes</title>
-<polygon fill="#880000" fill-opacity="0.133333" stroke="transparent" points="137,-210 0,-210 0,-134 137,-134 137,-210"></polygon>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="0.5,-172 0.5,-210 137.5,-210 137.5,-172 0.5,-172"></polygon>
-<text text-anchor="start" x="39.5" y="-194.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> </text>
-<text text-anchor="start" x="43.5" y="-194.8" font-family="Helvetica,Arial,sans-serif" font-weight="bold" font-size="14.00">changes</text>
-<text text-anchor="start" x="11.5" y="-180.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">in the working tree </text>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="0.5,-134 0.5,-172 137.5,-172 137.5,-134 0.5,-134"></polygon>
-<text text-anchor="start" x="5.5" y="-156.8" font-family="Helvetica,Arial,sans-serif" font-style="italic" font-size="14.00">To view: </text>
-<text text-anchor="start" x="5.5" y="-142.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git diff &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-</g>
-<!-- staging -->
-<g id="node2" class="node">
-<title>staging</title>
-<polygon fill="#ff8800" fill-opacity="0.133333" stroke="transparent" points="572,-201 382,-201 382,-125 572,-125 572,-201"></polygon>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="382,-163 382,-201 572,-201 572,-163 382,-163"></polygon>
-<text text-anchor="start" x="435" y="-185.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> </text>
-<text text-anchor="start" x="439" y="-185.8" font-family="Helvetica,Arial,sans-serif" font-weight="bold" font-size="14.00">staging area</text>
-<text text-anchor="start" x="434.5" y="-171.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">(cache, index)</text>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="382,-125 382,-163 572,-163 572,-125 382,-125"></polygon>
-<text text-anchor="start" x="387" y="-147.8" font-family="Helvetica,Arial,sans-serif" font-style="italic" font-size="14.00">To view: </text>
-<text text-anchor="start" x="387" y="-133.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git diff --staged &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-</g>
-<!-- changes&#45;&gt;staging -->
-<g id="edge8" class="edge">
-<title>changes-&gt;staging</title>
-<path fill="none" stroke="#880000" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.533333" d="M137.03,-171.31C143.44,-171.21 149.84,-171.11 156,-171 229.91,-169.65 313.4,-167.54 376.56,-165.83"></path>
-<polygon fill="#880000" fill-opacity="0.533333" stroke="#880000" stroke-width="2" stroke-opacity="0.533333" points="376.89,-167.57 381.84,-165.69 376.8,-164.07 376.89,-167.57"></polygon>
-<text text-anchor="middle" x="259.5" y="-188.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">git add ... &nbsp;&nbsp;&nbsp;</text>
-<text text-anchor="middle" x="259.5" y="-173.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">git reset &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-</g>
-<!-- stash -->
-<g id="node4" class="node">
-<title>stash</title>
-<polygon fill="#0044ff" fill-opacity="0.133333" stroke="transparent" points="345,-115.5 174,-115.5 174,-52.5 345,-52.5 345,-115.5"></polygon>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="174.5,-90 174.5,-115 345.5,-115 345.5,-90 174.5,-90"></polygon>
-<text text-anchor="start" x="240" y="-99.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> </text>
-<text text-anchor="start" x="244" y="-99.8" font-family="Helvetica,Arial,sans-serif" font-weight="bold" font-size="14.00">stash</text>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="174.5,-52 174.5,-90 345.5,-90 345.5,-52 174.5,-52"></polygon>
-<text text-anchor="start" x="179.5" y="-74.8" font-family="Helvetica,Arial,sans-serif" font-style="italic" font-size="14.00">To view:</text>
-<text text-anchor="start" x="179.5" y="-60.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git stash list &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-</g>
-<!-- changes&#45;&gt;stash -->
-<g id="edge4" class="edge">
-<title>changes-&gt;stash</title>
-<path fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.533333" d="M142.12,-138.19C158.06,-130.76 174.89,-122.93 190.64,-115.6"></path>
-<polygon fill="#000000" fill-opacity="0.533333" stroke="#000000" stroke-width="2" stroke-opacity="0.533333" points="140.99,-136.78 137.2,-140.48 142.47,-139.95 140.99,-136.78"></polygon>
-<text text-anchor="middle" x="158.96" y="-126.65" font-family="Helvetica,Arial,sans-serif" font-size="14.00">git stash pop</text>
-</g>
-<!-- stash_push -->
-<g id="node5" class="node">
-<title>stash_push</title>
-<text text-anchor="middle" x="259.5" y="-137.3" font-family="Helvetica,Arial,sans-serif" font-size="14.00">git stash [push]</text>
-</g>
-<!-- changes&#45;&gt;stash_push -->
-<g id="edge2" class="edge">
-<title>changes-&gt;stash_push</title>
-<path fill="none" stroke="#000088" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.266667" d="M137.2,-160.9C162.51,-156.74 190.63,-152.13 213.41,-148.4"></path>
-</g>
-<!-- discard -->
-<g id="node8" class="node">
-<title>discard</title>
-<text text-anchor="middle" x="68.5" y="-76.3" font-family="Helvetica,Arial,sans-serif" font-size="14.00">discard</text>
-</g>
-<!-- changes&#45;&gt;discard -->
-<g id="edge9" class="edge">
-<title>changes-&gt;discard</title>
-<path fill="none" stroke="#880000" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.533333" d="M68.5,-133.7C68.5,-123.41 68.5,-112.6 68.5,-103.39"></path>
-<polygon fill="#880000" fill-opacity="0.533333" stroke="#880000" stroke-width="2" stroke-opacity="0.533333" points="70.25,-103.18 68.5,-98.18 66.75,-103.18 70.25,-103.18"></polygon>
-<text text-anchor="middle" x="58" y="-112.3" font-family="Helvetica,Arial,sans-serif" font-size="14.00">git restore ...</text>
-</g>
-<!-- HEAD -->
-<g id="node3" class="node">
-<title>HEAD</title>
-<polygon fill="#88ff00" fill-opacity="0.133333" stroke="transparent" points="888,-174 672,-174 672,0 888,0 888,-174"></polygon>
-<polyline fill="none" stroke="#000000" stroke-opacity="0.266667" points="888,-151 888,-174 672,-174 672,-151 "></polyline>
-<text text-anchor="start" x="750.5" y="-159.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> </text>
-<text text-anchor="start" x="754.5" y="-159.8" font-family="Helvetica,Arial,sans-serif" font-weight="bold" font-size="14.00">HEAD </text>
-<text text-anchor="start" x="797.5" y="-159.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">of</text>
-<polyline fill="none" stroke="#000000" stroke-opacity="0.266667" points="672,-151 672,-128 888,-128 888,-151 "></polyline>
-<text text-anchor="start" x="723" y="-135.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> the current branch</text>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="672,-64 672,-128 888,-128 888,-64 672,-64"></polygon>
-<text text-anchor="start" x="676" y="-113.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-<text text-anchor="start" x="737" y="-113.8" font-family="Helvetica,Arial,sans-serif" font-style="italic" font-size="14.00">To view:</text>
-<text text-anchor="start" x="787" y="-113.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-<text text-anchor="start" x="676" y="-99.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git show</text>
-<text text-anchor="start" x="676" y="-85.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git log &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-<text text-anchor="start" x="739" y="-71.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="672,0 672,-64 888,-64 888,0 672,0"></polygon>
-<text text-anchor="start" x="676" y="-49.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-<text text-anchor="start" x="737" y="-49.8" font-family="Helvetica,Arial,sans-serif" font-style="italic" font-size="14.00">To change branch:</text>
-<text text-anchor="start" x="676" y="-35.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git switch ... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-<text text-anchor="start" x="676" y="-21.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git checkout ... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-<text text-anchor="start" x="757" y="-7.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-</g>
-<!-- staging&#45;&gt;HEAD -->
-<g id="edge1" class="edge">
-<title>staging-&gt;HEAD:push</title>
-<path fill="none" stroke="#880000" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.533333" d="M572.23,-163C602.2,-163 635.62,-163 666.64,-163"></path>
-<polygon fill="#880000" fill-opacity="0.533333" stroke="#880000" stroke-width="2" stroke-opacity="0.533333" points="667,-164.75 672,-163 667,-161.25 667,-164.75"></polygon>
-<text text-anchor="middle" x="622" y="-166.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">git commit</text>
-</g>
-<!-- remote -->
-<g id="node6" class="node">
-<title>remote</title>
-<polygon fill="#00ff00" fill-opacity="0.133333" stroke="#000000" stroke-opacity="0.133333" points="1122.5,-189 1018.5,-189 1018.5,-153 1122.5,-153 1122.5,-189"></polygon>
-<text text-anchor="middle" x="1070.5" y="-167.3" font-family="Helvetica,Arial,sans-serif" font-size="14.00">remote branch</text>
-</g>
-<!-- HEAD&#45;&gt;remote -->
-<g id="edge6" class="edge">
-<title>HEAD:push-&gt;remote</title>
-<path fill="none" stroke="#880000" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.533333" d="M888,-163C929.94,-163 977.27,-165.16 1013.09,-167.23"></path>
-<polygon fill="#880000" fill-opacity="0.533333" stroke="#880000" stroke-width="2" stroke-opacity="0.533333" points="1013.19,-168.99 1018.28,-167.54 1013.39,-165.5 1013.19,-168.99"></polygon>
-<text text-anchor="middle" x="930" y="-167.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">git push</text>
-</g>
-<!-- HEAD&#45;&gt;remote -->
-<g id="edge7" class="edge">
-<title>HEAD:pull-&gt;remote</title>
-<path fill="none" stroke="#004400" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.533333" d="M893.26,-140C918.41,-139.99 926.74,-140.02 954,-144 975.29,-147.11 998.45,-152.18 1018.4,-157.09"></path>
-<polygon fill="#004400" fill-opacity="0.533333" stroke="#004400" stroke-width="2" stroke-opacity="0.533333" points="893,-138.25 888,-140 893,-141.75 893,-138.25"></polygon>
-<text text-anchor="middle" x="930" y="-147.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">git pull</text>
-</g>
-<!-- branches -->
-<g id="node7" class="node">
-<title>branches</title>
-<polygon fill="#008888" fill-opacity="0.133333" stroke="transparent" points="1169,-127.5 972,-127.5 972,-64.5 1169,-64.5 1169,-127.5"></polygon>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="972.5,-102 972.5,-127 1169.5,-127 1169.5,-102 972.5,-102"></polygon>
-<text text-anchor="start" x="1019.5" y="-111.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> </text>
-<text text-anchor="start" x="1023.5" y="-111.8" font-family="Helvetica,Arial,sans-serif" font-weight="bold" font-size="14.00">local branches</text>
-<text text-anchor="start" x="1118.5" y="-111.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> </text>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.266667" points="972.5,-64 972.5,-102 1169.5,-102 1169.5,-64 972.5,-64"></polygon>
-<text text-anchor="start" x="977.5" y="-86.8" font-family="Helvetica,Arial,sans-serif" font-style="italic" font-size="14.00">To view:</text>
-<text text-anchor="start" x="977.5" y="-72.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git branch [--list] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-</g>
-<!-- HEAD&#45;&gt;branches -->
-<g id="edge10" class="edge">
-<title>HEAD:switch-&gt;branches</title>
-<path fill="none" stroke="#000000" stroke-opacity="0.533333" d="M894.07,-96C919.45,-96 946.48,-96 971.54,-96"></path>
-<polygon fill="none" stroke="#000000" stroke-opacity="0.533333" points="894,-96 891,-98 888,-96 891,-94 894,-96"></polygon>
-</g>
-<!-- stash_push&#45;&gt;staging -->
-<g id="edge3" class="edge">
-<title>stash_push-&gt;staging</title>
-<path fill="none" stroke="#000088" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.266667" d="M305.68,-145.61C327.77,-147.87 355.23,-150.67 381.61,-153.36"></path>
-</g>
-<!-- stash_push&#45;&gt;stash -->
-<g id="edge5" class="edge">
-<title>stash_push-&gt;stash</title>
-<path fill="none" stroke="#000088" stroke-width="2" stroke-dasharray="1,5" stroke-opacity="0.266667" d="M259.5,-133.46C259.5,-129.19 259.5,-124.91 259.5,-120.64"></path>
-<polygon fill="#000088" fill-opacity="0.266667" stroke="#000088" stroke-width="2" stroke-opacity="0.266667" points="261.25,-120.62 259.5,-115.62 257.75,-120.62 261.25,-120.62"></polygon>
-</g>
-</g>
-</svg>
-</p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;20.1: Concepts et opérations de base de Git. (Cette œuvre, «&nbsp;Concepts et opérations de base de Git&nbsp;», est un dérivé de <a href="https://graphviz.org/Gallery/directed/git.html">«&nbsp;Basic git concepts and operations&nbsp;»</a> de <a href="https://gitlab.com/makelinux">Costa Shulyupin</a>, utilisé sous <a href="https://en.wikipedia.org/wiki/Eclipse_Public_License">EPL</a>.</figcaption><p></p>
+<p><img src="Laboratoires_files/mediabag/8f6d619c88523d7a7bfde914dc792abd0c3ff343.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;20.1: Concepts et opérations de base de Git. (Cette œuvre, “Concepts et opérations de base de Git”, est un dérivé de <a href="https://graphviz.org/Gallery/directed/git.html">“Basic git concepts and operations”</a> de <a href="https://gitlab.com/makelinux">Costa Shulyupin</a>, utilisé sous <a href="https://en.wikipedia.org/wiki/Eclipse_Public_License">EPL</a>.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -708,7 +564,7 @@ ContributionsÉquipeViews.html</code></pre>
 <h3 data-number="20.5.1" class="anchored" data-anchor-id="faire-le-bilan-de-la-contribution-de-chaque-membre"><span class="header-section-number">20.5.1</span> Faire le bilan de la contribution de chaque membre</h3>
 <p>Après l’évaluation à la fin de chaque itération, il est important de considérer combien chaque membre a contribué au projet et de valider avec les responsabilités prévues dans le plan de l’itération. Il est normal d’avoir un écart entre le travail prévu et le travail effectué. Un des objectifs du bilan est d’essayer d’expliquer les gros écarts et de corriger ou mitiger les problèmes.</p>
 <p>Par exemple, on peut voir à la <a href="#fig-GitinspectorOutput">figure&nbsp;<span>20.2</span></a> que Anne et Justin ont fait une contribution beaucoup plus importante que Francis et Mélanie. Dans le bilan de l’itération, <strong>on doit indiquer explicitement ce fait, même avec des pourcentages</strong>.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -718,7 +574,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Une phrase vague comme «&nbsp;des membres ont travaillé plus que d’autres&nbsp;» est une formulation diplomatique, mais elle n’est pas assez explicite et n’est pas une résolution proactive du problème, le cas échéant.</p>
+<p>Une phrase vague comme “des membres ont travaillé plus que d’autres” est une formulation diplomatique, mais elle n’est pas assez explicite et n’est pas une résolution proactive du problème, le cas échéant.</p>
 </div>
 </div>
 </section>
@@ -727,7 +583,7 @@ Important
 <p>Une inégalité importante dans les contributions est un signal d’alarme. On doit agir, mais on commence par poser des questions, par <span style="white-space:nowrap">exemple :</span></p>
 <ul>
 <li>Est-ce que Francis et Mélanie sont à l’aise avec les technologies utilisées dans le <span style="white-space:nowrap">lab ?</span> Ont-ils besoin de <span style="white-space:nowrap">coaching ?</span></li>
-<li>Sont-ils des «&nbsp;parasites&nbsp;» ou des «&nbsp;mollassons&nbsp;» <span class="citation" data-cites="oakley_coping_2004">(<a href="references.html#ref-oakley_coping_2004" role="doc-biblioref">Oakley, Felder, Brent, &amp; Elhajj, 2004</a>)</span> (<a href="https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub">traduction française de l’article</a><span style="white-space:nowrap"> )?</span> À certaines universités, le plan de cours vous permet d’exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais <strong>seulement s’ils n’ont rien fait du tout</strong> (ce qui n’est pas le cas dans l’exemple ci-dessus). Une personne exclue de cette manière va probablement abandonner le cours, et vous perdrez définitivement un membre de l’équipe.</li>
+<li>Sont-ils des “parasites” ou des “mollassons” <span class="citation" data-cites="oakley_coping_2004">(<a href="references.html#ref-oakley_coping_2004" role="doc-biblioref">Oakley, Felder, Brent, &amp; Elhajj, 2004</a>)</span> (<a href="https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub">traduction française de l’article</a><span style="white-space:nowrap"> )?</span> À certaines universités, le plan de cours vous permet d’exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais <strong>seulement s’ils n’ont rien fait du tout</strong> (ce qui n’est pas le cas dans l’exemple ci-dessus). Une personne exclue de cette manière va probablement abandonner le cours, et vous perdrez définitivement un membre de l’équipe.</li>
 <li>Est-ce qu’Anne et Justin ont laissé suffisamment de liberté aux autres pour faire une contribution <span style="white-space:nowrap">importante ?</span> Font-ils assez confiance aux <span style="white-space:nowrap">autres ?</span></li>
 <li>Avez-vous fait un plan d’itération assez détaillé pour que chaque membre puisse contribuer <span style="white-space:nowrap">adéquatement ?</span> Dans l’exemple ci-dessus, peut-être Francis et Mélanie ont-ils trouvé ça difficile de savoir où <span style="white-space:nowrap">contribuer ?</span></li>
 <li>Est-ce que tout le monde assiste aux séances de <span style="white-space:nowrap">laboratoire ?</span></li>
@@ -922,7 +778,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
