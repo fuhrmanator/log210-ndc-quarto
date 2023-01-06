@@ -10,7 +10,7 @@ Les cas d'utilisation sont une manière de documenter les fonctionnalités (les 
 D'autres méthodologies de développement peuvent déterminer les besoins avec les récits utilisateur (*user stories*), qui sont généralement plus courts et moins prescriptifs que des cas d'utilisation.
 Par exemple, dans un récit utilisateur, on ne spécifie pas un ordre d'interactions entre l'acteur et le système.
 Une raison pour ne pas spécifier autant de détails est que ça peut changer beaucoup (surtout au début du projet).
-Voir [cette discussion sur stackexchange.com](https://softwareengineering.stackexchange.com/q/113381/51948) pour en savoir plus sur les différences.
+Voir [cette discussion sur stackexchange.com](https://softwareengineering.stackexchange.com/q/113381/51948) pour en savoir plus sur les différences entre ces méthodologies.
 
 :::
 
@@ -36,7 +36,7 @@ Alors, nous proposons les étapes (les interactions entre les acteurs et le syst
 
 1. Le Joueur attaquant choisit d'attaquer un pays voisin du Joueur défenseur.
 2. Le Joueur attaquant annonce combien de régiments il va utiliser pour son attaque.
-3. Le Joueur défenseur annonce combien de régiments il va utiliser pour sa défense.
+3. Le Joueur défenseur annonce combien de régiments il va utiliser pour la défence du pays attaqué.
 4. Les deux Joueurs jettent le nombre de dés selon leur stratégie, choisie aux étapes précédentes.
 5. Le Système compare les dés, élimine les régiments de l'attaquant ou du défenseur selon les règles et affiche le résultat.
 
