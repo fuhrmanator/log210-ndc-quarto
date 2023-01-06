@@ -155,7 +155,7 @@ En plus, donner un faible niveau d'orientation à une personne ayant déjà de l
 Un bon(ne) mentor(e) doit pouvoir estimer le niveau de la personne et lui donner une orientation appropriée, ce qui n'est pas toujours facile.
 Mais sachez que "moins est plus" dans certains cas.
 
-![Savoir encadrer les membres de l'équipe est une habileté à mettre sur son CV. ["CultureTECH BT Monster Dojo"](https://www.flickr.com/photos/24498081@N06/10081683216/) ([CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) par [connor2nz](https://www.flickr.com/people/24498081@N06/).](https://farm8.static.flickr.com/7459/10081683216_2b02836f82_b.jpg){width="400px"}
+![Savoir encadrer les membres de l'équipe est une habileté à mettre sur son CV. ["CultureTECH BT Monster Dojo"](https://www.flickr.com/photos/24498081@N06/10081683216/) ([CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) par [connor2nz](https://www.flickr.com/people/24498081@N06/).](images/CultureTECH_BT_Monster_Dojo.jpg){width="400px"}
 
 ## Scénarios
 
