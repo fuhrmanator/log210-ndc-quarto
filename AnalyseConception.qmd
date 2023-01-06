@@ -73,7 +73,9 @@ JeuDeDés -r- "[nom]" Joueur : "        "
 @enduml
 ```
 
-Imaginez un jeu qui est joué dans la vraie vie avec deux dés à six faces.
+Imaginez que l'on veut construire un logiciel pour un jeu de dés, un jeu qui est joué dans la vraie vie avec deux dés à six faces. 
+Comment procéder?
+On peut spécifier la règle du jeu, dont un des nombreux besoins est de générer un nombre aléatoire entre 1 et 6 (comme un numéro qui apparaît sur l’une des six faces du dé). 
 Ensuite, on veut construire un logiciel pour ce jeu et, donc, on peut spécifier la règle du jeu, dont un des nombreux besoins est de générer un nombre aléatoire entre 1 et 6 (comme un dé à six faces).
 On peut aussi modéliser ce besoin (un élément du problème) par une classe conceptuelle `Dé` ayant un attribut `face` dont la valeur est un type `int`.
 Les personnes travaillant sur un projet vont facilement comprendre ce modèle, car les gens comprennent les objets qui représentent des aspects de la vraie vie.
@@ -100,7 +102,7 @@ On comprend plus facilement les éléments dans ce modèle. -->
 Plus une solution (conception) ressemble à une description (modèle d'analyse) du problème, plus elle est facile à comprendre et à valider.
 La différence entre la représentation d'un problème et la représentation de sa solution s'appelle le *décalage des représentations*.
 C'est un terme complexe pour un principe très intuitif.
-Méfiez-vous des classes importantes dont le nom est difficile à relier au problème.
+Méfiez-vous des classes importantes dont le nom retrace difficilement au problème.
 Elles vont rendre votre solution plus difficile à comprendre.
 Pour des explications de Larman, lisez la section 9.3\ {{< fa solid book >}}.
 
@@ -127,7 +129,7 @@ En voici quelques exemples en développement de logiciels:
 - Un cadre d'applications (cadriciel, *framework*) est toujours complexe,
 par exemple un *framework* comme Angular ou React pour développer un *front-end* (application frontale), car l'interaction entre l'utilisateur et une application (possiblement répartie dans le nuage) nécessite beaucoup de fonctionnalités supportées par le cadriciel.
 - Un *algorithme* peut être complexe, par exemple l'algorithme de [tri de Shell](https://fr.wikipedia.org/wiki/Tri_de_Shell) est plus complexe qu'un simple algorithme de [tri à bulles](https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles).
-Notez que la complexité d'un algorithme peut parfois apporter des gains de performance.
+Notez que la complexité d'un algorithme peut parfois apporter des gains de performance, par exemple, le trie de Shell.
 Mais le codage, le débogage et la maintenance d'une implémentation d'un algorithme complexe seront plus coûteux.
 - Un *patron de conception* peut être complexe, par exemple les patrons Visiteur, Décorateur, Médiateur, etc., des GoF [-@GoF1994].
 Un patron définit des rôles et parfois du code et des classes supplémentaires à créer.
@@ -149,15 +151,15 @@ Exemple: un logiciel qui aide à faire des déclarations de revenus aura une com
 Les choix que font les ingénieur(e)s dans un projet peuvent amener de la complexité circonstancielle.
 En tant qu'ingénieur(e)s, nous avons un devoir de contrôler cette forme de complexité, par exemple en choisissant soigneusement un cadriciel Web ou une architecture logicielle.
 La complexité circonstancielle peut aussi être due à des contraintes imposées sur la conception, comme l'utilisation obligatoire d'une vieille base de données ou d'une bibliothèque logicielle héritée, d'un langage de programmation, etc.
-La complexité circonstancielle (aussi appelée accidentelle) peut être gérée avec des technologies, par exemple les débogueurs, les patrons de conception (un Adaptateur pour les bases de données différentes), etc.
+La complexité circonstancielle (aussi appelée accidentelle) peut être gérée avec des technologies, par exemple les débogueurs, les patrons de conception (un Adaptateur pour les différentes bases de données), etc.
 
 ### Complexité environnementale (provenant de l'environnement d'exécution)
 
 Cette forme de complexité comprend des aspects d'une solution qui ne sont pas sous le contrôle des ingénieur(e)s.
 Dans un environnement d'exécution, il y a des dimensions comme le ramasse-miettes (*garbage collection*), l'ordonnancement des fils d'exécution (*threads*) sur un serveur, l'utilisation de *conteneurs* (à la Docker), etc. qui peuvent affecter la qualité d'un logiciel.
-Les ingénieur(e)s doivent gérer ces formes de complexité, mais il n'y a pas beaucoup de stratégies évidentes face aux technologies qui évoluent très vite.
+Les ingénieur(e)s doivent gérer ces formes de complexité, mais il n'y a pas beaucoup de stratégies évidentes face aux technologies qui évoluent à grande vitesse.
 
-```{.plantuml #fig-complexitySources caption="Sources de complexité."}
+```{.plantuml #fig-complexitySources caption="Sources de complexité (inhérente, circonstancielle et environnementale) par rapport au processus de développement (analyse, conception et implémentation)."}
 @startuml
 scale 0.8
 skinparam style strictuml
@@ -198,7 +200,7 @@ Voici les éléments importants documentés dans ce manuel (voir la @fig-SurvolM
 - À partir de chaque cas d'utilisation (@sec-cu), il y a une conception de haut niveau (l'API du système à développer) documentée sous forme de diagramme de séquence système (DSS) (@sec-dss);
 - À partir de chaque DSS, on peut définir un ensemble de contrats d'opération (@sec-contrats), surtout pour les opérations complexes;
 - À partir de l'ensemble des besoins, on construit un modèle du domaine (MDD) (@sec-mdd);
-- Pour faire une conception intuitive et facile à adapter, on propose un modèle de conception sous forme de plusieurs RDCU (@sec-rdcu) qui sont cohérentes avec le MDD (pour diminuer le décalage des représentations) et avec les contrats;
+- Pour faire une conception intuitive et facile à adapter, on propose un modèle de conception sous forme de plusieurs réalisations de cas d'utilisation (RDCU) (@sec-rdcu) qui sont cohérentes avec le MDD (pour diminuer le décalage des représentations) et avec les contrats;
 - Pour implémenter les conceptions, on développe du code à partir des diagrammes dans le modèle de conception, ainsi que du code pour tester tout ça selon le développement piloté par les tests (@sec-tdd);
 - Pour gérer la dette technique (@sec-DetteTechnique) on fait du réusinage (@sec-Refactoring) au besoin;
 - Le tout se fait de manière évolutive, en itérations courtes selon le _Processus unifié_.
@@ -217,7 +219,7 @@ Nous résumons les points importants ainsi:
 - La durée d'une itération est limitée dans le temps (*timeboxed* en anglais), de 2 à 6 semaines.
 Il n'est pas permis d'ajouter du temps à la durée d'une itération si le projet avance plus lentement que prévu, car cela impliquerait un retard de la rétroaction du client.
 Si le respect des délais semble compromis, on supprime plutôt des tâches ou des spécifications et on les reprend éventuellement dans une itération ultérieure.
-- Les premières itérations peuvent sembler chaotiques, car elles sont loin de la "bonne voie".
+- Les premières itérations peuvent sembler chaotiques, car elles peuvent être loin de la "bonne voie" ou du résultat convoité.
 Avec la rétroaction du client et l'adaptation, le système à développer converge vers une solution appropriée (voir la @fig-StabiliteDansLesIterations).
 Cette instabilité peut être particulièrement prononcée dans un contexte d'entreprise en démarrage.
 - Dans une itération, la modélisation (par exemple avec l'UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n'est pas triviale (voir la @fig-AnalyseConceptionDansLesIterations). Selon le contexte du projet (voir le [Spectre de la conception](#sec-SpectreDeLaConception)), on peut décider de ne pas faire de modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l'on appelle la [dette technique](#sec-DetteTechnique).
@@ -235,7 +237,7 @@ Le développement itératif et incrémental amène plusieurs avantages selon @cr
 - une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.);
 - des progrès immédiatement visibles;
 - la rétroaction, l'implication des utilisateurs et l'adaptation précoces;
-- la complexité est gérée (restreinte à une itération);
+- la gestion de la complexité (restreinte à une itération);
 - la possibilité d'exploiter méthodiquement les leçons tirées d'une itération.
 :::
 
@@ -248,9 +250,9 @@ La conséquence est que les évaluations et les rétroactions peuvent sembler ru
 La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la @fig-StabiliteDansLesIterations).
 - **Modifications des objectifs de l'itération en cours au besoin**: Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l'avons imaginé.
 Par exemple, l'ensemble des récits utilisateur ou des scénarios de cas d'utilisation visés pour l'itération nécessite plus de travail que prévu.
-La tendance dans ce cas est de nous donner plus de temps pour terminer.
+La tendance dans ce cas est de nous donner plus de temps pour terminer ces étapes.
 Mais cela voudrait dire que la rétroaction de toute l'itération sera retardée.
-Il serait nécessaire de changer la planification de démonstration avec le client (qui a souvent peu de disponibilités).
+Il serait nécessaire de changer la planification de la démonstration avec le client (qui a souvent peu de disponibilités).
 Donc, le processus nous impose de toujours respecter le délai des itérations.
 Il s'agit d'une [gestion par blocs de temps](https://fr.wikipedia.org/wiki/Timeboxing) (en anglais *timeboxing*).
 Que faire alors si, dans une itération, nous n'arriverons pas à tout faire?
