@@ -12,7 +12,7 @@ Voici des ressources à ce propos:
 - [PlantUML Gizmo](https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571), module supplémentaire Google Docs;
 - [PlantText.com](https://www.planttext.com/).
 
-Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la @fig-LucidchartUML).
+Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels (sans règles) pour UML. Voir la @fig-LucidchartUML pour plus de détails.
 
 :::
 
