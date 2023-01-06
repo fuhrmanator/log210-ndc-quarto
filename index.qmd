@@ -86,8 +86,8 @@ Les conseils avec la dimension _Creative Commons_ de la licence du contenu ont �
 Nous remercions les membres du suivi du projet dans le cadre de ce travail pris en charge par la fabriqueREL de leur soutien:
 
 - Marianne Dubé, conseillère pédagogique à l'Université de Sherbrooke et coordonnatrice de la fabriqueREL;
-- Mouna Moumene, bibliothécaire à l'École de technologie supérieure (ÉTS);
-- Marjolaine Lewis, conseillère pédagogique et technopédagogique à l'École de technologie supérieure (ÉTS);
+- Mouna Moumene, bibliothécaire à l'École de technologie supérieure;
+- Marjolaine Lewis, conseillère pédagogique et technopédagogique à l'École de technologie supérieure;
 - Claude Potvin, conseiller en formation à l'Université Laval;
 - Stéphane Roux, directeur général du service de soutien à la formation à l'Université de Sherbrooke;
 - Serge Allary, vice-recteur adjoint aux études de l'Université de Sherbrooke.
@@ -96,8 +96,9 @@ La fabriqueREL est également une vitrine de rayonnement importante pour les REL
 Elle permet de valoriser le travail réalisé par un membre du corps professoral dans la rédaction d'un manuel libre pour un cours universitaire.
 Cela favorise une évolution positive dans la culture universitaire au Québec.
 
-Nous tenons aussi à remercier chaleureusement les auxiliaires d'enseignement et les personnes ayant suivi le cours _Analyse et conception de logiciels (LOG210)_ des programmes de baccalauréat en génie logiciel et en génie des technologies de l'information à l'ÉTS.
-Leurs suggestions et leurs commentaires constructifs ont permis d'améliorer les versions antérieures de ce manuel qui ont été utilisées dans le cadre de ce cours.
+Nous remercions chaleureusement les auxiliaires d'enseignement et les personnes ayant suivi le cours _Analyse et conception de logiciels (LOG210)_ des programmes de baccalauréat en génie logiciel et en génie des technologies de l'information à l'ÉTS.
+Leurs suggestions et leurs commentaires constructifs ont permis d'améliorer les versions antérieures de ce manuel qui ont été utilisées dans le cadre de ce cours. 
+Nous remercions également l'École de technologie supérieure pour son soutien au projet.
 
 Nous remercions les membres du comité de révision (2023) pour leurs rétroactions constructives:
 
@@ -109,11 +110,11 @@ Finalement, nous remercions Katerine Robert, réviseure linguistique à K. R. R�
 
 ## Sources du manuel
 
-Ce manuel est écrit en Markdown, et les sources sont sur GitHub à <https://github.com/fuhrmanator/log210-ndc-quarto>.
+Ce manuel est écrit en Markdown, et le code source est sur GitHub à <https://github.com/fuhrmanator/log210-ndc-quarto>.
 Les versions Web, PDF et EPUB ont été générées par le logiciel Quarto.
 Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
 
 ## Licence
 
-À déterminer (le texte est toujours un brouillon)
+À déterminer (le texte est toujours un brouillon).
 <!-- [![Licence Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Cette œuvre est mise à disposition selon les termes de la [Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/). -->
