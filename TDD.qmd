@@ -5,7 +5,7 @@ Le développement piloté par les tests (en anglais *test-driven development, TD
 Il s'agit d'écrire des logiciels avec un composant d'autovalidation (des tests automatisés).
 Mais écrire beaucoup de tests n'est pas toujours une tâche agréable pour des développeur(euses).
 Historiquement, si l'on attend la fin d'un projet pour écrire des tests, il ne reste plus beaucoup de temps, et l'équipe laisse tomber les tests.
-Pour pallier ce problème, le développement piloté par les tests propose de travailler **en petits pas**, c'est-à-dire écrire un test simple (en premier), puis écrire la partie du logiciel pour passer le test de manière simple (le plus simple).
+Pour pallier ce problème, le développement piloté par les tests propose de travailler **en petits pas**, c'est-à-dire écrire un test simple (en premier), puis écrire la partie du logiciel pour passer le test de manière simple (la plus simple).
 Ça fait moins de codage entre les validations et c'est possiblement même plus stimulant pour les développeurs(euses).
 
 Ainsi, il y a toujours des tests pour les fonctionnalités, et le développement se fait en petits incréments qui sont validés par les tests.
@@ -17,8 +17,8 @@ Il y a une discipline imposée dans le TDD qui nécessite d'écrire un *test en 
 La démarche est illustrée par la @fig-TDD_states.
 Beaucoup d'outils (IDE) favorisent ce genre de développement.
 Nous pouvons écrire un test qui appelle à une fonction qui n'existe pas encore, et l'IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour même.
-Des puristes du TDD insisteront sur le fait que le test soit écrit toujours en premier!
-Cette discipline est parfois culturelle. 
+Une personne pure et dure du TDD insistera sur le fait que le test soit écrit toujours en premier!
+Cette discipline est souvent culturelle.
 
 Plusieurs chercheurs(euses) ont mené des expériences, par exemple @Karac_TDD_2018, pour voir si *tester en premier* avait un vrai bénéfice.
 Les résultats de leurs analyses n'ont pas toujours montré que c'est le cas (ce genre d'expérience est difficile à faire, en partie parce qu'il n'y a pas beaucoup de développeurs(euses) en industrie qui le pratiquent).
@@ -26,8 +26,8 @@ Les chercheurs(euses) ont trouvé que faire un petit test *après* avoir écrit 
 Dans tous les cas, des chercheurs(euses) ont trouvé que le fait de travailler en *petits pas* apporte *toujours* un avantage sur le plan de la qualité.
 Travailler en *petits pas* est utile, même sans faire du TDD de manière dogmatique.
 
-Sachez qu'il existe beaucoup d'intergiciels (en anglais *frameworks*) pour faciliter l'exécution automatique des tests réalisés dans le cadre du TDD.
-Pour Java, il y a JUnit, mais il y en a pour pratiquement tous les langages et environnements.
+Sachez qu'il existe beaucoup d'cadriciels (en anglais *frameworks*) pour faciliter l'exécution automatique des tests réalisés dans le cadre du TDD.
+Pour Java, il y a JUnit, mais il y en a pour pratiquement tous les langages et les environnements.
 En ce qui concerne le squelette pour le laboratoire, il s'agit de [Jest](https://jestjs.io/).
 <!-- La version Python utilise [PyTest](https://docs.pytest.org/en/latest/). -->
 
@@ -78,7 +78,7 @@ C'est un outil de transmission de techniques et de principes de combat.
 Alors, le "kata TDD" a été proposé par Dave Thomas, et le but est de développer la fluidité avec le développement piloté par les tests.
 Un kata TDD se pratique avec un IDE (environnement de développement logiciel) et un support pour les tests (par exemple JUnit).
 Pratiquer le même kata peut améliorer votre habileté de programmation. 
-On peut pratiquer le même kata dans un langage différent ou avec un IDE ou un environnement de test différents.
+On peut pratiquer le même kata dans un langage différent, avec un IDE différent ou avec un environnement de test différent.
 Le kata vous permet d'avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour le test et pour l'application, API de l'environnement de test, etc.).
 
 En plus, les activités de réusinage sont normalement intégrées dans un kata.
@@ -92,7 +92,7 @@ Le réusinage rend le code plus facile à comprendre et à maintenir.
 
 L'inspiration de cet exercice vient de [codingdojo.org](http://codingdojo.org/kata/FizzBuzz/).
 
-Dans cet exercice, il faut écrire par le développement piloté par les tests un programme qui imprime les nombres de 1 à 100.
+Dans cet exercice, il faut écrire selon le développement piloté par les tests un programme qui imprime les nombres de 1 à 100.
 Mais, pour les multiples de trois, il faut imprimer `Fizz` au lieu du nombre et, pour les multiples de cinq, il faut imprimer `Buzz`. Pour les nombres étant des multiples de trois et de cinq, il faut imprimer `FizzBuzz`. Voici un exemple des sorties:
 
 ```
@@ -122,13 +122,13 @@ Buzz
 #### Préalables
 
 Il faut installer un IDE qui supporte les activités de réusinage (*refactorings*) comme Visual Studio Code, Eclipse, IntelliJ, etc. puis un *framework* de test (JUnit, Mocha/Chai, Jest, unittest, etc.).
-Pour un exemple qui fonctionne en TypeScript, vous pouvez cloner le code à [ce dépôt](https://github.com/fuhrmanator/kata_jest_ts_fizzbuzz).
+Pour un exemple qui fonctionne en TypeScript, vous pouvez cloner le code à partir de [ce dépôt](https://github.com/fuhrmanator/kata_jest_ts_fizzbuzz).
 
 #### Déroulement
 
 Cet exercice peut se faire individuellement ou en équipe de deux.
 En équipe, une personne écrit le test, et l'autre écrit le code pour passer le test (c'est la variante ping-pong).
-Chacune réfléchit aux activités de réusinage éventuelles lorsque le projet est dans l'état vert (@fig-TDD_states).
+Chaque personne réfléchit aux activités de réusinage éventuelles lorsque le projet est dans l'état vert (@fig-TDD_states).
 Les membres de l'équipe peuvent changer de rôle (testeur(euse), codeur(euse)) après un certain nombre d'étapes, ou après avoir terminé le kata entier.
 
 Pour respecter la philosophie de *petits pas,* il vaut mieux:
