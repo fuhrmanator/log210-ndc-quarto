@@ -31,7 +31,7 @@ Faire une RDCU est comme faire un *plan* pour un bâtiment, tandis que faire de 
 Si un plan contient des erreurs de conception, on va les connaître lors de la construction.
 Alors, votre RDCU sera incertaine jusqu'à ce que vous la traduisiez en code exécuté et testé.
 
-Tout le processus de proposer une solution (RDCU) peut être visualisé comme un diagramme d'activités, comme dans la @fig-RDCU_Aide_Memoire.
+Tout le processus de proposer une solution (RDCU) peut être visualisé comme un diagramme d'activités, comme illustré sur la @fig-RDCU_Aide_Memoire.
 
 ```{.plantuml #fig-RDCU_Aide_Memoire caption="Aide-mémoire pour faire une RDCU. L'étape en rouge nécessite beaucoup de pratique, selon la complexité des postconditions. Vous pouvez vous attendre à ne pas la réussir du premier coup. [(PlantUML)](http://www.plantuml.com/plantuml/uml/TLHDJnin4BtxLqp3WMILBaALMXGG8YLjLQb55RGzSJ7hsOsBrtOzTg3_gBdt7-mVwtYJG8BWubtPy_7clMUVKPGXfjQ0s7-bRMMIGYZBWzg55alF1-jDGRVQUXba2pINojrfsq0j3MsVl9VLRHDSikhS6HTWhfL2knKmmrec4x_ZVPmQtTWMROIA5mnRKHSkucw8mJgA7Yg8W1ubVoUNk70wWDbtlbi66RMpG7yeTdzRF0PXkGe4tSpZ1F2-XC6WAAhGBJ5SkBH0O_1dRZmS5SLW8FQKgckb9hDkoM1QRP4h8rJEnj3zCvZ2yKx5gVT6_quSLHIVBgTNt-3yCRGehktmV2wzZW7Xu-7Ryl3DmVJm7Nz66RZq7irM0nv7RKtn1FmN96xY7KKELZf7K56Cyr3ZQmklVrW4RPaTMo6SwDF5oO4-1TQndmyay4ZT4lBiF7tEU0ZQd4aYLsa-1PdW4XjD33n7phYtZ37ecnGfrtn8PTphP6qPapIQkYLjv15xcKtcarcfLZeDCKAGTPsf7K6oeBHiMEuMUNYTBI2hF9lmBhsWwfXv8DwYMcgI322w597944LX6EbJZa2bPma6Z9mHaDE3pNKC0yYMNxT3mokBqoAHR1WVzYrM2QkoiwkhSQ-V9AQXcdTBhhDj4V6CGrW16Nj_Z45iTZ_SUmmnRnN5vncW1NVp2sEMM62iIjWnqb7leoE1La5kjhaETtFDQ8O1AMQyJxd81baJnuHTMvSWJynXZ1zjvRZycWzs0OtWnRgFBDA3BXnEqNbXiCcuyc--mnF8rYHdKa-hOhj8RKos6PU37WlqQbTpoKp1CvAN86PieJ5emmaf0jTYgwqkpre4seXCEoht-doTCQNv0I7X0xzbsdFuYlXLPmJEN32kCdEwca2SyS9ltty0)"  }
 @startuml 
@@ -105,7 +105,7 @@ Dans la plupart des cas, la justification GRASP pour former une association est 
 
 Pour les postconditions où il faut modifier un attribut, c'est assez évident. Il suffit de suivre le principe GRASP Expert, défini dans le \nameref{tab_GRASPExpert}. Très souvent, c'est une méthode `setX(valeur)` où `X` correspond à l'attribut qui sera modifié à `valeur`. Attention à la [visibilité](#sec-Visibilite)\ {{< fa solid low-vision >}}.
 
-Lorsque l'attribut d'un objet doit être modifié juste après la création de ce dernier, ça peut se faire dans le constructeur, comme on voit dans la @fig-RDCU_Constructeur_Modification.
+Lorsque l'attribut d'un objet doit être modifié juste après la création de ce dernier, ça peut se faire dans le constructeur, comme illustré sur la @fig-RDCU_Constructeur_Modification.
 
 ```{.plantuml #fig-RDCU_Constructeur_Modification  caption="Combiner la création d'une instance et une modification de son attribut dans un constructeur. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VL9DRy8m3BrNuZzON833fg7TEA0XD4riJ48hsyvUQjgegTCvhXZ_VYuxhEA053aVxyL-Vib3KXJjcf2bsdEBWWqaFGMoADxro6W0VQ6hIuaT5ow6AA22d0mYrb4s0Qry0Xi85N9n5AzA38V82fxXqtCHZyc8_maBEc0NjASmDWGlubD_PxDV6szVKIA8Mf4a237MK0hXELd-yGJJ1ciJsWbPPJfDRFPi3OL0XLKLM6sty9u_lkM3yZ2_cmrRkbIGiEm3NzUvuHgUOoUCuIhlftO5v4vygrTvEpAh90s53IrKwIXB3krTvhVtmxUYxuxOqIkbNlWg-98Xq44pmzKxtwAPFrxi0YfXDmPCq5vWQqnq1bnc7hUPwpqcsxLmiro2WmNy7KqvDhECk80pxy5MzZz-0G00)" }
 @startuml
@@ -132,7 +132,7 @@ Cependant, les objets Singleton posent des problèmes de conception, notamment p
 Il vaut mieux éviter ce choix, si possible.  
 Voir [cette réponse sur Stack Overflow](https://stackoverflow.com/a/2085988/1168342)\ {{< fa brands stack-overflow >}}.
 - Sinon, il faudra que l'objet émetteur ait une référence de l'objet récepteur.
-Par exemple, dans la @fig-RDCU_Visibilite1, la référence à *b* peut être:
+Par exemple, sur la @fig-RDCU_Visibilite1, la référence à *b* peut être:
   - stockée comme un attribut de *a*,
   - passée comme un argument dans un message antérieur, ou
   - affectée dans une variable locale de la méthode où `unMessage()` sera envoyé.

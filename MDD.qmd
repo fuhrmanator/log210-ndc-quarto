@@ -51,7 +51,7 @@ Voici des points importants:
 - *Le type d'un attribut est important, et il faut le spécifier dans un MDD*, même si dans le livre de @craig_uml_2005, il y a plusieurs exemples sans type.
 - Ne vous souciez pas de la visibilité des attributs dans un MDD.
 - Faites attention à la confusion des attributs et des classes. Si l'on ne pense pas un concept *X* en termes alphanumériques dans le monde réel, alors il s'agit probablement d'une classe conceptuelle. Par exemple, dans le monde réel, une université n'est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12\ {{< fa solid book >}}.
-- De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, dans la @fig-MDD-jeu-de-risk, la classe `Pays` n'a pas un *attribut* `joueur:Joueur` (qui contrôle le Pays); elle a plutôt une *association* avec la classe `Joueur` et un verbe `contrôle`.
+- De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, sur la @fig-MDD-jeu-de-risk, la classe `Pays` n'a pas un *attribut* `joueur:Joueur` (qui contrôle le Pays); elle a plutôt une *association* avec la classe `Joueur` et un verbe `contrôle`.
 
 ::: {.callout-warning appearance="simple"}
 Il est vrai que dans un langage de programmation comme Java, les associations doivent être les attributs dans les classes, car il s'agit des classes *logicielles*.
@@ -77,7 +77,7 @@ Pensez à la **mémorabilité** d'une association dans le contexte du logiciel �
   - Des verbes simples comme "A", "Utilise", "Possède", "Contient", etc. sont généralement des choix médiocres, car ils n'aident pas notre compréhension du domaine. Essayez de trouver des verbes plus riches, si possible.
   - Une flèche (triangle) de "sens de lecture" optionnelle indique la direction dans laquelle lire l'association. Si la flèche est absente, on lit l'association de gauche à droite ou de haut en bas.
   - Les extrémités des associations ont une expression de la multiplicité indiquant une relation numérique entre les instances des classes.
-  Vous pouvez en trouver plusieurs exemples dans la @fig-MDD-jeu-de-risk.
+  Vous pouvez en trouver plusieurs exemples sur la @fig-MDD-jeu-de-risk.
 
 : Extrait du tableau 9.2\ {{< fa solid book >}} (liste d'associations courantes) {#tbl-associations-courantes}
 
@@ -327,7 +327,7 @@ Bien que la matière soit présentée plus tard dans le livre, ce sont des chose
 
 Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus haut:
 
-- Composition, par exemple la classe Continent qui groupe les Pays dans la @fig-MDD-jeu-de-risk. Larman propose d'utiliser la composition lorsque:
+- Composition, par exemple la classe Continent qui groupe les Pays sur la @fig-MDD-jeu-de-risk. Larman propose d'utiliser la composition lorsque:
   - la durée de vie du composant est limitée à celle du composite (lorsqu'un objet Continent est instancié, ça doit grouper des instances de Pays pour être cohérent), il existe une dépendance création-suppression de la partie avec le tout (ça ne fait pas de sens de supprimer un objet Pays d'une instance de Continent dans le jeu Risk);
   - il existe un assemblage logique ou physique évident entre le tout et les parties (on ne peut construire un Continent sans les Pays);
   - certaines propriétés du composite, comme son emplacement, s'étendent aux composants;

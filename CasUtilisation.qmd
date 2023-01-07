@@ -49,7 +49,7 @@ La @fig-uc est un exemple de diagramme de cas d'utilisation.
 Un diagramme de cas d'utilisation n'étant q'une sorte de *table des matières* des fonctionnalités, il ne montre qu'une faible partie des détails trouvés dans le texte de chaque cas d'utilisation.
 Le diagramme ne peut donc remplacer la documentation textuelle.
 
-Dans la @fig-uc, le cas d'utilisation "..." signifie qu'il y a d'autres cas d'utilisation à spécifier concrètement, c'est-à-dire tous les autres cas d'utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.
+Sur la @fig-uc, le cas d'utilisation "..." signifie qu'il y a d'autres cas d'utilisation à spécifier concrètement, c'est-à-dire tous les autres cas d'utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.
 
 Le cas d'utilisation *Démarrer* n'est pas normalement indiqué dans un diagramme.
 C'est une astuce pédagogique proposée par Larman @craig_uml_2005, car il faudra concevoir et coder ce scénario, bien qu'il ne soit pas une fonctionnalité connue par l'utilisateur.

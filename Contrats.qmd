@@ -4,7 +4,7 @@ Un contrat d'opération est un document décrivant ce qui est arrivé après l'e
 
 Le MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente), mais aussi des *instances* de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S'il y a eu 72 clients(es) qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque client(e).
 
-Dans la @fig-ContratExempleCreerNouvelleVente, l'opération système `créerNouvelleVente()` provient d'un diagramme de séquence système lié au cas d'utilisation *Traiter Vente*.
+Sur la @fig-ContratExempleCreerNouvelleVente, l'opération système `créerNouvelleVente()` provient d'un diagramme de séquence système lié au cas d'utilisation *Traiter Vente*.
 Elle correspond au moment où le(a) caissier(e) démarre une nouvelle vente pour un(e) client(e).
 Avant l'exécution de cette opération, l'instance de la classe Vente indiquée dans le modèle du domaine n'existe pas.
 Cependant, après l'exécution de l'opération système, l'instance de Vente devrait exister.

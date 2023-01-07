@@ -4,7 +4,7 @@ Un diagramme de séquence système (DSS) est un diagramme UML (diagramme de séq
 Les DSS sont expliqués en détail dans le chapitre 10\ {{< fa solid book >}}, mais voici des points importants pour la méthodologie de ce manuel:
 
 - Le DSS a toujours un titre.
-- L'acteur est indiqué dans la notation par un bonhomme et est représenté comme une *instance* de la classe du bonhomme, comme `:Joueur` dans la @fig-dssattaquerunpays (le ":" signifie une instance).
+- L'acteur est indiqué dans la notation par un bonhomme et est représenté comme une *instance* de la classe du bonhomme, comme `:Joueur` sur la @fig-dssattaquerunpays (le ":" signifie une instance).
 - Le Système est un objet (une instance `:Système`) et n'est jamais détaillé plus.
 - Le but du DSS est de définir des opérations système (*Application Programming Interface*) du système; il s'agit d'une conception de haut niveau.
 - Le côté acteur du DSS n'est pas un acteur tout seul, mais une couche logicielle de présentation, comme une interface graphique ou un logiciel qui peut reconnaître la parole. Cette couche reconnaît des gestes de l'acteur et envoie une opération système. Un geste peut être un clic sur un bouton dans l'interface, une demande "Dis Siri", etc.
@@ -41,7 +41,7 @@ c->s : terminerAttaque()
 Le but du DSS est de se concentrer sur l'API (les opérations système) de la solution.
 Dans ce sens, c'est une conception de haut niveau.
 Le "Système" est modélisé comme une boîte noire.
-Par exemple, dans la @fig-dssabstraction, il y a l'acteur, le Système et une opération système.
+Par exemple, sur la @fig-dssabstraction, il y a l'acteur, le Système et une opération système.
 On ne rentre pas dans les détails, bien qu'ils existent et soient importants.
 
 ```{.plantuml #fig-dssabstraction caption="Une opération système dans un DSS. C'est une abstraction. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLB1IWD13Bqlz1z2Bwq7YyLR3z8Y8ce5SQkUusniXvtDr2HBxH_fT_J7pFRYug4mP0xl9Nd9ormDnTec5Lf7tg9W0shxH1ubXWuPzA1t3FLQSijLo2aBc22hGyGsA4PWcwZW3s63NEqacX73HsQ3oF0MkSexTU9VmOe-i4tMKHWRWWU9skNShQwTjzgG4cJRa2Yad6jO2-6nMFbw2-C6QnVQ2dbdse_yZ-m3fKILTnLOB9VmKjuybxtsCBquwu_qNu7YkWjyMkSTrt2VMs5C9tbVTQYW31AtTfBtHBugqRwm_WfDMYeqeFiodLpslQBFbZZG8sadV97YcY6u7IG51lCT36UkareP0Yg4mjCiXhX5zsGuA_TgX--6Zg0MuVnAOGRLuQT14PA56NhzyMGoEIlcn9MVmoy0)"  }
