@@ -46,7 +46,7 @@ Le réusinage est une activité intégrante du [Développement piloté par les t
 ## Symptômes de la mauvaise conception - Code smells
 
 En anglais, le terme "Code smell" a été proposé par Fowler pour les symptômes d'une mauvaise conception.
-Le but est de savoir à quel moment il faut affecter des activités de réusinage. 
+Le but est de savoir à quel moment il faut effectuer des activités de réusinage. 
 
 Par exemple, le premier "smell" dans son livre est "Mysterious Name".
 Il apparaît lorsqu'on voit une variable ou une méthode dont le nom est incohérent avec son utilisation.
@@ -54,7 +54,8 @@ Cela arrive puisqu'il n'est pas toujours facile de trouver un bon nom au moment 
 Plutôt que d'être bloqué sur le choix, on met un nom arbitraire (ou peut-être que, par naïveté, on se trompe carrément de nom).
 Alors, si vous observez ce problème (smell) dans un logiciel, vous n'avez qu'à appliquer l'activité de réusinage nommée [Change Function Declaration](https://refactoring.com/catalog/changeFunctionDeclaration.html), [Rename Field](https://refactoring.com/catalog/renameField.html) ou [Rename Variable](https://refactoring.com/catalog/renameVariable.html), selon le cas.
 
-Un autre exemple serait que vous avez un programme assez complexe, mais avec seulement une ou deux classes.
+Un autre exemple de mauvaise conception est un programme assez complexe, mais avec seulement une ou
+deux classes.
 Ces classes ont beaucoup d'attributs et de méthodes.
 Alors, ce "smell" s'appelle "Large Class", et la solution est d'appliquer des activités de réusinage [Extract Class](https://refactoring.com/catalog/extractClass.html), ou éventuellement [Extract Superclass](https://refactoring.com/catalog/extractSuperclass.html) ou [Replace Type Code with Subclasses](https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html).
 Avec un IDE dominant et un langage populaire, vous aurez probablement des fonctionnalités pour supporter l'automatisation de ces activités de réusinage.
@@ -90,7 +91,7 @@ Comments | Extract Function, Change Function Declaration, Introduce Assertion
 
 ## Automatisation du réusinage par les IDE
 
-À la **section F19.2/A22.2** du livre de @craig_uml_2005, le sujet du réusinage est abordé.
+Le sujet du réusinage est abordé à la **section F19.2/A22.2** du livre de @craig_uml_2005.
 Il y a plusieurs exemples de base détaillés qui sont automatisés par les IDE dominants tels que Eclipse, IntelliJ IDEA, WebStorm, JetBrains PyCharm, Visual Studio Code, etc.
 Il se peut que, dans un avenir proche, le réusinage (l'amélioration du design) devienne une activité réalisée par des algorithmes d'intelligence artificielle.
 

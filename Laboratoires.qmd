@@ -1,6 +1,19 @@
 
 # Laboratoires {#sec-Laboratoires}
 
+À l'École de technologie supérieure, le cours de LOG210 propose un laboratoire de mise à niveau (nommé "lab 0") réalisé individuellement où on passe à travers les différentes technologies utilisées dans le projet du laboratoire principal, qui lui, est réalisé pendant le reste du cours en trois itérations de trois semaines.
+On peut trouver sur GitHub l'énoncé du [lab0](https://github.com/profcfuhrmanets/log210-enonce-lab0) et du [laboratoire principal](https://github.com/profcfuhrmanets/log210-enonce-lab1).
+Chaque équipe est libre à choisir parmi une liste d'exigences ce qu'elle veut réaliser dans chaque itération. 
+Cela permet de pratiquer l'approche itérative en équipe.
+L'approche TDD est obligatoire (pour avoir des points pour une fonctionnalité réalisée).
+
+Les deux premières itérations sont évaluées, mais les points pour les fonctionnalités réussites ne compte qu'à la dernière itération.
+Cela a plusieurs avantages pédagogiques:
+
+- réduction du risque d'échec, puisqu'on on a des rétroactions formelles à toutes les trois semaines environ.
+- réduction de la facilité de faire du plagiat, puisqu'on doit construit en équipe un système tout au long du cours, et las éléments d'analyse et de conception (le MDD et les RDCU) doivent être cohérents avec le code (et les tests).
+- possibilité de constater et de corriger tôt les dysfonctionnements dans une équipe (mais on doit être proactif et pret à confronter les problèmes, ce qui reste un défi culturel).
+
 Ce chapitre contient des informations sur le volet technique des laboratoires.
 
 ## TypeScript
@@ -9,13 +22,16 @@ Qu'est-ce que TypeScript?
 Selon @goldberg_learning_2022, TypeScript comprend quatre éléments:
 
 - Un **langage de programmation** ayant toute la syntaxe de JavaScript, plus une syntaxe propre à TypeScript pour définir et utiliser les types;
-- Un **vérificateur de type** pouvant décortiquer un ensemble de fichiers en JavaScript et en TypeScript définissant des variables, les fonctions, etc., afin d'indiquer des problèmes éventuels de configuration;
-- Un **compilateur** qui 1)\ invoque le vérificateur de type, 2)\ signale des problèmes le cas échéant et 3)\ finalement génère du code en JavaScript équivalent;
+- Un **vérificateur de type** pouvant décortiquer un ensemble de fichiers en JavaScript et en TypeScript définissant des variables, des fonctions, etc., afin d'indiquer d'éventuels problèmes de configuration;
+- Un **compilateur** qui 
+	- invoque le vérificateur de type,
+	- signale des problèmes si nécessaire et 
+	- finalement génère du code en JavaScript équivalent;
 - Un **service de langage** qui transmet des informations provenant du vérificateur de type à l'IDE pour que ce dernier puisse faciliter le développement.
 
 ## JavaScript/TypeScript
 
-Pour la personne ayant déjà des connaissances Java et des patrons de conception de la Bande des quatre @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
+Pour la personne ayant déjà des connaissances de Java et des patrons de conception de la Bande des quatre @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
 
 - **JavaScript**: un tutoriel intéressant (et libre) est sur [fr.javascript.info](https://fr.javascript.info/). Nous vous recommandons de contribuer à des [traductions en français sur GitHub](https://github.com/javascript-tutorial/fr.javascript.info#readme). 
 - **TypeScript**: [ce tutoriel](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html) est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C\#.
@@ -310,15 +326,15 @@ Vous pouvez voir un exemple de rapport à la @fig-GitinspectorOutput.
 
 ### Faire le bilan de la contribution de chaque membre
 
-Après l'évaluation à la fin de chaque itération, il est important de considérer combien chaque membre a contribué au projet et de valider avec les responsabilités prévues dans le plan de l'itération.
+Après l'évaluation à la fin de chaque itération, il est important de quantifier et considérer la contribution de chacun au projet et de valider avec les responsabilités prévues dans le plan de l'itération.
 Il est normal d'avoir un écart entre le travail prévu et le travail effectué. 
 Un des objectifs du bilan est d'essayer d'expliquer les gros écarts et de corriger ou mitiger les problèmes.
 
-Par exemple, on peut voir à la @fig-GitinspectorOutput que Anne et Justin ont fait une contribution beaucoup plus importante que Francis et Mélanie. 
+Par exemple, on peut voir sur la @fig-GitinspectorOutput que Anne et Justin ont fait une contribution beaucoup plus importante que Francis et Mélanie. 
 Dans le bilan de l'itération, **on doit indiquer explicitement ce fait, même avec des pourcentages**. 
 
 ::: {.callout-important}
-Une phrase vague comme "des membres ont travaillé plus que d'autres" est une formulation diplomatique, mais elle n'est pas assez explicite et n'est pas une résolution proactive du problème, le cas échéant.
+Une phrase vague comme "des membres ont travaillé plus que d'autres" est une formulation diplomatique, mais elle n'est pas assez explicite et n'est pas une résolution proactive du problème, si nécessaire.
 :::
 
 ### Proposer des solutions au besoin {#sec-solution_problemes_equipes}

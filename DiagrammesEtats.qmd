@@ -1,8 +1,12 @@
 # Diagrammes d'états
 
-Ce chapitre contient des informations sur les diagrammes d'états en UML. Ce sujet est traité dans le chapitre A29/F25\ {{< fa solid book >}}.
+Ce chapitre contient des informations sur les diagrammes d'états en UML.
+Ce sujet est traité dans le chapitre A29/F25\ {{< fa solid book >}}.
 
-Il s'agit de la modélisation. Un état est une simplification de la réalité de quelque chose qui évolue dans le temps.
+Les diagrammes d'états sont aussi connus comme des machines à états.
+Il s'agit de la modélisation des états d'un processus, d'un système, d'un composant, etc. 
+Un état est une simplification de la réalité de quelque chose qui évolue dans le temps.
+Cela permet de modéliser le comportement de quelque chose face à un événement, comme indiqué sur la @fig-DiagrammeEtat.
 
 Les points importants:
 
@@ -23,7 +27,7 @@ Les points importants:
 
 La @fig-DiagrammeEtat est un exemple tiré du livre de @craig_uml_2005 et est fait en PlantUML.
 
-```{.plantuml #fig-DiagrammeEtat  caption="Diagramme d'états (figure A29.3/F25.10\ {{< fa solid book >}}). [(PlantUML)](http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF)" }
+```{.plantuml #fig-DiagrammeEtat  caption="Diagramme d'états modélisant un système téléphonique (figure A29.3/F25.10\ {{< fa solid book >}}). Il y a des états (comme **Inactif** et **ÉmissionTonalité**), des super-états (comme **Actif**), des événements (comme **décrocher** et **raccrocher**), des transitions (indiquées par les flèches), des actions de transitions (comme **/tonalité**) et des conditions de garde (comme **\[abonné valide\]**). [(PlantUML)](http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF)" }
 @startuml
 skinparam style strictuml
 skinparam backgroundcolor transparent
@@ -73,7 +77,7 @@ Faites un diagramme d'états en UML qui correspond au système décrit par les c
 Le Client introduit sa carte bancaire, et le système attend qu'il saisisse le NIP de la carte.
 Si le NIP est valide pour la carte, alors le système est prêt pour accepter d'autres actions.
 Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP.
-À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.
+À tout moment où le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.
 
 **Gérer guichet**. L'Administrateur démarre le système, et le système attend l'introduction d'une carte bancaire du Client.
 Quand le système est dans cet état, l'Administrateur peut aussi l'éteindre.

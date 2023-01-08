@@ -3,7 +3,7 @@
 Les MDD sont expliqués en détail dans le chapitre 9\ {{< fa solid book >}}, mais voici des points importants:
 
 - Les classes conceptuelles ne sont pas des classes logicielles. Ainsi, selon la méthodologie de Larman, *elles n'ont pas de méthodes*.
-- Les classes ont des noms commençant avec une lettre majuscule, par exemple `Joueur`, et elles ne sont jamais au pluriel, par exemple ~~`Joueurs`~~.
+- Les classes ont des noms commençant avec une lettre majuscule, par exemple `Joueur`, et elles ne sont jamais au pluriel, par exemple une classe ne peut pas prendre le nom ~~`Joueurs`~~.
 
 ## Classes conceptuelles
 
@@ -49,9 +49,9 @@ Pour l'UML, la syntaxe complète d'un attribut est:
 Voici des points importants:
 
 - *Le type d'un attribut est important, et il faut le spécifier dans un MDD*, même si dans le livre de @craig_uml_2005, il y a plusieurs exemples sans type.
-- On ne se soucie pas de la visibilité des attributs dans un MDD.
+- Ne vous souciez pas de la visibilité des attributs dans un MDD.
 - Faites attention à la confusion des attributs et des classes. Si l'on ne pense pas un concept *X* en termes alphanumériques dans le monde réel, alors il s'agit probablement d'une classe conceptuelle. Par exemple, dans le monde réel, une université n'est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12\ {{< fa solid book >}}.
-- De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, dans la @fig-MDD-jeu-de-risk, la classe `Pays` n'a pas un *attribut* `joueur:Joueur` (qui contrôle le Pays); elle a plutôt une *association* avec la classe `Joueur` et un verbe `contrôle`.
+- De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, sur la @fig-MDD-jeu-de-risk, la classe `Pays` n'a pas un *attribut* `joueur:Joueur` (qui contrôle le Pays); elle a plutôt une *association* avec la classe `Joueur` et un verbe `contrôle`.
 
 ::: {.callout-warning appearance="simple"}
 Il est vrai que dans un langage de programmation comme Java, les associations doivent être les attributs dans les classes, car il s'agit des classes *logicielles*.
@@ -62,7 +62,7 @@ La relation relie visuellement les deux classes conceptuelles et elle est décri
 ## Associations
 
 Les associations dans le MDD sont le sujet de la section 9.14\ {{< fa solid book >}}.
-Il faut se référer au contenu du livre pour les détails.
+Il faut se référer au contenu du livre de Larman pour les détails.
 Une association est une relation entre des classes (ou des instances de classes).
 Elle indique une connexion significative ou intéressante.
 Voici des points importants:
@@ -74,10 +74,10 @@ Pensez à la **mémorabilité** d'une association dans le contexte du logiciel �
 - Il y a des associations dérivées de la liste des associations courantes. Voir le @tbl-associations-courantes.
 - En UML, les associations sont représentées par des lignes entre classes.
   - Elles sont nommées (avec un verbe commençant par une lettre majuscule).
-  - Des mots simples comme "A", "Utilise", "Possède", "Contient", etc. sont généralement des choix médiocres, car ils n'aident pas notre compréhension du domaine. Essayez de trouver des mots plus riches, si possible.
+  - Des verbes simples comme "A", "Utilise", "Possède", "Contient", etc. sont généralement des choix médiocres, car ils n'aident pas notre compréhension du domaine. Essayez de trouver des verbes plus riches, si possible.
   - Une flèche (triangle) de "sens de lecture" optionnelle indique la direction dans laquelle lire l'association. Si la flèche est absente, on lit l'association de gauche à droite ou de haut en bas.
   - Les extrémités des associations ont une expression de la multiplicité indiquant une relation numérique entre les instances des classes.
-  Vous pouvez en trouver plusieurs exemples dans la @fig-MDD-jeu-de-risk.
+  Vous pouvez en trouver plusieurs exemples sur la @fig-MDD-jeu-de-risk.
 
 : Extrait du tableau 9.2\ {{< fa solid book >}} (liste d'associations courantes) {#tbl-associations-courantes}
 
@@ -115,7 +115,13 @@ Pensez à la **mémorabilité** d'une association dans le contexte du logiciel �
 
 ## Exemple de MDD pour le jeu Risk
 
-La @fig-MDD-jeu-de-risk est un MDD pour le jeu Risk, selon [l'exemple](#exemple-jeu-de-risk) mentionné dans le chapitre sur les cas d'utilisation.
+La @fig-MDD-jeu-de-risk est un MDD pour le jeu Risk, selon [l'exemple](#exemple-jeu-de-risk) mentionné dans le chapitre sur les cas d'utilisation. 
+Commençons par la classe `JeuRisk` qui est l'objet racine du modèle.
+Il est relié à la classe `Joueur`, puisqu'un joueur "joue" à `JeuRisk` (notez le triangle pour le sens de la lecture).
+Selon les cardinalités de l'association entre ces deux classes, il peut y avoir entre deux (2) et six (6) personnes qui jouent au jeu.
+Le jeu "inclut" cinq objets de la classe `Dé`, mais un `Joueur` jette un, deux ou trois dés (selon la règle du jeu Risk).
+L'association entre `Joueur` et `Pays` a un verbe "contrôle", qui est un exemple de verbe plus riche que "possède" ou "a". 
+Si vous regardez tout le modèle, vous verrez qu'il représente visuellement beaucoup d'éléments du jeu.
 
 ```{.plantuml #fig-MDD-jeu-de-risk caption="Modèle du domaine du jeu Risk. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjD047ttLupyuXObWHGe8a9Lgr9LBPM8aW8lVTdOKsVnUZRi9IL2IF0tv9q_o9_m9SpQSPscKQLedVMScNFspAoFhHF6-L95jf0q4qQKODr28Qz6fbkHYKYBt6XFMQgLDk2C8CiX91SbuARI0ly4J0LbTqOwXmItcXn8WY-ICdrdewGjb-6jyCe518aIuOEHDgHSN9z6oVKKBO9sKpGMbDO5v0P5LMhy-HpsIb6mI6-GUN6Hy5CI7qOfp9ZJmCdL5NmQdut66-JGVx7_b00hyh3Gaoelg81BxGs9JMksKT-BD8DnQkJCFLLiY6oIiHk5DhrpncDaKy7jw4TJcI5WENCBAB6SXAnK2Mk36FG6VaG0f4iOm9XRHpbldzDaA1RsOvhwsMffEIIvKp_NUUzNooffplKvlmasLT6Ff2sQRJnKmg6etiKWB0n7JIXGF6Q_BtJYdFZciKPCwftWcQZvmZiMSejaTuYeb0idDQtJHwjbBakUj_OmqN04SJ-6PzqknAyEubhF04xPOyb8E7g0E8ph266buSowxWrbSYxjQid_sFMZg0MqXJk7dHjwqtdBQxybEUVRCCD04VO17S3zNk_PFIGmpBMqahfPGAwDhS6gMprPO0tygZtBuB7U1cOCV1rNFHlm2ARAXuCbe6HEuHx8ENkAa3Q7zWJ8LpD5KCBmLE_z-_LxFrgFIWm01uF3bh-X6bJ35BZNm5q72kwOrLyLS7iri5F5zg7NssXPb6nLuHBt_TkgaxJ-gSV8Tp0qsgt-vCWTqfuNKGzLz32jbjaCt02k1AKxctD3cx1w_h9kCC_iEdtdeFEoyVuot5Z6HCUSmf_7_m00)"}
 @startuml
@@ -173,7 +179,7 @@ Il s'agit des attributs qui sont calculés à partir d'autres informations reli�
 Ils sont indiqués par le symbole **`/`** devant leur nom.
 L'exemple à la @fig-MDD-attribut-derive s'applique à la règle du jeu Risk spécifiant qu'un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé `/nbPaysOccupés` qui est calculé selon le nombre de Pays contrôlés par le joueur.
 
-```{.plantuml #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé et sa valeur sera calculée selon le nombre de pays de l'association. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLB1QW8n4BtdAmOlsnRKUXKHYvHYArIwjZt7xEY6pKvaac2b-46zzm_yiSvQeM9123E4UNdlpKn68MgEgNOgL9RMcdKD8MuTIcHhpYeBRQeL-qI5ySupHDOKf8GKLGQnj07aQ2Wr5HksCIB1qbC4I_1kgV2ReB8_kWANEhdO84ZN24ziG_DaCX-hR5vYGF2nH0xWlAzWnQWFLFdR0rpLkXAJYL5qSPj9jYJDE8U5Q3BSJQVmcj-_v2VYqBkzlcGWw5KJwABB2LNmw1EJFXtDEUgZCWNaXkqwNYAReGo9mmdHwUmY9rJ1Q5b7JvMsGC1w7RTGOxreNXcdGsZCO6BuL03aQ-X3BgkZbLm7XpNr5oxXi4kBcTw6PsFIUlyL16Of3he7n53jZbmDv3_JJXqrMhqMjDkIEfsRrY-u3sDfXlVVOdAeHaY5_9aV)"}
+```{.plantuml #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l'association. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLB1QW8n4BtdAmOlsnRKUXKHYvHYArIwjZt7xEY6pKvaac2b-46zzm_yiSvQeM9123E4UNdlpKn68MgEgNOgL9RMcdKD8MuTIcHhpYeBRQeL-qI5ySupHDOKf8GKLGQnj07aQ2Wr5HksCIB1qbC4I_1kgV2ReB8_kWANEhdO84ZN24ziG_DaCX-hR5vYGF2nH0xWlAzWnQWFLFdR0rpLkXAJYL5qSPj9jYJDE8U5Q3BSJQVmcj-_v2VYqBkzlcGWw5KJwABB2LNmw1EJFXtDEUgZCWNaXkqwNYAReGo9mmdHwUmY9rJ1Q5b7JvMsGC1w7RTGOxreNXcdGsZCO6BuL03aQ-X3BgkZbLm7XpNr5oxXi4kBcTw6PsFIUlyL16Of3he7n53jZbmDv3_JJXqrMhqMjDkIEfsRrY-u3sDfXlVVOdAeHaY5_9aV)"}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -189,7 +195,7 @@ Joueur "1" -- "1..*" Pays : Contrôle >
 @enduml
 ```
 
-## Classes de "description" et de catalogues
+## Classes de "description" et classe de catalogues
 
 Deux catégories de classes conceptuelles qui vont de pair sont les *descriptions d'entités* et les *catalogues* qui agrègent les descriptions.
 Elles sont expliquées en détail dans la section 9.13\ {{< fa solid book >}}.
@@ -198,12 +204,12 @@ Voici des conditions pour utiliser correctement une classe de description d'une 
 - Il faut disposer de la description d'un produit ou d'un service "X" indépendamment de l'existence actuelle des "X". Par exemple, il pourrait y avoir une rupture de stock d'un Produit (aucune instance actuelle), mais on a besoin de connaître son prix. La classe DescriptionProduit permet d'avoir cette information, même s'il n'y a plus d'instances de Produit. 
 Un autre exemple est un trimestre où un cours *LOG711* ne se donne pas (il n'y a pas de GroupeCours de LOG711 dans le trimestre actuel).
 Alors, une classe Cours (qui joue le rôle de description) sert pour spécifier le nombre de crédits, les cours préalables, etc.
-- La suppression d'instances de "X" entraîne la perte de l'information qui doit être mémorisée, mais a été incorrectement associée à l'entité en question.
+- La suppression d'instances de la classe "X" entraîne la perte de l'information qui doit être mémorisée, mais qui a été incorrectement associée à l'entité en question.
 - La classe de description réduit la duplication des informations.
 
 La @fig-MDD-CoursGroupeCoursDescription présente une classe de description pour le contexte de cours et groupe-cours.
 
-```{.plantuml #fig-MDD-CoursGroupeCoursDescription caption="Cours joue le rôle de description d'entités (les groupes-cours)."}
+```{.plantuml #fig-MDD-CoursGroupeCoursDescription caption="La classe Cours joue le rôle de description d'entités (les groupes-cours)."}
 @startuml
 '!include ecriture.pumlinclude
 skinparam defaultFontName Arial
@@ -212,13 +218,13 @@ hide empty members
 scale 1
 hide empty members
 class "GroupeCours" as GC {
-  numéro : Entier
+  numéro : int
   trimestre : Trimestre
   ...
 }
 class "Cours" as C #ddffdd {
   nom : Texte
-  nbCrédits : Entier
+  nbCrédits : int
   ...
 }
 class "Catalogue\nCours" as CP #ddffdd
@@ -240,7 +246,7 @@ Attention de ne pas faire l'erreur naïve d'utiliser une classe de description s
 :::
 
 
-```{.plantuml #fig-MDD-ErreurDescription caption="Erreur fréquente: utiliser une classe de description sans justification."}
+```{.plantuml #fig-MDD-ErreurDescription caption="Illustration de l'erreur fréquente: utiliser une classe de description sans justification."}
 @startuml
 '!include ecriture.pumlinclude
 skinparam defaultFontName Arial
@@ -283,8 +289,8 @@ Il pourrait être utile d'avoir une classe d'association dans un MDD:
 - si la durée de vie des instances de la classe d'association dépend de l'association;
 - s'il y a une association *N*-*N* entre deux concepts et des informations liées à l'association elle-même.
 
-Dans l'exemple à la @fig-MDD-classe-association, voici pourquoi il y a une classe d'association Occupation. 
-Lorsqu'un Joueur contrôle un Pays, il doit y avoir des armées dans ce dernier. 
+L'exemple illustré sur la @fig-MDD-classe-association explique la nécessité d'une classe d'association Occupation. 
+Lorsqu'un Joueur contrôle un Pays, il doit déployer des armées dans ce dernier. 
 Le MDD pourrait avoir un attribut `nbRégiments` dans la classe Pays. 
 Cependant, l'attribut `nbRégiments` est lié à l'association entre le Joueur et le Pays qu'il contrôle, alors on décide d'utiliser une classe d'association. 
 
@@ -315,13 +321,13 @@ Joueur "1" -- "1..*" Pays : Contrôle >
 
 ## Affinement du MDD
 
-Lorsqu'on modélise un domaine, il est normal de commencer avec un modèle simple (à partir d'un ou de deux cas d'utilisation) et ensuite de l'affiner dans les itérations suivantes, où on y intègre d'autres éléments plus subtils ou complexes du problème qu'on étudie.
+Lorsqu'on modélise un domaine, il est normal de commencer par un modèle simple (à partir d'un ou de deux cas d'utilisation) et ensuite de l'affiner dans les itérations suivantes, où on y intègre d'autres éléments plus subtils ou complexes du problème qu'on étudie.
 Les détails de cette approche sont présentés dans le chapitre F26/A31\ {{< fa solid book >}}.
 Bien que la matière soit présentée plus tard dans le livre, ce sont des choses à savoir pour la modélisation d'un domaine, même dans une première itération.
 
 Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus haut:
 
-- Composition, par exemple la classe Continent qui groupe les Pays dans la @fig-MDD-jeu-de-risk. Larman propose d'utiliser la composition lorsque:
+- Composition, par exemple la classe Continent qui groupe les Pays sur la @fig-MDD-jeu-de-risk. Larman propose d'utiliser la composition lorsque:
   - la durée de vie du composant est limitée à celle du composite (lorsqu'un objet Continent est instancié, ça doit grouper des instances de Pays pour être cohérent), il existe une dépendance création-suppression de la partie avec le tout (ça ne fait pas de sens de supprimer un objet Pays d'une instance de Continent dans le jeu Risk);
   - il existe un assemblage logique ou physique évident entre le tout et les parties (on ne peut construire un Continent sans les Pays);
   - certaines propriétés du composite, comme son emplacement, s'étendent aux composants;
@@ -352,7 +358,7 @@ Plus tard (après plusieurs itérations, dans le chapitre sur le raffinement du 
 Voici la réponse de Craig Larman [-@craig_uml_2005] dans la section 9.2\ {{< fa solid book >}}:
 
 ::: {.callout}
-Un **modèle du domaine** n'est pas un **modèle de données** (qui représente par définition des objets persistants stockés quelque part).
+Un **modèle du domaine** n'est pas un **modèle de données** (\[ce dernier\] représente par définition des objets persistants stockés quelque part).
 :::
 
 Il peut y avoir des concepts dans un domaine qui ne sont pas dans la base de données.
@@ -370,7 +376,7 @@ Vous pouvez aussi lire [cette question](https://stackoverflow.com/q/3507671/1168
 
 ::: {#exr-MDD-trouver-classes-conceptuelles-catégorie}
 
-### Classes conceptuelles trouvées par catégorie
+### Trouver des classes conceptuelles par catégorie
 
 À partir du [cas d'utilisation _Réserver un livre de la bibliothèque_](#sec-CU_Réserver_livre), trouvez des classes conceptuelles candidates en utilisant une liste de catégories de classes.
 Vous pouvez remplir un tableau comme ceci:

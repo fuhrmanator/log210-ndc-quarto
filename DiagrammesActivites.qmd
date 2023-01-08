@@ -6,7 +6,7 @@ Ce chapitre contient des informations sur les diagrammes d'activités en UML. Le
 Les diagrammes d'activités servent à modéliser des processus d'affaires (de métier), des enchaînements d'activités (*workflows*), des flots de données et des algorithmes complexes.
 :::
 
-Voici les éléments importants:
+Voici les éléments importants d'un diagramme d'activités:
 
 - début et fin (activité)
 - partition
@@ -48,7 +48,7 @@ note right : Fin
 Pour la modélisation de flots de données, il existe une notation pour les [diagrammes de flots de données (DFD)](https://fr.wikipedia.org/wiki/Diagramme_de_flux_de_donn%C3%A9es)\ {{< fa brands wikipedia-w >}}.
 Il ne s'agit pas de l'UML, mais cette notation est encore utilisée (depuis les années 1970).
 
-Un exemple de diagramme d'activités dans le cadre d'un cours de programmation utilisant GitHub Classroom est dans la @fig-GitHubClassroomActivities.
+Un exemple de diagramme d'activités dans le cadre d'un cours de programmation utilisant GitHub Classroom est illustré sur la @fig-GitHubClassroomActivities.
 Ce diagramme explique comment GitHub Classroom permet à l'étudiant(e) qui accepte un devoir (*assignment* en anglais) sur GitHub Classroom de choisir son identité universitaire, mais seulement si l'enseignant(e) a téléversé la liste de classe *avant* d'envoyer les invitations aux étudiant(e)s.
 
 ```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classroom (contexte de l'ÉTS avec Moodle). [(PlantUML)](https://www.plantuml.com/plantuml/uml/NOzBYXin48RtEaN1B6n3Gk_jpHZF91d88uJ90SfIjQSOFMIfD2JG5yXHlCagD-YBfTenxJ2z4AZhrr_VTri5YxJWJNtccB5WW2e_FUbPsBwQt56FpSiZ_P2jvqCC50Mi7bJ-Ixb_gNSfocSC1Dl2w8smQEjzj4yu_evqVkeMQ8LVMCPJXPnQ0PqU6q7NxJpMMb8ANGVBGqajqrkhYReomtsifDjH6rA3wuq6SzOnwrqPJrHWBjcOcxvt-gqVGav5TEQv2Yahs2b4PldW58bxrg8Adr9odbQRkMfRwqLOaz4fj6lekqV2CAM-wbeyQ6uvGHOclmA_-FxjepfoL4CKJd5ZXXld9f9X_2NDyKLXlgZ1-akc2FhoohnxIbov05y9Bu0RCm_7qx5n9bXgdvsOvr_ADxnd-T3ssdxNikTZcqZxL9wLai2Dfpp-KJ5iiAUQEBu1V24xpMmAMSYuHOiGAEoBnadLKZbWv7hMqWLLKZQt55qBtlm5)"  }

@@ -3,15 +3,15 @@
 Le chapitre A36/F30\ {{< fa solid book >}} présente le problème de la fiabilité pour le système NextGen POS.
 C'est le basculement vers un service local en cas d'échec d'un service distant.
 
-![Comment tolérer une panne de connexion ou de service?](images/PanneConnexionService.svg "Comment tolérer une panne de connexion ou de service?"){width=70% #fig-PanneConnexionService}
+![Comment tolérer une panne de connexion ou de service? Dans un système comme NextGen POS, les dépendances vers les systèmes externes, comme les calculateurs de taxes ou la base de données des descriptions de produits, des pannes de ces services peuvent arriver et doivent être tolérées pour permettre les ventes de produits.](images/PanneConnexionService.svg "Comment tolérer une panne de connexion ou de service?"){width=70% #fig-PanneConnexionService}
 
 
 Voici les points importants:
 
 - Définition des termes, A36.3/F30.3\ {{< fa solid book >}}:
-  - **Faute.** La cause première du problème.
-  - **Erreur.** La manifestation de la faute lors de l'exécution. Les erreurs sont détectées (ou non).
-  - **Échec.** Déni de service causé par une erreur.
+  - **Faute:** la cause première du problème.
+  - **Erreur:** la manifestation de la faute lors de l'exécution. Les erreurs sont détectées (ou non).
+  - **Échec:** déni de service causé par une erreur.
 - Les solutions proposées par l'architecte système et documentées par Larman impliquent les concepts suivants:
   - Mise en cache locale d'informations recherchées au service distant, A36.2/F30.2\ {{< fa solid book >}}.
   - Utilisation d'*Adaptateur \[GoF\]* pour réaliser le service redondant (lecture d'information), A36.2/F30.2\ {{< fa solid book >}}.
@@ -20,7 +20,7 @@ Voici les points importants:
   - Utilisation de *Procuration (Proxy) de redirection \[GoF\]* pour basculer vers un service local en cas de panne (écriture d'information), A36.4/F30.4\ {{< fa solid book >}}.
 
 ::: {.callout-important}
-Faire une conception pour la fiabilité nécessite de l'expérience (ou l'utilisation des patterns). Un bon livre sur le sujet est celui de @hanmer_patterns_2007.
+Faire une conception pour la fiabilité nécessite de l'expérience (ou l'utilisation des patterns). Le livre de @hanmer_patterns_2007 est une bonne référence pour en savoir plus.
 
 L'utilisation de services dans le nuage (infonuagique) amène une redondance de serveurs. 
 Cependant, même un service Web a besoin de [redondance dans les zones géographiques](https://aws.amazon.com/about-aws/global-infrastructure/), car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourraient affecter toute une grappe de serveurs.
@@ -32,13 +32,13 @@ Cependant, même un service Web a besoin de [redondance dans les zones géograph
 
 ### Faute, Erreur, Échec
 
-Pour chaque scénario, indiquez la faute, l'erreur et l'échec (selon les
-définitions dans les notes de cours).
+Pour chaque scénario, indiquez la faute, l'erreur et l'échec (selon les définitions dans ce manuel).
 
 **Scénario 1: Guichet automatique**
 
-Lors de son contrôle d'un guichet automatique, une technicienne constate
-qu'il n'y a plus de billets. Alors, elle remet des billets de 20 $ et de 50 \$. La prochaine personne qui utilise ce guichet automatique indique qu'elle veut retirer 100 \$, mais elle est surprise quand elle reçoit 5 billets de 50 $ (pour 250 $).
+Lors de son contrôle d'un guichet automatique, une technicienne constate qu'il n'y a plus de billets.
+Alors, elle remet des billets de 20 \$ et de 50 \$.
+La prochaine personne qui utilise ce guichet automatique indique qu'elle veut retirer 100 \$, mais elle est surprise quand elle reçoit 5 billets de 50 $ (pour 250 \$).
 
 -   Faute: <!-- La technicienne a mal posé les billets -->
 -   Erreur: <!-- personne constate qu'elle reçoit plus d'argent que demandé -->

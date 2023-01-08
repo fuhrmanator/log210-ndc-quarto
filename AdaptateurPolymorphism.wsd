@@ -1,0 +1,41 @@
+@startuml
+skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
+
+participant "v : Vente" as v
+participant "lignesArticles[i] :\nLigneArticles" as la
+participant "<color red>: IAdaptateur\n<color red>CalculTaxes" as iA
+
+-> v : t = getTotal
+loop
+    v -> la : st = getSousTotal
+end
+
+v -> iA : <color red>lignesTaxes = getTaxes( v )
+
+@enduml
+
+@startuml
+skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
+
+participant "<color red>: Adaptateur\n<color red>TaxMaster" as A
+participant "<color red>tm :\n<color red>TaxMaster" as tm
+
+-> A : lignesTaxes = \ngetTaxes( v )
+A -> tm : lignesTaxes = \n<color red>calculateTaxes</color>( ? )
+
+@enduml
+
+@startuml
+skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
+
+participant "<color red>: Adaptateur\n<color red>GoodAsGold" as A
+participant "<color red>gag :\n<color red>GoodAsGold" as gag
+
+-> A : lignesTaxes = \ngetTaxes( v )
+A -> gag : lignesTaxes = \n<color red>computeTaxes</color>( ? )
+
+@enduml
+

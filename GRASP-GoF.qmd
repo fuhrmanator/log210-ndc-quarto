@@ -1,12 +1,53 @@
 # Décortiquer les patterns GoF avec GRASP {#sec-GRASP-GoF}
 
-Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C'est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF.
+Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C'est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF. 
 
 ## Exemple avec Adaptateur
 
-Le chapitre A26/F23\ {{< fa solid book >}}\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (@fig-Fig23_1 tirée du livre de Larman, figure A26.1/F23.1).
+Le pattern Adaptateur a été proposé par @GoF1994, et sa structure est illustrée sur la @fig-AdapterGoF.
+La structure de base peut être trompeuse, car elle ne montre qu'une seule classe `Adaptee` qui représente l'API (externe) que l'on ne peut modifier.
+En réalité, ce pattern est plus intéressant lorsqu'on considère *plusieurs* cas de classe `Adaptee`, chacune avec une API différente.
 
-```{.plantuml #fig-Fig23_1 caption="Le pattern Adaptateur."}
+Le chapitre A26/F23\ {{< fa solid book >}}\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (@fig-Fig23_1 tirée du livre de Larman, figure A26.1/F23.1).
+On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la version de ce manuel.
+Nous faisons une hypothèse sur les noms des méthodes pour l'API des classes adaptées, car cette information n'est pas spécifiée.
+En plus, nous n'avons pas spécifié les arguments (c'est "?"), car les détails ne sont pas connus.
+Un autre point à mentionner dans le problème de calcul des taxes et que ça dépend de l'article.
+Selon l'état ou la province, certains articles sont sujets à des taxes et d'autres non.
+A priori, le calculateur de taxes est l'expert pour décider combien de taxes pour chaque article.
+C'est pour cela que l'adaptateur a accès à l'objet Vente qui agrège des LigneArticles.
+Cet objet Vente a une visibilité de paramètre.
+
+Dans le contexte du projet NextGen POS, Larman propose l'utilisation de ce pattern pour plusieurs dimensions où des services externes ont plusieurs possibilités (l'inventaire, la comptabilité, etc.).
+
+```{.plantuml #fig-AdapterGoF caption="Le diagramme de classe du pattern Adaptateur proposé par @GoF1994."}
+@startuml
+skinparam style strictuml
+skinparam defaultfontname Arial
+hide empty members
+interface Target {
+  {abstract} Request()
+}
+class Adapter implements Target {
+  Request()
+}
+note right of Adapter::Request
+adaptee -> SpecificRequest()
+end note
+class Adaptee {
+  SpecificRequest()
+}
+
+Adaptee <-u- Adapter : adaptee
+
+class Client {
+}
+Client -r-> Target
+@enduml
+```
+
+
+```{.plantuml #fig-Fig23_1 caption="Le pattern Adaptateur appliqué pour les services externes de calculateurs de taxes. Chaque service externe a une API distincte et immuable. Les adaptateurs concrets permettent de normaliser l'accès à ces API à travers une interface `IAdaptateurCalculTaxes`."}
 @startuml
 skinparam style strictuml
 skinparam defaultfontname Arial
@@ -18,6 +59,16 @@ class           AdaptateurGoodAsGoldTaxPro implements IAdaptateurCalculTaxes
 IAdaptateurCalculTaxes : getTaxes( Vente ) : Liste de LigneTaxes
 AdaptateurTaxMaster : getTaxes( Vente ) : Liste de LigneTaxes
 AdaptateurGoodAsGoldTaxPro : getTaxes( Vente ) : Liste de LigneTaxes
+
+class TaxMaster {
+    calculateTaxes ( ? )
+}
+class GoodAsGoldTaxPro {
+    computeTaxes ( ? )
+}
+
+AdaptateurTaxMaster -d-> TaxMaster
+AdaptateurGoodAsGoldTaxPro -d-> GoodAsGoldTaxPro
 @enduml
 ```
 
@@ -128,7 +179,11 @@ Selon @craig_uml_2005:
 **Solution:** Lorsqu'un comportement varie selon le type (classe), affectez la responsabilité de ce comportement -- avec des opérations polymorphes -- aux types selon lesquels le comportement varie.
 :::
 
-Le "comportement qui varie" est la manière d'adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode `getTaxes()`. Alors, cette "responsabilité" est affectée au type interface `IAdaptateurCalculTaxes` (et à ses implémentations) dans l'opération polymorphe `getTaxes()`.
+Le "comportement qui varie" est la manière d'adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode `getTaxes()`.
+Alors, cette "responsabilité" est affectée au type interface `IAdaptateurCalculTaxes` (et à ses implémentations) dans l'opération polymorphe `getTaxes()`.
+Cet aspect du pattern est illustré sur la @fig-AdaptateurPolymorphismeNextGen
+
+![Le mécanisme de polymorphisme dans le pattern Adaptateur appliqué au problème de calculateurs de taxes. `getTaxes(...)` est un appel polymorphe. Selon la configuration du système (l'objet auquel `IAdaptateurCalculTaxes` fait référence), le comportement sera différent.](images/AdaptateurCalcTaxesPolymorphism.drawio.svg){#fig-AdaptateurPolymorphismeNextGen width="60%"}
 
 ### Fabrication pure
 
@@ -179,7 +234,7 @@ Quant aux "responsabilités" à affecter, c'est la fonctionnalité commune de to
 ## GRASP et réusinage
 
 Il y a des liens entre les GRASP et les activités de [Réusinage (Refactorisation)](#sec-Refactoring). 
-Alors, un IDE qui automatise les *refactorings* peut vous aider à appliquer certains GRASP.
+Alors, un IDE qui automatise les réusinages peut vous aider à appliquer certains GRASP.
 
 - GRASP Polymorphisme est relié à [_Replace Type Code with Subclasses_](https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html) et à [_Replace Conditional with Polymorphism_](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html) -- attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (`switch`) répétées à plusieurs endroits dans le code.
 - GRASP Fabrication pure est relié à [_Extract Class_](https://refactoring.com/catalog/extractClass.html).
@@ -203,7 +258,7 @@ Il se peut que certains principes GRASP ne s'appliquent pas à un patron GoF!
 
 Identifiez les 4 principes GRASP dans le patron
 [Itérateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Patron-,iterateur,-Contexte),
-selon les directives à la @sec-GRASP_Adaptateur.
+selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -213,7 +268,7 @@ selon les directives à la @sec-GRASP_Adaptateur.
 
 Identifiez les 4 principes GRASP dans le patron
 [Observateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Contr%C3%B4leur-,patron%20observateur,-Mod%C3%A8le),
-selon les directives à la @sec-GRASP_Adaptateur.
+selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -223,7 +278,7 @@ selon les directives à la @sec-GRASP_Adaptateur.
 
 Identifiez les 4 principes GRASP dans le patron
 [Stratégie](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=page-,patron%20strategie,-Strat%C3%A9gie),
-selon les directives à la @sec-GRASP_Adaptateur.
+selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -233,7 +288,7 @@ selon les directives à la @sec-GRASP_Adaptateur.
 
 Identifiez les 4 principes GRASP dans le patron
 [Composite](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=composants-,patron%20composite,-Contexte),
-selon les directives à la @sec-GRASP_Adaptateur.
+selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -242,7 +297,7 @@ selon les directives à la @sec-GRASP_Adaptateur.
 ### Décorateur
 
 Identifiez les 4 principes GRASP dans le patron [Décorateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte),
-selon les directives à la @sec-GRASP_Adaptateur.
+selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -250,7 +305,7 @@ selon les directives à la @sec-GRASP_Adaptateur.
 
 ### Méthode Template
 Identifiez les 4 principes GRASP dans le patron [Méthode Template](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte),
-selon les directives à la @sec-GRASP_Adaptateur.
+selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -258,7 +313,7 @@ selon les directives à la @sec-GRASP_Adaptateur.
 
 ### Commande
 
-Identifiez les 4 principes GRASP dans le patron [Commande](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte), selon les directives à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le patron [Commande](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte), selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -266,7 +321,7 @@ Identifiez les 4 principes GRASP dans le patron [Commande](https://fuhrmanator.g
 
 ### Méthode Fabrique
 
-Identifiez les 4 principes GRASP dans le patron [Méthode de fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)), selon les directives à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le patron [Méthode de fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)), selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -274,7 +329,7 @@ Identifiez les 4 principes GRASP dans le patron [Méthode de fabrique](https://f
 
 ### Proxy
 
-Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe), selon les directives à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe), selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -282,7 +337,7 @@ Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.gith
 
 ### Façade
 
-Identifiez les 4 principes GRASP dans le patron [Façade](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte), selon les directives à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le patron [Façade](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte), selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 

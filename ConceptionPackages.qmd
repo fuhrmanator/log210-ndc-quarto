@@ -11,7 +11,7 @@ Les points importants sont les suivants (les détails se trouvent dans le livre)
 - Organiser les packages en une **famille d'interface** (convention Java);
 - Créer un package par **tâche** et par **groupe de classes instables** (Branches);
 - Les packages les plus responsables sont les plus stables;
-- Factoriser les types indépendants;
+- Factoriser (placer dans un package à part) les types indépendants;
 - Utiliser **fabrique** (*factory*) pour limiter la dépendance aux packages concrets;
 - Comment rompre les cycles dans les packages .
 
@@ -80,7 +80,7 @@ On organise les fichiers, par exemple `maClasse.ts` , dans les répertoires.
 
 ### Noms sans conflit
 
-Dans l'exemple plus haut, il ne serait pas possible d'avoir deux fichiers nommés `maClasse.ts` dans le même répertoire, alors il est impossible d'avoir une collision avec le nom du fichier.
+Dans l'exemple précédent, il ne serait pas possible d'avoir deux fichiers nommés `maClasse.ts` dans le même répertoire, alors il est impossible d'avoir une collision avec le nom du fichier.
 Donc, on pourrait importer la classe `MaClasse` de `maClasse.ts` et la classe `MaClasse` de `lib/projet2/maClasse.ts` dans le même programme.
 Cependant, pour éviter un conflit de noms, on emploie le mot-clé `as` pour renommer la classe (`MaClasseP2`) lorsqu'on l'importe:
 
@@ -92,7 +92,8 @@ import { MaClasse as MaClasseP2 } from './lib/projet2/maClasse'
 
 ### Namespaces
 
-TypeScript offre une autre manière d'organiser et d'éviter les conflits de noms avec les *[namespaces](https://www.typescriptlang.org/docs/handbook/namespaces.html)* (anciennement les *modules internes*).
+TypeScript offre une autre manière pour organiser et éviter les conflits de noms avec les *[namespaces](https://www.typescriptlang.org/docs/handbook/namespaces.html)* (anciennement les *modules internes*).
 L'[exemple de Validators](https://www.typescriptlang.org/docs/handbook/namespaces.html#namespaced-validators) est intéressant puisqu'il s'agit d'un *namespace* commun réparti dans plusieurs fichiers.
 C'est à utiliser surtout lorsqu'on ne veut pas centraliser tout le code dans un seul (gros) fichier (avec `export`). 
-Mais, comme vous le voyez dans l'exemple avec les commentaires dans le code de certains fichiers, par exemple `/// <reference path="Validation.ts" />`, il est plus compliqué à maintenir. 
+Mais, comme vous le voyez dans l'exemple, on doit utiliser les commentaires dans le code de certains fichiers, par exemple  
+`/// <reference path="Validation.ts" />`, et c'est plus compliqué à maintenir.
