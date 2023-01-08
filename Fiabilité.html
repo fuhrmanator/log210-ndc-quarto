@@ -346,16 +346,16 @@ div.csl-indent {
 <figure class="figure">
 <img src="images/PanneConnexionService.svg" title="Comment tolérer une panne de connexion ou de service?" class="img-fluid figure-img" style="width:70.0%">
 </figure>
-<p></p><figcaption class="figure-caption">Figure&nbsp;15.1: Comment tolérer une panne de connexion ou de <span style="white-space:nowrap">service ?</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;15.1: Comment tolérer une panne de connexion ou de <span style="white-space:nowrap">service ?</span> Dans un système comme NextGen POS, les dépendances vers les systèmes externes, comme les calculateurs de taxes ou la base de données des descriptions de produits, des pannes de ces services peuvent arriver et doivent être tolérées pour permettre les ventes de produits.</figcaption><p></p>
 </figure>
 </div>
 <p>Voici les points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li>Définition des termes, A36.3/F30.3&nbsp;
 <ul>
-<li><strong>Faute.</strong> La cause première du problème.</li>
-<li><strong>Erreur.</strong> La manifestation de la faute lors de l’exécution. Les erreurs sont détectées (ou non).</li>
-<li><strong>Échec.</strong> Déni de service causé par une erreur.</li>
+<li><strong><span style="white-space:nowrap">Faute :</span></strong> la cause première du problème.</li>
+<li><strong><span style="white-space:nowrap">Erreur :</span></strong> la manifestation de la faute lors de l’exécution. Les erreurs sont détectées (ou non).</li>
+<li><strong><span style="white-space:nowrap">Échec :</span></strong> déni de service causé par une erreur.</li>
 </ul></li>
 <li>Les solutions proposées par l’architecte système et documentées par Larman impliquent les concepts <span style="white-space:nowrap">suivants :</span>
 <ul>
@@ -375,14 +375,14 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Faire une conception pour la fiabilité nécessite de l’expérience (ou l’utilisation des patterns). Un bon livre sur le sujet est celui de <span class="citation" data-cites="hanmer_patterns_2007">Hanmer (<a href="references.html#ref-hanmer_patterns_2007" role="doc-biblioref">2007</a>)</span>.</p>
+<p>Faire une conception pour la fiabilité nécessite de l’expérience (ou l’utilisation des patterns). Le livre de <span class="citation" data-cites="hanmer_patterns_2007">Hanmer (<a href="references.html#ref-hanmer_patterns_2007" role="doc-biblioref">2007</a>)</span> est une bonne référence pour en savoir plus.</p>
 <p>L’utilisation de services dans le nuage (infonuagique) amène une redondance de serveurs. Cependant, même un service Web a besoin de <a href="https://aws.amazon.com/about-aws/global-infrastructure/">redondance dans les zones géographiques</a>, car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourraient affecter toute une grappe de serveurs.</p>
 </div>
 </div>
 <section id="exercices" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="exercices"><span class="header-section-number">15.1</span> Exercices</h2>
 <div id="exr-faute_erreur_echec" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 15.1 (Faute, Erreur, Échec) </strong></span>Pour chaque scénario, indiquez la faute, l’erreur et l’échec (selon les définitions dans les notes de cours).</p>
+<p><span class="theorem-title"><strong>Exercice 15.1 (Faute, Erreur, Échec) </strong></span>Pour chaque scénario, indiquez la faute, l’erreur et l’échec (selon les définitions dans ce manuel).</p>
 <p><strong>Scénario <span style="white-space:nowrap">1 :</span> Guichet automatique</strong></p>
 <p>Lors de son contrôle d’un guichet automatique, une technicienne constate qu’il n’y a plus de billets. Alors, elle remet des billets de 20 $ et de 50 $. La prochaine personne qui utilise ce guichet automatique indique qu’elle veut retirer 100 $, mais elle est surprise quand elle reçoit 5 billets de 50 $ (pour 250 $).</p>
 <ul>

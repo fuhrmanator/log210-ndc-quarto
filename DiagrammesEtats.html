@@ -341,7 +341,7 @@ div.csl-indent {
 
 
 <p>Ce chapitre contient des informations sur les diagrammes d’états en UML. Ce sujet est traité dans le chapitre A29/F25&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</p>
-<p>Il s’agit de la modélisation. Un état est une simplification de la réalité de quelque chose qui évolue dans le temps.</p>
+<p>Les diagrammes d’états sont aussi connus comme des machines à états. Il s’agit de la modélisation des états d’un processus, d’un système, d’un composant, etc. Un état est une simplification de la réalité de quelque chose qui évolue dans le temps. Cela permet de modéliser le comportement de quelque chose face à un événement, comme indiqué sur la <a href="#fig-DiagrammeEtat">figure&nbsp;<span>17.1</span></a>.</p>
 <p>Les points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li>Un diagramme d’états sert à modéliser les comportements. Un concept <span style="white-space:nowrap">préalable :</span> <a href="https://fr.wikipedia.org/wiki/Automate_fini#Automates_UML">Automate fini</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>.</li>
@@ -373,7 +373,7 @@ div.csl-indent {
 <div id="fig-DiagrammeEtat" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="DiagrammesEtats_files/mediabag/0d6da38f8da9a09d78a7f601801ae00a3970db10.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;17.1: Diagramme d’états (figure A29.3/F25.10 <i class="fa-solid fa-book" aria-label="book"></i>). <a href="http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;17.1: Diagramme d’états modélisant un système téléphonique (figure A29.3/F25.10 <i class="fa-solid fa-book" aria-label="book"></i>). Il y a des états (comme <strong>Inactif</strong> et <strong>ÉmissionTonalité</strong>), des super-états (comme <strong>Actif</strong>), des événements (comme <strong>décrocher</strong> et <strong>raccrocher</strong>), des transitions (indiquées par les flèches), des actions de transitions (comme <strong>/tonalité</strong>) et des conditions de garde (comme <strong>[abonné valide]</strong>). <a href="http://www.plantuml.com/plantuml/uml/TL6xRiCm3Dpr5PmB6Dqz537QfKkdR4a6HQ9Z8HPbK7IGeEW7z5Fo7VwnqgbjzBbGrDtnT8HMMInB7rkJZu4wopP2bakBMZcu7ypUkkE1Kq_UfJOn25lAIY795zKJrhPlPOrdgTfmeAWqE2t8fWaU0MCd5_2O7OTEGYApkTj1KJp0CradeJRJ2GfLjwO4FrmT9zSWmpr88ji66Qwm9TZOVIBI_gIOnvsfvjdPfWIsRfeskh7WPFkwl3oynv2pPbdFrkOtT5E-z76uSb8NfTJQDQ6k6SrtV5G-QYmywwq4tJq6pVY7wZ-_PHgA_jFiX9mNrSYwCUQRMI5v_QWF">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 <section id="exercices" class="level2" data-number="17.1">
@@ -396,7 +396,7 @@ Note
 <li><a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571">PlantUML Gizmo</a>, module supplémentaire Google Docs;</li>
 <li><a href="https://www.planttext.com/">PlantText.com</a>.</li>
 </ul>
-<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la <span class="citation" data-cites="fig-LucidchartUML">(<a href="references.html#ref-fig-LucidchartUML" role="doc-biblioref"><strong>fig-LucidchartUML?</strong></a>)</span>).</p>
+<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels (sans règles) pour UML. Voir la <span class="citation" data-cites="fig-LucidchartUML">(<a href="references.html#ref-fig-LucidchartUML" role="doc-biblioref"><strong>fig-LucidchartUML?</strong></a>)</span> pour plus de détails.</p>
 </div>
 </div>
 <div id="exr-etats_telephone" class="theorem exercise">
@@ -406,7 +406,7 @@ Note
 </div>
 <div id="exr-etats_bancomat" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 17.2 (Guichet automatique) </strong></span>Faites un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format <span style="white-space:nowrap">bref) :</span></p>
-<p><strong>S’authentifier.</strong> Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire, et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.</p>
+<p><strong>S’authentifier.</strong> Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire, et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment où le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.</p>
 <p><strong>Gérer guichet</strong>. L’Administrateur démarre le système, et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre.</p>
 </div>
 

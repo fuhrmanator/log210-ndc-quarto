@@ -338,7 +338,7 @@ div.csl-indent {
   <li><a href="#associations" id="toc-associations" class="nav-link" data-scroll-target="#associations"><span class="toc-section-number">4.3</span>  Associations</a></li>
   <li><a href="#exemple-de-mdd-pour-le-jeu-risk" id="toc-exemple-de-mdd-pour-le-jeu-risk" class="nav-link" data-scroll-target="#exemple-de-mdd-pour-le-jeu-risk"><span class="toc-section-number">4.4</span>  Exemple de MDD pour le jeu Risk</a></li>
   <li><a href="#attributs-dérivés" id="toc-attributs-dérivés" class="nav-link" data-scroll-target="#attributs-dérivés"><span class="toc-section-number">4.5</span>  Attributs dérivés</a></li>
-  <li><a href="#classes-de-description-et-de-catalogues" id="toc-classes-de-description-et-de-catalogues" class="nav-link" data-scroll-target="#classes-de-description-et-de-catalogues"><span class="toc-section-number">4.6</span>  Classes de “description” et de catalogues</a></li>
+  <li><a href="#classes-de-description-et-classe-de-catalogues" id="toc-classes-de-description-et-classe-de-catalogues" class="nav-link" data-scroll-target="#classes-de-description-et-classe-de-catalogues"><span class="toc-section-number">4.6</span>  Classes de “description” et classe de catalogues</a></li>
   <li><a href="#classes-dassociation" id="toc-classes-dassociation" class="nav-link" data-scroll-target="#classes-dassociation"><span class="toc-section-number">4.7</span>  Classes d’association</a></li>
   <li><a href="#affinement-du-mdd" id="toc-affinement-du-mdd" class="nav-link" data-scroll-target="#affinement-du-mdd"><span class="toc-section-number">4.8</span>  Affinement du MDD</a></li>
   <li><a href="#faq-mdd" id="toc-faq-mdd" class="nav-link" data-scroll-target="#faq-mdd"><span class="toc-section-number">4.9</span>  FAQ MDD</a>
@@ -359,7 +359,7 @@ div.csl-indent {
 <p>Les MDD sont expliqués en détail dans le chapitre 9&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>, mais voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li>Les classes conceptuelles ne sont pas des classes logicielles. Ainsi, selon la méthodologie de Larman, <em>elles n’ont pas de méthodes</em>.</li>
-<li>Les classes ont des noms commençant avec une lettre majuscule, par exemple <code>Joueur</code>, et elles ne sont jamais au pluriel, par exemple <del><code>Joueurs</code></del>.</li>
+<li>Les classes ont des noms commençant avec une lettre majuscule, par exemple <code>Joueur</code>, et elles ne sont jamais au pluriel, par exemple une classe ne peut pas prendre le nom <del><code>Joueurs</code></del>.</li>
 </ul>
 <section id="classes-conceptuelles" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="classes-conceptuelles"><span class="header-section-number">4.1</span> Classes conceptuelles</h2>
@@ -464,9 +464,9 @@ div.csl-indent {
 <p>Voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li><em>Le type d’un attribut est important, et il faut le spécifier dans un MDD</em>, même si dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>, il y a plusieurs exemples sans type.</li>
-<li>On ne se soucie pas de la visibilité des attributs dans un MDD.</li>
+<li>Ne vous souciez pas de la visibilité des attributs dans un MDD.</li>
 <li>Faites attention à la confusion des attributs et des classes. Si l’on ne pense pas un concept <em>X</em> en termes alphanumériques dans le monde réel, alors il s’agit probablement d’une classe conceptuelle. Par exemple, dans le monde réel, une université n’est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</li>
-<li>De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>, la classe <code>Pays</code> n’a pas un <em>attribut</em> <code>joueur:Joueur</code> (qui contrôle le <span style="white-space:nowrap">Pays) ;</span> elle a plutôt une <em>association</em> avec la classe <code>Joueur</code> et un verbe <code>contrôle</code>.</li>
+<li>De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>, la classe <code>Pays</code> n’a pas un <em>attribut</em> <code>joueur:Joueur</code> (qui contrôle le <span style="white-space:nowrap">Pays) ;</span> elle a plutôt une <em>association</em> avec la classe <code>Joueur</code> et un verbe <code>contrôle</code>.</li>
 </ul>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -481,7 +481,7 @@ div.csl-indent {
 </section>
 <section id="associations" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="associations"><span class="header-section-number">4.3</span> Associations</h2>
-<p>Les associations dans le MDD sont le sujet de la section 9.14&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Il faut se référer au contenu du livre pour les détails. Une association est une relation entre des classes (ou des instances de classes). Elle indique une connexion significative ou intéressante. Voici des points <span style="white-space:nowrap">importants :</span></p>
+<p>Les associations dans le MDD sont le sujet de la section 9.14&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Il faut se référer au contenu du livre de Larman pour les détails. Une association est une relation entre des classes (ou des instances de classes). Elle indique une connexion significative ou intéressante. Voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
 <li>Il est facile de trouver beaucoup d’associations, mais il faut se limiter à celles qui doivent être conservées un certain temps. Pensez à la <strong>mémorabilité</strong> d’une association dans le contexte du logiciel à développer. Par exemple, considérez les associations de la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a><span style="white-space:nowrap"> :</span>
 <ul>
@@ -492,9 +492,9 @@ div.csl-indent {
 <li>En UML, les associations sont représentées par des lignes entre classes.
 <ul>
 <li>Elles sont nommées (avec un verbe commençant par une lettre majuscule).</li>
-<li>Des mots simples comme “A”, “Utilise”, “Possède”, “Contient”, etc. sont généralement des choix médiocres, car ils n’aident pas notre compréhension du domaine. Essayez de trouver des mots plus riches, si possible.</li>
+<li>Des verbes simples comme “A”, “Utilise”, “Possède”, “Contient”, etc. sont généralement des choix médiocres, car ils n’aident pas notre compréhension du domaine. Essayez de trouver des verbes plus riches, si possible.</li>
 <li>Une flèche (triangle) de “sens de lecture” optionnelle indique la direction dans laquelle lire l’association. Si la flèche est absente, on lit l’association de gauche à droite ou de haut en bas.</li>
-<li>Les extrémités des associations ont une expression de la multiplicité indiquant une relation numérique entre les instances des classes. Vous pouvez en trouver plusieurs exemples dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>.</li>
+<li>Les extrémités des associations ont une expression de la multiplicité indiquant une relation numérique entre les instances des classes. Vous pouvez en trouver plusieurs exemples sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>.</li>
 </ul></li>
 </ul>
 <div id="tbl-associations-courantes" class="anchored">
@@ -582,7 +582,7 @@ div.csl-indent {
 </section>
 <section id="exemple-de-mdd-pour-le-jeu-risk" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="exemple-de-mdd-pour-le-jeu-risk"><span class="header-section-number">4.4</span> Exemple de MDD pour le jeu Risk</h2>
-<p>La <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a> est un MDD pour le jeu Risk, selon <a href="CasUtilisation.html#exemple-jeu-de-risk">l’exemple</a> mentionné dans le chapitre sur les cas d’utilisation.</p>
+<p>La <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a> est un MDD pour le jeu Risk, selon <a href="CasUtilisation.html#exemple-jeu-de-risk">l’exemple</a> mentionné dans le chapitre sur les cas d’utilisation. Commençons par la classe <code>JeuRisk</code> qui est l’objet racine du modèle. Il est relié à la classe <code>Joueur</code>, puisqu’un joueur “joue” à <code>JeuRisk</code> (notez le triangle pour le sens de la lecture). Selon les cardinalités de l’association entre ces deux classes, il peut y avoir entre deux (2) et six (6) personnes qui jouent au jeu. Le jeu “inclut” cinq objets de la classe <code>Dé</code>, mais un <code>Joueur</code> jette un, deux ou trois dés (selon la règle du jeu Risk). L’association entre <code>Joueur</code> et <code>Pays</code> a un verbe “contrôle”, qui est un exemple de verbe plus riche que “possède” ou “a”. Si vous regardez tout le modèle, vous verrez qu’il représente visuellement beaucoup d’éléments du jeu.</p>
 <div id="fig-MDD-jeu-de-risk" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/ff7380a7a7f7af8b020b8554ec77aa58f81d9fd2.svg" class="img-fluid figure-img"></p>
@@ -596,23 +596,23 @@ div.csl-indent {
 <div id="fig-MDD-attribut-derive" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/d99d8868212b4107028e1acf9ccc6926cb54aa3a.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.2: <code>nbPaysOccupés</code> est un attribut dérivé et sa valeur sera calculée selon le nombre de pays de l’association. <a href="http://www.plantuml.com/plantuml/uml/VLB1QW8n4BtdAmOlsnRKUXKHYvHYArIwjZt7xEY6pKvaac2b-46zzm_yiSvQeM9123E4UNdlpKn68MgEgNOgL9RMcdKD8MuTIcHhpYeBRQeL-qI5ySupHDOKf8GKLGQnj07aQ2Wr5HksCIB1qbC4I_1kgV2ReB8_kWANEhdO84ZN24ziG_DaCX-hR5vYGF2nH0xWlAzWnQWFLFdR0rpLkXAJYL5qSPj9jYJDE8U5Q3BSJQVmcj-_v2VYqBkzlcGWw5KJwABB2LNmw1EJFXtDEUgZCWNaXkqwNYAReGo9mmdHwUmY9rJ1Q5b7JvMsGC1w7RTGOxreNXcdGsZCO6BuL03aQ-X3BgkZbLm7XpNr5oxXi4kBcTw6PsFIUlyL16Of3he7n53jZbmDv3_JJXqrMhqMjDkIEfsRrY-u3sDfXlVVOdAeHaY5_9aV">(PlantUML)</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.2: <code>nbPaysOccupés</code> est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l’association. <a href="http://www.plantuml.com/plantuml/uml/VLB1QW8n4BtdAmOlsnRKUXKHYvHYArIwjZt7xEY6pKvaac2b-46zzm_yiSvQeM9123E4UNdlpKn68MgEgNOgL9RMcdKD8MuTIcHhpYeBRQeL-qI5ySupHDOKf8GKLGQnj07aQ2Wr5HksCIB1qbC4I_1kgV2ReB8_kWANEhdO84ZN24ziG_DaCX-hR5vYGF2nH0xWlAzWnQWFLFdR0rpLkXAJYL5qSPj9jYJDE8U5Q3BSJQVmcj-_v2VYqBkzlcGWw5KJwABB2LNmw1EJFXtDEUgZCWNaXkqwNYAReGo9mmdHwUmY9rJ1Q5b7JvMsGC1w7RTGOxreNXcdGsZCO6BuL03aQ-X3BgkZbLm7XpNr5oxXi4kBcTw6PsFIUlyL16Of3he7n53jZbmDv3_JJXqrMhqMjDkIEfsRrY-u3sDfXlVVOdAeHaY5_9aV">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
 </section>
-<section id="classes-de-description-et-de-catalogues" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="classes-de-description-et-de-catalogues"><span class="header-section-number">4.6</span> Classes de “description” et de catalogues</h2>
+<section id="classes-de-description-et-classe-de-catalogues" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="classes-de-description-et-classe-de-catalogues"><span class="header-section-number">4.6</span> Classes de “description” et classe de catalogues</h2>
 <p>Deux catégories de classes conceptuelles qui vont de pair sont les <em>descriptions d’entités</em> et les <em>catalogues</em> qui agrègent les descriptions. Elles sont expliquées en détail dans la section 9.13&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Voici des conditions pour utiliser correctement une classe de description d’une autre classe “X”<span style="white-space:nowrap"> :</span></p>
 <ul>
 <li>Il faut disposer de la description d’un produit ou d’un service “X” indépendamment de l’existence actuelle des “X”. Par exemple, il pourrait y avoir une rupture de stock d’un Produit (aucune instance actuelle), mais on a besoin de connaître son prix. La classe DescriptionProduit permet d’avoir cette information, même s’il n’y a plus d’instances de Produit. Un autre exemple est un trimestre où un cours <em>LOG711</em> ne se donne pas (il n’y a pas de GroupeCours de LOG711 dans le trimestre actuel). Alors, une classe Cours (qui joue le rôle de description) sert pour spécifier le nombre de crédits, les cours préalables, etc.</li>
-<li>La suppression d’instances de “X” entraîne la perte de l’information qui doit être mémorisée, mais a été incorrectement associée à l’entité en question.</li>
+<li>La suppression d’instances de la classe “X” entraîne la perte de l’information qui doit être mémorisée, mais qui a été incorrectement associée à l’entité en question.</li>
 <li>La classe de description réduit la duplication des informations.</li>
 </ul>
 <p>La <a href="#fig-MDD-CoursGroupeCoursDescription">figure&nbsp;<span>4.3</span></a> présente une classe de description pour le contexte de cours et groupe-cours.</p>
 <div id="fig-MDD-CoursGroupeCoursDescription" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="MDD_files/mediabag/4588316d0a59ce034e824694e6517fc91f5f7051.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.3: Cours joue le rôle de description d’entités (les groupes-cours).</figcaption><p></p>
+<p><img src="MDD_files/mediabag/ed09ce3dde1265748b3c432af6ca7fb547e5e256.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.3: La classe Cours joue le rôle de description d’entités (les groupes-cours).</figcaption><p></p>
 </figure>
 </div>
 <div class="callout callout-style-default callout-warning callout-captioned">
@@ -631,7 +631,7 @@ Avertissement
 <div id="fig-MDD-ErreurDescription" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="MDD_files/mediabag/cc620821ee79198da8008a773d4a43aad8b3d095.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.4: Erreur fréquente: utiliser une classe de description sans justification.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.4: Illustration de l’erreur fréquente: utiliser une classe de description sans justification.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -654,7 +654,7 @@ Avertissement
 <li>si la durée de vie des instances de la classe d’association dépend de <span style="white-space:nowrap">l’association ;</span></li>
 <li>s’il y a une association <em>N</em>-<em>N</em> entre deux concepts et des informations liées à l’association elle-même.</li>
 </ul>
-<p>Dans l’exemple à la <a href="#fig-MDD-classe-association">figure&nbsp;<span>4.5</span></a>, voici pourquoi il y a une classe d’association Occupation. Lorsqu’un Joueur contrôle un Pays, il doit y avoir des armées dans ce dernier. Le MDD pourrait avoir un attribut <code>nbRégiments</code> dans la classe Pays. Cependant, l’attribut <code>nbRégiments</code> est lié à l’association entre le Joueur et le Pays qu’il contrôle, alors on décide d’utiliser une classe d’association.</p>
+<p>L’exemple illustré sur la <a href="#fig-MDD-classe-association">figure&nbsp;<span>4.5</span></a> explique la nécessité d’une classe d’association Occupation. Lorsqu’un Joueur contrôle un Pays, il doit déployer des armées dans ce dernier. Le MDD pourrait avoir un attribut <code>nbRégiments</code> dans la classe Pays. Cependant, l’attribut <code>nbRégiments</code> est lié à l’association entre le Joueur et le Pays qu’il contrôle, alors on décide d’utiliser une classe d’association.</p>
 <p>Si un Joueur envahit un Pays, la nouvelle instance de la classe d’association Occupation sera créée (avec la nouvelle association). Pourtant, cette instance d’Occupation sera détruite si un autre Joueur arrive à prendre le contrôle du Pays. Alors, la durée de vie de cette instance dépend de l’association.</p>
 <p>Voir le livre obligatoire pour plus d’exemples.</p>
 <div id="fig-MDD-classe-association" class="quarto-figure quarto-figure-center anchored">
@@ -666,10 +666,10 @@ Avertissement
 </section>
 <section id="affinement-du-mdd" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="affinement-du-mdd"><span class="header-section-number">4.8</span> Affinement du MDD</h2>
-<p>Lorsqu’on modélise un domaine, il est normal de commencer avec un modèle simple (à partir d’un ou de deux cas d’utilisation) et ensuite de l’affiner dans les itérations suivantes, où on y intègre d’autres éléments plus subtils ou complexes du problème qu’on étudie. Les détails de cette approche sont présentés dans le chapitre F26/A31&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Bien que la matière soit présentée plus tard dans le livre, ce sont des choses à savoir pour la modélisation d’un domaine, même dans une première itération.</p>
+<p>Lorsqu’on modélise un domaine, il est normal de commencer par un modèle simple (à partir d’un ou de deux cas d’utilisation) et ensuite de l’affiner dans les itérations suivantes, où on y intègre d’autres éléments plus subtils ou complexes du problème qu’on étudie. Les détails de cette approche sont présentés dans le chapitre F26/A31&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Bien que la matière soit présentée plus tard dans le livre, ce sont des choses à savoir pour la modélisation d’un domaine, même dans une première itération.</p>
 <p>Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus <span style="white-space:nowrap">haut :</span></p>
 <ul>
-<li>Composition, par exemple la classe Continent qui groupe les Pays dans la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>. Larman propose d’utiliser la composition <span style="white-space:nowrap">lorsque :</span>
+<li>Composition, par exemple la classe Continent qui groupe les Pays sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>. Larman propose d’utiliser la composition <span style="white-space:nowrap">lorsque :</span>
 <ul>
 <li>la durée de vie du composant est limitée à celle du composite (lorsqu’un objet Continent est instancié, ça doit grouper des instances de Pays pour être cohérent), il existe une dépendance création-suppression de la partie avec le tout (ça ne fait pas de sens de supprimer un objet Pays d’une instance de Continent dans le jeu <span style="white-space:nowrap">Risk) ;</span></li>
 <li>il existe un assemblage logique ou physique évident entre le tout et les parties (on ne peut construire un Continent sans les <span style="white-space:nowrap">Pays) ;</span></li>
@@ -700,7 +700,7 @@ Avertissement
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Un <strong>modèle du domaine</strong> n’est pas un <strong>modèle de données</strong> (qui représente par définition des objets persistants stockés quelque part).</p>
+<p>Un <strong>modèle du domaine</strong> n’est pas un <strong>modèle de données</strong> ([ce dernier] représente par définition des objets persistants stockés quelque part).</p>
 </div>
 </div>
 </div>
@@ -721,7 +721,7 @@ Avertissement
 <section id="exercices" class="level2" data-number="4.10">
 <h2 data-number="4.10" class="anchored" data-anchor-id="exercices"><span class="header-section-number">4.10</span> Exercices</h2>
 <div id="exr-MDD-trouver-classes-conceptuelles-catégorie" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 4.1 (Classes conceptuelles trouvées par catégorie) </strong></span>À partir du <a href="Annexe_Cas_utilisation_Réserver_livre.html">cas d’utilisation <em>Réserver un livre de la bibliothèque</em></a>, trouvez des classes conceptuelles candidates en utilisant une liste de catégories de classes. Vous pouvez remplir un tableau comme <span style="white-space:nowrap">ceci :</span></p>
+<p><span class="theorem-title"><strong>Exercice 4.1 (Trouver des classes conceptuelles par catégorie) </strong></span>À partir du <a href="Annexe_Cas_utilisation_Réserver_livre.html">cas d’utilisation <em>Réserver un livre de la bibliothèque</em></a>, trouvez des classes conceptuelles candidates en utilisant une liste de catégories de classes. Vous pouvez remplir un tableau comme <span style="white-space:nowrap">ceci :</span></p>
 <table class="table">
 <colgroup>
 <col style="width: 40%">
@@ -826,7 +826,7 @@ Note
 <li><a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571">PlantUML Gizmo</a>, module supplémentaire Google Docs;</li>
 <li><a href="https://www.planttext.com/">PlantText.com</a>.</li>
 </ul>
-<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels pour UML (voir la <span class="citation" data-cites="fig-LucidchartUML">(<a href="references.html#ref-fig-LucidchartUML" role="doc-biblioref"><strong>fig-LucidchartUML?</strong></a>)</span>).</p>
+<p>Méfiez-vous des outils comme Lucidchart ayant seulement des profils superficiels (sans règles) pour UML. Voir la <span class="citation" data-cites="fig-LucidchartUML">(<a href="references.html#ref-fig-LucidchartUML" role="doc-biblioref"><strong>fig-LucidchartUML?</strong></a>)</span> pour plus de détails.</p>
 </div>
 </div>
 <div id="exr-MDD-diagramme" class="theorem exercise">

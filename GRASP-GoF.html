@@ -416,11 +416,19 @@ div.csl-indent {
 <p>Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C’est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF.</p>
 <section id="exemple-avec-adaptateur" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="exemple-avec-adaptateur"><span class="header-section-number">14.1</span> Exemple avec Adaptateur</h2>
-<p>Le chapitre A26/F23&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>&nbsp;présente l’exemple du pattern Adaptateur pour les calculateurs de taxes (<a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> tirée du livre de Larman, figure A26.1/F23.1).</p>
+<p>Le pattern Adaptateur a été proposé par <span class="citation" data-cites="GoF1994">Gamma, Helm, Johnson, &amp; Vlissides (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>, et sa structure est illustrée sur la <a href="#fig-AdapterGoF">figure&nbsp;<span>14.1</span></a>. La structure de base peut être trompeuse, car elle ne montre qu’une seule classe <code>Adaptee</code> qui représente l’API (externe) que l’on ne peut modifier. En réalité, ce pattern est plus intéressant lorsqu’on considère <em>plusieurs</em> cas de classe <code>Adaptee</code>, chacune avec une API différente.</p>
+<p>Le chapitre A26/F23&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>&nbsp;présente l’exemple du pattern Adaptateur pour les calculateurs de taxes (<a href="#fig-Fig23_1">figure&nbsp;<span>14.2</span></a> tirée du livre de Larman, figure A26.1/F23.1). On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la version de ce manuel. Nous faisons une hypothèse sur les noms des méthodes pour l’API des classes adaptées, car cette information n’est pas spécifiée. En plus, nous n’avons pas spécifié les arguments (c’est “?”), car les détails ne sont pas connus. Un autre point à mentionner dans le problème de calcul des taxes et que ça dépend de l’article. Selon l’état ou la province, certains articles sont sujets à des taxes et d’autres non. A priori, le calculateur de taxes est l’expert pour décider combien de taxes pour chaque article. C’est pour cela que l’adaptateur a accès à l’objet Vente qui agrège des LigneArticles. Cet objet Vente a une visibilité de paramètre.</p>
+<p>Dans le contexte du projet NextGen POS, Larman propose l’utilisation de ce pattern pour plusieurs dimensions où des services externes ont plusieurs possibilités (l’inventaire, la comptabilité, etc.).</p>
+<div id="fig-AdapterGoF" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="GRASP-GoF_files/mediabag/886375441d0edd1d4d0a1b048c16746538e910f2.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.1: Le diagramme de classe du pattern Adaptateur proposé par <span class="citation" data-cites="GoF1994">Gamma et coll. (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>.</figcaption><p></p>
+</figure>
+</div>
 <div id="fig-Fig23_1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="GRASP-GoF_files/mediabag/1458a105cb4bae13f521f57ab76782ddc4cb975c.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;14.1: Le pattern Adaptateur.</figcaption><p></p>
+<p><img src="GRASP-GoF_files/mediabag/8f60d2f133e36f4a5b83685af3ae0732b557df65.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.2: Le pattern Adaptateur appliqué pour les services externes de calculateurs de taxes. Chaque service externe a une API distincte et immuable. Les adaptateurs concrets permettent de normaliser l’accès à ces API à travers une interface <code>IAdaptateurCalculTaxes</code>.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -437,11 +445,11 @@ div.csl-indent {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* ... */</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Pour supporter un nouveau calculateur de taxes, il faudrait coder une nouvelle branche dans le bloc de <code>if/then</code>. Ça nuirait à la lisibilité du code, et la méthode qui contient tout ce code deviendrait de plus en plus longue. Même si l’on faisait une méthode pour encapsuler le code de chaque branche, ça ferait toujours augmenter les responsabilités de la classe Vente. Elle est responsable de connaître tous les détails (l’API distincte et immuable) de chaque calculateur de taxes externe, puisqu’elle communique directement (il y a du couplage) à ces derniers.</p>
-<p>Le pattern Adaptateur comprend les principes GRASP Faible couplage, Forte cohésion, Polymorphisme, Indirection, Fabrication pure et Protection des variations. La <a href="#fig-Fig23_3">figure&nbsp;<span>14.2</span></a> (tirée du livre de Larman, Figure A26.3/F23.3) démontre la relation entre ces principes dans le cas d’Adaptateur.</p>
+<p>Le pattern Adaptateur comprend les principes GRASP Faible couplage, Forte cohésion, Polymorphisme, Indirection, Fabrication pure et Protection des variations. La <a href="#fig-Fig23_3">figure&nbsp;<span>14.3</span></a> (tirée du livre de Larman, Figure A26.3/F23.3) démontre la relation entre ces principes dans le cas d’Adaptateur.</p>
 <div id="fig-Fig23_3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="GRASP-GoF_files/mediabag/24d43a17f1d509ec55844e78c89dc08c43a3e772.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;14.2: Adaptateur et principes GRASP <span class="citation" data-cites="craig_uml_2005">(voir <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman, 2005, fig. A26.3/F23.3</a>)</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.3: Adaptateur et principes GRASP <span class="citation" data-cites="craig_uml_2005">(voir <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman, 2005, fig. A26.3/F23.3</a>)</span></figcaption><p></p>
 </figure>
 </div>
 <p>On peut donc voir le pattern Adaptateur comme <em>une spécialisation</em> de plusieurs principes <span style="white-space:nowrap">GRASP :</span></p>
@@ -458,7 +466,7 @@ div.csl-indent {
 <section id="sec-GRASP_Adaptateur" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="sec-GRASP_Adaptateur"><span class="header-section-number">14.3</span> Identifier les GRASP dans les GoF</h2>
 <p>Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d’imaginer le problème qui pourrait exister éventuellement. Ensuite, on explique comment le principe (et le pattern GoF) résout le problème.</p>
-<p>Consultez la <a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> du pattern Adaptateur pour les sections suivantes.</p>
+<p>Consultez la <a href="#fig-Fig23_1">figure&nbsp;<span>14.2</span></a> du pattern Adaptateur pour les sections suivantes.</p>
 <section id="polymorphisme" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="polymorphisme"><span class="header-section-number">14.3.1</span> Polymorphisme</h3>
 <p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
@@ -473,7 +481,13 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Le “comportement qui varie” est la manière d’adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode <code>getTaxes()</code>. Alors, cette “responsabilité” est affectée au type interface <code>IAdaptateurCalculTaxes</code> (et à ses implémentations) dans l’opération polymorphe <code>getTaxes()</code>.</p>
+<p>Le “comportement qui varie” est la manière d’adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode <code>getTaxes()</code>. Alors, cette “responsabilité” est affectée au type interface <code>IAdaptateurCalculTaxes</code> (et à ses implémentations) dans l’opération polymorphe <code>getTaxes()</code>. Cet aspect du pattern est illustré sur la <a href="#fig-AdaptateurPolymorphismeNextGen">figure&nbsp;<span>14.4</span></a></p>
+<div id="fig-AdaptateurPolymorphismeNextGen" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/AdaptateurCalcTaxesPolymorphism.drawio.svg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.4: Le mécanisme de polymorphisme dans le pattern Adaptateur appliqué au problème de calculateurs de taxes. <code>getTaxes(...)</code> est un appel polymorphe. Selon la configuration du système (l’objet auquel <code>IAdaptateurCalculTaxes</code> fait référence), le comportement sera différent.</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="fabrication-pure" class="level3" data-number="14.3.2">
 <h3 data-number="14.3.2" class="anchored" data-anchor-id="fabrication-pure"><span class="header-section-number">14.3.2</span> Fabrication pure</h3>
@@ -529,7 +543,7 @@ div.csl-indent {
 </section>
 <section id="grasp-et-réusinage" class="level2" data-number="14.4">
 <h2 data-number="14.4" class="anchored" data-anchor-id="grasp-et-réusinage"><span class="header-section-number">14.4</span> GRASP et réusinage</h2>
-<p>Il y a des liens entre les GRASP et les activités de <a href="Réusinage.html">Réusinage (Refactorisation)</a>. Alors, un IDE qui automatise les <em>refactorings</em> peut vous aider à appliquer certains GRASP.</p>
+<p>Il y a des liens entre les GRASP et les activités de <a href="Réusinage.html">Réusinage (Refactorisation)</a>. Alors, un IDE qui automatise les réusinages peut vous aider à appliquer certains GRASP.</p>
 <ul>
 <li>GRASP Polymorphisme est relié à <a href="https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html"><em>Replace Type Code with Subclasses</em></a> et à <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace Conditional with Polymorphism</em></a> – attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (<code>switch</code>) répétées à plusieurs endroits dans le code.</li>
 <li>GRASP Fabrication pure est relié à <a href="https://refactoring.com/catalog/extractClass.html"><em>Extract Class</em></a>.</li>
@@ -538,7 +552,7 @@ div.csl-indent {
 </section>
 <section id="exercices" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="exercices"><span class="header-section-number">14.5</span> Exercices</h2>
-<p>Pour ces exercices, suivez le modèle pour décortiquer le patron Adaptateur, illustré à la <a href="#fig-Fig23_3">figure&nbsp;<span>14.2</span></a>.</p>
+<p>Pour ces exercices, suivez le modèle pour décortiquer le patron Adaptateur, illustré à la <a href="#fig-Fig23_3">figure&nbsp;<span>14.3</span></a>.</p>
 <p>Une bonne ressource pour les patterns GoF est la <span style="white-space:nowrap">suivante :</span></p>
 <p><a href="https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html">https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html</a></p>
 <div class="callout callout-style-default callout-tip callout-captioned">
@@ -555,34 +569,34 @@ Astuce
 </div>
 </div>
 <div id="exr-GRASP_iterateur" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.1 (Itérateur) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Patron-,iterateur,-Contexte">Itérateur</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.1 (Itérateur) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Patron-,iterateur,-Contexte">Itérateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_observateur" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.2 (Observateur) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Contr%C3%B4leur-,patron%20observateur,-Mod%C3%A8le">Observateur</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.2 (Observateur) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Contr%C3%B4leur-,patron%20observateur,-Mod%C3%A8le">Observateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_strategie" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.3 (Stratégie) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=page-,patron%20strategie,-Strat%C3%A9gie">Stratégie</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.3 (Stratégie) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=page-,patron%20strategie,-Strat%C3%A9gie">Stratégie</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_composite" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.4 (Composite) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=composants-,patron%20composite,-Contexte">Composite</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.4 (Composite) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=composants-,patron%20composite,-Contexte">Composite</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_decorateur" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.5 (Décorateur) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte">Décorateur</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.5 (Décorateur) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte">Décorateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_methode_template" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.6 (Méthode Template) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte">Méthode Template</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.6 (Méthode Template) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte">Méthode Template</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_commande" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.7 (Commande) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte">Commande</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.7 (Commande) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte">Commande</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_methode_fabrique" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.8 (Méthode Fabrique) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)">Méthode de fabrique</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.8 (Méthode Fabrique) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)">Méthode de fabrique</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_proxy" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.9 (Proxy) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe">Proxy</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.9 (Proxy) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe">Proxy</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_facade" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.10 (Façade) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte">Façade</a>, selon les directives à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.10 (Façade) </strong></span>Identifiez les 4 principes GRASP dans le patron <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte">Façade</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-Adaptateur_Maps" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 14.11 (Adaptateur pour Maps) </strong></span>Proposez une mise en oeuvre du patron GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul <span style="white-space:nowrap">d’itinéraires :</span></p>
@@ -597,6 +611,9 @@ Astuce
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-GoF1994" class="csl-entry" role="doc-biblioentry">
+Gamma, E., Helm, R., Johnson, R., &amp; Vlissides, J. (1994). <em>Design <span>Patterns</span>: <span>Elements</span> of <span>Reusable</span> <span>Object</span>-<span>Oriented</span> <span>Software</span></em> (1ʳᵉ éd.). Reading, Mass&nbsp;: Addison-Wesley Professional. Repéré à <a href="http://amazon.com/o/ASIN/0201633612/">http://amazon.com/o/ASIN/0201633612/</a>
+</div>
 <div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
 Larman, C. (2005). <em><span>UML</span> 2 et design patterns</em> (3ᵉ éd.). Paris&nbsp;: Village Mondial.
 </div>

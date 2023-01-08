@@ -414,20 +414,32 @@ div.csl-indent {
 
 
 
+<p>À l’École de technologie supérieure, le cours de LOG210 propose un laboratoire de mise à niveau (nommé “lab 0”) réalisé individuellement où on passe à travers les différentes technologies utilisées dans le projet du laboratoire principal, qui lui, est réalisé pendant le reste du cours en trois itérations de trois semaines. On peut trouver sur GitHub l’énoncé du <a href="https://github.com/profcfuhrmanets/log210-enonce-lab0">lab0</a> et du <a href="https://github.com/profcfuhrmanets/log210-enonce-lab1">laboratoire principal</a>. Chaque équipe est libre à choisir parmi une liste d’exigences ce qu’elle veut réaliser dans chaque itération. Cela permet de pratiquer l’approche itérative en équipe. L’approche TDD est obligatoire (pour avoir des points pour une fonctionnalité réalisée).</p>
+<p>Les deux premières itérations sont évaluées, mais les points pour les fonctionnalités réussites ne compte qu’à la dernière itération. Cela a plusieurs avantages <span style="white-space:nowrap">pédagogiques :</span></p>
+<ul>
+<li>réduction du risque d’échec, puisqu’on on a des rétroactions formelles à toutes les trois semaines environ.</li>
+<li>réduction de la facilité de faire du plagiat, puisqu’on doit construit en équipe un système tout au long du cours, et las éléments d’analyse et de conception (le MDD et les RDCU) doivent être cohérents avec le code (et les tests).</li>
+<li>possibilité de constater et de corriger tôt les dysfonctionnements dans une équipe (mais on doit être proactif et pret à confronter les problèmes, ce qui reste un défi culturel).</li>
+</ul>
 <p>Ce chapitre contient des informations sur le volet technique des laboratoires.</p>
 <section id="typescript" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="typescript"><span class="header-section-number">20.1</span> TypeScript</h2>
 <p>Qu’est-ce que <span style="white-space:nowrap">TypeScript ?</span> Selon <span class="citation" data-cites="goldberg_learning_2022">Goldberg (<a href="references.html#ref-goldberg_learning_2022" role="doc-biblioref">2022</a>)</span>, TypeScript comprend quatre <span style="white-space:nowrap">éléments :</span></p>
 <ul>
 <li>Un <strong>langage de programmation</strong> ayant toute la syntaxe de JavaScript, plus une syntaxe propre à TypeScript pour définir et utiliser les <span style="white-space:nowrap">types ;</span></li>
-<li>Un <strong>vérificateur de type</strong> pouvant décortiquer un ensemble de fichiers en JavaScript et en TypeScript définissant des variables, les fonctions, etc., afin d’indiquer des problèmes éventuels de <span style="white-space:nowrap">configuration ;</span></li>
-<li>Un <strong>compilateur</strong> qui 1)&nbsp;invoque le vérificateur de type, 2)&nbsp;signale des problèmes le cas échéant et 3)&nbsp;finalement génère du code en JavaScript <span style="white-space:nowrap">équivalent ;</span></li>
+<li>Un <strong>vérificateur de type</strong> pouvant décortiquer un ensemble de fichiers en JavaScript et en TypeScript définissant des variables, des fonctions, etc., afin d’indiquer d’éventuels problèmes de <span style="white-space:nowrap">configuration ;</span></li>
+<li>Un <strong>compilateur</strong> qui
+<ul>
+<li>invoque le vérificateur de type,</li>
+<li>signale des problèmes si nécessaire et</li>
+<li>finalement génère du code en JavaScript <span style="white-space:nowrap">équivalent ;</span></li>
+</ul></li>
 <li>Un <strong>service de langage</strong> qui transmet des informations provenant du vérificateur de type à l’IDE pour que ce dernier puisse faciliter le développement.</li>
 </ul>
 </section>
 <section id="javascripttypescript" class="level2" data-number="20.2">
 <h2 data-number="20.2" class="anchored" data-anchor-id="javascripttypescript"><span class="header-section-number">20.2</span> JavaScript/TypeScript</h2>
-<p>Pour la personne ayant déjà des connaissances Java et des patrons de conception de la Bande des quatre <span class="citation" data-cites="GoF1994">Gamma, Helm, Johnson, &amp; Vlissides (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>, il est recommandé d’apprendre les choses dans cet <span style="white-space:nowrap">ordre :</span></p>
+<p>Pour la personne ayant déjà des connaissances de Java et des patrons de conception de la Bande des quatre <span class="citation" data-cites="GoF1994">Gamma, Helm, Johnson, &amp; Vlissides (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>, il est recommandé d’apprendre les choses dans cet <span style="white-space:nowrap">ordre :</span></p>
 <ul>
 <li><strong>JavaScript</strong><span style="white-space:nowrap"> :</span> un tutoriel intéressant (et libre) est sur <a href="https://fr.javascript.info/">fr.javascript.info</a>. Nous vous recommandons de contribuer à des <a href="https://github.com/javascript-tutorial/fr.javascript.info#readme">traductions en français sur GitHub</a>.</li>
 <li><strong>TypeScript</strong><span style="white-space:nowrap"> :</span> <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html">ce tutoriel</a> est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C#.</li>
@@ -562,8 +574,8 @@ ContributionsÉquipeViews.html</code></pre>
 </div>
 <section id="faire-le-bilan-de-la-contribution-de-chaque-membre" class="level3" data-number="20.5.1">
 <h3 data-number="20.5.1" class="anchored" data-anchor-id="faire-le-bilan-de-la-contribution-de-chaque-membre"><span class="header-section-number">20.5.1</span> Faire le bilan de la contribution de chaque membre</h3>
-<p>Après l’évaluation à la fin de chaque itération, il est important de considérer combien chaque membre a contribué au projet et de valider avec les responsabilités prévues dans le plan de l’itération. Il est normal d’avoir un écart entre le travail prévu et le travail effectué. Un des objectifs du bilan est d’essayer d’expliquer les gros écarts et de corriger ou mitiger les problèmes.</p>
-<p>Par exemple, on peut voir à la <a href="#fig-GitinspectorOutput">figure&nbsp;<span>20.2</span></a> que Anne et Justin ont fait une contribution beaucoup plus importante que Francis et Mélanie. Dans le bilan de l’itération, <strong>on doit indiquer explicitement ce fait, même avec des pourcentages</strong>.</p>
+<p>Après l’évaluation à la fin de chaque itération, il est important de quantifier et considérer la contribution de chacun au projet et de valider avec les responsabilités prévues dans le plan de l’itération. Il est normal d’avoir un écart entre le travail prévu et le travail effectué. Un des objectifs du bilan est d’essayer d’expliquer les gros écarts et de corriger ou mitiger les problèmes.</p>
+<p>Par exemple, on peut voir sur la <a href="#fig-GitinspectorOutput">figure&nbsp;<span>20.2</span></a> que Anne et Justin ont fait une contribution beaucoup plus importante que Francis et Mélanie. Dans le bilan de l’itération, <strong>on doit indiquer explicitement ce fait, même avec des pourcentages</strong>.</p>
 <div class="callout callout-style-default callout-important callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -574,7 +586,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Une phrase vague comme “des membres ont travaillé plus que d’autres” est une formulation diplomatique, mais elle n’est pas assez explicite et n’est pas une résolution proactive du problème, le cas échéant.</p>
+<p>Une phrase vague comme “des membres ont travaillé plus que d’autres” est une formulation diplomatique, mais elle n’est pas assez explicite et n’est pas une résolution proactive du problème, si nécessaire.</p>
 </div>
 </div>
 </section>
