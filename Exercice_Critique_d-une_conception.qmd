@@ -17,7 +17,7 @@ Pour cet exercice, nous examinerons une conception orientée objet réelle du je
 
 Pour visualiser la conception, nous avons généré un diagramme des classes en UML sur la @fig-Emojiopoly_classes avec l'outil [tplant](https://github.com/bafolts/tplant).
 
-```{.plantuml caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly].(https://github.com/Chuzzy/Emojiopoly)" #fig-Emojiopoly_classes}
+```{.plantuml caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly](https://github.com/Chuzzy/Emojiopoly)." #fig-Emojiopoly_classes}
 @startuml
 ' généré avec tplant a partir d'un clone de https://github.com/Chuzzy/Emojiopoly :
 ' tplant --input src/monopoly/**/*.ts --output Emojiopoly.puml -A
@@ -140,7 +140,9 @@ Puisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle d
 
 ```{.plantuml caption="MDD (version française) de Monopoly proposé par @craig_uml_2005. C'est le résultat d'une analyse du problème de jeu Monopoly selon la méthodologie proposée dans le chapitre @sec-mdd."}
 @startuml
-!include ecriture.pumlinclude
+'!include ecriture.pumlinclude
+skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
 hide empty members
 'left to right direction
 class "JeuMonopoly" as MG {
@@ -188,7 +190,9 @@ MG "1" -r- "1" B : Joué-sur >
 
 ```{.plantuml caption="MDD (version anglaise) de Monopoly proposé par @craig_uml_2005"}
 @startuml
-!include ecriture.pumlinclude
+'!include ecriture.pumlinclude
+skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
 hide empty members
 'left to right direction
 class "Monopoly\nGame" as MG {
