@@ -36,8 +36,9 @@ Pour chaque scénario, indiquez la faute, l'erreur et l'échec (selon les défin
 
 **Scénario 1: Guichet automatique**
 
-Lors de son contrôle d'un guichet automatique, une technicienne constate
-qu'il n'y a plus de billets. Alors, elle remet des billets de 20 $ et de 50 \$. La prochaine personne qui utilise ce guichet automatique indique qu'elle veut retirer 100 \$, mais elle est surprise quand elle reçoit 5 billets de 50 $ (pour 250 $).
+Lors de son contrôle d'un guichet automatique, une technicienne constate qu'il n'y a plus de billets.
+Alors, elle remet des billets de 20 \$ et de 50 \$.
+La prochaine personne qui utilise ce guichet automatique indique qu'elle veut retirer 100 \$, mais elle est surprise quand elle reçoit 5 billets de 50 $ (pour 250 \$).
 
 -   Faute: <!-- La technicienne a mal posé les billets -->
 -   Erreur: <!-- personne constate qu'elle reçoit plus d'argent que demandé -->
