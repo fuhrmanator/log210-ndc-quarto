@@ -7,7 +7,7 @@ Ici, il s'agit du jeu Monopoly, qui est un exemple proposé par @craig_uml_2005,
 Pour cet exercice, nous examinerons une conception orientée objet réelle du jeu Monopoly disponible sur GitHub, soit [Emojiopoly](https://github.com/Chuzzy/Emojiopoly). Voici le travail à faire.
 
 - Considérez les deux artefacts:
-    - un [modèle du domaine de Monopoly](#sec-MDD_Monopoly) proposé par @craig_uml_2005 (il y a une version en français et une en anglais, puisque le code TypeScript est en anglais) et 
+    - un [modèle du domaine de Monopoly](#sec-MDD_Monopoly) proposé par @craig_uml_2005 (il y a une version en français et une autre en anglais, puisque le code TypeScript est en anglais) et 
     - un [modèle d'une solution](#sec-DDC_Emojiopoly) sous forme de diagramme de classes logicielles, créé à partir du code TypeScript dans le dépôt mentionné ci-haut). 
 - Nous faisons une hypothèse que l'équipe qui a développé Emojiopoly n'a pas commencé avec le MDD de Larman.
 - Comparez ces deux artefacts et faites des remarques sur la conception, **surtout par rapport au MDD et au décalage des représentations**.
@@ -15,7 +15,7 @@ Pour cet exercice, nous examinerons une conception orientée objet réelle du je
 
 ## Diagramme de classes d'Emojiopoly {#sec-DDC_Emojiopoly .unnumbered .unlisted}
 
-Pour visualiser la conception, nous avons généré un diagramme des classes en UML avec l'outil [tplant](https://github.com/bafolts/tplant):
+Pour visualiser la conception, nous avons généré un diagramme des classes en UML sur la @fig-Emojiopoly_classes avec l'outil [tplant](https://github.com/bafolts/tplant).
 
 ```{.plantuml caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly].(https://github.com/Chuzzy/Emojiopoly)" #fig-Emojiopoly_classes}
 @startuml
@@ -138,7 +138,7 @@ Debt --> "1" Player
 
 Puisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle du domaine de Monopoly en français et en anglais pour vous aider à comprendre les termes.
 
-```{.plantuml caption="MDD (version française) de Monopoly proposé par @craig_uml_2005"}
+```{.plantuml caption="MDD (version française) de Monopoly proposé par @craig_uml_2005. C'est le résultat d'une analyse du problème de jeu Monopoly selon la méthodologie proposée dans le chapitre @sec-mdd."}
 @startuml
 !include ecriture.pumlinclude
 hide empty members
