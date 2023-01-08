@@ -6,7 +6,7 @@ Ce chapitre contient des informations sur les diagrammes d'activités en UML. Le
 Les diagrammes d'activités servent à modéliser des processus d'affaires (de métier), des enchaînements d'activités (*workflows*), des flots de données et des algorithmes complexes.
 :::
 
-Voici les éléments importants:
+Voici les éléments importants d'un diagramme d'activités:
 
 - début et fin (activité)
 - partition
