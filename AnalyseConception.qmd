@@ -131,7 +131,7 @@ par exemple un *framework* comme Angular ou React pour développer un *front-end
 - Un *algorithme* peut être complexe, par exemple l'algorithme de [tri de Shell](https://fr.wikipedia.org/wiki/Tri_de_Shell) est plus complexe qu'un simple algorithme de [tri à bulles](https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles).
 Notez que la complexité d'un algorithme peut parfois apporter des gains de performance, par exemple, le trie de Shell.
 Mais le codage, le débogage et la maintenance d'une implémentation d'un algorithme complexe seront plus coûteux.
-- Un *patron de conception* peut être complexe, par exemple les patrons Visiteur, Décorateur, Médiateur, etc., des GoF [-@GoF1994].
+- Un *patron de conception* peut être complexe, par exemple les patrons Visiteur, Décorateur, Médiateur, etc., de [@GoF1994].
 Un patron définit des rôles et parfois du code et des classes supplémentaires à créer.
 Le tout doit s'intégrer dans un design existant (qui a son propre niveau de complexité).
 - Un *environnement* peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l'environnement sans fil, des écrans tactiles de tailles différentes, de l'alimentation limitée, etc.
