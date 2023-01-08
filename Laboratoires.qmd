@@ -31,7 +31,7 @@ Selon @goldberg_learning_2022, TypeScript comprend quatre éléments:
 
 ## JavaScript/TypeScript
 
-Pour la personne ayant déjà des connaissances de Java et des patrons de conception de la Bande des quatre @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
+Pour la personne ayant déjà des connaissances de Java et des _patterns_ de conception de la Bande des quatre @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
 
 - **JavaScript**: un tutoriel intéressant (et libre) est sur [fr.javascript.info](https://fr.javascript.info/). Nous vous recommandons de contribuer à des [traductions en français sur GitHub](https://github.com/javascript-tutorial/fr.javascript.info#readme). 
 - **TypeScript**: [ce tutoriel](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html) est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C\#.

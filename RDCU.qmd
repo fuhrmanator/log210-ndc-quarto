@@ -169,7 +169,7 @@ Pour initialiser les références nécessaires pour la bonne visibilité, Larman
 ## Transformer les identifiants en objets {#sec-TransformerIDenObjets}
 
 La directive d'utiliser les types primitifs pour les arguments dans les opérations système (voir la @sec-dss) nous mène à un problème récurrent dans les RDCU: transformer un identifiant (un argument de type `String` ou `int`) en objet représenté par cet identifiant.
-Larman vous propose un idiome (pas vraiment un patron) nommé **Transformer identifiant en objet** qui sert à repérer la référence d'un objet qui correspond à l'identifiant.
+Larman vous propose un idiome (pas vraiment un _pattern_) nommé **Transformer identifiant en objet** qui sert à repérer la référence d'un objet qui correspond à l'identifiant.
 
 Il y a un exemple à la @fig-RDCU_ID_en_objets provenant du chapitre sur **l'Application des patterns GoF (Figure 23.18)**\ {{< fa solid book >}}.
 Un autre exemple du livre de @craig_uml_2005 est l'identifiant `codeArticle` transformé en objet `DescriptionProduit` par la méthode  
@@ -314,30 +314,18 @@ class Dé {
 
 ## Exercices
 
-::: {#exr-RDCU-Ouvrir-caisse}
-
-### RDCU pour le cas d'utilisation *Ouvrir la caisse*
-
-Faites les RDCU pour [le cas d'utilisation *Ouvrir la caisse*](#sec-CU_Ouvrir_caisse).
-Vous y trouverez également des artefacts tels que le DSS, les contrats d'opération et le modèle du domaine.
-Ils sont essentiels pour faire les RDCU selon la méthodologie présentée dans ce manuel.
-
-:::
-
-::: {#exr-RDCU-coder}
+::: {#exr-RDCU_coder}
 
 ### Coder des méthodes à partir des diagrammes de séquence
 
-Pour chacun des diagrammes suivants, écrire les classes TypeScript avec les méthodes indiquées dans le diagramme. 
-[Cet exercice complémente le livre de @craig_uml_2005 à la section F18.6/A20.4.]
+Pour chacun des diagrammes suivants, écrivez les classes TypeScript avec les méthodes indiquées dans le diagramme.  
+[Cet exercice complémente le livre de @craig_uml_2005 à la section F18.6/A20.4.].
 
 ::: {.callout-tip}
-Vous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n'est pas forcément permis lors d'un examen.
+Vous pouvez utiliser VS Code pour vous aider avec le TypeScript, mais cet outil ne sera pas forcément permis lors d'un examen.
 :::
 
-Voici un modèle à suivre. Pour le diagramme suivant:
-
-```{.plantuml #fig-modele caption="Exemple de diagramme de séquence." }
+```{.plantuml #fig-coder_sequence_modele caption="Exemple de diagramme de séquence." }
 @startuml
 scale 1.0
 skinparam style strictuml
@@ -353,7 +341,8 @@ deactivate B
 @enduml
 ```
 
-On code les classes suivantes en TypeScript:
+Voici un modèle à suivre.
+Pour le diagramme sur la @fig-coder_sequence_modele, on code les classes suivantes en TypeScript:
 
 ```typescript
 class A {
@@ -373,7 +362,7 @@ class B {
 
 \filbreak
 
-1. Écrire le code pour la figure suivante.
+1. Écrivez le code pour la figure suivante.
 
     ```{.plantuml}
     @startuml
@@ -399,7 +388,7 @@ class B {
 
 \filbreak
 
-2. Écrire le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
+2. Écrivez le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
 
     ```{.plantuml}
     @startuml
@@ -417,7 +406,7 @@ class B {
     note right of s
     selon Créateur, Vente crée une 
     collection vide (par exemple une
-    List) destinée a mémoriser les
+    Liste) destinée à mémoriser les
     instances de LigneArticles
     end note
     note left of s
@@ -434,7 +423,7 @@ class B {
 
 \filbreak
 
-3. Écrire le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu de Monopoly [tirée de @craig_uml_2005, figure F22.9]
+3. Écrivez le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu de Monopoly [tirée de @craig_uml_2005, figure F22.9]
 
     ```{.plantuml}
     @startuml
@@ -457,7 +446,7 @@ class B {
 
 \filbreak
 
-4. Écrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu de Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7]
+4. Écrivez le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7]
 
     ```{.plantuml}
     @startuml
@@ -469,7 +458,7 @@ class B {
     note left: selon Polymorphisme
     im -> j : c = getCash
     note right : selon Expert
-    im -> j : diminuerCash(min(200, 10% de c))
+    im -> j : diminuerCash(min(200, 10 % de c))
     note right : selon Expert
     @enduml
     ```
@@ -486,4 +475,258 @@ class B {
     note right : selon Expert
     @enduml
     ```
+:::
+
+::: {#exr-RDCU_Ouvrir_caisse}
+
+### RDCU pour le cas d'utilisation *Ouvrir la caisse*
+
+Faites les RDCU pour [le cas d'utilisation *Ouvrir la caisse*](#sec-CU_Ouvrir_caisse).
+Vous y trouverez également des artefacts tels que le DSS, les contrats d'opération et le modèle du domaine.
+Ils sont essentiels pour faire les RDCU selon la méthodologie présentée dans ce manuel.
+
+:::
+
+::: {#exr-RDCU_Critiquer_conception}
+
+### Critique d'une conception
+
+Dans cet exercice, l'objectif est de vous sensibiliser à la facilité de comprendre une conception à partir d'un problème.
+Un objectif secondaire est de considérer les choix de conception sur le plan de la cohésion et du couplage. 
+Ici, il s'agit du jeu Monopoly, qui est un exemple proposé par @craig_uml_2005, pour lequel il a également proposé un modèle du domaine et une conception, selon la méthodologie.
+
+Pour cet exercice, nous examinerons une conception orientée objet réelle du jeu Monopoly disponible sur GitHub, soit [Emojiopoly](https://github.com/Chuzzy/Emojiopoly). Voici le travail à faire.
+
+- Considérez les deux artefacts:
+    - un [modèle du domaine de Monopoly](#sec-MDD_Monopoly) proposé par @craig_uml_2005 (il y a une version en français et une autre en anglais, puisque le code TypeScript est en anglais) et 
+    - un [modèle d'une solution](#sec-DDC_Emojiopoly) sous forme de diagramme de classes logicielles, créé à partir du code TypeScript dans le dépôt mentionné ci-haut). 
+- Nous faisons une hypothèse que l'équipe qui a développé Emojiopoly n'a pas commencé avec le MDD de Larman.
+- Comparez ces deux artefacts et faites des remarques sur la conception, **surtout par rapport au MDD et au décalage des représentations**.
+- Faites des remarques sur la solution concernant la cohésion et le couplage.
+
+### Diagramme de classes d'Emojiopoly {#sec-DDC_Emojiopoly .unnumbered .unlisted}
+
+Pour visualiser la conception, nous avons généré un diagramme des classes en UML sur la @fig-Emojiopoly_classes avec l'outil [tplant](https://github.com/bafolts/tplant).
+
+```{.plantuml caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly](https://github.com/Chuzzy/Emojiopoly)." #fig-Emojiopoly_classes}
+@startuml
+' généré avec tplant a partir d'un clone de https://github.com/Chuzzy/Emojiopoly :
+' tplant --input src/monopoly/**/*.ts --output Emojiopoly.puml -A
+' (certaines éléments ont été modifiés pour la mise en page)
+'left to right direction
+interface Card {
+    +text: string
+    +action: "advance" | "back" | "choice" | "payeach" | "collecteach" |\n "doubletransport" | "earn" | "pay" | "stealmoney" | "stolenmoney" |\n "streetrepairs" | "gotojail"
+    +value?: string | number | number[]
+}
+class MonopolyGame {
+    +jackpot: number
+    +currentTurnIndex: number
+    +consecutiveDoubles: number
+    +players: Player[]
+    +currentPlayer: Player
+    +dice: number[]
+    +isTurnFinished: boolean
+    +unpaidDebts: Debt[]
+    +messageEventHandler: (message: string) => void
+    +chanceCards: Card[]
+    +chestCards: Card[]
+    +chanceCardIndex: number
+    +chestCardIndex: number
+    +addToJackpot(amount: number): void
+    +rollDice(die1?: number, die2?: number): void
+    +moveToSquare(newSquare: Square, awardSalary?: boolean): void
+    +sendToJail(): void
+    +moveBack(numberOfSpaces: number): void
+    +postBail(): void
+    +takeChance(): void
+    +takeChest(): void
+    +handleCard(card: Card): void
+    +movePlayer(): void
+    +payDebts(): void
+    +finishTurn(): void
+    +board: Square[]
+    +playerNames: string[]
+    +houseRules: HouseRules
+}
+interface HouseRules {
+    ' +needMonopolyToBuild: boolean
+    ' +doubleRentWithMortgages: boolean
+    ' +evenBuildRule: boolean
+    ' +rentInJail: boolean
+    ' +extraTurnOnRollingOutOfJail: boolean
+    ' +tradeOutOfBankruptcy: boolean
+    ' +bankCoversUnpaidRent: boolean
+    ' +bankruptAssetsAlwaysToBank: boolean
+    ' +purchaseMortgagedProperties: boolean
+    ' +freeParkingJackpot: number | "fines"
+    ' +goSalary: number
+    ' +landOnGo: "normal" | "double" | "freemove"
+    ' +startingMoney: number
+    ' +turnsInJail: number
+    ' +bailAmount: number
+    ' +maxConsecutiveDoubles: number
+    ' +houseLimit: number
+    ' +hotelLimit: number
+    ' +mortgageRate: number
+    ' +unmortgageRate: number
+    ' +maintenanceRate: number
+    ' +incomeTax: number
+    ' +superTax: number
+}
+class Player {
+    +ownedProperties: Property[]
+    +currentSquare: Square
+    +turnsInJail: number
+    +name: string
+    +money: number
+}
+class Property {
+    +buildingsCount: number
+    +isMortgaged: boolean
+    +owner: Player
+    +name: string
+    +color: "brown" | "lightblue" | "pink" | "orange" | "red" | "yellow" |\n "green" | "blue" | "white"
+    +price: number
+    +rent: number[] | "transport" | "utility"
+    +buildPrice: number
+}
+class Square {
+    +occupants: Player[]
+    +addOccupant(occupant: Player): void
+    +removeOccupant(occupant: Player): void
+    +squareContents: "gotojail" | Property | "go" | "jail" | "parking" |\n "chance" | "chest" | "incometax" | "supertax"
+}
+class Debt {
+    +amount: number
+    +payDebt(): void
+    +toString(): string
+    +game: MonopolyGame
+    +debtor: Player
+    +creditor: Player
+    +initialAmount: number
+}
+MonopolyGame --> "*" Player
+' MonopolyGame --> "1" Player
+MonopolyGame --> "*" Debt
+MonopolyGame --> "*" Card
+' MonopolyGame --> "1" Square
+' MonopolyGame --> "1" Card
+MonopolyGame --> "*" Square
+MonopolyGame --> "1" HouseRules
+Player --> "*" Property
+Player --> "1" Square
+Property --> "1" Player
+Square --> "*" Player
+' Square --> "1" Player
+Square --> "1" Property
+Debt --> "1" MonopolyGame
+Debt --> "1" Player
+@enduml
+```
+
+### Modèle du domaine de Monopoly {#sec-MDD_Monopoly .unnumbered .unlisted}
+
+Puisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle du domaine de Monopoly en français et en anglais pour vous aider à comprendre les termes.
+
+```{.plantuml caption="MDD (version française) de Monopoly proposé par @craig_uml_2005. C'est le résultat d'une analyse du problème de jeu Monopoly selon la méthodologie proposée dans le chapitre @sec-mdd."}
+@startuml
+'!include ecriture.pumlinclude
+skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
+hide empty members
+'left to right direction
+class "JeuMonopoly" as MG {
+    compteurRonds
+}
+class "Dé" as D {
+    valeur
+}
+class "Plateau" as B {
+}
+
+class "Pion" as T {
+    nom
+}
+class "Joueur" as P {
+    argent
+    nom
+}
+
+abstract class "Case" as S {
+    nom
+}
+abstract class "Propriété" as Prop extends S {
+    prix
+}
+class "Case\nOrdinaire" extends S
+class "Case\nDépart" extends S
+class "Case\nImpôts" extends S 
+class "Case\nTerrain" extends Prop 
+class "Case\nGare" extends Prop 
+class "Case\nService\nPublic" extends Prop 
+
+
+P "0..1" -- "*" Prop : Possède >
+P "1" -- "1" T : Possède >
+T "0..8" -- "1" S : Est-sur >
+
+B "1" *-- "40" S
+P "2..8" -- "1" MG : Joue
+MG "1" -- "2" D : Joué-avec >
+MG "1" -r- "1" B : Joué-sur >
+
+@enduml
+```
+
+```{.plantuml caption="MDD (version anglaise) de Monopoly proposé par @craig_uml_2005"}
+@startuml
+'!include ecriture.pumlinclude
+skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
+hide empty members
+'left to right direction
+class "Monopoly\nGame" as MG {
+    roundCount
+}
+class "Die" as D {
+    faceValue
+}
+class "Board" as B {
+}
+
+class "Token" as T {
+    name
+}
+class "Player" as P {
+    cash
+    name
+}
+
+abstract class "Square" as S {
+    name
+}
+abstract class "Property" as Prop extends S {
+    price
+}
+class "Regular\nSquare" extends S
+class "Go\nSquare" extends S
+class "Income\nTax\nSquare" extends S 
+class "Lot\nSquare" extends Prop 
+class "Railroad\nSquare" extends Prop 
+class "Utility\nSquare" extends Prop 
+
+
+P "0..1" -- "*" Prop : Owns >
+P "1" -- "1" T : Owns >
+T "0..8" -- "1" S : Is-on >
+
+B "1" *-- "40" S
+P "2..8" -- "1" MG : Plays
+MG "1" -- "2" D : Played-with >
+MG "1" -r- "1" B : Played-on >
+
+@enduml
+```
+
 :::

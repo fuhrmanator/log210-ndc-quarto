@@ -36,38 +36,31 @@ book:
 
   chapters:
   - index.qmd # Preface
-  - part: Théorie
-    chapters:
-    - AnalyseConception.qmd
-    - Besoins.qmd
-    - CasUtilisation.qmd
-    - MDD.qmd
-    - DSS.qmd
-    - GRASP.qmd
-    - DetteTechnique.qmd
-    - Contrats.qmd
-    - RDCU.qmd
-    - TDD.qmd
-    - Réusinage.qmd
-    - TravailEquipe.qmd
-    - Outils-UML.qmd
-    - GRASP-GoF.qmd
-    - Fiabilité.qmd
-    - DiagrammesActivites.qmd
-    - DiagrammesEtats.qmd
-    - ConceptionPackages.qmd
-    - DiagrammesDeploiement.qmd
-    - Laboratoires.qmd
-    - references.qmd
-  - part: Exercices
-    chapters:
-    - Exercice_Critique_d-une_conception.qmd
-    - Exercice_Coder_des_méthodes_des_DS.qmd
+  - AnalyseConception.qmd
+  - Besoins.qmd
+  - CasUtilisation.qmd
+  - MDD.qmd
+  - DSS.qmd
+  - GRASP.qmd
+  - DetteTechnique.qmd
+  - Contrats.qmd
+  - RDCU.qmd
+  - TDD.qmd
+  - Réusinage.qmd
+  - TravailEquipe.qmd
+  - Outils-UML.qmd
+  - GRASP-GoF.qmd
+  - Fiabilité.qmd
+  - DiagrammesActivites.qmd
+  - DiagrammesEtats.qmd
+  - ConceptionPackages.qmd
+  - DiagrammesDeploiement.qmd
+  - Laboratoires.qmd
+  - references.qmd
   appendices:
-   - Annexe_Cas_utilisation_Réserver_livre.qmd
-   - Annexe_Cas_utilisation_Traiter_vente.qmd
-   - Annexe_Cas_utilisation_Ouvrir_caisse.qmd
-  # repo-actions: [source, issue]
+    - Annexe_Cas_utilisation_Réserver_livre.qmd
+    - Annexe_Cas_utilisation_Traiter_vente.qmd
+    - Annexe_Cas_utilisation_Ouvrir_caisse.qmd
 
 bibliography: references.bib
 csl: ets

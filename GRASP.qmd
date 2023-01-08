@@ -53,7 +53,7 @@ hacking <-d[dashed]- Nh
 @enduml
 ```
 
-À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l'on nomme "Hacking Cowboy". C'est le cas d'un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement), lors duquel, vous ne feriez pas un logiciel avec 10 patrons GoF, vous ne feriez pas non plus les diagrammes UML pour réfléchir à votre architecture. Vous savez aussi que le code produit lors d'un hackathon ne sera pas facile à maintenir. Le seul but de cette activité est de développer du code qui marche pour montrer une idée intéressante.
+À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l'on nomme "Hacking Cowboy". C'est le cas d'un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement), lors duquel, vous ne feriez pas un logiciel avec 10 _patterns_ GoF, vous ne feriez pas non plus les diagrammes UML pour réfléchir à votre architecture. Vous savez aussi que le code produit lors d'un hackathon ne sera pas facile à maintenir. Le seul but de cette activité est de développer du code qui marche pour montrer une idée intéressante.
 
 Une situation similaire s'applique à certains contextes d'entreprise, par exemple une entreprise en démarrage qui a seulement un financement pour six mois.
 Si une solution de ["produit minimum viable" (MVP en anglais)](https://en.wikipedia.org/wiki/Minimum_viable_product) {{< fa brands wikipedia-w >}} n'existe pas à la fin de la période de financement, l'entreprise n'existera plus, car il n'y aura pas une seconde période de financement.
@@ -145,7 +145,8 @@ On peut voir les principes GRASP comme des généralisations (principes de base)
 
 ## Exercices
 
-::: {#exr-polymorphisme}
+::: {#exr-GRASP_GOF_polymorphisme}
+
 ### GRASP Polymorphisme
 
 Soit le diagramme de classe modélisant l'exemple de @Fowl18a à [*Replace Conditional with Polymorphism*](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html):
@@ -186,9 +187,11 @@ get plumage() {
 :::
 
 
-::: {#exr-cohesion}
+::: {#exr-GRASP_GOF_cohesion}
+
 ### GRASP Cohésion
-Il est tiré du livre de @freeman_head_2021.
+
+Cet exercice est inspiré d'un exemple donné dans le livre @FreemanBatesSierraRobson200410.
 
 - Lesquelles des classes suivantes ont de multiples responsabilités ?
 
@@ -291,126 +294,12 @@ class Joueur {
 
 :::
 
-::: {#exr-contrôleur}
-### GRASP Contrôleur
+::: {#exr-GRASP_GOF_contrôleur}
 
-- Expliquez pourquoi le principe du GRASP Contrôleur (lorsqu'il s'agit d'un contrôleur de session ou de cas d’utilisation) est une Fabrication Pure. 
+### GRASP Contrôleur et Fabrication pure
 
-- Soit un contrôleur de session GestionnaireVentes, quelle est la "situation désespérée" que résout cette Fabrication pure?
-
-:::
-
-
-::: {#exr-cohesion}
-### GRASP Cohésion
-Il est tiré du livre de @freeman_head_2021.
-
-- Lesquelles des classes suivantes ont de multiples responsabilités ?
-
-```{.plantuml}
-@startuml
-skinparam style strictuml
-class Jeu {
-
-    login()
-    inscrire()
-    déplacer()
-    tirer()
-    rester()
-}
-
-class Joueur {
-
-    setNom()
-    setAdresse()
-    setNuméroTéléphone()
-    sauvegarder()
-    charger()
-}
-
-class Téléphone {
-
-    composer()
-    raccrocher()
-    parler()
-    envoyerDonnées()
-    flash()
-}
-
-class JeuCartes {
-
-    hasNext()
-    next()
-    remove()
-    addCard()
-    removeCard()
-    shuffle()
-}
-
-class Panier {
-
-    ajouter()
-    enlever()
-    encaisser()
-    sauvegarder()
-}
-
-class Iterator {
-
-    hasNext()
-    next()
-    remove()
-}
-
-@enduml
-```
-
-
-- Déterminez si ces classes ont une cohésion forte ou faible :
-
-```{.plantuml}
-@startuml
-skinparam style strictuml
-class Jeu {
-
-    login()
-    inscrire()
-    déplacer()
-    tirer()
-    rester()
-    getMeilleureScore()
-    getNom()
-}
-
-class SessionPartie {
-
-    login()
-    inscrire()
-}
-
-class ActionsJoueur {
-
-    déplacer()
-    tirer()
-    rester()
-}
-
-class Joueur {
-
-    getMeilleurScore()
-    getNom()
-}
-
-@enduml
-```
+- Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d'un contrôleur de session (de cas d'utilisation) est une Fabrication pure.
+- Soit un contrôleur de session `GestionnaireVentes`, quelle est la "situation désespérée" qui est mitigée par ce contrôleur? Astuce: relire la définition de Fabrication pure.
 
 :::
 
-::: {#exr-contrôleur}
-### GRASP Contrôleur
-
-- Expliquez pourquoi le principe du GRASP Contrôleur (lorsqu'il s'agit d'un contrôleur de session ou de cas d’utilisation) est une Fabrication Pure. 
-
-- Soit un contrôleur de session GestionnaireVentes, quelle est la "situation désespérée" que résout cette Fabrication pure?
-
-:::

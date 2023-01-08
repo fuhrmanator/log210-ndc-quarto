@@ -242,21 +242,21 @@ Alors, un IDE qui automatise les réusinages peut vous aider à appliquer certai
 
 ## Exercices
 
-Pour ces exercices, suivez le modèle pour décortiquer le patron Adaptateur, illustré à la @fig-Fig23_3.
+Pour ces exercices, suivez le modèle pour décortiquer le _pattern_ Adaptateur, illustré à la @fig-Fig23_3.
 
 Une bonne ressource pour les patterns GoF est la suivante:
 
 [https://fuhrmanator.github.io/oodp-horstmann/htm/index\_fr\_en.html](https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html)
 
 ::: {.callout-tip}
-Il se peut que certains principes GRASP ne s'appliquent pas à un patron GoF!
+Il se peut que certains principes GRASP ne s'appliquent pas à un pattern GoF!
 :::
 
 ::: {#exr-GRASP_iterateur}
 
 ### Itérateur
 
-Identifiez les 4 principes GRASP dans le patron
+Identifiez les 4 principes GRASP dans le _pattern_
 [Itérateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Patron-,iterateur,-Contexte),
 selon les directives présentées à la @sec-GRASP_Adaptateur.
 
@@ -266,7 +266,7 @@ selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 ### Observateur
 
-Identifiez les 4 principes GRASP dans le patron
+Identifiez les 4 principes GRASP dans le _pattern_
 [Observateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Contr%C3%B4leur-,patron%20observateur,-Mod%C3%A8le),
 selon les directives présentées à la @sec-GRASP_Adaptateur.
 
@@ -276,7 +276,7 @@ selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 ### Stratégie
 
-Identifiez les 4 principes GRASP dans le patron
+Identifiez les 4 principes GRASP dans le _pattern_
 [Stratégie](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=page-,patron%20strategie,-Strat%C3%A9gie),
 selon les directives présentées à la @sec-GRASP_Adaptateur.
 
@@ -286,7 +286,7 @@ selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 ### Composite
 
-Identifiez les 4 principes GRASP dans le patron
+Identifiez les 4 principes GRASP dans le _pattern_
 [Composite](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=composants-,patron%20composite,-Contexte),
 selon les directives présentées à la @sec-GRASP_Adaptateur.
 
@@ -296,7 +296,7 @@ selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 ### Décorateur
 
-Identifiez les 4 principes GRASP dans le patron [Décorateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte),
+Identifiez les 4 principes GRASP dans le _pattern_ [Décorateur](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte),
 selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
@@ -304,7 +304,7 @@ selon les directives présentées à la @sec-GRASP_Adaptateur.
 ::: {#exr-GRASP_methode_template}
 
 ### Méthode Template
-Identifiez les 4 principes GRASP dans le patron [Méthode Template](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte),
+Identifiez les 4 principes GRASP dans le _pattern_ [Méthode Template](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte),
 selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
@@ -313,7 +313,7 @@ selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 ### Commande
 
-Identifiez les 4 principes GRASP dans le patron [Commande](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte), selon les directives présentées à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le _pattern_ [Commande](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte), selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -321,7 +321,7 @@ Identifiez les 4 principes GRASP dans le patron [Commande](https://fuhrmanator.g
 
 ### Méthode Fabrique
 
-Identifiez les 4 principes GRASP dans le patron [Méthode de fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)), selon les directives présentées à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le _pattern_ [Méthode de fabrique](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)), selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -329,7 +329,7 @@ Identifiez les 4 principes GRASP dans le patron [Méthode de fabrique](https://f
 
 ### Proxy
 
-Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe), selon les directives présentées à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le _pattern_ [Proxy](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe), selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -337,7 +337,7 @@ Identifiez les 4 principes GRASP dans le patron [Proxy](https://fuhrmanator.gith
 
 ### Façade
 
-Identifiez les 4 principes GRASP dans le patron [Façade](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte), selon les directives présentées à la @sec-GRASP_Adaptateur.
+Identifiez les 4 principes GRASP dans le _pattern_ [Façade](https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte), selon les directives présentées à la @sec-GRASP_Adaptateur.
 
 :::
 
@@ -345,7 +345,7 @@ Identifiez les 4 principes GRASP dans le patron [Façade](https://fuhrmanator.gi
 
 ### Adaptateur pour Maps
 
-Proposez une mise en oeuvre du patron GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul d'itinéraires:
+Proposez une mise en oeuvre du pattern GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul d'itinéraires:
 
 - [Google Maps](https://developers.google.com/maps/documentation/directions);
 - [Bing Maps](https://www.microsoft.com/en-us/maps/routing#routing);
@@ -356,23 +356,5 @@ L'utilisateur ou l'utilisatrice du système pourra décider lequel des services 
 
 Le but de l'exercice est de déterminer l'interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d'itinéraires.
 Cela peut être un diagramme de classes réalisé avec PlantUML.
-
-:::
-
-::: {#exr-Adaptater}
-
-### Adaptateur
-
-Proposez une mise en oeuvre du patron GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul d'itinéraires:
-
-- [Google Maps](https://developers.google.com/maps/documentation/directions)
-- [Bing Maps](https://www.microsoft.com/en-us/maps/routing#routing)
-- [Apple Maps](https://developer.apple.com/documentation/mapkitjs/)
-
-Le système veut obtenir une liste d'étapes (des directions) pour se rendre à une destination à partir d'un point de départ.
-L'utilisateur du système pourra décider lequel des services lui convient dans les préférences.
-
-Le but de l'exercice est de déterminer l'interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d'itinéraires.
-Cela peut être un diagramme de classe réalisé avec PlantUML.
 
 :::
