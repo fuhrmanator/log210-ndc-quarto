@@ -184,3 +184,233 @@ get plumage() {
 }
 ```
 :::
+
+
+::: {#exr-cohesion}
+### GRASP Cohésion
+Il est tiré du livre de @freeman_head_2021.
+
+- Lesquelles des classes suivantes ont de multiples responsabilités ?
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+class Jeu {
+
+    login()
+    inscrire()
+    déplacer()
+    tirer()
+    rester()
+}
+
+class Joueur {
+
+    setNom()
+    setAdresse()
+    setNuméroTéléphone()
+    sauvegarder()
+    charger()
+}
+
+class Téléphone {
+
+    composer()
+    raccrocher()
+    parler()
+    envoyerDonnées()
+    flash()
+}
+
+class JeuCartes {
+
+    hasNext()
+    next()
+    remove()
+    addCard()
+    removeCard()
+    shuffle()
+}
+
+class Panier {
+
+    ajouter()
+    enlever()
+    encaisser()
+    sauvegarder()
+}
+
+class Iterator {
+
+    hasNext()
+    next()
+    remove()
+}
+
+@enduml
+```
+
+
+- Déterminez si ces classes ont une cohésion forte ou faible :
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+class Jeu {
+
+    login()
+    inscrire()
+    déplacer()
+    tirer()
+    rester()
+    getMeilleureScore()
+    getNom()
+}
+
+class SessionPartie {
+
+    login()
+    inscrire()
+}
+
+class ActionsJoueur {
+
+    déplacer()
+    tirer()
+    rester()
+}
+
+class Joueur {
+
+    getMeilleurScore()
+    getNom()
+}
+
+@enduml
+```
+
+:::
+
+::: {#exr-contrôleur}
+### GRASP Contrôleur
+
+- Expliquez pourquoi le principe du GRASP Contrôleur (lorsqu'il s'agit d'un contrôleur de session ou de cas d’utilisation) est une Fabrication Pure. 
+
+- Soit un contrôleur de session GestionnaireVentes, quelle est la "situation désespérée" que résout cette Fabrication pure?
+
+:::
+
+
+::: {#exr-cohesion}
+### GRASP Cohésion
+Il est tiré du livre de @freeman_head_2021.
+
+- Lesquelles des classes suivantes ont de multiples responsabilités ?
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+class Jeu {
+
+    login()
+    inscrire()
+    déplacer()
+    tirer()
+    rester()
+}
+
+class Joueur {
+
+    setNom()
+    setAdresse()
+    setNuméroTéléphone()
+    sauvegarder()
+    charger()
+}
+
+class Téléphone {
+
+    composer()
+    raccrocher()
+    parler()
+    envoyerDonnées()
+    flash()
+}
+
+class JeuCartes {
+
+    hasNext()
+    next()
+    remove()
+    addCard()
+    removeCard()
+    shuffle()
+}
+
+class Panier {
+
+    ajouter()
+    enlever()
+    encaisser()
+    sauvegarder()
+}
+
+class Iterator {
+
+    hasNext()
+    next()
+    remove()
+}
+
+@enduml
+```
+
+
+- Déterminez si ces classes ont une cohésion forte ou faible :
+
+```{.plantuml}
+@startuml
+skinparam style strictuml
+class Jeu {
+
+    login()
+    inscrire()
+    déplacer()
+    tirer()
+    rester()
+    getMeilleureScore()
+    getNom()
+}
+
+class SessionPartie {
+
+    login()
+    inscrire()
+}
+
+class ActionsJoueur {
+
+    déplacer()
+    tirer()
+    rester()
+}
+
+class Joueur {
+
+    getMeilleurScore()
+    getNom()
+}
+
+@enduml
+```
+
+:::
+
+::: {#exr-contrôleur}
+### GRASP Contrôleur
+
+- Expliquez pourquoi le principe du GRASP Contrôleur (lorsqu'il s'agit d'un contrôleur de session ou de cas d’utilisation) est une Fabrication Pure. 
+
+- Soit un contrôleur de session GestionnaireVentes, quelle est la "situation désespérée" que résout cette Fabrication pure?
+
+:::
