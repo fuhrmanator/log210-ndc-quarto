@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.86">
+<meta name="generator" content="quarto-1.3.91">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -313,8 +313,8 @@ div.csl-indent {
 
 
 <p>Ce chapitre contient des informations sur le concept de la <a href="https://fr.wikipedia.org/wiki/Dette_technique">dette technique</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>, qui n’est pas un sujet abordé explicitement dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
-<p>Pour ajouter une nouvelle fonctionnalité à un système, les développeurs(euses) ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le “hacking cowboy” sur le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur. L’autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir. Comment prendre la <span style="white-space:nowrap">décision ?</span> La <em>dette technique</em> est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.</p>
-<p>Martin Fowler <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">2007</a>)</span> a posé la question “Est-ce que ça vaut la peine de faire du bon <span style="white-space:nowrap">design ?</span>” – peut-on en faire moins pour développer plus <span style="white-space:nowrap">vite ?</span> Il a proposé un pseudographique présentant l’évolution de la fonctionnalité cumulative (élément difficile à mesurer) en fonction du temps (voir la <a href="#fig-FowlerDesignStaminaHypothesis">figure&nbsp;<span>7.1</span></a>). Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que de mois. Mais il avoue que c’est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d’évaluer ce qu’est un bon design. Le graphe sert à illustrer le principe que, à un certain moment, ignorer une conception va nuire à la performance des développeurs(euses) en ce qui concerne les nouvelles fonctionnalités.</p>
+<p>Pour ajouter une nouvelle fonctionnalité à un système, les développeurs(euses) ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le «&nbsp;hacking cowboy&nbsp;» sur le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur. L’autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir. Comment prendre la <span style="white-space:nowrap">décision ?</span> La <em>dette technique</em> est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.</p>
+<p>Martin Fowler <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">2007</a>)</span> a posé la question «&nbsp;Est-ce que ça vaut la peine de faire du bon <span style="white-space:nowrap">design ?</span>&nbsp;» – peut-on en faire moins pour développer plus <span style="white-space:nowrap">vite ?</span> Il a proposé un pseudographique présentant l’évolution de la fonctionnalité cumulative (élément difficile à mesurer) en fonction du temps (voir la <a href="#fig-FowlerDesignStaminaHypothesis">figure&nbsp;<span>7.1</span></a>). Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que de mois. Mais il avoue que c’est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d’évaluer ce qu’est un bon design. Le graphe sert à illustrer le principe que, à un certain moment, ignorer une conception va nuire à la performance des développeurs(euses) en ce qui concerne les nouvelles fonctionnalités.</p>
 <p>Voici une courte définition complémentaire de la dette technique <span class="citation" data-cites="avge16a">(<a href="references.html#ref-avge16a" role="doc-biblioref">Avgeriou, Kruchten, Ozkaya, &amp; Seaman, 2016</a>)</span><span style="white-space:nowrap"> :</span></p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -329,7 +329,7 @@ div.csl-indent {
 <div id="fig-FowlerDesignStaminaHypothesis" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/FowlerPseuoGraphFunctionaltyTime.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;7.1: “Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés <span style="white-space:nowrap">imaginaires :</span> l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.” <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler, 2007</a>)</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7.1: «&nbsp;Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés <span style="white-space:nowrap">imaginaires :</span> l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.&nbsp;» <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler, 2007</a>)</span></figcaption><p></p>
 </figure>
 </div>
 <section id="origine" class="level2" data-number="7.1">
@@ -345,14 +345,14 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Comme c’est une métaphore puissante, beaucoup de développeurs(euses) l’utilisent, et c’est un terme avec une certaine popularité. Dans une <a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">vidéo</a> plus récente, Cunningham a rappelé que l’origine de la métaphore s’inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement “mal écrit”<span style="white-space:nowrap"> :</span></p>
+<p>Comme c’est une métaphore puissante, beaucoup de développeurs(euses) l’utilisent, et c’est un terme avec une certaine popularité. Dans une <a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">vidéo</a> plus récente, Cunningham a rappelé que l’origine de la métaphore s’inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement «&nbsp;mal écrit&nbsp;»<span style="white-space:nowrap"> :</span></p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>L’explication que j’ai donnée à mon patron, et c’était un logiciel financier, était une analogie financière que j’ai appelée “la métaphore de la dette”. Et cela veut dire que si nous ne parvenions pas à aligner notre programme sur ce que nous considérions alors comme la bonne façon de penser à nos objets financiers, alors nous allions continuellement trébucher sur ce désaccord et cela nous ralentirait, comme payer des intérêts sur un prêt.<br>
+<p>L’explication que j’ai donnée à mon patron, et c’était un logiciel financier, était une analogie financière que j’ai appelée «&nbsp;la métaphore de la dette&nbsp;». Et cela veut dire que si nous ne parvenions pas à aligner notre programme sur ce que nous considérions alors comme la bonne façon de penser à nos objets financiers, alors nous allions continuellement trébucher sur ce désaccord et cela nous ralentirait, comme payer des intérêts sur un prêt.<br>
 &nbsp;<br>
 […]<br>
 &nbsp;<br>
@@ -363,7 +363,7 @@ Beaucoup de gens (au moins des blogueurs(euses)) ont expliqué la métaphore de 
 </section>
 <section id="nuances-de-la-dette-technique" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="nuances-de-la-dette-technique"><span class="header-section-number">7.2</span> Nuances de la dette technique</h2>
-<p>Fowler a également <a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html">abordé le sujet de la dette</a>, notamment à propos de la distinction entre du code “mal écrit” et les compromis de conception faits avec une intention d’accélérer le <span style="white-space:nowrap">développement :</span></p>
+<p>Fowler a également <a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html">abordé le sujet de la dette</a>, notamment à propos de la distinction entre du code «&nbsp;mal écrit&nbsp;» et les compromis de conception faits avec une intention d’accélérer le <span style="white-space:nowrap">développement :</span></p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -377,11 +377,11 @@ La métaphore de la dette nous rappelle les choix que nous pouvons faire avec le
 &nbsp;<br>
 […] Il y a aussi une différence entre la <strong>dette délibérée et involontaire</strong>. L’exemple de la dette prudente est délibéré parce que l’équipe sait qu’elle s’endette et réfléchit donc à la question de savoir si le bénéfice de livrer plus tôt une version du logiciel est supérieur au coût de son remboursement. Une équipe ignorante des pratiques de conception prend sa dette imprudente sans même constater à quel point elle s’endette.<br>
 &nbsp;<br>
-La dette imprudente pourrait aussi être délibérée. Une équipe peut connaître les bonnes pratiques de conception, voire être capable de les mettre en pratique, mais décide finalement d’aller “à la va-vite” parce qu’elle pense qu’elle ne peut pas se permettre le temps nécessaire pour écrire du code propre.</p>
+La dette imprudente pourrait aussi être délibérée. Une équipe peut connaître les bonnes pratiques de conception, voire être capable de les mettre en pratique, mais décide finalement d’aller «&nbsp;à la va-vite&nbsp;» parce qu’elle pense qu’elle ne peut pas se permettre le temps nécessaire pour écrire du code propre.</p>
 </div>
 </div>
 </div>
-<p>La dette peut être classifiée dans un quadrant comme sur le <a href="#tbl-DetteQuadrant">tableau&nbsp;<span>7.1</span></a>. Selon Fowler, la dette mentionnée par Ward Cunningham dans sa vidéo peut être classifiée comme “prudente et involontaire”. Selon son expérience, Fowler remarque que la dette “imprudente et délibérée” est rarement rentable.</p>
+<p>La dette peut être classifiée dans un quadrant comme sur le <a href="#tbl-DetteQuadrant">tableau&nbsp;<span>7.1</span></a>. Selon Fowler, la dette mentionnée par Ward Cunningham dans sa vidéo peut être classifiée comme «&nbsp;prudente et involontaire&nbsp;». Selon son expérience, Fowler remarque que la dette «&nbsp;imprudente et délibérée&nbsp;» est rarement rentable.</p>
 <div id="tbl-DetteQuadrant" class="anchored">
 <table class="table">
 <caption>Tableau&nbsp;7.1: Classification de la dette selon Fowler (2009)</caption>
@@ -400,13 +400,13 @@ La dette imprudente pourrait aussi être délibérée. Une équipe peut connaît
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Délibérée</td>
-<td style="text-align: left;">“<em>On n’a pas le temps pour la <span style="white-space:nowrap">conception !</span></em>” Cette forme de dette est rarement rentable.</td>
-<td style="text-align: left;">“<em>Il faut livrer maintenant puis en assumer les conséquences.</em>” <span style="white-space:nowrap"> Exemple:</span> La dette est due à une partie limitée du code.</td>
+<td style="text-align: left;">«&nbsp;<em>On n’a pas le temps pour la <span style="white-space:nowrap">conception !</span></em>&nbsp;» Cette forme de dette est rarement rentable.</td>
+<td style="text-align: left;">«&nbsp;<em>Il faut livrer maintenant puis en assumer les conséquences.</em>&nbsp;» <span style="white-space:nowrap"> Exemple:</span> La dette est due à une partie limitée du code.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Involontaire</td>
-<td style="text-align: left;">“<em>C’est quoi, la séparation en <span style="white-space:nowrap">couches ?</span></em>” Il s’agit de l’ignorance de bonnes pratiques.</td>
-<td style="text-align: left;">“<em>Maintenant, nous savons comment nous aurions dû le faire.</em>” C’est tenter une solution malgré une compréhension limitée du problème.</td>
+<td style="text-align: left;">«&nbsp;<em>C’est quoi, la séparation en <span style="white-space:nowrap">couches ?</span></em>&nbsp;» Il s’agit de l’ignorance de bonnes pratiques.</td>
+<td style="text-align: left;">«&nbsp;<em>Maintenant, nous savons comment nous aurions dû le faire.</em>&nbsp;» C’est tenter une solution malgré une compréhension limitée du problème.</td>
 </tr>
 </tbody>
 </table>
@@ -416,7 +416,7 @@ La dette imprudente pourrait aussi être délibérée. Une équipe peut connaît
 <h2 data-number="7.3" class="anchored" data-anchor-id="résumé"><span class="header-section-number">7.3</span> Résumé</h2>
 <ul>
 <li>Il n’est pas toujours possible de faire une conception facile à utiliser et à modifier (sans dette technique), puisque certaines choses sont impossibles à prévoir, surtout dans une application avec beaucoup de complexité.</li>
-<li>Ignorer complètement le design en faisant du “hacking cowboy” peut apporter un avantage à court terme pour valider des hypothèses rapidement, par exemple dans un contexte d’entreprise en démarrage sans beaucoup de financement ou dans un concours de programmation. Cependant, le code produit dans ce genre de contexte aura des problèmes importants (la dette technique) à long terme.</li>
+<li>Ignorer complètement le design en faisant du «&nbsp;hacking cowboy&nbsp;» peut apporter un avantage à court terme pour valider des hypothèses rapidement, par exemple dans un contexte d’entreprise en démarrage sans beaucoup de financement ou dans un concours de programmation. Cependant, le code produit dans ce genre de contexte aura des problèmes importants (la dette technique) à long terme.</li>
 <li>La dette technique peut aussi être due à l’incompétence (l’ignorance de bonnes pratiques comme la séparation des couches dans une architecture logique, comme l’exemple d’une couche présentation et d’une couche domaine sur la <a href="DSS.html#fig-dssdetails">figure&nbsp;<span>5.3</span></a>).</li>
 </ul>
 

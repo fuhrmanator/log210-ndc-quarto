@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.86">
+<meta name="generator" content="quarto-1.3.91">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -315,7 +315,7 @@ div.csl-indent {
 
 <p>Un contrat d’opération est un document décrivant ce qui est arrivé après l’exécution d’une opération système. Cette description est présentée sous forme de postconditions utilisant le vocabulaire du modèle du domaine.</p>
 <p>Le MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente), mais aussi des <em>instances</em> de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clients(es) qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque client(e).</p>
-<p>Sur la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter Vente</em>. Elle correspond au moment où le(a) caissier(e) démarre une nouvelle vente pour un(e) client(e). Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec la voix passive au passé composé en <span style="white-space:nowrap">français) :</span> “une instance <em>v</em> de Vente a été créée”.</p>
+<p>Sur la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter Vente</em>. Elle correspond au moment où le(a) caissier(e) démarre une nouvelle vente pour un(e) client(e). Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec la voix passive au passé composé en <span style="white-space:nowrap">français) :</span> «&nbsp;une instance <em>v</em> de Vente a été créée&nbsp;».</p>
 <p>Un contrat d’opération permet de spécifier tous les changements dans le MDD qui doivent avoir lieu lors de l’opération système. Les postconditions du contrat saisissent l’évolution du MDD.</p>
 <div id="fig-ContratExempleCreerNouvelleVente" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">

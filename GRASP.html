@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.86">
+<meta name="generator" content="quarto-1.3.91">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -377,9 +377,9 @@ div.csl-indent {
 
 
 
-<p>GRASP est un acronyme de l’expression anglaise “General Responsibility Assignment Software Patterns”, c’est-à-dire les principes pour affecter les responsabilités logicielles dans les classes.</p>
+<p>GRASP est un acronyme de l’expression anglaise «&nbsp;General Responsibility Assignment Software Patterns&nbsp;», c’est-à-dire les principes pour affecter les responsabilités logicielles dans les classes.</p>
 <p>Une approche GRASP devrait amener un design vers la modularité et la maintenabilité.</p>
-<p>L’acronyme d’une expression vulgarisée pourrait être <span style="white-space:nowrap">POMM :</span> “Principes pour déterminer Où Mettre une Méthode.”</p>
+<p>L’acronyme d’une expression vulgarisée pourrait être <span style="white-space:nowrap">POMM :</span> «&nbsp;Principes pour déterminer Où Mettre une Méthode.&nbsp;»</p>
 <p>En tant qu’ingénieur(e) logiciel, vous devez décider souvent où placer une méthode (dans quelle classe), et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d’ingénierie favorisant la modularité.</p>
 <p>Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et avec des classes plus cohésives. Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.</p>
 <div class="callout callout-style-simple callout-tip no-icon">
@@ -388,23 +388,121 @@ div.csl-indent {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>{{&lt; fa solid hat-cowboy-side &gt;}} Avez-vous déjà une bonne expérience en programmation? Avez-vous l’habitude de coder rapidement des solutions qui fonctionnent? Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous. Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception, et cela va vous ralentir au début (réflexe du “hacking cowboy” peut-être?). Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui est également facile à maintenir. C’est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes. Une fois que vous aurez l’habitude d’utiliser les GRASP, vous serez encore rapide avec votre développement, mais, en plus, votre design sera meilleur sur le plan de la maintenabilité, et vous aurez plus de confiance dans vos choix.</p>
+<p><i class="fa-solid fa-hat-cowboy-side" aria-label="hat-cowboy-side"></i> Avez-vous déjà une bonne expérience en <span style="white-space:nowrap">programmation ?</span> Avez-vous l’habitude de coder rapidement des solutions qui <span style="white-space:nowrap">fonctionnent ?</span> Si la réponse est oui, alors travailler avec les principes GRASP peut être un défi pour vous. Dans la méthodologie enseignée dans ce manuel, vous devez être en mesure de justifier vos choix de conception, et cela va vous ralentir au début (réflexe du «&nbsp;hacking cowboy&nbsp;» peut-être?). Le but avec les principes GRASP est de (ré)apprendre à faire du code qui fonctionne, mais qui est également facile à maintenir. C’est normal au début que ça prenne plus de temps, car il faut réfléchir pour appliquer les principes. Une fois que vous aurez l’habitude d’utiliser les GRASP, vous serez encore rapide avec votre développement, mais, en plus, votre design sera meilleur sur le plan de la maintenabilité, et vous aurez plus de confiance dans vos choix.</p>
 </div>
 </div>
 </div>
 <section id="sec-SpectreDeLaConception" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="sec-SpectreDeLaConception"><span class="header-section-number">6.1</span> Spectre de la conception</h2>
-<p>Neal Ford <span class="citation" data-cites="Ford2009">(<a href="references.html#ref-Ford2009" role="doc-biblioref">2009</a>)</span> a <a href="https://www.ibm.com/developerworks/library/j-eaed1/index.html">proposé</a> la notion d’effort pour la conception qu’il a nommée le “Spectre de la conception”. La <a href="#fig-SpectreConception">figure&nbsp;<span>6.1</span></a> illustre le principe.</p>
+<p>Neal Ford <span class="citation" data-cites="Ford2009">(<a href="references.html#ref-Ford2009" role="doc-biblioref">2009</a>)</span> a <a href="https://www.ibm.com/developerworks/library/j-eaed1/index.html">proposé</a> la notion d’effort pour la conception qu’il a nommée le «&nbsp;Spectre de la conception&nbsp;». La <a href="#fig-SpectreConception">figure&nbsp;<span>6.1</span></a> illustre le principe.</p>
 <div id="fig-SpectreConception" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="GRASP_files/mediabag/d8229f5245d4fc4d5c0694888b43bdf52ac59ada.svg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="408px" preserveaspectratio="none" style="width:561px;height:408px;background:#00000000;" version="1.1" viewbox="0 0 561 408" width="561.6px" zoomandpan="magnify"><defs></defs><g><!--MD5=[16640f6e1912083e427fb21a04882258]
+class waterfall--><g id="elem_waterfall"><polygon fill="#FFFFFF" points="462,162,462,162.0841,465.12,161.8343,468.24,162.0773,471.36,162.1599,474.48,161.7146,477.6,162,477.5881,161.9713,477.959,162.0181,478.3898,162.2097,478.8624,162.502,479.1912,162.4474,479.7213,162.8787,479.9259,162.9634,479.6641,163.2065,479.9997,163.6969,480.4082,164.2176,480.3926,164.5626,480.6,165,480.6819,165,480.5617,176.201,480.8142,187.4019,480.887,198.6029,481.3028,209.8038,480.6,221.0048,480.848,221.1075,480.6753,221.533,480.3426,221.8923,480.2441,222.3486,480.1566,222.8094,479.7213,223.1261,479.6109,222.8596,479.4009,223.5526,478.8274,223.368,478.5302,223.8506,477.9485,223.6461,477.6,224.0048,477.6,223.9774,474.48,224.3014,471.36,223.9853,468.24,224.0469,465.12,224.1403,462,224.0048,462.0637,224.1586,461.5751,223.8276,461.1954,223.7595,460.6396,223.2661,460.3465,223.407,459.8787,223.1261,460.0813,223.21,459.8672,222.7699,459.7538,222.3714,459.1729,221.7794,458.9347,221.3292,459,221.0048,458.2543,221.0048,458.9293,209.8038,458.7642,198.6029,459.8177,187.4019,458.7904,176.201,459,165,458.8732,164.9475,459.2601,164.6107,459.105,164.0494,459.3354,163.6477,459.9428,163.4023,459.8787,162.8787,459.9454,163.0397,460.4154,162.9744,460.6779,162.4083,461.2003,162.4694,461.6661,162.3939,462,162" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="36" lengthadjust="spacing" textlength="14.4" x="462.6" y="207.2384">]</text></g><!--MD5=[a579e73932ed0dc046258936e4452539]
+class Ncp--><g id="elem_Ncp"><polygon fill="#FFFFFF" points="427.8,31.8,427.8,32.0522,440.04,31.3028,452.28,32.0319,464.52,32.2796,476.76,30.9439,489,31.7067,501.24,31.2882,513.48,31.3398,525.72,31.7182,537.96,30.9704,550.2,31.8,550.2847,32.0046,550.5278,31.7428,551.0183,32.0784,551.5389,32.4868,551.8839,32.4712,552.3213,32.6787,552.3465,32.6891,552.4853,33.0981,552.7388,33.5545,552.9369,33.9881,553.2407,34.4654,553.2,34.8,553.4684,34.8,553.4717,40.6671,553.3019,46.5341,553.3854,52.4012,553.4809,58.2683,553.2,64.1354,552.9335,64.025,553.275,64.6635,552.739,64.9385,552.8701,65.4899,552.3141,65.7566,552.3213,66.2567,552.3108,66.2314,552.0106,66.7065,551.4653,66.5902,551.0646,66.8228,550.6761,67.0848,550.2,67.1354,550.2,67.6348,537.96,67.1307,525.72,67.48,513.48,66.4485,501.24,67.4766,489,67.7932,476.76,67.6688,464.52,67.871,452.28,66.5557,440.04,66.3527,427.8,67.1354,427.7049,66.9057,427.3667,66.9379,426.9214,66.7113,426.6315,66.86,426.0762,66.3679,425.6787,66.2567,425.5519,66.2042,425.5873,65.8674,425.0808,65.3061,424.9596,64.9044,425.2156,64.659,424.8,64.1354,424.9743,64.1354,425.0938,58.2683,424.6713,52.4012,424.9277,46.5341,425.0362,40.6671,424.8,34.8,424.6254,34.7277,424.9403,34.3611,425.198,33.9708,425.5681,33.627,425.5014,33.1023,425.6787,32.6787,425.7495,32.8496,426.0182,32.2983,426.4235,32.0769,427.0286,32.3376,427.266,31.7108,427.8,31.8" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="121.2" x="428.4" y="56.1111">« Cascade pure »</text></g><!--MD5=[86fa7b8282302f2c97f996263509da10]
+class bduf--><g id="elem_bduf"><polygon fill="#FFFFFF" points="382.2,175.8,382.2,175.8841,384.525,175.6343,386.85,175.8773,389.175,175.9599,391.5,175.5146,393.825,175.8,393.8131,175.7713,394.184,175.8181,394.6148,176.0097,395.0874,176.302,395.4162,176.2474,395.9463,176.6787,396.1509,176.7634,395.8891,177.0065,396.2247,177.4969,396.6332,178.0176,396.6176,178.3626,396.825,178.8,396.8523,178.8,396.8122,184.6671,396.8964,190.5341,396.9207,196.4012,397.0593,202.2683,396.825,208.1354,397.073,208.2381,396.9003,208.6636,396.5676,209.0229,396.4691,209.4791,396.3816,209.9399,395.9463,210.2567,395.8359,209.9902,395.6259,210.6832,395.0524,210.4986,394.7552,210.9812,394.1735,210.7767,393.825,211.1354,393.825,211.108,391.5,211.432,389.175,211.1159,386.85,211.1775,384.525,211.2708,382.2,211.1354,382.2637,211.2892,381.7751,210.9582,381.3954,210.89,380.8396,210.3966,380.5465,210.5375,380.0787,210.2567,380.2813,210.3406,380.0672,209.9005,379.9538,209.502,379.3729,208.9099,379.1347,208.4598,379.2,208.1354,378.9514,208.1354,379.1764,202.2683,379.1214,196.4012,379.4726,190.5341,379.1301,184.6671,379.2,178.8,379.0732,178.7475,379.4601,178.4107,379.305,177.8494,379.5354,177.4477,380.1428,177.2023,380.0787,176.6787,380.1454,176.8397,380.6154,176.7744,380.8779,176.2083,381.4003,176.2694,381.8661,176.1939,382.2,175.8" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" font-weight="bold" lengthadjust="spacing" textlength="10.425" x="382.8" y="200.1111">+</text></g><!--MD5=[19f1644113c89f8d38c97b98b7429983]
+class Nbduf--><g id="elem_Nbduf"><polygon fill="#FFFFFF" points="343.8,296.4,343.8,296.6522,356.4857,295.9028,369.1714,296.6319,381.8571,296.8796,394.5429,295.5439,407.2286,296.3067,419.9143,295.8882,432.6,296.4,432.5413,296.2583,433.0138,296.5505,433.3427,296.496,433.9575,297.1318,434.2006,296.87,434.7213,297.2787,434.6482,297.2484,435.0567,297.7691,435.0411,298.1141,435.2737,298.5619,435.4125,298.9708,435.6,299.4,435.8142,299.4,435.887,311.8177,436.3028,324.2354,436.4053,336.6531,436.4151,349.0707,435.9056,361.4884,436.1563,373.9061,436.4427,386.3238,435.6,398.7415,435.3335,398.6311,435.675,399.2696,435.139,399.5446,435.2701,400.096,434.7141,400.3628,434.7213,400.8628,434.7108,400.8375,434.4106,401.3126,433.8653,401.1963,433.4646,401.4289,433.0761,401.6909,432.6,401.7415,432.6,402.241,419.9143,401.7368,407.2286,402.0861,394.5429,401.0546,381.8571,402.0827,369.1714,402.3993,356.4857,402.2749,343.8,401.7415,343.8938,401.968,343.3018,401.3872,342.8516,401.149,342.4321,400.9846,342.0939,401.0168,341.6787,400.8628,341.6061,400.8327,341.7548,400.5428,341.2627,399.9875,341.0247,399.5375,341.0601,399.2007,340.8,398.7415,339.9998,398.7415,340.177,386.3238,341.5787,373.9061,341.3228,361.4884,341.6814,349.0707,340.4138,336.6531,341.183,324.2354,341.5085,311.8177,340.8,299.4,340.6254,299.3277,340.9403,298.9611,341.198,298.5708,341.5681,298.227,341.5014,297.7023,341.6787,297.2787,341.7495,297.4496,342.0182,296.8983,342.4235,296.6769,343.0286,296.9376,343.266,296.3108,343.8,296.4" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="87.6" x="344.4" y="320.7111">Beaucoup de</text><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="74.4" x="351" y="344.0465">conception</text><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="61.2" x="357.6" y="367.3818">au début</text><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="46.8" x="364.8" y="390.7172">(BDUF)</text></g><!--MD5=[17b3ebdccc4b51567a82ad361dc152ee]
+class duf--><g id="elem_duf"><polygon fill="#FFFFFF" points="315,175.8,315,175.8841,317.325,175.6343,319.65,175.8773,321.975,175.9599,324.3,175.5146,326.625,175.8,326.6131,175.7713,326.984,175.8181,327.4148,176.0097,327.8874,176.302,328.2162,176.2474,328.7463,176.6787,328.9509,176.7634,328.6891,177.0065,329.0247,177.4969,329.4332,178.0176,329.4176,178.3626,329.625,178.8,329.6523,178.8,329.6122,184.6671,329.6964,190.5341,329.7207,196.4012,329.8593,202.2683,329.625,208.1354,329.873,208.2381,329.7003,208.6636,329.3676,209.0229,329.2691,209.4791,329.1816,209.9399,328.7463,210.2567,328.6359,209.9902,328.4259,210.6832,327.8524,210.4986,327.5552,210.9812,326.9735,210.7767,326.625,211.1354,326.625,211.108,324.3,211.432,321.975,211.1159,319.65,211.1775,317.325,211.2708,315,211.1354,315.0637,211.2892,314.5751,210.9582,314.1954,210.89,313.6396,210.3966,313.3465,210.5375,312.8787,210.2567,313.0813,210.3406,312.8672,209.9005,312.7538,209.502,312.1729,208.9099,311.9347,208.4598,312,208.1354,311.7514,208.1354,311.9764,202.2683,311.9214,196.4012,312.2726,190.5341,311.9301,184.6671,312,178.8,311.8732,178.7475,312.2601,178.4107,312.105,177.8494,312.3354,177.4477,312.9428,177.2023,312.8787,176.6787,312.9454,176.8397,313.4154,176.7744,313.6779,176.2083,314.2003,176.2694,314.6661,176.1939,315,175.8" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" font-weight="bold" lengthadjust="spacing" textlength="10.425" x="315.6" y="200.1111">+</text></g><!--MD5=[942d5850efe4ae78d524831e016d5bfc]
+class Nduf--><g id="elem_Nduf"><polygon fill="#FFFFFF" points="262.2,8.4,262.2,8.6522,273.96,7.9028,285.72,8.6319,297.48,8.8796,309.24,7.5439,321,8.3067,332.76,7.8882,344.52,7.9398,356.28,8.3182,368.04,7.5704,379.8,8.4,379.8847,8.6046,380.1278,8.3428,380.6183,8.6784,381.1389,9.0868,381.4839,9.0712,381.9213,9.2787,381.9465,9.2891,382.0853,9.6981,382.3388,10.1545,382.5369,10.5881,382.8407,11.0654,382.8,11.4,383.6053,11.4,383.6151,24.0677,383.1056,36.7354,383.3563,49.4031,383.6427,62.0707,381.9346,74.7384,382.8,87.4061,383.0507,87.51,382.5147,87.785,382.6458,88.3363,382.0899,88.6031,382.0717,89.0927,381.9213,89.5274,382.0348,89.8015,381.4896,89.6852,381.0889,89.9178,380.7004,90.1798,380.288,90.3842,379.8,90.4061,379.8,90.4014,368.04,90.7508,356.28,89.7192,344.52,90.7474,332.76,91.0639,321,90.9395,309.24,91.1417,297.48,89.8264,285.72,89.6235,273.96,89.6604,262.2,90.4061,262.191,90.3843,261.7457,90.1577,261.4558,90.3065,260.9005,89.8143,260.4504,89.5764,260.0787,89.5274,260.163,89.5624,259.6565,89.0011,259.5354,88.5994,259.7913,88.354,259.5367,87.8971,259.2,87.4061,260.0814,87.4061,258.8138,74.7384,259.583,62.0707,259.9085,49.4031,258.6331,36.7354,259.085,24.0677,259.2,11.4,259.2466,11.4193,259.6166,11.0755,259.5499,10.5508,259.8982,10.198,259.6983,9.6182,260.0787,9.2787,259.975,9.0284,260.58,9.2891,260.8175,8.6623,261.4294,8.9396,261.8074,8.6521,262.2,8.4" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="116.4" x="262.8" y="32.7111">Un peu de design</text><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="61.2" x="290.4" y="56.0465">au début</text><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="80.4" x="280.8" y="79.3818">(Some DUF)</text></g><!--MD5=[0c6e9717770683435cef62d310f4741c]
+class agile--><g id="elem_agile"><polygon fill="#FFFFFF" points="205.8,175.8,205.8,175.8841,208.125,175.6343,210.45,175.8773,212.775,175.9599,215.1,175.5146,217.425,175.8,217.4131,175.7713,217.784,175.8181,218.2148,176.0097,218.6874,176.302,219.0162,176.2474,219.5463,176.6787,219.7509,176.7634,219.4891,177.0065,219.8247,177.4969,220.2332,178.0176,220.2176,178.3626,220.425,178.8,220.4523,178.8,220.4122,184.6671,220.4964,190.5341,220.5207,196.4012,220.6593,202.2683,220.425,208.1354,220.673,208.2381,220.5003,208.6636,220.1676,209.0229,220.0691,209.4791,219.9816,209.9399,219.5463,210.2567,219.4359,209.9902,219.2259,210.6832,218.6524,210.4986,218.3552,210.9812,217.7735,210.7767,217.425,211.1354,217.425,211.108,215.1,211.432,212.775,211.1159,210.45,211.1775,208.125,211.2708,205.8,211.1354,205.8637,211.2892,205.3751,210.9582,204.9954,210.89,204.4396,210.3966,204.1465,210.5375,203.6787,210.2567,203.8813,210.3406,203.6672,209.9005,203.5538,209.502,202.9729,208.9099,202.7347,208.4598,202.8,208.1354,202.5514,208.1354,202.7764,202.2683,202.7214,196.4012,203.0726,190.5341,202.7301,184.6671,202.8,178.8,202.6732,178.7475,203.0601,178.4107,202.905,177.8494,203.1354,177.4477,203.7428,177.2023,203.6787,176.6787,203.7454,176.8397,204.2154,176.7744,204.4779,176.2083,205.0003,176.2694,205.4661,176.1939,205.8,175.8" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" font-weight="bold" lengthadjust="spacing" textlength="10.425" x="206.4" y="200.1111">+</text></g><!--MD5=[690125be0f31ed8879cbad5baf62f37b]
+class Na--><g id="elem_Na"><polygon fill="#FFFFFF" points="178.8,31.8,178.8,31.8841,185.76,31.6343,192.72,31.8773,199.68,31.9599,206.64,31.5146,213.6,31.8,213.5881,31.7713,213.959,31.8181,214.3898,32.0097,214.8624,32.302,215.1912,32.2474,215.7213,32.6787,215.9259,32.7634,215.6641,33.0065,215.9997,33.4969,216.4082,34.0176,216.3926,34.3626,216.6,34.8,216.6273,34.8,216.5872,40.6671,216.6714,46.5341,216.6957,52.4012,216.8343,58.2683,216.6,64.1354,216.848,64.2381,216.6753,64.6636,216.3426,65.0229,216.2441,65.4791,216.1566,65.9399,215.7213,66.2567,215.6109,65.9902,215.4009,66.6832,214.8274,66.4986,214.5302,66.9812,213.9485,66.7767,213.6,67.1354,213.6,67.108,206.64,67.432,199.68,67.1159,192.72,67.1775,185.76,67.2708,178.8,67.1354,178.8637,67.2892,178.3751,66.9582,177.9954,66.89,177.4396,66.3966,177.1465,66.5375,176.6787,66.2567,176.8813,66.3406,176.6672,65.9005,176.5538,65.502,175.9729,64.9099,175.7347,64.4598,175.8,64.1354,175.5514,64.1354,175.7764,58.2683,175.7214,52.4012,176.0726,46.5341,175.7301,40.6671,175.8,34.8,175.6732,34.7475,176.0601,34.4107,175.905,33.8494,176.1354,33.4477,176.7428,33.2023,176.6787,32.6787,176.7454,32.8397,177.2154,32.7744,177.4779,32.2083,178.0003,32.2694,178.4661,32.1939,178.8,31.8" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="33.6" x="179.4" y="56.1111">Agile</text></g><!--MD5=[6b15be3b9be33d047e8599ad5055019b]
+class Nde--><g id="elem_Nde"><polygon fill="#FFFFFF" points="194.4,319.8,194.4,320.0522,205.8,319.3028,217.2,320.0319,228.6,320.2796,240,318.9439,251.4,319.7067,262.8,319.8,262.7347,319.6424,263.1656,319.834,263.6381,320.1263,263.967,320.0717,264.5818,320.7075,264.9213,320.6787,264.6884,320.5822,265.024,321.0727,265.4324,321.5933,265.4168,321.9383,265.6495,322.3862,265.8,322.8,265.7872,322.8,265.8714,333.3341,265.8957,343.8683,266.0343,354.4024,266.0684,364.9366,265.8,375.4707,266.051,375.5747,265.7184,375.934,265.6198,376.3902,265.5323,376.851,264.8305,377.0574,264.9213,377.5921,265.0252,377.8428,264.4517,377.6582,264.1545,378.1408,263.5728,377.9363,263.2138,378.2697,262.8,378.4707,262.8,379.3607,251.4,378.4123,240,378.5971,228.6,378.8771,217.2,378.9702,205.8,378.466,194.4,378.4707,194.444,378.5769,193.8881,378.0835,193.595,378.2244,193.2111,378.1461,192.771,377.9321,192.2787,377.5921,192.5052,377.6859,191.9244,377.0938,191.6862,376.6437,191.5218,376.2241,191.554,375.886,191.4,375.4707,191.3214,375.4707,191.6726,364.9366,191.3301,354.4024,191.2628,343.8683,191.4913,333.3341,191.4,322.8,191.1536,322.6979,191.3839,322.2963,191.9913,322.0508,192.0882,321.5939,192.3744,321.2154,192.2787,320.6787,192.2294,320.5598,192.7518,320.6209,193.2176,320.5454,193.4792,319.9769,193.9611,319.9403,194.4,319.8" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="45.6" x="205.8" y="344.1111">Design</text><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="67.2" x="195" y="367.4465">émergent</text></g><!--MD5=[91e5c1a6682de6d8b3900af52601d7a9]
+class hacking--><g id="elem_hacking"><polygon fill="#FFFFFF" points="127.8,162,127.8,162.0841,130.68,161.8343,133.56,162.0773,136.44,162.1599,139.32,161.7146,142.2,162,142.1881,161.9713,142.559,162.0181,142.9898,162.2097,143.4624,162.502,143.7912,162.4474,144.3213,162.8787,144.5259,162.9634,144.2641,163.2065,144.5997,163.6969,145.0082,164.2176,144.9926,164.5626,145.2,165,145.2819,165,145.1617,176.201,145.4142,187.4019,145.487,198.6029,145.9028,209.8038,145.2,221.0048,145.448,221.1075,145.2753,221.533,144.9426,221.8923,144.8441,222.3486,144.7566,222.8094,144.3213,223.1261,144.2109,222.8596,144.0009,223.5526,143.4274,223.368,143.1302,223.8506,142.5485,223.6461,142.2,224.0048,142.2,223.9774,139.32,224.3014,136.44,223.9853,133.56,224.0469,130.68,224.1403,127.8,224.0048,127.8637,224.1586,127.3751,223.8276,126.9954,223.7595,126.4396,223.2661,126.1465,223.407,125.6787,223.1261,125.8813,223.21,125.6672,222.7699,125.5538,222.3714,124.9729,221.7794,124.7347,221.3292,124.8,221.0048,124.0543,221.0048,124.7293,209.8038,124.5642,198.6029,125.6177,187.4019,124.5904,176.201,124.8,165,124.6732,164.9475,125.0601,164.6107,124.905,164.0494,125.1354,163.6477,125.7428,163.4023,125.6787,162.8787,125.7454,163.0397,126.2154,162.9744,126.4779,162.4083,127.0003,162.4694,127.4661,162.3939,127.8,162" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="36" lengthadjust="spacing" textlength="13.2" x="128.4" y="207.2384">[</text></g><!--MD5=[aac2e74d767a6781859b7847ed17f912]
+class Nh--><g id="elem_Nh"><polygon fill="#FFFFFF" points="11.4,331.8,11.4,332.0522,23.6182,331.3028,35.8364,332.0319,48.0545,332.2796,60.2727,330.9439,72.4909,331.7067,84.7091,331.2882,96.9273,331.3398,109.1455,331.7182,121.3636,330.9704,133.5818,332.4644,145.8,331.8,145.7035,331.5671,146.194,331.9027,146.7146,332.3111,147.0597,332.2955,147.5075,332.5282,147.9213,332.6787,147.9095,332.6738,148.163,333.1303,148.3612,333.5638,148.665,334.0411,148.8723,334.4785,148.8,334.8,149.0717,334.8,148.9019,340.6671,148.9854,346.5341,149.0809,352.4012,148.5115,358.2683,148.8,364.1354,149.0507,364.2392,148.5147,364.5142,148.6458,365.0656,148.0899,365.3324,148.0717,365.8219,147.9213,366.2567,148.0348,366.5308,147.4896,366.4144,147.0889,366.6471,146.7004,366.909,146.288,367.1135,145.8,367.1354,145.8,367.1307,133.5818,367.48,121.3636,366.4485,109.1455,367.4766,96.9273,367.7932,84.7091,367.6688,72.4909,367.871,60.2727,366.5557,48.0545,366.3527,35.8364,366.3897,23.6182,367.0647,11.4,367.1354,11.3699,367.0627,11.08,367.2114,10.5247,366.7193,10.0747,366.4814,9.7379,366.5168,9.2787,366.2567,9.0322,366.1546,8.9111,365.753,9.167,365.5075,8.9125,365.0506,8.8472,364.6721,8.4,364.1354,8.2713,364.1354,8.5277,358.2683,8.6362,352.4012,8.211,346.5341,8.3617,340.6671,8.4,334.8,8.4466,334.8193,8.8166,334.4755,8.7499,333.9508,9.0982,333.598,8.8983,333.0182,9.2787,332.6787,9.175,332.4284,9.78,332.6891,10.0175,332.0623,10.6294,332.3396,11.0074,332.0521,11.4,331.8" style="stroke:#FFFFFF;stroke-width:0.6;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="16.8" lengthadjust="spacing" textlength="133.2" x="12" y="356.1111">« Hacking cowboy »</text></g><!--MD5=[5f337148e273f779a62741148f7b6e83]
+link bduf to waterfall--><g id="link_bduf_waterfall"><path d="M397.44,193.2 L397.44,193.5363 L409.6512,192.5371 L421.8624,193.5093 L434.0736,193.8395 L446.2848,192.0586 L458.496,193.2 " fill="none" style="stroke:#000000;stroke-width:2.4;"></path></g><!--MD5=[4b5cf5a78eea86137d5313a365a7e46b]
+link duf to bduf--><g id="link_duf_bduf"><path d="M330.456,193.2 L330.456,193.3121 L340.2,192.979 L349.944,193.3031 L359.688,193.4132 L369.432,192.8195 L379.176,193.2 " fill="none" style="stroke:#000000;stroke-width:2.4;"></path></g><!--MD5=[d3ffae36f2f9fd008630b15a84ed138e]
+link agile to duf--><g id="link_agile_duf"><path d="M221.184,193.2 L221.184,193.5363 L232.491,192.5371 L243.798,193.5093 L255.105,193.8395 L266.412,192.0586 L277.719,193.0757 L289.026,192.5176 L300.333,192.5864 L311.64,193.2 " fill="none" style="stroke:#000000;stroke-width:2.4;"></path></g><!--MD5=[06c56e4bf5bfb90b5df790873d9bd480]
+link hacking to agile--><g id="link_hacking_agile"><path d="M145.2,193.2 L145.2,193.5363 L156.648,192.5371 L168.096,193.5093 L179.544,193.8395 L190.992,192.0586 L202.44,193.2 " fill="none" style="stroke:#000000;stroke-width:2.4;"></path></g><!--MD5=[f628d46872c00f827ae4d18143092d73]
+link Ncp to waterfall--><g id="link_Ncp_waterfall"><path d="M486.792,66.648 L487.1252,66.6932 L484.4122,79.2704 L483.6527,92.1124 L482.2571,104.8682 L478.7695,117.3404 L478.0545,130.1884 L475.7786,142.8249 L474.732,155.628 " fill="none" style="stroke:#000000;stroke-width:1.2;stroke-dasharray:7.0,7.0;"></path><polygon fill="#000000" points="473.928,161.592,473.9995,161.6361,475.0282,159.4934,476.4763,157.6094,477.7877,155.6411,478.6501,153.3957,480.1342,151.534,480.1153,151.5093,478.9506,152.2207,477.8809,153.0569,476.8771,153.9797,475.646,154.6038,474.7333,155.6463,474.9095,155.7804,473.7103,154.4134,473.0255,153.438,472.4034,152.5105,471.4162,151.3048,470.621,150.2455,470.6472,150.2531,471.2701,152.5112,472.0124,154.8041,472.697,157.0802,473.4915,159.3882,473.928,161.592" style="stroke:#000000;stroke-width:1.2;"></polygon></g><!--MD5=[578e2a72ecbe2b9d201319485c79573b]
+reverse link bduf to Nbduf--><g id="link_bduf_Nbduf"><path d="M388.2,216.924 L388.5363,216.924 L387.5371,228.2674 L388.5093,239.6109 L388.8395,250.9543 L387.0586,262.2977 L388.0757,273.6411 L387.5176,284.9846 L388.2,296.328 " fill="none" style="stroke:#000000;stroke-width:1.2;stroke-dasharray:7.0,7.0;"></path><polygon fill="#000000" points="388.2,210.84,388.2768,210.8741,387.0886,212.9327,386.3507,215.1914,385.4661,217.3849,384.0992,219.3641,383.4,221.64,383.378,221.618,384.2394,220.5594,385.2115,219.6115,386.2607,218.7407,387.0445,217.6045,388.2,216.84,388.3566,216.9966,388.9817,217.6217,390.0641,218.7041,391.2022,219.8422,392.0157,220.6557,393,221.64,393.0249,221.6511,392.0283,219.4748,391.1453,217.349,390.2074,215.1988,389.3741,213.0951,388.2,210.84" style="stroke:#000000;stroke-width:1.2;"></polygon></g><!--MD5=[6cbb546d58ca209daaa89a22513650ee]
+link Nduf to duf--><g id="link_Nduf_duf"><path d="M321,90.216 L321.3363,90.216 L320.3371,101.5491 L321.3093,112.8823 L321.6395,124.2154 L319.8586,135.5486 L320.8757,146.8817 L320.3176,158.2149 L321,169.548 " fill="none" style="stroke:#000000;stroke-width:1.2;stroke-dasharray:7.0,7.0;"></path><polygon fill="#000000" points="321,175.764,321.0768,175.7981,321.8086,173.5367,322.9907,171.4754,324.0261,169.3489,324.5792,167.0081,325.8,164.964,325.778,164.942,324.7194,165.8034,323.7715,166.7755,322.9007,167.8247,321.7645,168.6085,321,169.764,321.1566,169.9206,319.8617,168.6257,319.0241,167.7881,318.2422,167.0062,317.1357,165.8997,316.2,164.964,316.2249,164.9751,317.1483,167.1188,318.1853,169.313,319.1674,171.4828,320.2541,173.6991,321,175.764" style="stroke:#000000;stroke-width:1.2;"></polygon></g><!--MD5=[9d9786c287e57c8d872aa15a0f10bc59]
+reverse link agile to Nde--><g id="link_agile_Nde"><path d="M214.272,217.02 L214.6063,217.0566 L214.861,228.3613 L217.0754,239.8803 L218.6517,251.3295 L218.1293,262.5493 L220.3884,274.0732 L221.0817,285.4258 L222.398,296.8466 L224.1476,308.3148 L225.504,319.74 " fill="none" style="stroke:#000000;stroke-width:1.2;stroke-dasharray:7.0,7.0;"></path><polygon fill="#000000" points="213.6,210.84,213.6801,210.8656,212.7223,213.041,212.2339,215.3664,211.5927,217.643,210.4488,219.7589,210.0007,222.0972,209.9765,222.0778,210.7178,220.9319,211.5813,219.8841,212.5298,218.9045,213.1856,217.6899,214.2513,216.8045,214.39,216.9772,215.152,217.4581,216.3188,218.4431,217.5351,219.4896,218.464,220.1783,219.544,221.0551,219.5676,221.0689,218.3441,219.0057,217.2281,217.005,216.0603,214.9742,214.9913,213.0009,213.6,210.84" style="stroke:#000000;stroke-width:1.2;"></polygon></g><!--MD5=[3a0a81021b7919ad0f2d6d20c7c0563c]
+link Na to agile--><g id="link_Na_agile"><path d="M197.988,66.648 L198.3223,66.6848 L198.5864,77.9887 L200.8101,89.5085 L202.3956,100.958 L201.8828,112.1763 L204.1511,123.7011 L204.8537,135.0533 L206.1794,146.4741 L207.9383,157.9427 L209.304,169.368 " fill="none" style="stroke:#000000;stroke-width:1.2;stroke-dasharray:7.0,7.0;"></path><polygon fill="#000000" points="209.988,175.512,210.0681,175.5376,210.55,173.2101,211.5014,171.0327,212.2999,168.8064,212.5956,166.4193,213.5873,164.2548,213.5631,164.2353,212.6042,165.2065,211.7675,166.2758,211.0157,167.4133,209.9712,168.3158,209.3367,169.5475,209.4754,169.7201,208.1203,168.5008,207.1701,167.7855,206.2693,167.1318,205.0811,166.1202,204.044,165.2969,204.0676,165.3106,205.2218,167.3335,206.4833,169.4188,207.6931,171.4741,209.0017,173.5868,209.988,175.512" style="stroke:#000000;stroke-width:1.2;"></polygon></g><!--MD5=[dfe2f61f9837529d325013c3040df5d5]
+reverse link hacking to Nh--><g id="link_hacking_Nh"><path d="M122.652,228.024 L122.9677,228.1399 L117.799,239.3182 L114.481,251.1759 L110.5603,262.8124 L104.6578,273.7213 L101.3819,285.5945 L96.6274,296.9248 L92.4613,308.4712 L88.7043,320.1677 L84.576,331.728 " fill="none" style="stroke:#000000;stroke-width:1.2;stroke-dasharray:7.0,7.0;"></path><polygon fill="#000000" points="124.788,222.216,124.8483,222.2746,123.0225,223.7964,121.5503,225.6616,119.963,227.415,117.997,228.8007,116.5551,230.6954,116.5421,230.6671,117.7159,229.9709,118.9555,229.4169,120.2408,228.9617,121.3685,228.1658,122.7169,227.8472,122.918,227.9401,123.0577,228.9738,123.7844,230.2788,124.5827,231.6168,124.9643,232.7623,125.5651,234.0091,125.5923,234.0109,125.3969,231.6496,125.3255,229.2965,125.1943,226.9395,125.1772,224.59,124.788,222.216" style="stroke:#000000;stroke-width:1.2;"></polygon></g><!--MD5=[bd1878479b1729288d1181e0ad62066d]
+@startuml
+!include ecriture.pumlinclude
+scale 1.2
+skinparam classBorderColor hidden
+skinparam classBackgroundColor hidden
+skinparam classArrowColor black
+hide stereotypes
+hide empty members
+class "<size:30>]" as waterfall
+class "« Cascade pure »" as Ncp
+class "**+**" as bduf <<middle>>
+class "Beaucoup de\nconception\nau début\n(BDUF)" as Nbduf
+class "**+**" as duf <<middle>>
+class "Un peu de design\nau début\n(Some DUF)" as Nduf
+class "**+**" as agile <<middle>>
+class "Agile" as Na
+class "Design\némergent" as Nde
+class "<size:30>[" as hacking
+class "« Hacking cowboy »" as Nh
+
+waterfall -left[bold]- bduf
+bduf -left[bold]- duf
+duf -left[bold]- agile
+agile -left[bold]- hacking
+
+waterfall <-u[dashed]- Ncp
+bduf <-d[dashed]- Nbduf
+duf <-u[dashed]- Nduf
+agile <-d[dashed]- Nde
+agile <-u[dashed]- Na
+hacking <-d[dashed]- Nh
+@enduml
+
+@startuml
+skinparam style strictuml
+skinparam backgroundcolor transparent
+skinparam defaultfontname xkcd Script
+skinparam handwritten true
+scale 1.2
+skinparam classBorderColor hidden
+skinparam classBackgroundColor hidden
+skinparam classArrowColor black
+hide stereotypes
+hide empty members
+class "<size:30>]" as waterfall
+class "« Cascade pure »" as Ncp
+class "**+**" as bduf <<middle>>
+class "Beaucoup de\nconception\nau début\n(BDUF)" as Nbduf
+class "**+**" as duf <<middle>>
+class "Un peu de design\nau début\n(Some DUF)" as Nduf
+class "**+**" as agile <<middle>>
+class "Agile" as Na
+class "Design\némergent" as Nde
+class "<size:30>[" as hacking
+class "« Hacking cowboy »" as Nh
+
+waterfall -left[bold]- bduf
+bduf -left[bold]- duf
+duf -left[bold]- agile
+agile -left[bold]- hacking
+
+waterfall <-u[dashed]- Ncp
+bduf <-d[dashed]- Nbduf
+duf <-u[dashed]- Nduf
+agile <-d[dashed]- Nde
+agile <-u[dashed]- Na
+hacking <-d[dashed]- Nh
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Spectre de la conception, adapté de <span class="citation" data-cites="Ford2009">Ford (<a href="references.html#ref-Ford2009" role="doc-biblioref">2009</a>)</span>. <a href="http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV">(PlantUML)</a></figcaption><p></p>
 </figure>
 </div>
-<p>À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l’on nomme “Hacking Cowboy”. C’est le cas d’un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement), lors duquel, vous ne feriez pas un logiciel avec 10 <em>patterns</em> GoF, vous ne feriez pas non plus les diagrammes UML pour réfléchir à votre architecture. Vous savez aussi que le code produit lors d’un hackathon ne sera pas facile à maintenir. Le seul but de cette activité est de développer du code qui marche pour montrer une idée intéressante.</p>
-<p>Une situation similaire s’applique à certains contextes d’entreprise, par exemple une entreprise en démarrage qui a seulement un financement pour six mois. Si une solution de <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">“produit minimum viable” (MVP en anglais)</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>&nbsp;n’existe pas à la fin de la période de financement, l’entreprise n’existera plus, car il n’y aura pas une seconde période de financement. Si par contre, l’entreprise est financée pour une seconde période, la conception du code pourrait avoir besoin de beaucoup de soin et de maintenance, car elle aura été préalablement négligée. Cette négligence à la conception (pour la maintenabilité) est aussi nommée la <a href="DetteTechnique.html">dette technique</a>.</p>
-<p>À l’autre extrémité du spectre de conception, on retrouve ce que l’on nomme “Cascade pure” où beaucoup d’effort a été déployé pour la conception. Dans le cycle de vie en cascade, on met un temps fixe (par exemple plusieurs mois) à étudier la conception. Comme toute chose poussée à l’extrême, ce n’est pas idéal non plus. Dans son livre, <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> explique en détail des problèmes posés par une approche en cascade. En dépit des problèmes dus à l’approche en cascade, elle est encore utilisée dans certains domaines, par exemple les logiciels pour le contrôle d’avions ou le contrôle d’appareils médicaux. La sécurité et la robustesse des logiciels sont très importantes, alors on passe beaucoup de temps à vérifier et à valider la conception. Puisque les exigences sont plus stables (et que les développeurs et les développeuses ont <em>a priori</em> une meilleure compréhension du domaine) l’approche en cascade n’est pas si mal. Pourtant, le coût pour produire des logiciels certifiés est énorme.</p>
-<p>Le spectre de la conception est très important pour le monde réel, parce qu’une ingénieure ou un ingénieur devrait pouvoir s’adapter selon les attentes de son travail. Le dogme sur “la bonne manière” de développer un logiciel est souvent sans contexte. C’est le contexte de l’entreprise pour laquelle vous travaillez qui peut quantifier les efforts à mettre sur la conception. Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l’extrémité “hacking cowboy” du spectre), même si l’on vous dit que c’est “agile”. <!-- Si vous négligez complètement la conception, vous pouvez peut-être produire du code qui fonctionne plus vite à court terme.
+<p>À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l’on nomme «&nbsp;Hacking Cowboy&nbsp;». C’est le cas d’un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement), lors duquel, vous ne feriez pas un logiciel avec 10 <em>patterns</em> GoF, vous ne feriez pas non plus les diagrammes UML pour réfléchir à votre architecture. Vous savez aussi que le code produit lors d’un hackathon ne sera pas facile à maintenir. Le seul but de cette activité est de développer du code qui marche pour montrer une idée intéressante.</p>
+<p>Une situation similaire s’applique à certains contextes d’entreprise, par exemple une entreprise en démarrage qui a seulement un financement pour six mois. Si une solution de <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">«&nbsp;produit minimum viable&nbsp;» (MVP en anglais)</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>&nbsp;n’existe pas à la fin de la période de financement, l’entreprise n’existera plus, car il n’y aura pas une seconde période de financement. Si par contre, l’entreprise est financée pour une seconde période, la conception du code pourrait avoir besoin de beaucoup de soin et de maintenance, car elle aura été préalablement négligée. Cette négligence à la conception (pour la maintenabilité) est aussi nommée la <a href="DetteTechnique.html">dette technique</a>.</p>
+<p>À l’autre extrémité du spectre de conception, on retrouve ce que l’on nomme «&nbsp;Cascade pure&nbsp;» où beaucoup d’effort a été déployé pour la conception. Dans le cycle de vie en cascade, on met un temps fixe (par exemple plusieurs mois) à étudier la conception. Comme toute chose poussée à l’extrême, ce n’est pas idéal non plus. Dans son livre, <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> explique en détail des problèmes posés par une approche en cascade. En dépit des problèmes dus à l’approche en cascade, elle est encore utilisée dans certains domaines, par exemple les logiciels pour le contrôle d’avions ou le contrôle d’appareils médicaux. La sécurité et la robustesse des logiciels sont très importantes, alors on passe beaucoup de temps à vérifier et à valider la conception. Puisque les exigences sont plus stables (et que les développeurs et les développeuses ont <em>a priori</em> une meilleure compréhension du domaine) l’approche en cascade n’est pas si mal. Pourtant, le coût pour produire des logiciels certifiés est énorme.</p>
+<p>Le spectre de la conception est très important pour le monde réel, parce qu’une ingénieure ou un ingénieur devrait pouvoir s’adapter selon les attentes de son travail. Le dogme sur «&nbsp;la bonne manière&nbsp;» de développer un logiciel est souvent sans contexte. C’est le contexte de l’entreprise pour laquelle vous travaillez qui peut quantifier les efforts à mettre sur la conception. Cependant, méfiez-vous des entreprises qui ne portent aucune attention à la conception (l’extrémité «&nbsp;hacking cowboy&nbsp;» du spectre), même si l’on vous dit que c’est «&nbsp;agile&nbsp;». <!-- Si vous négligez complètement la conception, vous pouvez peut-être produire du code qui fonctionne plus vite à court terme.
 Mais il faudra repayer la dette technique un jour.
 Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). --></p>
 </section>
@@ -449,10 +547,10 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <tr class="odd">
 <td style="text-align: left;">Contrôleur<br>
 <em>F16.13/A17.13</em>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i></td>
-<td style="text-align: left;"><p>Quel est le premier objet en dehors de la couche présentation qui reçoit et coordonne (“contrôle”) les opérations <span style="white-space:nowrap">système ?</span></p>
+<td style="text-align: left;"><p>Quel est le premier objet en dehors de la couche présentation qui reçoit et coordonne («&nbsp;contrôle&nbsp;») les opérations <span style="white-space:nowrap">système ?</span></p>
 <p>Affectez une responsabilité à la classe qui correspond à l’une de ces <span style="white-space:nowrap">définitions :</span></p>
 <ol type="1">
-<li>Elle représente le système global, un “objet racine”, un équipement ou un sous-système (contrôleur de façade).</li>
+<li>Elle représente le système global, un «&nbsp;objet racine&nbsp;», un équipement ou un sous-système (contrôleur de façade).</li>
 <li>Elle représente un scénario de cas d’utilisation dans lequel l’opération système se produit (<em>contrôleur de session</em> ou contrôleur de cas d’utilisation). On la nomme GestionnaireX, où X est le nom du cas d’utilisation.</li>
 </ol></td>
 </tr>
@@ -479,7 +577,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <tr class="odd">
 <td style="text-align: left;">Fabrication Pure <em>F22.2/A25.2</em>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i></td>
 <td style="text-align: left;"><p>En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte <span style="white-space:nowrap">cohésion ?</span></p>
-<p>Affectez un ensemble très cohésif de responsabilités à une classe “comportementale” artificielle qui ne représente pas un concept du domaine — une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p></td>
+<p>Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine — une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Indirection<br>
@@ -491,7 +589,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <td style="text-align: left;">Protection des variations<br>
 <em>F22.4/A25.4</em>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i></td>
 <td style="text-align: left;"><p>Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span></p>
-<p>Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une “interface” stable autour d’eux.</p></td>
+<p>Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p></td>
 </tr>
 </tbody>
 </table>
@@ -509,7 +607,28 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <h2 data-number="6.5" class="anchored" data-anchor-id="exercices"><span class="header-section-number">6.5</span> Exercices</h2>
 <div id="exr-GRASP_GOF_polymorphisme" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 6.1 (GRASP Polymorphisme) </strong></span>Soit le diagramme de classe modélisant l’exemple de <span class="citation" data-cites="Fowl18a">Fowler (<a href="references.html#ref-Fowl18a" role="doc-biblioref">2018</a>)</span> à <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace Conditional with Polymorphism</em></a><span style="white-space:nowrap"> :</span></p>
-<p><img src="GRASP_files/mediabag/fb50743b03468483aea06a1280c682e21c4501e7.svg" class="img-fluid"></p>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="128px" preserveaspectratio="none" style="width:236px;height:128px;background:#FFFFFF;" version="1.1" viewbox="0 0 236 128" width="236px" zoomandpan="magnify"><defs></defs><g><!--MD5=[90f66edba3ee2ef2943b92b287a7e5d6]
+class Bird--><g id="elem_Bird"><rect codeline="2" fill="#F1F1F1" height="107.4844" id="Bird" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="215" x="7" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="27" x="101" y="24.9951">Bird</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="221" y1="33.2969" y2="33.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="83" x="13" y="50.292">type : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="203" x="13" y="66.5889">numberOfCoconuts : number</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="117" x="13" y="82.8857">voltage : number</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="221" y1="90.1875" y2="90.1875"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="146" x="13" y="107.1826">getPlumage() : String</text></g><!--MD5=[d8a7c2e25b0ec0a96a7ccdc4bd90c337]
+@startuml
+skinparam style strictuml
+class Bird {
+    type : String
+    numberOfCoconuts : number
+    voltage : number
+
+    getPlumage() : String
+}
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
 <p>Appliquez GRASP Polymorphisme pour le code <span style="white-space:nowrap">suivant :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>get <span class="fu">plumage</span>() {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span> (<span class="kw">this</span><span class="op">.</span><span class="at">type</span>) {</span>
@@ -532,17 +651,133 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <ul>
 <li>Lesquelles des classes suivantes ont de multiples responsabilités ?</li>
 </ul>
-<p><img src="GRASP_files/mediabag/80b173d3d1a765c121fc65c9672433ab60172c4c.svg" class="img-fluid"></p>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="338px" preserveaspectratio="none" style="width:493px;height:338px;background:#FFFFFF;" version="1.1" viewbox="0 0 493 338" width="493px" zoomandpan="magnify"><defs></defs><g><!--MD5=[2d4eb6d04d47a3654a2f28a4e4967f43]
+class Jeu--><g id="elem_Jeu"><rect codeline="2" fill="#F1F1F1" height="123.7813" id="Jeu" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="19" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="21" x="49.5" y="24.9951">Jeu</text><line style="stroke:#181818;stroke-width:0.5;" x1="20" x2="100" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="20" x2="100" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="25" y="58.292">login()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="25" y="74.5889">inscrire()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="25" y="90.8857">déplacer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="25" y="107.1826">tirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="25" y="123.4795">rester()</text></g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
+class Joueur--><g id="elem_Joueur"><rect codeline="11" fill="#F1F1F1" height="123.7813" id="Joueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="174" x="136" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="44" x="201" y="24.9951">Joueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="309" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="309" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="64" x="142" y="58.292">setNom()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="89" x="142" y="74.5889">setAdresse()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="162" x="142" y="90.8857">setNuméroTéléphone()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="96" x="142" y="107.1826">sauvegarder()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="63" x="142" y="123.4795">charger()</text></g><!--MD5=[4ddba317e71cf2673d95ff61c7fedc8f]
+class Téléphone--><g id="elem_Téléphone"><rect codeline="20" fill="#F1F1F1" height="123.7813" id="Téléphone" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="141" x="345.5" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="75" x="378.5" y="24.9951">Téléphone</text><line style="stroke:#181818;stroke-width:0.5;" x1="346.5" x2="485.5" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="346.5" x2="485.5" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="80" x="351.5" y="58.292">composer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="84" x="351.5" y="74.5889">raccrocher()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="49" x="351.5" y="90.8857">parler()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="129" x="351.5" y="107.1826">envoyerDonnées()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="42" x="351.5" y="123.4795">flash()</text></g><!--MD5=[c9496672310fe83ff81d2dc6ab2bb1f7]
+class JeuCartes--><g id="elem_JeuCartes"><rect codeline="29" fill="#F1F1F1" height="140.0781" id="JeuCartes" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="7" y="191"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="27" y="208.9951">JeuCartes</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="112" y1="217.2969" y2="217.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="112" y1="225.2969" y2="225.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="13" y="242.292">hasNext()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="40" x="13" y="258.5889">next()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="62" x="13" y="274.8857">remove()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="68" x="13" y="291.1826">addCard()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="94" x="13" y="307.4795">removeCard()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="56" x="13" y="323.7764">shuffle()</text></g><!--MD5=[0dd3361ca4b0da0e3a3d975f587489e4]
+class Panier--><g id="elem_Panier"><rect codeline="39" fill="#F1F1F1" height="107.4844" id="Panier" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108" x="148" y="207.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="180.5" y="225.4951">Panier</text><line style="stroke:#181818;stroke-width:0.5;" x1="149" x2="255" y1="233.7969" y2="233.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="149" x2="255" y1="241.7969" y2="241.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="58" x="154" y="258.792">ajouter()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="61" x="154" y="275.0889">enlever()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="77" x="154" y="291.3857">encaisser()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="96" x="154" y="307.6826">sauvegarder()</text></g><!--MD5=[023ecf6702e3ca2ce47ae747eafb20f1]
+class Iterator--><g id="elem_Iterator"><rect codeline="47" fill="#F1F1F1" height="91.1875" id="Iterator" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="291" y="215.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="49" x="305.5" y="233.4951">Iterator</text><line style="stroke:#181818;stroke-width:0.5;" x1="292" x2="368" y1="241.7969" y2="241.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="292" x2="368" y1="249.7969" y2="249.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="297" y="266.792">hasNext()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="40" x="297" y="283.0889">next()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="62" x="297" y="299.3857">remove()</text></g><!--MD5=[e0029e5c6af341c3306ef9c478132d8d]
+@startuml
+skinparam style strictuml
+class Jeu {
+
+    login()
+    inscrire()
+    déplacer()
+    tirer()
+    rester()
+}
+
+class Joueur {
+
+    setNom()
+    setAdresse()
+    setNuméroTéléphone()
+    sauvegarder()
+    charger()
+}
+
+class Téléphone {
+
+    composer()
+    raccrocher()
+    parler()
+    envoyerDonnées()
+    flash()
+}
+
+class JeuCartes {
+
+    hasNext()
+    next()
+    remove()
+    addCard()
+    removeCard()
+    shuffle()
+}
+
+class Panier {
+
+    ajouter()
+    enlever()
+    encaisser()
+    sauvegarder()
+}
+
+class Iterator {
+
+    hasNext()
+    next()
+    remove()
+}
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
 <ul>
 <li>Déterminez si ces classes ont une cohésion forte ou faible :</li>
 </ul>
-<p><img src="GRASP_files/mediabag/cdd3233ba0eb6c21fa5d324840bdfbd5da423d5f.svg" class="img-fluid"></p>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="321px" preserveaspectratio="none" style="width:311px;height:321px;background:#FFFFFF;" version="1.1" viewbox="0 0 311 321" width="311px" zoomandpan="magnify"><defs></defs><g><!--MD5=[2d4eb6d04d47a3654a2f28a4e4967f43]
+class Jeu--><g id="elem_Jeu"><rect codeline="2" fill="#F1F1F1" height="156.375" id="Jeu" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="7" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="21" x="70" y="24.9951">Jeu</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="153" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="153" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="13" y="58.292">login()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="13" y="74.5889">inscrire()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="13" y="90.8857">déplacer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="13" y="107.1826">tirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="13" y="123.4795">rester()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="135" x="13" y="139.7764">getMeilleureScore()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="13" y="156.0732">getNom()</text></g><!--MD5=[54a342b7f1c32de9b311dd0fca9b1a32]
+class SessionPartie--><g id="elem_SessionPartie"><rect codeline="13" fill="#F1F1F1" height="74.8906" id="SessionPartie" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="100" x="189.5" y="47.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="94" x="192.5" y="65.4951">SessionPartie</text><line style="stroke:#181818;stroke-width:0.5;" x1="190.5" x2="288.5" y1="73.7969" y2="73.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="190.5" x2="288.5" y1="81.7969" y2="81.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="195.5" y="98.792">login()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="195.5" y="115.0889">inscrire()</text></g><!--MD5=[9a14d601afc06654ab56258fbf9b5397]
+class ActionsJoueur--><g id="elem_ActionsJoueur"><rect codeline="19" fill="#F1F1F1" height="91.1875" id="ActionsJoueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101" x="30" y="223"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="95" x="33" y="240.9951">ActionsJoueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="31" x2="130" y1="249.2969" y2="249.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="31" x2="130" y1="257.2969" y2="257.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="36" y="274.292">déplacer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="36" y="290.5889">tirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="36" y="306.8857">rester()</text></g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
+class Joueur--><g id="elem_Joueur"><rect codeline="26" fill="#F1F1F1" height="74.8906" id="Joueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="166.5" y="231"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="44" x="213.5" y="248.9951">Joueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="167.5" x2="303.5" y1="257.2969" y2="257.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="167.5" x2="303.5" y1="265.2969" y2="265.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="126" x="172.5" y="282.292">getMeilleurScore()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="172.5" y="298.5889">getNom()</text></g><!--MD5=[b53548a007a2726a6ed7eafed0280a6f]
+@startuml
+skinparam style strictuml
+class Jeu {
+
+    login()
+    inscrire()
+    déplacer()
+    tirer()
+    rester()
+    getMeilleureScore()
+    getNom()
+}
+
+class SessionPartie {
+
+    login()
+    inscrire()
+}
+
+class ActionsJoueur {
+
+    déplacer()
+    tirer()
+    rester()
+}
+
+class Joueur {
+
+    getMeilleurScore()
+    getNom()
+}
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
 </div>
 <div id="exr-GRASP_GOF_contrôleur" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 6.3 (GRASP Contrôleur et Fabrication pure) </strong></span>&nbsp;</p>
 <ul>
 <li>Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d’un contrôleur de session (de cas d’utilisation) est une Fabrication pure.</li>
-<li>Soit un contrôleur de session <code>GestionnaireVentes</code>, quelle est la “situation désespérée” qui est mitigée par ce <span style="white-space:nowrap">contrôleur ?</span> <span style="white-space:nowrap">Astuce :</span> relire la définition de Fabrication pure.</li>
+<li>Soit un contrôleur de session <code>GestionnaireVentes</code>, quelle est la «&nbsp;situation désespérée&nbsp;» qui est mitigée par ce <span style="white-space:nowrap">contrôleur ?</span> <span style="white-space:nowrap">Astuce :</span> relire la définition de Fabrication pure.</li>
 </ul>
 </div>
 
