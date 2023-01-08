@@ -17,10 +17,10 @@ loop reste des articles
  c->s : saisirArticle(codeArticle:int, quantité:int)
  c<<--s : description, total
 end loop
-c->s : terminerSale()
-c<<--s : total with taxes
-c->s : fairePaiement(montant:Monnaie)
-c<<--s : remise de monnaie, reçu
+c->s : terminerVente()
+c<<--s : total avec taxes
+c->s : créerPaiement(montant:Monnaie)
+c<<--s : remise de la monnaie, reçu
 @enduml
 ```
 
