@@ -65,7 +65,8 @@ book:
 bibliography: references.bib
 csl: ets
 citations-hover: true
-citation-location: document
+# Do not use the following - in 1.3.x it prevents the Bibliography in a PDF
+# citation-location: document
 link-citations: true # pandoc setting
 # citeproc: true # causes quarto to hang
 # latex-auto-install: true
