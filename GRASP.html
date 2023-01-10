@@ -606,11 +606,14 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <section id="exercices" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="exercices"><span class="header-section-number">6.5</span> Exercices</h2>
 <div id="exr-GRASP_GOF_polymorphisme" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 6.1 (GRASP Polymorphisme) </strong></span>Soit le diagramme de classe modélisant l’exemple de <span class="citation" data-cites="Fowl18a">Fowler (<a href="references.html#ref-Fowl18a" role="doc-biblioref">2018</a>)</span> à <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace Conditional with Polymorphism</em></a><span style="white-space:nowrap"> :</span></p>
+<p><span class="theorem-title"><strong>Exercice 6.1 (GRASP Polymorphisme) </strong></span>Soit le diagramme de classe sur la <a href="#fig-GRASP_polymorphisme_ex">figure&nbsp;<span>6.2</span></a> modélisant l’exemple de <span class="citation" data-cites="Fowl18a">Fowler (<a href="references.html#ref-Fowl18a" role="doc-biblioref">2018</a>)</span> à <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace Conditional with Polymorphism</em></a>.</p>
+<div id="fig-GRASP_polymorphisme_ex" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="128px" preserveaspectratio="none" style="width:236px;height:128px;background:#FFFFFF;" version="1.1" viewbox="0 0 236 128" width="236px" zoomandpan="magnify"><defs></defs><g><!--MD5=[90f66edba3ee2ef2943b92b287a7e5d6]
-class Bird--><g id="elem_Bird"><rect codeline="2" fill="#F1F1F1" height="107.4844" id="Bird" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="215" x="7" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="27" x="101" y="24.9951">Bird</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="221" y1="33.2969" y2="33.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="83" x="13" y="50.292">type : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="203" x="13" y="66.5889">numberOfCoconuts : number</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="117" x="13" y="82.8857">voltage : number</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="221" y1="90.1875" y2="90.1875"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="146" x="13" y="107.1826">getPlumage() : String</text></g><!--MD5=[d8a7c2e25b0ec0a96a7ccdc4bd90c337]
+class Bird--><g id="elem_Bird"><rect codeline="3" fill="#F1F1F1" height="107.4844" id="Bird" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="215" x="7" y="7"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="27" x="101" y="24.9951">Bird</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="221" y1="33.2969" y2="33.2969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="83" x="13" y="50.292">type : String</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="203" x="13" y="66.5889">numberOfCoconuts : number</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="117" x="13" y="82.8857">voltage : number</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="221" y1="90.1875" y2="90.1875"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="146" x="13" y="107.1826">getPlumage() : String</text></g><!--MD5=[686d2363be6cf1aee3127406f5ce3d1e]
 @startuml
 skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
 class Bird {
     type : String
     numberOfCoconuts : number
@@ -618,7 +621,6 @@ class Bird {
 
     getPlumage() : String
 }
-
 @enduml
 
 PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
@@ -629,6 +631,9 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.2: Classe «&nbsp;Bird&nbsp;» à laquelle on peut appliquer le principe GRASP Polymorhpisme.</figcaption><p></p>
+</figure>
+</div>
 <p>Appliquez GRASP Polymorphisme pour le code <span style="white-space:nowrap">suivant :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>get <span class="fu">plumage</span>() {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span> (<span class="kw">this</span><span class="op">.</span><span class="at">type</span>) {</span>
@@ -647,21 +652,24 @@ Country: null
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="exr-GRASP_GOF_cohesion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 6.2 (GRASP Cohésion) </strong></span>Cet exercice est inspiré d’un exemple donné dans le livre <span class="citation" data-cites="FreemanBatesSierraRobson200410">Freeman, Bates, Sierra, &amp; Robson (<a href="references.html#ref-FreemanBatesSierraRobson200410" role="doc-biblioref">2004</a>)</span>.</p>
+<p><span class="theorem-title"><strong>Exercice 6.2 (GRASP Cohésion) </strong></span>Cet exercice est inspiré d’un exemple donné dans le livre <em>Head First Design Patterns</em> de <span class="citation" data-cites="FreemanBatesSierraRobson200410">Freeman, Bates, Sierra, &amp; Robson (<a href="references.html#ref-FreemanBatesSierraRobson200410" role="doc-biblioref">2004</a>)</span>.</p>
 <ul>
-<li>Lesquelles des classes suivantes ont de multiples responsabilités ?</li>
+<li>Lesquelles des classes sur la <a href="#fig-GRASP_cohesion_ex1">figure&nbsp;<span>6.3</span></a> ont de multiples <span style="white-space:nowrap">responsabilités ?</span></li>
+<li>Déterminez si les classes sur la <a href="#fig-GRASP_cohesion_ex2">figure&nbsp;<span>6.4</span></a> ont une cohésion forte ou faible.</li>
 </ul>
+<div id="fig-GRASP_cohesion_ex1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="338px" preserveaspectratio="none" style="width:493px;height:338px;background:#FFFFFF;" version="1.1" viewbox="0 0 493 338" width="493px" zoomandpan="magnify"><defs></defs><g><!--MD5=[2d4eb6d04d47a3654a2f28a4e4967f43]
-class Jeu--><g id="elem_Jeu"><rect codeline="2" fill="#F1F1F1" height="123.7813" id="Jeu" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="19" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="21" x="49.5" y="24.9951">Jeu</text><line style="stroke:#181818;stroke-width:0.5;" x1="20" x2="100" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="20" x2="100" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="25" y="58.292">login()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="25" y="74.5889">inscrire()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="25" y="90.8857">déplacer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="25" y="107.1826">tirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="25" y="123.4795">rester()</text></g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
-class Joueur--><g id="elem_Joueur"><rect codeline="11" fill="#F1F1F1" height="123.7813" id="Joueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="174" x="136" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="44" x="201" y="24.9951">Joueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="309" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="309" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="64" x="142" y="58.292">setNom()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="89" x="142" y="74.5889">setAdresse()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="162" x="142" y="90.8857">setNuméroTéléphone()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="96" x="142" y="107.1826">sauvegarder()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="63" x="142" y="123.4795">charger()</text></g><!--MD5=[4ddba317e71cf2673d95ff61c7fedc8f]
-class Téléphone--><g id="elem_Téléphone"><rect codeline="20" fill="#F1F1F1" height="123.7813" id="Téléphone" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="141" x="345.5" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="75" x="378.5" y="24.9951">Téléphone</text><line style="stroke:#181818;stroke-width:0.5;" x1="346.5" x2="485.5" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="346.5" x2="485.5" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="80" x="351.5" y="58.292">composer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="84" x="351.5" y="74.5889">raccrocher()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="49" x="351.5" y="90.8857">parler()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="129" x="351.5" y="107.1826">envoyerDonnées()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="42" x="351.5" y="123.4795">flash()</text></g><!--MD5=[c9496672310fe83ff81d2dc6ab2bb1f7]
-class JeuCartes--><g id="elem_JeuCartes"><rect codeline="29" fill="#F1F1F1" height="140.0781" id="JeuCartes" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="7" y="191"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="27" y="208.9951">JeuCartes</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="112" y1="217.2969" y2="217.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="112" y1="225.2969" y2="225.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="13" y="242.292">hasNext()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="40" x="13" y="258.5889">next()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="62" x="13" y="274.8857">remove()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="68" x="13" y="291.1826">addCard()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="94" x="13" y="307.4795">removeCard()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="56" x="13" y="323.7764">shuffle()</text></g><!--MD5=[0dd3361ca4b0da0e3a3d975f587489e4]
-class Panier--><g id="elem_Panier"><rect codeline="39" fill="#F1F1F1" height="107.4844" id="Panier" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108" x="148" y="207.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="180.5" y="225.4951">Panier</text><line style="stroke:#181818;stroke-width:0.5;" x1="149" x2="255" y1="233.7969" y2="233.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="149" x2="255" y1="241.7969" y2="241.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="58" x="154" y="258.792">ajouter()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="61" x="154" y="275.0889">enlever()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="77" x="154" y="291.3857">encaisser()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="96" x="154" y="307.6826">sauvegarder()</text></g><!--MD5=[023ecf6702e3ca2ce47ae747eafb20f1]
-class Iterator--><g id="elem_Iterator"><rect codeline="47" fill="#F1F1F1" height="91.1875" id="Iterator" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="291" y="215.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="49" x="305.5" y="233.4951">Iterator</text><line style="stroke:#181818;stroke-width:0.5;" x1="292" x2="368" y1="241.7969" y2="241.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="292" x2="368" y1="249.7969" y2="249.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="297" y="266.792">hasNext()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="40" x="297" y="283.0889">next()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="62" x="297" y="299.3857">remove()</text></g><!--MD5=[e0029e5c6af341c3306ef9c478132d8d]
+class Jeu--><g id="elem_Jeu"><rect codeline="3" fill="#F1F1F1" height="123.7813" id="Jeu" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="19" y="7"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="21" x="49.5" y="24.9951">Jeu</text><line style="stroke:#181818;stroke-width:0.5;" x1="20" x2="100" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="20" x2="100" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="25" y="58.292">login()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="25" y="74.5889">inscrire()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="25" y="90.8857">déplacer()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="25" y="107.1826">tirer()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="25" y="123.4795">rester()</text></g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
+class Joueur--><g id="elem_Joueur"><rect codeline="11" fill="#F1F1F1" height="123.7813" id="Joueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="174" x="136" y="7"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="44" x="201" y="24.9951">Joueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="309" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="309" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="64" x="142" y="58.292">setNom()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="89" x="142" y="74.5889">setAdresse()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="162" x="142" y="90.8857">setNuméroTéléphone()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="96" x="142" y="107.1826">sauvegarder()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="63" x="142" y="123.4795">charger()</text></g><!--MD5=[4ddba317e71cf2673d95ff61c7fedc8f]
+class Téléphone--><g id="elem_Téléphone"><rect codeline="19" fill="#F1F1F1" height="123.7813" id="Téléphone" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="141" x="345.5" y="7"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="75" x="378.5" y="24.9951">Téléphone</text><line style="stroke:#181818;stroke-width:0.5;" x1="346.5" x2="485.5" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="346.5" x2="485.5" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="80" x="351.5" y="58.292">composer()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="84" x="351.5" y="74.5889">raccrocher()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="49" x="351.5" y="90.8857">parler()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="129" x="351.5" y="107.1826">envoyerDonnées()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="42" x="351.5" y="123.4795">flash()</text></g><!--MD5=[c9496672310fe83ff81d2dc6ab2bb1f7]
+class JeuCartes--><g id="elem_JeuCartes"><rect codeline="27" fill="#F1F1F1" height="140.0781" id="JeuCartes" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="7" y="191"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="27" y="208.9951">JeuCartes</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="112" y1="217.2969" y2="217.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="112" y1="225.2969" y2="225.2969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="13" y="242.292">hasNext()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="40" x="13" y="258.5889">next()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="62" x="13" y="274.8857">remove()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="68" x="13" y="291.1826">addCard()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="94" x="13" y="307.4795">removeCard()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="56" x="13" y="323.7764">shuffle()</text></g><!--MD5=[0dd3361ca4b0da0e3a3d975f587489e4]
+class Panier--><g id="elem_Panier"><rect codeline="36" fill="#F1F1F1" height="107.4844" id="Panier" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108" x="148" y="207.5"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="180.5" y="225.4951">Panier</text><line style="stroke:#181818;stroke-width:0.5;" x1="149" x2="255" y1="233.7969" y2="233.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="149" x2="255" y1="241.7969" y2="241.7969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="58" x="154" y="258.792">ajouter()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="61" x="154" y="275.0889">enlever()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="77" x="154" y="291.3857">encaisser()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="96" x="154" y="307.6826">sauvegarder()</text></g><!--MD5=[023ecf6702e3ca2ce47ae747eafb20f1]
+class Iterator--><g id="elem_Iterator"><rect codeline="43" fill="#F1F1F1" height="91.1875" id="Iterator" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="291" y="215.5"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="49" x="305.5" y="233.4951">Iterator</text><line style="stroke:#181818;stroke-width:0.5;" x1="292" x2="368" y1="241.7969" y2="241.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="292" x2="368" y1="249.7969" y2="249.7969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="66" x="297" y="266.792">hasNext()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="40" x="297" y="283.0889">next()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="62" x="297" y="299.3857">remove()</text></g><!--MD5=[770bf52478ce5725e6d6201977d3b343]
 @startuml
 skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
 class Jeu {
-
     login()
     inscrire()
     déplacer()
@@ -670,7 +678,6 @@ class Jeu {
 }
 
 class Joueur {
-
     setNom()
     setAdresse()
     setNuméroTéléphone()
@@ -679,7 +686,6 @@ class Joueur {
 }
 
 class Téléphone {
-
     composer()
     raccrocher()
     parler()
@@ -688,7 +694,6 @@ class Téléphone {
 }
 
 class JeuCartes {
-
     hasNext()
     next()
     remove()
@@ -698,7 +703,6 @@ class JeuCartes {
 }
 
 class Panier {
-
     ajouter()
     enlever()
     encaisser()
@@ -706,7 +710,6 @@ class Panier {
 }
 
 class Iterator {
-
     hasNext()
     next()
     remove()
@@ -722,18 +725,20 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<ul>
-<li>Déterminez si ces classes ont une cohésion forte ou faible :</li>
-</ul>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.3: Lesquelles des classes ont de multiples responsabilités?</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-GRASP_cohesion_ex2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="321px" preserveaspectratio="none" style="width:311px;height:321px;background:#FFFFFF;" version="1.1" viewbox="0 0 311 321" width="311px" zoomandpan="magnify"><defs></defs><g><!--MD5=[2d4eb6d04d47a3654a2f28a4e4967f43]
-class Jeu--><g id="elem_Jeu"><rect codeline="2" fill="#F1F1F1" height="156.375" id="Jeu" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="7" y="7"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="21" x="70" y="24.9951">Jeu</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="153" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="153" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="13" y="58.292">login()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="13" y="74.5889">inscrire()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="13" y="90.8857">déplacer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="13" y="107.1826">tirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="13" y="123.4795">rester()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="135" x="13" y="139.7764">getMeilleureScore()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="13" y="156.0732">getNom()</text></g><!--MD5=[54a342b7f1c32de9b311dd0fca9b1a32]
-class SessionPartie--><g id="elem_SessionPartie"><rect codeline="13" fill="#F1F1F1" height="74.8906" id="SessionPartie" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="100" x="189.5" y="47.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="94" x="192.5" y="65.4951">SessionPartie</text><line style="stroke:#181818;stroke-width:0.5;" x1="190.5" x2="288.5" y1="73.7969" y2="73.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="190.5" x2="288.5" y1="81.7969" y2="81.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="195.5" y="98.792">login()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="195.5" y="115.0889">inscrire()</text></g><!--MD5=[9a14d601afc06654ab56258fbf9b5397]
-class ActionsJoueur--><g id="elem_ActionsJoueur"><rect codeline="19" fill="#F1F1F1" height="91.1875" id="ActionsJoueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101" x="30" y="223"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="95" x="33" y="240.9951">ActionsJoueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="31" x2="130" y1="249.2969" y2="249.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="31" x2="130" y1="257.2969" y2="257.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="36" y="274.292">déplacer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="36" y="290.5889">tirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="36" y="306.8857">rester()</text></g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
-class Joueur--><g id="elem_Joueur"><rect codeline="26" fill="#F1F1F1" height="74.8906" id="Joueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="166.5" y="231"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="44" x="213.5" y="248.9951">Joueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="167.5" x2="303.5" y1="257.2969" y2="257.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="167.5" x2="303.5" y1="265.2969" y2="265.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="126" x="172.5" y="282.292">getMeilleurScore()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="172.5" y="298.5889">getNom()</text></g><!--MD5=[b53548a007a2726a6ed7eafed0280a6f]
+class Jeu--><g id="elem_Jeu"><rect codeline="3" fill="#F1F1F1" height="156.375" id="Jeu" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="7" y="7"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="21" x="70" y="24.9951">Jeu</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="153" y1="33.2969" y2="33.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="153" y1="41.2969" y2="41.2969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="13" y="58.292">login()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="13" y="74.5889">inscrire()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="13" y="90.8857">déplacer()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="13" y="107.1826">tirer()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="13" y="123.4795">rester()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="135" x="13" y="139.7764">getMeilleureScore()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="13" y="156.0732">getNom()</text></g><!--MD5=[54a342b7f1c32de9b311dd0fca9b1a32]
+class SessionPartie--><g id="elem_SessionPartie"><rect codeline="13" fill="#F1F1F1" height="74.8906" id="SessionPartie" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="100" x="189.5" y="47.5"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="94" x="192.5" y="65.4951">SessionPartie</text><line style="stroke:#181818;stroke-width:0.5;" x1="190.5" x2="288.5" y1="73.7969" y2="73.7969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="190.5" x2="288.5" y1="81.7969" y2="81.7969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="43" x="195.5" y="98.792">login()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="60" x="195.5" y="115.0889">inscrire()</text></g><!--MD5=[9a14d601afc06654ab56258fbf9b5397]
+class ActionsJoueur--><g id="elem_ActionsJoueur"><rect codeline="18" fill="#F1F1F1" height="91.1875" id="ActionsJoueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101" x="30" y="223"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="95" x="33" y="240.9951">ActionsJoueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="31" x2="130" y1="249.2969" y2="249.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="31" x2="130" y1="257.2969" y2="257.2969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="70" x="36" y="274.292">déplacer()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="37" x="36" y="290.5889">tirer()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="51" x="36" y="306.8857">rester()</text></g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
+class Joueur--><g id="elem_Joueur"><rect codeline="24" fill="#F1F1F1" height="74.8906" id="Joueur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="166.5" y="231"></rect><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="44" x="213.5" y="248.9951">Joueur</text><line style="stroke:#181818;stroke-width:0.5;" x1="167.5" x2="303.5" y1="257.2969" y2="257.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="167.5" x2="303.5" y1="265.2969" y2="265.2969"></line><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="126" x="172.5" y="282.292">getMeilleurScore()</text><text fill="#000000" font-family="Arial,Helvetica,sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="172.5" y="298.5889">getNom()</text></g><!--MD5=[9e1c825a12c71827ddb7c4142bad8f57]
 @startuml
 skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
 class Jeu {
-
     login()
     inscrire()
     déplacer()
@@ -744,20 +749,17 @@ class Jeu {
 }
 
 class SessionPartie {
-
     login()
     inscrire()
 }
 
 class ActionsJoueur {
-
     déplacer()
     tirer()
     rester()
 }
 
 class Joueur {
-
     getMeilleurScore()
     getNom()
 }
@@ -772,6 +774,9 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.4: Lesquelles des classes ont une cohésion forte? Une cohésion faible?</figcaption><p></p>
+</figure>
+</div>
 </div>
 <div id="exr-GRASP_GOF_contrôleur" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 6.3 (GRASP Contrôleur et Fabrication pure) </strong></span>&nbsp;</p>
