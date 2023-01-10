@@ -149,11 +149,12 @@ On peut voir les principes GRASP comme des généralisations (principes de base)
 
 ### GRASP Polymorphisme
 
-Soit le diagramme de classe modélisant l'exemple de @Fowl18a à [*Replace Conditional with Polymorphism*](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html):
+Soit le diagramme de classe sur la @fig-GRASP_polymorphisme_ex modélisant l'exemple de @Fowl18a à [*Replace Conditional with Polymorphism*](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html).
 
-``` plantuml
+```{.plantuml #fig-GRASP_polymorphisme_ex caption='Classe "Bird" à laquelle on peut appliquer le principe GRASP Polymorhpisme.'}
 @startuml
 skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
 class Bird {
     type : String
     numberOfCoconuts : number
@@ -161,13 +162,12 @@ class Bird {
 
     getPlumage() : String
 }
-
 @enduml
 ```
 
 Appliquez GRASP Polymorphisme pour le code suivant:
 
-``` javascript
+```javascript
 get plumage() {
     switch (this.type) {
         case 'EuropeanSwallow':
@@ -184,22 +184,23 @@ get plumage() {
     }
 }
 ```
-:::
 
+:::
 
 ::: {#exr-GRASP_GOF_cohesion}
 
 ### GRASP Cohésion
 
-Cet exercice est inspiré d'un exemple donné dans le livre @FreemanBatesSierraRobson200410.
+Cet exercice est inspiré d'un exemple donné dans le livre *Head First Design Patterns* de @FreemanBatesSierraRobson200410.
 
-- Lesquelles des classes suivantes ont de multiples responsabilités ?
+- Lesquelles des classes sur la @fig-GRASP_cohesion_ex1 ont de multiples responsabilités?
+- Déterminez si les classes sur la @fig-GRASP_cohesion_ex2 ont une cohésion forte ou faible.
 
-```{.plantuml}
+```{.plantuml #fig-GRASP_cohesion_ex1 caption="Lesquelles des classes ont de multiples responsabilités?"}
 @startuml
 skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
 class Jeu {
-
     login()
     inscrire()
     déplacer()
@@ -208,7 +209,6 @@ class Jeu {
 }
 
 class Joueur {
-
     setNom()
     setAdresse()
     setNuméroTéléphone()
@@ -217,7 +217,6 @@ class Joueur {
 }
 
 class Téléphone {
-
     composer()
     raccrocher()
     parler()
@@ -226,7 +225,6 @@ class Téléphone {
 }
 
 class JeuCartes {
-
     hasNext()
     next()
     remove()
@@ -236,7 +234,6 @@ class JeuCartes {
 }
 
 class Panier {
-
     ajouter()
     enlever()
     encaisser()
@@ -244,7 +241,6 @@ class Panier {
 }
 
 class Iterator {
-
     hasNext()
     next()
     remove()
@@ -253,14 +249,11 @@ class Iterator {
 @enduml
 ```
 
-
-- Déterminez si ces classes ont une cohésion forte ou faible :
-
-```{.plantuml}
+```{.plantuml #fig-GRASP_cohesion_ex2 caption="Lesquelles des classes ont une cohésion forte? Une cohésion faible?"}
 @startuml
 skinparam style strictuml
+skinparam defaultfontname Arial,Helvetica,sans-serif
 class Jeu {
-
     login()
     inscrire()
     déplacer()
@@ -271,20 +264,17 @@ class Jeu {
 }
 
 class SessionPartie {
-
     login()
     inscrire()
 }
 
 class ActionsJoueur {
-
     déplacer()
     tirer()
     rester()
 }
 
 class Joueur {
-
     getMeilleurScore()
     getNom()
 }
