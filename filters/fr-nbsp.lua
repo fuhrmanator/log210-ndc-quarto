@@ -53,6 +53,16 @@ local function space_high_punctuation_and_quotes(inlines)
             -- skip the item we just spaced
             i = i + 1
         end
+
+        --- special case where string is terminated by parentheses, e.g., "Bonjour!)"
+
+        if inlines[i].t == 'Str' and string.find(inlines[i].text, '.*'.. ascii_punctuation_pattern .. '%)') then
+            -- print ("Found: ", inlines[i].text)
+            -- capture what's in the parens
+            _, _, inside = string.find(inlines[i].text, '(.*'.. ascii_punctuation_pattern .. ')%)')
+            inside = inside:sub(1, -2) .. nbsp .. inside:sub(-1)
+            inlines[i].text = inside .. ')'
+        end
         i = i + 1
     end
     return inlines

@@ -2,25 +2,25 @@
 
 Le développement de logiciels est réalisé souvent en équipe.
 Cependant, il y a des défis lors de ce processus de cocréation.
-Avant l’université, on apprend à faire face à des contraintes logistiques;
-comment s’organiser en équipe, comment faire des rencontres, comment répartir le travail, planifier les tâches et les échéances, etc.
+Avant l'université, on apprend à faire face à des contraintes logistiques:
+comment s'organiser en équipe, comment faire des rencontres, comment répartir le travail, planifier les tâches et les échéances, etc.
 Pourtant, la création collaborative de logiciels peut faire face à des défis sur le plan humain.
-Ce sujet a été discuté dans le livre "*Team Geek*" [-@fitzpatrick_team_2012], écrit par Brian W. Fitzpatrick (ancien employé de Google) et Ben Collins-Sussman (développeur fondateur du système de contrôle de version Subversion, employé de Google).
+Ce sujet a été discuté dans le livre *Team Geek* [-@fitzpatrick_team_2012], écrit par Brian W. Fitzpatrick (ancien employé de Google) et Ben Collins-Sussman (développeur fondateur du système de contrôle de version Subversion et employé de Google).
 
-La demande pour le talent et pour la maîtrise des technologies de l’information est importante.
+La demande pour le talent et pour la maîtrise des technologies de l'information est importante.
 Les technologies évoluent constamment, parfois à une vitesse effrénée qui peut rendre une technologie obsolète rapidement.
 Par conséquent, le temps investi pour maîtriser une technologie est très important à court et à long terme.
-Un exemple illustrant est le développement de code pour [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash)\ {{< fa brands wikipedia-w >}}.
+Un exemple illustrant cela est le développement de code pour [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash)\ {{< fa brands wikipedia-w >}}.
 En 2011, la technologie Flash était déployée sur 50\ % des pages Web [@Boittiaux2016]. 
-À cause de la technologie HTML5, cette technologie est maintenant désuète.
-Pourtant beaucoup de développeurs et de développeuses Web ont investi énormément pour avoir une expertise en Flash à l'époque de sa popularité.
-En moins de dix ans, ça ne vaut plus rien de mentionner cette compétence sur un CV.
+À cause de la technologie HTML5, celle de Flash est maintenant désuète.
+Pourtant, beaucoup de développeurs Web et développeuses Web ont investi énormément pour posséder une expertise en Flash à l'époque de sa popularité.
+En moins de dix ans, ça ne valait plus rien de mentionner cette compétence sur un CV.
 
 La bonne nouvelle est qu'une "technologie" ne changera jamais: le comportement humain.
 Donc, il est toujours rentable d'investir du temps pour mieux maîtriser cet aspect du développement.
-Les entreprises en technologies de l'information sont toujours à la recherche de développeurs(euses) qui ont également des compétences générales (*soft skills*).
+Les entreprises en technologies de l'information sont toujours à la recherche de développeurs et développeuses qui ont également des compétences générales (*soft skills*).
 
-@fitzpatrick_team_2012 abordent des problèmes dus aux tendances comportementales chez les développeurs(euses).
+@fitzpatrick_team_2012 abordent des problèmes dus aux tendances comportementales chez les développeurs et développeuses.
 Par exemple, une personne n'a pas toujours envie de montrer son code source aux autres membres de l'équipe pour plusieurs raisons:
 
 - Son code n'est pas fini.
@@ -32,16 +32,16 @@ Par contre, ce genre de comportement augmente certains risques au cours du proce
 
 - de faire des erreurs dans la conception initiale;
 - de "réinventer la roue";
-- de terminer le travail plus tard que son compétiteur, qui, lui, a collaboré avec son équipe.
+- de terminer le travail plus tard que la concurrence, qui, elle, travaille équipe.
 
-@fitzpatrick_team_2012 le disent, et c'est un fait: si nous sommes, dans l'ensemble, plus ou moins compétent(e)s sur le plan technique, ce qui fera la différence importante dans une carrière est notre habileté à collaborer avec les autres.
+@fitzpatrick_team_2012 le disent, et c'est un fait: si nous sommes, dans l'ensemble, à compétence égale sur le plan technique, ce qui fera la différence importante dans une carrière est notre habileté à collaborer avec les autres.
 
 ![Pratiquement tout conflit social est dû à un manque d'humilité, de respect ou de confiance.](images/HRC_venn.svg){width=40% #fig-HRC_venn}
 
 ## Humilité, respect, confiance (HRC)
 
 L'humilité, le respect et la confiance (voir la @fig-HRC_venn) sont les qualités de base pour le bon travail en équipe.
-Rappelez-les par l'acronyme HRC.
+Souvenez-vous-en grâce au sigle HRC.
 Cette section présente ces aspects en détail.
 
 ### Humilité
@@ -66,7 +66,7 @@ L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte les attaques 
 
 ![["Missing"](https://www.flickr.com/photos/smkybear/2705041322/) ([CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)) par [smkybear](https://www.flickr.com/people/smkybear/).](images/flickr_smkybear_missing.jpg){width="200px"}
 
-```{.plantuml #fig-moi_inf_equipe caption="Un(e) membre de l'équipe humble va accepter une décision prise par l'équipe, même s'il ou elle n'est pas en accord à 100%. [(PlantUML)](http://www.plantuml.com/plantuml/uml/JO_1IWH134Jl_HLXFIpCHIzUP1aMFViHcUxqJfZkT9jaq1L_mE_onvn1aArJKQyegBCvgg-rX2DqZWiWv2OEBE0pGMfn8JqQsDMSQh25fQDYXKGPr-9xMR0IV2mnWKNbxZSjfUWebqBFJHFfIojDmHN5DaxYOUP4GBNx5IhLYTJ-eiWQ2zqisOoflRDS86Cn2l_BS3WPVzBJuyCu33_VRojtWX5U6m_3wNv7um7kSfusVKtJRiAP96sVVm40)" }
+```{.plantuml #fig-moi_inf_equipe caption="Un(e) membre de l'équipe humble va accepter une décision prise par l'équipe, même s'il (si elle) n'est pas en accord à 100%. [(PlantUML)](http://www.plantuml.com/plantuml/uml/JO_1IWH134Jl_HLXFIpCHIzUP1aMFViHcUxqJfZkT9jaq1L_mE_onvn1aArJKQyegBCvgg-rX2DqZWiWv2OEBE0pGMfn8JqQsDMSQh25fQDYXKGPr-9xMR0IV2mnWKNbxZSjfUWebqBFJHFfIojDmHN5DaxYOUP4GBNx5IhLYTJ-eiWQ2zqisOoflRDS86Cn2l_BS3WPVzBJuyCu33_VRojtWX5U6m_3wNv7um7kSfusVKtJRiAP96sVVm40)" }
 @startuml
 ' pick a font in the docker's system
 skinparam defaultfontname xkcd script
@@ -82,10 +82,10 @@ Quelques exemples concrets de comportements reflétant la qualité d'humilité c
 
 - Les membres de l'équipe qui n'ont pas le niveau d'expertise requis pour un projet vont le reconnaître et vont même faire des efforts pour s'améliorer et se mettre à niveau.
 Par exemple, une personne avec un niveau débutant en JavaScript, Git, etc. va faire des exercices et/ou suivre des formations sur Internet pour s'améliorer.
-- Les membres de l'équipe (même la chef ou le chef) qui ont pris une mauvaise décision (technique ou autre) vont l'avouer. Elles et ils savent que les autres ne sont pas là pour les attaquer (il y a du respect).
-- Un(e) membre de l'équipe va travailler fort pour que *son équipe* réussisse.
-- Un(e) membre de l'équipe qui reçoit une critique ne va pas la prendre personnellement.
-Elle ou il sait que la qualité de son code n'équivaut pas à son estime de soi (cela n'est pas toujours facile!).
+- Les membres de l'équipe (même la ou le chef) qui ont pris une mauvaise décision (technique ou autre) vont l'avouer. Elles et ils savent que les autres ne sont pas là pour les attaquer (il y a du respect).
+- Un ou une membre de l'équipe va travailler fort pour que *son équipe* réussisse.
+- Un ou une membre de l'équipe qui reçoit une critique ne va pas la prendre personnellement.
+Il ou elle sait que la qualité de son code n'équivaut pas à son estime de soi (cela n'est pas toujours facile!).
 
 ### Respect
 
@@ -104,38 +104,38 @@ Une personne démontrant de la confiance pense ainsi [@fitzpatrick_team_2012]:
 
 Le dernier point peut être extrêmement difficile si, par le passé, une personne (incompétente) à qui vous aviez délégué une tâche n'a pas répondu à vos attentes.
 
-## Redondance des compétences dans l'équipe (bus factor) {#sec-Bus_Factor}
+## Redondance des compétences dans l'équipe (*bus factor*) {#sec-Bus_Factor}
 
 Pour qu'une équipe soit robuste, il faut une redondance des compétences.
-Sinon, la perte soudaine d'un(e) membre de l'équipe (pour une raison quelconque) peut engendrer de graves conséquences, voire l'arrêt du projet.
-Ce principe a été nommé *bus factor* en anglais, faisant référence au nombre de personnes clés dans votre équipe, pouvant se faire renverser par un autobus pour arrêter le projet par manque de personnel bien informé ou compétent.
+Sinon, la perte soudaine d'un ou d'une membre de l'équipe (pour une raison quelconque) peut engendrer de graves conséquences, voire l'arrêt du projet.
+Ce principe a été nommé *bus factor* en anglais, faisant référence au nombre de personnes clés dans votre équipe pouvant se faire renverser par un autobus pour arrêter le projet par manque de personnel bien informé ou compétent.
 Par exemple, dans un projet de stage, si c'est vous qui écrivez tout le code, alors c'est un *bus factor* de 1.
 Si vous n'êtes plus là, le projet s'arrête!
 
-![*Facteur de bus* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné [@fitzpatrick_team_2012]. ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E](images/DALL-E_BusFactor.png){width="500px"}.
+![*Bus factor* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné [@fitzpatrick_team_2012]. ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E.](images/DALL-E_BusFactor.png){width="500px"}
 
-Un(e) membre de l'équipe peut s'absenter ou être moins disponible soudainement pour beaucoup de raisons.
+Un ou une membre de l'équipe peut s'absenter ou être moins disponible soudainement pour beaucoup de raisons.
 Par exemple, cette personne part en vacances, tombe malade, prend un congé parental, change d'emploi, abandonne le cours (contexte de projet universitaire), etc.
 Cherchez à répartir les responsabilités dans l'équipe afin d'avoir un *bus factor* d'au moins 2.
 Partagez des compétences pour maintenir une équipe robuste et polyvalente.
 
 Vous pouvez également garder votre projet *simple* en réduisant les technologies, car chaque dimension technologique (langage, cadriciel, environnement) nécessite une compétence technique à cause des complexités et des dépendances.
 Il est important de garder la documentation de votre conception à jour, surtout les raisons pour lesquelles certains choix technologiques ont été faits.
-Si une personne a choisi un cadriciel, par exemple, mais elle n'est plus là pour vous dire pourquoi, c'est une information perdue. 
+Si une personne a choisi un cadriciel, par exemple, mais qu'elle n'est plus là pour vous dire pourquoi, c'est une information perdue. 
 L'automatisation des tests dans un processus de construction de logiciels (*build process*) à la devops (@sec-tdd) aide aussi, car l'équipe ne dépend pas d'une personne pour construire la solution, rouler les tests, etc.
 Les configurations devops et les tests sont en fait une forme de documentation.
 Toutes ces pratiques vont également faciliter l'intégration de nouvelles personnes dans l'équipe.
 
 ::: {.callout-warning}
-Dans un contexte universitaire, si un(e) membre de l'équipe quitte soudainement, il n'est pas facile de maintenir le même rythme.
-Cependant, les enseignantes ou enseignants et et les auxiliaires de laboratoire s'attendront à ce que vous ayez pensé à un "plan B" pour faire face à ce contretemps.
-Au moins une autre personne dans l'équipe doit être au courant de ce que faisait l'ancien(ne) membre de l'équipe, pour que le projet ne soit pas complètement arrêté.
+Dans un contexte universitaire, si un ou une membre de l'équipe s'absente ou abandonne soudainement, il n'est pas facile de maintenir le même rythme.
+Cependant, les enseignantes ou enseignants et les auxiliaires de laboratoire s'attendront à ce que vous ayez pensé à un "plan B" pour faire face à ce contretemps.
+Au moins une autre personne dans l'équipe doit être au courant de ce que faisait l'ex-membre de l'équipe, pour que le projet ne soit pas complètement arrêté.
 :::
 
 ## Mentorat
 
-Pour des raisons pédagogiques [@oakley2004turning], c'est l'enseignant ou enseignante qui décide la composition des équipes.
-Ça veut dire que, forcément certaines personnes de l'équipe ont plus d'expérience et de facilité à faire certaines tâches que d'autres.
+Pour des raisons pédagogiques [@oakley2004turning], c'est l'enseignant ou l'enseignante qui décide la composition des équipes.
+Ça veut dire que, forcément, certaines personnes de l'équipe ont plus d'expérience et de facilité à faire certaines tâches que d'autres.
 Les équipes doivent composer avec cette diversité.
 
 Selon @fitzpatrick_team_2012:
@@ -145,48 +145,50 @@ Si vous avez déjà un bon bagage en programmation, ça peut être pénible de v
 Apprendre à quelqu'un comment faire une tâche et lui donner l'occasion d'évoluer tout seul sont un défi au début, mais cela est une caractéristique importante du leadership.
 :::
 
-Si les personnes plus fortes n'aident pas les autres, ils risquent de les éloigner de l'équipe et de se retrouver seules sur le plan des contributions techniques. 
+Si les personnes plus fortes n'aident pas les autres, elles risquent de les éloigner de l'équipe et de se retrouver seules sur le plan des contributions techniques. 
 Voir la section sur la [Redondance des compétences dans l'équipe (*bus factor*)](#sec-Bus_Factor).
 
-Encadrer un(e) membre de l'équipe au début du trimestre peut prendre beaucoup de temps.
+Encadrer un ou une membre de l'équipe au début du trimestre peut prendre beaucoup de temps.
 Mais, si la personne devient plus autonome, c'est un gain pour toute l'équipe.
-Cela augmente également le facteur de bus.
+Cela augmente également le *bus factor*.
 
 Voici quelques conseils pour le mentorat:
 
 - avoir les compétences sur un plan technique;
 - être capable d'expliquer des choses à quelqu'un d'autre;
-- savoir évaluer le besoin de la personne à encadrer dans l'équipe, pour bien quantifier l'aide dont vous allez lui fournir.
+- savoir évaluer le besoin de la personne à encadrer dans l'équipe, pour bien quantifier l'aide que vous allez lui fournir.
 
-Le dernier point est important parce que, si vous donnez trop d’informations à la personne, elle peut vous ignorer plutôt que de vous dire gentiment qu’elle a compris [@fitzpatrick_team_2012].
-En plus, donner un faible niveau d’orientation ou de directives à une personne ayant déjà de l'expérience est plus efficace que donner une orientation explicite [@oakley2021uncommon;@chen2017expertise]. 
-Un(e) bon(ne) mentor(e) doit pouvoir estimer le niveau de la personne et lui donner l’aide appropriée, ce qui n’est pas toujours facile.
+Le dernier point est important parce que, si vous donnez trop d'informations à la personne, elle peut vous ignorer plutôt que de vous dire gentiment qu'elle a compris [@fitzpatrick_team_2012].
+En plus, donner un faible niveau d'orientation ou de directives à une personne ayant déjà de l'expérience est plus efficace que donner une orientation explicite [@oakley2021uncommon;@chen2017expertise]. 
+Un bon mentor ou une bonne mentore doit pouvoir estimer le niveau de la personne et lui donner l'aide appropriée, ce qui n'est pas toujours facile.
 Mais sachez que "moins est plus" dans certains cas.
 
 ![Savoir encadrer les membres de l'équipe est une habileté à mettre sur son CV. ["CultureTECH BT Monster Dojo"](https://www.flickr.com/photos/24498081@N06/10081683216/) ([CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) par [connor2nz](https://www.flickr.com/people/24498081@N06/).](images/CultureTECH_BT_Monster_Dojo.jpg){width="400px"}
 
 ## Scénarios
 
-Considérez les volets HRC lorsque vous vous trouvez dans une des situations suivantes (il s'agit des projets dans un contexte de cours, mais certains scénarios peuvent aussi arriver dans les équipes professionnelles):
+Considérez les volets HRC lorsque vous vous trouvez dans une des situations suivantes (il s'agit de projets dans un contexte de cours, mais certains scénarios peuvent aussi arriver dans les équipes professionnelles):
 
-- Une personne à l'équipe se trouve à être la seule à faire de la programmation.
+- Une personne dans l'équipe se trouve à être la seule à faire de la programmation.
   - Elle ne fait plus confiance aux autres membres de l'équipe, car leur code est trop bogué.
   - Elle n'a pas la patience pour accommoder les membres de l'équipe avec moins d'expérience.
   - Elle croit que les autres auraient dû apprendre à mieux programmer dans les cours préalables.
 - Une personne dans l'équipe dit qu'elle a "fait ses trois heures de contribution" chaque dimanche chez elle et que ça devrait suffire pour sa partie (elle a un emploi et n'a pas beaucoup de temps pour l'équipe du projet universitaire).
-- Un ou deux membres d'une équipe abandonnent le cours après les évaluations de mi-trimestre, par crainte d'échec de leur cours.
-- Un membre de l'équipe suit cinq (!) cours en même temps et n'a pas le temps suffisant pour travailler correctement dans les laboratoires de cette matière.
+- Un ou deux membres d'une équipe abandonnent le cours après les évaluations de mi-trimestre, par crainte d'échouer à leur cours.
+- Un ou une membre de l'équipe suit cinq (!) cours en même temps et n'a pas le temps suffisant pour travailler correctement dans les laboratoires de cette matière.
 - Plusieurs membres de l'équipe ont de l'expérience, mais ont de la difficulté à s'entendre sur l'orientation du projet.
 - L'équipe n'est pas cohésive: chaque membre fait avancer sa partie, mais le code ne fonctionne pas ensemble.
 
-Vous devez en parler avec votre équipe, avec humilité, respect et confiance.
-Si la situation ne s'améliore pas, vous devez en parler avec une personne ressource, comme votre superviseur(e) (en stage), les auxiliaires de laboratoire ou l'enseignant(e).
+\filbreak
 
-Des conseils pour mieux évaluer le travail de chacun(e) dans l'équipe au laboratoire sont présentés dans la section [Évaluer les contributions des membres de l'équipe](#sec-ContributionsEquipe).
+Vous devez en parler avec votre équipe, avec humilité, respect et confiance.
+Si la situation ne s'améliore pas, vous devez en parler avec une personne ressource, comme votre superviseur ou votre superviseuse (en stage), les auxiliaires de laboratoire ou l'enseignant ou l'enseignante.
+
+Des conseils pour mieux évaluer le travail de chaque membre dans l'équipe au laboratoire sont présentés dans la section [Évaluer les contributions des membres de l'équipe](#sec-ContributionsEquipe).
 
 ## Résumé
 
-Le travail en équipe est essentiel pour une personne qui développe du logiciel.
-Le respect, l'humilité et la confiance (HRC) sont les notions importantes du comportement humain lorsqu'on travaille en équipe.
+Le travail en équipe est essentiel pour une personne qui développe des logiciels.
+Le respect, l'humilité et la confiance (HRC) sont des notions importantes du comportement humain lorsqu'on travaille en équipe.
 Développer les compétences dans cette dimension (les *soft skills*) est un défi, mais l'investissement est payant à long terme.
 Ça vaut autant (voire plus) que les compétences dans des technologies qui risquent toujours d'être désuètes dans dix ans ou moins.
