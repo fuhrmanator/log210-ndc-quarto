@@ -212,7 +212,7 @@ La @fig-MDD-CoursGroupeCoursDescription présente une classe de description pour
 ```{.plantuml #fig-MDD-CoursGroupeCoursDescription caption="La classe Cours joue le rôle de description d'entités (les groupes-cours)."}
 @startuml
 '!include ecriture.pumlinclude
-skinparam defaultFontName Arial
+skinparam defaultfontname Arial,Helvetica,sans-serif
 skinparam style strictuml
 hide empty members
 scale 1
@@ -249,7 +249,7 @@ Attention de ne pas faire l'erreur naïve d'utiliser une classe de description s
 ```{.plantuml #fig-MDD-ErreurDescription caption="Illustration de l'erreur fréquente: utiliser une classe de description sans justification."}
 @startuml
 '!include ecriture.pumlinclude
-skinparam defaultFontName Arial
+skinparam defaultfontname Arial,Helvetica,sans-serif
 skinparam style strictuml
 hide empty members
 scale 1

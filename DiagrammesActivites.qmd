@@ -21,7 +21,7 @@ La @fig-ActivityDiagramExampleGitCommit présente un exemple de diagramme d'acti
 @startuml
 skinparam style strictuml
 skinparam DefaultTextAlignment center
-skinparam defaultFontName Arial
+skinparam defaultfontname Arial,Helvetica,sans-serif
 start
 note right : Début
 :Rédiger code;

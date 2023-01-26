@@ -11,7 +11,7 @@ Alors, nous proposons pour cet exercice des modifications au modèle du domaine 
 ```{.plantuml #fig-DCU_ouvrir_la_caisse caption='Diagramme de cas d\'utilisation pour le système NextGen.'}
 @startuml
 skinparam style strictuml
-skinparam defaultFontName Arial
+skinparam defaultfontname Arial,Helvetica,sans-serif
 skinparam backgroundcolor transparent
 scale 0.5
 left to right direction
@@ -128,7 +128,7 @@ La @fig-DSS_ouvrir_la_caisse est le diagramme de séquence système (DSS) pour l
 ```{.plantuml #fig-DSS_ouvrir_la_caisse caption='Diagramme de séquence système (DSS) pour le scénario "Ouvrir la caisse".'}
 @startuml
 skinparam style strictuml
-skinparam defaultFontName Arial
+skinparam defaultfontname Arial,Helvetica,sans-serif
 skinparam SequenceMessageAlign center
 title Scénario : Ouvrir la caisse
 actor ":Caissier" as C
