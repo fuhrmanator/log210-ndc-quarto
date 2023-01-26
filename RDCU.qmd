@@ -632,8 +632,7 @@ Puisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle d
 ```{.plantuml caption="MDD (version française) de Monopoly proposé par @craig_uml_2005. C'est le résultat d'une analyse du problème de jeu Monopoly selon la méthodologie proposée dans le chapitre @sec-mdd."}
 @startuml
 '!include ecriture.pumlinclude
-skinparam style strictuml
-skinparam defaultfontname Arial,Helvetica,sans-serif
+!include normal.pumlinclude
 hide empty members
 'left to right direction
 class "JeuMonopoly" as MG {
@@ -682,8 +681,7 @@ MG "1" -r- "1" B : Joué-sur >
 ```{.plantuml caption="MDD (version anglaise) de Monopoly proposé par @craig_uml_2005"}
 @startuml
 '!include ecriture.pumlinclude
-skinparam style strictuml
-skinparam defaultfontname Arial,Helvetica,sans-serif
+!include normal.pumlinclude
 hide empty members
 'left to right direction
 class "Monopoly\nGame" as MG {

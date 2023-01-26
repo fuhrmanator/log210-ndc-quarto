@@ -24,8 +24,7 @@ Dans le contexte du projet NextGen POS, Larman propose l'utilisation de ce patte
 
 ```{.plantuml #fig-AdapterGoF caption="Le diagramme de classes du pattern Adaptateur proposé par @GoF1994."}
 @startuml
-skinparam style strictuml
-skinparam defaultfontname Arial,Helvetica,sans-serif
+!include normal.pumlinclude
 hide empty members
 interface Target {
   {abstract} Request()
@@ -51,8 +50,7 @@ Client -r-> Target
 
 ```{.plantuml #fig-Fig23_1 caption="Le pattern Adaptateur appliqué pour les services externes de calculateurs de taxes. Chaque service externe a une API distincte et immuable. Les adaptateurs concrets permettent de normaliser l'accès à ces API à travers une interface `IAdaptateurCalculTaxes`."}
 @startuml
-skinparam style strictuml
-skinparam defaultfontname Arial,Helvetica,sans-serif
+!include normal.pumlinclude
 
 interface       IAdaptateurCalculTaxes << interface >>
 class           AdaptateurTaxMaster implements IAdaptateurCalculTaxes
@@ -85,9 +83,9 @@ Donc, dans la classe Vente, il y aurait du code comme ceci:
 ```Java
 /* calculateurTaxes est le nom du calculateur utilisé actuellement */
 if (calculateurTaxes == "GoodAsGoldTaxPro") {
-    /* série d'instructions pour interagir avec le calculateur */
+    /* série d'instructions pour interagir avec GoodAsGoldTaxPro */
 } else if (calculateurTaxes == "TaxMaster") {
-    /* série d'instructions pour interagir avec le calculateur */
+    /* série d'instructions pour interagir avec le TaxMaster */
 } else if /* ainsi de suite pour chacun des calculateurs */
     /* ... */
 }
@@ -102,8 +100,7 @@ Le pattern Adaptateur comprend les principes GRASP Faible Couplage, Forte Cohés
 
 ```{.plantuml #fig-Fig23_3 caption="Adaptateur et principes GRASP [voir @craig_uml_2005, figure **A26.3/F23.3**]."}
 @startuml Adaptateur_GRASP
-skinparam style strictuml
-skinparam defaultfontname Helvetica,Arial,sans-serif,SansSerif
+!include normal.pumlinclude
 hide empty members
 left to right direction
 skinparam rectangle {

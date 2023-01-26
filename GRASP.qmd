@@ -153,8 +153,7 @@ Soit le diagramme de classe sur la @fig-GRASP_polymorphisme_ex modélisant l'exe
 
 ```{.plantuml #fig-GRASP_polymorphisme_ex caption='Classe "Bird" à laquelle on peut appliquer le principe GRASP Polymorhpisme.'}
 @startuml
-skinparam style strictuml
-skinparam defaultfontname Arial,Helvetica,sans-serif
+!include normal.pumlinclude
 class Bird {
     type : String
     numberOfCoconuts : number
@@ -198,8 +197,7 @@ Cet exercice est inspiré d'un exemple donné dans le livre *Head First Design P
 
 ```{.plantuml #fig-GRASP_cohesion_ex1 caption="Lesquelles des classes ont de multiples responsabilités?"}
 @startuml
-skinparam style strictuml
-skinparam defaultfontname Arial,Helvetica,sans-serif
+!include normal.pumlinclude
 class Jeu {
     login()
     inscrire()
@@ -251,8 +249,7 @@ class Iterator {
 
 ```{.plantuml #fig-GRASP_cohesion_ex2 caption="Lesquelles des classes ont une cohésion forte? Une cohésion faible?"}
 @startuml
-skinparam style strictuml
-skinparam defaultfontname Arial,Helvetica,sans-serif
+!include normal.pumlinclude
 class Jeu {
     login()
     inscrire()
