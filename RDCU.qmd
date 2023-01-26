@@ -434,7 +434,7 @@ class B {
     participant ": Plateau" as p
     participant "pos : Case" as pos
 
-    note over c : Selon Fabrication pure
+    note over c : Selon Fabrication Pure
     -> j : prendreTour
     j -> c : lancer
     j -> c : valTot = getTotal

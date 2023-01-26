@@ -120,7 +120,7 @@ Voici un extrait du livre de @craig_uml_2005.
 | *F22.1/A25.1*\ {{< fa solid book >}}                     |                                                                                                                                                                                                                                                               |
 |                                                          | Lorsqu'un comportement varie selon le type (classe), affectez la responsabilité de ce comportement -- avec des opérations polymorphes -- aux types selon lesquels le comportement varie.\newline                                                              |
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Fabrication Pure *F22.2/A25.2*\ {{< fa solid book >}}    | En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte cohésion?\newline                                                                                                                |
+| Fabrication Pure *F22.2/A25.2*\ {{< fa solid book >}}    | En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de Faible Couplage et de Forte Cohésion?\newline                                                                                                                |
 |                                                          |                                                                                                                                                                                                                                                               |
 |                                                          | Affectez un ensemble très cohésif de responsabilités à une classe "comportementale" artificielle qui ne représente pas un concept du domaine --- une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.\newline |
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -286,10 +286,10 @@ class Joueur {
 
 ::: {#exr-GRASP_GOF_contrôleur}
 
-### GRASP Contrôleur et Fabrication pure
+### GRASP Contrôleur et Fabrication Pure
 
-- Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d'un contrôleur de session (de cas d'utilisation) est une Fabrication pure.
-- Soit un contrôleur de session `GestionnaireVentes`, quelle est la "situation désespérée" qui est mitigée par ce contrôleur? Astuce: relire la définition de Fabrication pure.
+- Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d'un contrôleur de session (de cas d'utilisation) est une Fabrication Pure.
+- Soit un contrôleur de session `GestionnaireVentes`, quelle est la "situation désespérée" qui est mitigée par ce contrôleur? Astuce: relire la définition de Fabrication Pure.
 
 :::
 
