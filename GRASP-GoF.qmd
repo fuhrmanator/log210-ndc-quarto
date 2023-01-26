@@ -85,7 +85,7 @@ Donc, dans la classe Vente, il y aurait du code comme ceci:
 if (calculateurTaxes == "GoodAsGoldTaxPro") {
     /* série d'instructions pour interagir avec GoodAsGoldTaxPro */
 } else if (calculateurTaxes == "TaxMaster") {
-    /* série d'instructions pour interagir avec le TaxMaster */
+    /* série d'instructions pour interagir avec TaxMaster */
 } else if /* ainsi de suite pour chacun des calculateurs */
     /* ... */
 }
