@@ -8,7 +8,6 @@ Voici des artefacts en PlantUML proposés pour le cas d'utilisation *Traiter une
 @startuml
 !include normal.pumlinclude
 skinparam SequenceMessageAlign center
-skinparam backgroundcolor transparent
 title Traiter une vente
 actor ":Caissier" as c
 participant ":Système" as s
@@ -31,8 +30,6 @@ c<<--s : remise de la monnaie, du reçu
 !include normal.pumlinclude
 hide methods
 hide empty members
-skinparam style strictuml
-skinparam backgroundcolor transparent
 
 class "LigneArticle" as SLI {
   quantité : int

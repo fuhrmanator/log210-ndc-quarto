@@ -162,10 +162,8 @@ Les ingénieur(e)s doivent gérer ces formes de complexité, mais il n'y a pas b
 ```{.plantuml #fig-complexitySources caption="Sources de complexité (inhérente, circonstancielle et environnementale) par rapport au processus de développement (analyse, conception et implémentation)."}
 @startuml
 scale 0.8
-skinparam style strictuml
-skinparam backgroundColor transparent
+!include normal.pumlinclude
 skinparam packageBackgroundColor transparent
-skinparam defaultFontName Arial 
 skinparam defaultTextAlignment center
 cloud "Domaine (du problème)" as P {
  cloud "Complexité\ninhérente" as PP #red {
@@ -178,7 +176,7 @@ cloud "Conception logicielle" as C #lightgreen {
 cloud "Complexité\ncirconstancielle" as CC #pink {
 }
 }
-note right of CC: Exemples :\nFramework REST,\nutilisation du pattern Visiteur,\nintégration avec un logiciel "ancien"
+note right of CC: Exemples :\nFramework REST,\nutilisation du pattern Visiteur,\nintégration avec un logiciel légataire
 rectangle "Solution exécutable" as E {
 cloud "Complexité\nenvironnementale" as EE #orange {
 }

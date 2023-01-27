@@ -11,7 +11,6 @@ Alors, nous proposons pour cet exercice des modifications au modèle du domaine 
 ```{.plantuml #fig-DCU_ouvrir_la_caisse caption='Diagramme de cas d\'utilisation pour le système NextGen.'}
 @startuml
 !include normal.pumlinclude
-skinparam backgroundcolor transparent
 scale 0.5
 left to right direction
 skinparam packageStyle rect

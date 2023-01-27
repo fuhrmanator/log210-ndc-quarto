@@ -35,9 +35,8 @@ Tout le processus de proposition d'une solution (RDCU) peut être visualisé com
 
 ```{.plantuml #fig-RDCU_Aide_Memoire caption="Aide-mémoire pour faire une RDCU. L'étape en rouge nécessite beaucoup de pratique, selon la complexité des postconditions. Vous pouvez vous attendre à ne pas la réussir du premier coup. [(PlantUML)](http://www.plantuml.com/plantuml/uml/TLHDJnin4BtxLqp3WMILBaALMXGG8YLjLQb55RGzSJ7hsOsBrtOzTg3_gBdt7-mVwtYJG8BWubtPy_7clMUVKPGXfjQ0s7-bRMMIGYZBWzg55alF1-jDGRVQUXba2pINojrfsq0j3MsVl9VLRHDSikhS6HTWhfL2knKmmrec4x_ZVPmQtTWMROIA5mnRKHSkucw8mJgA7Yg8W1ubVoUNk70wWDbtlbi66RMpG7yeTdzRF0PXkGe4tSpZ1F2-XC6WAAhGBJ5SkBH0O_1dRZmS5SLW8FQKgckb9hDkoM1QRP4h8rJEnj3zCvZ2yKx5gVT6_quSLHIVBgTNt-3yCRGehktmV2wzZW7Xu-7Ryl3DmVJm7Nz66RZq7irM0nv7RKtn1FmN96xY7KKELZf7K56Cyr3ZQmklVrW4RPaTMo6SwDF5oO4-1TQndmyay4ZT4lBiF7tEU0ZQd4aYLsa-1PdW4XjD33n7phYtZ37ecnGfrtn8PTphP6qPapIQkYLjv15xcKtcarcfLZeDCKAGTPsf7K6oeBHiMEuMUNYTBI2hF9lmBhsWwfXv8DwYMcgI322w597944LX6EbJZa2bPma6Z9mHaDE3pNKC0yYMNxT3mokBqoAHR1WVzYrM2QkoiwkhSQ-V9AQXcdTBhhDj4V6CGrW16Nj_Z45iTZ_SUmmnRnN5vncW1NVp2sEMM62iIjWnqb7leoE1La5kjhaETtFDQ8O1AMQyJxd81baJnuHTMvSWJynXZ1zjvRZycWzs0OtWnRgFBDA3BXnEqNbXiCcuyc--mnF8rYHdKa-hOhj8RKos6PU37WlqQbTpoKp1CvAN86PieJ5emmaf0jTYgwqkpre4seXCEoht-doTCQNv0I7X0xzbsdFuYlXLPmJEN32kCdEwca2SyS9ltty0)"  }
 @startuml 
-'!include ecriture.pumlinclude
+!include normal.pumlinclude
 skinparam shadowing false
-skinparam BackgroundColor hidden
 skinparam DefaultTextAlignment center
 skinparam NoteTextAlignment left
 start 
@@ -328,7 +327,7 @@ Vous pouvez utiliser VS Code pour vous aider avec le TypeScript, mais cet outil 
 ```{.plantuml #fig-coder_sequence_modele caption="Exemple de diagramme de séquence." }
 @startuml
 scale 1.0
-skinparam style strictuml
+!include normal.pumlinclude
 participant ":A" as B
 participant ":B" as A
 [-> B : execute(3)
@@ -366,7 +365,7 @@ class B {
 
     ```{.plantuml}
     @startuml
-    skinparam style strictuml
+    !include normal.pumlinclude
     scale 1.0
     participant ":Bernard" as Bob
     participant ":Alice" as Alice
@@ -392,7 +391,7 @@ class B {
 
     ```{.plantuml}
     @startuml
-    skinparam style strictuml
+    !include normal.pumlinclude
     scale 1.0
     participant ":Registre" as r
     note left of r : selon Créateur et\nContrôleur
@@ -427,7 +426,7 @@ class B {
 
     ```{.plantuml}
     @startuml
-    skinparam style strictuml
+    !include normal.pumlinclude
     scale 1.0
     participant "j : Joueur" as j
     participant ": Cornet" as c
@@ -450,7 +449,7 @@ class B {
 
     ```{.plantuml}
     @startuml
-    skinparam style strictuml
+    !include normal.pumlinclude
     scale 1.0
     participant ": CaseImpôts" as im
     participant "j : Joueur" as j
@@ -465,7 +464,7 @@ class B {
 
     ```{.plantuml }
     @startuml
-    skinparam style strictuml
+    !include normal.pumlinclude
     scale 1.0
     participant ": CaseAllezEnPrison" as aep
     participant "j : Joueur" as j

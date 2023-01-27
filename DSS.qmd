@@ -66,7 +66,7 @@ Par exemple, la @fig-dssdetails rentre dans les détails de ce qui se passe rée
 
 ```{.plantuml #fig-dssdetails caption="Une opération système est envoyée par la couche présentation et elle est reçue dans la couche domaine par son contrôleur GRASP. Ceci est un exemple avec un navigateur Web, mais d'autres possibilités existent pour la couche présentation. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJ1RXen4Bslb7yOqKC2Ig6ebmf5gm29qgH9YrZIN7ePx06SDVPsx4r8lwYvzm_uiSwksdH1LQILlVAyUU_DZENJ495ZkRP9o8qha74D8JvPafMDgY87ZT0SLRvaNpgjlFKCaT452P6B1yaXn9K981_22fr-P1CZELXu5y4uk3DE-ySWm7-4cXPOsbX17Au9Fh49LSxbR2ousOe2WOyhuW3M-noMJ5YJPLylu6YDkHWjcKIPdWvbDquAifQqg38Chw_XDZkVPWrvwBzhDqlQTn1mMItkTP-NBeShNx93-ofkaoiDcM9Jn5Tn4v9MSMWQQxOmSab9K2XpwNVVDsT5tqjoYcueLCQ7rYmTA1a7SGCbQpJA5EZY1BKsRYbT-0_Bo6z6dZNnU7-w2Qee9ws154qbjm03t2Tplu7Ms9TgHL3mzZa84gFnhWLlj5uij4uQqf8zAcEief8zXvEJp_XWbXY5y8xcQGfxwAalurynhk1Uq_ccOAarJHDo6iJ0ZWdjrsWSrVALWJt2Aogd9kGreHB2iRIVjx-iY5nCXzb4M7SIkjrkZGqlOlVmDXNh0r3MICyucSj1Aku6y74scy35-UoRws5XUW_zdju-hv6PU1WZ2hedV8dpKQxq0t6TL9V8zQojx4T_ocid_CAhQOUaIN0CQW1VYkqprrs7y1JYzgTS9r5U66VaHoO8PrbMyqdD0-XqJeBvGOF-XtIF-KZijJkTH5NG8D1Tk-guFWnaHSaYJC_6jycfD4RUYDy0)"  }
 @startuml
-!include ecriture.pumlinclude
+!include normal.pumlinclude
 scale 1.3
 skinparam sequenceMessageAlign center
 skinparam participantPadding 10
