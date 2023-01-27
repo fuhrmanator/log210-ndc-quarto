@@ -9,7 +9,7 @@ Voici des artefacts en PlantUML proposés pour le cas d'utilisation *Traiter une
 !include normal.pumlinclude
 skinparam SequenceMessageAlign center
 skinparam backgroundcolor transparent
-title DSS pour le scénario <i>Traiter une vente</i>
+title Traiter une vente
 actor ":Caissier" as c
 participant ":Système" as s
 c->s : démarrerVente
