@@ -137,7 +137,8 @@ format:
       - heightrounded
     fontfamily: libertinus
     fontfamilyoptions: 
-      - osf
+      # causes numbers to drop below the line, and a 0 by itself looks like an o
+      # - osf
       - p
     fontsize: 12pt
     include-in-header: 

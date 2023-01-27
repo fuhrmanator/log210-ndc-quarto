@@ -1,18 +1,18 @@
 
 # Laboratoires {#sec-Laboratoires}
 
-À l'École de technologie supérieure, le cours de LOG210 propose un laboratoire de mise à niveau (nommé "lab 0") réalisé individuellement où on passe à travers les différentes technologies utilisées dans le projet du laboratoire principal, qui lui, est réalisé pendant le reste du cours en trois itérations de trois semaines.
+À l'École de technologie supérieure, le cours de _LOG210_ propose un laboratoire de mise à niveau (nommé "lab 0") réalisé individuellement, où l'on passe à travers les différentes technologies utilisées dans le projet du laboratoire principal, qui, lui, est réalisé pendant le reste du cours en trois itérations de trois semaines.
 On peut trouver sur GitHub l'énoncé du [lab0](https://github.com/profcfuhrmanets/log210-enonce-lab0) et du [laboratoire principal](https://github.com/profcfuhrmanets/log210-enonce-lab1).
-Chaque équipe est libre à choisir parmi une liste d'exigences ce qu'elle veut réaliser dans chaque itération. 
+Chaque équipe est libre de choisir parmi une liste d'exigences ce qu'elle veut réaliser dans chaque itération. 
 Cela permet de pratiquer l'approche itérative en équipe.
 L'approche TDD est obligatoire (pour avoir des points pour une fonctionnalité réalisée).
 
-Les deux premières itérations sont évaluées, mais les points pour les fonctionnalités réussites ne compte qu'à la dernière itération.
+Les deux premières itérations sont évaluées, mais les points pour les fonctionnalités réussies ne sont comptabilisés qu'à la dernière itération.
 Cela a plusieurs avantages pédagogiques:
 
-- réduction du risque d'échec, puisqu'on on a des rétroactions formelles à toutes les trois semaines environ.
-- réduction de la facilité de faire du plagiat, puisqu'on doit construit en équipe un système tout au long du cours, et las éléments d'analyse et de conception (le MDD et les RDCU) doivent être cohérents avec le code (et les tests).
-- possibilité de constater et de corriger tôt les dysfonctionnements dans une équipe (mais on doit être proactif et pret à confronter les problèmes, ce qui reste un défi culturel).
+- réduction du risque d'échec, puisqu'on a des rétroactions formelles toutes les trois semaines environ;
+- réduction de la facilité de faire du plagiat, puisqu'on doit construire en équipe un système tout au long du cours, et les éléments d'analyse et de conception (le MDD et les RDCU) doivent être cohérents avec le code (et les tests);
+- possibilité de constater et de corriger tôt les dysfonctionnements dans une équipe (mais on doit faire preuve de proactivité et de volonté pour affronter les problèmes, ce qui reste un défi culturel).
 
 Ce chapitre contient des informations sur le volet technique des laboratoires.
 
