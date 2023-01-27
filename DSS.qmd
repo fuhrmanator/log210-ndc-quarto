@@ -73,11 +73,11 @@ skinparam participantPadding 10
 skinparam sequenceBoxBorderColor transparent
 actor ":Joueur" as j
 box "Couche présentation" #ddffdd
-participant ":Button" as b <<NavigateurWeb>> 
-participant ":Routeur" as r <<NodeExpress>>
+participant ":Button" as b << NavigateurWeb >> 
+participant ":Routeur" as r << NodeExpress >>
 end box
 box "Couche domaine" #ddddff
-participant ":JeuRisk" as c <<ContrôleurGRASP>>
+participant ":JeuRisk" as c << ContrôleurGRASP >>
 participant "..." as s
 end box
 j -> b : cliquer

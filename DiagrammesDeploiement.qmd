@@ -14,9 +14,9 @@ Voici les éléments importants:
 - Types de nœuds:
   - **Nœud physique (équipement)**: Ressource de traitement physique (par exemple, de l'électronique numérique) dotée de services de traitement et de mémoire destinés à exécuter un logiciel. Ordinateur classique, cellulaire, etc.
   - **Nœud d'environnement d'exécution  (EEN, *execution environment node*)**: Ressource de traitement logiciel qui s'exécute au sein d'un nœud externe (comme un ordinateur) et offrant elle-même un service pour héberger et exécuter d'autres logiciels, par exemple:
-    - un système d'exploitation (OS), est un logiciel qui héberge et qui exécute des programmes;
+    - un système d'exploitation (OS) est un logiciel qui héberge et qui exécute des programmes;
     - une machine virtuelle (JVM ou .NET);
-    - un moteur de base de données (ex. PostgreSQL) exécute les requêtes SQL;
+    - un moteur de base de données (par exemple PostgreSQL) exécute les requêtes SQL;
     - un navigateur Web qui héberge et qui exécute JavaScript, les applets Flash/Java;
     - un moteur de *workflow*;
     - un conteneur de servlets ou conteneur d'EJB.
@@ -26,14 +26,14 @@ La @fig-iTunesDiagrammeDeploiement est un exemple de diagramme de déploiement p
 
 ```{.plantuml #fig-DiagrammeDeploiement caption="Diagramme de déploiement du système à développer pour le laboratoire. [(PlantUML)](http://www.plantuml.com/plantuml/uml/ZLDHQnin37xthn0PZ1HwXUrj8uGcT8IECKPlUrhseDmfgPbFzcGxQHdzFLj-H_vOvRkaetsQuUuaMVxqwPFlCYQKb3jdua_B0GKxYEdUaRx5DYzs6jy5pyIfxbDqywqnx5k2qLpyBf90fvumZU2t0LrF9-3xB0Hd6qpMCwp5Sq97I-uismwTZOdEGQi0tL4NoewZg86DldUqWd4gOKmKpvPC2J93e0nQ-YDkiMx4XlG3CCBYsxLvEB6gxsCw_Esev2bIgRtaLY4n155MDiPIOSdZUZ4x6y5aSZendHuxi9n8rjWGtFYSDBiKAIQ9wHEUDTPuFlp9oZwIKzSXT8TzklMjTtvZDHx41nyFU-gR_OJI8VUy5MN0Qp7X2cDXxrqUA4TRD1cLlBeth-P7UW_m7zsklEXKCD_rZSxF1g35_7c_hzxrIu7P9pgcV5RJJ5wZw7ohnahZg7AqJbEeVHPL9UW7T5R6yjf7Y8EdGcI9vs2AhGharY8d3L1gBbxYYTtSAk1LeSo3Za-eSjZ7x1Ac2AMJNtdegpACLZIWLw6bhRSIBmnn2uLwKSJeFO2UQJK-ZWlUm-pBDTnygBy2sorXXZVck5MrViTLFmHzJkv9wo7MqwnwtVuXcKkjgZ_28m00)" }
 @startuml
-skinparam style strictuml
+!include normal.pumlinclude
 skinparam componentStyle uml2
 
-node "Browser moderne" as bm {
-    component [Application frontale\nminimaliste, par exemple\nles pages web (templates)\net un peu de JavaScript] as GUI
+node "Navigateur moderne" as bm {
+    component [Application frontale\nminimaliste, par exemple\nles pages Web et\nun peu de JavaScript] as GUI
 }
 
-node "Système de gestion\ndes apprentissages\n(SGA)" as SGA <<Système>> {
+node "Système de gestion\ndes apprentissages\n(SGA)" as SGA << Système >> {
     interface Routage as Router
 
     [Application conçue\nselon la méthodologie\nproposée par Larman] as App
@@ -42,14 +42,14 @@ node "Système de gestion\ndes apprentissages\n(SGA)" as SGA <<Système>> {
     } 
 }
 
-node "Système de gestion\ndes borderaux\n(SGB)" as SGB <<Système>> #CCCCCC {
+node "Système de gestion\ndes bordereaux\n(SGB)" as SGB << Système >> #CCCCCC {
 note as SGBNote
 <&arrow-circle-left> Source pour les
 infos sur les cours, 
-les étudiants, etc.
+les étudiant(e)s, etc.
 <&arrow-circle-right> Destination pour les
 résultats des question-
-naires et devoirs.
+naires et des devoirs.
 end note
 }
 
@@ -78,27 +78,27 @@ NP1 .up. SGB
 ```{.plantuml #fig-iTunesDiagrammeDeploiement caption="Diagramme de déploiement pour iTunes d'Apple avec un ordinateur, un iPad et le service Web d'Apple, inspiré de [ceci](https://www.uml-diagrams.org/apple-itunes-uml-deployment-diagram-example.html). [(PlantUML)](http://www.plantuml.com/plantuml/uml/ZLF9JkGm4BtxAqhXW3HIWfeZGX6RH1yQEb9wr9UvE4b1MtBiO3k4dX7_FbM91M4Hu9ENUlKMssS-I1VwLWkDTm621QVkTm4QvR0EoXfXR8EGd7UTHjXY1IMwHtG9d9us-AXgpFE3GchSzEwXjyeZ_1D0OuIfJM_GW_Gqsn9YmCghm90LivHIjzP400-Iekva7I8GImnzb-4J4bQI0bLBrfJd8-BvbIY9J6Mm3fE9iFm18PkKvfwi9JVOA0ahLJdfzaaaU1Q7h3njx61IxXdZMDeMuTAsNHyu2-9RNiuJ-SWsuM2i7Qf96bJE3XxTMu1uAsoUuViO3XmsuaiVZBjPBO08MhnsY8OynSYAdJLuf0hP766eiwdsYZXQMobgzQqRjIuZQCrXhyilZNogxFYzie1ySBiGKxKUgnK7u53ulQbtpXhrbtnN60P2HPaUghsOiX9e6k1EudO1MSR-NsR7uf2lwbUQZjjneLEw4q5Jthw24_XTNl3DGzPdEPLGOpxYDtL2HZjdWwsjplC_Plxme8W7r9VQZ2GKpMn5_7JvOwljXrRBpQOGOvOphe4-eaRluNlIC_9DF_a_)" }
 @startuml
 left to right direction
-node "Apple Web Server" <<device>>#PaleTurquoise {
-    node iTunes as iTW <<website>>#LightSalmon {
-        artifact iTunesSetup.exe <<application>>
+node "Apple Web Server" << device >>#PaleTurquoise {
+    node iTunes as iTW << website >>#LightSalmon {
+        artifact iTunesSetup.exe << application >>
     }
-    node "iTunes Store" as iTS <<website>>#LightSalmon {
+    node "iTunes Store" as iTS << website >>#LightSalmon {
         rectangle "Media Library"
     }
 }
 'iTW -down- iTS
-node "Home Computer" as HC <<device>>#LightSalmon {
-    node " " as wb <<web browser>>#LightSalmon
-    rectangle iTunes as iT <<application>>#red
+node "Home Computer" as HC << device >>#LightSalmon {
+    node " " as wb << web browser >>#LightSalmon
+    rectangle iTunes as iT << application >>#red
     rectangle "Media Library" as ML1 #LimeGreen
     iT - ML1
 }
-node "iPhone/iPad/etc." as MD <<mobile device>>#LightSalmon {
-    node "iOS" as MDOS <<OS>>#LightSalmon
+node "iPhone/iPad/etc." as MD << mobile device >>#LightSalmon {
+    node "iOS" as MDOS << OS >>#LightSalmon
     rectangle "Media Library" as ML2 #LimeGreen
 }
 note as N1
-Les médiatheques sont
+Les médiathèques sont
 synchronisées entre
 les appareils par iTunes.
 end note
@@ -108,10 +108,10 @@ N1 .r. ML2
 ' HC *-l- wb
 HC -- MD : USB
 'iT .u.> HC
-iT -- iTS : <<protocol>>\niTunes Store Protocol
+iT -- iTS : << protocol >>\niTunes Store Protocol
 ' MD *-- MDOS
 ' MD *-- ML2
-wb -- iTW : <<protocol>>\nHTTP
-MDOS -- iTS : <<wireless protocol>>\niTunes Store Protocol
+wb -- iTW : << protocol >>\nHTTP
+MDOS -- iTS : << wireless protocol >>\niTunes Store Protocol
 @enduml
 ```

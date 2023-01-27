@@ -52,7 +52,7 @@ Client -r-> Target
 @startuml
 !include normal.pumlinclude
 
-interface       IAdaptateurCalculTaxes << interface >>
+interface       IAdaptateurCalculTaxes << interface >>
 class           AdaptateurTaxMaster implements IAdaptateurCalculTaxes
 class           AdaptateurGoodAsGoldTaxPro implements IAdaptateurCalculTaxes
 

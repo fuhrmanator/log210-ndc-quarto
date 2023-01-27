@@ -19,12 +19,12 @@ skinparam defaulttextalignment center
 actor Client
 actor Caissier
 actor Manager
-rectangle "Système des\nventes" <<acteur>> as SV
+rectangle "Système des\nventes" << acteur >> as SV
 actor "Administrateur\nsystème" as AS
 actor "Service\nd'autorisation\ndes paiements" as SAP
-rectangle "Calculateur de\ntaxes" <<acteur>> as CT
-rectangle "Système de\ncomptabilité" <<acteur>> as SC
-rectangle "Système de\nressources\nhumaines" <<acteur>> as SRH
+rectangle "Calculateur de\ntaxes" << acteur >> as CT
+rectangle "Système de\ncomptabilité" << acteur >> as SC
+rectangle "Système de\nressources\nhumaines" << acteur >> as SRH
 rectangle "NextGen" {
   (...) as other
   (Traiter une vente) as TV
