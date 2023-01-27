@@ -53,7 +53,7 @@ hacking <-d[dashed]- Nh
 @enduml
 ```
 
-À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l'on nomme "Hacking Cowboy". C'est le cas d'un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement), lors duquel, vous ne feriez pas un logiciel avec 10 _patterns_ GoF, vous ne feriez pas non plus les diagrammes UML pour réfléchir à votre architecture. Vous savez aussi que le code produit lors d'un hackathon ne sera pas facile à maintenir. Le seul but de cette activité est de développer du code qui marche pour montrer une idée intéressante.
+À une extrémité, il y a la mentalité de mettre presque zéro effort pour une conception, que l'on nomme "Hacking Cowboy". C'est le cas d'un hackathon (un marathon de programmation durant 24 ou 48 heures où il faut produire une solution rapidement), lors duquel, vous ne feriez pas un logiciel avec 10 patterns GoF, vous ne feriez pas non plus les diagrammes UML pour réfléchir à votre architecture. Vous savez aussi que le code produit lors d'un hackathon ne sera pas facile à maintenir. Le seul but de cette activité est de développer du code qui marche pour montrer une idée intéressante.
 
 Une situation similaire s'applique à certains contextes d'entreprise, par exemple une entreprise en démarrage qui a seulement un financement pour six mois.
 Si une solution de ["produit minimum viable" (MVP en anglais)](https://en.wikipedia.org/wiki/Minimum_viable_product) {{< fa brands wikipedia-w >}} n'existe pas à la fin de la période de financement, l'entreprise n'existera plus, car il n'y aura pas une seconde période de financement.
