@@ -1,34 +1,34 @@
-# Cas d'utilisation - Traiter une vente {#sec-CU_Traiter_vente}
+# Cas d'utilisation -- Traiter une vente {#sec-CU_Traiter_vente}
 
 Voici des artefacts en PlantUML proposés pour le cas d'utilisation *Traiter une vente* documenté par @craig_uml_2005.
 
 ## DSS {#sec-DSS_traiter_vente}
 
-```{.plantuml caption="DSS pour le scénario Traiter une vente de @craig_uml_2005."}
+```{.plantuml caption="DSS pour le scénario _Traiter une vente_ de @craig_uml_2005."}
 @startuml
-skinparam style strictuml
+!include normal.pumlinclude
 skinparam SequenceMessageAlign center
 skinparam backgroundcolor transparent
-title DSS pour le scénario <i>Traiter vente</i>
+title DSS pour le scénario <i>Traiter une vente</i>
 actor ":Caissier" as c
 participant ":Système" as s
 c->s : démarrerVente
 loop reste des articles
- c->s : saisirArticle(codeArticle:int, quantité:int)
+ c->s : saisirArticle(codeArticle : int, quantité : int)
  c<<--s : description, total
 end loop
 c->s : terminerVente()
 c<<--s : total avec taxes
-c->s : créerPaiement(montant:Monnaie)
-c<<--s : remise de la monnaie, reçu
+c->s : créerPaiement(montant : Monnaie)
+c<<--s : remise de la monnaie, du reçu
 @enduml
 ```
 
 ## MDD partiel
 
-```{.plantuml}
+```{.plantuml caption="MDD pour le scénario _Traiter une vente_ de @craig_uml_2005."}
 @startuml
-skinparam style strictuml
+!include normal.pumlinclude
 hide methods
 hide empty members
 skinparam style strictuml
