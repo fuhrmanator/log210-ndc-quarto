@@ -112,7 +112,7 @@ Ce principe a été nommé *bus factor* en anglais, faisant référence au nombr
 Par exemple, dans un projet de stage, si c'est vous qui écrivez tout le code, alors c'est un *bus factor* de 1.
 Si vous n'êtes plus là, le projet s'arrête!
 
-![*Bus factor* (nom): le nombre de personnes qui doivent être heurtées par un bus avant que votre projet ne soit complètement condamné [@fitzpatrick_team_2012]. ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E.](images/DALL-E_BusFactor.png){width="500px"}
+![*Bus factor* (nom): le nombre de personnes qui doivent être heurtées par un autobus avant que votre projet ne soit complètement condamné [@fitzpatrick_team_2012]. ["Male and Female software engineers in front of a bus at a crosswalk, flat lighting, tilt shift photography"](https://labs.openai.com/s/TlB4Qh8FCn4LGA0efsTdEgyQ) par Cris\ ×\ DALL·E.](images/DALL-E_BusFactor.png){width="500px"}
 
 Un ou une membre de l'équipe peut s'absenter ou être moins disponible soudainement pour beaucoup de raisons.
 Par exemple, cette personne part en vacances, tombe malade, prend un congé parental, change d'emploi, abandonne le cours (contexte de projet universitaire), etc.
