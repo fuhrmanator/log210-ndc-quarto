@@ -18,7 +18,7 @@ La théorie sur *comment écrire* les cas d'utilisation ne fait pas partie de ce
 
 La notation UML inclut les diagrammes de cas d'utilisation, qui sont comme une table des matières pour les fonctionnalités d'un système.
 
-## Exemple: Le jeu Risk{#exemple-jeu-de-risk}
+## Exemple: le jeu Risk{#exemple-jeu-de-risk}
 
 Nous décrivons un cas d'utilisation à l'aide d'un exemple concernant le jeu Risk.
 
@@ -36,7 +36,7 @@ Alors, nous proposons les étapes (les interactions entre les acteurs et le syst
 
 1. Le Joueur attaquant choisit d'attaquer un pays voisin du Joueur défenseur.
 2. Le Joueur attaquant annonce combien de régiments il va utiliser pour son attaque.
-3. Le Joueur défenseur annonce combien de régiments il va utiliser pour la défence du pays attaqué.
+3. Le Joueur défenseur annonce combien de régiments il va utiliser pour la défense du pays attaqué.
 4. Les deux Joueurs jettent le nombre de dés selon leur stratégie, choisie aux étapes précédentes.
 5. Le Système compare les dés, élimine les régiments de l'attaquant ou du défenseur selon les règles et affiche le résultat.
 
@@ -46,7 +46,7 @@ Alors, nous proposons les étapes (les interactions entre les acteurs et le syst
 
 La @fig-uc est un exemple de diagramme de cas d'utilisation.
 
-Un diagramme de cas d'utilisation n'étant q'une sorte de *table des matières* des fonctionnalités, il ne montre qu'une faible partie des détails trouvés dans le texte de chaque cas d'utilisation.
+Un diagramme de cas d'utilisation n'étant qu'une sorte de *table des matières* des fonctionnalités, il ne montre qu'une faible partie des détails trouvés dans le texte de chaque cas d'utilisation.
 Le diagramme ne peut donc remplacer la documentation textuelle.
 
 Sur la @fig-uc, le cas d'utilisation "..." signifie qu'il y a d'autres cas d'utilisation à spécifier concrètement, c'est-à-dire tous les autres cas d'utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.
