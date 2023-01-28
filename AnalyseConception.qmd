@@ -5,10 +5,10 @@ Comment faire une bonne conception d'un tel logiciel?
 Ce manuel vise à décrire une méthodologie de développement de logiciels qui répond à ces questions.
 
 Nous suivrons une approche systématique permettant de modéliser un domaine d'application et de concevoir un logiciel avec des abstractions (des classes) plus intuitives.
-Au fond, il s'agit de faire une _analyse_ d'un domaine d'application et proposer une _conception_ du logiciel à développer dans le domaine visé.
+Au fond, il s'agit de faire une _analyse_ d'un domaine d'application et de proposer une _conception_ du logiciel à développer dans le domaine visé.
 
 Puisqu'une conception doit être réalisée (codée) pour être validée, nous appliquerons une approche de programmation pilotée par les tests (_test-driven development_ ou _TDD_ en anglais).
-Le TDD est un élément essentiel dans le [Devops](https://fr.wikipedia.org/wiki/Devops), une approche permettant de livrer et de faire évoluer rapidement les logiciels de manière robuste.
+Le TDD est un élément essentiel dans le [devops](https://fr.wikipedia.org/wiki/Devops), une approche permettant de livrer et de faire évoluer rapidement les logiciels de manière robuste.
 
 Parallèlement, surtout pour faire face à la complexité, la méthodologie propose des activités en itération ayant une durée relativement courte (1 à 3 semaines), dans lesquelles on réalise un sous-ensemble du système à développer et on le présente au client pour avoir sa rétroaction.
 C'est une approche dite "agile", ayant une base pédagogique neutre, nommée le "processus unifié".
@@ -58,9 +58,9 @@ class JeuDeDés {
     ' -d2 : De;
 
     getJoueurs()
-    démarrerJeu(nom: string)
-    jouer(nom: string)
-    terminerJeu(nom: string)
+    démarrerJeu(nom : string)
+    jouer(nom : string)
+    terminerJeu(nom : string)
 }
 class Joueur {
     +nom : string
@@ -102,7 +102,7 @@ On comprend plus facilement les éléments dans ce modèle. -->
 Plus une solution (conception) ressemble à une description (modèle d'analyse) du problème, plus elle est facile à comprendre et à valider.
 La différence entre la représentation d'un problème et la représentation de sa solution s'appelle le *décalage des représentations*.
 C'est un terme complexe pour un principe très intuitif.
-Méfiez-vous des classes importantes dont le nom retrace difficilement au problème.
+Méfiez-vous des classes importantes dont le nom retrace difficilement le problème.
 Elles vont rendre votre solution plus difficile à comprendre.
 Pour des explications de Larman, lisez la section 9.3\ {{< fa solid book >}}.
 
@@ -111,10 +111,10 @@ Réduire le décalage des représentations est un principe très important, surt
 
 ## La complexité et ses sources
 
-Un(e) ingénieur(e) logiciel est constamment dans une bataille avec une adversaire dont le nom est la "complexité".
+Les ingénieures logiciel et ingénieurs logiciel sont constamment dans une bataille avec une adversaire dont le nom est la "complexité".
 Mais qu'est-ce que la complexité? La @fig-complexity est une image de la complexité. Reconnaissez-vous le domaine d'où vient cette image?
 
-Voici une définition de la complexité:
+Voici une définition de la complexité.
 
 ::: {.callout}
 **Complexité**: Caractère de ce qui est complexe, difficile à comprendre, de ce qui contient plusieurs éléments.
@@ -129,14 +129,14 @@ En voici quelques exemples en développement de logiciels:
 - Un cadre d'applications (cadriciel, *framework*) est toujours complexe,
 par exemple un *framework* comme Angular ou React pour développer un *front-end* (application frontale), car l'interaction entre l'utilisateur et une application (possiblement répartie dans le nuage) nécessite beaucoup de fonctionnalités supportées par le cadriciel.
 - Un *algorithme* peut être complexe, par exemple l'algorithme de [tri de Shell](https://fr.wikipedia.org/wiki/Tri_de_Shell) est plus complexe qu'un simple algorithme de [tri à bulles](https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles).
-Notez que la complexité d'un algorithme peut parfois apporter des gains de performance, par exemple, le trie de Shell.
+Notez que la complexité d'un algorithme peut parfois apporter des gains de performance, par exemple le tri de Shell.
 Mais le codage, le débogage et la maintenance d'une implémentation d'un algorithme complexe seront plus coûteux.
 - Un _pattern de conception_ peut être complexe, par exemple les patterns Visiteur, Décorateur, Médiateur, etc., de @GoF1994.
 Un pattern définit des rôles et parfois du code et des classes supplémentaires à créer.
 Le tout doit s'intégrer dans un design existant (qui a son propre niveau de complexité).
 - Un *environnement* peut être complexe, par exemple les applications mobiles sont plus complexes à développer et à déboguer que les applications simples sur PC, à cause de l'environnement sans fil, des écrans tactiles de tailles différentes, de l'alimentation limitée, etc.
 
-La @fig-complexitySources présente les sources de complexité ainsi que leurs noms qu'on va utiliser dans ce manuel.
+La @fig-complexitySources présente les sources de complexité ainsi que leurs noms, qu'on va utiliser dans ce manuel.
 
 ### Complexité inhérente (provenant du problème)
 
@@ -148,16 +148,16 @@ Exemple: un logiciel qui aide à faire des déclarations de revenus aura une com
 
 ### Complexité circonstancielle (provenant des choix de conception) {#sec-ComplexiteCirc}
 
-Les choix que font les ingénieur(e)s dans un projet peuvent amener de la complexité circonstancielle.
-En tant qu'ingénieur(e)s, nous avons un devoir de contrôler cette forme de complexité, par exemple en choisissant soigneusement un cadriciel Web ou une architecture logicielle.
+Les choix que font les ingénieures et ingénieurs dans un projet peuvent amener de la complexité circonstancielle.
+En tant qu'ingénieures et ingénieurs, nous avons un devoir de contrôler cette forme de complexité, par exemple en choisissant soigneusement un cadriciel Web ou une architecture logicielle.
 La complexité circonstancielle peut aussi être due à des contraintes imposées sur la conception, comme l'utilisation obligatoire d'une vieille base de données ou d'une bibliothèque logicielle héritée, d'un langage de programmation, etc.
 La complexité circonstancielle (aussi appelée accidentelle) peut être gérée avec des technologies, par exemple les débogueurs, les patterns de conception (un Adaptateur pour les différentes bases de données), etc.
 
 ### Complexité environnementale (provenant de l'environnement d'exécution)
 
-Cette forme de complexité comprend des aspects d'une solution qui ne sont pas sous le contrôle des ingénieur(e)s.
+Cette forme de complexité comprend des aspects d'une solution qui ne sont pas sous le contrôle des ingénieures et ingénieurs.
 Dans un environnement d'exécution, il y a des dimensions comme le ramasse-miettes (*garbage collection*), l'ordonnancement des fils d'exécution (*threads*) sur un serveur, l'utilisation de *conteneurs* (à la Docker), etc. qui peuvent affecter la qualité d'un logiciel.
-Les ingénieur(e)s doivent gérer ces formes de complexité, mais il n'y a pas beaucoup de stratégies évidentes face aux technologies qui évoluent à grande vitesse.
+Les ingénieures et ingénieurs doivent gérer ces formes de complexité, mais il n'y a pas beaucoup de stratégies évidentes face aux technologies qui évoluent à grande vitesse.
 
 ```{.plantuml #fig-complexitySources caption="Sources de complexité (inhérente, circonstancielle et environnementale) par rapport au processus de développement (analyse, conception et implémentation)."}
 @startuml
@@ -231,7 +231,7 @@ Cette instabilité peut être particulièrement prononcée dans un contexte d'en
 Le développement itératif et incrémental amène plusieurs avantages selon @craig_uml_2005:
 
 ::: {.callout}
-- diminution d'échecs, une amélioration de la productivité et de la qualité;
+- une diminution d'échecs, une amélioration de la productivité et de la qualité;
 - une gestion proactive des risques élevés (risques techniques, exigences, objectifs, convivialité, etc.);
 - des progrès immédiatement visibles;
 - la rétroaction, l'implication des utilisateurs et l'adaptation précoces;
@@ -243,10 +243,10 @@ Le développement itératif et incrémental amène plusieurs avantages selon @cr
 
 Cependant, il y a des défis associés à ce genre de développement:
 
-- **Instabilité apparente au début**: Dans les itérations initiales, puisqu'on n'a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la "bonne voie".
+- **Instabilité apparente au début**. Dans les itérations initiales, puisqu'on n'a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la "bonne voie".
 La conséquence est que les évaluations et les rétroactions peuvent sembler rudes, et cela peut être déstabilisant pour des personnes qui ne sont pas familières avec le processus.
 La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la @fig-StabiliteDansLesIterations).
-- **Modifications des objectifs de l'itération en cours au besoin**: Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l'avons imaginé.
+- **Modifications des objectifs de l'itération en cours au besoin**. Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l'avons imaginé.
 Par exemple, l'ensemble des récits utilisateur ou des scénarios de cas d'utilisation visés pour l'itération nécessite plus de travail que prévu.
 La tendance dans ce cas est de nous donner plus de temps pour terminer ces étapes.
 Mais cela voudrait dire que la rétroaction de toute l'itération sera retardée.
