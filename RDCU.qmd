@@ -677,7 +677,7 @@ MG "1" -r- "1" B : Joué-sur >
 @enduml
 ```
 
-```{.plantuml caption="MDD (version anglaise) de Monopoly proposé par @craig_uml_2005"}.
+```{.plantuml caption="MDD (version anglaise) de Monopoly proposé par @craig_uml_2005."}
 @startuml
 '!include ecriture.pumlinclude
 !include normal.pumlinclude
