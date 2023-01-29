@@ -76,7 +76,7 @@ Toutes les références sont données pour la 3^e^ édition du livre.
 Si vous avez une autre édition, comme la 2^e^ du livre en anglais ou même une des premières impressions de la 3^e^ du livre en anglais, les chapitres ne sont pas toujours les mêmes, et vous devrez chercher le sujet dans la table des matières.
 :::
 
-Cependant, dans ce manuel, vous trouverez également d'autres sujets importants pour une personne qui étudie en génie : les notions de complexité, le contexte industriel qui affecte les décisions de conception, l'impact de la conception sur d'autres qualités d'un logiciel, le travail en équipe, etc.
+Cependant, dans ce manuel, vous trouverez également d'autres sujets importants pour une personne qui étudie en génie: les notions de complexité, le contexte industriel qui affecte les décisions de conception, l'impact de la conception sur d'autres qualités d'un logiciel, le travail en équipe, etc.
 
 ## Remerciements {.unnumbered}
 
@@ -93,7 +93,7 @@ Nous remercions les membres du suivi du projet dans le cadre de ce travail pris 
 - Serge Allary, vice-recteur adjoint aux études de l'Université de Sherbrooke.
 
 La fabriqueREL est également une vitrine de rayonnement importante pour les REL au Québec.
-Elle permet de valoriser le travail réalisé par un(e) membre du corps professoral dans la rédaction d'un manuel libre pour un cours universitaire.
+Elle permet de valoriser le travail réalisé par un personne du corps professoral dans la rédaction d'un manuel libre pour un cours universitaire.
 Cela favorise une évolution positive dans la culture universitaire au Québec.
 
 Nous remercions chaleureusement les auxiliaires d'enseignement et les personnes ayant suivi le cours _Analyse et conception de logiciels (LOG210)_ des programmes de baccalauréat en génie logiciel et en génie des technologies de l'information à l'ÉTS.
@@ -103,6 +103,8 @@ Nous remercions également l'École de technologie supérieure pour son soutien 
 Nous remercions les membres du comité de révision (2023) pour leurs rétroactions constructives:
 
 - Taki Eddine Seghiri, étudiant à la maîtrise en génie logiciel à l'ÉTS;
+- Olivier Brochu, étudiant à la maîtrise en technologies de l'information à l'ÉTS;
+- Clyde Vianney Omog Ntap, étudiant à la maîtrise en génie logiciel à l'ÉTS;
 - Mouna Moumene, bibliothécaire à l'École de technologie supérieure (ÉTS);
 - Roberto Erick Lopez-Herrejon, professeur au département de génie logiciel et des TI à l'ÉTS.
 
