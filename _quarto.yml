@@ -154,8 +154,8 @@ format:
 
 # filters must be run in the proper order here
 filters:
-  - filters/fr-nbsp.lua
   - filters/diagram-generator.lua
+  - filters/fr-nbsp.lua
   - quarto
   - filters/inline-svg.lua
   - filters/pandoc-quotes.lua
