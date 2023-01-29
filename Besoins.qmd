@@ -24,12 +24,12 @@ Le nom porte à confusion, car une chose qui ne fonctionne pas est "non fonction
 Pour cette raison, elles sont aussi appelées des exigences sur les qualités ou sur les contraintes.
 On peut aussi les appeler informellement les "ilités", car ces qualités sont souvent des aptitudes du système: la maintenabilité, la convivialité, la testabilité, etc.
 
-![Ramasser les besoins non fonctionnels? "[Dog Clean Up](https://thenounproject.com/icon/dog-clean-up-21489/)" de [Luis Prado](https://thenounproject.com/Luis), utilisé selon [CC0](https://creativecommons.org/publicdomain/zero/1.0/)](images/Pick-up-after-dog-1540480672.svg){#fig-besoins width="60%"}
+![Ramasser les besoins non fonctionnels? "[Dog Clean Up](https://thenounproject.com/icon/dog-clean-up-21489/)" de [Luis Prado](https://thenounproject.com/Luis), utilisé selon [CC0](https://creativecommons.org/publicdomain/zero/1.0/)](images/Pick-up-after-dog-1540480672.svg){#fig-besoins width="50%"}
 
 ## FURPS+
 
 FURPS+ est un modèle (avec un acronyme) pour classer les exigences (besoins) d'un logiciel.
-Voici un résumé de FURPS+ (voir @craig_uml_2005 section 5.4):
+Voici un résumé de FURPS+ [voir @craig_uml_2005, section 5.4]:
 
 - **Fonctionnalité** (*Functionality*). Ce sont les exigences exprimées souvent par les cas d'utilisation, par exemple *Traiter une vente*. La sécurité est aussi considérée dans ce volet.
 - **Aptitude à l'utilisation** (*Usability*). Convivialité: les facteurs humains du logiciel, par exemple le nombre de clics que ça prend pour réaliser une fonctionnalité, à quel point une interface est facile à comprendre par une personne, etc.
