@@ -60,7 +60,7 @@ Il faut faire attention aux principes de la séparation des couches présentatio
 Par exemple, la @fig-dssdetails rentre dans les détails de ce qui se passe réellement dans une opération système quand la solution fonctionne avec un service Web:
 
 - D'abord, l'acteur clique sur un bouton;
-- Ce clic se transforme en service REST;
+- Ce clic se transforme en appel REST;
 - Un routeur transforme l'appel REST en une opération système envoyée à un contrôleur GRASP. Notez que c'est un **objet du domaine qui reçoit l'opération système** -- c'est l'essence du principe GRASP Contrôleur;
 - Le contrôleur GRASP dirige la suite, selon la solution proposée dans la réalisation de cas d'utilisation (RDCU).
 
@@ -182,7 +182,7 @@ Cela simplifie aussi le contrôleur GRASP.
 
 ### Dessiner un DSS à partir d'un cas d'utilisation
 
-Esquissez le DSS pour le cas d'utilisation [Réserver un livre de la bibliothèque](#sec-CU_Réserver_livre). 
+Esquissez le DSS pour le cas d'utilisation *[Réserver un livre de la bibliothèque](#sec-CU_Réserver_livre)*.
 Toutes les opérations système doivent définir le type de chaque argument, si nécessaire.
 
 :::
