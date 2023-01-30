@@ -48,8 +48,13 @@ local function space_high_punctuation_and_quotes(inlines)
         if inlines[i+1] and inlines[i+1].t == 'Str' and not string.find(inlines[i+1].text, nbsp) -- didn't already insert nbsp
            and (inlines[i].t == 'Quoted' or inlines[i].t == 'Cite' or inlines[i].t == 'Link' or inlines[i].t == 'Emph' or inlines[i].t == 'Strong' or inlines[i].t == 'Strikeout' or inlines[i].t == 'Code' or inlines[i].t == 'RawInline')
            and string.match(inlines[i+1].text:sub(-1), ascii_punctuation_pattern) then
-            -- print(i, 'fixing (3):', inlines[i+1])
-            inlines[i+1].text = nbsp .. inlines[i+1].text
+            if (string.len(inlines[i+1].text) == 1) then
+                -- print(i, 'fixing (3):', inlines[i+1])
+                inlines[i+1].text = nbsp .. inlines[i+1].text
+            else
+                -- print(i, 'fixing (4) -- should be parens:', inlines[i+1])
+                inlines[i+1].text = inlines[i+1].text:sub(1, -2) .. nbsp .. inlines[i+1].text:sub(-1)
+            end
             -- skip the item we just spaced
             i = i + 1
         end
@@ -57,7 +62,7 @@ local function space_high_punctuation_and_quotes(inlines)
         --- special case where string is terminated by parentheses, e.g., "Bonjour!)"
 
         if inlines[i].t == 'Str' and string.find(inlines[i].text, '.*'.. ascii_punctuation_pattern .. '%)') then
-            -- print ("Found: ", inlines[i].text)
+            -- print("Found: ", inlines[i].text)
             -- capture what's in the parens
             _, _, inside = string.find(inlines[i].text, '(.*'.. ascii_punctuation_pattern .. ')%)')
             inside = inside:sub(1, -2) .. nbsp .. inside:sub(-1)

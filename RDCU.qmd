@@ -36,17 +36,22 @@ Tout le processus de proposition d'une solution (RDCU) peut être visualisé com
 ```{.plantuml #fig-RDCU_Aide_Memoire caption="Aide-mémoire pour faire une RDCU. L'étape en rouge nécessite beaucoup de pratique, selon la complexité des postconditions. Vous pouvez vous attendre à ne pas la réussir du premier coup. [(PlantUML)](http://www.plantuml.com/plantuml/uml/TLHDJnin4BtxLqp3WMILBaALMXGG8YLjLQb55RGzSJ7hsOsBrtOzTg3_gBdt7-mVwtYJG8BWubtPy_7clMUVKPGXfjQ0s7-bRMMIGYZBWzg55alF1-jDGRVQUXba2pINojrfsq0j3MsVl9VLRHDSikhS6HTWhfL2knKmmrec4x_ZVPmQtTWMROIA5mnRKHSkucw8mJgA7Yg8W1ubVoUNk70wWDbtlbi66RMpG7yeTdzRF0PXkGe4tSpZ1F2-XC6WAAhGBJ5SkBH0O_1dRZmS5SLW8FQKgckb9hDkoM1QRP4h8rJEnj3zCvZ2yKx5gVT6_quSLHIVBgTNt-3yCRGehktmV2wzZW7Xu-7Ryl3DmVJm7Nz66RZq7irM0nv7RKtn1FmN96xY7KKELZf7K56Cyr3ZQmklVrW4RPaTMo6SwDF5oO4-1TQndmyay4ZT4lBiF7tEU0ZQd4aYLsa-1PdW4XjD33n7phYtZ37ecnGfrtn8PTphP6qPapIQkYLjv15xcKtcarcfLZeDCKAGTPsf7K6oeBHiMEuMUNYTBI2hF9lmBhsWwfXv8DwYMcgI322w597944LX6EbJZa2bPma6Z9mHaDE3pNKC0yYMNxT3mokBqoAHR1WVzYrM2QkoiwkhSQ-V9AQXcdTBhhDj4V6CGrW16Nj_Z45iTZ_SUmmnRnN5vncW1NVp2sEMM62iIjWnqb7leoE1La5kjhaETtFDQ8O1AMQyJxd81baJnuHTMvSWJynXZ1zjvRZycWzs0OtWnRgFBDA3BXnEqNbXiCcuyc--mnF8rYHdKa-hOhj8RKos6PU37WlqQbTpoKp1CvAN86PieJ5emmaf0jTYgwqkpre4seXCEoht-doTCQNv0I7X0xzbsdFuYlXLPmJEN32kCdEwca2SyS9ltty0)"  }
 @startuml 
 !include normal.pumlinclude
+' get font awesome icon
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.4.0
+!includeurl ICONURL/common.puml
+!include ICONURL/font-awesome-5/book.puml
+'
 skinparam shadowing false
 skinparam DefaultTextAlignment center
 skinparam NoteTextAlignment left
 start 
 repeat 
 :Revoir l'opération système; 
-note right: ex. ""**créerNouvelleVente()**""
+note right: ex. : ""**créerNouvelleVente()**""
 #ddffdd:Déterminer le contrôleur;
-note right: Appliquer **GRASP Contrôleur**\n(chapitre F16.13/A17.13) \ {{< fa solid book >}}
+note right: Appliquer **GRASP Contrôleur**\n(chapitre F16.13/A17.13 <$book{scale=0.3}>) 
 :Rappeler le contrat d'opération; 
-note right: Les **postconditions**, ex.,\n -Une instance <i>v</i> de Vente a été créée\n -<i>v</i> a été associée au Registre\n -Des attributs de <i>v</i> ont été initialisés 
+note right: Les **postconditions**, p. ex. :\n - Une instance <i>v</i> de Vente a été créée\n - <i>v</i> a été associée au Registre\n - Des attributs de <i>v</i> ont été initialisés 
 repeat
 #ffdddd:Concevoir (et raffiner) un diagramme d'interaction
 pour l'opération système, **satisfaisant toutes**
@@ -56,7 +61,7 @@ pour l'opération système, **satisfaisant toutes**
 note right
 Appliquer **GRASP Créateur**, 
 **GRASP Expert**, **ID en objets**,
-etc. (chapitre F16.8/A17.8) \ {{< fa solid book >}}.
+etc. (chapitre F16.8/A17.8 <$book{scale=0.3}>).
 end note
 repeat while (reste des postconditions insatisfaites\nou des infos pas encore retournées) 
 repeat while (reste des opérations système) 
@@ -127,12 +132,12 @@ end loop
 ## Visibilité {#sec-Visibilite}
 
 Dans une approche orientée objet, puisqu'on doit éviter trop de couplage, un objet ne voit pas tous les autres objets.
-Si un objet A veut envoyer un message à un objet B, ce dernier doit lui être *visible*.
-Ça veut dire que A doit connaître une référence vers B.
+Si un objet *a* veut envoyer un message à un objet *b*, ce dernier doit lui être *visible*.
+Ça veut dire que *a* doit connaître une référence vers *b*.
 
 ::: {.callout-warning}
-Dans un diagramme de séquence pour une RDCU, il est facile de montrer des objets A et B et de dessiner une flèche entre l'objet A et B puis d'écrire le nom d'une méthode pour représenter l'appel.
-Cependant, dans un programme codé en TypeScript ou en Java, il y aura des erreurs de compilation si A n'a pas une référence pour B.
+Dans un diagramme de séquence pour une RDCU, il est facile de montrer des objets *a* et *b* et de dessiner une flèche entre l'objet *a* et *b* puis d'écrire le nom d'une méthode pour représenter l'appel.
+Cependant, dans un programme codé en TypeScript ou en Java, il y aura des erreurs de compilation si *a* n'a pas une référence pour *b*.
 L'approche de Larman propose d'être sensible à la visibilité lors de la conception (en faisant les RDCU), car ajouter une visibilité implique l'augmentation du couplage.
 :::
 
@@ -143,7 +148,7 @@ Il faut pratiquer pour apprendre la démarche, mais les points suivants peuvent 
 Cependant, les objets Singleton posent des problèmes de conception, notamment pour les tests.
 Il vaut mieux éviter ce choix, si possible.  
 Voir [cette réponse sur Stack Overflow](https://stackoverflow.com/a/2085988/1168342)\ {{< fa brands stack-overflow >}}.
-- Sinon, il faudra que l'objet émetteur (A) ait une référence de l'objet récepteur (B).
+- Sinon, il faudra que l'objet émetteur (*a*) ait une référence de l'objet récepteur (*b*).
 Par exemple, sur la @fig-RDCU_Visibilite1, la référence à *b* peut être:
   - stockée comme un attribut de *a*,
   - passée comme un argument dans un message antérieur, ou
@@ -170,7 +175,7 @@ Pour initialiser les références nécessaires pour la bonne visibilité, Larman
 La directive d'utiliser les types primitifs pour les arguments dans les opérations système (voir la @sec-dss) nous mène à un problème récurrent dans les RDCU: transformer un identifiant (un argument de type `String` ou `int`) en objet représenté par cet identifiant.
 Larman vous propose un idiome (pas vraiment un pattern) nommé **Transformer identifiant en objet**, qui sert à repérer la référence d'un objet qui correspond à l'identifiant.
 
-Il y a un exemple à la @fig-RDCU_ID_en_objets provenant du chapitre sur **l'Application des patterns GoF (figure 23.18)**\ {{< fa solid book >}}.
+Il y a un exemple à la @fig-RDCU_ID_en_objets provenant du chapitre sur **l'Application des patterns GoF (figure F23.18\ {{< fa solid book >}})**.
 Un autre exemple du livre de @craig_uml_2005 est l'identifiant `codeArticle` transformé en objet `DescriptionProduit` par la méthode  
 `CatalogueProduits.getDescProduit(codeArticle:String):DescriptionProduit`.
 
@@ -188,13 +193,14 @@ note right: Selon Expert et\n**les ID en objets**
 R -> v : saisirClientPourRemise(c:Client)
 @enduml
 ```
+
 La @sec-UtilisationMap explique comment implémenter la transformation avec un tableau associatif.
 
 ## Utilisation d'un tableau associatif (`Map<clé, objet>`) {#sec-UtilisationMap}
 
 Pour *transformer un identifiant en objet*, il est pratique d'utiliser un [tableau associatif (aussi appelé dictionnaire ou *map* en anglais)](https://fr.wikipedia.org/wiki/Tableau_associatif)\ {{< fa brands wikipedia-w >}}.
 L'exemple du livre de @craig_uml_2005 concerne le problème de repérer une `Case` Monopoly à partir de son nom (`String`).
-C'est illustré sur la figure A17.7/F17.7\ {{< fa solid book >}}. 
+C'est illustré sur la figure A17.7/F16.7\ {{< fa solid book >}}. 
 
 Notez que les exemples de @craig_uml_2005 ne montrent qu'un seul *type* dans le tableau associatif, par exemple `Map<Case>`, tandis que, normalement, il faut spécifier aussi le type de la clé, par exemple `Map<String, Case>`.
 
@@ -219,13 +225,13 @@ Dans la section suivante, l'initialisation des éléments utilisés dans les RDC
 ## RDCU pour l'initialisation, le scénario Démarrer {#sec-rdcu_Demarrer}
 
 Le lancement de l'application correspond à la RDCU "Démarrer".
-La section **Initialisation et cas d'utilisation Démarrer** (F17.4, p.345) ou **Initialization and the 'Start Up' Use Case** (A18.4, p.274)\ {{< fa solid book >}}\ traite ce sujet important. C'est dans cette conception où il faut mettre en place tous les éléments importants pour les hypothèses faites dans les autres RDCU, par exemple les classes de collection (map), les références pour la visibilité, l'initialisation des contrôleurs, etc.
+La section **Initialisation et cas d'utilisation Démarrer** (F17.4, p. 345) ou **Initialization and the 'Start Up' Use Case** (A18.4, p.274)\ {{< fa solid book >}}\ traite ce sujet important. C'est dans cette conception où il faut mettre en place tous les éléments importants pour les hypothèses faites dans les autres RDCU, par exemple les classes de collection (*map*), les références pour la visibilité, l'initialisation des contrôleurs, etc.
 
 Voici quelques points importants:
 
 - Le lancement d'une application dépend du langage de programmation et du système d'exploitation.
 - À chaque nouvelle RDCU, on doit possiblement actualiser la RDCU "Démarrer" pour tenir compte des hypothèses faites dans la dernière RDCU. Elle est assez "instable" pour cette raison. Larman recommande de faire sa conception en dernier lieu.
-- Il faut choisir l'objet du domaine initial, qui est souvent l'objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses "enfants" directs, puis chaque "enfant" aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu Risk à la @fig-MDD-jeu-de-risk, `JeuRisk` pourrait être l'objet racine, qui devra créer l'objet `PlateauRisk` et les cinq instances de `Dé`. L'objet `PlateauRisk`, lors de son initialisation, pourra instancier les 42 objets `Pays` et les six objets `Continent`, en passant à chaque `Continent` ses objets `Pays` lors de son initialisation. Si `PlateauRisk` fournit une méthode `getPays(nom)` qui dépend d'un tableau associatif selon [Transformer identifiants en objets](#sec-TransformerIDenObjets), alors c'est dans l'initialisation de cette classe que l'instance de `Map<String,Pays>` sera créée.
+- Il faut choisir l'objet du domaine initial, qui est souvent l'objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses "enfants" directs, puis chaque "enfant" aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu Risk à la @fig-MDD-jeu-de-risk, `JeuRisk` pourrait être l'objet racine, qui devra créer l'objet `PlateauRisk` et les cinq instances de `Dé`. L'objet `PlateauRisk`, lors de son initialisation, pourra instancier les 42 objets `Pays` et les six objets `Continent`, en passant à chaque `Continent` ses objets `Pays` lors de son initialisation. Si `PlateauRisk` fournit une méthode `getPays(nom)` qui dépend d'un tableau associatif selon [Transformer les identifiants en objets](#sec-TransformerIDenObjets), alors c'est dans l'initialisation de cette classe que l'instance de `Map<String,Pays>` sera créée.
 - Selon l'application, les objets peuvent être chargés en mémoire à partir d'un système de persistance, par exemple une base de données ou un fichier. Pour l'exemple de Risk, `PlateauRisk` pourrait charger, à partir d'un fichier JSON, des données pour initialiser toutes les instances de `Pays`. Pour une application d'inscription de cours à l'université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d'une base de données. Une base de données amène un lot d'avantages et d'inconvénients, et elle n'est pas toujours nécessaire. Dans la méthodologie de ce manuel, on n'aborde pas le problème des bases de données (c'est le sujet d'un autre cours).
 
 ```{.plantuml #fig-DemarrerRisk  caption="Exemple de l'initialisation partielle du jeu Risk, avec les principes GRASP et les tableaux associatifs pour faciliter la transformation d'identifiants en objets. [(PlantUML)](http://www.plantuml.com/plantuml/uml/ZLLDJzj04BrRuZ-Ck2H88Ig7NYoAG6bLGQ4WGji3uR3i3lR6zknsTqrBVr7pE_B7EdPYnvYF8aKRP-VDcpTlHiwX3yA5iiWZdscomea2V7Z8aK-dPHNPweHkXSmIPqfIqkJ6GN22F8UGmbOqW91g3_mHa0fIlvmE0Gdk30NG13yqAVFBCt13gF1Eb7ce82GAX2zE-ohd-6h2kAiKFO89AJeFkJ4P90v5JJRz_Xc6XSXOQEcGA-F3WByrSKDvZeghEZWwFOLlqq-Nqqvvs7ktqssfhy2Bf3heTPt7bC69AHs9_5NSxqmgc4gdRNWLTu5ibVDTOLqBWokHqwNWmUoDzxh3mfybaiGpz9Noermd19BdWIvYHD1IMy7-RyVdjtCCPqBJDWWFfWnUA-nXJh2yr3wh4VC-mSVbeWwetlr5BWAAJQBj9qwuIqsigGxBnr4RNuW7lqhiHSw4dL7Cv_wKbv6IqOmgx44DBY9PxG9MEjVDmExkmG7_XXXMiOWC0vnEqX33kZT07o0VcCeDS4Aoi8XNouBUVzzGgeX9QZB5N6gvyDVw1ZuyOZNtwBZMICN0gc7YbWkEbMv6JI6HkELVNYRsBK9IrGBRfW9xr9ImVRqDitN_fUvOtp0NaLqJ5ynRUVYSSEj6HOyzxhAr5JhkrzxNx8tePgx-w1vb5RvcbsOaK-4IT9CduSuyE7soWa6El5E6QBb0FoCrAFcLeMMgENGoFV_AxvLDeMPKJqkFlVw3ZGcoDK6svWwVaQjlncIA4Op7uvt7xiWtkTEskD8rtt--Xkthiwq-MmsfdT3mvVph-OjQxPkqrWDOJQ_Q3A7KqEwiB-JcejtKzk6Gd_X_u1y0)" }
@@ -253,7 +259,7 @@ jr -->> pr : create
 note over jr,pr: par **Créateur**\nJeuRisk agrège PlateauRisk
 create m
 pr -->> m : pMap = create
-note over pr,m: par **Créateur**: PlateauRisk agrège Map<String,Pays>
+note over pr,m: par **Créateur**: PlateauRisk agrège Map<String, Pays>
 pr -> pr : continentsAvecPays[] =\nchargerContinentsAvecPays
 note right : Par **Expert**\nCharger les données d'un fichier JSON
 ' continents
@@ -286,13 +292,13 @@ Il faut vérifier avec une personne expérimentée (l'architecte du projet si po
 Chaque fois qu'on propose des classes logicielles qui n'ont pas de liens avec la représentation du problème du domaine, on *augmente le décalage des représentations* et l'on rend la solution un peu plus difficile à comprendre.
 C'est aussi une forme de [Complexité circonstancielle (provenant des choix de conception)](#sec-ComplexiteCirc).
 Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels.
-Il est très difficile, même pour les experts en conception, de trouver un bon équilibre entre toutes les forces: la maintenabilité, la simplicité, les fonctionnalités, etc.
-Vous pouvez en lire plus dans [cette réponse sur StackOverflow](https://stackoverflow.com/a/18702842/1168342)\ {{< fa brands stack-overflow >}}.
+Il est très difficile, même pour les spécialistes en conception, de trouver un bon équilibre entre toutes les forces: la maintenabilité, la simplicité, les fonctionnalités, etc.
+Vous pouvez en lire plus dans [cette réponse sur Stack Overflow](https://stackoverflow.com/a/18702842/1168342)\ {{< fa brands stack-overflow >}}.
 :::
 
 ## Pattern "Faire soi-même" {#sec-FaireSoiMeme}
 
-Dans la section F30.8/A33.7\ {{< fa solid book >}}, Larman mentionne le pattern "Faire soi-même" de Peter Coad [-@coad97a], qui permet de réduire le [Décalage des représentations](#sec-DecalageRepresentations), même s'il ne représente pas exactement la réalité des objets (voir la @fig-main_des) :
+Dans la section F30.8/A33.7\ {{< fa solid book >}}, Larman mentionne le pattern "Faire soi-même" de Peter Coad [-@coad97a], qui permet de réduire le [Décalage des représentations](#sec-DecalageRepresentations), même s'il ne représente pas exactement la réalité des objets (voir la @fig-main_des):
 
 ::: {#fig-RDCU_faire_soi_meme layout-ncol=2 layout-valign="bottom"}
 
@@ -318,7 +324,7 @@ class Dé {
 ### Coder des méthodes à partir des diagrammes de séquence
 
 Pour chacun des diagrammes suivants, écrivez les classes TypeScript avec les méthodes indiquées dans le diagramme  
-[cet exercice complémente le livre de @craig_uml_2005 à la section F18.6/A20.4.].
+[cet exercice complémente le livre de @craig_uml_2005 à la section F18.6/A20.4\ {{< fa solid book >}}] .
 
 ::: {.callout-tip}
 Vous pouvez utiliser VS Code pour vous aider avec le TypeScript, mais cet outil ne sera pas forcément permis lors d'un examen.
@@ -387,7 +393,7 @@ class B {
 
 \filbreak
 
-2. Écrivez le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. 17.6].
+2. Écrivez le code pour la figure suivante décrivant la création de la collection de Vente [tirée de @craig_uml_2005, figure. F17.6\ {{< fa solid book >}}].
 
     ```{.plantuml}
     @startuml
@@ -422,7 +428,7 @@ class B {
 
 \filbreak
 
-3. Écrivez le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu Monopoly [tirée de @craig_uml_2005, figure F22.9].
+3. Écrivez le code pour la figure suivante décrivant l'utilisation d'un *Cornet* dans le jeu Monopoly [tirée de @craig_uml_2005, figure F22.9\ {{< fa solid book >}}].
 
     ```{.plantuml}
     @startuml
@@ -445,7 +451,7 @@ class B {
 
 \filbreak
 
-4. Écrivez le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7].
+4. Écrivez le code pour les figures suivantes décrivant les appels polymorphes de la méthode `atterrirSur` dans le jeu Monopoly [tirées de @craig_uml_2005, figures F22.6 et F22.7\ {{< fa solid book >}}].
 
     ```{.plantuml}
     @startuml
