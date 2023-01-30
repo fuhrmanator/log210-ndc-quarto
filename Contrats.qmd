@@ -91,7 +91,7 @@ Suivez les exemples de contrats d'opération présentés à la @sec-contrat_exem
 
 ::: {#exr-contrats-Traiter-vente}
 
-### Contrats d'opération pour Traiter une vente
+### Contrats d'opération pour *Traiter une vente*
 
 Rédigez **un contrat d'opération pour chacune des opérations système** dans le DSS (et qui doit être cohérent avec le MDD) de la @sec-DSS_traiter_vente. 
 Suivez les exemples de contrats d'opération à la @sec-contrat_exemple.
