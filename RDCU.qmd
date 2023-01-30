@@ -634,7 +634,7 @@ Debt --> "1" Player
 
 Puisque la solution d'Emojiopoly est en anglais, vous pouvez regarder le modèle du domaine de Monopoly en français et en anglais pour vous aider à comprendre les termes.
 
-```{.plantuml caption="MDD (version française) de Monopoly proposé par @craig_uml_2005. C'est le résultat d'une analyse du problème du jeu Monopoly selon la méthodologie proposée dans le chapitre @sec-mdd."}
+```{.plantuml caption="MDD (version française) de Monopoly proposé par @craig_uml_2005 sur la figure F26.35 {{< fa solid book >}}. C'est le résultat d'une analyse du problème du jeu Monopoly selon la méthodologie proposée dans le chapitre @sec-mdd."}
 @startuml
 '!include ecriture.pumlinclude
 !include normal.pumlinclude
@@ -683,7 +683,7 @@ MG "1" -r- "1" B : Joué-sur >
 @enduml
 ```
 
-```{.plantuml caption="MDD (version anglaise) de Monopoly proposé par @craig_uml_2005."}
+```{.plantuml caption="MDD (version anglaise) de Monopoly proposé par @craig_uml_2005 sur la figure A31.35 {{< fa solid book >}}."}
 @startuml
 '!include ecriture.pumlinclude
 !include normal.pumlinclude
