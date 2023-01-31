@@ -96,7 +96,7 @@ Esquissez le diagramme d'activités lors de la réception de voitures louées (a
 Pour le diagramme, faites attention à la **notation UML**: cela comprend les objets (pour la voiture et pour la facture), le début et la fin de l'activité, les débranchements, les jointures, les décisions et les fusions.
 
 -   Les rôles sont le client, le réceptionniste (qui gère la documentation et le paiement de la location) et l'agent (qui gère le traitement des voitures avant la prochaine location).
--   Le client rend la voiture et les clés.
+-   Le client rend la voiture et les clés au réceptionniste.
 -   Le réceptionniste note le kilométrage et le niveau d'essence pour calculer la facture.
 -   Le client paye sa location, selon le montant sur la facture.
 -   L'agent inspecte la voiture pour la propreté. Si elle n'est pas assez propre, alors l'agent doit laver, rincer et sécher l'extérieur et nettoyer l'intérieur. Ce travail devrait commencer le plus vite possible, après que le réceptionniste a fini de noter les informations pour la facture.
