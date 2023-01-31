@@ -17,9 +17,9 @@ Voici les éléments importants:
     - un système d'exploitation (OS) est un logiciel qui héberge et qui exécute des programmes;
     - une machine virtuelle (JVM ou .NET);
     - un moteur de base de données (par exemple PostgreSQL) exécute les requêtes SQL;
-    - un navigateur Web qui héberge et qui exécute JavaScript, les applets Flash/Java;
+    - un navigateur Web qui héberge et qui exécute JavaScript;
     - un moteur de *workflow*;
-    - un conteneur de servlets ou conteneur d'EJB.
+    - un conteneur de servlets ou conteneur Docker.
 
 La @fig-DiagrammeDeploiement est un exemple de diagramme de déploiement (laboratoire). 
 La @fig-iTunesDiagrammeDeploiement est un exemple de diagramme de déploiement pour le logiciel iTunes d'Apple. 
