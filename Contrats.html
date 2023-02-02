@@ -276,17 +276,17 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Réserver un livre de la bibliothèque</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Traiter une vente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Ouvrir la caisse</span></a>
   </div>
 </li>
       </ul>
@@ -314,13 +314,13 @@ div.csl-indent {
 
 
 <p>Un contrat d’opération est un document décrivant ce qui est arrivé après l’exécution d’une opération système. Cette description est présentée sous forme de postconditions utilisant le vocabulaire du modèle du domaine.</p>
-<p>Le MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente), mais aussi des <em>instances</em> de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clients(es) qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque client(e).</p>
-<p>Sur la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter Vente</em>. Elle correspond au moment où le(a) caissier(e) démarre une nouvelle vente pour un(e) client(e). Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec la voix passive au passé composé en <span style="white-space:nowrap">français) :</span> «&nbsp;une instance <em>v</em> de Vente a été créée&nbsp;».</p>
+<p>Le MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente), mais aussi des <em>instances</em> de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clientes et clients qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque cliente ou client.</p>
+<p>Sur la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter une Vente</em>. Elle correspond au moment où le caissier ou la caissière démarre une nouvelle vente pour un client ou une cliente. Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec la voix passive au passé composé en <span style="white-space:nowrap">français) :</span> «&nbsp;une instance <em>v</em> de Vente a été créée&nbsp;».</p>
 <p>Un contrat d’opération permet de spécifier tous les changements dans le MDD qui doivent avoir lieu lors de l’opération système. Les postconditions du contrat saisissent l’évolution du MDD.</p>
 <div id="fig-ContratExempleCreerNouvelleVente" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/Contrats-survol_export.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.1: Pendant l’opération système <code>créerNouvelleVente</code>, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition - une instance <em>v</em> de Vente a été créée.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;8.1: Pendant l’opération système <code>créerNouvelleVente</code>, une instance de Vente doit être créée. Le contrat d’opération le spécifie dans une postcondition : une instance <em>v</em> de Vente a été créée.</figcaption><p></p>
 </figure>
 </div>
 <section id="les-contrats-en-bref" class="level2" data-number="8.1">
@@ -411,13 +411,13 @@ div.csl-indent {
 <p><span class="theorem-title"><strong>Exercice 8.1 (terminerAttaque) </strong></span>Rédigez le contrat d’opération pour <code>terminerAttaque()</code>. Il faut considérer le cas où une attaque a réussi, c’est-à-dire que le <code>paysDéfenseur</code> change de Joueur (celui du <code>paysAttaquant</code>). Suivez les exemples de contrats d’opération présentés à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>.</p>
 </div>
 <div id="exr-contrats-Traiter-vente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 8.2 (Contrats d’opération pour Traiter une vente) </strong></span>Rédigez <strong>un contrat d’opération pour chacune des opérations système</strong> dans le DSS (et qui doit être cohérent avec le MDD) de la <a href="Annexe_Cas_utilisation_Traiter_vente.html#sec-DSS_traiter_vente"><span>Section&nbsp;B.1</span></a>. Suivez les exemples de contrats d’opération à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 8.2 (Contrats d’opération pour <em>Traiter une vente</em>) </strong></span>Rédigez <strong>un contrat d’opération pour chacune des opérations système</strong> dans le DSS (et qui doit être cohérent avec le MDD) de la <a href="Annexe_Cas_utilisation_Traiter_vente.html#sec-DSS_traiter_vente"><span>Section&nbsp;B.1</span></a>. Suivez les exemples de contrats d’opération à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>.</p>
 </div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
-Larman, C. (2005). <em><span>UML</span> 2 et design patterns</em> (3ᵉ éd.). Paris&nbsp;: Village Mondial.
+Larman, C. (2005). <em><span>UML</span> 2 et les design patterns</em> (3ᵉ éd.). Paris&nbsp;: Village Mondial.
 </div>
 </div>
 </section>

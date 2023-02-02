@@ -339,17 +339,17 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Réserver un livre de la bibliothèque</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Traiter une vente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Ouvrir la caisse</span></a>
   </div>
 </li>
       </ul>
@@ -368,7 +368,7 @@ div.csl-indent {
   <li><a href="#sec-GRASP_Adaptateur" id="toc-sec-GRASP_Adaptateur" class="nav-link" data-scroll-target="#sec-GRASP_Adaptateur"><span class="toc-section-number">14.3</span>  Identifier les GRASP dans les GoF</a>
   <ul class="collapse">
   <li><a href="#polymorphisme" id="toc-polymorphisme" class="nav-link" data-scroll-target="#polymorphisme"><span class="toc-section-number">14.3.1</span>  Polymorphisme</a></li>
-  <li><a href="#fabrication-pure" id="toc-fabrication-pure" class="nav-link" data-scroll-target="#fabrication-pure"><span class="toc-section-number">14.3.2</span>  Fabrication pure</a></li>
+  <li><a href="#fabrication-pure" id="toc-fabrication-pure" class="nav-link" data-scroll-target="#fabrication-pure"><span class="toc-section-number">14.3.2</span>  Fabrication Pure</a></li>
   <li><a href="#indirection" id="toc-indirection" class="nav-link" data-scroll-target="#indirection"><span class="toc-section-number">14.3.3</span>  Indirection</a></li>
   <li><a href="#protection-des-variations" id="toc-protection-des-variations" class="nav-link" data-scroll-target="#protection-des-variations"><span class="toc-section-number">14.3.4</span>  Protection des variations</a></li>
   </ul></li>
@@ -386,22 +386,47 @@ div.csl-indent {
 <p>Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C’est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF.</p>
 <section id="exemple-avec-adaptateur" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="exemple-avec-adaptateur"><span class="header-section-number">14.1</span> Exemple avec Adaptateur</h2>
-<p>Le pattern Adaptateur a été proposé par <span class="citation" data-cites="GoF1994">Gamma, Helm, Johnson, &amp; Vlissides (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>, et sa structure est illustrée sur la <a href="#fig-AdapterGoF">figure&nbsp;<span>14.1</span></a>. La structure de base peut être trompeuse, car elle ne montre qu’une seule classe <code>Adaptee</code> qui représente l’API (externe) que l’on ne peut modifier. En réalité, ce pattern est plus intéressant lorsqu’on considère <em>plusieurs</em> cas de classe <code>Adaptee</code>, chacune avec une API différente.</p>
-<p>Le chapitre A26/F23&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>&nbsp;présente l’exemple du pattern Adaptateur pour les calculateurs de taxes (<a href="#fig-Fig23_1">figure&nbsp;<span>14.2</span></a> tirée du livre de Larman, figure A26.1/F23.1). On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la version de ce manuel. Nous faisons une hypothèse sur les noms des méthodes pour l’API des classes adaptées, car cette information n’est pas spécifiée. En plus, nous n’avons pas spécifié les arguments (c’est «&nbsp;?&nbsp;»), car les détails ne sont pas connus. Un autre point à mentionner dans le problème de calcul des taxes et que ça dépend de l’article. Selon l’état ou la province, certains articles sont sujets à des taxes et d’autres non. A priori, le calculateur de taxes est l’expert pour décider combien de taxes pour chaque article. C’est pour cela que l’adaptateur a accès à l’objet Vente qui agrège des LigneArticles. Cet objet Vente a une visibilité de paramètre.</p>
+<p>Le pattern Adaptateur a été proposé par <span class="citation" data-cites="GoF1994">Gamma, Helm, Johnson, et Vlissides (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>, et sa structure est illustrée sur la <a href="#fig-AdapterGoF">figure&nbsp;<span>14.1</span></a>. La structure de base peut être trompeuse, car elle ne montre qu’une seule classe <code>Adaptee</code> qui représente l’API (externe) que l’on ne peut modifier. En réalité, ce pattern est plus intéressant lorsqu’on considère <em>plusieurs</em> cas de classe <code>Adaptee</code>, chacune avec une API différente.</p>
+<p>Le chapitre A26/F23&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>&nbsp;présente l’exemple du pattern Adaptateur pour les calculateurs de taxes (<a href="#fig-Fig23_1">figure&nbsp;<span>14.2</span></a> tirée du livre de Larman, figure A26.1/F23.1). On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la version de ce manuel. Nous faisons une hypothèse sur les noms des méthodes pour l’API des classes adaptées, car cette information n’est pas spécifiée. En plus, nous n’avons pas spécifié les arguments (c’est «&nbsp;?&nbsp;»), car les détails ne sont pas connus.</p>
+<p>Un autre point à mentionner dans le problème de calcul des taxes est que ça dépend de l’article. Selon l’État ou la province, certains articles sont sujets à des taxes et d’autres non. A priori, le calculateur de taxes est l’expert pour décider combien de taxes pour chaque article, mais le calculateur n’est pas l’expert des articles. C’est pour cela que l’Adaptateur a accès à l’objet Vente qui agrège des LigneArticles. L’Adaptateur de calculateur de taxes pourra ainsi accéder à chaque article de la vente pour déterminer les taxes. L’objet Vente a une visibilité de paramètre.</p>
 <p>Dans le contexte du projet NextGen POS, Larman propose l’utilisation de ce pattern pour plusieurs dimensions où des services externes ont plusieurs possibilités (l’inventaire, la comptabilité, etc.).</p>
 <div id="fig-AdapterGoF" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="304px" preserveaspectratio="none" style="width:419px;height:304px;background:#FFFFFF;" version="1.1" viewbox="0 0 419 304" width="419px" zoomandpan="magnify"><defs></defs><g><!--MD5=[fc07866a383d07d405a25512054a0e5c]
-class Target--><g id="elem_Target"><rect codeline="4" fill="#F1F1F1" height="50.5938" id="Target" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="87.5" y="7"></rect><text fill="#000000" font-family="Arial" font-size="14" font-style="italic" lengthadjust="spacing" textlength="45" x="105" y="24.9951">Target</text><line style="stroke:#181818;stroke-width:0.5;" x1="88.5" x2="166.5" y1="33.2969" y2="33.2969"></line><text fill="#000000" font-family="Arial" font-size="14" font-style="italic" lengthadjust="spacing" textlength="68" x="93.5" y="50.292">Request()</text></g><!--MD5=[f38a85e47f7d4f812523dd9b6d7d2c16]
-class Adapter--><g id="elem_Adapter"><rect codeline="7" fill="#F1F1F1" height="50.5938" id="Adapter" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="81" x="87" y="119"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="54" x="100.5" y="136.9951">Adapter</text><line style="stroke:#181818;stroke-width:0.5;" x1="88" x2="167" y1="145.2969" y2="145.2969"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="69" x="93" y="162.292">Request()</text></g><path d="M203,127 L203,135.5664 L162,157.4453 L203,143.5664 L203,152.1328 A0,0 0 0 0 203,152.1328 L412,152.1328 A0,0 0 0 0 412,152.1328 L412,137 L402,127 L203,127 A0,0 0 0 0 203,127 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M402,127 L402,137 L412,137 L402,127 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="188" x="209" y="144.0669">adaptee -&gt; SpecificRequest()</text><!--MD5=[7393b79429f23cd61e6e6a493d3a2b14]
-class Adaptee--><g id="elem_Adaptee"><rect codeline="13" fill="#F1F1F1" height="50.5938" id="Adaptee" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="60.5" y="247"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="58" x="98.5" y="264.9951">Adaptee</text><line style="stroke:#181818;stroke-width:0.5;" x1="61.5" x2="193.5" y1="273.2969" y2="273.2969"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="122" x="66.5" y="290.292">SpecificRequest()</text></g><!--MD5=[ed6624c6556d5e7b1bd23032162d20b7]
-class Client--><g id="elem_Client"><rect codeline="19" fill="#F1F1F1" height="26.2969" id="Client" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="45" x="7" y="19.5"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="39" x="10" y="37.4951">Client</text></g><!--MD5=[e8afce381d6978114aa9e217ec9a4ba2]
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="304px" preserveaspectratio="none" style="width:419px;height:304px;background:#00000000;" version="1.1" viewbox="0 0 419 304" width="419px" zoomandpan="magnify"><defs></defs><g><!--MD5=[fc07866a383d07d405a25512054a0e5c]
+class Target--><g id="elem_Target"><rect codeline="3" fill="#F1F1F1" height="50.5938" id="Target" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="87.5" y="7"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="45" x="105" y="24.9951">Target</text><line style="stroke:#181818;stroke-width:0.5;" x1="88.5" x2="166.5" y1="33.2969" y2="33.2969"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="68" x="93.5" y="50.292">Request()</text></g><!--MD5=[f38a85e47f7d4f812523dd9b6d7d2c16]
+class Adapter--><g id="elem_Adapter"><rect codeline="6" fill="#F1F1F1" height="50.5938" id="Adapter" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="81" x="87" y="119"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="54" x="100.5" y="136.9951">Adapter</text><line style="stroke:#181818;stroke-width:0.5;" x1="88" x2="167" y1="145.2969" y2="145.2969"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="69" x="93" y="162.292">Request()</text></g><path d="M203,127 L203,135.5664 L162,157.4453 L203,143.5664 L203,152.1328 A0,0 0 0 0 203,152.1328 L412,152.1328 A0,0 0 0 0 412,152.1328 L412,137 L402,127 L203,127 A0,0 0 0 0 203,127 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M402,127 L402,137 L412,137 L402,127 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" lengthadjust="spacing" textlength="188" x="209" y="144.0669">adaptee -&gt; SpecificRequest()</text><!--MD5=[7393b79429f23cd61e6e6a493d3a2b14]
+class Adaptee--><g id="elem_Adaptee"><rect codeline="12" fill="#F1F1F1" height="50.5938" id="Adaptee" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="60.5" y="247"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="58" x="98.5" y="264.9951">Adaptee</text><line style="stroke:#181818;stroke-width:0.5;" x1="61.5" x2="193.5" y1="273.2969" y2="273.2969"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="122" x="66.5" y="290.292">SpecificRequest()</text></g><!--MD5=[ed6624c6556d5e7b1bd23032162d20b7]
+class Client--><g id="elem_Client"><rect codeline="18" fill="#F1F1F1" height="26.2969" id="Client" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="45" x="7" y="19.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="39" x="10" y="37.4951">Client</text></g><!--MD5=[e8afce381d6978114aa9e217ec9a4ba2]
 reverse link Target to Adapter--><g id="link_Target_Adapter"><path d="M127.5,78.61 C127.5,92.39 127.5,107.02 127.5,118.9 " fill="none" id="Target-backto-Adapter" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"></path><polygon fill="none" points="120.5,78.19,127.5,58.19,134.5,78.19,120.5,78.19" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[ac16be24c016d0cc1b5b2bfc6dfbddbe]
-link Adapter to Adaptee--><g id="link_Adapter_Adaptee"><path codeline="17" d="M127.5,170.09 C127.5,190.65 127.5,220.02 127.5,241.87 " fill="none" id="Adapter-to-Adaptee" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="127.5,246.97,131.5,237.97,127.5,241.97,123.5,237.97,127.5,246.97" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="53" x="128.5" y="213.0669">adaptee</text></g><!--MD5=[431c3f1848dccc83292155c400886313]
-link Client to Target--><g id="link_Client_Target"><path codeline="21" d="M52.09,32.5 C62.12,32.5 72.15,32.5 82.19,32.5 " fill="none" id="Client-to-Target" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="87.44,32.5,78.44,28.5,82.44,32.5,78.44,36.5,87.44,32.5" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[4c481c55012a2e1dc63b391051750d7e]
+link Adapter to Adaptee--><g id="link_Adapter_Adaptee"><path codeline="16" d="M127.5,170.09 C127.5,190.65 127.5,220.02 127.5,241.87 " fill="none" id="Adapter-to-Adaptee" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="127.5,246.97,131.5,237.97,127.5,241.97,123.5,237.97,127.5,246.97" style="stroke:#181818;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" lengthadjust="spacing" textlength="53" x="128.5" y="213.0669">adaptee</text></g><!--MD5=[431c3f1848dccc83292155c400886313]
+link Client to Target--><g id="link_Client_Target"><path codeline="20" d="M52.09,32.5 C62.12,32.5 72.15,32.5 82.19,32.5 " fill="none" id="Client-to-Target" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="87.44,32.5,78.44,28.5,82.44,32.5,78.44,36.5,87.44,32.5" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[cecd720015220321f5e4072c7893ba66]
+@startuml
+!include normal.pumlinclude
+hide empty members
+interface Target {
+  {abstract} Request()
+}
+class Adapter implements Target {
+  Request()
+}
+note right of Adapter::Request
+adaptee -> SpecificRequest()
+end note
+class Adaptee {
+  SpecificRequest()
+}
+
+Adaptee <-u- Adapter : adaptee
+
+class Client {
+}
+Client -r-> Target
+@enduml
+
 @startuml
 skinparam style strictuml
-skinparam defaultfontname Arial
+skinparam defaultFontName Helvetica,Arial,sans-serif
+skinparam backgroundcolor transparent
 hide empty members
 interface Target {
   {abstract} Request()
@@ -431,26 +456,49 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;14.1: Le diagramme de classe du pattern Adaptateur proposé par <span class="citation" data-cites="GoF1994">Gamma et coll. (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.1: Le diagramme de classes du pattern Adaptateur proposé par <span class="citation" data-cites="GoF1994">Gamma et coll. (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-Fig23_1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="324px" preserveaspectratio="none" style="width:617px;height:324px;background:#FFFFFF;" version="1.1" viewbox="0 0 617 324" width="617px" zoomandpan="magnify"><defs></defs><g><!--MD5=[e9ac33031c6558390ce847f6c943aa64]
-class IAdaptateurCalculTaxes--><g id="elem_IAdaptateurCalculTaxes"><rect codeline="4" fill="#F1F1F1" height="72.5625" id="IAdaptateurCalculTaxes" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="284" x="166" y="7"></rect><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthadjust="spacing" textlength="70" x="273" y="23.1387">«interface»</text><text fill="#000000" font-family="Arial" font-size="14" font-style="italic" lengthadjust="spacing" textlength="163" x="226.5" y="38.9639">IAdaptateurCalculTaxes</text><line style="stroke:#181818;stroke-width:0.5;" x1="167" x2="449" y1="47.2656" y2="47.2656"></line><line style="stroke:#181818;stroke-width:0.5;" x1="167" x2="449" y1="55.2656" y2="55.2656"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="272" x="172" y="72.2607">getTaxes( Vente ) : Liste de LigneTaxes</text></g><!--MD5=[259ef957471479b339753950fd3c07cc]
-class AdaptateurTaxMaster--><g id="elem_AdaptateurTaxMaster"><rect codeline="5" fill="#F1F1F1" height="58.5938" id="AdaptateurTaxMaster" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="284" x="7" y="140"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="147" x="75.5" y="157.9951">AdaptateurTaxMaster</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="290" y1="166.2969" y2="166.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="290" y1="174.2969" y2="174.2969"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="272" x="13" y="191.292">getTaxes( Vente ) : Liste de LigneTaxes</text></g><!--MD5=[2f65cc8178d63a4c206c61a91c971d9f]
-class AdaptateurGoodAsGoldTaxPro--><g id="elem_AdaptateurGoodAsGoldTaxPro"><rect codeline="6" fill="#F1F1F1" height="58.5938" id="AdaptateurGoodAsGoldTaxPro" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="284" x="326" y="140"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="210" x="363" y="157.9951">AdaptateurGoodAsGoldTaxPro</text><line style="stroke:#181818;stroke-width:0.5;" x1="327" x2="609" y1="166.2969" y2="166.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="327" x2="609" y1="174.2969" y2="174.2969"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="272" x="332" y="191.292">getTaxes( Vente ) : Liste de LigneTaxes</text></g><!--MD5=[428d04a0a0cf7e0291933b47368ba5b6]
-class TaxMaster--><g id="elem_TaxMaster"><rect codeline="12" fill="#F1F1F1" height="58.5938" id="TaxMaster" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="77.5" y="259"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="71" x="113.5" y="276.9951">TaxMaster</text><line style="stroke:#181818;stroke-width:0.5;" x1="78.5" x2="219.5" y1="285.2969" y2="285.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="78.5" x2="219.5" y1="293.2969" y2="293.2969"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="131" x="83.5" y="310.292">calculateTaxes ( ? )</text></g><!--MD5=[f2be1f1ea7d007d23534c62cda1e423e]
-class GoodAsGoldTaxPro--><g id="elem_GoodAsGoldTaxPro"><rect codeline="15" fill="#F1F1F1" height="58.5938" id="GoodAsGoldTaxPro" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="144" x="396" y="259"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="134" x="401" y="276.9951">GoodAsGoldTaxPro</text><line style="stroke:#181818;stroke-width:0.5;" x1="397" x2="539" y1="285.2969" y2="285.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="397" x2="539" y1="293.2969" y2="293.2969"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="132" x="402" y="310.292">computeTaxes ( ? )</text></g><!--MD5=[13ccf0c40bd42f442ae563e3c9e7062a]
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="324px" preserveaspectratio="none" style="width:617px;height:324px;background:#00000000;" version="1.1" viewbox="0 0 617 324" width="617px" zoomandpan="magnify"><defs></defs><g><!--MD5=[e9ac33031c6558390ce847f6c943aa64]
+class IAdaptateurCalculTaxes--><g id="elem_IAdaptateurCalculTaxes"><rect codeline="3" fill="#F1F1F1" height="72.5625" id="IAdaptateurCalculTaxes" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="284" x="166" y="7"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="12" font-style="italic" lengthadjust="spacing" textlength="78" x="269" y="23.1387">«&nbsp;interface&nbsp;»</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-style="italic" lengthadjust="spacing" textlength="163" x="226.5" y="38.9639">IAdaptateurCalculTaxes</text><line style="stroke:#181818;stroke-width:0.5;" x1="167" x2="449" y1="47.2656" y2="47.2656"></line><line style="stroke:#181818;stroke-width:0.5;" x1="167" x2="449" y1="55.2656" y2="55.2656"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="272" x="172" y="72.2607">getTaxes( Vente ) : Liste de LigneTaxes</text></g><!--MD5=[259ef957471479b339753950fd3c07cc]
+class AdaptateurTaxMaster--><g id="elem_AdaptateurTaxMaster"><rect codeline="4" fill="#F1F1F1" height="58.5938" id="AdaptateurTaxMaster" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="284" x="7" y="140"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="147" x="75.5" y="157.9951">AdaptateurTaxMaster</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="290" y1="166.2969" y2="166.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="290" y1="174.2969" y2="174.2969"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="272" x="13" y="191.292">getTaxes( Vente ) : Liste de LigneTaxes</text></g><!--MD5=[2f65cc8178d63a4c206c61a91c971d9f]
+class AdaptateurGoodAsGoldTaxPro--><g id="elem_AdaptateurGoodAsGoldTaxPro"><rect codeline="5" fill="#F1F1F1" height="58.5938" id="AdaptateurGoodAsGoldTaxPro" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="284" x="326" y="140"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="210" x="363" y="157.9951">AdaptateurGoodAsGoldTaxPro</text><line style="stroke:#181818;stroke-width:0.5;" x1="327" x2="609" y1="166.2969" y2="166.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="327" x2="609" y1="174.2969" y2="174.2969"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="272" x="332" y="191.292">getTaxes( Vente ) : Liste de LigneTaxes</text></g><!--MD5=[428d04a0a0cf7e0291933b47368ba5b6]
+class TaxMaster--><g id="elem_TaxMaster"><rect codeline="11" fill="#F1F1F1" height="58.5938" id="TaxMaster" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="77.5" y="259"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="71" x="113.5" y="276.9951">TaxMaster</text><line style="stroke:#181818;stroke-width:0.5;" x1="78.5" x2="219.5" y1="285.2969" y2="285.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="78.5" x2="219.5" y1="293.2969" y2="293.2969"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="131" x="83.5" y="310.292">calculateTaxes ( ? )</text></g><!--MD5=[f2be1f1ea7d007d23534c62cda1e423e]
+class GoodAsGoldTaxPro--><g id="elem_GoodAsGoldTaxPro"><rect codeline="14" fill="#F1F1F1" height="58.5938" id="GoodAsGoldTaxPro" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="144" x="396" y="259"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="134" x="401" y="276.9951">GoodAsGoldTaxPro</text><line style="stroke:#181818;stroke-width:0.5;" x1="397" x2="539" y1="285.2969" y2="285.2969"></line><line style="stroke:#181818;stroke-width:0.5;" x1="397" x2="539" y1="293.2969" y2="293.2969"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="132" x="402" y="310.292">computeTaxes ( ? )</text></g><!--MD5=[13ccf0c40bd42f442ae563e3c9e7062a]
 reverse link IAdaptateurCalculTaxes to AdaptateurTaxMaster--><g id="link_IAdaptateurCalculTaxes_AdaptateurTaxMaster"><path d="M246.46,92.49 C225.96,108.48 203.77,125.79 185.75,139.84 " fill="none" id="IAdaptateurCalculTaxes-backto-AdaptateurTaxMaster" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"></path><polygon fill="none" points="242.36,86.81,262.44,80.03,250.97,97.85,242.36,86.81" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[a266237048187ca5572f0eec7e11ecdd]
 reverse link IAdaptateurCalculTaxes to AdaptateurGoodAsGoldTaxPro--><g id="link_IAdaptateurCalculTaxes_AdaptateurGoodAsGoldTaxPro"><path d="M369.92,92.49 C390.56,108.48 412.89,125.79 431.02,139.84 " fill="none" id="IAdaptateurCalculTaxes-backto-AdaptateurGoodAsGoldTaxPro" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"></path><polygon fill="none" points="365.37,97.82,353.85,80.03,373.95,86.75,365.37,97.82" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[e3eb33769c9c28d139d38d7a954f387d]
-link AdaptateurTaxMaster to TaxMaster--><g id="link_AdaptateurTaxMaster_TaxMaster"><path codeline="19" d="M149,199.12 C149,215.55 149,236.28 149,253.53 " fill="none" id="AdaptateurTaxMaster-to-TaxMaster" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="149,258.77,153,249.77,149,253.77,145,249.77,149,258.77" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[de95c18130638644529383c8760b5bd2]
-link AdaptateurGoodAsGoldTaxPro to GoodAsGoldTaxPro--><g id="link_AdaptateurGoodAsGoldTaxPro_GoodAsGoldTaxPro"><path codeline="20" d="M468,199.12 C468,215.55 468,236.28 468,253.53 " fill="none" id="AdaptateurGoodAsGoldTaxPro-to-GoodAsGoldTaxPro" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="468,258.77,472,249.77,468,253.77,464,249.77,468,258.77" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[7ff5037121dd9efd0b7eaaa4bb76a5d6]
+link AdaptateurTaxMaster to TaxMaster--><g id="link_AdaptateurTaxMaster_TaxMaster"><path codeline="18" d="M149,199.12 C149,215.55 149,236.28 149,253.53 " fill="none" id="AdaptateurTaxMaster-to-TaxMaster" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="149,258.77,153,249.77,149,253.77,145,249.77,149,258.77" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[de95c18130638644529383c8760b5bd2]
+link AdaptateurGoodAsGoldTaxPro to GoodAsGoldTaxPro--><g id="link_AdaptateurGoodAsGoldTaxPro_GoodAsGoldTaxPro"><path codeline="19" d="M468,199.12 C468,215.55 468,236.28 468,253.53 " fill="none" id="AdaptateurGoodAsGoldTaxPro-to-GoodAsGoldTaxPro" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#181818" points="468,258.77,472,249.77,468,253.77,464,249.77,468,258.77" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[48ee6e87342f013a441e8998dfd3ae10]
+@startuml
+!include normal.pumlinclude
+
+interface       IAdaptateurCalculTaxes << interface >>
+class           AdaptateurTaxMaster implements IAdaptateurCalculTaxes
+class           AdaptateurGoodAsGoldTaxPro implements IAdaptateurCalculTaxes
+
+IAdaptateurCalculTaxes : getTaxes( Vente ) : Liste de LigneTaxes
+AdaptateurTaxMaster : getTaxes( Vente ) : Liste de LigneTaxes
+AdaptateurGoodAsGoldTaxPro : getTaxes( Vente ) : Liste de LigneTaxes
+
+class TaxMaster {
+    calculateTaxes ( ? )
+}
+class GoodAsGoldTaxPro {
+    computeTaxes ( ? )
+}
+
+AdaptateurTaxMaster -d-> TaxMaster
+AdaptateurGoodAsGoldTaxPro -d-> GoodAsGoldTaxPro
+@enduml
+
 @startuml
 skinparam style strictuml
-skinparam defaultfontname Arial
+skinparam defaultFontName Helvetica,Arial,sans-serif
+skinparam backgroundcolor transparent
 
-interface       IAdaptateurCalculTaxes <<interface>>
+interface       IAdaptateurCalculTaxes << interface >>
 class           AdaptateurTaxMaster implements IAdaptateurCalculTaxes
 class           AdaptateurGoodAsGoldTaxPro implements IAdaptateurCalculTaxes
 
@@ -484,40 +532,39 @@ Country: null
 <section id="imaginer-le-code-sans-le-pattern-gof" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="imaginer-le-code-sans-le-pattern-gof"><span class="header-section-number">14.2</span> Imaginer le code sans le pattern GoF</h2>
 <p>Chaque principe GRASP est défini avec un énoncé d’un problème de conception et avec une solution pour le résoudre. Pourtant, beaucoup d’exemples dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> sont des patterns déjà appliqués (et le problème initial n’est pas toujours expliqué en détail).</p>
-<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on serait obligé de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si l’on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme <span style="white-space:nowrap">ceci :</span></p>
+<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si l’on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on aurait l’obligation de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si l’on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme <span style="white-space:nowrap">ceci :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* calculateurTaxes est le nom du calculateur utilisé actuellement */</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span><span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"GoodAsGoldTaxPro"</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour interagir avec le calculateur */</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span><span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"TaxMaster"</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour interagir avec le calculateur */</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"GoodAsGoldTaxPro"</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour interagir avec GoodAsGoldTaxPro */</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"TaxMaster"</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour interagir avec TaxMaster */</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="co">/* ainsi de suite pour chacun des calculateurs */</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* ... */</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Pour supporter un nouveau calculateur de taxes, il faudrait coder une nouvelle branche dans le bloc de <code>if/then</code>. Ça nuirait à la lisibilité du code, et la méthode qui contient tout ce code deviendrait de plus en plus longue. Même si l’on faisait une méthode pour encapsuler le code de chaque branche, ça ferait toujours augmenter les responsabilités de la classe Vente. Elle est responsable de connaître tous les détails (l’API distincte et immuable) de chaque calculateur de taxes externe, puisqu’elle communique directement (il y a du couplage) à ces derniers.</p>
-<p>Le pattern Adaptateur comprend les principes GRASP Faible couplage, Forte cohésion, Polymorphisme, Indirection, Fabrication pure et Protection des variations. La <a href="#fig-Fig23_3">figure&nbsp;<span>14.3</span></a> (tirée du livre de Larman, Figure A26.3/F23.3) démontre la relation entre ces principes dans le cas d’Adaptateur.</p>
+<p>Le pattern Adaptateur comprend les principes GRASP Faible Couplage, Forte Cohésion, Polymorphisme, Indirection, Fabrication Pure et Protection des variations. La <a href="#fig-Fig23_3">figure&nbsp;<span>14.3</span></a> (tirée du livre de Larman, figure A26.3/F23.3) démontre la relation entre ces principes dans le cas d’Adaptateur.</p>
 <div id="fig-Fig23_3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="501px" preserveaspectratio="none" style="width:694px;height:501px;background:#FFFFFF;" version="1.1" viewbox="0 0 694 501" width="694px" zoomandpan="magnify"><defs></defs><g><!--MD5=[cdb8f274676d302e15f2718dcbeb2456]
-cluster   --><g id="cluster_  "><rect height="133" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;fill:none;" width="126" x="7" y="94"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="0" font-weight="bold" lengthadjust="spacing" textlength="0" x="70" y="96">&nbsp;&nbsp;</text></g><!--MD5=[cbc0be2e139dd15b0007deace4fc5f27]
-cluster  --><g id="cluster_ "><rect height="307" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;fill:none;" width="527" x="161" y="7"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="0" font-weight="bold" lengthadjust="spacing" textlength="0" x="424.5" y="9">&nbsp;</text></g><!--MD5=[a46ee5ce0ceb0380cf446a08a056dce4]
-class A--><g id="elem_A"><rect codeline="10" fill="#F1F1F1" height="26.2969" id="A" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="94" x="23" y="110"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="88" x="26" y="127.9951">Adaptateur</text></g><g id="elem_GoF"><path d="M28,171 L28,211.2656 L112,211.2656 L112,181 L102,171 L28,171 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M102,171 L102,181 L112,181 L102,171 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="63" x="34" y="188.0669">Patterns</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="29" x="34" y="203.1997">GoF</text></g><!--MD5=[4f19e5d0132c047105df0483a56a7e39]
-class PV--><g id="elem_PV"><rect codeline="18" fill="#F1F1F1" height="58.8906" id="PV" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="550" y="93.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="101" x="560.5" y="111.4951">Mécanisme de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="116" x="553" y="127.792">protection des</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="77" x="572.5" y="144.0889">variations</text></g><!--MD5=[db86d5681f21248c03a41d24eb6c23ce]
-class FCoup--><g id="elem_FCoup"><rect codeline="19" fill="#F1F1F1" height="42.5938" id="FCoup" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="126" x="364" y="101.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="101" x="376.5" y="119.4951">Mécanisme de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="120" x="367" y="135.792">faible couplage</text></g><!--MD5=[0f98626034d43abc10fe425c5bea3e9e]
-class FCoh--><g id="elem_FCoh"><rect codeline="20" fill="#F1F1F1" height="42.5938" id="FCoh" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="366" y="23.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="101" x="376.5" y="41.4951">Mécanisme de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="116" x="369" y="57.792">forte cohésion</text></g><!--MD5=[bb3cc8e7b7b7c695de19422991e26ff4]
-class Poly--><g id="elem_Poly"><rect codeline="21" fill="#F1F1F1" height="42.5938" id="Poly" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="177" y="101.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="81" x="200" y="119.4951">Exemple de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="121" x="180" y="135.792">polymorphisme</text></g><!--MD5=[df4642e209062963ecd05122e6e81a7f]
-class Indir--><g id="elem_Indir"><rect codeline="22" fill="#F1F1F1" height="42.5938" id="Indir" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="102" x="189.5" y="179.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="79" x="201" y="197.4951">Mécanisme</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="12" x="192.5" y="213.792">d'</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="84" x="204.5" y="213.792">indirection</text></g><!--MD5=[f595eebca6eefe0b4dc0741e31316c3a]
-class FP--><g id="elem_FP"><rect codeline="23" fill="#F1F1F1" height="42.5938" id="FP" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="194" y="23.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="87" x="197" y="41.4951">Fabrication</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="37" x="222" y="57.792">pure</text></g><g id="elem_GRASP"><path d="M196,258 L196,298.2656 L285,298.2656 L285,268 L275,258 L196,258 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M275,258 L275,268 L285,268 L275,258 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="68" x="202" y="275.0669">Principes</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="50" x="202" y="290.1997">GRASP</text></g><!--MD5=[ec43ceb2cff68fa3625ed754dce1808c]
-link FCoup to PV--><g id="link_FCoup_PV"><path codeline="30" d="M490.13,123 C502.76,123 516.23,123 529.4,123 " fill="none" id="FCoup-to-PV" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="529.69,116,549.69,123,529.69,130,529.69,116" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[d2f32a1b063ebd9adea780284bc8d93b]
-link Poly to FCoup--><g id="link_Poly_FCoup"><path codeline="32" d="M304.22,123 C316.84,123 330.27,123 343.44,123 " fill="none" id="Poly-to-FCoup" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="343.77,116,363.77,123,343.77,130,343.77,116" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[f05daaa717f7d7547cb3a3dcbd2ecd58]
-link Indir to FCoup--><g id="link_Indir_FCoup"><path codeline="33" d="M291.92,179.69 C311.78,171.29 334.94,161.5 356.36,152.44 " fill="none" id="Indir-to-FCoup" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="353.86,145.9,375,144.56,359.31,158.79,353.86,145.9" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[3f1f9dc501510f6f541a08723f7b53d9]
-link FP to FCoup--><g id="link_FP_FCoup"><path codeline="34" d="M287.11,64.28 C308.05,73.14 333.35,83.83 356.59,93.66 " fill="none" id="FP-to-FCoup" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="359.37,87.23,375.07,101.47,353.92,100.13,359.37,87.23" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[a6b44e80a2c0e476a75ffcc192c52b68]
-link FP to FCoh--><g id="link_FP_FCoh"><path codeline="35" d="M287.11,45 C304.86,45 325.74,45 345.85,45 " fill="none" id="FP-to-FCoh" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="345.94,38,365.94,45,345.94,52,345.94,38" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[9bf684cd35a5359a0b79cfce7b8219a9]
-link A to Indir--><g id="link_A_Indir"><path codeline="37" d="M105.97,136.06 C117.42,140.84 130.01,146.65 141,153 C146.77,156.34 147.26,158.61 153,162 C158.76,165.4 164.87,168.71 171.08,171.86 " fill="none" id="A-to-Indir" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="174.16,165.58,189.15,180.55,168.09,178.19,174.16,165.58" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[2a9daeffd9b67b3bcad58fabb9c722eb]
-link A to FP--><g id="link_A_FP"><path codeline="38" d="M98.27,109.86 C114.19,102.23 134.69,92.48 153,84 C160.19,80.67 167.74,77.21 175.25,73.79 " fill="none" id="A-to-FP" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="172.52,67.34,193.63,65.47,178.3,80.1,172.52,67.34" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[d6df06fe0dbf0f890af55fc537475fa0]
-link A to Poly--><g id="link_A_Poly"><path codeline="39" d="M117.04,123 C129.27,123 142.87,123 156.42,123 " fill="none" id="A-to-Poly" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="156.77,116,176.77,123,156.77,130,156.77,116" style="stroke:#181818;stroke-width:1.0;"></polygon></g><rect fill="#DDDDDD" height="158.6719" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.0;" width="602" x="39" y="327"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="123" x="45" y="345.9951">Faible couplage</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="191" x="172" y="345.9951">est une façon d'obtenir une</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="264" x="367" y="345.9951">protection à un point de variation</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="4" x="631" y="345.9951">.</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="4" x="45" y="362.292">&nbsp;</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="121" x="45" y="378.5889">Polymorphisme</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="191" x="170" y="378.5889">est une façon d'obtenir une</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="264" x="365" y="378.5889">protection à un point de variation</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="36" x="45" y="394.8857">et un</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="120" x="85" y="394.8857">faible couplage</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="4" x="205" y="394.8857">.</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="4" x="45" y="411.1826">&nbsp;</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="28" x="45" y="427.4795">Une</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="84" x="77" y="427.4795">indirection</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="182" x="165" y="427.4795">est une façon d'obtenir un</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="120" x="351" y="427.4795">faible couplage</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="4" x="471" y="427.4795">.</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="4" x="45" y="443.7764">&nbsp;</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="70" x="45" y="460.0732">Le pattern</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="88" x="119" y="460.0732">Adaptateur</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="93" x="211" y="460.0732">est une sorte</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="98" x="308" y="460.0732">d'indirection</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="45" x="410" y="460.0732">et une</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="129" x="459" y="460.0732">Fabrication pure</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="21" x="592" y="460.0732">qui</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="156" x="45" y="476.3701">applique le principe de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="121" x="205" y="476.3701">Polymorphisme</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif,SansSerif" font-size="14" lengthadjust="spacing" textlength="4" x="326" y="476.3701">.</text><!--MD5=[6d3ce4782c8f4e231a5dea1bcac99023]
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="501px" preserveaspectratio="none" style="width:699px;height:501px;background:#00000000;" version="1.1" viewbox="0 0 699 501" width="699px" zoomandpan="magnify"><defs></defs><g><!--MD5=[cdb8f274676d302e15f2718dcbeb2456]
+cluster   --><g id="cluster_  "><rect height="133" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;fill:none;" width="126" x="7" y="94"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="0" font-weight="bold" lengthadjust="spacing" textlength="0" x="70" y="96">&nbsp;&nbsp;</text></g><!--MD5=[cbc0be2e139dd15b0007deace4fc5f27]
+cluster  --><g id="cluster_ "><rect height="307" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;fill:none;" width="532" x="161" y="7"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="0" font-weight="bold" lengthadjust="spacing" textlength="0" x="427" y="9">&nbsp;</text></g><!--MD5=[a46ee5ce0ceb0380cf446a08a056dce4]
+class A--><g id="elem_A"><rect codeline="9" fill="#F1F1F1" height="26.2969" id="A" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="94" x="23" y="110"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="88" x="26" y="127.9951">Adaptateur</text></g><g id="elem_GoF"><path d="M28,171 L28,211.2656 L112,211.2656 L112,181 L102,171 L28,171 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M102,171 L102,181 L112,181 L102,171 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="63" x="34" y="188.0669">Patterns</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="29" x="34" y="203.1997">GoF</text></g><!--MD5=[4f19e5d0132c047105df0483a56a7e39]
+class PV--><g id="elem_PV"><rect codeline="17" fill="#F1F1F1" height="58.8906" id="PV" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="555" y="93.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="101" x="565.5" y="111.4951">Mécanisme de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="116" x="558" y="127.792">Protection des</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="77" x="577.5" y="144.0889">variations</text></g><!--MD5=[db86d5681f21248c03a41d24eb6c23ce]
+class FCoup--><g id="elem_FCoup"><rect codeline="18" fill="#F1F1F1" height="42.5938" id="FCoup" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="131" x="364" y="101.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="101" x="379" y="119.4951">Mécanisme de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="125" x="367" y="135.792">Faible Couplage</text></g><!--MD5=[0f98626034d43abc10fe425c5bea3e9e]
+class FCoh--><g id="elem_FCoh"><rect codeline="19" fill="#F1F1F1" height="42.5938" id="FCoh" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="366" y="23.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="101" x="379" y="41.4951">Mécanisme de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="121" x="369" y="57.792">Forte Cohésion</text></g><!--MD5=[bb3cc8e7b7b7c695de19422991e26ff4]
+class Poly--><g id="elem_Poly"><rect codeline="20" fill="#F1F1F1" height="42.5938" id="Poly" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="177" y="101.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="81" x="200" y="119.4951">Exemple de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="121" x="180" y="135.792">Polymorphisme</text></g><!--MD5=[df4642e209062963ecd05122e6e81a7f]
+class Indir--><g id="elem_Indir"><rect codeline="21" fill="#F1F1F1" height="42.5938" id="Indir" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="102" x="189.5" y="179.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="79" x="201" y="197.4951">Mécanisme</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="12" x="192.5" y="213.792">d'</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="84" x="204.5" y="213.792">Indirection</text></g><!--MD5=[f595eebca6eefe0b4dc0741e31316c3a]
+class FP--><g id="elem_FP"><rect codeline="22" fill="#F1F1F1" height="42.5938" id="FP" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="194" y="23.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="87" x="197" y="41.4951">Fabrication</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="37" x="222" y="57.792">Pure</text></g><g id="elem_GRASP"><path d="M196,258 L196,298.2656 L285,298.2656 L285,268 L275,258 L196,258 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"></path><path d="M275,258 L275,268 L285,268 L275,258 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="68" x="202" y="275.0669">Principes</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" lengthadjust="spacing" textlength="50" x="202" y="290.1997">GRASP</text></g><!--MD5=[ec43ceb2cff68fa3625ed754dce1808c]
+link FCoup to PV--><g id="link_FCoup_PV"><path codeline="29" d="M495.03,123 C507.78,123 521.31,123 534.52,123 " fill="none" id="FCoup-to-PV" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="534.84,116,554.84,123,534.84,130,534.84,116" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[d2f32a1b063ebd9adea780284bc8d93b]
+link Poly to FCoup--><g id="link_Poly_FCoup"><path codeline="31" d="M304.03,123 C316.64,123 330.1,123 343.33,123 " fill="none" id="Poly-to-FCoup" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="343.79,116,363.79,123,343.79,130,343.79,116" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[f05daaa717f7d7547cb3a3dcbd2ecd58]
+link Indir to FCoup--><g id="link_Indir_FCoup"><path codeline="32" d="M291.61,180.1 C312.13,171.54 336.23,161.48 358.45,152.22 " fill="none" id="Indir-to-FCoup" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="355.79,145.74,376.95,144.5,361.18,158.66,355.79,145.74" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[3f1f9dc501510f6f541a08723f7b53d9]
+link FP to FCoup--><g id="link_FP_FCoup"><path codeline="33" d="M287.25,64.08 C308.47,72.93 334.18,83.66 357.82,93.52 " fill="none" id="FP-to-FCoup" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="360.86,87.2,376.63,101.36,355.47,100.12,360.86,87.2" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[a6b44e80a2c0e476a75ffcc192c52b68]
+link FP to FCoh--><g id="link_FP_FCoh"><path codeline="34" d="M287.25,45 C304.91,45 325.69,45 345.79,45 " fill="none" id="FP-to-FCoh" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="345.93,38,365.93,45,345.93,52,345.93,38" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[9bf684cd35a5359a0b79cfce7b8219a9]
+link A to Indir--><g id="link_A_Indir"><path codeline="36" d="M105.97,136.06 C117.42,140.84 130.01,146.65 141,153 C146.77,156.34 147.26,158.61 153,162 C158.76,165.4 164.87,168.71 171.08,171.86 " fill="none" id="A-to-Indir" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="174.16,165.58,189.15,180.55,168.09,178.19,174.16,165.58" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[2a9daeffd9b67b3bcad58fabb9c722eb]
+link A to FP--><g id="link_A_FP"><path codeline="37" d="M98.27,109.86 C114.19,102.23 134.69,92.48 153,84 C160.19,80.67 167.74,77.21 175.25,73.79 " fill="none" id="A-to-FP" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="172.52,67.34,193.63,65.47,178.3,80.1,172.52,67.34" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--MD5=[d6df06fe0dbf0f890af55fc537475fa0]
+link A to Poly--><g id="link_A_Poly"><path codeline="38" d="M117.04,123 C129.27,123 142.87,123 156.42,123 " fill="none" id="A-to-Poly" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="156.77,116,176.77,123,156.77,130,156.77,116" style="stroke:#181818;stroke-width:1.0;"></polygon></g><rect height="158.6719" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.0;fill:none;" width="552" x="66.5" y="327"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="540" x="72.5" y="345.9951">Faible Couplage est une façon d'obtenir une protection à un point de variation.</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="4" x="72.5" y="362.292">&nbsp;</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="532" x="72.5" y="378.5889">Polymorphisme est une façon d'obtenir une protection à un point de variation</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="148" x="72.5" y="394.8857">et un faible couplage.</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="4" x="72.5" y="411.1826">&nbsp;</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="402" x="72.5" y="427.4795">Une Indirection est une façon d'obtenir un faible couplage.</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="4" x="72.5" y="443.7764">&nbsp;</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="515" x="72.5" y="460.0732">Le pattern Adaptateur est une sorte d'Indirection et de Fabrication Pure qui</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="270" x="72.5" y="476.3701">applique le principe de Polymorphisme.</text><!--MD5=[e25a1acbb91d1052b778688dd7ec6f24]
 @startuml Adaptateur_GRASP
-skinparam style strictuml
-skinparam defaultfontname Helvetica,Arial,sans-serif,SansSerif
+!include normal.pumlinclude
 hide empty members
 left to right direction
 skinparam rectangle {
@@ -533,12 +580,12 @@ end note
 }
 
 rectangle " " {
-    class "Mécanisme de\n**protection des**\n**variations**" as PV
-    class "Mécanisme de\n**faible couplage**" as FCoup
-    class "Mécanisme de\n**forte cohésion**" as FCoh
-    class "Exemple de\n**polymorphisme**" as Poly
-    class "Mécanisme\nd'**indirection**" as Indir
-    class "**Fabrication**\n**pure**" as FP
+    class "Mécanisme de\n**Protection des**\n**variations**" as PV
+    class "Mécanisme de\n**Faible Couplage**" as FCoup
+    class "Mécanisme de\n**Forte Cohésion**" as FCoh
+    class "Exemple de\n**Polymorphisme**" as Poly
+    class "Mécanisme\nd'**Indirection**" as Indir
+    class "**Fabrication**\n**Pure**" as FP
     note as GRASP
     **Principes**
     **GRASP**
@@ -557,15 +604,71 @@ A -down-|> FP
 A -down-|> Poly
 
 legend
-**Faible couplage** est une façon d'obtenir une **protection à un point de variation**.
+Faible Couplage est une façon d'obtenir une protection à un point de variation.
 
-**Polymorphisme** est une façon d'obtenir une **protection à un point de variation**
-et un **faible couplage**.
+Polymorphisme est une façon d'obtenir une protection à un point de variation
+et un faible couplage.
 
-Une **indirection** est une façon d'obtenir un **faible couplage**.
+Une Indirection est une façon d'obtenir un faible couplage.
 
-Le pattern **Adaptateur** est une sorte **d'indirection** et une **Fabrication pure** qui 
-applique le principe de **Polymorphisme**.
+Le pattern Adaptateur est une sorte d'Indirection et de Fabrication Pure qui 
+applique le principe de Polymorphisme.
+end legend
+
+@enduml
+
+@startuml Adaptateur_GRASP
+skinparam style strictuml
+skinparam defaultFontName Helvetica,Arial,sans-serif
+skinparam backgroundcolor transparent
+hide empty members
+left to right direction
+skinparam rectangle {
+    fontsize 0
+}
+
+rectangle "  " {
+    class "**Adaptateur**" as A
+note as GoF
+**Patterns**
+**GoF**
+end note
+}
+
+rectangle " " {
+    class "Mécanisme de\n**Protection des**\n**variations**" as PV
+    class "Mécanisme de\n**Faible Couplage**" as FCoup
+    class "Mécanisme de\n**Forte Cohésion**" as FCoh
+    class "Exemple de\n**Polymorphisme**" as Poly
+    class "Mécanisme\nd'**Indirection**" as Indir
+    class "**Fabrication**\n**Pure**" as FP
+    note as GRASP
+    **Principes**
+    **GRASP**
+    end note
+}
+
+FCoup -down-|> PV
+
+Poly -down-|> FCoup
+Indir -down-|> FCoup
+FP -down-|> FCoup
+FP -down-|> FCoh
+
+A -down-|> Indir
+A -down-|> FP
+A -down-|> Poly
+
+legend
+Faible Couplage est une façon d'obtenir une protection à un point de variation.
+
+Polymorphisme est une façon d'obtenir une protection à un point de variation
+et un faible couplage.
+
+Une Indirection est une façon d'obtenir un faible couplage.
+
+Le pattern Adaptateur est une sorte d'Indirection et de Fabrication Pure qui 
+applique le principe de Polymorphisme.
 end legend
 
 @enduml
@@ -578,23 +681,23 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;14.3: Adaptateur et principes GRASP <span class="citation" data-cites="craig_uml_2005">(voir <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman, 2005, fig. A26.3/F23.3</a>)</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.3: Adaptateur et principes GRASP <span class="citation" data-cites="craig_uml_2005">(voir <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman, 2005, fig. A26.3/F23.3</a>)</span>.</figcaption><p></p>
 </figure>
 </div>
 <p>On peut donc voir le pattern Adaptateur comme <em>une spécialisation</em> de plusieurs principes <span style="white-space:nowrap">GRASP :</span></p>
 <ul>
 <li>Polymorphisme</li>
 <li>Indirection</li>
-<li>Fabrication pure</li>
-<li>Faible couplage</li>
-<li>Forte cohésion</li>
+<li>Fabrication Pure</li>
+<li>Faible Couplage</li>
+<li>Forte Cohésion</li>
 <li>Protection des variations</li>
 </ul>
-<p>Êtes-vous en mesure d’expliquer dans ce contexte comment Adaptateur est relié à ces <span style="white-space:nowrap">principes ?</span> Pouvez-vous identifier les GRASP dans le pattern <span style="white-space:nowrap">Adaptateur ?</span></p>
+<p>Avec cette identification de principes GRASP dans le pattern Adaptateur, êtes-vous en mesure d’expliquer en détail avec ce contexte concret comment Adaptateur est relié à ces <span style="white-space:nowrap">principes ?</span></p>
 </section>
 <section id="sec-GRASP_Adaptateur" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="sec-GRASP_Adaptateur"><span class="header-section-number">14.3</span> Identifier les GRASP dans les GoF</h2>
-<p>Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d’imaginer le problème qui pourrait exister éventuellement. Ensuite, on explique comment le principe (et le pattern GoF) résout le problème.</p>
+<p>Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et l’on essaie d’imaginer le problème qui pourrait exister éventuellement. Ensuite, on explique comment le principe (et le pattern GoF) résout le problème.</p>
 <p>Consultez la <a href="#fig-Fig23_1">figure&nbsp;<span>14.2</span></a> du pattern Adaptateur pour les sections suivantes.</p>
 <section id="polymorphisme" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="polymorphisme"><span class="header-section-number">14.3.1</span> Polymorphisme</h3>
@@ -610,16 +713,16 @@ Country: null
 </div>
 </div>
 </div>
-<p>Le «&nbsp;comportement qui varie&nbsp;» est la manière d’adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode <code>getTaxes()</code>. Alors, cette «&nbsp;responsabilité&nbsp;» est affectée au type interface <code>IAdaptateurCalculTaxes</code> (et à ses implémentations) dans l’opération polymorphe <code>getTaxes()</code>. Cet aspect du pattern est illustré sur la <a href="#fig-AdaptateurPolymorphismeNextGen">figure&nbsp;<span>14.4</span></a></p>
+<p>Le «&nbsp;comportement qui varie&nbsp;» est la manière d’adapter les méthodes utilisées par le calculateur de taxes choisi à la méthode <code>getTaxes()</code>. Alors, cette «&nbsp;responsabilité&nbsp;» est affectée au type interface <code>IAdaptateurCalculTaxes</code> (et à ses implémentations) dans l’opération polymorphe <code>getTaxes()</code>. Cet aspect du pattern est illustré sur la <a href="#fig-AdaptateurPolymorphismeNextGen">figure&nbsp;<span>14.4</span></a>.</p>
 <div id="fig-AdaptateurPolymorphismeNextGen" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/AdaptateurCalcTaxesPolymorphism.drawio.svg" class="img-fluid figure-img" style="width:60.0%"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;14.4: Le mécanisme de polymorphisme dans le pattern Adaptateur appliqué au problème de calculateurs de taxes. <code>getTaxes(...)</code> est un appel polymorphe. Selon la configuration du système (l’objet auquel <code>IAdaptateurCalculTaxes</code> fait référence), le comportement sera différent.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14.4: Le mécanisme de Polymorphisme dans le pattern Adaptateur appliqué au problème de calculateurs de taxes. <code>getTaxes(...)</code> est un appel polymorphe. Selon la configuration du système (l’objet auquel <code>IAdaptateurCalculTaxes</code> fait référence), le comportement sera différent.</figcaption><p></p>
 </figure>
 </div>
 </section>
 <section id="fabrication-pure" class="level3" data-number="14.3.2">
-<h3 data-number="14.3.2" class="anchored" data-anchor-id="fabrication-pure"><span class="header-section-number">14.3.2</span> Fabrication pure</h3>
+<h3 data-number="14.3.2" class="anchored" data-anchor-id="fabrication-pure"><span class="header-section-number">14.3.2</span> Fabrication Pure</h3>
 <p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -628,11 +731,11 @@ Country: null
 </div>
 <div class="callout-body-container">
 <p><strong><span style="white-space:nowrap">Problème :</span></strong> En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte <span style="white-space:nowrap">cohésion ?</span><br>
-<strong><span style="white-space:nowrap">Solution :</span></strong> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine - une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p>
+<strong><span style="white-space:nowrap">Solution :</span></strong> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine – une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p>
 </div>
 </div>
 </div>
-<p>La Fabrication pure est la classe «&nbsp;comportementale et artificielle&nbsp;» qui est la hiérarchie <code>IAdaptateurCalculTaxes</code> (comprenant chaque adaptateur concret). Elle est comportementale puisqu’elle ne fait qu’adapter des appels. Elle est artificielle puisqu’elle ne représente pas un élément dans le modèle du domaine.</p>
+<p>La Fabrication Pure est la classe «&nbsp;comportementale et artificielle&nbsp;» qui est la hiérarchie <code>IAdaptateurCalculTaxes</code> (comprenant chaque adaptateur concret). Elle est comportementale puisqu’elle ne fait qu’adapter des appels. Elle est artificielle puisqu’elle ne représente pas un élément dans le modèle du domaine.</p>
 <p>L’ensemble des adaptateurs concrets ont des «&nbsp;responsabilités cohésives&nbsp;» qui sont la manière d’adapter la méthode <code>getTaxes()</code> aux méthodes (immuables) des calculateurs de taxes externes. Elles ne font que ça. La cohésion est augmentée aussi dans la classe Vente, qui n’a plus la responsabilité de s’adapter aux calculateurs de taxes externes. C’est le travail qui a été donné aux adaptateurs concrets.</p>
 <p>Le couplage est diminué, car la classe Vente n’est plus couplée directement aux calculateurs de taxes externes. La réutilisation des calculateurs est facilitée, car la classe Vente ne doit plus être modifiée si l’on veut utiliser un autre calculateur externe. Il suffit de créer un adaptateur pour ce dernier.</p>
 </section>
@@ -661,13 +764,13 @@ Country: null
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong><span style="white-space:nowrap">Problème :</span></strong> Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span><br>
+<p><strong><span style="white-space:nowrap">Problème :</span></strong> Comment affecter les responsabilités aux objets, aux sous-systèmes et aux systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span><br>
 <strong><span style="white-space:nowrap">Solution :</span></strong> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p>
 </div>
 </div>
 </div>
-<p>Les «&nbsp;variations ou l’instabilité&nbsp;» sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs(euses) du projet (ce sont des modules externes ayant chacun une API différente). Quant à l’” impact négatif sur les autres”, il s’agit des modifications que les développeurs(euses) auraient à faire sur la classe Vente chaque fois que l’on décide de supporter un autre calculateur de taxes (ou si l’API de ce dernier évolue).</p>
-<p>Quant aux «&nbsp;responsabilités&nbsp;» à affecter, c’est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de l’«&nbsp;interface stable&nbsp;», il s’agit de la méthode <code>getTaxes()</code>, qui ne changera (probablement) jamais. Elle est définie dans le type-interface IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API).</p>
+<p>Les «&nbsp;variations&nbsp;» ou «&nbsp;l’instabilité&nbsp;» sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs et développeuses du projet (ce sont des modules externes ayant chacun une API différente). Quant à l’«&nbsp;impact négatif sur les autres&nbsp;», il s’agit des modifications qu’auraient à faire les développeurs et développeuses sur la classe Vente chaque fois que l’on décide de supporter un autre calculateur de taxes (ou si l’API de ce dernier évolue).</p>
+<p>Quant aux «&nbsp;responsabilités&nbsp;» à affecter, c’est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de l’«&nbsp;interface stable&nbsp;», il s’agit de la méthode <code>getTaxes()</code>, qui ne changera (probablement) jamais. Elle est définie dans l’interface type IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API).</p>
 </section>
 </section>
 <section id="grasp-et-réusinage" class="level2" data-number="14.4">
@@ -675,13 +778,13 @@ Country: null
 <p>Il y a des liens entre les GRASP et les activités de <a href="Réusinage.html">Réusinage (Refactorisation)</a>. Alors, un IDE qui automatise les réusinages peut vous aider à appliquer certains GRASP.</p>
 <ul>
 <li>GRASP Polymorphisme est relié à <a href="https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html"><em>Replace Type Code with Subclasses</em></a> et à <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace Conditional with Polymorphism</em></a> – attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (<code>switch</code>) répétées à plusieurs endroits dans le code.</li>
-<li>GRASP Fabrication pure est relié à <a href="https://refactoring.com/catalog/extractClass.html"><em>Extract Class</em></a>.</li>
+<li>GRASP Fabrication Pure est relié à <a href="https://refactoring.com/catalog/extractClass.html"><em>Extract Class</em></a>.</li>
 <li>GRASP Indirection est relié à <a href="https://refactoring.com/catalog/extractFunction.html"><em>Extract Function</em></a> et à <a href="https://refactoring.com/catalog/moveFunction.html"><em>Move Function</em></a>.</li>
 </ul>
 </section>
 <section id="exercices" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="exercices"><span class="header-section-number">14.5</span> Exercices</h2>
-<p>Pour ces exercices, suivez le modèle pour décortiquer le <em>pattern</em> Adaptateur, illustré à la <a href="#fig-Fig23_3">figure&nbsp;<span>14.3</span></a>.</p>
+<p>Pour ces exercices, suivez le modèle pour décortiquer le pattern Adaptateur, illustré à la <a href="#fig-Fig23_3">figure&nbsp;<span>14.3</span></a>.</p>
 <p>Une bonne ressource pour les patterns GoF est la <span style="white-space:nowrap">suivante :</span></p>
 <p><a href="https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html">https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html</a></p>
 <div class="callout callout-style-default callout-tip callout-captioned">
@@ -698,53 +801,53 @@ Astuce
 </div>
 </div>
 <div id="exr-GRASP_iterateur" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.1 (Itérateur) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Patron-,iterateur,-Contexte">Itérateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.1 (Itérateur) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Patron-,iterateur,-Contexte">Itérateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_observateur" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.2 (Observateur) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Contr%C3%B4leur-,patron%20observateur,-Mod%C3%A8le">Observateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.2 (Observateur) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=Contr%C3%B4leur-,patron%20observateur,-Mod%C3%A8le">Observateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_strategie" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.3 (Stratégie) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=page-,patron%20strategie,-Strat%C3%A9gie">Stratégie</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.3 (Stratégie) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=page-,patron%20strategie,-Strat%C3%A9gie">Stratégie</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_composite" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.4 (Composite) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=composants-,patron%20composite,-Contexte">Composite</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.4 (Composite) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=composants-,patron%20composite,-Contexte">Composite</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_decorateur" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.5 (Décorateur) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte">Décorateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.5 (Décorateur) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch5/Ch5_fr.html#:~:text=d%C3%A9filement%20(Scroll%20Bars)-,Patron%20D%C3%A9corateur,Contexte">Décorateur</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_methode_template" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.6 (Méthode Template) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte">Méthode Template</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.6 (Méthode Template) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch6/Ch6_fr.html#:~:text=java-,patron%20template%20method,-Contexte">Méthode Template</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_commande" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.7 (Commande) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte">Commande</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.7 (Commande) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=java-,le%20patron%20command,-Contexte">Commande</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_methode_fabrique" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.8 (Méthode Fabrique) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)">Méthode de fabrique</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.8 (Méthode Fabrique) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=methodes%20de%20fabrique%20(factory%20methods)">Méthode de fabrique</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_proxy" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.9 (Proxy) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe">Proxy</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.9 (Proxy) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch10/Ch10_fr.html#:~:text=de%20m%C3%A9thode%20distante-,Le%20patron%20PROXY,Contexte,-Une%20classe">Proxy</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-GRASP_facade" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.10 (Façade) </strong></span>Identifiez les 4 principes GRASP dans le <em>pattern</em> <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte">Façade</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 14.10 (Façade) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte">Façade</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-Adaptateur_Maps" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.11 (Adaptateur pour Maps) </strong></span>Proposez une mise en oeuvre du pattern GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul <span style="white-space:nowrap">d’itinéraires :</span></p>
+<p><span class="theorem-title"><strong>Exercice 14.11 (Adaptateur pour Maps) </strong></span>Proposez une mise en œuvre du pattern GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul <span style="white-space:nowrap">d’itinéraires :</span></p>
 <ul>
 <li><a href="https://developers.google.com/maps/documentation/directions">Google Maps</a><span style="white-space:nowrap"> ;</span></li>
 <li><a href="https://www.microsoft.com/en-us/maps/routing#routing">Bing Maps</a><span style="white-space:nowrap"> ;</span></li>
 <li><a href="https://developer.apple.com/documentation/mapkitjs/">Apple Maps</a>.</li>
 </ul>
 <p>Le système veut obtenir une liste d’étapes (des directions) pour se rendre à une destination à partir d’un point de départ. L’utilisateur ou l’utilisatrice du système pourra décider lequel des services lui convient dans les préférences.</p>
-<p>Le but de l’exercice est de déterminer l’interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d’itinéraires. Cela peut être un diagramme de classes réalisé avec PlantUML.</p>
+<p>Le but de l’exercice est de déterminer l’interface stable (GRASP Protection des variations) étant donné les variantes des services de calcul d’itinéraires. Cela peut être un diagramme de classes réalisé avec PlantUML.</p>
 </div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-GoF1994" class="csl-entry" role="doc-biblioentry">
-Gamma, E., Helm, R., Johnson, R., &amp; Vlissides, J. (1994). <em>Design <span>Patterns</span>: <span>Elements</span> of <span>Reusable</span> <span>Object</span>-<span>Oriented</span> <span>Software</span></em> (1ʳᵉ éd.). Reading, Mass&nbsp;: Addison-Wesley Professional. Repéré à <a href="http://amazon.com/o/ASIN/0201633612/">http://amazon.com/o/ASIN/0201633612/</a>
+Gamma, E., Helm, R., Johnson, R., et Vlissides, J. (1994). <em>Design <span>Patterns</span>: <span>Elements</span> of <span>Reusable</span> <span>Object</span>-<span>Oriented</span> <span>Software</span></em> (1ʳᵉ éd.). Reading, Mass&nbsp;: Addison-Wesley Professional. Repéré à <a href="http://amazon.com/o/ASIN/0201633612/">http://amazon.com/o/ASIN/0201633612/</a>
 </div>
 <div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
-Larman, C. (2005). <em><span>UML</span> 2 et design patterns</em> (3ᵉ éd.). Paris&nbsp;: Village Mondial.
+Larman, C. (2005). <em><span>UML</span> 2 et les design patterns</em> (3ᵉ éd.). Paris&nbsp;: Village Mondial.
 </div>
 </div>
 </section>

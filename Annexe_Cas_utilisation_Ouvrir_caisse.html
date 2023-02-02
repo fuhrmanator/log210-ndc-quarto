@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyse et conception de logiciels - Appendix C — Cas d’utilisation - Ouvrir la caisse</title>
+<title>Analyse et conception de logiciels - Appendix C — Cas d’utilisation – Ouvrir la caisse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,6 +60,8 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -96,7 +98,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Appendix C — Cas d’utilisation - Ouvrir la caisse</h1>
+      <h1 class="quarto-secondary-nav-title">Appendix C — Cas d’utilisation – Ouvrir la caisse</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -107,7 +109,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span id="sec-CU_Ouvrir_caisse" class="quarto-section-identifier d-none d-lg-block">Appendix C — Cas d’utilisation - Ouvrir la caisse</span></h1>
+      <h1 class="title"><span id="sec-CU_Ouvrir_caisse" class="quarto-section-identifier d-none d-lg-block">Appendix C — Cas d’utilisation – Ouvrir la caisse</span></h1>
                       </div>
   </div>
     
@@ -273,17 +275,17 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Réserver un livre de la bibliothèque</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Traiter une vente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Ouvrir la caisse</span></a>
   </div>
 </li>
       </ul>
@@ -311,7 +313,7 @@ div.csl-indent {
 
 
 
-<p>Le contexte est l’étude de cas du système POS NextGen, notamment le scénario principal du cas d’utilisation <em>Ouvrir la caisse</em> (en anglais <em>Cash In</em>). C’est l’acte d’un caissier ou d’une caissière qui arrive avec son tiroir-caisse contenant déjà de l’argent, qui s’authentifie sur la caisse (le registre) et qui saisit le montant en espèces dans le tiroir-caisse.</p>
+<p>Le contexte est l’étude de cas du système NextGen POS, notamment le scénario principal du cas d’utilisation <em>Ouvrir la caisse</em> (en anglais <em>Cash In</em>). C’est l’acte d’un caissier ou d’une caissière qui arrive avec son tiroir-caisse contenant déjà de l’argent, qui s’authentifie sur la caisse (le registre) et qui saisit le montant en espèces dans le tiroir-caisse.</p>
 <div class="callout callout-style-default callout-note callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -328,16 +330,16 @@ Note
 <div id="fig-DCU_ouvrir_la_caisse" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="281px" preserveaspectratio="none" style="width:271px;height:281px;background:#00000000;" version="1.1" viewbox="0 0 271 281" width="271px" zoomandpan="magnify"><defs></defs><g><!--MD5=[02e3d66293b677af131207678fb6369e]
-cluster NextGen--><g id="cluster_NextGen"><rect height="257" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.5;fill:none;" width="106" x="80.5" y="3.5"></rect><text fill="#000000" font-family="Arial" font-size="7" font-weight="bold" lengthadjust="spacing" textlength="34" x="116.5" y="10.9976">NextGen</text></g><g id="elem_other"><ellipse cx="133.4853" cy="28.5118" fill="#F1F1F1" rx="9.9853" ry="7.2618" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="6" x="130.4853" y="29.9352">...</text></g><g id="elem_TV"><ellipse cx="133.3919" cy="133.4284" fill="#F1F1F1" rx="39.8919" ry="9.1784" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="59" x="103.0178" y="135.1306">Traiter une vente</text></g><g id="elem_TR"><ellipse cx="133.4727" cy="97.5945" fill="#F1F1F1" rx="40.7227" ry="9.3445" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="61" x="102.4054" y="99.2045">Traiter les retours</text></g><g id="elem_OLC"><ellipse cx="133.4172" cy="62.0834" fill="#FFFF00" rx="36.9172" ry="8.5834" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="51.5" x="106.1672" y="63.9572">Ouvrir la caisse</text></g><g id="elem_AA"><ellipse cx="133.4826" cy="169.5965" fill="#F1F1F1" rx="39.4826" ry="9.0965" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="58" x="103.45" y="171.3443">Analyser l'activité</text></g><g id="elem_GS"><ellipse cx="133.5775" cy="243.5155" fill="#F1F1F1" rx="39.0775" ry="9.0155" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="57" x="103.8829" y="245.3083">Gérer la sécurité</text></g><g id="elem_GU"><ellipse cx="133.5572" cy="206.4614" fill="#F1F1F1" rx="45.0572" ry="10.2114" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="71" x="98.0572" y="207.8848">Gérer les utilisateurs</text></g><!--MD5=[0ba5ee7700168656dc1b457c6fe9fdac]
-entity Client--><g id="elem_Client"><ellipse cx="31" cy="73.25" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,77.25 L31,90.75 M24.5,81.25 L37.5,81.25 M31,90.75 L24.5,98.25 M31,90.75 L37.5,98.25 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="19.5" x="21.25" y="105.4976">Client</text></g><!--MD5=[84eb184a08144e15816666ccc309fe96]
-entity Caissier--><g id="elem_Caissier"><ellipse cx="31" cy="17.75" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,21.75 L31,35.25 M24.5,25.75 L37.5,25.75 M31,35.25 L24.5,42.75 M31,35.25 L37.5,42.75 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="27" x="17.5" y="49.9976">Caissier</text></g><!--MD5=[327d8b0cc9017ef0d2f4054fa6547e20]
-entity Manager--><g id="elem_Manager"><ellipse cx="31" cy="128.75" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,132.75 L31,146.25 M24.5,136.75 L37.5,136.75 M31,146.25 L24.5,153.75 M31,146.25 L37.5,153.75 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="30" x="16" y="160.9976">Manager</text></g><!--MD5=[cd81128ed1873346d3678821c65bf0c5]
-entity SV--><g id="elem_SV"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="55" x="3.5" y="180.25"></rect><text fill="#000000" font-family="Arial" font-size="7" font-style="italic" lengthadjust="spacing" textlength="31" x="15.5" y="191.7476">«acteur»</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="45" x="8.5" y="199.896">Système des</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="23.5" x="19.25" y="208.0444">ventes</text></g><!--MD5=[4ec5e0198a45b1576103bd8a641ef52b]
-entity AS--><g id="elem_AS"><ellipse cx="31" cy="236.5" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,240.5 L31,254 M24.5,244.5 L37.5,244.5 M31,254 L24.5,261.5 M31,254 L37.5,261.5 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="50" x="6" y="268.7476">Administrateur</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="29.5" x="16.25" y="276.896">système</text></g><!--MD5=[68f06c1af5a9d7c9720ef620a835ad6b]
-entity SAP--><g id="elem_SAP"><ellipse cx="238.25" cy="191" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M238.25,195 L238.25,208.5 M231.75,199 L244.75,199 M238.25,208.5 L231.75,216 M238.25,208.5 L244.75,216 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="25" x="225.75" y="223.2476">Service</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="46.5" x="215" y="231.396">d'autorisation</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="51.5" x="212.5" y="239.5444">des paiements</text></g><!--MD5=[87439e3fb2bd72484276c19727d934ee]
-entity CT--><g id="elem_CT"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="59.5" x="208.5" y="82.75"></rect><text fill="#000000" font-family="Arial" font-size="7" font-style="italic" lengthadjust="spacing" textlength="31" x="222.75" y="94.2476">«acteur»</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="49.5" x="213.5" y="102.396">Calculateur de</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="18.5" x="229" y="110.5444">taxes</text></g><!--MD5=[8b944653c655024075d894af29a33c78]
-entity SC--><g id="elem_SC"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="52" x="212.25" y="134.75"></rect><text fill="#000000" font-family="Arial" font-size="7" font-style="italic" lengthadjust="spacing" textlength="31" x="222.75" y="146.2476">«acteur»</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="41" x="217.75" y="154.396">Système de</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="42" x="217.25" y="162.5444">comptabilité</text></g><!--MD5=[25475f53477c62fccaf4519fe1cb9018]
-entity SRH--><g id="elem_SRH"><rect fill="#F1F1F1" height="42.5938" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="51" x="212.75" y="22.75"></rect><text fill="#000000" font-family="Arial" font-size="7" font-style="italic" lengthadjust="spacing" textlength="31" x="222.75" y="34.2476">«acteur»</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="41" x="217.75" y="42.396">Système de</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="39" x="218.75" y="50.5444">ressources</text><text fill="#000000" font-family="Arial" font-size="7" lengthadjust="spacing" textlength="34" x="221.25" y="58.6929">humaines</text></g><!--MD5=[a4af6c79cd77509d2577919071b95e7c]
+cluster NextGen--><g id="cluster_NextGen"><rect height="257" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.5;fill:none;" width="106" x="80.5" y="3.5"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" font-weight="bold" lengthadjust="spacing" textlength="34" x="116.5" y="10.9976">NextGen</text></g><g id="elem_other"><ellipse cx="133.4853" cy="28.5118" fill="#F1F1F1" rx="9.9853" ry="7.2618" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="6" x="130.4853" y="29.9352">...</text></g><g id="elem_TV"><ellipse cx="133.3919" cy="133.4284" fill="#F1F1F1" rx="39.8919" ry="9.1784" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="59" x="103.0178" y="135.1306">Traiter une vente</text></g><g id="elem_TR"><ellipse cx="133.4727" cy="97.5945" fill="#F1F1F1" rx="40.7227" ry="9.3445" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="61" x="102.4054" y="99.2045">Traiter les retours</text></g><g id="elem_OLC"><ellipse cx="133.4172" cy="62.0834" fill="#FFFF00" rx="36.9172" ry="8.5834" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="51.5" x="106.1672" y="63.9572">Ouvrir la caisse</text></g><g id="elem_AA"><ellipse cx="133.4826" cy="169.5965" fill="#F1F1F1" rx="39.4826" ry="9.0965" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="58" x="103.45" y="171.3443">Analyser l'activité</text></g><g id="elem_GS"><ellipse cx="133.5775" cy="243.5155" fill="#F1F1F1" rx="39.0775" ry="9.0155" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="57" x="103.8829" y="245.3083">Gérer la sécurité</text></g><g id="elem_GU"><ellipse cx="133.5572" cy="206.4614" fill="#F1F1F1" rx="45.0572" ry="10.2114" style="stroke:#181818;stroke-width:0.25;"></ellipse><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="71" x="98.0572" y="207.8848">Gérer les utilisateurs</text></g><!--MD5=[0ba5ee7700168656dc1b457c6fe9fdac]
+entity Client--><g id="elem_Client"><ellipse cx="31" cy="73.25" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,77.25 L31,90.75 M24.5,81.25 L37.5,81.25 M31,90.75 L24.5,98.25 M31,90.75 L37.5,98.25 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="19.5" x="21.25" y="105.4976">Client</text></g><!--MD5=[84eb184a08144e15816666ccc309fe96]
+entity Caissier--><g id="elem_Caissier"><ellipse cx="31" cy="17.75" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,21.75 L31,35.25 M24.5,25.75 L37.5,25.75 M31,35.25 L24.5,42.75 M31,35.25 L37.5,42.75 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="27" x="17.5" y="49.9976">Caissier</text></g><!--MD5=[327d8b0cc9017ef0d2f4054fa6547e20]
+entity Manager--><g id="elem_Manager"><ellipse cx="31" cy="128.75" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,132.75 L31,146.25 M24.5,136.75 L37.5,136.75 M31,146.25 L24.5,153.75 M31,146.25 L37.5,153.75 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="30" x="16" y="160.9976">Manager</text></g><!--MD5=[cd81128ed1873346d3678821c65bf0c5]
+entity SV--><g id="elem_SV"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="55" x="3.5" y="180.25"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" font-style="italic" lengthadjust="spacing" textlength="35" x="13.5" y="191.7476">«&nbsp;acteur&nbsp;»</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="45" x="8.5" y="199.896">Système des</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="23.5" x="19.25" y="208.0444">ventes</text></g><!--MD5=[4ec5e0198a45b1576103bd8a641ef52b]
+entity AS--><g id="elem_AS"><ellipse cx="31" cy="236.5" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M31,240.5 L31,254 M24.5,244.5 L37.5,244.5 M31,254 L24.5,261.5 M31,254 L37.5,261.5 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="50" x="6" y="268.7476">Administrateur</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="29.5" x="16.25" y="276.896">système</text></g><!--MD5=[68f06c1af5a9d7c9720ef620a835ad6b]
+entity SAP--><g id="elem_SAP"><ellipse cx="238.25" cy="191" fill="#F1F1F1" rx="4" ry="4" style="stroke:#181818;stroke-width:0.25;"></ellipse><path d="M238.25,195 L238.25,208.5 M231.75,199 L244.75,199 M238.25,208.5 L231.75,216 M238.25,208.5 L244.75,216 " fill="none" style="stroke:#181818;stroke-width:0.25;"></path><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="25" x="225.75" y="223.2476">Service</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="46.5" x="215" y="231.396">d'autorisation</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="51.5" x="212.5" y="239.5444">des paiements</text></g><!--MD5=[87439e3fb2bd72484276c19727d934ee]
+entity CT--><g id="elem_CT"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="59.5" x="208.5" y="82.75"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" font-style="italic" lengthadjust="spacing" textlength="35" x="220.75" y="94.2476">«&nbsp;acteur&nbsp;»</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="49.5" x="213.5" y="102.396">Calculateur de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="18.5" x="229" y="110.5444">taxes</text></g><!--MD5=[8b944653c655024075d894af29a33c78]
+entity SC--><g id="elem_SC"><rect fill="#F1F1F1" height="34.4453" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="52" x="212.25" y="134.75"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" font-style="italic" lengthadjust="spacing" textlength="35" x="220.75" y="146.2476">«&nbsp;acteur&nbsp;»</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="41" x="217.75" y="154.396">Système de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="42" x="217.25" y="162.5444">comptabilité</text></g><!--MD5=[25475f53477c62fccaf4519fe1cb9018]
+entity SRH--><g id="elem_SRH"><rect fill="#F1F1F1" height="42.5938" rx="1.25" ry="1.25" style="stroke:#181818;stroke-width:0.25;" width="51" x="212.75" y="22.75"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" font-style="italic" lengthadjust="spacing" textlength="35" x="220.75" y="34.2476">«&nbsp;acteur&nbsp;»</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="41" x="217.75" y="42.396">Système de</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="39" x="218.75" y="50.5444">ressources</text><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="7" lengthadjust="spacing" textlength="34" x="221.25" y="58.6929">humaines</text></g><!--MD5=[a4af6c79cd77509d2577919071b95e7c]
 link Client to TV--><g id="link_Client_TV"><path d="M40.79,94.595 C49.64,100.65 63.51,109.565 76.5,115.5 C86.1,119.885 97.07,123.645 106.77,126.575 " fill="none" id="Client-TV" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[cf5b8f814adf84dfcbf45a21f211ce2b]
 link Client to TR--><g id="link_Client_TR"><path d="M40.865,88.875 C53.285,90.04 75.925,92.16 95.655,94.005 " fill="none" id="Client-TR" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[24ae2b25fb851abacb8a601b9cb4c3ca]
 link Caissier to TV--><g id="link_Caissier_TV"><path d="M44.52,43.38 C49.465,48.07 54.79,53.88 58.5,60 C71.94,82.175 58.115,97.21 76.5,115.5 C82.775,121.745 91.21,125.825 99.65,128.49 " fill="none" id="Caissier-TV" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[3fa274815b395ef88746e5a565fab111]
@@ -351,10 +353,50 @@ link TV to SC--><g id="link_TV_SC"><path d="M165.41,139.1 C180.38,141.77 198.06,
 link OLC to SRH--><g id="link_OLC_SRH"><path d="M163.315,56.915 C178.895,54.21 197.845,50.925 212.725,48.34 " fill="none" id="OLC-SRH" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[9ef5e90fa4eb89e3ee34273dcb7c9dcd]
 link SV to AA--><g id="link_SV_AA"><path d="M58.565,190.035 C73.895,185.805 92.935,180.55 107.925,176.415 " fill="none" id="SV-AA" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[b64e204c3aac8d777ae244bd2bcae980]
 link AS to GS--><g id="link_AS_GS"><path d="M56.07,252.595 C68.86,251.085 84.705,249.21 98.685,247.555 " fill="none" id="AS-GS" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[614cbf76f86735ef8f82518016377b70]
-link AS to GU--><g id="link_AS_GU"><path d="M56.025,237.465 C62.485,233.19 69.59,228.89 76.5,225.5 C85.37,221.145 95.49,217.395 104.685,214.405 " fill="none" id="AS-GU" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[5d4ce0f0ab1b32aefee780ccb2822a69]
+link AS to GU--><g id="link_AS_GU"><path d="M56.025,237.465 C62.485,233.19 69.59,228.89 76.5,225.5 C85.37,221.145 95.49,217.395 104.685,214.405 " fill="none" id="AS-GU" style="stroke:#181818;stroke-width:0.5;"></path></g><!--MD5=[e068b5ef8e84c9114e4b308ecf9e4057]
+@startuml
+!include normal.pumlinclude
+scale 0.5
+left to right direction
+skinparam packageStyle rect
+skinparam defaulttextalignment center
+actor Client
+actor Caissier
+actor Manager
+rectangle "Système des\nventes" << acteur >> as SV
+actor "Administrateur\nsystème" as AS
+actor "Service\nd'autorisation\ndes paiements" as SAP
+rectangle "Calculateur de\ntaxes" << acteur >> as CT
+rectangle "Système de\ncomptabilité" << acteur >> as SC
+rectangle "Système de\nressources\nhumaines" << acteur >> as SRH
+rectangle "NextGen" {
+  (...) as other
+  (Traiter une vente) as TV
+  (Traiter les retours) as TR
+  (Ouvrir la caisse) as OLC #yellow
+  (Analyser l'activité) as AA
+  (Gérer la sécurité) as GS
+  (Gérer les utilisateurs) as GU
+  Client -d- TV
+  Client -d- TR
+  Caissier -d- TV
+  Caissier -d- TR
+  Caissier -d- OLC
+  Manager -d- TV
+  Manager -d- TR
+  TV -d- SAP
+  TV -d- CT
+  TV -d- SC
+  OLC -d- SRH
+  SV -d- AA
+  AS -d- GS
+  AS -d- GU
+}
+@enduml
+
 @startuml
 skinparam style strictuml
-skinparam defaultFontName Arial
+skinparam defaultFontName Helvetica,Arial,sans-serif
 skinparam backgroundcolor transparent
 scale 0.5
 left to right direction
@@ -363,12 +405,12 @@ skinparam defaulttextalignment center
 actor Client
 actor Caissier
 actor Manager
-rectangle "Système des\nventes" <<acteur>> as SV
+rectangle "Système des\nventes" << acteur >> as SV
 actor "Administrateur\nsystème" as AS
 actor "Service\nd'autorisation\ndes paiements" as SAP
-rectangle "Calculateur de\ntaxes" <<acteur>> as CT
-rectangle "Système de\ncomptabilité" <<acteur>> as SC
-rectangle "Système de\nressources\nhumaines" <<acteur>> as SRH
+rectangle "Calculateur de\ntaxes" << acteur >> as CT
+rectangle "Système de\ncomptabilité" << acteur >> as SC
+rectangle "Système de\nressources\nhumaines" << acteur >> as SRH
 rectangle "NextGen" {
   (...) as other
   (Traiter une vente) as TV
@@ -408,20 +450,14 @@ Country: null
 <section id="terminologie" class="level2" data-number="C.1">
 <h2 data-number="C.1" class="anchored" data-anchor-id="terminologie"><span class="header-section-number">C.1</span> Terminologie</h2>
 <p>Quelques termes du domaine d’affaires doivent être compris avant de <span style="white-space:nowrap">procéder :</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Series4000CashDrawerProductTrainingVideo_screenshot_youtube.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Plateau-billets et tiroir-caisse. Capture d’écran de la vidéo sur <a href="https://youtu.be/lth_lAacXVQ?t=34">YouTube</a>.</figcaption><p></p>
-</figure>
-</div>
 <dl>
-<dt>Tiroir-caisse</dt>
+<dt>Tiroir-caisse.</dt>
 <dd>
 C’est la partie de la caisse qui s’ouvre, dans laquelle on peut placer un plateau-billets.
 </dd>
-<dt>Plateau-billets</dt>
+<dt>Plateau-billets.</dt>
 <dd>
-C’est un contenant pour les billets de banque et les pièces de monnaie qui facilite le changement de personnel à une caisse. Chaque caissier ou caissière possède un plateau-billets et l’apporte lorsqu’il est au début ou à la fin de son quart de travail.
+C’est un contenant pour les billets de banque et les pièces de monnaie qui facilite le changement de personnel à une caisse. Chaque caissier ou caissière possède un plateau-billets et l’apporte au début ou à la fin de son quart de travail.
 </dd>
 </dl>
 </section>
@@ -432,28 +468,28 @@ C’est un contenant pour les billets de banque et les pièces de monnaie qui fa
 <p><strong>Garanties de succès <span style="white-space:nowrap">(postconditions) :</span></strong> La caissière ou le caissier est authentifié. Son plateau-billets est placé dans le tiroir-caisse, et son identificateur est enregistré. Le montant d’argent du plateau est enregistré. L’heure de l’arrivée du caissier ou de la caissière est enregistrée.</p>
 <p><strong>Scénario principal (succès)</strong></p>
 <ol type="1">
-<li><p>Le Caissier ou la caissière arrive à la caisse avec son plateau-billets.</p></li>
-<li><p>Le Caissier ou la caissière saisit son identifiant et son mot de passe dans la boîte de dialogue d’authentification.</p></li>
-<li><p>Le Système authentifie le Caissier ou la caissière.</p></li>
-<li><p>Le Système ouvre le tiroir-caisse et demande au Caissier ou à la caissière de poser son plateau dans le tiroir-caisse.</p></li>
-<li><p>Le Caissier ou la caissière pose son plateau dans le tiroir-caisse.</p></li>
+<li><p>Le Caissier ou la Caissière arrive à la caisse avec son plateau-billets.</p></li>
+<li><p>Le Caissier ou la Caissière saisit son identifiant et son mot de passe dans la boîte de dialogue d’authentification.</p></li>
+<li><p>Le Système authentifie le Caissier ou la Caissière.</p></li>
+<li><p>Le Système ouvre le tiroir-caisse et demande au Caissier ou à la Caissière de poser son plateau dans le tiroir-caisse.</p></li>
+<li><p>Le Caissier ou la Caissière pose son plateau dans le tiroir-caisse.</p></li>
 <li><p>Le Système reconnaît l’identificateur du plateau.</p></li>
-<li><p>Le Système demande au Caissier ou à la caissière de saisir le montant d’argent du plateau.</p></li>
-<li><p>Le Caissier ou la caissière saisit le montant d’argent du plateau.</p></li>
-<li><p>Le Système demande au Caissier ou à la caissière de fermer le tiroir-caisse.</p></li>
-<li><p>Le Caissier ou la caissière ferme le tiroir-caisse.</p></li>
+<li><p>Le Système demande au Caissier ou à la Caissière de saisir le montant d’argent du plateau.</p></li>
+<li><p>Le Caissier ou la Caissière saisit le montant d’argent du plateau.</p></li>
+<li><p>Le Système demande au Caissier ou à la Caissière de fermer le tiroir-caisse.</p></li>
+<li><p>Le Caissier ou la Caissière ferme le tiroir-caisse.</p></li>
 </ol>
 <p><strong>Spécifications <span style="white-space:nowrap">particulières :</span></strong></p>
-<p>Les caisses sont configurées avec un modèle de plateau-billets comme <span style="white-space:nowrap">celui-ci :</span> <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=lth_lAacXVQ#t=32s">(voir exemple sur YouTube.)</a></p>
+<p>Les caisses sont configurées avec un modèle de plateau-billets comme <span style="white-space:nowrap">celui-ci :</span> <a href="https://youtu.be/hgA3GFxlzBg?t=21">voir exemple sur YouTube</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>.</p>
 <p><strong>Fréquence <span style="white-space:nowrap">d’occurrence :</span></strong> Normalement, au début du quart de travail de chaque caissier ou caissière.</p>
 </section>
 <section id="modèle-du-domaine-partiel" class="level2" data-number="C.3">
 <h2 data-number="C.3" class="anchored" data-anchor-id="modèle-du-domaine-partiel"><span class="header-section-number">C.3</span> Modèle du domaine partiel</h2>
-<p>Voici un exemple pour le système POS NextGen. Notez les nouvelles classes conceptuelles <strong>PlateauBillets</strong> (un objet physique) et <strong>MisePlateau</strong> (une transaction) faisant partie du scénario d’<em>Ouvrir la caisse</em>.</p>
+<p>Voici un exemple pour le système NextGen POS. Notez les nouvelles classes conceptuelles <strong>PlateauBillets</strong> (un objet physique) et <strong>MisePlateau</strong> (une transaction) faisant partie du scénario d’<em>Ouvrir la caisse</em>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/MDD_POS_NextGen_export.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Modèle du domaine partiel pour le système POS NextGen présentant les différences par rapport au modèle du domaine de base présenté par Larman. Avec l’ajout des classes conceptuelles PlateauBillets et MisePlateau, qui modélisent des nouveaux éléments du cas d’utilisation «&nbsp;Ouvrir la caisse&nbsp;».</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Modèle du domaine partiel pour le système NextGen POS présentant les différences par rapport au modèle du domaine de base présenté par Larman, avec l’ajout des classes conceptuelles PlateauBillets et MisePlateau, qui modélisent de nouveaux éléments du cas d’utilisation <em>Ouvrir la caisse</em>.</figcaption><p></p>
 </figure>
 </div>
 <p>On remarque que lorsqu’un Registre (Caisse) n’a pas de Caissier (l’état du système au début du cas d’utilisation), l’objet Registre n’est associé à aucun objet Caissier. Nous avons donc modifié les cardinalités de l’association en conséquence. C’est une différence par rapport au modèle du domaine de base présenté par Larman, qui n’avait pas considéré ce cas d’utilisation, bien qu’il soit dans l’ensemble des spécifications du système.</p>
@@ -461,15 +497,30 @@ C’est un contenant pour les billets de banque et les pièces de monnaie qui fa
 </section>
 <section id="diagramme-de-séquence-système-dss" class="level2" data-number="C.4">
 <h2 data-number="C.4" class="anchored" data-anchor-id="diagramme-de-séquence-système-dss"><span class="header-section-number">C.4</span> Diagramme de séquence système (DSS)</h2>
-<p>La <a href="#fig-DSS_ouvrir_la_caisse">figure&nbsp;<span>C.2</span></a> est le diagramme de séquence système (DSS) pour le scénario «&nbsp;Ouvrir la caisse&nbsp;».</p>
+<p>La <a href="#fig-DSS_ouvrir_la_caisse">figure&nbsp;<span>C.2</span></a> est le diagramme de séquence système (DSS) pour le scénario <em>Ouvrir la caisse</em>.</p>
 <div id="fig-DSS_ouvrir_la_caisse" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="320px" preserveaspectratio="none" style="width:390px;height:320px;background:#FFFFFF;" version="1.1" viewbox="0 0 390 320" width="390px" zoomandpan="magnify"><defs></defs><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="217" x="85.5" y="10"></rect><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="207" x="90.5" y="27.9951">Scénario : Ouvrir la caisse</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="37" x2="37" y1="118.5938" y2="313.3906"></line><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="344" x2="344" y1="118.5938" y2="313.3906"></line><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="59" x="5" y="115.292">:Caissier</text><ellipse cx="37.5" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"></ellipse><path d="M37.5,58.7969 L37.5,85.7969 M24.5,66.7969 L50.5,66.7969 M37.5,85.7969 L24.5,100.7969 M37.5,85.7969 L50.5,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"></path><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="305" y="87.2969"></rect><text fill="#000000" font-family="Arial" font-size="14" lengthadjust="spacing" textlength="65" x="312" y="107.292">:Système</text><polygon fill="#181818" points="332.5,145.7266,342.5,149.7266,332.5,153.7266" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="149.7266" y2="149.7266"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="150" x="116" y="144.6606">démarrerOuvrirCaisse()</text><polygon fill="#181818" points="332.5,174.8594,342.5,178.8594,332.5,182.8594" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="178.8594" y2="178.8594"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="283" x="49.5" y="173.7935">authentifier(identifiant : String, mdp : String)</text><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="203.9922"></line><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="211.9922"></line><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="37.5" x2="343.5" y1="207.9922" y2="207.9922"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="203" x="89.5" y="202.9263">confirmation, ouverture du tiroir</text><polygon fill="#181818" points="332.5,233.125,342.5,237.125,332.5,241.125" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="237.125" y2="237.125"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="207" x="87.5" y="232.0591">poserPlateau(identifiant : String)</text><polygon fill="#181818" points="332.5,262.2578,342.5,266.2578,332.5,270.2578" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="266.2578" y2="266.2578"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="217" x="82.5" y="261.1919">saisirMontant(montant : Monnaie)</text><polygon fill="#181818" points="332.5,291.3906,342.5,295.3906,332.5,299.3906" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="295.3906" y2="295.3906"></line><text fill="#000000" font-family="Arial" font-size="13" lengthadjust="spacing" textlength="84" x="149" y="290.3247">fermerTiroir()</text><!--MD5=[2c369dc6e7c302c561efa77ec932638e]
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="320px" preserveaspectratio="none" style="width:390px;height:320px;background:#00000000;" version="1.1" viewbox="0 0 390 320" width="390px" zoomandpan="magnify"><defs></defs><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="132" x="128" y="10"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" lengthadjust="spacing" textlength="122" x="133" y="27.9951">Ouvrir la caisse</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="37" x2="37" y1="118.5938" y2="313.3906"></line><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="344" x2="344" y1="118.5938" y2="313.3906"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="59" x="5" y="115.292">:Caissier</text><ellipse cx="37.5" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"></ellipse><path d="M37.5,58.7969 L37.5,85.7969 M24.5,66.7969 L50.5,66.7969 M37.5,85.7969 L24.5,100.7969 M37.5,85.7969 L50.5,100.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"></path><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="305" y="87.2969"></rect><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="14" lengthadjust="spacing" textlength="65" x="312" y="107.292">:Système</text><polygon fill="#181818" points="332.5,145.7266,342.5,149.7266,332.5,153.7266" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="149.7266" y2="149.7266"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" lengthadjust="spacing" textlength="150" x="116" y="144.6606">démarrerOuvrirCaisse()</text><polygon fill="#181818" points="332.5,174.8594,342.5,178.8594,332.5,182.8594" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="178.8594" y2="178.8594"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" lengthadjust="spacing" textlength="283" x="49.5" y="173.7935">authentifier(identifiant : String, mdp : String)</text><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="203.9922"></line><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="48.5" y1="207.9922" y2="211.9922"></line><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="37.5" x2="343.5" y1="207.9922" y2="207.9922"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" lengthadjust="spacing" textlength="203" x="89.5" y="202.9263">confirmation, ouverture du tiroir</text><polygon fill="#181818" points="332.5,233.125,342.5,237.125,332.5,241.125" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="237.125" y2="237.125"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" lengthadjust="spacing" textlength="207" x="87.5" y="232.0591">poserPlateau(identifiant : String)</text><polygon fill="#181818" points="332.5,262.2578,342.5,266.2578,332.5,270.2578" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="266.2578" y2="266.2578"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" lengthadjust="spacing" textlength="217" x="82.5" y="261.1919">saisirMontant(montant : Monnaie)</text><polygon fill="#181818" points="332.5,291.3906,342.5,295.3906,332.5,299.3906" style="stroke:#181818;stroke-width:1.0;"></polygon><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="338.5" y1="295.3906" y2="295.3906"></line><text fill="#000000" font-family="Helvetica,Arial,sans-serif" font-size="13" lengthadjust="spacing" textlength="84" x="149" y="290.3247">fermerTiroir()</text><!--MD5=[c4d5bb8ad8a22e06eb21bfc89a441274]
+@startuml
+!include normal.pumlinclude
+skinparam SequenceMessageAlign center
+title Ouvrir la caisse
+actor ":Caissier" as C
+participant ":Système" as S
+C->S: démarrerOuvrirCaisse()
+C->S: authentifier(identifiant : String, mdp : String)
+C<<- -S: confirmation, ouverture du tiroir
+C->S: poserPlateau(identifiant : String)
+C->S: saisirMontant(montant : Monnaie)
+C->S: fermerTiroir()
+@enduml
+
 @startuml
 skinparam style strictuml
-skinparam defaultFontName Arial
+skinparam defaultFontName Helvetica,Arial,sans-serif
+skinparam backgroundcolor transparent
 skinparam SequenceMessageAlign center
-title Scénario : Ouvrir la caisse
+title Ouvrir la caisse
 actor ":Caissier" as C
 participant ":Système" as S
 C->S: démarrerOuvrirCaisse()
@@ -488,7 +539,7 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;C.2: Diagramme de séquence système (DSS) pour le scénario «&nbsp;Ouvrir la caisse&nbsp;».</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;C.2: Diagramme de séquence système (DSS) pour le scénario <em>Ouvrir la caisse</em>.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -528,7 +579,7 @@ Country: null
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
-Larman, C. (2005). <em><span>UML</span> 2 et design patterns</em> (3ᵉ éd.). Paris&nbsp;: Village Mondial.
+Larman, C. (2005). <em><span>UML</span> 2 et les design patterns</em> (3ᵉ éd.). Paris&nbsp;: Village Mondial.
 </div>
 </div>
 </section>
@@ -770,7 +821,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Traiter une vente</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

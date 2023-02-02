@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyse et conception de logiciels - Appendix A — Cas d’utilisation - Réserver un livre de la bibliothèque</title>
+<title>Analyse et conception de logiciels - Appendix A — Cas d’utilisation – Réserver un livre de la bibliothèque</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Appendix A — Cas d’utilisation - Réserver un livre de la bibliothèque</h1>
+      <h1 class="quarto-secondary-nav-title">Appendix A — Cas d’utilisation – Réserver un livre de la bibliothèque</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span id="sec-CU_Réserver_livre" class="quarto-section-identifier d-none d-lg-block">Appendix A — Cas d’utilisation - Réserver un livre de la bibliothèque</span></h1>
+      <h1 class="title"><span id="sec-CU_Réserver_livre" class="quarto-section-identifier d-none d-lg-block">Appendix A — Cas d’utilisation – Réserver un livre de la bibliothèque</span></h1>
                       </div>
   </div>
     
@@ -255,17 +255,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Réserver un livre de la bibliothèque</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Traiter une vente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Ouvrir la caisse</span></a>
   </div>
 </li>
       </ul>
@@ -283,20 +283,23 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><strong>Parties prenantes et intérêts</strong><span style="white-space:nowrap"> :</span><br>
-- <strong>La personne membre.</strong> Elle veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Elle veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Elle veut également une preuve de réservation.<br>
-- <strong>La Bibliothèque.</strong> Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.<br>
-<strong>Préconditions</strong><span style="white-space:nowrap"> :</span> La personne membre est identifiée et authentifiée<br>
-<strong>Acteur <span style="white-space:nowrap">principal :</span> Personne membre</strong></p>
+<p><strong>Parties prenantes et intérêts</strong><span style="white-space:nowrap"> :</span></p>
+<ul>
+<li><strong>La personne membre.</strong> Elle veut un moyen de recherche exact et rapide, et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Elle veut pouvoir réaliser des réservations aisément et obtenir un service rapide en fournissant un minimum d’efforts. Elle veut également une preuve de réservation.<br>
+</li>
+<li><strong>La Bibliothèque.</strong> Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.</li>
+</ul>
+<p><strong>Préconditions</strong><span style="white-space:nowrap"> :</span> La personne membre est identifiée et authentifiée.</p>
+<p><strong>Acteur <span style="white-space:nowrap">principal :</span> Personne membre</strong></p>
 <ol type="1">
-<li>La personne membre choisit la fonction «&nbsp;recherche&nbsp;» et saisit du texte décrivant le livre (par exemple, une partie du titre, «&nbsp;UML&nbsp;»).</li>
-<li>Le système affiche une liste de livres (le titre, l’auteur(e) et l’année) correspondant à la recherche, par exemple «&nbsp;UML 2 et les design patterns, Craig Larman, 2005&nbsp;» et «&nbsp;UML par la pratique, Pascal Rocques, 2009&nbsp;».</li>
+<li>La personne membre choisit la fonction «&nbsp;recherche&nbsp;» et saisit du texte décrivant le livre (par exemple une partie du titre, «&nbsp;UML&nbsp;»).</li>
+<li>Le système affiche une liste de livres (le titre, l’auteur ou l’auteure et l’année) correspondant à la recherche, par exemple «&nbsp;UML 2 et les design patterns, Craig Larman, 2005&nbsp;» et «&nbsp;UML par la pratique, Pascal Roques, 2009&nbsp;».</li>
 <li>La personne membre choisit un livre parmi les résultats, par exemple «&nbsp;UML 2 et les designs patterns, Craig Larman, 2005&nbsp;».</li>
-<li>Le système affiche les informations détaillées du livre (le titre, l’auteur(e), le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple deux exemplaires du livre «&nbsp;UML 2 et les design patterns&nbsp;», un avec l’identificateur d’exemplaire «&nbsp;1&nbsp;» qui est disponible et un avec l’identificateur d’exemplaire «&nbsp;2&nbsp;» qui n’est pas disponible.</li>
+<li>Le système affiche les informations détaillées du livre (le titre, l’auteur ou l’auteure, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple deux exemplaires du livre «&nbsp;UML 2 et les design patterns&nbsp;», un avec l’identificateur d’exemplaire «&nbsp;1&nbsp;» qui est disponible et un avec l’identificateur d’exemplaire «&nbsp;2&nbsp;» qui n’est pas disponible.</li>
 <li>La personne membre réserve un exemplaire du livre qui est disponible.</li>
-<li>Le système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.</li>
+<li>Le système confirme la réservation en affichant un numéro de réservation avec le nom de la personne membre et le code de l’exemplaire du livre.</li>
 </ol>
-<p>Extensions (scénarios <span style="white-space:nowrap">alternatifs) :</span></p>
+<p><strong>Extensions (scénarios alternatifs)</strong><span style="white-space:nowrap"> :</span></p>
 <ol start="2" type="1">
 <li>Aucun livre ne correspond au texte de la recherche.
 <ol type="1">
@@ -557,7 +560,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Traiter une vente</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

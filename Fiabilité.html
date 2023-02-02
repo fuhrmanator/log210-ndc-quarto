@@ -276,17 +276,17 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Réserver un livre de la bibliothèque</span></a>
+  <a href="./Annexe_Cas_utilisation_Réserver_livre.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Réserver un livre de la bibliothèque</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Traiter une vente</span></a>
+  <a href="./Annexe_Cas_utilisation_Traiter_vente.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Traiter une vente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation - Ouvrir la caisse</span></a>
+  <a href="./Annexe_Cas_utilisation_Ouvrir_caisse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Cas d’utilisation – Ouvrir la caisse</span></a>
   </div>
 </li>
       </ul>
@@ -316,7 +316,7 @@ div.csl-indent {
 <figure class="figure">
 <img src="images/PanneConnexionService.svg" title="Comment tolérer une panne de connexion ou de service?" class="img-fluid figure-img" style="width:70.0%">
 </figure>
-<p></p><figcaption class="figure-caption">Figure&nbsp;15.1: Comment tolérer une panne de connexion ou de <span style="white-space:nowrap">service ?</span> Dans un système comme NextGen POS, les dépendances vers les systèmes externes, comme les calculateurs de taxes ou la base de données des descriptions de produits, des pannes de ces services peuvent arriver et doivent être tolérées pour permettre les ventes de produits.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;15.1: Comment tolérer une panne de connexion ou de <span style="white-space:nowrap">service ?</span> Dans un système comme NextGen POS, des pannes de systèmes externes, comme les calculateurs de taxes ou la base de données des descriptions de produits, peuvent arriver et doivent être tolérées pour permettre les ventes de produits.</figcaption><p></p>
 </figure>
 </div>
 <p>Voici les points <span style="white-space:nowrap">importants :</span></p>
@@ -330,9 +330,9 @@ div.csl-indent {
 <li>Les solutions proposées par l’architecte système et documentées par Larman impliquent les concepts <span style="white-space:nowrap">suivants :</span>
 <ul>
 <li>Mise en cache locale d’informations recherchées au service distant, A36.2/F30.2&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</li>
-<li>Utilisation d’<em>Adaptateur [GoF]</em> pour réaliser le service redondant (lecture d’information), A36.2/F30.2&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</li>
+<li>Utilisation d’Adaptateur <span class="citation" data-cites="GoF1994">(<a href="references.html#ref-GoF1994" role="doc-biblioref">Gamma, Helm, Johnson, et Vlissides, 1994</a>)</span> pour réaliser le service redondant (lecture d’information), A36.2/F30.2&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</li>
 <li>Réalisation d’un scénario dans le cas d’utilisation pour supporter l’échec de tout (rien ne va plus) en permettant au Caissier de saisir l’information (description et prix), A36.3/F30.3&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Dans ce cas, il faut bien gérer les exceptions.</li>
-<li>Utilisation de <em>Procuration (Proxy) de redirection [GoF]</em> pour basculer vers un service local en cas de panne (écriture d’information), A36.4/F30.4&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</li>
+<li>Utilisation de Procuration (Proxy) de redirection <span class="citation" data-cites="GoF1994">(<a href="references.html#ref-GoF1994" role="doc-biblioref">Gamma et coll., 1994</a>)</span> pour basculer vers un service local en cas de panne (écriture d’information), A36.4/F30.4&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</li>
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-captioned">
@@ -361,7 +361,7 @@ Important
 <li><span style="white-space:nowrap">Échec :</span> <!-- Trop d'argent a été versé vers la personne --></li>
 </ul>
 <p><strong>Scénario <span style="white-space:nowrap">2 :</span> Vaisseau spatial</strong></p>
-<p>Une mise à jour du logiciel de contrôle sur un vaisseau spatial est effectuée par un(e) ingénieur(e) sur Terre. Ce nouveau programme contient une mauvaise référence pour stocker les valeurs de configuration du réacteur. Lorsque le programme effectue ce stockage, il y a une corruption du programme qui contrôle l’orientation de l’antenne pour la communication avec la Terre. Ensuite, l’antenne ne pointe plus vers la Terre, et la communication est coupée à jamais.</p>
+<p>Une mise à jour du logiciel de contrôle sur un vaisseau spatial est effectuée par un ingénieur sur Terre. Ce nouveau programme contient une mauvaise référence pour stocker les valeurs de configuration du réacteur. Lorsque le programme effectue ce stockage, il y a une corruption du programme qui contrôle l’orientation de l’antenne pour la communication avec la Terre. Ensuite, l’antenne ne pointe plus vers la Terre, et la communication est coupée à jamais.</p>
 <ul>
 <li><span style="white-space:nowrap">Faute :</span></li>
 <li><span style="white-space:nowrap">Erreur :</span></li>
@@ -371,6 +371,9 @@ Important
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-GoF1994" class="csl-entry" role="doc-biblioentry">
+Gamma, E., Helm, R., Johnson, R., et Vlissides, J. (1994). <em>Design <span>Patterns</span>: <span>Elements</span> of <span>Reusable</span> <span>Object</span>-<span>Oriented</span> <span>Software</span></em> (1ʳᵉ éd.). Reading, Mass&nbsp;: Addison-Wesley Professional. Repéré à <a href="http://amazon.com/o/ASIN/0201633612/">http://amazon.com/o/ASIN/0201633612/</a>
+</div>
 <div id="ref-hanmer_patterns_2007" class="csl-entry" role="doc-biblioentry">
 Hanmer, R. (2007). <em>Patterns for <span>Fault</span> <span>Tolerant</span> <span>Software</span></em> (1ʳᵉ éd.). Chichester, England ; Hoboken, NJ&nbsp;: Wiley.
 </div>
