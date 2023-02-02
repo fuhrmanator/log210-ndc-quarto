@@ -13,7 +13,7 @@ Les points importants sont les suivants (les détails se trouvent dans le livre)
 - Les packages les plus responsables sont les plus stables;
 - Factoriser (placer dans un package à part) les types indépendants;
 - Utiliser **fabrique** (*factory*) pour limiter la dépendance aux packages concrets;
-- Comment rompre les cycles dans les packages .
+- Comment rompre les cycles dans les packages.
 
 La @fig-DiagrammePackage est un exemple d'un diagramme de packages.
 
@@ -76,7 +76,7 @@ export class MaClasse {
 import { MaClasse } from './maClasse'
 ```
 
-On organise les fichiers, par exemple `maClasse.ts` , dans les répertoires.
+On organise les fichiers, par exemple `maClasse.ts`, dans les répertoires.
 
 ### Noms sans conflit
 

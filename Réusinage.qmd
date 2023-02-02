@@ -14,21 +14,21 @@ Dans d'autres endroits encore, plusieurs sous-classes avaient fait la même chos
 
 Le consultant a recommandé à la direction du projet que le code soit examiné et nettoyé, mais la direction du projet n'était pas enthousiaste.
 Le code semblait fonctionner, et il y avait des contraintes sur l'emploi du temps considérables.
-Les gestionnaires ont dit qu'ils y parviendraient ultérieurement.
+L'équipe de gestion a dit qu'elle y parviendraient ultérieurement.
 
-Le consultant a également montré ce qui se passait aux programmeurs(euses) travaillant sur la hiérarchie.
-Les programmeurs(euses) étaient enthousiastes et ont vu le problème.
+Le consultant a également montré ce qui se passait aux programmeurs et programmeuses travaillant sur la hiérarchie.
+Ils étaient enthousiastes et ont vu le problème.
 Ils savaient que ce n'était pas vraiment de leur faute: parfois, l'évaluation par une autre personne est nécessaire pour détecter le problème.
-Les programmeurs(euses) ont donc passé un jour ou deux à nettoyer la hiérarchie.
+Les programmeurs et programmeuses ont donc passé un jour ou deux à nettoyer la hiérarchie.
 Une fois qu'ils eurent terminé, ils avaient supprimé la moitié du code de la hiérarchie sans réduire sa fonctionnalité.
 Ils étaient satisfaits du résultat et ont constaté qu'il était devenu plus rapide et plus facile d'ajouter de nouvelles classes et d'utiliser les classes dans le reste du système.
 
 La direction du projet n'était pas contente.
 L'échéancier était serré, et il y avait beaucoup de travail à faire.
-Ces deux programmeurs(euses) avaient passé deux jours à effectuer un travail qui n'ajoutait rien aux nombreuses fonctionnalités que le système devait offrir en quelques mois.
+Ces programmeurs et programmeuses avaient passé deux jours à effectuer un travail qui n'ajoutait rien aux nombreuses fonctionnalités que le système devait offrir en quelques mois.
 L'ancien code avait très bien fonctionné.
 Oui, la conception était un peu plus "pure" et un peu plus "propre",
-mais le projet devait expédier du code qui fonctionnait, pas du code qui plairait à des universitaires,
+mais le projet devait expédier du code qui fonctionnait, pas du code qui plairait à des universitaires.
 Le consultant a suggéré qu'un nettoyage similaire soit effectué sur d'autres parties centrales du système, ce qui pourrait interrompre le projet pendant une semaine ou deux.
 Tout cela était pour rendre le code plus beau, pas pour lui faire faire ce qu'il ne faisait pas déjà.
 :::
@@ -39,11 +39,11 @@ Le réusinage (en anglais *refactoring*) est, selon Fowler, "l'amélioration de 
 Il s'agit de retravailler le code source de façon à en améliorer la lisibilité ou la structure, sans en modifier le fonctionnement.
 C'est une manière de gérer la dette technique, car, grâce au réusinage, on peut transformer du code chaotique (écrit peut-être par les gens en mode "hacking cowboy") en code bien structuré.
 De plus, beaucoup d'IDE supportent l'automatisation d'activités de réusinage, rendant le processus plus facile et robuste.
-Probablement vous avez déjà "renommé" une variable dans le code source, à travers un menu "Refactoring".
+Probablement que vous avez déjà "renommé" une variable dans le code source, à travers un menu "Refactoring".
 
 Le réusinage est une activité intégrante du [Développement piloté par les tests](#sec-tdd).
 
-## Symptômes de la mauvaise conception - Code smells
+## Symptômes de la mauvaise conception -- Code smells
 
 En anglais, le terme "Code smell" a été proposé par Fowler pour les symptômes d'une mauvaise conception.
 Le but est de savoir à quel moment il faut effectuer des activités de réusinage. 
@@ -51,7 +51,7 @@ Le but est de savoir à quel moment il faut effectuer des activités de réusina
 Par exemple, le premier "smell" dans son livre est "Mysterious Name".
 Il apparaît lorsqu'on voit une variable ou une méthode dont le nom est incohérent avec son utilisation.
 Cela arrive puisqu'il n'est pas toujours facile de trouver un bon nom au moment où l'on est en train d'écrire du code.
-Plutôt que d'être bloqué sur le choix, on met un nom arbitraire (ou peut-être que, par naïveté, on se trompe carrément de nom).
+Plutôt que de buter sur le choix, on met un nom arbitraire (ou peut-être que, par naïveté, on se trompe carrément de nom).
 Alors, si vous observez ce problème (smell) dans un logiciel, vous n'avez qu'à appliquer l'activité de réusinage nommée [Change Function Declaration](https://refactoring.com/catalog/changeFunctionDeclaration.html), [Rename Field](https://refactoring.com/catalog/renameField.html) ou [Rename Variable](https://refactoring.com/catalog/renameVariable.html), selon le cas.
 
 Un autre exemple de mauvaise conception est un programme assez complexe, mais avec seulement une ou
@@ -60,7 +60,7 @@ Ces classes ont beaucoup d'attributs et de méthodes.
 Alors, ce "smell" s'appelle "Large Class", et la solution est d'appliquer des activités de réusinage [Extract Class](https://refactoring.com/catalog/extractClass.html), ou éventuellement [Extract Superclass](https://refactoring.com/catalog/extractSuperclass.html) ou [Replace Type Code with Subclasses](https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html).
 Avec un IDE dominant et un langage populaire, vous aurez probablement des fonctionnalités pour supporter l'automatisation de ces activités de réusinage.
 
-Certaines activités traitent des sujets avancés en conception, mais c'est très intéressant pour ceux (celles) qui aiment le bon design. Voici la liste complète des "smells" ainsi que des activités de réusinage à appliquer (voir le catalogue sur le site Web https://refactoring.com/catalog/ pour les détails).
+Certaines activités traitent des sujets avancés en conception, mais c'est très intéressant pour ceux et celles qui aiment le bon design. Voici la liste complète des "smells" ainsi que des activités de réusinage à appliquer (voir le catalogue sur le site Web <https://refactoring.com/catalog/> pour les détails).
 
 Symptôme de mauvaise conception ("Smell") | Activités de réusinage à appliquer éventuellement
 :-----|:---------------

@@ -2,7 +2,7 @@
 
 Ce chapitre contient des informations sur le concept de la [dette technique](https://fr.wikipedia.org/wiki/Dette_technique)\ {{< fa brands wikipedia-w >}}, qui n'est pas un sujet abordé explicitement dans le livre de @craig_uml_2005.
 
-Pour ajouter une nouvelle fonctionnalité à un système, les développeurs(euses) ont souvent un choix entre deux façons de procéder. 
+Pour ajouter une nouvelle fonctionnalité à un système, les développeurs et développeuses ont souvent un choix entre deux façons de procéder. 
 La première est facile à mettre en place (le "hacking cowboy" sur le [Spectre de la conception](#sec-SpectreDeLaConception)), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur.
 L'autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir.
 Comment prendre la décision?
@@ -12,7 +12,7 @@ Martin Fowler [-@fowl07a] a posé la question "Est-ce que ça vaut la peine de f
 Il a proposé un pseudographique présentant l'évolution de la fonctionnalité cumulative (élément difficile à mesurer) en fonction du temps (voir la @fig-FowlerDesignStaminaHypothesis).
 Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que de mois.
 Mais il avoue que c'est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d'évaluer ce qu'est un bon design.
-Le graphe sert à illustrer le principe que, à un certain moment, ignorer une conception va nuire à la performance des développeurs(euses) en ce qui concerne les nouvelles fonctionnalités.
+Le graphe sert à illustrer le principe que, à un certain moment, ignorer une conception va nuire à la performance des développeurs et développeuses en ce qui concerne les nouvelles fonctionnalités.
 
 Voici une courte définition complémentaire de la dette technique [@avge16a]:
 
@@ -29,7 +29,7 @@ L'inventeur du wiki, Ward Cunningham, a utilisé la métaphore de la dette dans 
 
 ::: {.callout}
 Un autre piège plus sérieux est l'échec à consolider [un design].
-Bien que le code non raffiné puisse fonctionner correctement et être totalement acceptable pour le (la) client(e), des quantités excessives de ce genre de code rendront le programme impossible à maîtriser, ce qui entraînera une surspécialisation des programmeurs(euses) et, finalement, un produit inflexible.
+Bien que le code non raffiné puisse fonctionner correctement et être totalement acceptable pour le client ou la cliente, des quantités excessives de ce genre de code rendront le programme impossible à maîtriser, ce qui entraînera une surspécialisation des programmeurs et programmeuses et, finalement, un produit inflexible.
 Livrer du code non raffiné équivaut à s'endetter.
 Une petite dette accélère le développement tant qu'elle est remboursée rapidement avec une réécriture. 
 [Le paradigme des] objets rend le coût de cette transaction tolérable. 
@@ -38,15 +38,15 @@ Chaque minute passée sur un code qui n'est pas tout à fait correct compte comm
 Des organisations entières peuvent être bloquées par l'endettement d'une implémentation non consolidée, orientée objet ou autre.
 :::
 
-Comme c'est une métaphore puissante, beaucoup de développeurs(euses) l'utilisent, et c'est un terme avec une certaine popularité. 
-Dans une [vidéo](https://www.youtube.com/watch?v=pqeJFYwnkjE) plus récente, Cunningham a rappelé que l'origine de la métaphore s'inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement "mal écrit":
+Comme c'est une métaphore puissante, beaucoup de développeurs et développeuses l'utilisent, et c'est un terme avec une certaine popularité. 
+Dans une [vidéo](https://www.youtube.com/watch?v=pqeJFYwnkjE)\ {{< fa brands youtube >}} plus récente, Cunningham a rappelé que l'origine de la métaphore s'inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement "mal écrit":
 
 ::: {.callout}
-L'explication que j'ai donnée à mon patron, et c'était un logiciel financier, était une analogie financière que j'ai appelée "la métaphore de la dette". Et cela veut dire que si nous ne parvenions pas à aligner notre programme sur ce que nous considérions alors comme la bonne façon de penser à nos objets financiers, alors nous allions continuellement trébucher sur ce désaccord et cela nous ralentirait, comme payer des intérêts sur un prêt.  
+L'explication que j'ai donnée à mon patron, et c'était un logiciel financier, était une analogie financière que j'ai appelée "la métaphore de la dette". Et cela veut dire que si nous ne parvenions pas à aligner notre programme sur ce que nous considérions alors comme la bonne façon de penser à nos objets financiers, alors nous allions continuellement trébucher sur ce désaccord, et cela nous ralentirait, comme payer des intérêts sur un prêt.  
 \   
 [...]  
 \   
-Beaucoup de gens (au moins des blogueurs(euses)) ont expliqué la métaphore de la dette et l'ont confondue, je pense, avec l'idée que vous pourriez écrire mal le code avec l'intention de faire du bon travail plus tard et de penser que c'était la principale source de dette.
+Beaucoup de gens (au moins des blogueurs et blogueuses) ont expliqué la métaphore de la dette et l'ont confondue, je pense, avec l'idée que vous pourriez écrire mal le code avec l'intention de faire du bon travail plus tard et de penser que c'était la principale source de dette.
 Je ne suis jamais favorable à l'écriture médiocre du code, mais je suis en faveur de l'écriture de code pour refléter votre compréhension actuelle d'un problème, même si cette compréhension est partielle.
 :::
 
@@ -55,15 +55,16 @@ Je ne suis jamais favorable à l'écriture médiocre du code, mais je suis en fa
 Fowler a également [abordé le sujet de la dette](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html), notamment à propos de la distinction entre du code "mal écrit" et les compromis de conception faits avec une intention d'accélérer le développement:
 
 ::: {.callout}
-Je pense que la métaphore de la dette fonctionne bien dans les deux cas - la différence est dans la nature de la dette.
-Le code mal écrit est une dette imprudente qui se traduit par des paiements d'intérêts paralysants ou par une longue période de remboursement du capital.
+Je pense que la métaphore de la dette fonctionne bien dans les deux cas -- la différence est dans la nature de la dette.
+Le code mal écrit est une dette imprudente qui se traduit par des paiements d'intérêt paralysants ou par une longue période de remboursement du capital.
 Il y a quelques projets où nous avons pris en charge une base de code avec une dette élevée et nous avons trouvé la métaphore très utile pour discuter avec l'administration de notre client de comment l'aborder.  
 \   
-La métaphore de la dette nous rappelle les choix que nous pouvons faire avec les anomalies de conception. La dette prudente qui a permis de compléter une version du logiciel ne vaut peut-être pas la peine d'être remboursée si les paiements d'intérêts sont suffisamment faibles, par exemple si les anomalies sont dans une partie rarement touchée de la base de code.  
-
-La distinction utile n'est donc pas entre dette ou non-dette, mais entre **dette prudente et imprudente**.  
+La métaphore de la dette nous rappelle les choix que nous pouvons faire avec les anomalies de conception.
+La dette prudente qui a permis de compléter une version du logiciel ne vaut peut-être pas la peine d'être remboursée si les paiements d'intérêt sont suffisamment faibles, par exemple si les anomalies sont dans une partie rarement touchée de la base de code.  
+\
+La distinction utile n'est donc pas entre dette et non-dette, mais entre **dette prudente et dette imprudente**.  
 \   
-[...] Il y a aussi une différence entre la **dette délibérée et involontaire**. L'exemple de la dette prudente est délibéré parce que l'équipe sait qu'elle s'endette et réfléchit donc à la question de savoir si le bénéfice de livrer plus tôt une version du logiciel est supérieur au coût de son remboursement. Une équipe ignorante des pratiques de conception prend sa dette imprudente sans même constater à quel point elle s'endette.  
+[...] Il y a aussi une différence entre la **dette délibérée et dette involontaire**. L'exemple de la dette prudente est délibéré parce que l'équipe sait qu'elle s'endette et réfléchit donc à la question de savoir si le bénéfice de livrer plus tôt une version du logiciel est supérieur au coût de son remboursement. Une équipe ignorante des pratiques de conception prend sa dette imprudente sans même constater à quel point elle s'endette.  
 \   
 La dette imprudente pourrait aussi être délibérée. Une équipe peut connaître les bonnes pratiques de conception, voire être capable de les mettre en pratique, mais décide finalement d'aller "à la va-vite" parce qu'elle pense qu'elle ne peut pas se permettre le temps nécessaire pour écrire du code propre.
 :::
@@ -74,8 +75,8 @@ La dette peut être classifiée dans un quadrant comme sur le @tbl-DetteQuadrant
 
 **Dette** | \cellcolor{red!15}**Imprudente** | \cellcolor{green!15}**Prudente**
 :--|:----------|:----------
-Délibérée | \cellcolor{red!15}"*On n'a pas le temps pour la conception!*" \newline Cette forme de dette est rarement rentable.  |  \cellcolor{green!15}"*Il faut livrer maintenant puis en assumer les conséquences.*" \newline Exemple: La dette est due à une partie limitée du code.\newline
-Involontaire | \cellcolor{red!15}"*C'est quoi, la séparation en couches?*" \newline Il s'agit de l'ignorance de bonnes pratiques. | \cellcolor{green!15}"*Maintenant, nous savons comment nous aurions dû le faire.*" \newline C'est tenter une solution malgré une compréhension limitée du problème.
+Délibérée | \cellcolor{red!15}"*On n'a pas le temps pour la conception!*" \newline Cette forme de dette est rarement rentable.  |  \cellcolor{green!15}"*Il faut livrer maintenant puis en assumer les conséquences.*" \newline Exemple : La dette est due à une partie limitée du code.\newline
+Involontaire | \cellcolor{red!15}"*C'est quoi, la séparation en couches?*" \newline Il s'agit de l'ignorance des bonnes pratiques. | \cellcolor{green!15}"*Maintenant, on sait comment on aurait dû le faire.*" \newline C'est tenter une solution malgré une compréhension limitée du problème.
 
 
 ## Résumé
@@ -83,4 +84,4 @@ Involontaire | \cellcolor{red!15}"*C'est quoi, la séparation en couches?*" \new
 - Il n'est pas toujours possible de faire une conception facile à utiliser et à modifier (sans dette technique), puisque certaines choses sont impossibles à prévoir, surtout dans une application avec beaucoup de complexité.
 - Ignorer complètement le design en faisant du "hacking cowboy" peut apporter un avantage à court terme pour valider des hypothèses rapidement, par exemple dans un contexte d'entreprise en démarrage sans beaucoup de financement ou dans un concours de programmation.
 Cependant, le code produit dans ce genre de contexte aura des problèmes importants (la dette technique) à long terme.
-- La dette technique peut aussi être due à l'incompétence (l'ignorance de bonnes pratiques comme la séparation des couches dans une architecture logique, comme l'exemple d'une couche présentation et d'une couche domaine sur la @fig-dssdetails).
+- La dette technique peut aussi être due à l'incompétence (l'ignorance des bonnes pratiques comme la séparation des couches dans une architecture logique, comme l'exemple d'une couche présentation et d'une couche domaine sur la @fig-dssdetails).

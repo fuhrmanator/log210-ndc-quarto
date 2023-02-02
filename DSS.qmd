@@ -15,7 +15,7 @@ Les DSS sont expliqués en détail dans le chapitre 10\ {{< fa solid book >}}, m
 ## Exemple: DSS pour Attaquer un pays
 
 La @fig-dssattaquerunpays est un exemple de DSS pour le cas d'utilisation *Attaquer un pays*.
-Dans cet exemple, il y a quatre opérations système (avec les arguments de type primitif, sauf le dernier qui n'a aucun argument) et un message de retour.
+Dans cet exemple, il y a quatre opérations système (avec les arguments de type primitif, sauf la dernière qui n'a aucun argument) et un message de retour.
 Vous pouvez noter tous les détails (titre, arguments, types).
 
 ```{.plantuml #fig-dssattaquerunpays caption="Diagramme de séquence système pour le scénario *Attaquer un pays*. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLFBRjj03BmBo3yGlZW6uhP1RuPXn6YA8cqA557INd9XLhIyi4Ifv2uI_r7r7VgnSkFOKN8me1V4uN268rreG0cnhZBTU6vHi0ODsuhiAjwboicWz81kKqeJkN1DrGW4GLOh4OUJR0nXxHNiG5WZ5u_YGo26LSC1FCCVpqNpg0Py9IneXR4A2S9O4_mGhwddwlQBuMxNf0HDM9CeL4spWL88dydotz_WjCQD2Or2DfcsOxjxDaDLHOLD5LXUNyDT_lKc7uo7yq-JeQNt2XJBTE7ZEgzu0z-RA8pLKTpJnXMGE_5jE8hxHROgqQ6muGg3HChKeULo_k7pC2lw6uaT_IHDmfULBncSnK6I1HyCVvddq9fIcFl5CWGql41aQ76hyuz-aQ4BjghHpEnGb16WWikCFNZdMxJeHhDygw7_LzDpKJCtNIZCeEYx6aL8NcXF4-NkERND8BTFYCkpUqw5oxvR4QkDE5GccMNQcX85qrjxxhizDp8tPkj0pGytVLVwsfoz6U4vJDxtx2UzQTgzB8PTy_bqclgaxzIomA0MIphZ4rIOcFGi5LyOe2Kfei8z5mJL60ygA40HqpRs_cphpZprdLltdI4o6vm-ttQlTEVsrTqakp28_Ml_0G00)"  }
@@ -55,29 +55,29 @@ c->s : démarrerAttaque(...)
 @enduml
 ```
 
-Plus tard, lorsque c'est le moment d'implémenter le code, les détails importants seront à respecter.
+Plus tard, lorsque c'est le moment d'implémenter le code, les détails importants devront être respectés.
 Il faut faire attention aux principes de la séparation des couches présentation et domaine.
 Par exemple, la @fig-dssdetails rentre dans les détails de ce qui se passe réellement dans une opération système quand la solution fonctionne avec un service Web:
 
 - D'abord, l'acteur clique sur un bouton;
-- Ce clic se transforme en service REST;
+- Ce clic se transforme en appel REST;
 - Un routeur transforme l'appel REST en une opération système envoyée à un contrôleur GRASP. Notez que c'est un **objet du domaine qui reçoit l'opération système** -- c'est l'essence du principe GRASP Contrôleur;
 - Le contrôleur GRASP dirige la suite, selon la solution proposée dans la réalisation de cas d'utilisation (RDCU).
 
 ```{.plantuml #fig-dssdetails caption="Une opération système est envoyée par la couche présentation et elle est reçue dans la couche domaine par son contrôleur GRASP. Ceci est un exemple avec un navigateur Web, mais d'autres possibilités existent pour la couche présentation. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJ1RXen4Bslb7yOqKC2Ig6ebmf5gm29qgH9YrZIN7ePx06SDVPsx4r8lwYvzm_uiSwksdH1LQILlVAyUU_DZENJ495ZkRP9o8qha74D8JvPafMDgY87ZT0SLRvaNpgjlFKCaT452P6B1yaXn9K981_22fr-P1CZELXu5y4uk3DE-ySWm7-4cXPOsbX17Au9Fh49LSxbR2ousOe2WOyhuW3M-noMJ5YJPLylu6YDkHWjcKIPdWvbDquAifQqg38Chw_XDZkVPWrvwBzhDqlQTn1mMItkTP-NBeShNx93-ofkaoiDcM9Jn5Tn4v9MSMWQQxOmSab9K2XpwNVVDsT5tqjoYcueLCQ7rYmTA1a7SGCbQpJA5EZY1BKsRYbT-0_Bo6z6dZNnU7-w2Qee9ws154qbjm03t2Tplu7Ms9TgHL3mzZa84gFnhWLlj5uij4uQqf8zAcEief8zXvEJp_XWbXY5y8xcQGfxwAalurynhk1Uq_ccOAarJHDo6iJ0ZWdjrsWSrVALWJt2Aogd9kGreHB2iRIVjx-iY5nCXzb4M7SIkjrkZGqlOlVmDXNh0r3MICyucSj1Aku6y74scy35-UoRws5XUW_zdju-hv6PU1WZ2hedV8dpKQxq0t6TL9V8zQojx4T_ocid_CAhQOUaIN0CQW1VYkqprrs7y1JYzgTS9r5U66VaHoO8PrbMyqdD0-XqJeBvGOF-XtIF-KZijJkTH5NG8D1Tk-guFWnaHSaYJC_6jycfD4RUYDy0)"  }
 @startuml
-!include ecriture.pumlinclude
+!include normal.pumlinclude
 scale 1.3
 skinparam sequenceMessageAlign center
 skinparam participantPadding 10
 skinparam sequenceBoxBorderColor transparent
 actor ":Joueur" as j
 box "Couche présentation" #ddffdd
-participant ":Button" as b <<NavigateurWeb>> 
-participant ":Routeur" as r <<NodeExpress>>
+participant ":Button" as b << NavigateurWeb >> 
+participant ":Routeur" as r << NodeExpress >>
 end box
 box "Couche domaine" #ddddff
-participant ":JeuRisk" as c <<ContrôleurGRASP>>
+participant ":JeuRisk" as c << ContrôleurGRASP >>
 participant "..." as s
 end box
 j -> b : cliquer
@@ -121,7 +121,7 @@ Donc, on peut se poser la question suivante: les scénarios alternatifs implique
 Si la réponse est non, on peut ignorer les scénarios alternatifs dans le DSS.
 Par contre, si la réponse est oui, il est essentiel de définir ces opérations système dans un DSS.
 
-Quant au choix de faire des DSS séparés ou d'utiliser la notation UML pour montrer les flots différents sur le même DSS, ça dépend de la complexité de la logique des flots.
+Quant au choix de faire des DSS séparés ou d'utiliser la notation UML pour montrer les flots différents dans le même DSS, ça dépend de la complexité de la logique des flots.
 Un DSS devrait être *facile à comprendre*.
 C'est à vous de juger si votre DSS avec des `opt` ou des `alt` est assez simple ou est compliqué à lire.
 Utilisez un autre DSS (ou plusieurs) ayant le nom des scénarios alternatifs si cela vous semble plus clair.
@@ -182,7 +182,7 @@ Cela simplifie aussi le contrôleur GRASP.
 
 ### Dessiner un DSS à partir d'un cas d'utilisation
 
-Esquissez le DSS pour le cas d'utilisation [Réserver un livre de la bibliothèque](#sec-CU_Réserver_livre). 
+Esquissez le DSS pour le cas d'utilisation *[Réserver un livre de la bibliothèque](#sec-CU_Réserver_livre)*.
 Toutes les opérations système doivent définir le type de chaque argument, si nécessaire.
 
 :::

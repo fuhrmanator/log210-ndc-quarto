@@ -19,9 +19,8 @@ La @fig-ActivityDiagramExampleGitCommit présente un exemple de diagramme d'acti
 
 ```{.plantuml #fig-ActivityDiagramExampleGitCommit caption="Diagramme d'activité pour un processus simple avec Git. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VL9BRjj03DtFAGXlRE_QhRreZAG9ya5QH6wxoc8yGqcC98unmscIS_G2tVeSGkzLoWfGEq0j29Gmxv5yV9op93PAxbgJ6kAjZRQ39AyjQepatY4RwvegXipUXJP4a6WvAOGiPWfIKm9zBTIM_NCa4MGe0miGmmzY7vwJcVuhvx6qkPM1mRP3k8sKXfJhzRcPhcjC245gZ0dQ41ge8jfzgUBx5SmwswZ8757xukjKlyGwJDkYrvuHLdTtyAtu_50SD8UF7-Rc__sJhOR09qLUSmCt8KUsxIdQI-Cy52xILaxHlgAQ5DE1g4Fl96OyW2x6v3M-oAgbYZlr7Pm6ZAVMDspOS124I5Kji82BVhV9OXOF_SvJXH5SyBWyvgoSq4-IVcSMvuf25poLrEyUZsdtVtvb3tuQDayenb09ioiRlTOS4vmL2fm-pOSrCSo-P9eRqEUz84T9YO02PHx-zgJ5wYbaUHC8_MyTorR4rN94zy8cXPwXdpoEPvUMz2vCNEWwaWdO3BxVROD0HR8S60PRlLYp-y2Za8KsB_T9Huhtc6QFrY0hf5Q6xV7ubyJcJ44r-Yy0)"  }
 @startuml
-skinparam style strictuml
+!include normal.pumlinclude
 skinparam DefaultTextAlignment center
-skinparam defaultFontName Arial
 start
 note right : Début
 :Rédiger code;
@@ -31,9 +30,12 @@ note right : Nœud d'objet
 
 if (Garder\nmodifications ?) then (Oui)
     note right : Décision et fusion
-    :Ajouter code à //staging//;
-    :Code « staged »]
-    :Faire « commit » au dépôt Git;    
+    :Ajouter code à
+    //staging//;
+    :Code prêt à enregistrer 
+    au depôt Git]
+    :Faire « commit » 
+    au dépôt Git;
 else (Non)
     :Défaire modifications
     au code;
@@ -49,28 +51,29 @@ Pour la modélisation de flots de données, il existe une notation pour les [dia
 Il ne s'agit pas de l'UML, mais cette notation est encore utilisée (depuis les années 1970).
 
 Un exemple de diagramme d'activités dans le cadre d'un cours de programmation utilisant GitHub Classroom est illustré sur la @fig-GitHubClassroomActivities.
-Ce diagramme explique comment GitHub Classroom permet à l'étudiant(e) qui accepte un devoir (*assignment* en anglais) sur GitHub Classroom de choisir son identité universitaire, mais seulement si l'enseignant(e) a téléversé la liste de classe *avant* d'envoyer les invitations aux étudiant(e)s.
+Ce diagramme explique comment GitHub Classroom permet à l'étudiant ou étudiante qui accepte un devoir (*assignment* en anglais) sur GitHub Classroom de choisir son identité universitaire (activité en couleur rose), mais seulement si l'enseignant ou enseignante a téléversé la liste de classe (activité en couleur rose) *avant* d'envoyer les invitations à la communauté étudiante.
 
 ```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classroom (contexte de l'ÉTS avec Moodle). [(PlantUML)](https://www.plantuml.com/plantuml/uml/NOzBYXin48RtEaN1B6n3Gk_jpHZF91d88uJ90SfIjQSOFMIfD2JG5yXHlCagD-YBfTenxJ2z4AZhrr_VTri5YxJWJNtccB5WW2e_FUbPsBwQt56FpSiZ_P2jvqCC50Mi7bJ-Ixb_gNSfocSC1Dl2w8smQEjzj4yu_evqVkeMQ8LVMCPJXPnQ0PqU6q7NxJpMMb8ANGVBGqajqrkhYReomtsifDjH6rA3wuq6SzOnwrqPJrHWBjcOcxvt-gqVGav5TEQv2Yahs2b4PldW58bxrg8Adr9odbQRkMfRwqLOaz4fj6lekqV2CAM-wbeyQ6uvGHOclmA_-FxjepfoL4CKJd5ZXXld9f9X_2NDyKLXlgZ1-akc2FhoohnxIbov05y9Bu0RCm_7qx5n9bXgdvsOvr_ADxnd-T3ssdxNikTZcqZxL9wLai2Dfpp-KJ5iiAUQEBu1V24xpMmAMSYuHOiGAEoBnadLKZbWv7hMqWLLKZQt55qBtlm5)"  }
 @startuml
-skinparam style strictuml
+!include normal.pumlinclude
 skinparam DefaultTextAlignment center
-skinparam defaultFontName Helvetica,Arial,sans-serif
 'title Enchaînement d'activités pour chaque //classroom// (groupe-cours)
 |Enseignant ou Enseignante|
 start
-:Créer //Classroom//;
+:Créer
+//Classroom//;
 #ffdddd:Importer liste de classe
 (Identifiants Moodle);
-:Créer //Assignment//
+:Créer
+//Assignment//
 (//Individual/Team//);
-:Partager (courriel) l'URL d'invitation;
+:Partager (courriel) URL d'invitation;
 |#ddffdd|Étudiant ou Étudiante|
 :Ouvrir URL;
 #ffdddd:Choisir identifiant Moodle;
 :Choisir équipe (ou créer équipe);
 |GitHub|
-:Dupliquer (//fork//) le dépôt
+:Dupliquer dépôt
 (au besoin, avec le compte
 d'un(e) membre de l'organisation);
 stop
@@ -79,9 +82,8 @@ stop
 
 ## Exercices
 
-Ces exercices devraient vous aider à comprendre les diagrammes
-d'activités en UML. Vous devez vous référer au livre du cours pour la
-bonne notation (chapitre F25/A28) \faBook<i class="fa-solid fa-book"></i>.
+Ces exercices devraient vous aider à comprendre les diagrammes d'activités en UML.
+Vous devez vous référer au livre de @craig_uml_2005 pour la bonne notation (chapitre F25/A28 \faBook<i class="fa-solid fa-book"></i>).
 
 {{< include _callout_conseils_diagrammes.qmd >}}
 
@@ -94,7 +96,7 @@ Esquissez le diagramme d'activités lors de la réception de voitures louées (a
 Pour le diagramme, faites attention à la **notation UML**: cela comprend les objets (pour la voiture et pour la facture), le début et la fin de l'activité, les débranchements, les jointures, les décisions et les fusions.
 
 -   Les rôles sont le client, le réceptionniste (qui gère la documentation et le paiement de la location) et l'agent (qui gère le traitement des voitures avant la prochaine location).
--   Le client rend la voiture et les clés.
+-   Le client rend la voiture et les clés au réceptionniste.
 -   Le réceptionniste note le kilométrage et le niveau d'essence pour calculer la facture.
 -   Le client paye sa location, selon le montant sur la facture.
 -   L'agent inspecte la voiture pour la propreté. Si elle n'est pas assez propre, alors l'agent doit laver, rincer et sécher l'extérieur et nettoyer l'intérieur. Ce travail devrait commencer le plus vite possible, après que le réceptionniste a fini de noter les informations pour la facture.

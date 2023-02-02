@@ -1,0 +1,3 @@
+skinparam style strictuml
+skinparam defaultFontName Helvetica,Arial,sans-serif
+skinparam backgroundcolor transparent

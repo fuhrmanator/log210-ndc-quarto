@@ -9,6 +9,7 @@ latex-auto-install: true
 crossref:
   fig-prefix: figure     # (default is "Figure")
   tbl-prefix: tableau    # (default is "Table")
+  sec-prefix: section    # (default is "Section")
 
 # setting fr-FR causes the date to be in english?
 lang: fr
@@ -136,7 +137,8 @@ format:
       - heightrounded
     fontfamily: libertinus
     fontfamilyoptions: 
-      - osf
+      # causes numbers to drop below the line, and a 0 by itself looks like an o
+      # - osf
       - p
     fontsize: 12pt
     include-in-header: 
@@ -152,8 +154,8 @@ format:
 
 # filters must be run in the proper order here
 filters:
-  - filters/fr-nbsp.lua
   - filters/diagram-generator.lua
+  - filters/fr-nbsp.lua
   - quarto
   - filters/inline-svg.lua
   - filters/pandoc-quotes.lua

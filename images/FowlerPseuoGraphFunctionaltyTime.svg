@@ -51,7 +51,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="1.535011"
-     inkscape:cx="336.47967"
+     inkscape:cx="329.96506"
      inkscape:cy="248.85815"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
@@ -208,7 +208,7 @@
        sodipodi:role="line"
        id="tspan421"
        x="577.19458"
-       y="263.84174">... mais ici, il n'y a plus avantage</tspan></text>
+       y="263.84174">...mais ici, il n'y a plus d'avantage</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000"
@@ -230,10 +230,10 @@
      transform="translate(-95.113321,24.104062)"><tspan
        x="351.39423"
        y="333.5481"
-       id="tspan740">Ici, un gain potentiel à faire des compromis </tspan><tspan
+       id="tspan475">Ici, un gain potentiel à faire des compromis </tspan><tspan
        x="351.39423"
        y="351.88146"
-       id="tspan742">(temps de commercialisation) ...</tspan></text>
+       id="tspan477">(temps de commercialisation)...</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000"
@@ -255,12 +255,12 @@
      transform="translate(1.3029222,78.312185)"><tspan
        x="142.66998"
        y="195.43834"
-       id="tspan744">Limite de gain<tspan
+       id="tspan479">Limite de gain<tspan
    y="195.43834"
-   id="tspan746"> </tspan></tspan><tspan
+   id="tspan481"> </tspan></tspan><tspan
        x="142.66998"
        y="212.10497"
-       id="tspan748">de conception</tspan></text>
+       id="tspan483">de conception</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;white-space:pre;inline-size:100.406;fill:#000000"
@@ -270,12 +270,12 @@
      transform="translate(-91.856018,-179.01496)"><tspan
        x="186.96349"
        y="195.43834"
-       id="tspan750">Fonctionnalités<tspan
+       id="tspan485">Fonctionnalités<tspan
    y="195.43834"
-   id="tspan752"> </tspan></tspan><tspan
+   id="tspan487"> </tspan></tspan><tspan
        x="186.96349"
        y="212.10497"
-       id="tspan754">cumulatives</tspan></text>
+       id="tspan489">cumulatives</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:100.406;fill:#000000"
@@ -285,5 +285,5 @@
      transform="translate(239.08623,275.7049)"><tspan
        x="148.51958"
        y="195.43834"
-       id="tspan756">Temps</tspan></text>
+       id="tspan491">Temps</tspan></text>
 </svg>

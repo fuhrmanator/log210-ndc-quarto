@@ -1,29 +1,29 @@
-# Cas d'utilisation - Réserver un livre de la bibliothèque {#sec-CU_Réserver_livre}
+# Cas d'utilisation -- Réserver un livre de la bibliothèque {#sec-CU_Réserver_livre}
 
-**Parties prenantes et intérêts**:  
-- **La personne membre.** Elle veut un moyen de recherche exact et rapide et ne
-veut pas que la Bibliothèque mémorise des informations sur ses
-recherches (confidentialité). Elle veut pouvoir réaliser des réservations
-aisément, obtenir un service rapide en fournissant un minimum d'efforts.
+**Parties prenantes et intérêts**:
+
+- **La personne membre.**
+Elle veut un moyen de recherche exact et rapide, et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité).
+Elle veut pouvoir réaliser des réservations aisément et obtenir un service rapide en fournissant un minimum d'efforts.
 Elle veut également une preuve de réservation.  
-- **La Bibliothèque.** Elle veut enregistrer correctement les
-réservations et satisfaire les souhaits des membres.  
-**Préconditions**: La personne membre est identifiée et authentifiée  
+- **La Bibliothèque.** Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.  
+
+**Préconditions**: La personne membre est identifiée et authentifiée.
+
 **Acteur principal: Personne membre**
 
-1.  La personne membre choisit la fonction "recherche" et saisit du texte décrivant le livre (par exemple, une partie du titre, "UML").
-2.  Le système affiche une liste de livres (le titre, l'auteur(e) et l'année) correspondant à la recherche, par exemple "UML 2 et les design patterns, Craig Larman, 2005" et "UML par la pratique, Pascal Rocques, 2009".
+1.  La personne membre choisit la fonction "recherche" et saisit du texte décrivant le livre (par exemple une partie du titre, "UML").
+2.  Le système affiche une liste de livres (le titre, l'auteur ou l'auteure et l'année) correspondant à la recherche, par exemple "UML 2 et les design patterns, Craig Larman, 2005" et "UML par la pratique, Pascal Roques, 2009".
 3.  La personne membre choisit un livre parmi les résultats, par exemple "UML 2 et les designs patterns, Craig Larman, 2005".
-4.  Le système affiche les informations détaillées du livre (le titre, l'auteur(e), le numéro ISBN, la maison d'édition, le numéro de l'édition et l'année) ainsi que la liste de tous les exemplaires
+4.  Le système affiche les informations détaillées du livre (le titre, l'auteur ou l'auteure, le numéro ISBN, la maison d'édition, le numéro de l'édition et l'année) ainsi que la liste de tous les exemplaires
 du livre indiquant s'ils sont disponibles ou pas, par exemple deux exemplaires du livre "UML 2 et les design patterns", un avec
 l'identificateur d'exemplaire "1" qui est disponible et un avec
 l'identificateur d'exemplaire "2" qui n'est pas disponible.
 5.  La personne membre réserve un exemplaire du livre qui est disponible.
-6.  Le système confirme la réservation en affichant un numéro de
-réservation avec le nom du membre et le code de l'exemplaire du
-livre.
+6.  Le système confirme la réservation en affichant un numéro de réservation avec le nom de la personne membre et le code de l'exemplaire du livre.
 
-Extensions (scénarios alternatifs):
+\filbreak
+**Extensions (scénarios alternatifs)**:
 
 2.  Aucun livre ne correspond au texte de la recherche.
     1.  Le système affiche un message indiquant qu'aucun livre n'a été trouvé.

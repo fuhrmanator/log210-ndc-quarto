@@ -1,18 +1,18 @@
 
 # Laboratoires {#sec-Laboratoires}
 
-À l'École de technologie supérieure, le cours de LOG210 propose un laboratoire de mise à niveau (nommé "lab 0") réalisé individuellement où on passe à travers les différentes technologies utilisées dans le projet du laboratoire principal, qui lui, est réalisé pendant le reste du cours en trois itérations de trois semaines.
+À l'École de technologie supérieure, le cours de _LOG210_ propose un laboratoire de mise à niveau (nommé "lab 0") réalisé individuellement, où l'on passe à travers les différentes technologies utilisées dans le projet du laboratoire principal, qui, lui, est réalisé pendant le reste du cours en trois itérations de trois semaines.
 On peut trouver sur GitHub l'énoncé du [lab0](https://github.com/profcfuhrmanets/log210-enonce-lab0) et du [laboratoire principal](https://github.com/profcfuhrmanets/log210-enonce-lab1).
-Chaque équipe est libre à choisir parmi une liste d'exigences ce qu'elle veut réaliser dans chaque itération. 
+Chaque équipe est libre de choisir parmi une liste d'exigences ce qu'elle veut réaliser dans chaque itération. 
 Cela permet de pratiquer l'approche itérative en équipe.
 L'approche TDD est obligatoire (pour avoir des points pour une fonctionnalité réalisée).
 
-Les deux premières itérations sont évaluées, mais les points pour les fonctionnalités réussites ne compte qu'à la dernière itération.
+Les deux premières itérations sont évaluées, mais les points pour les fonctionnalités réussies ne sont comptabilisés qu'à la dernière itération.
 Cela a plusieurs avantages pédagogiques:
 
-- réduction du risque d'échec, puisqu'on on a des rétroactions formelles à toutes les trois semaines environ.
-- réduction de la facilité de faire du plagiat, puisqu'on doit construit en équipe un système tout au long du cours, et las éléments d'analyse et de conception (le MDD et les RDCU) doivent être cohérents avec le code (et les tests).
-- possibilité de constater et de corriger tôt les dysfonctionnements dans une équipe (mais on doit être proactif et pret à confronter les problèmes, ce qui reste un défi culturel).
+- réduction du risque d'échec, puisqu'on a des rétroactions formelles toutes les trois semaines environ;
+- réduction de la facilité de faire du plagiat, puisqu'on doit construire en équipe un système tout au long du cours, et les éléments d'analyse et de conception (le MDD et les RDCU) doivent être cohérents avec le code (et les tests);
+- possibilité de constater et de corriger tôt les dysfonctionnements dans une équipe (mais on doit faire preuve de proactivité et de volonté pour affronter les problèmes, ce qui reste un défi culturel).
 
 Ce chapitre contient des informations sur le volet technique des laboratoires.
 
@@ -31,18 +31,18 @@ Selon @goldberg_learning_2022, TypeScript comprend quatre éléments:
 
 ## JavaScript/TypeScript
 
-Pour la personne ayant déjà des connaissances de Java et des _patterns_ de conception de la Bande des quatre @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
+Pour la personne ayant déjà des connaissances de Java et des patterns de conception de la Bande des quatre, @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
 
-- **JavaScript**: un tutoriel intéressant (et libre) est sur [fr.javascript.info](https://fr.javascript.info/). Nous vous recommandons de contribuer à des [traductions en français sur GitHub](https://github.com/javascript-tutorial/fr.javascript.info#readme). 
+- **JavaScript**: un tutoriel intéressant (et libre) se trouve sur [fr.javascript.info](https://fr.javascript.info/). Nous vous recommandons de contribuer à des [traductions en français sur GitHub](https://github.com/javascript-tutorial/fr.javascript.info#readme). 
 - **TypeScript**: [ce tutoriel](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html) est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C\#.
 
 Voici des points importants pour le projet de laboratoire, organisés pour quelqu'un ayant déjà des connaissances en Java:
 
-- TypeScript se traduit ("emit") en JavaScript, alors il faut comprendre le moteur d'exécution JavaScript. 
+- TypeScript se traduit ("emits") en JavaScript, alors il faut comprendre le moteur d'exécution JavaScript. 
 - Pour convertir une chaîne en nombre, pour lire ou écrire un fichier sur disque, etc., on utilise des opérations en JavaScript.
 - Un *type* en TypeScript est comme *un ensemble de valeurs* plutôt qu'une définition hiérarchique.
 En Java, il n'est pas possible d'avoir un type pouvant être soit une chaîne soit un nombre.
-Mais en TypeScript, c'est facile de déclarer un type comme une *union* de plusieurs types, par exemple `string | number`. 
+Mais, en TypeScript, c'est facile de déclarer un type comme une *union* de plusieurs types, par exemple `string | number`. 
 - JavaScript a des notions de "truthy" et "falsy" (conversion d'une expression en une valeur booléenne) permettant de vérifier avec moins de code si une variable est définie ou initialisée, etc.
 - [L'opérateur d'égalité stricte (`===`)](https://fr.javascript.info/comparison#egalite-stricte) (sans conversion de type).
 - [Les fonctions fléchées](https://fr.javascript.info/arrow-functions-basics) (*fat arrow functions* en anglais).
@@ -50,8 +50,8 @@ Mais en TypeScript, c'est facile de déclarer un type comme une *union* de plusi
   - Promesses et [`async`/`await`](https://fr.javascript.info/async-await).
 - Les services REST (GET vs PUT).
 - Environnement de test (Jest).
-- Les gabarits (*templates*) Pug (anciennement Jade): [Tutoriel (court)](https://www.youtube.com/watch?v=DSp9ExFw3Ig), [Tutoriel (plus complet)](https://www.youtube.com/watch?v=kt3cEjjkCZA)
-- Bootstrap (mise en page avec CSS): [Tutoriel (attention, il faut appliquer les éléments dans les gabarits Pug).](https://www.youtube.com/watch?v=MrgGq3fob4o)
+- Les gabarits (*templates*) Pug (anciennement Jade): [Tutoriel (court)](https://www.youtube.com/watch?v=DSp9ExFw3Ig)\ {{< fa brands youtube >}}, [Tutoriel (plus complet)](https://www.youtube.com/watch?v=kt3cEjjkCZA)\ {{< fa brands youtube >}}.
+- Bootstrap (mise en page avec CSS): [Tutoriel (attention, il faut appliquer les éléments dans les gabarits Pug)](https://www.youtube.com/watch?v=MrgGq3fob4o)\ {{< fa brands youtube >}}.
 
 Le [lab 0](https://github.com/ets-log210/log210-enonce-lab0) aborde plusieurs de ces aspects, mais certaines notions sont plus complexes et nécessitent une étude approfondie. 
 Le but de cette section est de donner des tutoriels plus spécifiques.
@@ -73,7 +73,7 @@ let maVariable;
 if (maVariable != undefined 
     && maVariable != null 
     && maVariable != '') {
-  // on peut faire quelque chose avec maVariable ...
+  // on peut faire quelque chose avec maVariable...
 }
 ```
 
@@ -84,7 +84,7 @@ Il serait bien de pouvoir réduire la quantité de code dans ces cas.
 Grâce à la notion de conversion de valeur selon la règle de "truthy" et "falsy", JavaScript permet de simplifier les instructions en une seule condition, sans ET (`&&`), en convertissant la valeur de `maVariable` en booléenne `true` ou `false`:
 
 ```Javascript
-// conversion booléenne selon la règle de "truthy" et "falsy"
+// conversion booléenne selon la règle de « truthy » et « falsy »
 if (maVariable) {
   // on peut faire quelque chose avec maVariable...
 }
@@ -127,156 +127,20 @@ Il s'agit d'un logiciel libre et gratuit, créé en 2005 par Linus Torvalds, fon
 Linus Torvalds prononce Git avec un _g_ dur [@google_tech_2007].
 
 Git est particulier parce qu'il est décentralisé, utilisant un système de connexion pair à pair.
-Les fichiers informatiques sont stockés sur l'ordinateur de chaque personne qui contribue au projet et ils peuvent également l'être sur un serveur dédié comme [GitHub](https://github.com/), [GitLab](https://gitlab.com/), [BitBucket](https://bitbucket.org/), etc.
+Les fichiers informatiques sont stockés sur l'ordinateur de chaque personne qui contribue au projet et ils peuvent également l'être sur un serveur dédié comme [GitHub](https://github.com/), [GitLab](https://gitlab.com/), [Bitbucket](https://bitbucket.org/), etc.
 
-Puisque chaque personne est libre à modifier les fichiers comme elle veut, sans être bloquée par les autres contributeurs, il est nécessaire de synchroniser et de fusionner les contributions de temps en temps. 
-Cette synchronisation peut être plus ou moins compliquée, selon les travaux réalisés par chacun, par exemple lorsque deux personnes ont modifié un même fichier sur son ordinateur.
-Une des forces de Git est l'ensemble des fonctionnalités permettant de gérer tous les cas synchronisation.
+Puisque chaque personne est libre de modifier les fichiers comme elle le veut, sans être bloquée par les autres contributeurs et contributrices, il est nécessaire de synchroniser et de fusionner les contributions de temps en temps. 
+Cette synchronisation peut être plus ou moins compliquée, selon les travaux réalisés par chaque personne, par exemple lorsque deux entre elles ont modifié un même fichier sur leur ordinateur.
+Une des forces de Git est l'ensemble des fonctionnalités permettant de gérer tous les cas de synchronisation.
 Mais cet avantage peut aussi faire en sorte que Git soit compliqué à utiliser.
-La @fig-git_fonctionnement présente un survol des concepts et opérations de base de Git.
+La @fig-git_fonctionnement présente un survol des concepts et des opérations de base de Git.
 
 Ce manuel ne rentre pas dans les détails de chaque opération Git; il existe plusieurs tutoriels pour Git sur Internet.
 Il y a beaucoup de scénarios où Git peut être utile, par exemple pour récupérer une version antérieure d'un fichier ou pour savoir qui a apporté une modification à un fichier, etc.
 Apprendre tous les cas d'utilisation de Git serait long et pas très intéressant.
 Il n'est pas nécessaire de tout comprendre pour commencer.
 
-```{.plantuml #fig-git_fonctionnement caption='Concepts et opérations de base de Git. (Cette œuvre, "Concepts et opérations de base de Git", est un dérivé de ["Basic git concepts and operations"](https://graphviz.org/Gallery/directed/git.html) de [Costa Shulyupin](https://gitlab.com/makelinux), utilisé sous [EPL](https://en.wikipedia.org/wiki/Eclipse_Public_License).'}
-@startuml
-digraph git_basics {
-	graph [
-'		label = "Basic git concepts and operations\n\n"
-'		labelloc = t
-'		fontname = "Helvetica,Arial,sans-serif"
-'		fontsize = 20
-		layout = dot
-		rankdir = LR
-		newrank = true
-	]
-	node [
-		style=filled
-		shape=rect
-		pencolor="#00000044" // frames color
-		fontname="Helvetica,Arial,sans-serif"
-		shape=plaintext
-	]
-	edge [
-		arrowsize=0.5
-		fontname="Helvetica,Arial,sans-serif"
-		labeldistance=3
-		labelfontcolor="#00000080"
-		penwidth=2
-		style=dotted // dotted style symbolizes data transfer
-	]
-	changes [
-		color="#88000022"
-		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-			<tr> <td> <b>changes</b><br/>in the working tree </td> </tr>
-			<tr> <td align="left"><i>To view: </i><br align="left"/>
-			git diff
-			<br align="left"/></td> </tr>
-		</table>>
-		shape=plain
-	]
-	staging [
-		fillcolor="#ff880022"
-		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-			<tr> <td> <b>staging area</b><br/>(cache, index)</td> </tr>
-			<tr> <td align="left"><i>To view: </i><br align="left"/>
-			git diff --staged
-			<br align="left"/></td> </tr>
-		</table>>
-		shape=plain
-	]
-	staging -> HEAD:push [label="git commit" weight=1000 color="#88000088"]
-	stash [
-		fillcolor="#0044ff22"
-		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-			<tr> <td> <b>stash</b></td> </tr>
-			<tr> <td align="left"><i>To view:</i><br align="left"/>
-			git stash list
-			<br align="left"/></td> </tr>
-		</table>>
-		shape=plain
-	]
-	stash_push [
-		label="git stash [push]"
-		style=""
-		shape=plain
-		color="transparent"
-	]
-	{
-		edge [arrowhead=none color="#00008844"]
-		changes ->  stash_push
-		stash_push -> staging
-	}
-	changes -> stash [
-		dir=back
-		taillabel="git stash pop"
-    labelfontcolor="black"
-'    labelfloat=true
-    labeldistance=2.4
-    labelangle=0
-		color="#00000088"
-    weight=0]
-	stash_push -> stash [xdir=back color="#00008844" minlen=0]
-	HEAD [
-		fillcolor="#88ff0022"
-		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
-			<tr> <td port="push" sides="ltr"> <b>HEAD </b>of</td> </tr>
-			<tr> <td port="pull" sides="lbr"> the current branch</td> </tr>
-			<tr> <td port="switch" align="left">
-				<i>To view:</i>
-				<br align="left"/>
-				git show<br align="left"/>
-				git log
-				<br align="left"/>
-			</td> </tr>
-			<tr> <td align="left">
-				<i>To change branch:</i><br align="left"/>
-				git switch ...
-				<br align="left"/>
-				git checkout ...
-				<br align="left"/>
-			</td> </tr>
-		</table>>
-		shape=plain
-	]
-	remote [
-		label="remote branch"
-		shape=box
-		color="#00000022"
-		fillcolor="#00ff0022"
-	]
-
-	HEAD:push -> remote [label="git push" color="#88000088"]
-	HEAD:pull -> remote [dir=back label="git pull" color="#00440088"]
-	branches [
-		fillcolor="#00888822"
-		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-			<tr> <td> <b>local branches</b> </td> </tr>
-			<tr> <td align="left"><i>To view:</i><br align="left"/>
-			git branch [--list]
-			<br align="left"/></td> </tr>
-			</table>>
-		shape=plain
-	]
-	changes -> staging [label="git add ...    \ngit reset      " color="#88000088"]
-	discard [shape=plaintext style=""]
-	changes -> discard [label="git restore ..." color="#88000088"]
-	{rank=same changes discard}
-	// UML style aggregation
-	HEAD:switch -> branches [
-		dir=back
-		style=""
-		penwidth=1
-		arrowtail=odiamond
-		arrowhead=none
-		color="#00000088"
-	]
-}
-// © 2022 Costa Shulyupin, licensed under EPL
-@enduml
-```
+![Concepts et opérations de base de Git. ["Basic Git Concepts and Operations"](https://graphviz.org/Gallery/directed/git.html) de [Costa Shulyupin](https://gitlab.com/makelinux), utilisé sous [EPL](https://en.wikipedia.org/wiki/Eclipse_Public_License).](images/git.svg){#fig-git_fonctionnement}
 
 ## Évaluer les contributions des membres de l'équipe {#sec-ContributionsEquipe}
 
@@ -317,8 +181,8 @@ ContributionsÉquipeViews.html
 
 Les fichiers `.html` sont créés pour les contributions `Test`, `Modèles`, `Docs`, `TypeScript` et `Views`. Chaque rapport indique les contributions selon deux perspectives:
 
-1. Le nombre de soumissions par auteur(e) (activité Git);
-2. Le nombre de lignes par auteur(e) encore présentes et intactes dans la version HEAD.
+1. Le nombre de soumissions par auteur ou auteure (activité Git);
+2. Le nombre de lignes par auteur ou auteure encore présentes et intactes dans la version HEAD.
 
 Vous pouvez voir un exemple de rapport à la @fig-GitinspectorOutput.
 
@@ -326,11 +190,11 @@ Vous pouvez voir un exemple de rapport à la @fig-GitinspectorOutput.
 
 ### Faire le bilan de la contribution de chaque membre
 
-Après l'évaluation à la fin de chaque itération, il est important de quantifier et considérer la contribution de chacun au projet et de valider avec les responsabilités prévues dans le plan de l'itération.
+Après l'évaluation à la fin de chaque itération, il est important de quantifier et de considérer la contribution de chacun et chacune au projet et de valider avec les responsabilités prévues dans le plan de l'itération.
 Il est normal d'avoir un écart entre le travail prévu et le travail effectué. 
 Un des objectifs du bilan est d'essayer d'expliquer les gros écarts et de corriger ou mitiger les problèmes.
 
-Par exemple, on peut voir sur la @fig-GitinspectorOutput que Anne et Justin ont fait une contribution beaucoup plus importante que Francis et Mélanie. 
+Par exemple, on peut voir sur la @fig-GitinspectorOutput qu'Anne et Justin ont fait une contribution beaucoup plus importante que Francis et Mélanie. 
 Dans le bilan de l'itération, **on doit indiquer explicitement ce fait, même avec des pourcentages**. 
 
 ::: {.callout-important}
@@ -344,15 +208,15 @@ Une inégalité importante dans les contributions est un signal d'alarme. On doi
 - Est-ce que Francis et Mélanie sont à l'aise avec les technologies utilisées dans le lab? Ont-ils besoin de coaching?
 - Sont-ils des "parasites" ou des "mollassons" [@oakley_coping_2004] ([traduction française de l'article](https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub))? 
 À certaines universités, le plan de cours vous permet d'exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais **seulement s'ils n'ont rien fait du tout** (ce qui n'est pas le cas dans l'exemple ci-dessus).
-Une personne exclue de cette manière va probablement abandonner le cours, et vous perdrez définitivement un membre de l'équipe.
+Une personne exclue de cette manière va probablement abandonner le cours, et vous perdrez définitivement un ou une membre de l'équipe.
 - Est-ce qu'Anne et Justin ont laissé suffisamment de liberté aux autres pour faire une contribution importante? Font-ils assez confiance aux autres? 
 - Avez-vous fait un plan d'itération assez détaillé pour que chaque membre puisse contribuer adéquatement? Dans l'exemple ci-dessus, peut-être Francis et Mélanie ont-ils trouvé ça difficile de savoir où contribuer?
 - Est-ce que tout le monde assiste aux séances de laboratoire?
 - Est-ce que tout le monde travaille *au moins 6 heures en dehors des séances encadrées*?
-- Est-ce que certains membres travaillent excessivement, sans donner la chance aux autres de contribuer?
+- Est-ce que certaines personnes travaillent excessivement, sans donner la chance aux autres de contribuer?
 N'oubliez pas que les laboratoires sont une manière d'apprendre à pratiquer la matière de ce manuel. 
 Laisser un ou deux membres de l'équipe faire plus de travail peut nuire à la valeur pédagogique des laboratoires (ça peut faire mal à l'examen final pour les membres qui ont moins contribué).
-Il y a aussi un risque sur le plan de la [Redondance des compétences dans l'équipe (*bus Factor*)](#sec-Bus_Factor), surtout si un(e) membre qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'il (elle) travaille trop.
+Il y a aussi un risque sur le plan de la [Redondance des compétences dans l'équipe (*bus factor*)](#sec-Bus_Factor), surtout si une personne qui travaille beaucoup plus que les autres éprouve un problème d'épuisement à cause du fait qu'elle travaille trop.
 - Est-ce que tout le monde utilise un moyen de communication de manière synchrone et asynchrone (Slack, Discord, Teams, etc.)? Le courriel n'est pas l'outil idéal pour coordonner un travail en équipe.
 - Etc.
 
@@ -399,10 +263,10 @@ Le nom que vous mettez sera celui qui apparaît dans les rapports la prochaine f
 
 **Q: Comment exclure le travail réalisé par un(e) chargé(e) de laboratoire (par exemple le clone initial dans GitHub Classroom)?**
 
-**R:** La solution est d'ajouter le nom de l'auteur(e) dans le tableau du script `contributions.sh` à la ligne suivante avec `authorsToExcludeArray`. Attention:
+**R:** La solution est d'ajouter le nom de l'auteur ou de l'auteure dans le tableau du script `contributions.sh` à la ligne suivante avec `authorsToExcludeArray`. Attention:
 
 - Il n'y a pas de `,` entre les éléments des tableaux en bash.
-- Le nom d'un(e) auteur(e) contenant un accent ne sera pas reconnu. Il faut changer le nom dans le `.mailmap` pour qu'il n'y ait pas d'accents, ou utiliser une chaîne partielle comme `"Benjamin Le"` pour exclure les contributions de `"Benjamin Le Dû"`.
+- Un nom contenant un accent ne sera pas reconnu. Il faut changer le nom dans le `.mailmap` pour qu'il n'y ait pas d'accents, ou utiliser une chaîne partielle comme `"Benjamin Le"` pour exclure les contributions de `"Benjamin Le Dû"`.
 
 ```bash
 authorsToExcludeArray=("C. Fuhrman" "Benjamin Le" "Yvan Ross")
