@@ -18,7 +18,7 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: 1.3.97
+          version: 1.3.146
         # with:
         #   # To install LaTeX to build PDF book 
         #   tinytex: true 
@@ -34,7 +34,7 @@ jobs:
           java-version: '11'
 
       - name: Install rsvg-convert, latexmk, TeXLive
-        run: sudo apt-get install -y -q librsvg2-bin latexmk texlive texlive-fonts-extra texlive-lang-french
+        run: sudo apt-get install -y -q librsvg2-bin texlive texlive-fonts-extra texlive-lang-french
 
       - name: wget PlantUML.jar
         uses: wei/wget@v1
