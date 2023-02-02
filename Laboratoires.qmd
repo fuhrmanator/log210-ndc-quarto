@@ -50,8 +50,8 @@ Mais, en TypeScript, c'est facile de déclarer un type comme une *union* de plus
   - Promesses et [`async`/`await`](https://fr.javascript.info/async-await).
 - Les services REST (GET vs PUT).
 - Environnement de test (Jest).
-- Les gabarits (*templates*) Pug (anciennement Jade): [Tutoriel (court)](https://www.youtube.com/watch?v=DSp9ExFw3Ig), [Tutoriel (plus complet)](https://www.youtube.com/watch?v=kt3cEjjkCZA)
-- Bootstrap (mise en page avec CSS): [Tutoriel (attention, il faut appliquer les éléments dans les gabarits Pug)](https://www.youtube.com/watch?v=MrgGq3fob4o).
+- Les gabarits (*templates*) Pug (anciennement Jade): [Tutoriel (court)](https://www.youtube.com/watch?v=DSp9ExFw3Ig)\ {{< fa brands youtube >}}, [Tutoriel (plus complet)](https://www.youtube.com/watch?v=kt3cEjjkCZA)\ {{< fa brands youtube >}}.
+- Bootstrap (mise en page avec CSS): [Tutoriel (attention, il faut appliquer les éléments dans les gabarits Pug)](https://www.youtube.com/watch?v=MrgGq3fob4o)\ {{< fa brands youtube >}}.
 
 Le [lab 0](https://github.com/ets-log210/log210-enonce-lab0) aborde plusieurs de ces aspects, mais certaines notions sont plus complexes et nécessitent une étude approfondie. 
 Le but de cette section est de donner des tutoriels plus spécifiques.

@@ -39,7 +39,7 @@ Des organisations entières peuvent être bloquées par l'endettement d'une impl
 :::
 
 Comme c'est une métaphore puissante, beaucoup de développeurs et développeuses l'utilisent, et c'est un terme avec une certaine popularité. 
-Dans une [vidéo](https://www.youtube.com/watch?v=pqeJFYwnkjE) plus récente, Cunningham a rappelé que l'origine de la métaphore s'inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement "mal écrit":
+Dans une [vidéo](https://www.youtube.com/watch?v=pqeJFYwnkjE)\ {{< fa brands youtube >}} plus récente, Cunningham a rappelé que l'origine de la métaphore s'inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement "mal écrit":
 
 ::: {.callout}
 L'explication que j'ai donnée à mon patron, et c'était un logiciel financier, était une analogie financière que j'ai appelée "la métaphore de la dette". Et cela veut dire que si nous ne parvenions pas à aligner notre programme sur ce que nous considérions alors comme la bonne façon de penser à nos objets financiers, alors nous allions continuellement trébucher sur ce désaccord, et cela nous ralentirait, comme payer des intérêts sur un prêt.  

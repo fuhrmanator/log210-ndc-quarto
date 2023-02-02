@@ -54,9 +54,6 @@ rectangle "NextGen" {
 
 Quelques termes du domaine d'affaires doivent être compris avant de procéder:
 
-![Plateau-billets et tiroir-caisse. Capture d'écran de la vidéo sur [YouTube](https://youtu.be/lth_lAacXVQ?t=34).](images/Series4000CashDrawerProductTrainingVideo_screenshot_youtube.png)
-
-\filbreak
 Tiroir-caisse.
 : C'est la partie de la caisse qui s'ouvre, dans laquelle on peut placer un plateau-billets.
 
@@ -99,8 +96,7 @@ L'heure de l'arrivée du caissier ou de la caissière est enregistrée.
 
 **Spécifications particulières:**
 
-Les caisses sont configurées avec un modèle de plateau-billets comme celui-ci: [voir exemple sur
-YouTube.](http://www.youtube.com/watch?feature=player_detailpage&v=lth_lAacXVQ#t=32s)
+Les caisses sont configurées avec un modèle de plateau-billets comme celui-ci: [voir exemple sur YouTube](https://youtu.be/hgA3GFxlzBg?t=21)\ {{< fa brands youtube >}}.
 
 **Fréquence d'occurrence:** Normalement, au début du quart de travail de chaque caissier ou caissière.
 
