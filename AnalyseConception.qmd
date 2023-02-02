@@ -223,7 +223,28 @@ Avec la rétroaction du client et l'adaptation, le système à développer conve
 Cette instabilité peut être particulièrement prononcée dans un contexte d'entreprise en démarrage.
 - Dans une itération, la modélisation (par exemple avec l'UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n'est pas triviale (voir la @fig-AnalyseConceptionDansLesIterations). Selon le contexte du projet (voir le [Spectre de la conception](#sec-SpectreDeLaConception)), on peut décider de ne pas faire de modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l'on appelle la [dette technique](#sec-DetteTechnique).
 
-![Un processus itératif permet de gérer les complexités, car la planification d'une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent. (Cette œuvre, "Modèle du processus itératif", est un dérivé de ["Iterative development model"](https://commons.wikimedia.org/w/index.php?curid=104924876) de [Krupadeluxe](https://commons.wikimedia.org/wiki/User:Krupadeluxe), utilisé sous [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0 "Creative Commons Attribution-Share Alike 4.0"). "Modèle de processus itératif" est sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0 "Creative Commons Attribution-Share Alike 4.0") par Christopher Fuhrman.)](images/Iterative_Process_Diagram_fr.svg){#fig-Modèle_processus_itératif}
+```{.plantuml #fig-Modèle_processus_itératif caption="Un processus itératif permet de gérer les complexités, car la planification d'une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent."}
+@startuml Iteration
+!include normal.pumlinclude
+skinparam defaultTextAlignment center
+skinparam conditionStyle diamond
+start
+:Faire planification initial;
+while (projet en cours) is (oui)
+:Planifier nouvelle itération;
+:Plan d'itération (nouveaux objectifs)]
+:Élaborer (nouvelles) exigences;
+:Actualiser analyse, conception, code et tests;
+split
+:Nouvelle implémentation]
+split again
+:Nouveau déploiement]
+end split
+:Faire démonstration et cueillir rétroaction;
+endwhile (non)
+stop
+@enduml
+```
 
 ![Processus itératif et incrémental (évolutif).](images/Process_iteratif_et_incremental.svg){#fig-IteratifEvolutif}
 
