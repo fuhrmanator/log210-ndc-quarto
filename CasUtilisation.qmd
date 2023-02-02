@@ -22,7 +22,7 @@ La notation UML inclut les diagrammes de cas d'utilisation, qui sont comme une t
 
 Nous décrivons un cas d'utilisation à l'aide d'un exemple concernant le jeu Risk.
 
-![Cinq dés utilisés dans le jeu Risk.  Par Val42 - [https://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg](http://en.wikipedia.org/wiki/Image:Risk-dice-example.jpg), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/ "Creative Commons Attribution-Share Alike 3.0") [Link](https://commons.wikimedia.org/w/index.php?curid=3272090).](images/Risk-dice-example.jpg){width="300px"}
+![Cinq dés utilisés dans le jeu Risk. "[Risk Dice](https://www.flickr.com/photos/fuhrmanator/52664929856/)" ([CC BY 2.0](https://creativecommons.org/licenses/by/2.0/deed.fr)). Par [Fuhrmanator](https://www.flickr.com/people/fuhrmanator/)](images/Risk-Dice-Fuhrmanator.jpg){width="300px"}
 
 Selon "Risk". 2019. [Wikipédia](https://fr.wikipedia.org/w/index.php?title=Risk&oldid=164264587). (accédé le 9 décembre 2019):
 
