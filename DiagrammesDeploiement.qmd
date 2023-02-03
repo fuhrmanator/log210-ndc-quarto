@@ -75,8 +75,9 @@ NP1 .up. SGB
 @enduml
 ```
 
-```{.plantuml #fig-iTunesDiagrammeDeploiement caption="Diagramme de déploiement pour iTunes d'Apple avec un ordinateur, un iPad et le service Web d'Apple, inspiré de [ceci](https://www.uml-diagrams.org/apple-itunes-uml-deployment-diagram-example.html). [(PlantUML)](http://www.plantuml.com/plantuml/uml/ZLF9JkGm4BtxAqhXW3HIWfeZGX6RH1yQEb9wr9UvE4b1MtBiO3k4dX7_FbM91M4Hu9ENUlKMssS-I1VwLWkDTm621QVkTm4QvR0EoXfXR8EGd7UTHjXY1IMwHtG9d9us-AXgpFE3GchSzEwXjyeZ_1D0OuIfJM_GW_Gqsn9YmCghm90LivHIjzP400-Iekva7I8GImnzb-4J4bQI0bLBrfJd8-BvbIY9J6Mm3fE9iFm18PkKvfwi9JVOA0ahLJdfzaaaU1Q7h3njx61IxXdZMDeMuTAsNHyu2-9RNiuJ-SWsuM2i7Qf96bJE3XxTMu1uAsoUuViO3XmsuaiVZBjPBO08MhnsY8OynSYAdJLuf0hP766eiwdsYZXQMobgzQqRjIuZQCrXhyilZNogxFYzie1ySBiGKxKUgnK7u53ulQbtpXhrbtnN60P2HPaUghsOiX9e6k1EudO1MSR-NsR7uf2lwbUQZjjneLEw4q5Jthw24_XTNl3DGzPdEPLGOpxYDtL2HZjdWwsjplC_Plxme8W7r9VQZ2GKpMn5_7JvOwljXrRBpQOGOvOphe4-eaRluNlIC_9DF_a_)" }
+```{.plantuml #fig-iTunesDiagrammeDeploiement caption="Diagramme de déploiement pour iTunes d'Apple avec un ordinateur, un iPad et le service Web d'Apple, selon [ce modèle UML](https://www.uml-diagrams.org/apple-itunes-uml-deployment-diagram-example.html) de Kirill Fakhroutdinov (utilisé avec permission)."}
 @startuml
+scale 0.7
 left to right direction
 node "Apple Web Server" << device >>#PaleTurquoise {
     node iTunes as iTW << website >>#LightSalmon {

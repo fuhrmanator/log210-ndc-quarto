@@ -20,7 +20,7 @@ Voici une courte définition complémentaire de la dette technique [@avge16a]:
 Un ensemble de constructions ou de mises en œuvre de conception qui sont utiles à court terme, mais qui mettent en place un contexte technique qui peut rendre les changements futurs plus coûteux ou impossibles.
 :::
 
-!["Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l'un avec une bonne conception et l'autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu'il s'agisse de conception initiale ou de techniques agiles. Comme aucun effort n'est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ." [@fowl07a]](images/FowlerPseuoGraphFunctionaltyTime.svg){#fig-FowlerDesignStaminaHypothesis}
+!["Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires: l'un avec une bonne conception et l'autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu'il s'agisse de conception initiale ou de techniques agiles. Comme aucun effort n'est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ." [@fowl07a], utilisé avec [permission](https://www.martinfowler.com/faq.html#illustration)](images/FowlerPseuoGraphFunctionaltyTime.svg){#fig-FowlerDesignStaminaHypothesis}
 
 ## Origine
 

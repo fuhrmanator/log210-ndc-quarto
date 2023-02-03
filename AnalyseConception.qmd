@@ -284,6 +284,6 @@ Le but ultime de cette stratégie est de pouvoir faire une démonstration à la 
 
 <!-- ![Le développement itératif et incrémental [@craig_uml_2005, figure 2.1].](images/A2.1.svg){#fig-DevIteratifIncremental} -->
 
-![Pour respecter la méthode du temps limité, on peut modifier les objectifs d'une itération si le travail est trop important [adaptation de @craig_uml_2005, figure 2.4].](images/Modifier_objectifs_mi_iteration.svg){#fig-AnalyseConceptionDansLesIterations}
+![Pour respecter la méthode du temps limité, on peut modifier les objectifs d'une itération si le travail est trop important [selon @craig_uml_2005, figure 2.4].](images/Modifier_objectifs_mi_iteration.svg){#fig-AnalyseConceptionDansLesIterations}
 
 <!-- ![Nuage de mots importants.](images/wordle_ordre_alph.png){#fig-nuageDeMots} -->
