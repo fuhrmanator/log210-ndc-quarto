@@ -219,7 +219,7 @@ Nous résumons les points importants ainsi:
 Il n'est pas permis d'ajouter du temps à la durée d'une itération si le projet avance plus lentement que prévu, car cela impliquerait un retard de la rétroaction du client.
 Si le respect des délais semble compromis, on supprime plutôt des tâches ou des spécifications et on les reprend éventuellement dans une itération ultérieure.
 - Les premières itérations peuvent sembler chaotiques, car elles peuvent être loin de la "bonne voie" ou du résultat convoité.
-Avec la rétroaction du client et l'adaptation, le système à développer converge vers une solution appropriée (voir la @fig-StabiliteDansLesIterations).
+Avec la rétroaction du client et l'adaptation, le système à développer converge vers une solution appropriée (figure 2.2\ {{< fa solid book >}}).
 Cette instabilité peut être particulièrement prononcée dans un contexte d'entreprise en démarrage.
 - Dans une itération, la modélisation (par exemple avec l'UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n'est pas triviale (voir la @fig-AnalyseConceptionDansLesIterations). Selon le contexte du projet (voir le [Spectre de la conception](#sec-SpectreDeLaConception)), on peut décider de ne pas faire de modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l'on appelle la [dette technique](#sec-DetteTechnique).
 
