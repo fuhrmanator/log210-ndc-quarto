@@ -124,7 +124,7 @@ L'association entre `Joueur` et `Pays` a un verbe "contrôle", qui est un exempl
 L'association entre `Continent` et `Pays` représente la composition des territoires (un synonyme pour pays) des différents continents, soit 4 (pour l'Amérique du sud et l'Océanie), 6 (pour l'Afrique), 7 (pour l'Europe), 9 (pour l'Amérique du nord) et 12 (pour l'Asie).
 Si vous regardez tout le modèle, vous verrez qu'il représente visuellement beaucoup d'éléments du jeu.
 
-```{.plantuml #fig-MDD-jeu-de-risk caption="Modèle du domaine du jeu Risk. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjD047ttLupyuXObWHGe8a9Lgr9LBPM8aW8lVTdOKsVnUZRi9IL2IF0tv9q_o9_m9SpQSPscKQLedVMScNFspAoFhHF6-L95jf0q4qQKODr28Qz6fbkHYKYBt6XFMQgLDk2C8CiX91SbuARI0ly4J0LbTqOwXmItcXn8WY-ICdrdewGjb-6jyCe518aIuOEHDgHSN9z6oVKKBO9sKpGMbDO5v0P5LMhy-HpsIb6mI6-GUN6Hy5CI7qOfp9ZJmCdL5NmQdut66-JGVx7_b00hyh3Gaoelg81BxGs9JMksKT-BD8DnQkJCFLLiY6oIiHk5DhrpncDaKy7jw4TJcI5WENCBAB6SXAnK2Mk36FG6VaG0f4iOm9XRHpbldzDaA1RsOvhwsMffEIIvKp_NUUzNooffplKvlmasLT6Ff2sQRJnKmg6etiKWB0n7JIXGF6Q_BtJYdFZciKPCwftWcQZvmZiMSejaTuYeb0idDQtJHwjbBakUj_OmqN04SJ-6PzqknAyEubhF04xPOyb8E7g0E8ph266buSowxWrbSYxjQid_sFMZg0MqXJk7dHjwqtdBQxybEUVRCCD04VO17S3zNk_PFIGmpBMqahfPGAwDhS6gMprPO0tygZtBuB7U1cOCV1rNFHlm2ARAXuCbe6HEuHx8ENkAa3Q7zWJ8LpD5KCBmLE_z-_LxFrgFIWm01uF3bh-X6bJ35BZNm5q72kwOrLyLS7iri5F5zg7NssXPb6nLuHBt_TkgaxJ-gSV8Tp0qsgt-vCWTqfuNKGzLz32jbjaCt02k1AKxctD3cx1w_h9kCC_iEdtdeFEoyVuot5Z6HCUSmf_7_m00)"}
+```{.plantuml #fig-MDD-jeu-de-risk caption="Modèle du domaine du jeu Risk."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -180,7 +180,7 @@ Il s'agit des attributs qui sont calculés à partir d'autres informations reli�
 Ils sont indiqués par le symbole **`/`** devant leur nom.
 L'exemple à la @fig-MDD-attribut-derive s'applique à la règle du jeu Risk spécifiant qu'un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé `/nbPaysOccupés` qui est calculé selon le nombre de Pays contrôlés par le joueur.
 
-```{.plantuml #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l'association. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLB1QW8n4BtdAmOlsnRKUXKHYvHYArIwjZt7xEY6pKvaac2b-46zzm_yiSvQeM9123E4UNdlpKn68MgEgNOgL9RMcdKD8MuTIcHhpYeBRQeL-qI5ySupHDOKf8GKLGQnj07aQ2Wr5HksCIB1qbC4I_1kgV2ReB8_kWANEhdO84ZN24ziG_DaCX-hR5vYGF2nH0xWlAzWnQWFLFdR0rpLkXAJYL5qSPj9jYJDE8U5Q3BSJQVmcj-_v2VYqBkzlcGWw5KJwABB2LNmw1EJFXtDEUgZCWNaXkqwNYAReGo9mmdHwUmY9rJ1Q5b7JvMsGC1w7RTGOxreNXcdGsZCO6BuL03aQ-X3BgkZbLm7XpNr5oxXi4kBcTw6PsFIUlyL16Of3he7n53jZbmDv3_JJXqrMhqMjDkIEfsRrY-u3sDfXlVVOdAeHaY5_9aV)"}
+```{.plantuml #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l'association."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -297,7 +297,7 @@ Alors, la durée de vie de cette instance dépend de l'association.
 
 Voir le livre de @craig_uml_2005 pour plus d'exemples.
 
-```{.plantuml #fig-MDD-classe-association caption="Classe d'association dans le MDD Jeu Risk. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VPBFIWD13CRl0xv3wALLRB5N3r8f8bL1wVhddCwckyFEP4fc5YtY0tdt3NmnirPm4ImCayFtI_9bChEKKN8Rl4cDumqA1aXvwqblSRPJ3dhI2crJIMovjD57WIp8IINYV626a6kNG0z2ZLm-YykP6DQHCpY69yTbV4uA_XOiQOsjpnt260YknQKkPt4_L-w-faGGSqsImCVOG2M4tyMAnqiO1MpKQ2kadMaxrEXO1_AUIkqgS7vp0m_5nRBejOVfoM5_fByE4bRTnVjzBhY1gzWAez_BlJIsXCAAs-Izt1tfKqdg6-i_OPQMJBAeUvcQsfK453Pv2u72IjECzPXIPuXQWLS3m370AHIwGwxCsuz-XzlqltfhRRl1x2BlcDNoyxroGLUR57QSbVpfC9WEO3pMC9aS3NPbJs6kiyZdXreyCwCTUFoj7S9aqgjkPiIb_gil)"}
+```{.plantuml #fig-MDD-classe-association caption="Classe d'association dans le MDD Jeu Risk."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
