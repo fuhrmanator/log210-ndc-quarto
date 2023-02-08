@@ -61,6 +61,11 @@ Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du 
 - Occupation.nbRégiments est ajusté selon le résultat des valeurs correspondant à paysAttaquant.
 - Occupation.nbRégiments est ajusté selon le résultat des valeurs correspondant à paysDéfenseur.
 
+::: {.callout-important}
+Les règles pour la résolution d'une attaque dans le jeu Risk sont complexes.
+Pour faire un exemple plus facile à comprendre, on en fait abstraction.
+:::
+
 <!-- Draw.io svg contient du texte en SVG qui ne se présente pas bien lors de la conversion vers PDF (on obtien "Text is not SVG - cannot display"). Alors, on exporte manuellement une version du SVG ayant du texte compatible (tout en gardant l'original). Cela n'est pas idéal, mais c'est une solution. Voir https://www.diagrams.net/doc/faq/svg-export-text-problems et l'option "convert labels to SVG" -->
 ![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets).](images/MDD-Risk-contrats_export.svg){#fig-MDD-risk-objets}
 
@@ -82,10 +87,10 @@ Pour faire des contrats, voici une démarche générale:
 ## Exercices
 
 ::: {#exr-contrat_Terminer_attaque}
-### terminerAttaque
+### `terminerAttaque()`
 
 Rédigez le contrat d'opération pour `terminerAttaque()`.
-Il faut considérer le cas où une attaque a réussi, c'est-à-dire que le `paysDéfenseur` change de Joueur (celui du `paysAttaquant`).
+Il faut considérer les règles d'attaque (voir [la page de wikiHow](https://fr.wikihow.com/jouer-%C3%A0-Risk)) et les cas où une attaque a réussi, c'est-à-dire que le `paysDéfenseur` change de Joueur (celui du `paysAttaquant`).
 Suivez les exemples de contrats d'opération présentés à la @sec-contrat_exemple.
 :::
 
@@ -97,3 +102,4 @@ Rédigez **un contrat d'opération pour chacune des opérations système** dans 
 Suivez les exemples de contrats d'opération à la @sec-contrat_exemple.
 
 :::
+
