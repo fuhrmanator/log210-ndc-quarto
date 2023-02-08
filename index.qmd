@@ -29,7 +29,8 @@ Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels libres
 
 Autant que possible, les figures sont créées dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche.
 
-Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'information et pour permettre une meilleure inclusivité des personnes apprenantes et enseignantes.  
+Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'information et pour permettre une meilleure inclusivité des personnes apprenantes et enseignantes.
+Nous avons donc essayé de suivre les directives du [Guide de l'écriture inclusive de l'ÉTS](https://www.etsmtl.ca/docs/ets/a-propos/documents/guide-ecriture-inclusive-complete) lors de la rédaction de ce manuel.
 
 # Prérequis
 
