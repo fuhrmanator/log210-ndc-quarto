@@ -6,7 +6,7 @@ Ce sujet est traité dans le chapitre A29/F25\ {{< fa solid book >}}.
 Les diagrammes d'états sont aussi connus comme des machines à états.
 Il s'agit de la modélisation des états d'un processus, d'un système, d'un composant, etc. 
 Un état est une simplification de la réalité de quelque chose qui évolue dans le temps.
-Cela permet de modéliser le comportement de quelque chose face à un événement, comme indiqué sur la @fig-DiagrammeEtat.
+Cela permet de modéliser le comportement de quelque chose face à un événement.
 
 Les points importants:
 
