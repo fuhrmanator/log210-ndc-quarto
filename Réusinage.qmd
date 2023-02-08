@@ -91,7 +91,7 @@ Comments | Extract Function, Change Function Declaration, Introduce Assertion
 
 ## Automatisation du réusinage par les IDE
 
-Le sujet du réusinage est abordé à la **section F19.2/A22.2** du livre de @craig_uml_2005.
+Le sujet du réusinage est abordé par @craig_uml_2005 à la section F19.2/A22.2\ {{< fa solid book >}}.
 Il y a plusieurs exemples de base détaillés qui sont automatisés par les IDE dominants tels que Eclipse, IntelliJ IDEA, WebStorm, JetBrains PyCharm, Visual Studio Code, etc.
 Il se peut que, dans un avenir proche, le réusinage (l'amélioration du design) devienne une activité réalisée par des algorithmes d'intelligence artificielle.
 

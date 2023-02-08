@@ -14,7 +14,7 @@ Voir [cette discussion sur stackexchange.com](https://softwareengineering.stacke
 
 :::
 
-La théorie sur *comment écrire* les cas d'utilisation ne fait pas partie de ce manuel [voir @craig_uml_2005 chapitre 6].
+La théorie sur *comment écrire* les cas d'utilisation ne fait pas partie de ce manuel (voir le chapitre 6\ {{< fa solid book >}}).
 
 La notation UML inclut les diagrammes de cas d'utilisation, qui sont comme une table des matières pour les fonctionnalités d'un système.
 
