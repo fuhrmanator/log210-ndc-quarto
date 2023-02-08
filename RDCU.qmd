@@ -225,7 +225,8 @@ Dans la section suivante, l'initialisation des éléments utilisés dans les RDC
 ## RDCU pour l'initialisation, le scénario Démarrer {#sec-rdcu_Demarrer}
 
 Le lancement de l'application correspond à la RDCU "Démarrer".
-La section **Initialisation et cas d'utilisation Démarrer** (F17.4, p. 345) ou **Initialization and the 'Start Up' Use Case** (A18.4, p.274)\ {{< fa solid book >}}\ traite ce sujet important. C'est dans cette conception où il faut mettre en place tous les éléments importants pour les hypothèses faites dans les autres RDCU, par exemple les classes de collection (*map*), les références pour la visibilité, l'initialisation des contrôleurs, etc.
+La section **Initialisation et cas d'utilisation Démarrer** (F17.4, p. 345) ou **Initialization and the *Start Up* Use Case** (A18.4, p.274)\ {{< fa solid book >}} traite ce sujet important.
+C'est dans cette conception où il faut mettre en place tous les éléments importants pour les hypothèses faites dans les autres RDCU, par exemple les classes de collection (*map*), les références pour la visibilité, l'initialisation des contrôleurs, etc.
 
 Voici quelques points importants:
 
