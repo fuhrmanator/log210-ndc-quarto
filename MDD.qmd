@@ -113,6 +113,30 @@ Pensez à la **mémorabilité** d'une association dans le contexte du logiciel �
 *Case -- Case* \
 *Ville -- Ville*
 
+## Attributs dérivés
+
+Les attributs dérivés sont expliqués en détail dans la section 9.16\ {{< fa solid book >}}. 
+Il s'agit des attributs qui sont calculés à partir d'autres informations reliées à la classe.
+Ils sont indiqués par le symbole **`/`** devant leur nom.
+
+L'exemple à la @fig-MDD-attribut-derive s'applique à la règle du jeu Risk spécifiant qu'un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé `/nbPaysOccupés` qui est calculé selon le nombre de Pays contrôlés par le joueur.
+
+```{.plantuml #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l'association."}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+class Joueur {
+  nom : String
+  <color:blue>/nbPaysOccupés : int</color>
+}
+class Pays {
+  nom : String
+}
+Joueur "1" -- "1..*" Pays : Contrôle >
+@enduml
+```
+
 ## Exemple de MDD pour le jeu Risk
 
 La @fig-MDD-jeu-de-risk est un MDD pour le jeu Risk, selon [l'exemple](#exemple-jeu-de-risk) mentionné dans le chapitre sur les cas d'utilisation. 
@@ -170,29 +194,6 @@ Pays "1" -l- "1..*" Attaque : Lance >
 Pays "1" -- "1..*\n" Attaque : Défend-contre >
 Joueur "1" -- "1,2,3" Dé : Jette >
 
-@enduml
-```
-
-## Attributs dérivés
-
-Les attributs dérivés sont expliqués en détail dans la section 9.16\ {{< fa solid book >}}. 
-Il s'agit des attributs qui sont calculés à partir d'autres informations reliées à la classe.
-Ils sont indiqués par le symbole **`/`** devant leur nom.
-L'exemple à la @fig-MDD-attribut-derive s'applique à la règle du jeu Risk spécifiant qu'un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé `/nbPaysOccupés` qui est calculé selon le nombre de Pays contrôlés par le joueur.
-
-```{.plantuml #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l'association."}
-@startuml
-!include ecriture.pumlinclude
-scale 1
-hide empty members
-class Joueur {
-  nom : String
-  <color:blue>/nbPaysOccupés : int</color>
-}
-class Pays {
-  nom : String
-}
-Joueur "1" -- "1..*" Pays : Contrôle >
 @enduml
 ```
 
