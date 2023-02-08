@@ -24,7 +24,7 @@ Une fois que vous aurez l'habitude d'utiliser les GRASP, vous serez encore rapid
 
 Neal Ford [-@Ford2009] a [proposé](https://www.ibm.com/developerworks/library/j-eaed1/index.html) la notion d'effort pour la conception qu'il a nommée le "Spectre de la conception". La @fig-SpectreConception illustre le principe.
 
-``` {#fig-SpectreConception .plantuml width="80%" caption="Spectre de la conception, adapté de @Ford2009. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VLJRRjf047stb7yOvIK95LNIlbK81KWlQQEgAg5zW3oiTmTxvVMkjHTHyaTHFw5loOzrriR4X0Z9CjAPCsTcpW4kdMVMXr8bhf2wOfQLuFnQ8RsjvB5or2cbZ1UPDK4BRfInu2tJZage_L5o0ZwN3kXXa3CjLbPwZngMHdkG6dvBBSpA4V5PKE2I1UKZHRCIuPkLBlPStqw8TvkZGp0-H-j06LD0Pf7LOjDVd-6qP0Kj6YpIP5oVqAVKT91IA6YgXT7D3Soc7tzEE-FXuloiUzBB3HpBuaiVtlDQ5_3L1AkPEiZxKt01KsvbvG_oVY1PPLrtiQw5tWPC76UKoyNRTnqILyoviR42xQHE99T2eDvZR7Cxn1fPQrOD8LNKaH0jVX7Gel7h2bq3O5dvDPHOfhHnKdV2yS39U_pm_dnuTmpCmOfHrvAIQEkFVs72w0Bghs9WZ_zgtdTUjOnUxqslLuEf24iO34fQKk5ms1B6o08teIBp5feRpR7oqkY5PW74qqCQ_4AVZgzcdyuQwIYpB_wwzan3XII3z3YPlH2T6eheMVXLNPP9IcTVUHJnfe-rsDLcnjD3YJQZ7yz65_VSdDULdCAGEkju-QL1W9jLQjPRD_CasJeFVOLBFq-D4dVzsjEaDdO7ZkWUM9-ID0Vj5DezEaC6_J0NpEKOwp7D9ho-wA1fEsMN7D6DQpjqWLkuIsV9PlmBUfvSeXRqH_KV)"}
+``` {#fig-SpectreConception .plantuml caption="Spectre de la conception [@Ford2009]."}
 @startuml
 !include ecriture.pumlinclude
 scale 1.2
@@ -33,27 +33,17 @@ skinparam classBackgroundColor hidden
 skinparam classArrowColor black
 hide stereotypes
 hide empty members
-class "<size:30>]" as waterfall
-class "« Cascade pure »" as Ncp
-class "**+**" as bduf <<middle>>
-class "Beaucoup de\nconception\nau début\n(BDUF)" as Nbduf
-class "**+**" as duf <<middle>>
-class "Un peu de design\nau début\n(Some DUF)" as Nduf
-class "**+**" as agile <<middle>>
-class "Agile" as Na
-class "Design\némergent" as Nde
 class "<size:30>[" as hacking
 class "« Hacking cowboy »" as Nh
+class "**+**" as agile <<middle>>
+class "            Agile          " as Na
+class "<size:30>]" as waterfall
+class "« Cascade pure »" as Ncp
 
-waterfall -left[bold]- bduf
-bduf -left[bold]- duf
-duf -left[bold]- agile
-agile -left[bold]- hacking
+hacking -right[bold]- agile
+agile -right[bold]- waterfall
 
 waterfall <-u[dashed]- Ncp
-bduf <-d[dashed]- Nbduf
-duf <-u[dashed]- Nduf
-agile <-d[dashed]- Nde
 agile <-u[dashed]- Na
 hacking <-d[dashed]- Nh
 @enduml
@@ -196,7 +186,7 @@ get plumage() {
 
 :::
 
-::: {#exr-GRASP_GOF_cohesion}
+<!-- ::: {#exr-GRASP_GOF_cohesion}
 
 ### GRASP Cohésion
 
@@ -289,7 +279,7 @@ class Joueur {
 @enduml
 ```
 
-:::
+::: -->
 
 ::: {#exr-GRASP_GOF_contrôleur}
 

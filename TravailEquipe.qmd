@@ -36,13 +36,13 @@ Par contre, ce genre de comportement augmente certains risques au cours du proce
 
 @fitzpatrick_team_2012 le disent, et c'est un fait: si nous sommes, dans l'ensemble, à compétence égale sur le plan technique, ce qui fera la différence importante dans une carrière est notre habileté à collaborer avec les autres.
 
-![Pratiquement tout conflit social est dû à un manque d'humilité, de respect ou de confiance.](images/HRC_venn.svg){width=40% #fig-HRC_venn}
-
 ## Humilité, respect, confiance (HRC)
 
 L'humilité, le respect et la confiance (voir la @fig-HRC_venn) sont les qualités de base pour le bon travail en équipe.
 Souvenez-vous-en grâce au sigle HRC.
 Cette section présente ces aspects en détail.
+
+![Pratiquement tout conflit social est dû à un manque d'humilité, de respect ou de confiance.](images/HRC_venn.svg){width=40% #fig-HRC_venn}
 
 ### Humilité
 
@@ -62,21 +62,25 @@ Une personne humble pense ainsi [@fitzpatrick_team_2012]:
 L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte les attaques de la part des autres". Voir la section [Proposer des solutions au besoin](#sec-solution_problemes_equipes).
 :::
 
-![Éviter d'être le ["Centre de l'univers"](https://www.flickr.com/photos/diamondduste/466060240/) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)) par [Diamondduste](https://www.flickr.com/people/diamondduste/).](images/flickr_diamondduste_center.jpg){width="200px"}
+::: {#fig-humilité layout-ncol=3}
 
-![["Missing"](https://www.flickr.com/photos/smkybear/2705041322/) ([CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)) par [smkybear](https://www.flickr.com/people/smkybear/).](images/flickr_smkybear_missing.jpg){width="200px"}
+![Éviter d'être le ["Centre de l'univers"](https://www.flickr.com/photos/diamondduste/466060240/) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)) par [Diamondduste](https://www.flickr.com/people/diamondduste/).](images/flickr_diamondduste_center.jpg){#fig-centre-univers width=200px}
 
-```{.plantuml #fig-moi_inf_equipe caption="Un(e) membre de l'équipe humble va accepter une décision prise par l'équipe, même s'il (si elle) n'est pas en accord à 100%. [(PlantUML)](http://www.plantuml.com/plantuml/uml/JO_1IWH134Jl_HLXFIpCHIzUP1aMFViHcUxqJfZkT9jaq1L_mE_onvn1aArJKQyegBCvgg-rX2DqZWiWv2OEBE0pGMfn8JqQsDMSQh25fQDYXKGPr-9xMR0IV2mnWKNbxZSjfUWebqBFJHFfIojDmHN5DaxYOUP4GBNx5IhLYTJ-eiWQ2zqisOoflRDS86Cn2l_BS3WPVzBJuyCu33_VRojtWX5U6m_3wNv7um7kSfusVKtJRiAP96sVVm40)" }
+![Savoir qu'on n'est pas infaillible. ["Brown Eyed Susan"](https://www.flickr.com/photos/dbarronoss/14660203846/) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)) par [dbarronoss](https://www.flickr.com/people/dbarronoss/).](images/flickr_dbarronoss_Brown_Eyed_Susan.jpg){#fig-pas-infaillible width=200px}
+
+```{.plantuml #fig-moi_inf_equipe caption="Une personne humble va accepter une décision prise par l'équipe, même si elle n'est pas en accord à 100%." width=200px}
 @startuml
-' pick a font in the docker's system
-skinparam defaultfontname xkcd script
+!include ecriture.pumlinclude
 skinparam rectangleBorderColor transparent
 hide empty members
 hide circle
 skinparam shadowing false
-rectangle "<size:50>**Équipe > Moi**</size>" #ffbbbb|bbffbb
+rectangle "<size:50>**Équipe > Moi**</size>" #bbbbff|bbffbb
 @enduml
 ```
+
+Métaphores pour l'humilité.
+:::
 
 Quelques exemples concrets de comportements reflétant la qualité d'humilité chez les développeurs ou développeuses:
 

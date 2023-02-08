@@ -23,7 +23,7 @@ La **conception** sous-entend l'élaboration d'une solution conceptuelle répond
 
 <!-- Pour plus de détails, vous pouvez consulter le chapitre 1\ {{< fa solid book >}}. -->
 
-```{.plantuml #fig-mddDes caption="Diagramme de *classes conceptuelles* décrivant le *problème* d'un jeu de dés [adapté du Jeu de dés de @craig_uml_2005, chap. 1]. Ceci est élaboré lors d'une activité d'analyse."}
+```{.plantuml #fig-mddDes caption="Diagramme de *classes conceptuelles* décrivant (modélisant) le *problème* d'un jeu de dés [@craig_uml_2005, figure 1.3] avec des statistiques. Ceci est élaboré lors d'une activité d'analyse."}
 @startuml
 !include ecriture.pumlinclude
 'left to right direction
@@ -204,7 +204,7 @@ Voici les éléments importants documentés dans ce manuel (voir la @fig-SurvolM
 - Pour gérer la dette technique (@sec-DetteTechnique) on fait du réusinage (@sec-Refactoring) au besoin;
 - Le tout se fait de manière évolutive, en itérations courtes selon le _processus unifié_.
 
-![Survol de la méthodologie. Ceci est une adaptation de plusieurs figures de @craig_uml_2005.](images/Methodologie-survol_export.svg){#fig-SurvolMethodologie}
+![Survol des parties de la méthodologie de @craig_uml_2005 utilisées dans ce manuel.](images/Methodologie-survol_export.svg){#fig-SurvolMethodologie}
 
 ## Développement itératif, évolutif et agile
 
@@ -219,11 +219,32 @@ Nous résumons les points importants ainsi:
 Il n'est pas permis d'ajouter du temps à la durée d'une itération si le projet avance plus lentement que prévu, car cela impliquerait un retard de la rétroaction du client.
 Si le respect des délais semble compromis, on supprime plutôt des tâches ou des spécifications et on les reprend éventuellement dans une itération ultérieure.
 - Les premières itérations peuvent sembler chaotiques, car elles peuvent être loin de la "bonne voie" ou du résultat convoité.
-Avec la rétroaction du client et l'adaptation, le système à développer converge vers une solution appropriée (voir la @fig-StabiliteDansLesIterations).
+Avec la rétroaction du client et l'adaptation, le système à développer converge vers une solution appropriée (figure 2.2\ {{< fa solid book >}}).
 Cette instabilité peut être particulièrement prononcée dans un contexte d'entreprise en démarrage.
 - Dans une itération, la modélisation (par exemple avec l'UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n'est pas triviale (voir la @fig-AnalyseConceptionDansLesIterations). Selon le contexte du projet (voir le [Spectre de la conception](#sec-SpectreDeLaConception)), on peut décider de ne pas faire de modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l'on appelle la [dette technique](#sec-DetteTechnique).
 
-![Un processus itératif permet de gérer les complexités, car la planification d'une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent. (Cette œuvre, "Modèle du processus itératif", est un dérivé de ["Iterative development model"](https://commons.wikimedia.org/w/index.php?curid=104924876) de [Krupadeluxe](https://commons.wikimedia.org/wiki/User:Krupadeluxe), utilisé sous [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0 "Creative Commons Attribution-Share Alike 4.0"). "Modèle de processus itératif" est sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0 "Creative Commons Attribution-Share Alike 4.0") par Christopher Fuhrman.)](images/Iterative_Process_Diagram_fr.svg){#fig-Modèle_processus_itératif}
+```{.plantuml #fig-Modèle_processus_itératif caption="Un processus itératif permet de gérer les complexités, car la planification d'une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent."}
+@startuml Iteration
+!include normal.pumlinclude
+skinparam defaultTextAlignment center
+skinparam conditionStyle diamond
+start
+:Faire planification initial;
+while (projet en cours) is (oui)
+:Planifier nouvelle itération;
+:Plan d'itération (nouveaux objectifs)]
+:Élaborer (nouvelles) exigences;
+:Actualiser analyse, conception, code et tests;
+split
+:Nouvelle implémentation]
+split again
+:Nouveau déploiement]
+end split
+:Faire démonstration et cueillir rétroaction;
+endwhile (non)
+stop
+@enduml
+```
 
 ![Processus itératif et incrémental (évolutif).](images/Process_iteratif_et_incremental.svg){#fig-IteratifEvolutif}
 
@@ -240,13 +261,11 @@ Le développement itératif et incrémental amène plusieurs avantages selon @cr
 - la possibilité d'exploiter méthodiquement les leçons tirées d'une itération.
 :::
 
-![La rétroaction et la rectification itératives font diminuer l'instabilité des exigences à mesure que le projet avance, car le système à développer converge vers les spécifications et la conception les plus appropriées [adaptation de @craig_uml_2005, figure 2.2].](images/Instabilite_diminue_iterations.svg){#fig-StabiliteDansLesIterations}
-
 Cependant, il y a des défis associés à ce genre de développement:
 
 - **Instabilité apparente au début**. Dans les itérations initiales, puisqu'on n'a pas beaucoup de temps pour comprendre les exigences, le domaine du client et les contraintes du projet, la compréhension des spécifications et la conception sont loin de la "bonne voie".
 La conséquence est que les évaluations et les rétroactions peuvent sembler rudes, et cela peut être déstabilisant pour des personnes qui ne sont pas familières avec le processus.
-La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la @fig-StabiliteDansLesIterations).
+La bonne nouvelle est que, normalement, cette instabilité diminue au fur et à mesure que le projet avance (voir la figure 2.2\ {{< fa solid book >}}).
 - **Modifications des objectifs de l'itération en cours au besoin**. Il arrive souvent que, dans une itération, les choses ne se passent pas comme nous l'avons imaginé.
 Par exemple, l'ensemble des récits utilisateur ou des scénarios de cas d'utilisation visés pour l'itération nécessite plus de travail que prévu.
 La tendance dans ce cas est de nous donner plus de temps pour terminer ces étapes.
@@ -265,6 +284,6 @@ Le but ultime de cette stratégie est de pouvoir faire une démonstration à la 
 
 <!-- ![Le développement itératif et incrémental [@craig_uml_2005, figure 2.1].](images/A2.1.svg){#fig-DevIteratifIncremental} -->
 
-![Pour respecter la méthode du temps limité, on peut modifier les objectifs d'une itération si le travail est trop important [adaptation de @craig_uml_2005, figure 2.4].](images/Modifier_objectifs_mi_iteration.svg){#fig-AnalyseConceptionDansLesIterations}
+![Pour respecter la méthode du temps limité, on peut modifier les objectifs d'une itération si le travail est trop important [selon @craig_uml_2005, figure 2.4].](images/Modifier_objectifs_mi_iteration.svg){#fig-AnalyseConceptionDansLesIterations}
 
 <!-- ![Nuage de mots importants.](images/wordle_ordre_alph.png){#fig-nuageDeMots} -->

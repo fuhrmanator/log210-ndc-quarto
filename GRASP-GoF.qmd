@@ -8,8 +8,8 @@ Le pattern Adaptateur a été proposé par @GoF1994, et sa structure est illustr
 La structure de base peut être trompeuse, car elle ne montre qu'une seule classe `Adaptee` qui représente l'API (externe) que l'on ne peut modifier.
 En réalité, ce pattern est plus intéressant lorsqu'on considère *plusieurs* cas de classe `Adaptee`, chacune avec une API différente.
 
-Le chapitre A26/F23\ {{< fa solid book >}}\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (@fig-Fig23_1 tirée du livre de Larman, figure A26.1/F23.1).
-On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la version de ce manuel.
+Le chapitre A26/F23\ {{< fa solid book >}}\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (figure A26.1/F23.1).
+On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la @fig-Fig23_1.
 Nous faisons une hypothèse sur les noms des méthodes pour l'API des classes adaptées, car cette information n'est pas spécifiée.
 En plus, nous n'avons pas spécifié les arguments (c'est "?"), car les détails ne sont pas connus.
 
@@ -22,7 +22,7 @@ L'objet Vente a une visibilité de paramètre.
 
 Dans le contexte du projet NextGen POS, Larman propose l'utilisation de ce pattern pour plusieurs dimensions où des services externes ont plusieurs possibilités (l'inventaire, la comptabilité, etc.).
 
-```{.plantuml #fig-AdapterGoF caption="Le diagramme de classes du pattern Adaptateur proposé par @GoF1994."}
+```{.plantuml #fig-AdapterGoF caption="Le diagramme de classes du pattern Adaptateur [@GoF1994]."}
 @startuml
 !include normal.pumlinclude
 hide empty members

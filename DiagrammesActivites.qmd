@@ -17,7 +17,7 @@ Voici les éléments importants d'un diagramme d'activités:
 
 La @fig-ActivityDiagramExampleGitCommit présente un exemple de diagramme d'activité décrivant de manière générale une partie du processus de travail d'une personne utilisant `git` pour la gestion de code source. 
 
-```{.plantuml #fig-ActivityDiagramExampleGitCommit caption="Diagramme d'activité pour un processus simple avec Git. [(PlantUML)](http://www.plantuml.com/plantuml/uml/VL9BRjj03DtFAGXlRE_QhRreZAG9ya5QH6wxoc8yGqcC98unmscIS_G2tVeSGkzLoWfGEq0j29Gmxv5yV9op93PAxbgJ6kAjZRQ39AyjQepatY4RwvegXipUXJP4a6WvAOGiPWfIKm9zBTIM_NCa4MGe0miGmmzY7vwJcVuhvx6qkPM1mRP3k8sKXfJhzRcPhcjC245gZ0dQ41ge8jfzgUBx5SmwswZ8757xukjKlyGwJDkYrvuHLdTtyAtu_50SD8UF7-Rc__sJhOR09qLUSmCt8KUsxIdQI-Cy52xILaxHlgAQ5DE1g4Fl96OyW2x6v3M-oAgbYZlr7Pm6ZAVMDspOS124I5Kji82BVhV9OXOF_SvJXH5SyBWyvgoSq4-IVcSMvuf25poLrEyUZsdtVtvb3tuQDayenb09ioiRlTOS4vmL2fm-pOSrCSo-P9eRqEUz84T9YO02PHx-zgJ5wYbaUHC8_MyTorR4rN94zy8cXPwXdpoEPvUMz2vCNEWwaWdO3BxVROD0HR8S60PRlLYp-y2Za8KsB_T9Huhtc6QFrY0hf5Q6xV7ubyJcJ44r-Yy0)"  }
+```{.plantuml #fig-ActivityDiagramExampleGitCommit caption="Diagramme d'activité pour un processus simple avec Git."  }
 @startuml
 !include normal.pumlinclude
 skinparam DefaultTextAlignment center
@@ -53,7 +53,7 @@ Il ne s'agit pas de l'UML, mais cette notation est encore utilisée (depuis les 
 Un exemple de diagramme d'activités dans le cadre d'un cours de programmation utilisant GitHub Classroom est illustré sur la @fig-GitHubClassroomActivities.
 Ce diagramme explique comment GitHub Classroom permet à l'étudiant ou étudiante qui accepte un devoir (*assignment* en anglais) sur GitHub Classroom de choisir son identité universitaire (activité en couleur rose), mais seulement si l'enseignant ou enseignante a téléversé la liste de classe (activité en couleur rose) *avant* d'envoyer les invitations à la communauté étudiante.
 
-```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classroom (contexte de l'ÉTS avec Moodle). [(PlantUML)](https://www.plantuml.com/plantuml/uml/NOzBYXin48RtEaN1B6n3Gk_jpHZF91d88uJ90SfIjQSOFMIfD2JG5yXHlCagD-YBfTenxJ2z4AZhrr_VTri5YxJWJNtccB5WW2e_FUbPsBwQt56FpSiZ_P2jvqCC50Mi7bJ-Ixb_gNSfocSC1Dl2w8smQEjzj4yu_evqVkeMQ8LVMCPJXPnQ0PqU6q7NxJpMMb8ANGVBGqajqrkhYReomtsifDjH6rA3wuq6SzOnwrqPJrHWBjcOcxvt-gqVGav5TEQv2Yahs2b4PldW58bxrg8Adr9odbQRkMfRwqLOaz4fj6lekqV2CAM-wbeyQ6uvGHOclmA_-FxjepfoL4CKJd5ZXXld9f9X_2NDyKLXlgZ1-akc2FhoohnxIbov05y9Bu0RCm_7qx5n9bXgdvsOvr_ADxnd-T3ssdxNikTZcqZxL9wLai2Dfpp-KJ5iiAUQEBu1V24xpMmAMSYuHOiGAEoBnadLKZbWv7hMqWLLKZQt55qBtlm5)"  }
+```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classroom (contexte de l'ÉTS avec Moodle)."  }
 @startuml
 !include normal.pumlinclude
 skinparam DefaultTextAlignment center
