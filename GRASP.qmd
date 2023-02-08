@@ -186,7 +186,7 @@ get plumage() {
 
 :::
 
-::: {#exr-GRASP_GOF_cohesion}
+<!-- ::: {#exr-GRASP_GOF_cohesion}
 
 ### GRASP Cohésion
 
@@ -279,7 +279,7 @@ class Joueur {
 @enduml
 ```
 
-:::
+::: -->
 
 ::: {#exr-GRASP_GOF_contrôleur}
 
