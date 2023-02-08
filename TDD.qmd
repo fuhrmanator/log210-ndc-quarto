@@ -16,7 +16,7 @@ Puisque les tests sont automatiques, ils sont aussi faciles à exécuter que le 
 Il y a une discipline imposée dans le TDD qui nécessite d'écrire un *test en premier*, c'est-à-dire *avant* d'écrire le code.
 La démarche est illustrée sur la @fig-TDD_states.
 Beaucoup d'outils (IDE) favorisent ce genre de développement.
-Nous pouvons écrire un test qui appelle à une fonction qui n'existe pas encore, et l'IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour même.
+Nous pouvons écrire un test qui appelle une fonction qui n'existe pas encore, et l'IDE va nous proposer un squelette de la méthode, avec les arguments et une valeur de retour.
 Une personne pure et dure du TDD insistera sur le fait que le test soit écrit toujours en premier!
 Cette discipline est souvent culturelle.
 
@@ -121,7 +121,7 @@ Buzz
 
 #### Préalables
 
-Il faut installer un IDE qui supporte les activités de réusinage (*refactorings*) comme Visual Studio Code, Eclipse, IntelliJ, etc., puis un *framework* de test (JUnit, Mocha/Chai, Jest, unittest, etc.).
+Il faut installer un IDE qui supporte les activités de réusinage (*refactorings*) comme Visual Studio Code, Eclipse, IntelliJ, etc., puis un cadriciel de test (JUnit, Mocha/Chai, Jest, unittest, etc.).
 Pour un exemple qui fonctionne en TypeScript, vous pouvez cloner le code à partir de [ce dépôt](https://github.com/fuhrmanator/kata_jest_ts_fizzbuzz).
 
 #### Déroulement

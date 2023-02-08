@@ -6,7 +6,7 @@ Une approche GRASP devrait amener un design vers la modularité et la maintenabi
 
 L'acronyme d'une expression vulgarisée pourrait être POMM: "Principes pour déterminer Où Mettre une Méthode."
 
-En tant qu'ingénieur logiciel ou ingénieure logiciel, vous devez décider souvent où placer une méthode (dans quelle classe), et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d'ingénierie favorisant la modularité.
+En tant qu'ingénieur logiciel ou ingénieure logiciel, vous devez souvent décider où placer une méthode (dans quelle classe), et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d'ingénierie favorisant la modularité.
 
 Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et avec des classes plus cohésives. Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.
 
@@ -57,7 +57,7 @@ Le seul but de cette activité est de développer du code qui marche pour montre
 Une situation similaire s'applique à certains contextes d'entreprise, par exemple une entreprise en démarrage qui a seulement un financement pour six mois.
 Si une solution de ["produit minimum viable" (MVP en anglais)](https://en.wikipedia.org/wiki/Minimum_viable_product) {{< fa brands wikipedia-w >}} n'existe pas à la fin de la période de financement, l'entreprise n'existera plus, car il n'y aura pas une seconde période de financement.
 Si, par contre, l'entreprise est financée pour une seconde période, la conception du code pourrait avoir besoin de beaucoup de soin et de maintenance, car elle aura été préalablement négligée.
-Cette négligence à la conception (pour la maintenabilité) est aussi nommée la [dette technique](#sec-DetteTechnique).
+Cette négligence de la conception (pour la maintenabilité) est aussi nommée la [dette technique](#sec-DetteTechnique).
 
 À l'autre extrémité du spectre de la conception, on retrouve ce que l'on nomme "Cascade pure", où beaucoup d'effort a été déployé pour la conception.
 Dans le cycle de vie en cascade, on met un temps fixe (par exemple plusieurs mois) à étudier la conception.
