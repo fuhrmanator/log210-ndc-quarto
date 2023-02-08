@@ -378,6 +378,19 @@ div.csl-indent {
 <li>Occupation.nbRégiments est ajusté selon le résultat des valeurs correspondant à paysAttaquant.</li>
 <li>Occupation.nbRégiments est ajusté selon le résultat des valeurs correspondant à paysDéfenseur.</li>
 </ul>
+<div class="callout callout-style-default callout-important callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les règles pour la résolution d’une attaque dans le jeu Risk sont complexes. Pour faire un exemple plus facile à comprendre, on en fait abstraction.</p>
+</div>
+</div>
 <!-- Draw.io svg contient du texte en SVG qui ne se présente pas bien lors de la conversion vers PDF (on obtien "Text is not SVG - cannot display"). Alors, on exporte manuellement une version du SVG ayant du texte compatible (tout en gardant l'original). Cela n'est pas idéal, mais c'est une solution. Voir https://www.diagrams.net/doc/faq/svg-export-text-problems et l'option "convert labels to SVG" -->
 <div id="fig-MDD-risk-objets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -408,7 +421,7 @@ div.csl-indent {
 <section id="exercices" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="exercices"><span class="header-section-number">8.4</span> Exercices</h2>
 <div id="exr-contrat_Terminer_attaque" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 8.1 (terminerAttaque) </strong></span>Rédigez le contrat d’opération pour <code>terminerAttaque()</code>. Il faut considérer le cas où une attaque a réussi, c’est-à-dire que le <code>paysDéfenseur</code> change de Joueur (celui du <code>paysAttaquant</code>). Suivez les exemples de contrats d’opération présentés à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 8.1 (<code>terminerAttaque()</code>) </strong></span>Rédigez le contrat d’opération pour <code>terminerAttaque()</code>. Il faut considérer les règles d’attaque (voir <a href="https://fr.wikihow.com/jouer-%C3%A0-Risk">la page de wikiHow</a>) et les cas où une attaque a réussi, c’est-à-dire que le <code>paysDéfenseur</code> change de Joueur (celui du <code>paysAttaquant</code>). Suivez les exemples de contrats d’opération présentés à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>.</p>
 </div>
 <div id="exr-contrats-Traiter-vente" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 8.2 (Contrats d’opération pour <em>Traiter une vente</em>) </strong></span>Rédigez <strong>un contrat d’opération pour chacune des opérations système</strong> dans le DSS (et qui doit être cohérent avec le MDD) de la <a href="Annexe_Cas_utilisation_Traiter_vente.html#sec-DSS_traiter_vente"><span>Section&nbsp;B.1</span></a>. Suivez les exemples de contrats d’opération à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>.</p>
