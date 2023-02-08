@@ -38,7 +38,7 @@ Le contenu de ce manuel est organisé pour les personnes ayant déjà une base e
 - la programmation dans un langage orienté objet (Java, C#, C++, Python, TypeScript, etc.);
 - les concepts de modélisation orientée objet (les classes, les interfaces, les instances, l'héritage, la composition, le polymorphisme, etc.);
 - les tests unitaires (avec un cadriciel comme JUnit);
-- l'application des patterns de conception de la "Bande des quatre" (Gang of Four): Gamma, Helm, Johnson et Vlissides @GoF1994.
+- l'application des patterns de la "Bande des quatre" (*Gang of Four* ou GoF): @GoF1994.
 
 La notation UML (*Unified Modeling Language*) est utilisée partout dans ce manuel.
 Nous faisons l'hypothèse que les personnes suivant ce manuel ont déjà vu cette notation avant, mais la familiarité avec l'UML n'est pas un préalable.
