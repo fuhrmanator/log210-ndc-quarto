@@ -306,8 +306,8 @@ div.csl-indent {
   </ul></li>
   <li><a href="#attributs" id="toc-attributs" class="nav-link" data-scroll-target="#attributs"><span class="toc-section-number">4.2</span>  Attributs</a></li>
   <li><a href="#associations" id="toc-associations" class="nav-link" data-scroll-target="#associations"><span class="toc-section-number">4.3</span>  Associations</a></li>
-  <li><a href="#exemple-de-mdd-pour-le-jeu-risk" id="toc-exemple-de-mdd-pour-le-jeu-risk" class="nav-link" data-scroll-target="#exemple-de-mdd-pour-le-jeu-risk"><span class="toc-section-number">4.4</span>  Exemple de MDD pour le jeu Risk</a></li>
-  <li><a href="#attributs-dérivés" id="toc-attributs-dérivés" class="nav-link" data-scroll-target="#attributs-dérivés"><span class="toc-section-number">4.5</span>  Attributs dérivés</a></li>
+  <li><a href="#attributs-dérivés" id="toc-attributs-dérivés" class="nav-link" data-scroll-target="#attributs-dérivés"><span class="toc-section-number">4.4</span>  Attributs dérivés</a></li>
+  <li><a href="#exemple-de-mdd-pour-le-jeu-risk" id="toc-exemple-de-mdd-pour-le-jeu-risk" class="nav-link" data-scroll-target="#exemple-de-mdd-pour-le-jeu-risk"><span class="toc-section-number">4.5</span>  Exemple de MDD pour le jeu Risk</a></li>
   <li><a href="#classes-de-description-et-classes-de-catalogue" id="toc-classes-de-description-et-classes-de-catalogue" class="nav-link" data-scroll-target="#classes-de-description-et-classes-de-catalogue"><span class="toc-section-number">4.6</span>  Classes de «&nbsp;description&nbsp;» et classes de catalogue</a></li>
   <li><a href="#classes-dassociation" id="toc-classes-dassociation" class="nav-link" data-scroll-target="#classes-dassociation"><span class="toc-section-number">4.7</span>  Classes d’association</a></li>
   <li><a href="#affinement-du-mdd" id="toc-affinement-du-mdd" class="nav-link" data-scroll-target="#affinement-du-mdd"><span class="toc-section-number">4.8</span>  Affinement du MDD</a></li>
@@ -436,7 +436,7 @@ div.csl-indent {
 <li><em>Le type d’un attribut est important, et il faut le spécifier dans un MDD</em>, même si dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>, il y a plusieurs exemples sans type.</li>
 <li>Ne vous souciez pas de la visibilité des attributs dans un MDD.</li>
 <li>Faites attention à la confusion des attributs et des classes. Si l’on ne pense pas un concept <em>X</em> en termes alphanumériques dans le monde réel, alors il s’agit probablement d’une classe conceptuelle. Par exemple, dans le monde réel, une université n’est composée ni de chiffres ni de lettres. Elle doit être une classe conceptuelle. Voir la section 9.12&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>.</li>
-<li>De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>, la classe <code>Pays</code> n’a pas un <em>attribut</em> <code>joueur:Joueur</code> (qui contrôle le <span style="white-space:nowrap">Pays) ;</span> elle a plutôt une <em>association</em> avec la classe <code>Joueur</code> et un verbe <code>contrôle</code>.</li>
+<li>De la même manière, faites attention aux informations qui sont mieux modélisées par des associations. Par exemple, sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.2</span></a>, la classe <code>Pays</code> n’a pas un <em>attribut</em> <code>joueur:Joueur</code> (qui contrôle le <span style="white-space:nowrap">Pays) ;</span> elle a plutôt une <em>association</em> avec la classe <code>Joueur</code> et un verbe <code>contrôle</code>.</li>
 </ul>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -453,7 +453,7 @@ div.csl-indent {
 <h2 data-number="4.3" class="anchored" data-anchor-id="associations"><span class="header-section-number">4.3</span> Associations</h2>
 <p>Les associations dans le MDD sont le sujet de la section 9.14&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Il faut se référer au contenu du livre de Larman pour les détails. Une association est une relation entre des classes (ou des instances de classes). Elle indique une connexion significative ou intéressante. Voici des points <span style="white-space:nowrap">importants :</span></p>
 <ul>
-<li>Il est facile de trouver beaucoup d’associations, mais il faut se limiter à celles qui doivent être conservées un certain temps. Pensez à la <strong>mémorabilité</strong> d’une association dans le contexte du logiciel à développer. Par exemple, considérez les associations de la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a><span style="white-space:nowrap"> :</span>
+<li>Il est facile de trouver beaucoup d’associations, mais il faut se limiter à celles qui doivent être conservées un certain temps. Pensez à la <strong>mémorabilité</strong> d’une association dans le contexte du logiciel à développer. Par exemple, considérez les associations de la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.2</span></a><span style="white-space:nowrap"> :</span>
 <ul>
 <li>Il existe une association entre <code>Joueur</code> et <code>Pays</code>, car il est important de savoir quel joueur contrôle quel pays dans le jeu Risk.</li>
 <li>Il n’y a pas d’association entre <code>JeuRisk</code> et <code>Attaque</code>, même si les attaques font partie du jeu. Il n’est pas essentiel de mémoriser l’historique de toutes les attaques réalisées dans le jeu.</li>
@@ -464,7 +464,7 @@ div.csl-indent {
 <li>Elles sont nommées (avec un verbe commençant par une lettre majuscule).</li>
 <li>Des verbes simples comme «&nbsp;A&nbsp;», «&nbsp;Utilise&nbsp;», «&nbsp;Possède&nbsp;», «&nbsp;Contient&nbsp;», etc. sont généralement des choix médiocres, car ils n’aident pas notre compréhension du domaine. Essayez de trouver des verbes plus riches, si possible.</li>
 <li>Une flèche (triangle) de «&nbsp;sens de lecture&nbsp;» optionnelle indique la direction dans laquelle lire l’association. Si la flèche est absente, on lit l’association de gauche à droite ou de haut en bas.</li>
-<li>Les extrémités des associations ont une expression de la multiplicité indiquant une relation numérique entre les instances des classes. Vous pouvez en trouver plusieurs exemples sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>.</li>
+<li>Les extrémités des associations ont une expression de la multiplicité indiquant une relation numérique entre les instances des classes. Vous pouvez en trouver plusieurs exemples sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.2</span></a>.</li>
 </ul></li>
 </ul>
 <div id="tbl-associations-courantes" class="anchored">
@@ -550,9 +550,62 @@ div.csl-indent {
 </table>
 </div>
 </section>
-<section id="exemple-de-mdd-pour-le-jeu-risk" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="exemple-de-mdd-pour-le-jeu-risk"><span class="header-section-number">4.4</span> Exemple de MDD pour le jeu Risk</h2>
-<p>La <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a> est un MDD pour le jeu Risk, selon <a href="CasUtilisation.html#exemple-jeu-de-risk">l’exemple</a> mentionné dans le chapitre sur les cas d’utilisation. Commençons par la classe <code>JeuRisk</code>, qui est l’objet racine du modèle. Il est relié à la classe <code>Joueur</code>, puisqu’un joueur «&nbsp;joue&nbsp;» à <code>JeuRisk</code> (notez le triangle pour le sens de lecture). Selon les cardinalités de l’association entre ces deux classes, il peut y avoir entre deux (2) et six (6) personnes qui jouent au jeu. Le jeu «&nbsp;inclut&nbsp;» cinq objets de la classe <code>Dé</code>, mais un <code>Joueur</code> jette un, deux ou trois dés (selon la règle du jeu Risk). L’association entre <code>Joueur</code> et <code>Pays</code> a un verbe «&nbsp;contrôle&nbsp;», qui est un exemple de verbe plus riche que «&nbsp;possède&nbsp;» ou «&nbsp;a&nbsp;». L’association entre <code>Continent</code> et <code>Pays</code> représente la composition des territoires (un synonyme pour pays) des différents continents, soit 4 (pour l’Amérique du sud et l’Océanie), 6 (pour l’Afrique), 7 (pour l’Europe), 9 (pour l’Amérique du nord) et 12 (pour l’Asie). Si vous regardez tout le modèle, vous verrez qu’il représente visuellement beaucoup d’éléments du jeu.</p>
+<section id="attributs-dérivés" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="attributs-dérivés"><span class="header-section-number">4.4</span> Attributs dérivés</h2>
+<p>Les attributs dérivés sont expliqués en détail dans la section 9.16&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Il s’agit des attributs qui sont calculés à partir d’autres informations reliées à la classe. Ils sont indiqués par le symbole <strong><code>/</code></strong> devant leur nom.</p>
+<p>L’exemple à la <a href="#fig-MDD-attribut-derive">figure&nbsp;<span>4.1</span></a> s’applique à la règle du jeu Risk spécifiant qu’un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé <code>/nbPaysOccupés</code> qui est calculé selon le nombre de Pays contrôlés par le joueur.</p>
+<div id="fig-MDD-attribut-derive" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="226px" preserveaspectratio="none" style="width:147px;height:226px;background:#00000000;" version="1.1" viewbox="0 0 147 226" width="147px" zoomandpan="magnify"><defs></defs><g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
+class Joueur--><g id="elem_Joueur"><polygon fill="#F1F1F1" points="9.5,7,9.5,7.2102,19.3462,6.5857,29.1923,7.1933,39.0385,7.3997,48.8846,6.2866,58.7308,6.9223,68.5769,6.5735,78.4231,6.6165,88.2692,6.9318,98.1154,6.3086,107.9615,7.5536,117.8077,6.3697,127.6538,6.8022,137.5,7,137.5551,7.133,137.8426,7.12,138.2158,7.3139,138.5566,7.4295,138.937,7.6408,139.2678,7.7322,139.3414,7.7627,139.5946,8.1605,139.7673,8.5249,139.9163,8.8795,139.932,9.1789,140,9.5,140.4636,9.5,140.7022,19.6912,139.2788,29.8824,140.6785,40.0736,139.7035,50.2648,140.5338,60.456,139.505,70.6472,140,80.8384,139.9789,80.8297,140.0819,81.2866,139.6921,81.5393,139.5931,81.9125,139.5185,82.2958,139.2678,82.6062,139.3209,82.7344,138.9137,82.7514,138.5973,82.9875,138.1341,82.8692,137.8898,83.2796,137.5,83.3384,137.5,83.8866,127.6538,83.783,117.8077,83.9514,107.9615,82.8553,98.1154,82.6862,88.2692,82.717,78.4231,83.2795,68.5769,83.1419,58.7308,84.0198,48.8846,83.1637,39.0385,82.9954,29.1923,83.5667,19.3462,82.6716,9.5,83.3384,9.4338,83.1786,9.2292,83.3918,8.8485,83.1797,8.533,83.1253,8.0447,82.6535,7.7322,82.6062,7.8305,82.6469,7.7676,82.3279,7.2939,81.8388,7.2634,81.5333,7.1852,81.208,7,80.8384,7.6518,80.8384,6.9958,70.6472,7.4626,60.456,6.4462,50.2648,6.3227,40.0736,7.5036,29.8824,6.2831,19.6912,7,9.5,7.1567,9.5649,7.2101,9.1728,7.2104,8.7587,7.3304,8.3942,7.7271,8.1443,7.7322,7.7322,7.694,7.6401,8.1613,7.7681,8.3688,7.2691,8.8717,7.483,9.2082,7.2956,9.5,7" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="43" x="52" y="27.2593">Joueur</text><path d="M8,36.4461 L8,36.7264 L18.0769,35.8937 L28.1538,36.7039 L38.2308,36.979 L48.3077,35.4949 L58.3846,36.3425 L68.4615,35.8775 L78.5385,35.9348 L88.6154,36.3553 L98.6923,35.5243 L108.7692,37.1843 L118.8462,35.6058 L128.9231,36.1825 L139,36.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="71" x="13" y="55.7054">nom : String</text><text fill="#0000FF" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="121" x="13" y="75.1515">/nbPaysOccupés : int</text></g><!--MD5=[aa2bb12b1d34009d39b42a242f861e93]
+class Pays--><g id="elem_Pays"><polygon fill="#F1F1F1" points="34.5,163,34.5,163.2102,44.25,162.5857,54,163.1933,63.75,163.3997,73.5,162.2866,83.25,162.9223,93,162.5735,102.75,162.6165,112.5,163,112.4913,162.979,112.7654,162.9335,113.2777,163.4634,113.4803,163.2452,113.889,163.5249,114.2678,163.7322,114.4008,163.7873,114.3878,164.0748,114.5817,164.448,114.6973,164.7888,114.9085,165.1692,115,165.5,115.2391,165.5,115.5857,175.8785,115.6711,186.2569,115.6793,196.6354,115.2546,207.0138,115,217.3923,115.1428,217.4514,115.0698,217.8354,114.485,218.0074,114.7696,218.5395,114.3229,218.7687,114.2678,219.16,114.3359,219.3244,113.8511,219.154,113.5519,219.4318,113.3017,219.8278,112.8473,219.7308,112.5,219.8923,112.5,219.9976,102.75,220.2309,93,220.3085,83.25,219.8884,73.5,220.1795,63.75,219.3199,54,220.1767,44.25,220.4405,34.5,219.8923,34.5567,220.0292,34.2246,219.9346,33.7313,219.4506,33.3561,219.2521,33.0065,219.1151,32.7322,219.16,32.7141,219.1525,32.5253,218.7814,32.6492,218.5399,32.2391,218.0771,32.0408,217.7021,32,217.3923,32.2283,217.3923,31.3332,207.0138,31.4809,196.6354,32.649,186.2569,32.4357,175.8785,32,165.5,32.2262,165.5937,32.0473,165.1054,32.3912,164.8336,32.6212,164.5147,32.4403,164.0255,32.7322,163.7322,32.72,163.7027,33.1019,163.6246,33.5225,163.6401,33.7924,163.2916,34.2055,163.2889,34.5,163" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="28" x="59.5" y="183.2593">Pays</text><path d="M33,192.4461 L33,192.7264 L43.125,191.8937 L53.25,192.7039 L63.375,192.979 L73.5,191.4949 L83.625,192.3425 L93.75,191.8775 L103.875,191.9348 L114,192.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="71" x="38" y="211.7054">nom : String</text></g><!--MD5=[129254b4648df46714f886143fa6f15e]
+link Joueur to Pays--><g id="link_Joueur_Pays"><path d="M73.5,83.21 L73.7802,83.21 L72.9476,93.1838 L73.7577,103.1575 L74.0329,113.1313 L72.5488,123.105 L73.3964,133.0788 L72.9313,143.0525 L72.9887,153.0263 L73.5,163 " fill="none" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#000000" points="78.5,128.0287,78.5666,128.0503,78.9564,126.177,79.7368,124.4306,80.3901,122.6428,80.625,120.7191,81.4389,118.9836,81.4389,118.9577,80.2634,118.8414,79.0878,118.8558,77.9122,118.9609,76.7366,118.7531,75.5611,118.9836,75.7366,119.0406,75.949,120.7277,76.6739,122.5813,77.4614,124.4551,77.885,126.2108,78.5,128.0287" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="47" x="87.5" y="128.1695">Contrôle</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="4" x="69.1563" y="105.4696">1</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="18" x="53.5313" y="150.9844">1..*</text></g><!--MD5=[58a600d913b00bebd4bf053032abc776]
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+class Joueur {
+  nom : String
+  <color:blue>/nbPaysOccupés : int</color>
+}
+class Pays {
+  nom : String
+}
+Joueur "1" - - "1..*" Pays : Contrôle >
+@enduml
+
+@startuml
+skinparam style strictuml
+skinparam backgroundcolor transparent
+skinparam defaultfontname xkcd Script
+skinparam handwritten true
+scale 1
+hide empty members
+class Joueur {
+  nom : String
+  <color:blue>/nbPaysOccupés : int</color>
+}
+class Pays {
+  nom : String
+}
+Joueur "1" - - "1..*" Pays : Contrôle >
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.1: <code>nbPaysOccupés</code> est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l’association.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exemple-de-mdd-pour-le-jeu-risk" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="exemple-de-mdd-pour-le-jeu-risk"><span class="header-section-number">4.5</span> Exemple de MDD pour le jeu Risk</h2>
+<p>La <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.2</span></a> est un MDD pour le jeu Risk, selon <a href="CasUtilisation.html#exemple-jeu-de-risk">l’exemple</a> mentionné dans le chapitre sur les cas d’utilisation. Commençons par la classe <code>JeuRisk</code>, qui est l’objet racine du modèle. Il est relié à la classe <code>Joueur</code>, puisqu’un joueur «&nbsp;joue&nbsp;» à <code>JeuRisk</code> (notez le triangle pour le sens de lecture). Selon les cardinalités de l’association entre ces deux classes, il peut y avoir entre deux (2) et six (6) personnes qui jouent au jeu. Le jeu «&nbsp;inclut&nbsp;» cinq objets de la classe <code>Dé</code>, mais un <code>Joueur</code> jette un, deux ou trois dés (selon la règle du jeu Risk). L’association entre <code>Joueur</code> et <code>Pays</code> a un verbe «&nbsp;contrôle&nbsp;», qui est un exemple de verbe plus riche que «&nbsp;possède&nbsp;» ou «&nbsp;a&nbsp;». L’association entre <code>Continent</code> et <code>Pays</code> représente la composition des territoires (un synonyme pour pays) des différents continents, soit 4 (pour l’Amérique du sud et l’Océanie), 6 (pour l’Afrique), 7 (pour l’Europe), 9 (pour l’Amérique du nord) et 12 (pour l’Asie). Si vous regardez tout le modèle, vous verrez qu’il représente visuellement beaucoup d’éléments du jeu.</p>
 <div id="fig-MDD-jeu-de-risk" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="419px" preserveaspectratio="none" style="width:653px;height:419px;background:#00000000;" version="1.1" viewbox="0 0 653 419" width="653px" zoomandpan="magnify"><defs></defs><g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
@@ -679,59 +732,7 @@ Default Encoding: UTF-8
 Language: en
 Country: null
 --></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.1: Modèle du domaine du jeu Risk.</figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="attributs-dérivés" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="attributs-dérivés"><span class="header-section-number">4.5</span> Attributs dérivés</h2>
-<p>Les attributs dérivés sont expliqués en détail dans la section 9.16&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Il s’agit des attributs qui sont calculés à partir d’autres informations reliées à la classe. Ils sont indiqués par le symbole <strong><code>/</code></strong> devant leur nom. L’exemple à la <a href="#fig-MDD-attribut-derive">figure&nbsp;<span>4.2</span></a> s’applique à la règle du jeu Risk spécifiant qu’un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé <code>/nbPaysOccupés</code> qui est calculé selon le nombre de Pays contrôlés par le joueur.</p>
-<div id="fig-MDD-attribut-derive" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="226px" preserveaspectratio="none" style="width:147px;height:226px;background:#00000000;" version="1.1" viewbox="0 0 147 226" width="147px" zoomandpan="magnify"><defs></defs><g><!--MD5=[f35b8d93951ba498799a84be5600c0ca]
-class Joueur--><g id="elem_Joueur"><polygon fill="#F1F1F1" points="9.5,7,9.5,7.2102,19.3462,6.5857,29.1923,7.1933,39.0385,7.3997,48.8846,6.2866,58.7308,6.9223,68.5769,6.5735,78.4231,6.6165,88.2692,6.9318,98.1154,6.3086,107.9615,7.5536,117.8077,6.3697,127.6538,6.8022,137.5,7,137.5551,7.133,137.8426,7.12,138.2158,7.3139,138.5566,7.4295,138.937,7.6408,139.2678,7.7322,139.3414,7.7627,139.5946,8.1605,139.7673,8.5249,139.9163,8.8795,139.932,9.1789,140,9.5,140.4636,9.5,140.7022,19.6912,139.2788,29.8824,140.6785,40.0736,139.7035,50.2648,140.5338,60.456,139.505,70.6472,140,80.8384,139.9789,80.8297,140.0819,81.2866,139.6921,81.5393,139.5931,81.9125,139.5185,82.2958,139.2678,82.6062,139.3209,82.7344,138.9137,82.7514,138.5973,82.9875,138.1341,82.8692,137.8898,83.2796,137.5,83.3384,137.5,83.8866,127.6538,83.783,117.8077,83.9514,107.9615,82.8553,98.1154,82.6862,88.2692,82.717,78.4231,83.2795,68.5769,83.1419,58.7308,84.0198,48.8846,83.1637,39.0385,82.9954,29.1923,83.5667,19.3462,82.6716,9.5,83.3384,9.4338,83.1786,9.2292,83.3918,8.8485,83.1797,8.533,83.1253,8.0447,82.6535,7.7322,82.6062,7.8305,82.6469,7.7676,82.3279,7.2939,81.8388,7.2634,81.5333,7.1852,81.208,7,80.8384,7.6518,80.8384,6.9958,70.6472,7.4626,60.456,6.4462,50.2648,6.3227,40.0736,7.5036,29.8824,6.2831,19.6912,7,9.5,7.1567,9.5649,7.2101,9.1728,7.2104,8.7587,7.3304,8.3942,7.7271,8.1443,7.7322,7.7322,7.694,7.6401,8.1613,7.7681,8.3688,7.2691,8.8717,7.483,9.2082,7.2956,9.5,7" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="43" x="52" y="27.2593">Joueur</text><path d="M8,36.4461 L8,36.7264 L18.0769,35.8937 L28.1538,36.7039 L38.2308,36.979 L48.3077,35.4949 L58.3846,36.3425 L68.4615,35.8775 L78.5385,35.9348 L88.6154,36.3553 L98.6923,35.5243 L108.7692,37.1843 L118.8462,35.6058 L128.9231,36.1825 L139,36.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="71" x="13" y="55.7054">nom : String</text><text fill="#0000FF" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="121" x="13" y="75.1515">/nbPaysOccupés : int</text></g><!--MD5=[aa2bb12b1d34009d39b42a242f861e93]
-class Pays--><g id="elem_Pays"><polygon fill="#F1F1F1" points="34.5,163,34.5,163.2102,44.25,162.5857,54,163.1933,63.75,163.3997,73.5,162.2866,83.25,162.9223,93,162.5735,102.75,162.6165,112.5,163,112.4913,162.979,112.7654,162.9335,113.2777,163.4634,113.4803,163.2452,113.889,163.5249,114.2678,163.7322,114.4008,163.7873,114.3878,164.0748,114.5817,164.448,114.6973,164.7888,114.9085,165.1692,115,165.5,115.2391,165.5,115.5857,175.8785,115.6711,186.2569,115.6793,196.6354,115.2546,207.0138,115,217.3923,115.1428,217.4514,115.0698,217.8354,114.485,218.0074,114.7696,218.5395,114.3229,218.7687,114.2678,219.16,114.3359,219.3244,113.8511,219.154,113.5519,219.4318,113.3017,219.8278,112.8473,219.7308,112.5,219.8923,112.5,219.9976,102.75,220.2309,93,220.3085,83.25,219.8884,73.5,220.1795,63.75,219.3199,54,220.1767,44.25,220.4405,34.5,219.8923,34.5567,220.0292,34.2246,219.9346,33.7313,219.4506,33.3561,219.2521,33.0065,219.1151,32.7322,219.16,32.7141,219.1525,32.5253,218.7814,32.6492,218.5399,32.2391,218.0771,32.0408,217.7021,32,217.3923,32.2283,217.3923,31.3332,207.0138,31.4809,196.6354,32.649,186.2569,32.4357,175.8785,32,165.5,32.2262,165.5937,32.0473,165.1054,32.3912,164.8336,32.6212,164.5147,32.4403,164.0255,32.7322,163.7322,32.72,163.7027,33.1019,163.6246,33.5225,163.6401,33.7924,163.2916,34.2055,163.2889,34.5,163" style="stroke:#181818;stroke-width:0.5;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="28" x="59.5" y="183.2593">Pays</text><path d="M33,192.4461 L33,192.7264 L43.125,191.8937 L53.25,192.7039 L63.375,192.979 L73.5,191.4949 L83.625,192.3425 L93.75,191.8775 L103.875,191.9348 L114,192.4461 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><text fill="#000000" font-family="xkcd Script" font-size="14" lengthadjust="spacing" textlength="71" x="38" y="211.7054">nom : String</text></g><!--MD5=[129254b4648df46714f886143fa6f15e]
-link Joueur to Pays--><g id="link_Joueur_Pays"><path d="M73.5,83.21 L73.7802,83.21 L72.9476,93.1838 L73.7577,103.1575 L74.0329,113.1313 L72.5488,123.105 L73.3964,133.0788 L72.9313,143.0525 L72.9887,153.0263 L73.5,163 " fill="none" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="#000000" points="78.5,128.0287,78.5666,128.0503,78.9564,126.177,79.7368,124.4306,80.3901,122.6428,80.625,120.7191,81.4389,118.9836,81.4389,118.9577,80.2634,118.8414,79.0878,118.8558,77.9122,118.9609,76.7366,118.7531,75.5611,118.9836,75.7366,119.0406,75.949,120.7277,76.6739,122.5813,77.4614,124.4551,77.885,126.2108,78.5,128.0287" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="47" x="87.5" y="128.1695">Contrôle</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="4" x="69.1563" y="105.4696">1</text><text fill="#000000" font-family="xkcd Script" font-size="13" lengthadjust="spacing" textlength="18" x="53.5313" y="150.9844">1..*</text></g><!--MD5=[58a600d913b00bebd4bf053032abc776]
-@startuml
-!include ecriture.pumlinclude
-scale 1
-hide empty members
-class Joueur {
-  nom : String
-  <color:blue>/nbPaysOccupés : int</color>
-}
-class Pays {
-  nom : String
-}
-Joueur "1" - - "1..*" Pays : Contrôle >
-@enduml
-
-@startuml
-skinparam style strictuml
-skinparam backgroundcolor transparent
-skinparam defaultfontname xkcd Script
-skinparam handwritten true
-scale 1
-hide empty members
-class Joueur {
-  nom : String
-  <color:blue>/nbPaysOccupés : int</color>
-}
-class Pays {
-  nom : String
-}
-Joueur "1" - - "1..*" Pays : Contrôle >
-@enduml
-
-PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
-(GPL source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Default Encoding: UTF-8
-Language: en
-Country: null
---></g></svg></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.2: <code>nbPaysOccupés</code> est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l’association.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.2: Modèle du domaine du jeu Risk.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -996,7 +997,7 @@ Country: null
 <p>Lorsqu’on modélise un domaine, il est normal de commencer par un modèle simple (à partir d’un ou de deux cas d’utilisation) et ensuite de l’affiner dans les itérations suivantes, où l’on y intègre d’autres éléments plus subtils ou complexes du problème qu’on étudie. Les détails de cette approche sont présentés dans le chapitre F26/A31&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Bien que la matière soit présentée plus tard dans le livre, ce sont des choses à savoir pour la modélisation d’un domaine, même dans une première itération.</p>
 <p>Voici un résumé des points importants traités dans ce chapitre, dont quelques-uns ont déjà été présentés plus <span style="white-space:nowrap">haut :</span></p>
 <ul>
-<li>Composition, par exemple la classe Continent qui groupe les Pays sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.1</span></a>. Larman propose d’utiliser la composition <span style="white-space:nowrap">lorsque :</span>
+<li>Composition, par exemple la classe Continent qui groupe les Pays sur la <a href="#fig-MDD-jeu-de-risk">figure&nbsp;<span>4.2</span></a>. Larman propose d’utiliser la composition <span style="white-space:nowrap">lorsque :</span>
 <ul>
 <li>la durée de vie du composant est limitée à celle du composite (lorsqu’un objet Continent est instancié, ça doit grouper des instances de Pays pour être cohérent), il existe une dépendance création-suppression de la partie avec le tout (ça ne fait pas de sens de supprimer un objet Pays d’une instance de Continent dans le jeu <span style="white-space:nowrap">Risk) ;</span></li>
 <li>il existe un assemblage logique ou physique évident entre le tout et les parties (on ne peut construire un Continent sans les <span style="white-space:nowrap">Pays) ;</span></li>
@@ -1004,7 +1005,7 @@ Country: null
 <li>les opérations que l’on peut appliquer au composite, telles que destruction, déplacement et enregistrement, se propagent aux composants.</li>
 </ul></li>
 <li>Généralisation/spécialisation <span class="citation" data-cites="craig_uml_2005">(voir <a href="references.html#ref-craig_uml_2005" role="doc-biblioref">Larman, 2005</a> pour les exemples et les directives)</span>, notamment la règle des <span style="white-space:nowrap">100 %</span> (conformité à la définition) et la règle «&nbsp;est-un&nbsp;» (appartenance à l’ensemble).</li>
-<li>Attribut dérivé, par exemple, <code>/nbPaysOccupés</code> dans la classe Joueur est un attribut dérivé de l’association entre Joueur et Pays (<a href="#fig-MDD-attribut-derive">figure&nbsp;<span>4.2</span></a>).</li>
+<li>Attribut dérivé, par exemple, <code>/nbPaysOccupés</code> dans la classe Joueur est un attribut dérivé de l’association entre Joueur et Pays (<a href="#fig-MDD-attribut-derive">figure&nbsp;<span>4.1</span></a>).</li>
 <li>Hiérarchies dans un MDD et héritage dans l’implémentation.</li>
 <li>Noms de rôles.</li>
 <li>Organisation des classes conceptuelles en packages (surtout lorsque le MDD contient un nombre important de classes conceptuelles).</li>
