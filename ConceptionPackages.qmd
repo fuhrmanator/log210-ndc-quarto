@@ -1,7 +1,7 @@
 # Conception de packages
 
 Le chapitre A36/F29\ {{< fa solid book >}}\ contient des directives pour la conception de packages. 
-Notez que la notion de package n'existe pas en TypeScript (et en JavaScript), mais le principe de *namespace* existe.
+Notez que la notion de package n'existe pas en TypeScript (et en JavaScript), mais le principe de *namespace* (espace de nom) existe.
 La @sec-NamespaceTypeScript explique quelques pratiques pour la gestion des *namespaces* en TypeScript.
 
 Les points importants sont les suivants (les détails se trouvent dans le livre):

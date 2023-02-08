@@ -173,7 +173,7 @@ Pour initialiser les références nécessaires pour la bonne visibilité, Larman
 ## Transformer les identifiants en objets {#sec-TransformerIDenObjets}
 
 La directive d'utiliser les types primitifs pour les arguments dans les opérations système (voir la @sec-dss) nous mène à un problème récurrent dans les RDCU: transformer un identifiant (un argument de type `String` ou `int`) en objet représenté par cet identifiant.
-Larman vous propose un idiome (pas vraiment un pattern) nommé **Transformer identifiant en objet**, qui sert à repérer la référence d'un objet qui correspond à l'identifiant.
+Larman vous propose un idiome (pas vraiment un pattern) nommé **Transformer identifiant en objet** (fin de la section F23.8, p.451/A26.8, **IDs to Objects**\ {{< fa solid book >}}), qui sert à repérer l'objet qui correspond à l'identifiant.
 
 Il y a un exemple à la @fig-RDCU_ID_en_objets provenant du chapitre sur **l'Application des patterns GoF (figure F23.18\ {{< fa solid book >}})**.
 Un autre exemple du livre de @craig_uml_2005 est l'identifiant `codeArticle` transformé en objet `DescriptionProduit` par la méthode  

@@ -56,7 +56,7 @@ Faites un diagramme d'états en UML qui correspond au système décrit par les c
 
 **S'authentifier.** Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte.
 Le Client introduit sa carte bancaire, et le système attend qu'il saisisse le NIP de la carte.
-Si le NIP est valide pour la carte, alors le système est prêt pour accepter d'autres actions.
+Si le NIP est valide pour la carte, alors le système est prêt à accepter d'autres actions.
 Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP.
 À tout moment où le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.
 

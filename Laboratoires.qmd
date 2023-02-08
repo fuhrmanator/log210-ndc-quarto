@@ -137,7 +137,7 @@ La @fig-git_fonctionnement présente un survol des concepts et des opérations d
 
 Ce manuel ne rentre pas dans les détails de chaque opération Git; il existe plusieurs tutoriels pour Git sur Internet.
 Il y a beaucoup de scénarios où Git peut être utile, par exemple pour récupérer une version antérieure d'un fichier ou pour savoir qui a apporté une modification à un fichier, etc.
-Apprendre tous les cas d'utilisation de Git serait long et pas très intéressant.
+Apprendre tous les cas d'utilisation de Git serait long et inintéressant.
 Il n'est pas nécessaire de tout comprendre pour commencer.
 
 ![Concepts et opérations de base de Git. ["Basic Git Concepts and Operations"](https://graphviz.org/Gallery/directed/git.html) de [Costa Shulyupin](https://gitlab.com/makelinux), utilisé sous [EPL](https://en.wikipedia.org/wiki/Eclipse_Public_License).](images/git.svg){#fig-git_fonctionnement}
