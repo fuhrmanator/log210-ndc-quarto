@@ -29,7 +29,7 @@ On peut aussi les appeler informellement les "ilités", car ces qualités sont s
 ## FURPS+
 
 FURPS+ est un modèle (avec un acronyme) pour classer les exigences (besoins) d'un logiciel.
-Voici un résumé de FURPS+ [voir @craig_uml_2005, section 5.4]:
+Voici un résumé de FURPS+ [voir @craig_uml_2005, section 5.4\ {{< fa solid book >}}]:
 
 - **Fonctionnalité** (*Functionality*). Ce sont les exigences exprimées souvent par les cas d'utilisation, par exemple *Traiter une vente*. La sécurité est aussi considérée dans ce volet.
 - **Aptitude à l'utilisation** (*Usability*). Convivialité: les facteurs humains du logiciel, par exemple le nombre de clics que ça prend pour réaliser une fonctionnalité, à quel point une interface est facile à comprendre par une personne, etc.

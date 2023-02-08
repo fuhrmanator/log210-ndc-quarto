@@ -23,7 +23,7 @@ La **conception** sous-entend l'élaboration d'une solution conceptuelle répond
 
 <!-- Pour plus de détails, vous pouvez consulter le chapitre 1\ {{< fa solid book >}}. -->
 
-```{.plantuml #fig-mddDes caption="Diagramme de *classes conceptuelles* décrivant (modélisant) le *problème* d'un jeu de dés [@craig_uml_2005, figure 1.3] avec des statistiques. Ceci est élaboré lors d'une activité d'analyse."}
+```{.plantuml #fig-mddDes caption="Diagramme de *classes conceptuelles* décrivant (modélisant) le *problème* d'un jeu de dés (figure 1.3\ {{< fa solid book >}}) avec des statistiques. Ceci est élaboré lors d'une activité d'analyse."}
 @startuml
 !include ecriture.pumlinclude
 'left to right direction
@@ -209,7 +209,7 @@ Voici les éléments importants documentés dans ce manuel (voir la @fig-SurvolM
 ## Développement itératif, évolutif et agile
 
 Nous adoptons également un processus moderne de développement avec des itérations, selon une méthodologie "agile".
-Dans le chapitre 2 du livre de Craig Larman, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du "processus unifié", qui est une représentation générique de cette stratégie de développement.
+Dans le chapitre 2\ {{< fa solid book >}}, on définit le processus itératif et adaptatif ainsi que les concepts fondamentaux du "processus unifié", qui est une représentation générique de cette stratégie de développement.
 
 Nous résumons les points importants ainsi:
 
@@ -282,8 +282,4 @@ Le but ultime de cette stratégie est de pouvoir faire une démonstration à la 
 
 \filbreak
 
-<!-- ![Le développement itératif et incrémental [@craig_uml_2005, figure 2.1].](images/A2.1.svg){#fig-DevIteratifIncremental} -->
-
 ![Pour respecter la méthode du temps limité, on peut modifier les objectifs d'une itération si le travail est trop important [selon @craig_uml_2005, figure 2.4].](images/Modifier_objectifs_mi_iteration.svg){#fig-AnalyseConceptionDansLesIterations}
-
-<!-- ![Nuage de mots importants.](images/wordle_ordre_alph.png){#fig-nuageDeMots} -->

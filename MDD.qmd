@@ -274,7 +274,7 @@ end note
 
 ## Classes d'association
 
-Les classes d'association dans un MDD sont le sujet de la section A31.10/F26.10\ {{< fa solid book >}}.
+Les classes d'association dans un MDD sont le sujet de la section F26.10/A31.10\ {{< fa solid book >}}.
 
 ::: {.callout}
 Une classe d'association permet de traiter une association comme une classe et de la modéliser avec des attributs.
@@ -461,7 +461,7 @@ Quelles sont les différences?
 1. Notez que les classes candidates dénichées ne sont pas toujours importantes.
 Certains concepts sont des attributs.
 D'autres (surtout avec l'approche linguistique) n'ont rien à voir avec le problème du domaine. 
-Vous devez appliquer les directives vues dans le chapitre 9 de @craig_uml_2005.
+Vous devez appliquer les directives vues dans le chapitre 9\ {{< fa solid book >}}.
 1. Faites attention à bien modéliser la classe de "description" dans ce problème.
 1. Tout attribut doit avoir un type.
 1. Limitez-vous à des associations "mémorisables" dans le contexte de l'application du logiciel (ne pas faire des associations hors de la portée du cas d'utilisation).

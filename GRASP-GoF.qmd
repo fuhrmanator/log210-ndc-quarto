@@ -8,7 +8,7 @@ Le pattern Adaptateur a été proposé par @GoF1994, et sa structure est illustr
 La structure de base peut être trompeuse, car elle ne montre qu'une seule classe `Adaptee` qui représente l'API (externe) que l'on ne peut modifier.
 En réalité, ce pattern est plus intéressant lorsqu'on considère *plusieurs* cas de classe `Adaptee`, chacune avec une API différente.
 
-Le chapitre A26/F23\ {{< fa solid book >}}\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (figure A26.1/F23.1).
+Le chapitre A26/F23\ {{< fa solid book >}}\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (figure F23.1/A26.1\ {{< fa solid book >}}).
 On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la @fig-Fig23_1.
 Nous faisons une hypothèse sur les noms des méthodes pour l'API des classes adaptées, car cette information n'est pas spécifiée.
 En plus, nous n'avons pas spécifié les arguments (c'est "?"), car les détails ne sont pas connus.
@@ -96,9 +96,10 @@ Pour supporter un nouveau calculateur de taxes, il faudrait coder une nouvelle b
 Même si l'on faisait une méthode pour encapsuler le code de chaque branche, ça ferait toujours augmenter les responsabilités de la classe Vente. 
 Elle est responsable de connaître tous les détails (l'API distincte et immuable) de chaque calculateur de taxes externe, puisqu'elle communique directement (il y a du couplage) à ces derniers.
 
-Le pattern Adaptateur comprend les principes GRASP Faible Couplage, Forte Cohésion, Polymorphisme, Indirection, Fabrication Pure et Protection des variations. La @fig-Fig23_3 (tirée du livre de Larman, figure A26.3/F23.3) démontre la relation entre ces principes dans le cas d'Adaptateur.
+Le pattern Adaptateur comprend les principes GRASP Faible Couplage, Forte Cohésion, Polymorphisme, Indirection, Fabrication Pure et Protection des variations.
+La @fig-Fig23_3 démontre la relation entre ces principes dans le cas d'Adaptateur.
 
-```{.plantuml #fig-Fig23_3 caption="Adaptateur et principes GRASP [voir @craig_uml_2005, figure **A26.3/F23.3**]."}
+```{.plantuml #fig-Fig23_3 caption="Adaptateur et principes GRASP (figure F23.3/A26.3\ {{< fa solid book >}})."}
 @startuml Adaptateur_GRASP
 !include normal.pumlinclude
 hide empty members
