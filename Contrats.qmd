@@ -56,12 +56,12 @@ Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du 
 
 #### Postconditions: {.unnumbered .unlisted}
 
-- a.nbDéfendant est devenu nbRégimentsDéfendant.
+- a.nbDéfenseur est devenu nbRégimentsDéfendant.
 - L'attribut valeur des d1 à d5 est devenu un nombre entier aléatoire entre 1 et 6.
 - Occupation.nbRégiments est ajusté selon le résultat des valeurs correspondant à paysAttaquant.
 - Occupation.nbRégiments est ajusté selon le résultat des valeurs correspondant à paysDéfenseur.
 
-<!-- Draw.io svg contient du texte en SVG qui pose problème. Alors j'exporte manuellement une version ayant du bon texte "convert labels to SVG" -->
+<!-- Draw.io svg contient du texte en SVG qui ne se présente pas bien lors de la conversion vers PDF (on obtien "Text is not SVG - cannot display"). Alors, on exporte manuellement une version du SVG ayant du texte compatible (tout en gardant l'original). Cela n'est pas idéal, mais c'est une solution. Voir https://www.diagrams.net/doc/faq/svg-export-text-problems et l'option "convert labels to SVG" -->
 ![Les postconditions décrivent la manipulation d'objets dans un MDD (la partie inférieure ici est un diagramme d'objets).](images/MDD-Risk-contrats_export.svg){#fig-MDD-risk-objets}
 
 ## Feuille de référence
