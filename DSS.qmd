@@ -6,11 +6,13 @@ Les DSS sont expliqués en détail dans le chapitre 10\ {{< fa solid book >}}, m
 - Le DSS a toujours un titre.
 - L'acteur est indiqué dans la notation par un bonhomme et est représenté comme une *instance* de la classe du bonhomme, comme `:Joueur` sur la @fig-dssattaquerunpays (le ":" signifie une instance).
 - Le Système est un objet (une instance `:Système`) et n'est jamais détaillé plus.
-- Le but du DSS est de définir des opérations système (*Application Programming Interface*) du système; il s'agit d'une conception de haut niveau.
+- Le but du DSS est de définir des opérations système, qui deviendront l'interface de programmation API(*Application Programming Interface*[^API]) du système; il s'agit d'une conception de haut niveau.
 - Le côté acteur du DSS n'est pas un acteur tout seul, mais une couche logicielle de présentation, comme une interface graphique ou un logiciel qui peut reconnaître la parole. Cette couche reconnaît des gestes de l'acteur et envoie une opération système. Un geste peut être un clic sur un bouton dans l'interface, une demande "Dis Siri", etc.
 - Puisque la couche présentation reçoit des informations des êtres humains, **les opérations système ont des arguments de type primitif**. Il est difficile pour un utilisateur de spécifier une référence (pointeur en mémoire) à un objet. Alors, on peut donner le nom (de type `String`) d'un morceau de musique à jouer, ou spécifier une quantité (de type `Integer`).
 - Puisque les types des arguments sont importants, on les spécifie dans les opérations système du DSS.
 - Un message de retour (ligne pointillée avec flèche ouverte) vers l'acteur représente la communication des informations précises, par exemple les valeurs des dés dans l'attaque du jeu Risk. Puisque la couche présentation a beaucoup de moyens pour afficher ces informations, **on ne va pas spécifier les messages de retour comme des méthodes**.
+
+[^API]: "Interface de programmation: Ensemble de routines standards, accessibles et documentées, qui sont destinées à faciliter au programmeur le développement d'applications" selon l'[Office québécois de la langue française](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8394269/interface-de-programmation).
 
 ## Exemple: DSS pour Attaquer un pays
 
