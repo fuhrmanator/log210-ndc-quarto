@@ -24,7 +24,7 @@ Une fois que vous aurez l'habitude d'utiliser les GRASP, vous serez encore rapid
 
 Neal Ford [-@Ford2009] a [proposé](https://www.ibm.com/developerworks/library/j-eaed1/index.html) la notion d'effort pour la conception qu'il a nommée le "Spectre de la conception". La @fig-SpectreConception illustre le principe.
 
-``` {#fig-SpectreConception .plantuml width="80%" caption="Spectre de la conception, adapté de @Ford2009."}
+``` {#fig-SpectreConception .plantuml caption="Spectre de la conception [@Ford2009]."}
 @startuml
 !include ecriture.pumlinclude
 scale 1.2
@@ -33,27 +33,17 @@ skinparam classBackgroundColor hidden
 skinparam classArrowColor black
 hide stereotypes
 hide empty members
-class "<size:30>]" as waterfall
-class "« Cascade pure »" as Ncp
-class "**+**" as bduf <<middle>>
-class "Beaucoup de\nconception\nau début\n(BDUF)" as Nbduf
-class "**+**" as duf <<middle>>
-class "Un peu de design\nau début\n(Some DUF)" as Nduf
-class "**+**" as agile <<middle>>
-class "Agile" as Na
-class "Design\némergent" as Nde
 class "<size:30>[" as hacking
 class "« Hacking cowboy »" as Nh
+class "**+**" as agile <<middle>>
+class "            Agile          " as Na
+class "<size:30>]" as waterfall
+class "« Cascade pure »" as Ncp
 
-waterfall -left[bold]- bduf
-bduf -left[bold]- duf
-duf -left[bold]- agile
-agile -left[bold]- hacking
+hacking -right[bold]- agile
+agile -right[bold]- waterfall
 
 waterfall <-u[dashed]- Ncp
-bduf <-d[dashed]- Nbduf
-duf <-u[dashed]- Nduf
-agile <-d[dashed]- Nde
 agile <-u[dashed]- Na
 hacking <-d[dashed]- Nh
 @enduml
