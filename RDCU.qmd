@@ -238,7 +238,7 @@ Voici quelques points importants:
 ```{.plantuml #fig-DemarrerRisk  caption="Exemple de l'initialisation partielle du jeu Risk, avec les principes GRASP et les tableaux associatifs pour faciliter la transformation d'identifiants en objets." }
 @startuml
 !include ecriture.pumlinclude
-'scale 1.1
+scale 0.75
 skinparam sequenceMessageAlign center
 participant ":ObjetMain" as outside
 participant ":JeuRisk" as jr
@@ -437,6 +437,7 @@ Pour visualiser la conception, nous avons généré un diagramme de classes en U
 ' tplant --input src/monopoly/**/*.ts --output Emojiopoly.puml -A
 ' (certaines éléments ont été modifiés pour la mise en page)
 'left to right direction
+scale 0.6
 interface Card {
     +text: string
     +action: "advance" | "back" | "choice" | "payeach" | "collecteach" |\n "doubletransport" | "earn" | "pay" | "stealmoney" | "stolenmoney" |\n "streetrepairs" | "gotojail"
