@@ -115,7 +115,7 @@ Cependant, si vous avez une boucle pour indiquer la possibilité de répéter un
 ### Comment faire si un cas d'utilisation a des *scénarios alternatifs*?
 
 ::: {.callout}
-Fait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs `opt` et `alt`) pour montrer des flots différents dans le même DSS?
+Fait-on plusieurs DSS (un pour chaque [scénario alternatif](#sec-scenarios_alternatifs)) ou utilise-t-on la notation UML (des blocs `opt` et `alt`) pour montrer des flots différents dans le même DSS?
 :::
 
 Un objectif derrière le DSS est de **définir les opérations système**.
@@ -128,14 +128,21 @@ Un DSS devrait être *facile à comprendre*.
 C'est à vous de juger si votre DSS avec des `opt` ou des `alt` est assez simple ou est compliqué à lire.
 Utilisez un autre DSS (ou plusieurs) ayant le nom des scénarios alternatifs si cela vous semble plus clair.
 
-### Est-ce normal d'avoir une opération système avec beaucoup d'arguments (de type primitif)?
+### Est-ce un bon design d'avoir une opération système avec beaucoup d'arguments (de type primitif)?
 
 ::: {.callout}
-Puisqu'une opération système doit avoir seulement des arguments de type primitif, j'ai plusieurs opérations système avec de nombreux (plus de cinq) arguments.
-Pourquoi n'est-il pas permis de passer des objets comme arguments?
+Selon la méthodologie, une opération système doit avoir seulement des arguments de type primitif.
+À cause de ça, j'ai plusieurs opérations système avec de nombreux (plus de cinq) arguments.
+Par exemple, pour créer un Devoir (dans le projet du laboratoire), il y a beaucoup d'informations provenant du formulaire Web et on doit les passer toutes à l'opération système. 
+Pourquoi n'est-il pas permis d'instancier un objet de Devoir d'abord et le passer comme un seul argument?
 :::
 
-Il n'est pas conseillé de passer des *objets du domaine* comme arguments, puisque c'est la couche présentation qui invoque l'opération système.
+Il y a deux volets à cette question.
+
+1. Il y a le problème de beaucoup d'arguments (de type primitif) pour une opération système.
+Cela peut arriver, surtout pour les opérations sur les objets du domaine (comme le Devoir) qui ont beaucoup d'attributs. En effet, il n'est pas convivial d'avoir beaucoup d'arguments dans un appel (une opération).
+
+2. Ensuite, il n'est pas conseillé de passer des *objets du domaine* (par exemple, le Devoir) comme arguments, puisque c'est la couche *présentation* qui invoque l'opération système.
 La couche présentation n'est pas censée manipuler directement les objets dans la couche domaine, sinon elle empiète sur les responsabilités de la couche domaine.
 
 Une solution pour réduire le nombre d'arguments sans utiliser un objet du domaine est d'appliquer un [réusinage](#Refactoring) pour le *smell* nommé *Long Parameter List*, par exemple [Introduce Parameter Object](https://refactoring.com/catalog/introduceParameterObject.html).
@@ -157,6 +164,8 @@ function compteARebours({ initial: number, final: final = 0,
 compteARebours({ initial: 20 });  // on passe un objet de paramètre
 compteARebours({ initial: 20, increment: 2, final: 4 });
 ```
+
+Passer un objet de paramètre à une opération système respecte la séparation des couches (la modularité) et augmente la lisibilité du code.
 
 ### Ne serait-il pas plus simple de passer l'objet `body` de la page Web au contrôleur GRASP?
 
