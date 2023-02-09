@@ -303,7 +303,8 @@ div.csl-indent {
   <li><a href="#exemple-jeu-de-risk" id="toc-exemple-jeu-de-risk" class="nav-link active" data-scroll-target="#exemple-jeu-de-risk"><span class="toc-section-number">3.1</span>  <span style="white-space:nowrap">Exemple :</span> le jeu Risk</a>
   <ul class="collapse">
   <li><a href="#scénario-attaquer-un-pays" id="toc-scénario-attaquer-un-pays" class="nav-link" data-scroll-target="#scénario-attaquer-un-pays"><span class="toc-section-number">3.1.1</span>  <span style="white-space:nowrap">Scénario :</span> Attaquer un pays</a></li>
-  <li><a href="#diagramme-de-cas-dutilisation" id="toc-diagramme-de-cas-dutilisation" class="nav-link" data-scroll-target="#diagramme-de-cas-dutilisation"><span class="toc-section-number">3.1.2</span>  Diagramme de cas d’utilisation</a></li>
+  <li><a href="#sec-scenarios_alternatifs" id="toc-sec-scenarios_alternatifs" class="nav-link" data-scroll-target="#sec-scenarios_alternatifs"><span class="toc-section-number">3.1.2</span>  Scénarios alternatifs (ou extensions)</a></li>
+  <li><a href="#diagramme-de-cas-dutilisation" id="toc-diagramme-de-cas-dutilisation" class="nav-link" data-scroll-target="#diagramme-de-cas-dutilisation"><span class="toc-section-number">3.1.3</span>  Diagramme de cas d’utilisation</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fuhrmanator/log210-ndc-quarto/issues/new" class="toc-action">Signaler un problème</a></p></div></div></nav>
@@ -314,7 +315,7 @@ div.csl-indent {
 
 
 
-<p>Les cas d’utilisation sont des documents textuels décrivant l’interaction entre un système (un logiciel à développer) et un ou plusieurs acteurs (les utilisateurs ou systèmes externes). Le cas d’utilisation décrit plusieurs scénarios, mais, en général, il y a un scénario principal <em>happy path</em> représentant ce qui se passe lorsqu’il n’y a pas d’anomalie.</p>
+<p>Les cas d’utilisation sont des documents textuels décrivant l’interaction entre un système (un logiciel à développer) et un ou plusieurs acteurs (les utilisateurs ou systèmes externes). Le cas d’utilisation décrit plusieurs scénarios, mais, en général, il y a un scénario principal <em>happy path</em> représentant ce qui se passe le plus souvent et lorsqu’il n’y a pas d’anomalie.</p>
 <p>Les cas d’utilisation sont une manière de documenter les fonctionnalités (les exigences fonctionnelles).</p>
 <div class="callout callout-style-default callout-note callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -361,10 +362,35 @@ Note
 <li>Les deux Joueurs jettent le nombre de dés selon leur stratégie, choisie aux étapes précédentes.</li>
 <li>Le Système compare les dés, élimine les régiments de l’attaquant ou du défenseur selon les règles<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> et affiche le résultat.</li>
 </ol>
-<p><em>Les Joueurs répètent les étapes 2 à 5 jusqu’à ce que l’attaquant ne puisse plus attaquer ou ne veuille plus attaquer.</em></p>
+<p><em>Les Joueurs répètent les étapes 2 à 5 jusqu’à ce que l’attaquant ait éliminé tous les régiments du pays attaqué, l’attaquant n’ait plus suffisamment de régiments pour attaquer, ou l’attaquant ne veuille plus attaquer.</em></p>
+<ol start="6" type="1">
+<li>Le Système indique le résultat de l’attaque, y compris un changement de contrôle du pays attaqué si nécessaire.</li>
+</ol>
 </section>
-<section id="diagramme-de-cas-dutilisation" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="diagramme-de-cas-dutilisation"><span class="header-section-number">3.1.2</span> Diagramme de cas d’utilisation</h3>
+<section id="sec-scenarios_alternatifs" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-scenarios_alternatifs"><span class="header-section-number">3.1.2</span> Scénarios alternatifs (ou extensions)</h3>
+<p>Les compléments du scénario principal (ce qui se passe le plus souvent) sont les scénarios alternatifs, qui comprennent souvent la plus grande partie du texte de cas d’utilisation. Ils indiquent tous les autres cas ou branchements éventuels, ce qui peut représenter beaucoup de fonctionnalités d’un logiciel complet. Par exemple, un client ou une cliente veut payer avec Bitcoin (le logiciel doit supporter ce cas moins fréquent). Un autre exemple est lorsque la validation de carte de crédit échoue lors d’un paiement.</p>
+<p>Les scénarios alternatifs sont documentés dans une section du cas d’utilisation à ce propos. On spécifie les étapes du scénario de base auxquelles il peut y avoir un branchement. Dans l’exemple du jeu Risk, lors d’une attaque, le Joueur attaquant peut décider spontanément d’annuler son attaque. Il ne pourra pas l’annuler une fois que les dés sont lancés. Alors on peut spécifier le scénario alternatif «&nbsp;2-3a&nbsp;», pour indiquer que ça commence à partir des étapes 2 et 3 du scénario principal et que c’est le premier («&nbsp;a&nbsp;») scénario alternatif pour ces <span style="white-space:nowrap">étapes :</span></p>
+<div class="callout callout-style-simple callout-none no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Scénarios <span style="white-space:nowrap">alternatifs :</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2-3a. Le Joueur attaquant décide d’annuler son attaque.</p>
+<ol type="1">
+<li>Le Système indique que le Joueur attaquant a annulé.</li>
+<li>Fin du cas d’utilisation</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="diagramme-de-cas-dutilisation" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="diagramme-de-cas-dutilisation"><span class="header-section-number">3.1.3</span> Diagramme de cas d’utilisation</h3>
 <p>La <a href="#fig-uc">figure&nbsp;<span>3.1</span></a> est un exemple de diagramme de cas d’utilisation.</p>
 <p>Un diagramme de cas d’utilisation n’étant qu’une sorte de <em>table des matières</em> des fonctionnalités, il ne montre qu’une faible partie des détails trouvés dans le texte de chaque cas d’utilisation. Le diagramme ne peut donc remplacer la documentation textuelle.</p>
 <p>Sur la <a href="#fig-uc">figure&nbsp;<span>3.1</span></a>, le cas d’utilisation «&nbsp;…&nbsp;» signifie qu’il y a d’autres cas d’utilisation à spécifier concrètement, c’est-à-dire tous les autres cas d’utilisation du jeu, par exemple pour distribuer les régiments à chaque tour, etc.</p>

@@ -350,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#faut-il-une-opération-système-après-une-boucle" id="toc-faut-il-une-opération-système-après-une-boucle" class="nav-link" data-scroll-target="#faut-il-une-opération-système-après-une-boucle"><span class="toc-section-number">5.3.1</span>  Faut-il une opération système après une <span style="white-space:nowrap">boucle ?</span></a></li>
   <li><a href="#comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" id="toc-comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs" class="nav-link" data-scroll-target="#comment-faire-si-un-cas-dutilisation-a-des-scénarios-alternatifs"><span class="toc-section-number">5.3.2</span>  Comment faire si un cas d’utilisation a des <em>scénarios alternatifs</em><span style="white-space:nowrap"> ?</span></a></li>
-  <li><a href="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" id="toc-est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="nav-link" data-scroll-target="#est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"><span class="toc-section-number">5.3.3</span>  Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type <span style="white-space:nowrap">primitif) ?</span></a></li>
+  <li><a href="#est-ce-un-bon-design-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" id="toc-est-ce-un-bon-design-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="nav-link" data-scroll-target="#est-ce-un-bon-design-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"><span class="toc-section-number">5.3.3</span>  Est-ce un bon design d’avoir une opération système avec beaucoup d’arguments (de type <span style="white-space:nowrap">primitif) ?</span></a></li>
   <li><a href="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" id="toc-ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" class="nav-link" data-scroll-target="#ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp"><span class="toc-section-number">5.3.4</span>  Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page Web au contrôleur <span style="white-space:nowrap">GRASP ?</span></a></li>
   </ul></li>
   <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">5.4</span>  Exercices</a></li>
@@ -573,26 +573,30 @@ Country: null
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Fait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs <code>opt</code> et <code>alt</code>) pour montrer des flots différents dans le même <span style="white-space:nowrap">DSS ?</span></p>
+<p>Fait-on plusieurs DSS (un pour chaque <a href="CasUtilisation.html#sec-scenarios_alternatifs">scénario alternatif</a>) ou utilise-t-on la notation UML (des blocs <code>opt</code> et <code>alt</code>) pour montrer des flots différents dans le même <span style="white-space:nowrap">DSS ?</span></p>
 </div>
 </div>
 </div>
 <p>Un objectif derrière le DSS est de <strong>définir les opérations système</strong>. Donc, on peut se poser la question <span style="white-space:nowrap">suivante :</span> les scénarios alternatifs impliquent-ils une ou plusieurs opérations système n’ayant pas encore été <span style="white-space:nowrap">définies ?</span> Si la réponse est non, on peut ignorer les scénarios alternatifs dans le DSS. Par contre, si la réponse est oui, il est essentiel de définir ces opérations système dans un DSS.</p>
 <p>Quant au choix de faire des DSS séparés ou d’utiliser la notation UML pour montrer les flots différents dans le même DSS, ça dépend de la complexité de la logique des flots. Un DSS devrait être <em>facile à comprendre</em>. C’est à vous de juger si votre DSS avec des <code>opt</code> ou des <code>alt</code> est assez simple ou est compliqué à lire. Utilisez un autre DSS (ou plusieurs) ayant le nom des scénarios alternatifs si cela vous semble plus clair.</p>
 </section>
-<section id="est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="level3" data-number="5.3.3">
-<h3 data-number="5.3.3" class="anchored" data-anchor-id="est-ce-normal-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"><span class="header-section-number">5.3.3</span> Est-ce normal d’avoir une opération système avec beaucoup d’arguments (de type <span style="white-space:nowrap">primitif) ?</span></h3>
+<section id="est-ce-un-bon-design-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="est-ce-un-bon-design-davoir-une-opération-système-avec-beaucoup-darguments-de-type-primitif"><span class="header-section-number">5.3.3</span> Est-ce un bon design d’avoir une opération système avec beaucoup d’arguments (de type <span style="white-space:nowrap">primitif) ?</span></h3>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Puisqu’une opération système doit avoir seulement des arguments de type primitif, j’ai plusieurs opérations système avec de nombreux (plus de cinq) arguments. Pourquoi n’est-il pas permis de passer des objets comme <span style="white-space:nowrap">arguments ?</span></p>
+<p>Selon la méthodologie, une opération système doit avoir seulement des arguments de type primitif. À cause de ça, j’ai plusieurs opérations système avec de nombreux (plus de cinq) arguments. Par exemple, pour créer un Devoir (dans le projet du laboratoire), il y a beaucoup d’informations provenant du formulaire Web et on doit les passer toutes à l’opération système. Pourquoi n’est-il pas permis d’instancier un objet de Devoir d’abord et le passer comme un seul <span style="white-space:nowrap">argument ?</span></p>
 </div>
 </div>
 </div>
-<p>Il n’est pas conseillé de passer des <em>objets du domaine</em> comme arguments, puisque c’est la couche présentation qui invoque l’opération système. La couche présentation n’est pas censée manipuler directement les objets dans la couche domaine, sinon elle empiète sur les responsabilités de la couche domaine.</p>
+<p>Il y a deux volets à cette question.</p>
+<ol type="1">
+<li><p>Il y a le problème de beaucoup d’arguments (de type primitif) pour une opération système. Cela peut arriver, surtout pour les opérations sur les objets du domaine (comme le Devoir) qui ont beaucoup d’attributs. En effet, il n’est pas convivial d’avoir beaucoup d’arguments dans un appel (une opération).</p></li>
+<li><p>Ensuite, il n’est pas conseillé de passer des <em>objets du domaine</em> (par exemple, le Devoir) comme arguments, puisque c’est la couche <em>présentation</em> qui invoque l’opération système. La couche présentation n’est pas censée manipuler directement les objets dans la couche domaine, sinon elle empiète sur les responsabilités de la couche domaine.</p></li>
+</ol>
 <p>Une solution pour réduire le nombre d’arguments sans utiliser un objet du domaine est d’appliquer un <a href="#Refactoring">réusinage</a> pour le <em>smell</em> nommé <em>Long Parameter List</em>, par exemple <a href="https://refactoring.com/catalog/introduceParameterObject.html">Introduce Parameter Object</a>. Notez que l’objet de paramètre que vous introduisez n’est pas un objet (classe) du <span style="white-space:nowrap">domaine !</span> La distinction est importante, car la logique d’affaires demeure dans la couche domaine. En TypeScript, une fonction peut être définie avec un objet de paramètre. Cet exemple montre même comment on peut <a href="https://www.typescriptlang.org/docs/handbook/variable-declarations.html#object-destructuring">«&nbsp;déstructurer&nbsp;» l’objet</a> pour déclarer les variables utilisées dans la <span style="white-space:nowrap">fonction :</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// La fonction n'a qu'un seul argument (un objet de paramètre).</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Exemple inspiré de https://leanpub.com/essentialtypescript/read#destructuring</span></span>
@@ -605,6 +609,7 @@ Country: null
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">compteARebours</span>({ initial<span class="op">:</span> <span class="dv">20</span> })<span class="op">;</span>  <span class="co">// on passe un objet de paramètre</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">compteARebours</span>({ initial<span class="op">:</span> <span class="dv">20</span><span class="op">,</span> increment<span class="op">:</span> <span class="dv">2</span><span class="op">,</span> final<span class="op">:</span> <span class="dv">4</span> })<span class="op">;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Passer un objet de paramètre à une opération système respecte la séparation des couches (la modularité) et augmente la lisibilité du code.</p>
 </section>
 <section id="ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp" class="level3" data-number="5.3.4">
 <h3 data-number="5.3.4" class="anchored" data-anchor-id="ne-serait-il-pas-plus-simple-de-passer-lobjet-body-de-la-page-web-au-contrôleur-grasp"><span class="header-section-number">5.3.4</span> Ne serait-il pas plus simple de passer l’objet <code>body</code> de la page Web au contrôleur <span style="white-space:nowrap">GRASP ?</span></h3>
