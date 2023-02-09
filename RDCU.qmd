@@ -394,7 +394,7 @@ class B {
 
 2. Écrivez le code pour la création de la collection de Vente [@craig_uml_2005], figure F17.6/A18.6\ {{< fa solid book >}}].
 
-3. Écrivez le code pour l'utilisation d'un *Cornet* dans le jeu Monopoly [@craig_uml_2005], figure F22.9/A25.9\ {{< fa solid book >}}].
+3. Écrivez le code pour l'utilisation d'un *Cornet* (à dès, gobelet dans lequel on agite les dés) dans le jeu Monopoly [@craig_uml_2005], figure F22.9/A25.9\ {{< fa solid book >}}].
 
 4. Écrivez le code pour les appels polymorphes de la méthode `atterrirSur` dans le jeu Monopoly [@craig_uml_2005], figures F22.6/A25.6 et F22.7/A25.7\ {{< fa solid book >}}].
 
