@@ -1,7 +1,7 @@
 # Cas d'utilisation {#sec-cu}
 
 Les cas d'utilisation sont des documents textuels décrivant l'interaction entre un système (un logiciel à développer) et un ou plusieurs acteurs (les utilisateurs ou systèmes externes).
-Le cas d'utilisation décrit plusieurs scénarios, mais, en général, il y a un scénario principal *happy path* représentant ce qui se passe lorsqu'il n'y a pas d'anomalie.
+Le cas d'utilisation décrit plusieurs scénarios, mais, en général, il y a un scénario principal *happy path* représentant ce qui se passe le plus souvent et lorsqu'il n'y a pas d'anomalie.
 
 Les cas d'utilisation sont une manière de documenter les fonctionnalités (les exigences fonctionnelles).
 
@@ -45,6 +45,27 @@ Alors, nous proposons les étapes (les interactions entre les acteurs et le syst
  6. Le Système indique le résultat de l'attaque, y compris un changement de contrôle du pays attaqué si nécessaire.
 
 [^Regles]: Pour faire un cas d'utilisation plus facile à comprendre, on fait abstraction des règles ici. 
+
+### Scénarios alternatifs (ou extensions) {#sec-scenarios_alternatifs}
+
+Les compléments du scénario principal (ce qui se passe le plus souvent) sont les scénarios alternatifs, qui comprennent souvent la plus grande partie du texte de cas d'utilisation.
+Ils indiquent tous les autres cas ou branchements éventuels, ce qui peut représenter beaucoup de fonctionnalités d'un logiciel complet. 
+Par exemple, un client ou une cliente veut payer avec Bitcoin (le logiciel doit supporter ce cas moins fréquent).
+Un autre exemple est lorsque la validation de carte de crédit échoue lors d'un paiement.
+
+Les scénarios alternatifs sont documentés dans une section du cas d'utilisation à ce propos.
+On spécifie les étapes du scénario de base auxquelles il peut y avoir un branchement.
+Dans l'exemple du jeu Risk, lors d'une attaque, le Joueur attaquant peut décider spontanément d'annuler son attaque.
+Il ne pourra pas l'annuler une fois que les dés sont lancés. Alors on peut spécifier le scénario alternatif "2-3a", pour indiquer que ça commence à partir des étapes 2 et 3 du scénario principal et que c'est le premier ("a") scénario alternatif pour ces étapes:
+
+::: {.callout}
+### Scénarios alternatifs:
+
+2-3a. Le Joueur attaquant décide d'annuler son attaque.
+
+1. Le Système indique que le Joueur attaquant a annulé.
+2. Fin du cas d'utilisation
+:::
 
 ### Diagramme de cas d'utilisation
 

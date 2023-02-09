@@ -115,7 +115,7 @@ Cependant, si vous avez une boucle pour indiquer la possibilité de répéter un
 ### Comment faire si un cas d'utilisation a des *scénarios alternatifs*?
 
 ::: {.callout}
-Fait-on plusieurs DSS (un pour chaque scénario) ou utilise-t-on la notation UML (des blocs `opt` et `alt`) pour montrer des flots différents dans le même DSS?
+Fait-on plusieurs DSS (un pour chaque [scénario alternatif](#sec-scenarios_alternatifs)) ou utilise-t-on la notation UML (des blocs `opt` et `alt`) pour montrer des flots différents dans le même DSS?
 :::
 
 Un objectif derrière le DSS est de **définir les opérations système**.
