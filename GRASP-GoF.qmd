@@ -74,7 +74,7 @@ AdaptateurGoodAsGoldTaxPro -d-> GoodAsGoldTaxPro
 
 ## Imaginer le code sans le pattern GoF
 
-Chaque principe GRASP est défini avec un énoncé d'un problème de conception et avec une solution pour le résoudre. Pourtant, beaucoup d'exemples dans le livre de @craig_uml_2005 sont des patterns déjà appliqués (et le problème initial n'est pas toujours expliqué en détail). 
+Chaque principe GRASP est défini avec un énoncé d'un problème de conception et avec une solution pour le résoudre. Pourtant, beaucoup d'exemples dans le livre de @craig_uml_2005 sont des patterns GoF déjà appliqués (et le problème initial n'est pas toujours expliqué en détail). 
 
 Alors, pour mieux comprendre l'application des patterns GoF, on doit imaginer la situation du logiciel *avant* l'application du pattern. Dans l'exemple avec l'adaptateur pour les calculateurs de taxes, imaginez le code si l'on n'avait aucun adaptateur.
 À la place d'une méthode `getTaxes()` envoyée par la classe Vente à l'adaptateur, on aurait l'obligation de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si l'on veut supporter plusieurs calculateurs).

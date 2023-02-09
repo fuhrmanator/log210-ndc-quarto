@@ -152,7 +152,7 @@ Exemple: un logiciel qui aide à faire des déclarations de revenus aura une com
 Les choix que font les ingénieures et ingénieurs dans un projet peuvent amener de la complexité circonstancielle (aussi appelée accidentelle).
 En tant qu'ingénieures et ingénieurs, nous avons un devoir de contrôler cette forme de complexité, par exemple en choisissant soigneusement un cadriciel Web ou une architecture logicielle.
 La complexité circonstancielle peut aussi être due à des contraintes imposées sur la conception, comme l'utilisation obligatoire d'une vieille base de données ou d'une bibliothèque logicielle héritée, d'un langage de programmation, etc.
-La complexité circonstancielle peut être gérée avec des technologies, par exemple les débogueurs, les patterns de conception (un Adaptateur pour les différentes bases de données), etc.
+La complexité circonstancielle peut être gérée avec des technologies, par exemple les débogueurs, les patterns GoF (un Adaptateur pour les différentes bases de données), etc.
 
 ### Complexité environnementale (provenant de l'environnement d'exécution)
 
