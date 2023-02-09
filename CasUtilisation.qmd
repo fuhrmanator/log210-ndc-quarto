@@ -40,7 +40,9 @@ Alors, nous proposons les étapes (les interactions entre les acteurs et le syst
 4. Les deux Joueurs jettent le nombre de dés selon leur stratégie, choisie aux étapes précédentes.
 5. Le Système compare les dés, élimine les régiments de l'attaquant ou du défenseur selon les règles[^Regles] et affiche le résultat.
 
-*Les Joueurs répètent les étapes 2 à 5 jusqu'à ce que l'attaquant ne puisse plus attaquer ou ne veuille plus attaquer.*
+*Les Joueurs répètent les étapes 2 à 5 jusqu'à ce que l'attaquant ait éliminé tous les régiments du pays attaqué, l'attaquant n'ait plus suffisamment de régiments pour attaquer, ou l'attaquant ne veuille plus attaquer.*
+
+ 6. Le Système indique le résultat de l'attaque, y compris un changement de contrôle du pays attaqué si nécessaire.
 
 [^Regles]: Pour faire un cas d'utilisation plus facile à comprendre, on fait abstraction des règles ici. 
 
