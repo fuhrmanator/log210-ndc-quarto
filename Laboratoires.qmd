@@ -1,4 +1,3 @@
-
 # Laboratoires {#sec-Laboratoires}
 
 À l'École de technologie supérieure, le cours de _LOG210_ propose un laboratoire de mise à niveau (nommé "lab 0") réalisé individuellement, où l'on passe à travers les différentes technologies utilisées dans le projet du laboratoire principal, qui, lui, est réalisé pendant le reste du cours en trois itérations de trois semaines.
@@ -31,7 +30,7 @@ Selon @goldberg_learning_2022, TypeScript comprend quatre éléments:
 
 ## JavaScript/TypeScript
 
-Pour la personne ayant déjà des connaissances de Java et des patterns de conception de la Bande des quatre, @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
+Pour la personne ayant déjà des connaissances de Java et des patterns GoF, @GoF1994, il est recommandé d'apprendre les choses dans cet ordre:
 
 - **JavaScript**: un tutoriel intéressant (et libre) se trouve sur [fr.javascript.info](https://fr.javascript.info/). Nous vous recommandons de contribuer à des [traductions en français sur GitHub](https://github.com/javascript-tutorial/fr.javascript.info#readme). 
 - **TypeScript**: [ce tutoriel](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html) est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C\#.
@@ -78,7 +77,8 @@ if (maVariable != undefined
 ```
 
 On vérifie trois possibilités pour `maVariable` avant de l'utiliser. 
-Ce genre de situation arrive souvent en JavaScript, puisque les objets peuvent prendre des valeurs différentes selon le contexte. 
+Ce genre de situation arrive souvent en JavaScript, puisque les objets peuvent prendre des valeurs différentes selon le contexte.
+Contrairement à Java, les types des variables JavaScript peuvent changer dynamiquement.
 Il serait bien de pouvoir réduire la quantité de code dans ces cas.
 
 Grâce à la notion de conversion de valeur selon la règle de "truthy" et "falsy", JavaScript permet de simplifier les instructions en une seule condition, sans ET (`&&`), en convertissant la valeur de `maVariable` en booléenne `true` ou `false`:
