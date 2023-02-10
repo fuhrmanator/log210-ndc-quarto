@@ -13,6 +13,10 @@ Les développeurs et développeuses ont appris qu'au fil du temps, les parties d
 Aujourd'hui des applications populaires sont déployées sur les plateformes mobiles, PC et Web (infonuagiques).
 La [reconnaissance automatique de la parole](https://fr.wikipedia.org/wiki/Reconnaissance_automatique_de_la_parole)\ {{< fa brands wikipedia-w >}} et [les dispositifs haptiques](https://fr.wikipedia.org/wiki/Dispositif_haptique)\ {{< fa brands wikipedia-w >}} sont des exemples plus modernes de technologies qui permettent en principe une meilleure IHM.
 
+Donc, pour minimiser l'impact des changements de l'IHM sur tout un système, on peut comprendre l'intérêt d'isoler la partie "domaine" (qui est relativement stable) de la partie IHM (qui est différente selon la plateforme et qui a une tendance à évoluer à cause des nouvelles technologies).
+Alors, un aspect fondamental de la conception de ces systèmes est la *séparation des couches*, notamment celle de l'IHM qu'on nomme *la couche présentation* et celle qui contient la logique d'affaires qu'on nomme *la couche domaine*.
+Il y a d'autres bénéfices de cette séparation qu'on verra plus bas, mais elle impose certaines règles qui vont à l'encontre des habitudes des développeurs et développeuses qui aiment coder rapidement.
+
 ::: {#fig-separation_couches layout-ncol=2}
 
 ```{.plantuml caption="Sans séparation, les éléments de l'IHM sont fortement couplés aux éléments de la logique de l'application. Ce genre de solution peut être créé rapidement. Cependant, si le code de l'IHM doit changer pour accommoder une nouvelle technologie, ces changements peuvent affecter le reste du système." #fig-sans_separation}
@@ -116,15 +120,11 @@ NF .. D4
 ``` 
 
 Raison d'être de la séparation des couches présentation et domaine.
-
 :::
 
-Donc, pour minimiser l'impact des changements de l'IHM sur tout un système, on peut comprendre l'intérêt d'isoler la partie "domaine" (qui est relativement stable) de la partie IHM (qui est différente selon la plateforme et qui a une tendance à évoluer à cause des nouvelles technologies).
-Alors, un aspect fondamental de la conception de ces systèmes est la *séparation des couches*, notamment celle de l'IHM qu'on nomme *la couche présentation* et celle qui contient la logique d'affaires qu'on nomme *la couche domaine*.
-Il y a d'autres bénéfices de cette séparation qu'on verra plus bas, mais elle impose certaines règles qui vont à l'encontre des habitudes des développeurs et développeuses qui aiment coder rapidement.
+Lorsqu'on crée un DSS dans la méthodologie de ce manuel, on propose une conception de haut niveau qui fait un lien direct entre les besoins (les étapes d'un cas d'utilisation) et une solution qui répond à ces besoins, sans aller trop en détail (on fera cela plus tard, justement dans les [RDCU](#sec-rdcu)), tout en respectant la séparation des couches présentation et domaine.
 
-Lorsqu'on crée un DSS dans la méthodologie de ce manuel, on propose une conception de haut niveau qui fait un lien direct entre les besoins (les étapes d'un cas d'utilisation) et une solution qui répond à ces besoins, sans aller trop en détail (on fera cela plus tard, justement dans les [RDCU](#sec-RDCU)), tout en respectant la séparation des couches présentation et domaine.
-
+\filbreak
 Les DSS sont expliqués en détail dans le chapitre 10\ {{< fa solid book >}}, mais voici des points importants pour la méthodologie de ce manuel:
 
 - Le DSS a toujours un titre.
