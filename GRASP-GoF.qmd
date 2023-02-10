@@ -1,12 +1,24 @@
 # Décortiquer les patterns GoF avec GRASP {#sec-GRASP-GoF}
 
-Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C'est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF. 
+Craig Larman a proposé les GRASP pour faciliter la compréhension des forces essentielles de la conception orientée objet. Dans ce chapitre, on examine la présence des GRASP dans les patterns GoF. C'est une excellente façon de mieux comprendre et les principes GRASP et les patterns GoF.
 
 ## Exemple avec Adaptateur
 
 Le pattern Adaptateur a été proposé par @GoF1994, et sa structure est illustrée sur la @fig-AdapterGoF.
 La structure de base peut être trompeuse, car elle ne montre qu'une seule classe `Adaptee` qui représente l'API (externe) que l'on ne peut modifier.
 En réalité, ce pattern est plus intéressant lorsqu'on considère *plusieurs* cas de classe `Adaptee`, chacune avec une API différente.
+
+::: {.callout-note}
+### Qu'est-ce qu'un calculateur de taxes?
+On rappelle ici le contexte du problème auquel a été appliqué le pattern Adaptateur, soit le problème de calcul des taxes.
+Le logiciel NextGen POS doit calculer les taxes pour les ventes, mais la compagnie vise un marché large (par exemple, les États-unis et le Canada).
+Puisque le calcul des taxes peut être différent selon l'État et même la ville (par exemple [les villes de la Californie](https://www.cdtfa.ca.gov/taxes-and-fees/rates.aspx)), la compagnie qui développe NextGen POS ne veut pas maintenir toute cette information dans une partie du logiciel, car la maintenance ne sera pas rentable.
+La solution est de permettre au système d'exploiter un module externe qui est un "calculateur de taxes", car ce genre de module existe (voir [TaxCloud](https://taxcloud.com/home)).
+Puisque la clientèle du NextGen POS pourrait utiliser des calculateurs différents (selon sa région ou son budget), il faut constater que l'API de chaque calculateur sera *différente* (faute de norme sur les API de calculateurs de taxe) et *immuable* (on ne peut pas s'attendre à ce que le fournisseur de chaque calculateur change son API ou fournisse le code source).
+Alors, le pattern Adaptateur est proposé comme solution à ce problème.
+@craig_uml_2005 propose aussi que les modules externes soient considérés pour gérer l'inventaire et pour suivre la comptabilité, car ces fonctionnalités sont complexes et difficiles à faire correctement. 
+Encore, si NextGen POS supporte plusieurs choix (fournisseurs) de ces modules externes, il y aura ensuite le problème des API différentes et immuables. Le pattern Adaptateur sera encore utile dans ce contexte. 
+:::
 
 Le chapitre A26/F23\ {{< fa solid book >}}\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (figure F23.1/A26.1\ {{< fa solid book >}}).
 On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la @fig-Fig23_1.
