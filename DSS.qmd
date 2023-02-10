@@ -4,18 +4,25 @@ Un diagramme de séquence système (DSS) est un diagramme UML (diagramme de séq
 Le DSS décrit l'interaction entre l'acteur et le système, sans rentrer dans les détails du système (une modélisation appelée "boîte noire" parce que les détails sont obscures). 
 La modélisation à ce niveau permet de définir plus tard les détails à l'intérieur du système.
 
+## La séparation des couches présentation et domaine
+
+Une des forces du DSS est qu'il fait abstraction de beaucoup de détails.
+Cependant, il sera nécessaire de les comprendre, car certaines règles s'imposent dans la méthodologie et on veut préparer le terrain pour expliquer pourquoi ces règles existent.
+En plus, dans la partie de la méthodologie où on va rentrer dans les détails ([les réalisations de cas d'utilisation](#sec-rdcu)), il faudra maîtriser le principe de *la séparation des couches présentation et domaine*.
+Commençons par une explication de base de ce principe.
+
 Puisqu'il y a des acteurs humains interagissant avec le système, on doit avoir une interface humain-machine (IHM) dans le système.
-Avec l'évolution rapide des technologies, il y a toujours eu un potentiel de concevoir des IHM de plus en plus conviviales et efficaces.
+Avec l'évolution rapide des technologies, il y a toujours eu un potentiel de concevoir des IHM de plus en plus conviviales et efficientes.
 Par exemple, les premières versions de Microsoft Word tournaient sur MS-DOS (PC d'IBM) au milieu des années 1980 (la souris n'était même pas nécessaire pour l'utiliser).
 Pourtant, le concept de style nommé (gabarit) pour les paragraphes existait, comme on le trouve dans la version de Word d'aujourd'hui.
 
 Les développeurs et développeuses ont appris qu'au fil du temps, les parties du code liées à l'IHM (les menus, les boutons, l'animation, etc.) sont relativement instables par rapport aux parties liées au domaine du problème (le concept de style de paragraphe).
-Aujourd'hui des applications populaires sont déployées sur les plateformes mobiles, PC et Web (infonuagiques).
+Aujourd'hui, des applications populaires sont déployées sur les plateformes mobiles, PC et Web (infonuagiques).
 La [reconnaissance automatique de la parole](https://fr.wikipedia.org/wiki/Reconnaissance_automatique_de_la_parole)\ {{< fa brands wikipedia-w >}} et [les dispositifs haptiques](https://fr.wikipedia.org/wiki/Dispositif_haptique)\ {{< fa brands wikipedia-w >}} sont des exemples plus modernes de technologies qui permettent en principe une meilleure IHM.
 
 Donc, pour minimiser l'impact des changements de l'IHM sur tout un système, on peut comprendre l'intérêt d'isoler la partie "domaine" (qui est relativement stable) de la partie IHM (qui est différente selon la plateforme et qui a une tendance à évoluer à cause des nouvelles technologies).
-Alors, un aspect fondamental de la conception de ces systèmes est la *séparation des couches*, notamment celle de l'IHM qu'on nomme *la couche présentation* et celle qui contient la logique d'affaires qu'on nomme *la couche domaine*.
-Il y a d'autres bénéfices de cette séparation qu'on verra plus bas, mais elle impose certaines règles qui vont à l'encontre des habitudes des développeurs et développeuses qui aiment coder rapidement.
+La conception de ces systèmes comprend un aspect important qui est la *séparation des couches*, notamment celle de l'IHM qu'on nomme *la couche présentation* et celle qui contient la logique d'affaires qu'on nomme *la couche domaine*.
+Il y a d'autres bénéfices de cette séparation, mais elle impose certaines règles qui vont à l'encontre des habitudes des développeurs et développeuses qui aiment coder rapidement.
 
 ::: {#fig-separation_couches layout-ncol=2}
 
@@ -124,7 +131,21 @@ Raison d'être de la séparation des couches présentation et domaine.
 
 Lorsqu'on crée un DSS dans la méthodologie de ce manuel, on propose une conception de haut niveau qui fait un lien direct entre les besoins (les étapes d'un cas d'utilisation) et une solution qui répond à ces besoins, sans aller trop en détail (on fera cela plus tard, justement dans les [RDCU](#sec-rdcu)), tout en respectant la séparation des couches présentation et domaine.
 
-\filbreak
+Voici d'autres avantages de la séparation des couches présentation et domaine:
+
+- Une forte cohésion des éléments de chaque couche, grâce à la [séparation des préoccupations](https://fr.wikipedia.org/wiki/S%C3%A9paration_des_pr%C3%A9occupations)\ {{< fa brands wikipedia-w >}}.
+- Un faible couplage entre la couche présentation et la couche domaine.
+- La couche domaine est "protégée" des évolutions du code dans la couche présentation.
+- Il peut y avoir plusieurs couches de présentation (site web, app mobile) pour la même couche domaine.
+- L'API de la couche domaine peut être utilisé par des systèmes externes.
+- Les classes cohésives peuvent être plus facilement réutilisées dans un autre projet.
+- Les classes cohésives sont plus faciles à tester.
+- Une séparation peut rendre l'application plus simple à comprendre (pour les nouveaux développeurs).
+
+Finalement, l'architecture [modèle-vue-contrôleur ou MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)\ {{< fa brands wikipedia-w >}} existe depuis 1978, et la séparation des couches en est un principe fondamental.
+
+## Les DSS en tant qu'artefact
+
 Les DSS sont expliqués en détail dans le chapitre 10\ {{< fa solid book >}}, mais voici des points importants pour la méthodologie de ce manuel:
 
 - Le DSS a toujours un titre.
