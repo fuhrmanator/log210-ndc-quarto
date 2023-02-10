@@ -10,6 +10,7 @@ Il est normal de ne pas tout comprendre au début, alors posez des questions si 
 - De manière générale, toute bonne RDCU doit faire les choses suivantes:
   - spécifier un contrôleur (pour la première opération système dans un DSS, qui sera le même pour le reste des opérations dans le DSS);
   - satisfaire les postconditions du contrat d'opération correspondant;
+  - faire usage des classes conceptuelles du MDD et respecter leurs associations et cardinalités;
   - rechercher les informations qui sont éventuellement rendues à l'acteur dans le DSS.
 - Il s'agit d'un diagramme de séquence en UML.
 Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique la notation de manière agile:
