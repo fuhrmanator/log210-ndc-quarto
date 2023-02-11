@@ -313,8 +313,26 @@ div.csl-indent {
 
 
 
-<p>Un contrat d’opération est un document décrivant ce qui est arrivé après l’exécution d’une opération système. Cette description est présentée sous forme de postconditions utilisant le vocabulaire du modèle du domaine.</p>
-<p>Le MDD décrit la vraie vie. Il y a des classes conceptuelles (comme Vente), mais aussi des <em>instances</em> de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clientes et clients qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque cliente ou client.</p>
+<p>Un contrat d’opération est un document décrivant les modifications permanentes à l’état du système après l’exécution d’une opération système. Les modifications permanentes à l’état du système <span style="white-space:nowrap">comprennent :</span></p>
+<ul>
+<li>la création ou la destruction d’une <span style="white-space:nowrap">instance ;</span></li>
+<li>la modification d’un attribut d’une <span style="white-space:nowrap">instance ;</span></li>
+<li>la création ou la suppression d’associations entre les instances.</li>
+</ul>
+<p>Les contrats d’opération sont présentés sous forme de postconditions utilisant le vocabulaire du modèle du domaine.</p>
+<div class="callout callout-style-default callout-important callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le MDD est un modèle de la vraie vie. Il y a des classes conceptuelles (comme Vente), mais aussi des <em>instances</em> de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clientes et clients qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque cliente ou client.</p>
+</div>
+</div>
 <p>Sur la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter une Vente</em>. Elle correspond au moment où le caissier ou la caissière démarre une nouvelle vente pour un client ou une cliente. Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec la voix passive au passé composé en <span style="white-space:nowrap">français) :</span> «&nbsp;une instance <em>v</em> de Vente a été créée&nbsp;».</p>
 <p>Un contrat d’opération permet de spécifier tous les changements dans le MDD qui doivent avoir lieu lors de l’opération système. Les postconditions du contrat saisissent l’évolution du MDD.</p>
 <div id="fig-ContratExempleCreerNouvelleVente" class="quarto-figure quarto-figure-center anchored">
