@@ -140,7 +140,7 @@ Voici d'autres avantages de la séparation des couches présentation et domaine:
 - L'API de la couche domaine peut être utilisé par des systèmes externes.
 - Les classes cohésives peuvent être plus facilement réutilisées dans un autre projet.
 - Les classes cohésives sont plus faciles à tester.
-- Une séparation peut rendre l'application plus simple à comprendre (pour les nouveaux développeurs).
+- Une séparation peut rendre l'application plus simple à comprendre (pour les nouvelles personnes dans l'équipe de développement).
 
 Finalement, l'architecture [modèle-vue-contrôleur ou MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)\ {{< fa brands wikipedia-w >}} existe depuis 1978, et la séparation des couches en est un principe fondamental.
 
