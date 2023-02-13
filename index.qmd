@@ -1,6 +1,6 @@
-# Préface {.unnumbered}
+## Préface {.unnumbered}
 
-Cet ouvrage a commencé comme notes de cours pour le cours _Analyse et conception de logiciels (LOG210)_ dans les programmes de baccalauréat en génie logiciel (LOG) et en génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal, au Québec.
+Ce manuel a commencé comme notes de cours pour le cours _Analyse et conception de logiciels (LOG210)_ dans les programmes de baccalauréat en génie logiciel (LOG) et en génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal, au Québec.
 À l'origine, la communauté étudiante dans ces programmes provenait des collèges d'enseignement général et professionnel (cégeps), ayant donc déjà reçu un diplôme d'études collégiales (DEC) dans un programme technique. 
 Ainsi, ces personnes ont déjà appris à programmer dans un langage orienté objet.
 En effet, cette démarche correspond à l'approche "computer science first" (CS-first) pour enseigner le génie logiciel [@SE_Curriculum_ACM_2014].
@@ -79,7 +79,7 @@ Si vous avez une autre édition, comme la 2^e^ du livre en anglais ou même une 
 
 Cependant, dans ce manuel, vous trouverez également d'autres sujets importants pour une personne qui étudie en génie: les notions de complexité, le contexte industriel qui affecte les décisions de conception, l'impact de la conception sur d'autres qualités d'un logiciel, le travail en équipe, etc.
 
-## Remerciements {.unnumbered}
+<!-- ## Remerciements {.unnumbered}
 
 Comme beaucoup de ressources libres, ce manuel existe grâce à une collaboration avec de nombreuses personnes.
 La [fabriqueREL](https://fabriquerel.org) (ressources éducatives libres) a soutenu financièrement et pédagogiquement l'élaboration du manuel lors de la période 2022-2023.
@@ -107,9 +107,9 @@ Nous remercions les membres du comité de révision (2023) pour leurs rétroacti
 - Olivier Brochu, étudiant à la maîtrise en technologies de l'information à l'ÉTS;
 - Clyde Vianney Omog Ntap, étudiant à la maîtrise en génie logiciel à l'ÉTS;
 - Mouna Moumene, bibliothécaire à l'École de technologie supérieure (ÉTS);
-- Roberto Erick Lopez-Herrejon, professeur au département de génie logiciel et des TI à l'ÉTS.
+- Roberto Erick Lopez-Herrejon, professeur au département de génie logiciel et des technologies de l'information à l'ÉTS.
 
-Finalement, nous remercions Katerine Robert, réviseure linguistique à K. R. Révision, pour la révision du manuel.
+Finalement, nous remercions Katerine Robert, réviseure linguistique à K. R. Révision, pour la révision du manuel. -->
 
 ## Sources du manuel
 

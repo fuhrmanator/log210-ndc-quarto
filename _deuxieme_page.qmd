@@ -1,0 +1,15 @@
+::: tcolorbox
+:  \
+    **Ce manuel** est utilisé dans le cadre du cours *Analyse et conception de logiciels (LOG210)* à l'École de technologie supérieure (ÉTS).
+
+:  \
+    **Les auteurs** sont Christopher Fuhrman et Yvan Ross. C'est dans un esprit de collaboration et de partage qu'ils ont décidé de contribuer à cette ressource educative libre.\
+    Christopher Fuhrman est professeur à l'ÉTS depuis 2001.
+    Son domaine de recherche est la conception de logiciels.
+    Il a développé plusieurs logiciels libres utilisés dans le cadre son enseignement et recherche.
+    La liste de ses dépôts de logiciels libres est sur [GitHub](https://github.com/fuhrmanator) et la liste de ses publications est sur [Google Scholar](https://scholar.google.com/citations?user=Qa5SpUwAAAAJ&hl=fr&oi=ao).\
+    Yvan Ross est chargé de cours à l'ÉTS depuis 2013.
+    Il a enseigné le cours LOG210 de nombreuses fois et a contribué à la création de plusieurs exercices et à la conception des travaux de laboratoire utilisés dans le cadre de ce cours.
+:::
+
+{{< include _cc-by.qmd >}}

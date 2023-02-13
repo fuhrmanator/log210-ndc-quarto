@@ -1,8 +1,7 @@
 project:
   type: book
 
-license: "CC BY-SA"
-
+license: "CC BY"
 
 latex-auto-install: true
 
@@ -104,8 +103,9 @@ format:
     # https://quarto.org/docs/output-formats/html-themes.html#overview
     resources: web-resources/**
     theme: Spacelab
+    include-before-body: 
+      - _deuxieme_page.html
     
-
   pdf:
     # PRE 1.3: has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: pdflatex
@@ -151,6 +151,7 @@ format:
 
     include-before-body: 
       - tex-hacks/redefine-parts-layout.tex
+      - _deuxieme_page.tex
 
 # filters must be run in the proper order here
 filters:
