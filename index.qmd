@@ -23,16 +23,21 @@ Il est donc naturel d'imaginer une forme analogue pour le contenu de ce manuel, 
 
 Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels libres:
 
-- Quarto [-@noauthor_quarto_2022] (le langage source du texte est [Markdown](https://quarto.org/docs/authoring/markdown-basics.html));
-- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022], qui font partie des composantes exploitées par Quarto; 
+- Quarto [-@noauthor_quarto_2023] (le langage source du texte est [Markdown](https://quarto.org/docs/authoring/markdown-basics.html));
+- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022], et plusieurs filtres de traitement qui font partie des composantes exploitées par Quarto; 
 - PlantUML [-@noauthor_plantuml_2022] pour les figures sous forme de texte (faciles à actualiser).
 
-Autant que possible, les figures sont créées dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche.
+Nous soulignons les retombées sur le plan de logiciels libres lors de la rédaction de ce manuel, car il est important de contribuer aux communautés de logiciels libres.
+Nous avons fourni une rétroaction à des développeurs et développeuses de plusieurs projets utilisés. 
+Par exemple, nous avons identifié plusieurs bogues dans les versions préliminaires de Quarto (qui ont été corrigés rapidement, parfois le lendemain même!).
+Nous avons même créé de nouveaux projets libres, tels qu'un [filtre Pandoc](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) pour faciliter la bonne utilisation d'espaces insécables selon les règles de typographie en français.
+
+Autant que possible, les figures du manuel sont créées dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG ou PNG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche et aussi accessible aux personnes non-voyantes.
 
 Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'information et pour permettre une meilleure inclusivité des personnes apprenantes et enseignantes.
 Nous avons donc essayé de suivre les directives du [Guide de l'écriture inclusive de l'ÉTS](https://www.etsmtl.ca/docs/ets/a-propos/documents/guide-ecriture-inclusive-complete) lors de la rédaction de ce manuel.
 
-# Prérequis
+## Prérequis
 
 Le contenu de ce manuel est organisé pour les personnes ayant déjà une base et une expérience avec:
 
@@ -117,7 +122,4 @@ Ce manuel est écrit en Markdown, et le code source est sur GitHub à <https://g
 Les versions Web, PDF et EPUB ont été générées par le logiciel Quarto.
 Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
 
-## Licence
-
-À déterminer (le texte est toujours un brouillon).
-<!-- [![Licence Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Cette œuvre est mise à disposition selon les termes de la [Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/). -->
+<!-- On a supprimé l'info sur la licence, puisqu'elle est sur la 2e page. -->
