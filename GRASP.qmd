@@ -329,13 +329,9 @@ class SomeClass {
 }
 ```
 
-:::
+:::: {.callout-note collapse="true" icon="false"}
 
-## Solutions des exercices
-
-::: {#sol-GRASP_GOF_expert}
-
-### GRASP Expert en information et Forte cohésion
+## Voici la solution
 
 Puisque la classe `Circle` possède les informations nécessaires (`radius`) pour calculer `area`, `diameter` et `perimeter`, c'est elle qui doit contenir les méthodes pour calculer ces propriétés. Cela augmente la cohésion de la classe `SomeClass` et améliore la complétude de la classe `Circle`. De plus, les méthodes de la classe `Circle` peuvent être testées et réutilisées dans d'autres classes.
 
@@ -375,5 +371,7 @@ class SomeClass {
     }
 }
 ```
+::::
 
 :::
+
