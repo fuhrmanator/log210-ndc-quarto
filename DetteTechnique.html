@@ -315,7 +315,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 <p>Ce chapitre contient des informations sur le concept de la <a href="https://fr.wikipedia.org/wiki/Dette_technique">dette technique</a>&nbsp;<i class="fa-brands fa-wikipedia-w" aria-label="wikipedia-w"></i>, qui n’est pas un sujet abordé explicitement dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>.</p>
 <p>Pour ajouter une nouvelle fonctionnalité à un système, les développeurs et développeuses ont souvent un choix entre deux façons de procéder. La première est facile à mettre en place (le «&nbsp;hacking cowboy&nbsp;» sur le <a href="GRASP.html#sec-SpectreDeLaConception">Spectre de la conception</a>), mais elle est souvent désordonnée et rendra sûrement plus difficiles des changements au système dans le futur. L’autre est une solution élégante et donc plus difficile à rendre opérationnelle, mais elle facilitera des modifications à venir. Comment prendre la <span style="white-space:nowrap">décision ?</span> La <em>dette technique</em> est une métaphore pour aider à comprendre des conséquences à long terme pour des choix de conception permettant de livrer une fonctionnalité à court terme.</p>
 <p>Martin Fowler <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">2007</a>)</span> a posé la question «&nbsp;Est-ce que ça vaut la peine de faire du bon <span style="white-space:nowrap">design ?</span>&nbsp;» – peut-on en faire moins pour développer plus <span style="white-space:nowrap">vite ?</span> Il a proposé un pseudographique présentant l’évolution de la fonctionnalité cumulative (élément difficile à mesurer) en fonction du temps (voir la <a href="#fig-FowlerDesignStaminaHypothesis">figure&nbsp;<span>7.1</span></a>). Selon Fowler, le temps pour atteindre la limite de gain de conception (le temps où faire attention à la conception permet un gain de temps) est une question de semaines plutôt que de mois. Mais il avoue que c’est une hypothèse, car il est difficile de mesurer les fonctionnalités cumulatives et d’évaluer ce qu’est un bon design. Le graphe sert à illustrer le principe que, à un certain moment, ignorer une conception va nuire à la performance des développeurs et développeuses en ce qui concerne les nouvelles fonctionnalités.</p>
-<p>Voici une courte définition complémentaire de la dette technique <span class="citation" data-cites="avge16a">(<a href="references.html#ref-avge16a" role="doc-biblioref">Avgeriou, Kruchten, Ozkaya, et Seaman, 2016</a>)</span><span style="white-space:nowrap"> :</span></p>
+<p>Voici une courte définition complémentaire de la dette technique <span class="citation" data-cites="avge16a">(<a href="references.html#ref-avge16a" role="doc-biblioref">Avgeriou, Kruchten, Ozkaya, et Seaman, 2016</a>)</span>&nbsp;:</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -329,12 +329,12 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 <div id="fig-FowlerDesignStaminaHypothesis" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/FowlerPseuoGraphFunctionaltyTime.svg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;7.1: «&nbsp;Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés <span style="white-space:nowrap">imaginaires :</span> l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.&nbsp;» <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler, 2007</a>)</span>, utilisé avec <a href="https://www.martinfowler.com/faq.html#illustration">permission</a>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7.1: «&nbsp;Le pseudographique affiche des fonctionnalités (cumulatives) en fonction du temps pour deux projets stéréotypés imaginaires&nbsp;: l’un avec une bonne conception et l’autre sans conception. Le projet qui ne fait aucune conception ne consacre aucun effort aux activités de conception, qu’il s’agisse de conception initiale ou de techniques agiles. Comme aucun effort n’est consacré à ces activités, ce projet produit des fonctions plus rapidement au départ.&nbsp;» <span class="citation" data-cites="fowl07a">(<a href="references.html#ref-fowl07a" role="doc-biblioref">Fowler, 2007</a>)</span>, utilisé avec <a href="https://www.martinfowler.com/faq.html#illustration">permission</a>.</figcaption><p></p>
 </figure>
 </div>
 <section id="origine" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="origine"><span class="header-section-number">7.1</span> Origine</h2>
-<p>La dette technique est une forme de risque qui peut apporter des bénéfices ou des pertes. Tout dépend de la quantité d’intérêt à payer. L’inventeur du wiki, Ward Cunningham, a utilisé la métaphore de la dette dans un projet de développement de logiciel de gestion de portefeuille réalisé dans une variante du langage Smalltalk <span class="citation" data-cites="Cunningham1992TheWP">(<a href="references.html#ref-Cunningham1992TheWP" role="doc-biblioref">1992</a>)</span><span style="white-space:nowrap"> :</span></p>
+<p>La dette technique est une forme de risque qui peut apporter des bénéfices ou des pertes. Tout dépend de la quantité d’intérêt à payer. L’inventeur du wiki, Ward Cunningham, a utilisé la métaphore de la dette dans un projet de développement de logiciel de gestion de portefeuille réalisé dans une variante du langage Smalltalk <span class="citation" data-cites="Cunningham1992TheWP">(<a href="references.html#ref-Cunningham1992TheWP" role="doc-biblioref">1992</a>)</span>&nbsp;:</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -345,7 +345,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 </div>
 </div>
 </div>
-<p>Comme c’est une métaphore puissante, beaucoup de développeurs et développeuses l’utilisent, et c’est un terme avec une certaine popularité. Dans une <a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">vidéo</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i> plus récente, Cunningham a rappelé que l’origine de la métaphore s’inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement «&nbsp;mal écrit&nbsp;»<span style="white-space:nowrap"> :</span></p>
+<p>Comme c’est une métaphore puissante, beaucoup de développeurs et développeuses l’utilisent, et c’est un terme avec une certaine popularité. Dans une <a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">vidéo</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i> plus récente, Cunningham a rappelé que l’origine de la métaphore s’inspire du code qui est incohérent par rapport à un problème complexe plutôt que du code simplement «&nbsp;mal écrit&nbsp;»&nbsp;:</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -363,7 +363,7 @@ Beaucoup de gens (au moins des blogueurs et blogueuses) ont expliqué la métaph
 </section>
 <section id="nuances-de-la-dette-technique" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="nuances-de-la-dette-technique"><span class="header-section-number">7.2</span> Nuances de la dette technique</h2>
-<p>Fowler a également <a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html">abordé le sujet de la dette</a>, notamment à propos de la distinction entre du code «&nbsp;mal écrit&nbsp;» et les compromis de conception faits avec une intention d’accélérer le <span style="white-space:nowrap">développement :</span></p>
+<p>Fowler a également <a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html">abordé le sujet de la dette</a>, notamment à propos de la distinction entre du code «&nbsp;mal écrit&nbsp;» et les compromis de conception faits avec une intention d’accélérer le développement&nbsp;:</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -402,7 +402,7 @@ La dette imprudente pourrait aussi être délibérée. Une équipe peut connaît
 <tr class="odd">
 <td style="text-align: left;">Délibérée</td>
 <td style="text-align: left;">«&nbsp;<em>On n’a pas le temps pour la <span style="white-space:nowrap">conception !</span></em>&nbsp;» Cette forme de dette est rarement rentable.</td>
-<td style="text-align: left;">«&nbsp;<em>Il faut livrer maintenant puis en assumer les conséquences.</em>&nbsp;» <span style="white-space:nowrap">Exemple&nbsp; :</span> La dette est due à une partie limitée du code.</td>
+<td style="text-align: left;">«&nbsp;<em>Il faut livrer maintenant puis en assumer les conséquences.</em>&nbsp;» Exemple&nbsp;&nbsp;: La dette est due à une partie limitée du code.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Involontaire</td>

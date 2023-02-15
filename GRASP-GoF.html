@@ -545,7 +545,7 @@ Country: null
 <section id="imaginer-le-code-sans-le-pattern-gof" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="imaginer-le-code-sans-le-pattern-gof"><span class="header-section-number">14.2</span> Imaginer le code sans le pattern GoF</h2>
 <p>Chaque principe GRASP est défini avec un énoncé d’un problème de conception et avec une solution pour le résoudre. Pourtant, beaucoup d’exemples dans le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> sont des patterns GoF déjà appliqués (et le problème initial n’est pas toujours expliqué en détail).</p>
-<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si l’on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on aurait l’obligation de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si l’on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme <span style="white-space:nowrap">ceci :</span></p>
+<p>Alors, pour mieux comprendre l’application des patterns GoF, on doit imaginer la situation du logiciel <em>avant</em> l’application du pattern. Dans l’exemple avec l’adaptateur pour les calculateurs de taxes, imaginez le code si l’on n’avait aucun adaptateur. À la place d’une méthode <code>getTaxes()</code> envoyée par la classe Vente à l’adaptateur, on aurait l’obligation de faire un branchement selon le type de calculateur de taxes externe utilisé actuellement (si l’on veut supporter plusieurs calculateurs). Donc, dans la classe Vente, il y aurait du code comme ceci&nbsp;:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* calculateurTaxes est le nom du calculateur utilisé actuellement */</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>calculateurTaxes <span class="op">==</span> <span class="st">"GoodAsGoldTaxPro"</span><span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* série d'instructions pour interagir avec GoodAsGoldTaxPro */</span></span>
@@ -697,7 +697,7 @@ Country: null
 <p></p><figcaption class="figure-caption">Figure&nbsp;14.3: Adaptateur et principes GRASP (figure F23.3/A26.3 <i class="fa-solid fa-book" aria-label="book"></i>).</figcaption><p></p>
 </figure>
 </div>
-<p>On peut donc voir le pattern Adaptateur comme <em>une spécialisation</em> de plusieurs principes <span style="white-space:nowrap">GRASP :</span></p>
+<p>On peut donc voir le pattern Adaptateur comme <em>une spécialisation</em> de plusieurs principes GRASP&nbsp;:</p>
 <ul>
 <li>Polymorphisme</li>
 <li>Indirection</li>
@@ -714,15 +714,15 @@ Country: null
 <p>Consultez la <a href="#fig-Fig23_1">figure&nbsp;<span>14.2</span></a> du pattern Adaptateur pour les sections suivantes.</p>
 <section id="polymorphisme" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="polymorphisme"><span class="header-section-number">14.3.1</span> Polymorphisme</h3>
-<p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
+<p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>&nbsp;:</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong><span style="white-space:nowrap">Problème :</span></strong> Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span><br>
-<strong><span style="white-space:nowrap">Solution :</span></strong> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types selon lesquels le comportement varie.</p>
+<p><strong>Problème&nbsp;:</strong> Qui est responsable quand le comportement varie selon le <span style="white-space:nowrap">type ?</span><br>
+<strong>Solution&nbsp;:</strong> Lorsqu’un comportement varie selon le type (classe), affectez la responsabilité de ce comportement – avec des opérations polymorphes – aux types selon lesquels le comportement varie.</p>
 </div>
 </div>
 </div>
@@ -736,15 +736,15 @@ Country: null
 </section>
 <section id="fabrication-pure" class="level3" data-number="14.3.2">
 <h3 data-number="14.3.2" class="anchored" data-anchor-id="fabrication-pure"><span class="header-section-number">14.3.2</span> Fabrication Pure</h3>
-<p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
+<p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>&nbsp;:</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong><span style="white-space:nowrap">Problème :</span></strong> En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte <span style="white-space:nowrap">cohésion ?</span><br>
-<strong><span style="white-space:nowrap">Solution :</span></strong> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine – une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p>
+<p><strong>Problème&nbsp;:</strong> En cas de situation désespérée, que faire quand vous ne voulez pas transgresser les principes de faible couplage et de forte <span style="white-space:nowrap">cohésion ?</span><br>
+<strong>Solution&nbsp;:</strong> Affectez un ensemble très cohésif de responsabilités à une classe «&nbsp;comportementale&nbsp;» artificielle qui ne représente pas un concept du domaine – une entité fabriquée pour augmenter la cohésion, diminuer le couplage et faciliter la réutilisation.</p>
 </div>
 </div>
 </div>
@@ -754,15 +754,15 @@ Country: null
 </section>
 <section id="indirection" class="level3" data-number="14.3.3">
 <h3 data-number="14.3.3" class="anchored" data-anchor-id="indirection"><span class="header-section-number">14.3.3</span> Indirection</h3>
-<p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
+<p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>&nbsp;:</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong><span style="white-space:nowrap">Problème :</span></strong> Comment affecter les responsabilités pour éviter le couplage <span style="white-space:nowrap">direct ?</span><br>
-<strong><span style="white-space:nowrap">Solution :</span></strong> Pour éviter le couplage direct, affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services.</p>
+<p><strong>Problème&nbsp;:</strong> Comment affecter les responsabilités pour éviter le couplage <span style="white-space:nowrap">direct ?</span><br>
+<strong>Solution&nbsp;:</strong> Pour éviter le couplage direct, affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services.</p>
 </div>
 </div>
 </div>
@@ -770,15 +770,15 @@ Country: null
 </section>
 <section id="protection-des-variations" class="level3" data-number="14.3.4">
 <h3 data-number="14.3.4" class="anchored" data-anchor-id="protection-des-variations"><span class="header-section-number">14.3.4</span> Protection des variations</h3>
-<p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
+<p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>&nbsp;:</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong><span style="white-space:nowrap">Problème :</span></strong> Comment affecter les responsabilités aux objets, aux sous-systèmes et aux systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span><br>
-<strong><span style="white-space:nowrap">Solution :</span></strong> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p>
+<p><strong>Problème&nbsp;:</strong> Comment affecter les responsabilités aux objets, aux sous-systèmes et aux systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span><br>
+<strong>Solution&nbsp;:</strong> Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p>
 </div>
 </div>
 </div>
@@ -798,7 +798,7 @@ Country: null
 <section id="exercices" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="exercices"><span class="header-section-number">14.5</span> Exercices</h2>
 <p>Pour ces exercices, suivez le modèle pour décortiquer le pattern Adaptateur, illustré à la <a href="#fig-Fig23_3">figure&nbsp;<span>14.3</span></a>.</p>
-<p>Une bonne ressource pour les patterns GoF est la <span style="white-space:nowrap">suivante :</span></p>
+<p>Une bonne ressource pour les patterns GoF est la suivante&nbsp;:</p>
 <p><a href="https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html">https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html</a></p>
 <div class="callout callout-style-default callout-tip callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -844,7 +844,7 @@ Astuce
 <p><span class="theorem-title"><strong>Exercice 14.10 (Façade) </strong></span>Identifiez les 4 principes GRASP dans le pattern <a href="https://fuhrmanator.github.io/oodp-horstmann/htm/Ch7/Ch7_fr.html#:~:text=la%20classe%20fa%C3%A7ade-,le%20pattern%20facade,-Contexte">Façade</a>, selon les directives présentées à la <a href="#sec-GRASP_Adaptateur"><span>Section&nbsp;14.3</span></a>.</p>
 </div>
 <div id="exr-Adaptateur_Maps" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 14.11 (Adaptateur pour Maps) </strong></span>Proposez une mise en œuvre du pattern GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul <span style="white-space:nowrap">d’itinéraires :</span></p>
+<p><span class="theorem-title"><strong>Exercice 14.11 (Adaptateur pour Maps) </strong></span>Proposez une mise en œuvre du pattern GoF Adaptateur pour un système de livraison qui peut être configuré avec trois variantes du service de calcul d’itinéraires&nbsp;:</p>
 <ul>
 <li><a href="https://developers.google.com/maps/documentation/directions">Google Maps</a><span style="white-space:nowrap"> ;</span></li>
 <li><a href="https://www.microsoft.com/en-us/maps/routing#routing">Bing Maps</a><span style="white-space:nowrap"> ;</span></li>

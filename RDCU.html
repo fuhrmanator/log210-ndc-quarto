@@ -386,17 +386,17 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 
 
 
-<p>Les réalisations de cas d’utilisation (RDCU) sont le sujet du chapitre F17/A18&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Voici les points importants pour la <span style="white-space:nowrap">méthodologie :</span></p>
+<p>Les réalisations de cas d’utilisation (RDCU) sont le sujet du chapitre F17/A18&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>. Voici les points importants pour la méthodologie&nbsp;:</p>
 <ul>
 <li>Une RDCU est une synthèse des informations spécifiées dans le MDD, le DSS et les contrats d’opération. Elle sert à esquisser une solution (qui n’est pas encore codée) afin de rendre plus explicite l’activité impliquant des choix de conception. Si vous n’avez pas bien compris les autres éléments (MDD, DSS, etc.), il vous sera difficile de réussir les RDCU. Il est normal de ne pas tout comprendre au début, alors posez des questions si vous ne comprenez pas.</li>
-<li>De manière générale, toute bonne RDCU doit faire les choses <span style="white-space:nowrap">suivantes :</span>
+<li>De manière générale, toute bonne RDCU doit faire les choses suivantes&nbsp;:
 <ul>
 <li>spécifier un contrôleur (pour la première opération système dans un DSS, qui sera le même pour le reste des opérations dans le <span style="white-space:nowrap">DSS) ;</span></li>
 <li>satisfaire les postconditions du contrat d’opération <span style="white-space:nowrap">correspondant ;</span></li>
 <li>faire usage des classes conceptuelles du MDD et respecter leurs associations et <span style="white-space:nowrap">cardinalités ;</span></li>
 <li>rechercher les informations qui sont éventuellement rendues à l’acteur dans le DSS.</li>
 </ul></li>
-<li>Il s’agit d’un diagramme de séquence en UML. Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique la notation de manière <span style="white-space:nowrap">agile :</span>
+<li>Il s’agit d’un diagramme de séquence en UML. Il faut alors maîtriser la notation UML pour ces diagrammes, mais on applique la notation de manière agile&nbsp;:
 <ul>
 <li>Il n’est pas nécessaire de faire les boîtes d’activation, car ça prend du temps de les faire correctement lorsqu’on dessine à la main un <span style="white-space:nowrap">diagramme ;</span></li>
 <li>On doit se servir des annotations pour documenter les choix <span style="white-space:nowrap">(GRASP) ;</span></li>
@@ -650,11 +650,11 @@ Avertissement
 <p>Dans un diagramme de séquence pour une RDCU, il est facile de montrer des objets <em>a</em> et <em>b</em> et de dessiner une flèche entre l’objet <em>a</em> et <em>b</em> puis d’écrire le nom d’une méthode pour représenter l’appel. Cependant, dans un programme codé en TypeScript ou en Java, il y aura des erreurs de compilation si <em>a</em> n’a pas une référence pour <em>b</em>. L’approche de Larman propose d’être sensible à la visibilité lors de la conception (en faisant les RDCU), car ajouter une visibilité implique l’augmentation du couplage.</p>
 </div>
 </div>
-<p>Régler les problèmes de visibilité lorsqu’on crée une RDCU nécessite de la créativité. Il faut pratiquer pour apprendre la démarche, mais les points suivants peuvent <span style="white-space:nowrap">aider :</span></p>
+<p>Régler les problèmes de visibilité lorsqu’on crée une RDCU nécessite de la créativité. Il faut pratiquer pour apprendre la démarche, mais les points suivants peuvent aider&nbsp;:</p>
 <ul>
 <li>Pour un objet racine (par exemple <code>Université</code>), il peut s’agir d’un objet Singleton, qui aura une visibilité globale, c’est-à-dire que n’importe quel objet pourrait lui envoyer un message. Cependant, les objets Singleton posent des problèmes de conception, notamment pour les tests. Il vaut mieux éviter ce choix, si possible.<br>
 Voir <a href="https://stackoverflow.com/a/2085988/1168342">cette réponse sur Stack Overflow</a>&nbsp;<i class="fa-brands fa-stack-overflow" aria-label="stack-overflow"></i>.</li>
-<li>Sinon, il faudra que l’objet émetteur (<em>a</em>) ait une référence de l’objet récepteur (<em>b</em>). Par exemple, sur la <a href="#fig-RDCU_Visibilite1">figure&nbsp;<span>9.3</span></a>, la référence à <em>b</em> peut <span style="white-space:nowrap">être :</span>
+<li>Sinon, il faudra que l’objet émetteur (<em>a</em>) ait une référence de l’objet récepteur (<em>b</em>). Par exemple, sur la <a href="#fig-RDCU_Visibilite1">figure&nbsp;<span>9.3</span></a>, la référence à <em>b</em> peut être&nbsp;:
 <ul>
 <li>stockée comme un attribut de <em>a</em>,</li>
 <li>passée comme un argument dans un message antérieur, ou</li>
@@ -705,7 +705,7 @@ Country: null
 </section>
 <section id="sec-TransformerIDenObjets" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="sec-TransformerIDenObjets"><span class="header-section-number">9.4</span> Transformer les identifiants en objets</h2>
-<p>La directive d’utiliser les types primitifs pour les arguments dans les opérations système (voir la <a href="DSS.html"><span>Chapitre&nbsp;5</span></a>) nous mène à un problème récurrent dans les <span style="white-space:nowrap">RDCU :</span> transformer un identifiant (un argument de type <code>String</code> ou <code>int</code>) en objet représenté par cet identifiant. Larman vous propose un idiome (pas vraiment un pattern) nommé <strong>Transformer identifiant en objet</strong> (fin de la section F23.8, p.451/A26.8, <strong>IDs to Objects</strong>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>), qui sert à repérer l’objet qui correspond à l’identifiant.</p>
+<p>La directive d’utiliser les types primitifs pour les arguments dans les opérations système (voir la <a href="DSS.html"><span>Chapitre&nbsp;5</span></a>) nous mène à un problème récurrent dans les RDCU&nbsp;: transformer un identifiant (un argument de type <code>String</code> ou <code>int</code>) en objet représenté par cet identifiant. Larman vous propose un idiome (pas vraiment un pattern) nommé <strong>Transformer identifiant en objet</strong> (fin de la section F23.8, p.451/A26.8, <strong>IDs to Objects</strong>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>), qui sert à repérer l’objet qui correspond à l’identifiant.</p>
 <p>Il y a un exemple à la <a href="#fig-RDCU_ID_en_objets">figure&nbsp;<span>9.4</span></a> provenant du chapitre sur <strong>l’Application des patterns GoF (figure F23.18&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>)</strong>. Un autre exemple du livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> est l’identifiant <code>codeArticle</code> transformé en objet <code>DescriptionProduit</code> par la méthode<br>
 <code>CatalogueProduits.getDescProduit(codeArticle:String):DescriptionProduit</code>.</p>
 <div id="fig-RDCU_ID_en_objets" class="quarto-figure quarto-figure-center anchored">
@@ -803,7 +803,7 @@ Country: null
 <section id="sec-rdcu_Demarrer" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="sec-rdcu_Demarrer"><span class="header-section-number">9.6</span> RDCU pour l’initialisation, le scénario Démarrer</h2>
 <p>Le lancement de l’application correspond à la RDCU «&nbsp;Démarrer&nbsp;». La section <strong>Initialisation et cas d’utilisation Démarrer</strong> (F17.4&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>, p.&nbsp;345) ou <strong>Initialization and the <em>Start Up</em> Use Case</strong> (A18.4&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>, p.274) traite ce sujet important. C’est dans cette conception où il faut mettre en place tous les éléments importants pour les hypothèses faites dans les autres RDCU, par exemple les classes de collection (<em>map</em>), les références pour la visibilité, l’initialisation des contrôleurs, etc.</p>
-<p>Voici quelques points <span style="white-space:nowrap">importants :</span></p>
+<p>Voici quelques points importants&nbsp;:</p>
 <ul>
 <li>Le lancement d’une application dépend du langage de programmation et du système d’exploitation.</li>
 <li>À chaque nouvelle RDCU, on doit possiblement actualiser la RDCU «&nbsp;Démarrer&nbsp;» pour tenir compte des hypothèses faites dans la dernière RDCU. Elle est assez «&nbsp;instable&nbsp;» pour cette raison. Larman recommande de faire sa conception en dernier lieu.</li>
@@ -928,13 +928,13 @@ Mise en garde
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Une application de patterns GoF à la solution peut nuire à ce principe, car ces patterns ajoutent souvent des classes logicielles n’ayant aucun lien avec le modèle du domaine. Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine. Il faut vérifier avec une personne expérimentée (l’architecte du projet si possible) que l’application du pattern est justifiée, qu’elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées. Chaque fois qu’on propose des classes logicielles qui n’ont pas de liens avec la représentation du problème du domaine, on <em>augmente le décalage des représentations</em> et l’on rend la solution un peu plus difficile à comprendre. C’est aussi une forme de <a href="AnalyseConception.html#sec-ComplexiteCirc">Complexité circonstancielle (provenant des choix de conception)</a>. Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels. Il est très difficile, même pour les spécialistes en conception, de trouver un bon équilibre entre toutes les <span style="white-space:nowrap">forces :</span> la maintenabilité, la simplicité, les fonctionnalités, etc. Vous pouvez en lire plus dans <a href="https://stackoverflow.com/a/18702842/1168342">cette réponse sur Stack Overflow</a>&nbsp;<i class="fa-brands fa-stack-overflow" aria-label="stack-overflow"></i>.</p>
+<p>Une application de patterns GoF à la solution peut nuire à ce principe, car ces patterns ajoutent souvent des classes logicielles n’ayant aucun lien avec le modèle du domaine. Par exemple, un Visiteur ou un Itérateur sont des classes logicielles sans binôme dans le modèle du domaine. Il faut vérifier avec une personne expérimentée (l’architecte du projet si possible) que l’application du pattern est justifiée, qu’elle apporte de vrais bénéfices au design en dépit des désavantages dus à des classes ajoutées. Chaque fois qu’on propose des classes logicielles qui n’ont pas de liens avec la représentation du problème du domaine, on <em>augmente le décalage des représentations</em> et l’on rend la solution un peu plus difficile à comprendre. C’est aussi une forme de <a href="AnalyseConception.html#sec-ComplexiteCirc">Complexité circonstancielle (provenant des choix de conception)</a>. Ce dilemme est un bon exemple de la nature pernicieuse de la conception de logiciels. Il est très difficile, même pour les spécialistes en conception, de trouver un bon équilibre entre toutes les forces&nbsp;: la maintenabilité, la simplicité, les fonctionnalités, etc. Vous pouvez en lire plus dans <a href="https://stackoverflow.com/a/18702842/1168342">cette réponse sur Stack Overflow</a>&nbsp;<i class="fa-brands fa-stack-overflow" aria-label="stack-overflow"></i>.</p>
 </div>
 </div>
 </section>
 <section id="sec-FaireSoiMeme" class="level2" data-number="9.8">
 <h2 data-number="9.8" class="anchored" data-anchor-id="sec-FaireSoiMeme"><span class="header-section-number">9.8</span> Pattern «&nbsp;Faire soi-même&nbsp;»</h2>
-<p>Dans la section F30.8/A33.7&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>, Larman mentionne le pattern «&nbsp;Faire soi-même&nbsp;» de Peter Coad <span class="citation" data-cites="coad97a">(<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span>, qui permet de réduire le <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a>, même s’il ne représente pas exactement la réalité des objets (voir la <a href="#fig-main_des">figure&nbsp;<span>9.7 (a)</span></a><span style="white-space:nowrap">) :</span></p>
+<p>Dans la section F30.8/A33.7&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>, Larman mentionne le pattern «&nbsp;Faire soi-même&nbsp;» de Peter Coad <span class="citation" data-cites="coad97a">(<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span>, qui permet de réduire le <a href="AnalyseConception.html#sec-DecalageRepresentations">Décalage des représentations</a>, même s’il ne représente pas exactement la réalité des objets (voir la <a href="#fig-main_des">figure&nbsp;<span>9.7 (a)</span></a>)&nbsp;:</p>
 <div id="fig-RDCU_faire_soi_meme" class="quarto-layout-panel">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
@@ -985,7 +985,7 @@ Country: null
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;9.7: <strong>Faire soi-même</strong><span style="white-space:nowrap"> :</span> «&nbsp;Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction&nbsp;» de <span class="citation" data-cites="coad97a">Coad (<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.7: <strong>Faire soi-même</strong>&nbsp;: «&nbsp;Moi, objet logiciel, je fais moi-même ce qu’on fait normalement à l’objet réel dont je suis une abstraction&nbsp;» de <span class="citation" data-cites="coad97a">Coad (<a href="references.html#ref-coad97a" role="doc-biblioref">1997</a>)</span>.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1051,7 +1051,7 @@ Country: null
 <p></p><figcaption class="figure-caption">Figure&nbsp;9.8: Exemple de diagramme de séquence.</figcaption><p></p>
 </figure>
 </div>
-<p>Voici un modèle à suivre. Pour le diagramme sur la <a href="#fig-coder_sequence_modele">figure&nbsp;<span>9.8</span></a>, on code les classes suivantes en <span style="white-space:nowrap">TypeScript :</span></p>
+<p>Voici un modèle à suivre. Pour le diagramme sur la <a href="#fig-coder_sequence_modele">figure&nbsp;<span>9.8</span></a>, on code les classes suivantes en TypeScript&nbsp;:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> A {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    b<span class="op">:</span> B<span class="op">;</span>  <span class="co">// A envoie un message à B, visibilité d'attribut</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">execute</span>(arg0<span class="op">:</span><span class="dt">number</span>)<span class="op">:</span><span class="dt">any</span> {</span>
@@ -1129,7 +1129,7 @@ Country: null
 <p><span class="theorem-title"><strong>Exercice 9.3 (Critique d’une conception) </strong></span>Dans cet exercice, l’objectif est de vous sensibiliser à la facilité de comprendre une conception à partir d’un problème. Un objectif secondaire est de considérer les choix de conception sur le plan de la cohésion et du couplage. Ici, il s’agit du jeu Monopoly, qui est un exemple proposé par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>, pour lequel il a également proposé un modèle du domaine et une conception, selon la méthodologie.</p>
 <p>Pour cet exercice, nous examinerons une conception orientée objet réelle du jeu Monopoly disponible sur GitHub, soit <a href="https://github.com/Chuzzy/Emojiopoly">Emojiopoly</a>. Voici le travail à faire.</p>
 <ul>
-<li>Considérez les deux <span style="white-space:nowrap">artefacts :</span>
+<li>Considérez les deux artefacts&nbsp;:
 <ul>
 <li>un <a href="#sec-MDD_Monopoly">modèle du domaine de Monopoly</a> proposé par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> (il y a une version en français et une autre en anglais, puisque le code TypeScript est en anglais) ;</li>
 <li>un <a href="#sec-DDC_Emojiopoly">modèle d’une solution</a> sous forme de diagramme de classes logicielles, créé à partir du code TypeScript dans le dépôt mentionné ci-dessus).</li>

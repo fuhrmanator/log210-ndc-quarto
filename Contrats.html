@@ -301,7 +301,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
    
   <ul>
   <li><a href="#les-contrats-en-bref" id="toc-les-contrats-en-bref" class="nav-link active" data-scroll-target="#les-contrats-en-bref"><span class="toc-section-number">8.1</span>  Les contrats en bref</a></li>
-  <li><a href="#sec-contrat_exemple" id="toc-sec-contrat_exemple" class="nav-link" data-scroll-target="#sec-contrat_exemple"><span class="toc-section-number">8.2</span>  <span style="white-space:nowrap">Exemple :</span> Contrats d’opération pour Attaquer un pays</a></li>
+  <li><a href="#sec-contrat_exemple" id="toc-sec-contrat_exemple" class="nav-link" data-scroll-target="#sec-contrat_exemple"><span class="toc-section-number">8.2</span>  Exemple&nbsp;: Contrats d’opération pour Attaquer un pays</a></li>
   <li><a href="#feuille-de-référence" id="toc-feuille-de-référence" class="nav-link" data-scroll-target="#feuille-de-référence"><span class="toc-section-number">8.3</span>  Feuille de référence</a></li>
   <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">8.4</span>  Exercices</a></li>
   </ul>
@@ -313,7 +313,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 
 
 
-<p>Un contrat d’opération est un document décrivant les modifications permanentes à l’état du système après l’exécution d’une opération système. Les modifications permanentes à l’état du système <span style="white-space:nowrap">comprennent :</span></p>
+<p>Un contrat d’opération est un document décrivant les modifications permanentes à l’état du système après l’exécution d’une opération système. Les modifications permanentes à l’état du système comprennent&nbsp;:</p>
 <ul>
 <li>la création ou la destruction d’une <span style="white-space:nowrap">instance ;</span></li>
 <li>la modification d’un attribut d’une <span style="white-space:nowrap">instance ;</span></li>
@@ -333,7 +333,7 @@ Important
 <p>Le MDD est un modèle de la vraie vie. Il y a des classes conceptuelles (comme Vente), mais aussi des <em>instances</em> de ces classes. Dans un magasin, pour chaque nouvelle vente, on imagine une nouvelle instance de la classe Vente. S’il y a eu 72 clientes et clients qui ont acheté des choses dans un magasin dans une journée, on imagine 72 instances de Vente, une pour chaque cliente ou client.</p>
 </div>
 </div>
-<p>Sur la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter une Vente</em>. Elle correspond au moment où le caissier ou la caissière démarre une nouvelle vente pour un client ou une cliente. Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec la voix passive au passé composé en <span style="white-space:nowrap">français) :</span> «&nbsp;une instance <em>v</em> de Vente a été créée&nbsp;».</p>
+<p>Sur la <a href="#fig-ContratExempleCreerNouvelleVente">figure&nbsp;<span>8.1</span></a>, l’opération système <code>créerNouvelleVente()</code> provient d’un diagramme de séquence système lié au cas d’utilisation <em>Traiter une Vente</em>. Elle correspond au moment où le caissier ou la caissière démarre une nouvelle vente pour un client ou une cliente. Avant l’exécution de cette opération, l’instance de la classe Vente indiquée dans le modèle du domaine n’existe pas. Cependant, après l’exécution de l’opération système, l’instance de Vente devrait exister. Le contrat d’opération spécifie ce fait dans une postcondition (avec la voix passive au passé composé en français)&nbsp;: «&nbsp;une instance <em>v</em> de Vente a été créée&nbsp;».</p>
 <p>Un contrat d’opération permet de spécifier tous les changements dans le MDD qui doivent avoir lieu lors de l’opération système. Les postconditions du contrat saisissent l’évolution du MDD.</p>
 <div id="fig-ContratExempleCreerNouvelleVente" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -343,13 +343,13 @@ Important
 </div>
 <section id="les-contrats-en-bref" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="les-contrats-en-bref"><span class="header-section-number">8.1</span> Les contrats en bref</h2>
-<p>Les contrats d’opération sont le sujet du chapitre 11&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>&nbsp;<span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Voici les points importants pour la méthodologie enseignée dans le présent <span style="white-space:nowrap">manuel :</span></p>
+<p>Les contrats d’opération sont le sujet du chapitre 11&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>&nbsp;<span class="citation" data-cites="craig_uml_2005">(<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span>. Voici les points importants pour la méthodologie enseignée dans le présent manuel&nbsp;:</p>
 <ul>
 <li>Un contrat d’opération correspond à une opération système provenant d’un DSS.</li>
 <li>On fait des contrats surtout pour les opérations système ayant une certaine complexité.</li>
 <li>Une postcondition décrit les modifications de l’état des objets dans le modèle du domaine après une opération système.</li>
 <li>Le vocabulaire pour les postconditions provient du modèle du domaine. Il s’agit des noms de classes, d’attributs et d’associations qu’on trouve dans le MDD.</li>
-<li>Chaque postcondition doit avoir la bonne <span style="white-space:nowrap">forme :</span>
+<li>Chaque postcondition doit avoir la bonne forme&nbsp;:
 <ul>
 <li>création (ou suppression) <span style="white-space:nowrap">d’instances ;</span></li>
 <li>modification des valeurs des <span style="white-space:nowrap">attributs ;</span></li>
@@ -361,15 +361,15 @@ Important
 </ul>
 </section>
 <section id="sec-contrat_exemple" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-contrat_exemple"><span class="header-section-number">8.2</span> <span style="white-space:nowrap">Exemple :</span> Contrats d’opération pour Attaquer un pays</h2>
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-contrat_exemple"><span class="header-section-number">8.2</span> Exemple&nbsp;: Contrats d’opération pour Attaquer un pays</h2>
 <p>Voir la <a href="#fig-MDD-risk-objets">figure&nbsp;<span>8.2</span></a> pour les changements dans les objets du modèle du domaine correspondant aux postconditions.</p>
 <section id="attaquer-un-pays" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="attaquer-un-pays">Attaquer un pays</h3>
 <section id="opération-démarrerattaquepaysattaquantstring-paysdéfenseurstring" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="opération-démarrerattaquepaysattaquantstring-paysdéfenseurstring"><span style="white-space:nowrap">Opération :</span> <code>démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)</code></h4>
+<h4 class="unnumbered unlisted anchored" data-anchor-id="opération-démarrerattaquepaysattaquantstring-paysdéfenseurstring">Opération&nbsp;: <code>démarrerAttaque(paysAttaquant:String, paysDéfenseur:String)</code></h4>
 </section>
 <section id="postconditions" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="postconditions"><span style="white-space:nowrap">Postconditions :</span></h4>
+<h4 class="unnumbered unlisted anchored" data-anchor-id="postconditions">Postconditions&nbsp;:</h4>
 <ul>
 <li>Une nouvelle instance <em>a</em> de Attaque a été créée.</li>
 <li><em>a</em> a été associée au Pays correspondant à paysAttaquant.</li>
@@ -377,19 +377,19 @@ Important
 </ul>
 </section>
 <section id="opération-annoncerattaquenbrégimentsattaquantint" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="opération-annoncerattaquenbrégimentsattaquantint"><span style="white-space:nowrap">Opération :</span> <code>annoncerAttaque(nbRégimentsAttaquant:int)</code></h4>
+<h4 class="unnumbered unlisted anchored" data-anchor-id="opération-annoncerattaquenbrégimentsattaquantint">Opération&nbsp;: <code>annoncerAttaque(nbRégimentsAttaquant:int)</code></h4>
 </section>
 <section id="postcondition" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="postcondition"><span style="white-space:nowrap">Postcondition :</span></h4>
+<h4 class="unnumbered unlisted anchored" data-anchor-id="postcondition">Postcondition&nbsp;:</h4>
 <ul>
 <li>a.nbAttaquant est devenu nbRégimentsAttaquant.</li>
 </ul>
 </section>
 <section id="opération-annoncerdéfensenbrégimentsdéfendantint" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="opération-annoncerdéfensenbrégimentsdéfendantint"><span style="white-space:nowrap">Opération :</span> <code>annoncerDéfense(nbRégimentsDéfendant:int)</code></h4>
+<h4 class="unnumbered unlisted anchored" data-anchor-id="opération-annoncerdéfensenbrégimentsdéfendantint">Opération&nbsp;: <code>annoncerDéfense(nbRégimentsDéfendant:int)</code></h4>
 </section>
 <section id="postconditions-1" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="postconditions-1"><span style="white-space:nowrap">Postconditions :</span></h4>
+<h4 class="unnumbered unlisted anchored" data-anchor-id="postconditions-1">Postconditions&nbsp;:</h4>
 <ul>
 <li>a.nbDéfenseur est devenu nbRégimentsDéfendant.</li>
 <li>L’attribut valeur des d1 à d5 est devenu un nombre entier aléatoire entre 1 et 6.</li>
@@ -421,11 +421,11 @@ Important
 </section>
 <section id="feuille-de-référence" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="feuille-de-référence"><span class="header-section-number">8.3</span> Feuille de référence</h2>
-<p>Pour faire des contrats, voici une démarche <span style="white-space:nowrap">générale :</span></p>
+<p>Pour faire des contrats, voici une démarche générale&nbsp;:</p>
 <ol type="1">
 <li>Faire un contrat pour chaque opération système.</li>
 <li>Porter une attention à sa signature (les arguments et leur type).</li>
-<li>Rappeler les formes de <span style="white-space:nowrap">postconditions :</span>
+<li>Rappeler les formes de postconditions&nbsp;:
 <ol type="a">
 <li>créer/supprimer <span style="white-space:nowrap">instances ;</span></li>
 <li>former/briser <span style="white-space:nowrap">associations ;</span></li>

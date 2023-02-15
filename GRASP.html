@@ -379,7 +379,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 
 <p>GRASP est un acronyme de l’expression anglaise «&nbsp;General Responsibility Assignment Software Patterns&nbsp;», c’est-à-dire les principes pour affecter les responsabilités logicielles dans les classes.</p>
 <p>Une approche GRASP devrait amener un design vers la modularité et la maintenabilité.</p>
-<p>L’acronyme d’une expression vulgarisée pourrait être <span style="white-space:nowrap">POMM :</span> «&nbsp;Principes pour déterminer Où Mettre une Méthode.&nbsp;»</p>
+<p>L’acronyme d’une expression vulgarisée pourrait être POMM&nbsp;: «&nbsp;Principes pour déterminer Où Mettre une Méthode.&nbsp;»</p>
 <p>En tant qu’ingénieur logiciel ou ingénieure logiciel, vous devez souvent décider où placer une méthode (dans quelle classe), et cette décision ne devrait pas être prise de manière arbitraire, mais plutôt en suivant les directives d’ingénierie favorisant la modularité.</p>
 <p>Alors, les GRASP sont les directives qui vous aident à prendre des décisions de conception, menant à un design avec moins de couplage inutile et avec des classes plus cohésives. Les classes cohésives sont plus faciles à comprendre, à maintenir et à réutiliser.</p>
 <div class="callout callout-style-simple callout-tip no-icon">
@@ -505,7 +505,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <td style="text-align: left;">Créateur<br>
 <em>F16.10/A17.10</em>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i></td>
 <td style="text-align: left;"><p>Qui <span style="white-space:nowrap">crée ?</span> (Notez que Fabrique Concrète est une solution de rechange courante.)</p>
-<p>Affectez à la classe B la responsabilité de créer une instance de la classe A si l’une des assertions suivantes est <span style="white-space:nowrap">vraie :</span></p>
+<p>Affectez à la classe B la responsabilité de créer une instance de la classe A si l’une des assertions suivantes est vraie&nbsp;:</p>
 <ol type="1">
 <li>B contient A</li>
 <li>B agrège A [à favoriser]</li>
@@ -518,7 +518,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <td style="text-align: left;">Contrôleur<br>
 <em>F16.13/A17.13</em>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i></td>
 <td style="text-align: left;"><p>Quel est le premier objet en dehors de la couche présentation qui reçoit et coordonne («&nbsp;contrôle&nbsp;») les opérations <span style="white-space:nowrap">système ?</span></p>
-<p>Affectez une responsabilité à la classe qui correspond à l’une de ces <span style="white-space:nowrap">définitions :</span></p>
+<p>Affectez une responsabilité à la classe qui correspond à l’une de ces définitions&nbsp;:</p>
 <ol type="1">
 <li>[Contrôleur de façade] [Cette classe] représente le système global, un «&nbsp;objet racine&nbsp;», un équipement ou un sous-système (contrôleur de façade).</li>
 <li>[Contrôleur de session] [Cette classe] représente un scénario de cas d’utilisation dans lequel l’opération système se produit (<em>contrôleur de session</em> ou contrôleur de cas d’utilisation). [On la nomme GestionnaireX, où X est le nom du cas d’utilisation.]</li>
@@ -616,7 +616,7 @@ Country: null
 <p></p><figcaption class="figure-caption">Figure&nbsp;6.2: Classe «&nbsp;Bird&nbsp;» à laquelle on peut appliquer le principe GRASP Polymorphisme.</figcaption><p></p>
 </figure>
 </div>
-<p>Appliquez le GRASP Polymorphisme pour le code <span style="white-space:nowrap">suivant :</span></p>
+<p>Appliquez le GRASP Polymorphisme pour le code suivant&nbsp;:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>get <span class="fu">plumage</span>() {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span> (<span class="kw">this</span><span class="op">.</span><span class="at">type</span>) {</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">'EuropeanSwallow'</span><span class="op">:</span></span>
@@ -731,7 +731,7 @@ class Joueur {
 <p><span class="theorem-title"><strong>Exercice 6.2 (GRASP Contrôleur et Fabrication Pure) </strong></span>&nbsp;</p>
 <ul>
 <li>Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d’un contrôleur de session (de cas d’utilisation) est une Fabrication Pure.</li>
-<li>Soit un contrôleur de session <code>GestionnaireVentes</code><span style="white-space:nowrap"> ;</span> quelle est la «&nbsp;situation désespérée&nbsp;» qui est mitigée par ce <span style="white-space:nowrap">contrôleur ?</span> <span style="white-space:nowrap">Astuce :</span> relire la définition de Fabrication Pure.</li>
+<li>Soit un contrôleur de session <code>GestionnaireVentes</code><span style="white-space:nowrap"> ;</span> quelle est la «&nbsp;situation désespérée&nbsp;» qui est mitigée par ce <span style="white-space:nowrap">contrôleur ?</span> Astuce&nbsp;: relire la définition de Fabrication Pure.</li>
 </ul>
 </div>
 

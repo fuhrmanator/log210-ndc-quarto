@@ -360,7 +360,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 
 
 <p>Le chapitre A36/F29&nbsp;<i class="fa-solid fa-book" aria-label="book"></i>&nbsp;contient des directives pour la conception de packages. Notez que la notion de package n’existe pas en TypeScript (et en JavaScript), mais le principe de <em>namespace</em> (espace de nom) existe. La <a href="#sec-NamespaceTypeScript"><span>Section&nbsp;18.1</span></a> explique quelques pratiques pour la gestion des <em>namespaces</em> en TypeScript.</p>
-<p>Les points importants sont les suivants (les détails se trouvent dans le <span style="white-space:nowrap">livre) :</span></p>
+<p>Les points importants sont les suivants (les détails se trouvent dans le livre)&nbsp;:</p>
 <ul>
 <li>La notation UML des diagrammes de <span style="white-space:nowrap">packages ;</span></li>
 <li>Organiser les packages par <strong>cohésion</strong><span style="white-space:nowrap"> ;</span></li>
@@ -456,15 +456,15 @@ Country: null
 </div>
 <section id="sec-NamespaceTypeScript" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="sec-NamespaceTypeScript"><span class="header-section-number">18.1</span> Absence de packages dans TypeScript</h2>
-<p>En effet, TypeScript n’a pas la notion de package comme dans C# ou Java. Cependant, il y a des pratiques pour organiser logiquement le code et pour éviter les conflits (les collisions) de noms. Rappelons que la notion de package existe dans Java <span style="white-space:nowrap">pour :</span></p>
+<p>En effet, TypeScript n’a pas la notion de package comme dans C# ou Java. Cependant, il y a des pratiques pour organiser logiquement le code et pour éviter les conflits (les collisions) de noms. Rappelons que la notion de package existe dans Java pour&nbsp;:</p>
 <ol type="1">
-<li><strong>Organiser logiquement le code</strong><span style="white-space:nowrap"> :</span> le type interface <code>java.util.List</code> est disponible dans la <em>bibliothèque</em> <code>java.util</code><span style="white-space:nowrap">) ;</span></li>
-<li><strong>Éviter les conflits de noms</strong><span style="white-space:nowrap"> :</span> les classes <code>java.util.List</code> et <code>ca.etsmtl.log121.fuhrman.projet2.List</code> ont le même nom de base, mais puisqu’elles sont dans deux packages différents, elles peuvent être utilisées dans le même programme (leur «&nbsp;fully qualified name&nbsp;» est différent).</li>
+<li><strong>Organiser logiquement le code</strong>&nbsp;: le type interface <code>java.util.List</code> est disponible dans la <em>bibliothèque</em> <code>java.util</code><span style="white-space:nowrap">) ;</span></li>
+<li><strong>Éviter les conflits de noms</strong>&nbsp;: les classes <code>java.util.List</code> et <code>ca.etsmtl.log121.fuhrman.projet2.List</code> ont le même nom de base, mais puisqu’elles sont dans deux packages différents, elles peuvent être utilisées dans le même programme (leur «&nbsp;fully qualified name&nbsp;» est différent).</li>
 </ol>
 <p>En TypeScript, on peut atteindre les mêmes objectifs.</p>
 <section id="organisation-des-éléments-du-code" class="level3" data-number="18.1.1">
 <h3 data-number="18.1.1" class="anchored" data-anchor-id="organisation-des-éléments-du-code"><span class="header-section-number">18.1.1</span> Organisation des éléments du code</h3>
-<p>L’organisation peut être réalisée grâce aux modules avec les mots-clés <code>export</code> et <code>import</code>. Par <span style="white-space:nowrap">exemple :</span></p>
+<p>L’organisation peut être réalisée grâce aux modules avec les mots-clés <code>export</code> et <code>import</code>. Par exemple&nbsp;:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// maClasse.ts</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">class</span> MaClasse {</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// définition</span></span>
@@ -475,7 +475,7 @@ Country: null
 </section>
 <section id="noms-sans-conflit" class="level3" data-number="18.1.2">
 <h3 data-number="18.1.2" class="anchored" data-anchor-id="noms-sans-conflit"><span class="header-section-number">18.1.2</span> Noms sans conflit</h3>
-<p>Dans l’exemple précédent, il ne serait pas possible d’avoir deux fichiers nommés <code>maClasse.ts</code> dans le même répertoire, alors il est impossible d’avoir une collision avec le nom du fichier. Donc, on pourrait importer la classe <code>MaClasse</code> de <code>maClasse.ts</code> et la classe <code>MaClasse</code> de <code>lib/projet2/maClasse.ts</code> dans le même programme. Cependant, pour éviter un conflit de noms, on emploie le mot-clé <code>as</code> pour renommer la classe (<code>MaClasseP2</code>) lorsqu’on <span style="white-space:nowrap">l’importe :</span></p>
+<p>Dans l’exemple précédent, il ne serait pas possible d’avoir deux fichiers nommés <code>maClasse.ts</code> dans le même répertoire, alors il est impossible d’avoir une collision avec le nom du fichier. Donc, on pourrait importer la classe <code>MaClasse</code> de <code>maClasse.ts</code> et la classe <code>MaClasse</code> de <code>lib/projet2/maClasse.ts</code> dans le même programme. Cependant, pour éviter un conflit de noms, on emploie le mot-clé <code>as</code> pour renommer la classe (<code>MaClasseP2</code>) lorsqu’on l’importe&nbsp;:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// client.ts</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { MaClasse } <span class="im">from</span> <span class="st">'./maClasse'</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { MaClasse <span class="im">as</span> MaClasseP2 } <span class="im">from</span> <span class="st">'./lib/projet2/maClasse'</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>

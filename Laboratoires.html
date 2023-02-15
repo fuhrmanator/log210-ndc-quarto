@@ -365,7 +365,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
   <ul>
   <li><a href="#typescript" id="toc-typescript" class="nav-link active" data-scroll-target="#typescript"><span class="toc-section-number">20.1</span>  TypeScript</a></li>
   <li><a href="#javascripttypescript" id="toc-javascripttypescript" class="nav-link" data-scroll-target="#javascripttypescript"><span class="toc-section-number">20.2</span>  JavaScript/TypeScript</a></li>
-  <li><a href="#javascript-truthy-et-falsy-conversion-en-valeur-booléenne" id="toc-javascript-truthy-et-falsy-conversion-en-valeur-booléenne" class="nav-link" data-scroll-target="#javascript-truthy-et-falsy-conversion-en-valeur-booléenne"><span class="toc-section-number">20.3</span>  <span style="white-space:nowrap">JavaScript :</span> Truthy et Falsy (conversion en valeur booléenne)</a>
+  <li><a href="#javascript-truthy-et-falsy-conversion-en-valeur-booléenne" id="toc-javascript-truthy-et-falsy-conversion-en-valeur-booléenne" class="nav-link" data-scroll-target="#javascript-truthy-et-falsy-conversion-en-valeur-booléenne"><span class="toc-section-number">20.3</span>  JavaScript&nbsp;: Truthy et Falsy (conversion en valeur booléenne)</a>
   <ul class="collapse">
   <li><a href="#falsy" id="toc-falsy" class="nav-link" data-scroll-target="#falsy"><span class="toc-section-number">20.3.1</span>  Falsy</a></li>
   <li><a href="#truthy" id="toc-truthy" class="nav-link" data-scroll-target="#truthy"><span class="toc-section-number">20.3.2</span>  Truthy</a></li>
@@ -387,7 +387,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 
 
 <p>À l’École de technologie supérieure, le cours de <em>LOG210</em> propose un laboratoire de mise à niveau (nommé «&nbsp;lab 0&nbsp;») réalisé individuellement, où l’on passe à travers les différentes technologies utilisées dans le projet du laboratoire principal, qui, lui, est réalisé pendant le reste du cours en trois itérations de trois semaines. On peut trouver sur GitHub l’énoncé du <a href="https://github.com/profcfuhrmanets/log210-enonce-lab0">lab0</a> et du <a href="https://github.com/profcfuhrmanets/log210-enonce-lab1">laboratoire principal</a>. Chaque équipe est libre de choisir parmi une liste d’exigences ce qu’elle veut réaliser dans chaque itération. Cela permet de pratiquer l’approche itérative en équipe. L’approche TDD est obligatoire (pour avoir des points pour une fonctionnalité réalisée).</p>
-<p>Les deux premières itérations sont évaluées, mais les points pour les fonctionnalités réussies ne sont comptabilisés qu’à la dernière itération. Cela a plusieurs avantages <span style="white-space:nowrap">pédagogiques :</span></p>
+<p>Les deux premières itérations sont évaluées, mais les points pour les fonctionnalités réussies ne sont comptabilisés qu’à la dernière itération. Cela a plusieurs avantages pédagogiques&nbsp;:</p>
 <ul>
 <li>réduction du risque d’échec, puisqu’on a des rétroactions formelles toutes les trois semaines <span style="white-space:nowrap">environ ;</span></li>
 <li>réduction de la facilité de faire du plagiat, puisqu’on doit construire en équipe un système tout au long du cours, et les éléments d’analyse et de conception (le MDD et les RDCU) doivent être cohérents avec le code (et les <span style="white-space:nowrap">tests) ;</span></li>
@@ -396,7 +396,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 <p>Ce chapitre contient des informations sur le volet technique des laboratoires.</p>
 <section id="typescript" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="typescript"><span class="header-section-number">20.1</span> TypeScript</h2>
-<p>Qu’est-ce que <span style="white-space:nowrap">TypeScript ?</span> Selon <span class="citation" data-cites="goldberg_learning_2022">Goldberg (<a href="references.html#ref-goldberg_learning_2022" role="doc-biblioref">2022</a>)</span>, TypeScript comprend quatre <span style="white-space:nowrap">éléments :</span></p>
+<p>Qu’est-ce que <span style="white-space:nowrap">TypeScript ?</span> Selon <span class="citation" data-cites="goldberg_learning_2022">Goldberg (<a href="references.html#ref-goldberg_learning_2022" role="doc-biblioref">2022</a>)</span>, TypeScript comprend quatre éléments&nbsp;:</p>
 <ul>
 <li>Un <strong>langage de programmation</strong> ayant toute la syntaxe de JavaScript, plus une syntaxe propre à TypeScript pour définir et utiliser les <span style="white-space:nowrap">types ;</span></li>
 <li>Un <strong>vérificateur de type</strong> pouvant décortiquer un ensemble de fichiers en JavaScript et en TypeScript définissant des variables, des fonctions, etc., afin d’indiquer d’éventuels problèmes de <span style="white-space:nowrap">configuration ;</span></li>
@@ -411,12 +411,12 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 </section>
 <section id="javascripttypescript" class="level2" data-number="20.2">
 <h2 data-number="20.2" class="anchored" data-anchor-id="javascripttypescript"><span class="header-section-number">20.2</span> JavaScript/TypeScript</h2>
-<p>Pour la personne ayant déjà des connaissances de Java et des patterns GoF, <span class="citation" data-cites="GoF1994">Gamma, Helm, Johnson, et Vlissides (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>, il est recommandé d’apprendre les choses dans cet <span style="white-space:nowrap">ordre :</span></p>
+<p>Pour la personne ayant déjà des connaissances de Java et des patterns GoF, <span class="citation" data-cites="GoF1994">Gamma, Helm, Johnson, et Vlissides (<a href="references.html#ref-GoF1994" role="doc-biblioref">1994</a>)</span>, il est recommandé d’apprendre les choses dans cet ordre&nbsp;:</p>
 <ul>
-<li><strong>JavaScript</strong><span style="white-space:nowrap"> :</span> un tutoriel intéressant (et libre) se trouve sur <a href="https://fr.javascript.info/">fr.javascript.info</a>. Nous vous recommandons de contribuer à des <a href="https://github.com/javascript-tutorial/fr.javascript.info#readme">traductions en français sur GitHub</a>.</li>
-<li><strong>TypeScript</strong><span style="white-space:nowrap"> :</span> <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html">ce tutoriel</a> est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C#.</li>
+<li><strong>JavaScript</strong>&nbsp;: un tutoriel intéressant (et libre) se trouve sur <a href="https://fr.javascript.info/">fr.javascript.info</a>. Nous vous recommandons de contribuer à des <a href="https://github.com/javascript-tutorial/fr.javascript.info#readme">traductions en français sur GitHub</a>.</li>
+<li><strong>TypeScript</strong>&nbsp;: <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html">ce tutoriel</a> est en anglais, mais il est adapté à des personnes ayant déjà une expérience en Java/C#.</li>
 </ul>
-<p>Voici des points importants pour le projet de laboratoire, organisés pour quelqu’un ayant déjà des connaissances en <span style="white-space:nowrap">Java :</span></p>
+<p>Voici des points importants pour le projet de laboratoire, organisés pour quelqu’un ayant déjà des connaissances en Java&nbsp;:</p>
 <ul>
 <li>TypeScript se traduit («&nbsp;emits&nbsp;») en JavaScript, alors il faut comprendre le moteur d’exécution JavaScript.</li>
 <li>Pour convertir une chaîne en nombre, pour lire ou écrire un fichier sur disque, etc., on utilise des opérations en JavaScript.</li>
@@ -424,21 +424,21 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 <li>JavaScript a des notions de «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;» (conversion d’une expression en une valeur booléenne) permettant de vérifier avec moins de code si une variable est définie ou initialisée, etc.</li>
 <li><a href="https://fr.javascript.info/comparison#egalite-stricte">L’opérateur d’égalité stricte (<code>===</code>)</a> (sans conversion de type).</li>
 <li><a href="https://fr.javascript.info/arrow-functions-basics">Les fonctions fléchées</a> (<em>fat arrow functions</em> en anglais).</li>
-<li><a href="https://fr.javascript.info/callbacks">Le traitement asynchrone en JavaScript</a><span style="white-space:nowrap"> :</span>
+<li><a href="https://fr.javascript.info/callbacks">Le traitement asynchrone en JavaScript</a>&nbsp;:
 <ul>
 <li>Promesses et <a href="https://fr.javascript.info/async-await"><code>async</code>/<code>await</code></a>.</li>
 </ul></li>
 <li>Les services REST (GET vs PUT).</li>
 <li>Environnement de test (Jest).</li>
-<li>Les gabarits (<em>templates</em>) Pug (anciennement <span style="white-space:nowrap">Jade) :</span> <a href="https://www.youtube.com/watch?v=DSp9ExFw3Ig">Tutoriel (court)</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>, <a href="https://www.youtube.com/watch?v=kt3cEjjkCZA">Tutoriel (plus complet)</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>.</li>
-<li>Bootstrap (mise en page avec <span style="white-space:nowrap">CSS) :</span> <a href="https://www.youtube.com/watch?v=MrgGq3fob4o">Tutoriel (attention, il faut appliquer les éléments dans les gabarits Pug)</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>.</li>
+<li>Les gabarits (<em>templates</em>) Pug (anciennement Jade)&nbsp;: <a href="https://www.youtube.com/watch?v=DSp9ExFw3Ig">Tutoriel (court)</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>, <a href="https://www.youtube.com/watch?v=kt3cEjjkCZA">Tutoriel (plus complet)</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>.</li>
+<li>Bootstrap (mise en page avec CSS)&nbsp;: <a href="https://www.youtube.com/watch?v=MrgGq3fob4o">Tutoriel (attention, il faut appliquer les éléments dans les gabarits Pug)</a>&nbsp;<i class="fa-brands fa-youtube" aria-label="youtube"></i>.</li>
 </ul>
 <p>Le <a href="https://github.com/ets-log210/log210-enonce-lab0">lab 0</a> aborde plusieurs de ces aspects, mais certaines notions sont plus complexes et nécessitent une étude approfondie. Le but de cette section est de donner des tutoriels plus spécifiques. Enseigner la syntaxe ou les principes du langage TypeScript n’est pas le but de ce manuel, mais apprendre à trouver l’information soi-même est essentiel pour une personne travaillant dans les technologies de l’information.</p>
 <p>Il y a un <a href="https://github.com/profcfuhrmanets/exemples-ts">dépôt d’exemples avec TypeScript (utilisant <code>ts-node</code> pour les voir facilement)</a> sur GitHub. Il y a un exemple qui montre comment faire des REST à partir de TypeScript avec le système SGB.</p>
 </section>
 <section id="javascript-truthy-et-falsy-conversion-en-valeur-booléenne" class="level2" data-number="20.3">
-<h2 data-number="20.3" class="anchored" data-anchor-id="javascript-truthy-et-falsy-conversion-en-valeur-booléenne"><span class="header-section-number">20.3</span> <span style="white-space:nowrap">JavaScript :</span> Truthy et Falsy (conversion en valeur booléenne)</h2>
-<p>JavaScript offre un mécanisme simple pour vérifier des valeurs dans une expression <code>if</code>. Imaginez l’exemple <span style="white-space:nowrap">suivant :</span></p>
+<h2 data-number="20.3" class="anchored" data-anchor-id="javascript-truthy-et-falsy-conversion-en-valeur-booléenne"><span class="header-section-number">20.3</span> JavaScript&nbsp;: Truthy et Falsy (conversion en valeur booléenne)</h2>
+<p>JavaScript offre un mécanisme simple pour vérifier des valeurs dans une expression <code>if</code>. Imaginez l’exemple suivant&nbsp;:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> maVariable<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">// d'autres instructions...</span></span>
@@ -449,7 +449,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// on peut faire quelque chose avec maVariable...</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On vérifie trois possibilités pour <code>maVariable</code> avant de l’utiliser. Ce genre de situation arrive souvent en JavaScript, puisque les objets peuvent prendre des valeurs différentes selon le contexte. Contrairement à Java, les types des variables JavaScript peuvent changer dynamiquement. Il serait bien de pouvoir réduire la quantité de code dans ces cas.</p>
-<p>Grâce à la notion de conversion de valeur selon la règle de «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;», JavaScript permet de simplifier les instructions en une seule condition, sans ET (<code>&amp;&amp;</code>), en convertissant la valeur de <code>maVariable</code> en booléenne <code>true</code> ou <code>false</code><span style="white-space:nowrap"> :</span></p>
+<p>Grâce à la notion de conversion de valeur selon la règle de «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;», JavaScript permet de simplifier les instructions en une seule condition, sans ET (<code>&amp;&amp;</code>), en convertissant la valeur de <code>maVariable</code> en booléenne <code>true</code> ou <code>false</code>&nbsp;:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// conversion booléenne selon la règle de «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;»</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (maVariable) {</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// on peut faire quelque chose avec maVariable...</span></span>
@@ -457,7 +457,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 <p>Il faut comprendre la règle de conversion en valeur booléenne selon «&nbsp;truthy&nbsp;» et «&nbsp;falsy&nbsp;». En fait, il est plus simple de commencer par les valeurs se traduisant en <code>false</code> («&nbsp;falsy&nbsp;»), car tout ce qui ne l’est pas est donc <code>true</code> («&nbsp;truthy&nbsp;»).</p>
 <section id="falsy" class="level3" data-number="20.3.1">
 <h3 data-number="20.3.1" class="anchored" data-anchor-id="falsy"><span class="header-section-number">20.3.1</span> Falsy</h3>
-<p>Les valeurs suivantes se convertissent en <code>false</code> dans une <span style="white-space:nowrap">condition :</span></p>
+<p>Les valeurs suivantes se convertissent en <code>false</code> dans une condition&nbsp;:</p>
 <ul>
 <li><code>false</code></li>
 <li><code>null</code></li>
@@ -469,7 +469,7 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
 </section>
 <section id="truthy" class="level3" data-number="20.3.2">
 <h3 data-number="20.3.2" class="anchored" data-anchor-id="truthy"><span class="header-section-number">20.3.2</span> Truthy</h3>
-<p>Tout ce qui n’est pas converti en <code>false</code> (expliqué ci-dessus) est converti en <code>true</code>. En voici quelques <span style="white-space:nowrap">exemples :</span></p>
+<p>Tout ce qui n’est pas converti en <code>false</code> (expliqué ci-dessus) est converti en <code>true</code>. En voici quelques exemples&nbsp;:</p>
 <ul>
 <li><code>{}</code> (objet vide)</li>
 <li><code>[]</code> (tableau vide)</li>
@@ -507,10 +507,10 @@ Mise en garde
 <section id="sec-ContributionsEquipe" class="level2" data-number="20.5">
 <h2 data-number="20.5" class="anchored" data-anchor-id="sec-ContributionsEquipe"><span class="header-section-number">20.5</span> Évaluer les contributions des membres de l’équipe</h2>
 <p>Il existe un outil nommé <code>gitinspector</code> qui peut indiquer le niveau d’implication des membres de l’équipe dans un projet sur GitHub. Étant donné que les laboratoires de ce manuel utilisent un squelette avec les tests, les fichiers <code>src</code> de TypeScript, les modèles PlantUML et le README.md, il est possible d’utiliser <code>gitinspector</code> pour voir des rapports de contribution sur chacun des volets.</p>
-<p>Pour faciliter l’utilisation de l’outil, le professeur Fuhrman a créé un <a href="https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853">script en bash</a>. Voici comment <span style="white-space:nowrap">l’utiliser :</span></p>
+<p>Pour faciliter l’utilisation de l’outil, le professeur Fuhrman a créé un <a href="https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853">script en bash</a>. Voici comment l’utiliser&nbsp;:</p>
 <ul>
 <li>Installer <code>gitinspector</code> dans npm avec la commande <code>npm install -g gitinspector</code><span style="white-space:nowrap"> ;</span></li>
-<li>Télécharger le <span style="white-space:nowrap">script :</span></li>
+<li>Télécharger le script&nbsp;:</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="dt">\</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853 <span class="dt">\</span></span>
@@ -522,7 +522,7 @@ remote: Compressing objects: 100% (5/5), done.
 remote: Total 10 (delta 3), reused 7 (delta 2), pack-reused 0
 Unpacking objects: 100% (10/10), 2.02 KiB | 82.00 KiB/s, done.</code></pre>
 <ul>
-<li>Lancer le script sur un dépôt de code source, par exemple <code>sga-equipe-g02-equipe-4</code><span style="white-space:nowrap"> :</span></li>
+<li>Lancer le script sur un dépôt de code source, par exemple <code>sga-equipe-g02-equipe-4</code>&nbsp;:</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> contributions</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./contributions.sh</span> ../sga-equipe-g02-equipe-4/</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -532,7 +532,7 @@ ContributionsÉquipeModèles.html
 ContributionsÉquipeDocs.html
 ContributionsÉquipeTypeScript.html
 ContributionsÉquipeViews.html</code></pre>
-<p>Les fichiers <code>.html</code> sont créés pour les contributions <code>Test</code>, <code>Modèles</code>, <code>Docs</code>, <code>TypeScript</code> et <code>Views</code>. Chaque rapport indique les contributions selon deux <span style="white-space:nowrap">perspectives :</span></p>
+<p>Les fichiers <code>.html</code> sont créés pour les contributions <code>Test</code>, <code>Modèles</code>, <code>Docs</code>, <code>TypeScript</code> et <code>Views</code>. Chaque rapport indique les contributions selon deux perspectives&nbsp;:</p>
 <ol type="1">
 <li>Le nombre de soumissions par auteur ou auteure (activité <span style="white-space:nowrap">Git) ;</span></li>
 <li>Le nombre de lignes par auteur ou auteure encore présentes et intactes dans la version HEAD.</li>
@@ -564,7 +564,7 @@ Important
 </section>
 <section id="sec-solution_problemes_equipes" class="level3" data-number="20.5.2">
 <h3 data-number="20.5.2" class="anchored" data-anchor-id="sec-solution_problemes_equipes"><span class="header-section-number">20.5.2</span> Proposer des solutions au besoin</h3>
-<p>Une inégalité importante dans les contributions est un signal d’alarme. On doit agir, mais on commence par poser des questions, par <span style="white-space:nowrap">exemple :</span></p>
+<p>Une inégalité importante dans les contributions est un signal d’alarme. On doit agir, mais on commence par poser des questions, par exemple&nbsp;:</p>
 <ul>
 <li>Est-ce que Francis et Mélanie sont à l’aise avec les technologies utilisées dans le <span style="white-space:nowrap">lab ?</span> Ont-ils besoin de <span style="white-space:nowrap">coaching ?</span></li>
 <li>Sont-ils des «&nbsp;parasites&nbsp;» ou des «&nbsp;mollassons&nbsp;» <span class="citation" data-cites="oakley_coping_2004">(<a href="references.html#ref-oakley_coping_2004" role="doc-biblioref">Oakley, Felder, Brent, et Elhajj, 2004</a>)</span> (<a href="https://docs.google.com/document/d/e/2PACX-1vRWTtdcGjUg34gqB6CW_EMt0H28Cgunq09_7HxMUoTLGERjUcQXBHlrYyB76PYJGjtaoYJhhsHS1Tjj/pub">traduction française de l’article</a><span style="white-space:nowrap">) ?</span> À certaines universités, le plan de cours vous permet d’exclure leurs noms du rapport (et ils auront une note de zéro pour la remise), mais <strong>seulement s’ils n’ont rien fait du tout</strong> (ce qui n’est pas le cas dans l’exemple ci-dessus). Une personne exclue de cette manière va probablement abandonner le cours, et vous perdrez définitivement un ou une membre de l’équipe.</li>
@@ -580,31 +580,31 @@ Important
 </section>
 <section id="faq-pour-gitinspector" class="level3" data-number="20.5.3">
 <h3 data-number="20.5.3" class="anchored" data-anchor-id="faq-pour-gitinspector"><span class="header-section-number">20.5.3</span> FAQ pour gitinspector</h3>
-<p><strong><span style="white-space:nowrap">Q :</span> Comment fusionner le travail réalisé par une même personne, mais avec plusieurs comptes (courriels) <span style="white-space:nowrap">différents ?</span></strong></p>
-<p><strong><span style="white-space:nowrap">R :</span></strong> La solution est avec le fichier <code>.mailmap</code>. Vous pouvez rapidement générer un fichier de base avec la <span style="white-space:nowrap">commande :</span></p>
+<p><strong>Q&nbsp;: Comment fusionner le travail réalisé par une même personne, mais avec plusieurs comptes (courriels) <span style="white-space:nowrap">différents ?</span></strong></p>
+<p><strong>R&nbsp;:</strong> La solution est avec le fichier <code>.mailmap</code>. Vous pouvez rapidement générer un fichier de base avec la commande&nbsp;:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> shortlog <span class="at">-se</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">"s/^.*</span><span class="dt">\\</span><span class="st">t//"</span>  <span class="op">&gt;</span> .mailmap</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ensuite, modifiez le fichier <code>.mailmap</code> pour respecter ce <span style="white-space:nowrap">format :</span></p>
+<p>Ensuite, modifiez le fichier <code>.mailmap</code> pour respecter ce format&nbsp;:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode email code-with-copy"><code class="sourceCode email"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Prénom Nom Désirés &lt;courriel&gt; Prénom Nom Non Désirés &lt;courriel&gt;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Par exemple, le <code>.mailmap</code> initial qui contient quatre entrées pour le même <span style="white-space:nowrap">auteur :</span></p>
+<p>Par exemple, le <code>.mailmap</code> initial qui contient quatre entrées pour le même auteur&nbsp;:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode email code-with-copy"><code class="sourceCode email"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Christopher (Cris) Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Christopher Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>Cris Fuhrman &lt;fuhrmanator+git@gmail.com&gt;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>On décide de garder l’alias <code>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</code> pour chaque <span style="white-space:nowrap">nom :</span></p>
+<p>On décide de garder l’alias <code>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</code> pour chaque nom&nbsp;:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode email code-with-copy"><code class="sourceCode email"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt; Christopher (Cris) Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt; Christopher Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt;</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>C. Fuhrman &lt;christopher.fuhrman@etsmtl.ca&gt; Cris Fuhrman &lt;fuhrmanator+git@gmail.com&gt;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Le nom que vous mettez sera celui qui apparaît dans les rapports la prochaine fois qu’ils seront générés.</p>
-<p><strong><span style="white-space:nowrap">Q :</span> Comment exclure le travail réalisé par un(e) chargé(e) de laboratoire (par exemple le clone initial dans GitHub <span style="white-space:nowrap">Classroom) ?</span></strong></p>
-<p><strong><span style="white-space:nowrap">R :</span></strong> La solution est d’ajouter le nom de l’auteur ou de l’auteure dans le tableau du script <code>contributions.sh</code> à la ligne suivante avec <code>authorsToExcludeArray</code>. <span style="white-space:nowrap">Attention :</span></p>
+<p><strong>Q&nbsp;: Comment exclure le travail réalisé par un(e) chargé(e) de laboratoire (par exemple le clone initial dans GitHub <span style="white-space:nowrap">Classroom) ?</span></strong></p>
+<p><strong>R&nbsp;:</strong> La solution est d’ajouter le nom de l’auteur ou de l’auteure dans le tableau du script <code>contributions.sh</code> à la ligne suivante avec <code>authorsToExcludeArray</code>. Attention&nbsp;:</p>
 <ul>
 <li>Il n’y a pas de <code>,</code> entre les éléments des tableaux en bash.</li>
 <li>Un nom contenant un accent ne sera pas reconnu. Il faut changer le nom dans le <code>.mailmap</code> pour qu’il n’y ait pas d’accents, ou utiliser une chaîne partielle comme <code>"Benjamin Le"</code> pour exclure les contributions de <code>"Benjamin Le Dû"</code>.</li>
 </ul>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="va">authorsToExcludeArray</span><span class="op">=</span><span class="va">(</span><span class="st">"C. Fuhrman"</span> <span class="st">"Benjamin Le"</span> <span class="st">"Yvan Ross"</span><span class="va">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><span style="white-space:nowrap">Q :</span> J’ai une autre question…</strong></p>
-<p><strong><span style="white-space:nowrap">R :</span></strong> Il y a aussi une <a href="https://github.com/ejwa/gitinspector/wiki/FAQ">FAQ sur le dépôt de gitinspector</a>.</p>
+<p><strong>Q&nbsp;: J’ai une autre question…</strong></p>
+<p><strong>R&nbsp;:</strong> Il y a aussi une <a href="https://github.com/ejwa/gitinspector/wiki/FAQ">FAQ sur le dépôt de gitinspector</a>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

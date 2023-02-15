@@ -412,13 +412,13 @@ Mise en garde
 <p>Tous les travaux demandés pour les <strong>examens</strong> (de <em>LOG210</em> à l’École de technologie supérieure) doivent être faits <em>à la main</em>. Pour cette raison, il vaut mieux pratiquer à dessiner les modèles en mode esquisse (à la main).</p>
 </div>
 </div>
-<p>Dans la méthodologie de ce manuel, on exploite l’outil PlantUML pour faire beaucoup de modèles. C’est un outil qui a plusieurs <span style="white-space:nowrap">avantages :</span></p>
+<p>Dans la méthodologie de ce manuel, on exploite l’outil PlantUML pour faire beaucoup de modèles. C’est un outil qui a plusieurs avantages&nbsp;:</p>
 <ul>
 <li>Il est basé sur un langage spécifique à un domaine (en anglais <em>domain-specific language</em> ou DSL), dont les fichiers peuvent être facilement mis sur un contrôle de version <span style="white-space:nowrap">(Git) ;</span></li>
 <li>Il est basé sur du code <span style="white-space:nowrap">libre ;</span></li>
 <li>Il s’occupe de la mise en page des diagrammes (cela est parfois un inconvénient si un modèle est <span style="white-space:nowrap">complexe) ;</span></li>
 <li>Il est utilisé par des ingénieurs et ingénieuses chez Google pour documenter à l’interne les projets Android et Pay<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>;</li>
-<li>Il existe plusieurs supports pour les outils de <span style="white-space:nowrap">documentation :</span>
+<li>Il existe plusieurs supports pour les outils de documentation&nbsp;:
 <ul>
 <li>extension <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">PlantUML pour Visual Studio Code</a> (<a href="#fig-PlantUMLVSCode">figure&nbsp;<span>13.2</span></a>) avec <a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel</a>&nbsp;</li>
 <li>extension <a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&amp;hl=en">PlantUML Gizmo</a> pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l’ÉTS (<a href="#fig-PlantUMLGizmo">figure&nbsp;<span>13.3</span></a>).</li>
@@ -444,12 +444,12 @@ Mise en garde
 <code>https://plantuml.com/plantuml/{forme}/{clé}</code>, qui contient une clé comme<br>
 <code>SoWkIImgAStDuKfKqBLJI5AmKaZcSaZDIm4A0G00</code>.<br>
 La clé est en fait une représentation compressée du code source.</li>
-<li>On peut changer la forme du diagramme en changeant la partie <code>{forme}</code> de <span style="white-space:nowrap">l’URL :</span>
+<li>On peut changer la forme du diagramme en changeant la partie <code>{forme}</code> de l’URL&nbsp;:
 <ul>
 <li><code>{forme}</code> → <code>png</code>, <code>img</code> ou <code>svg</code> : représentation graphique <span style="white-space:nowrap">correspondante ;</span></li>
 <li><code>{forme}</code> → <code>uml</code> : récupération du code source PlantUML.</li>
 </ul></li>
-<li>On peut également récupérer localement le code source d’une URL avec l’outil PlantUML avec l’option <code>-decodeurl {clé}</code> de la ligne de <span style="white-space:nowrap">commande :</span></li>
+<li>On peut également récupérer localement le code source d’une URL avec l’outil PlantUML avec l’option <code>-decodeurl {clé}</code> de la ligne de commande&nbsp;:</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> java <span class="at">-jar</span> plantuml.jar <span class="at">-decodeurl</span> SoWkIImgAStDuKfKqBLJI5AmKaZcSaZDIm4A0G00</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@startuml</span></span>
@@ -459,7 +459,7 @@ La clé est en fait une représentation compressée du code source.</li>
 <li>Les images <code>png</code> générées par le serveur ou par l’outil contiennent une copie du code source dans les métadonnées PNG.
 <ul>
 <li>On peut <a href="https://twitter.com/thefuhrmanator/status/1193565869227556868">récupérer le code source PlantUML à partir d’une image PNG</a> avec un outil sur le Web comme <a href="https://exifinfo.org/" class="uri">https://exifinfo.org/</a>.</li>
-<li>On peut également utiliser l’option <code>-metadata</code> de la ligne de commande <span style="white-space:nowrap">PlantUML :</span></li>
+<li>On peut également utiliser l’option <code>-metadata</code> de la ligne de commande PlantUML&nbsp;:</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> java <span class="at">-jar</span> plantuml.jar <span class="at">-metadata</span> diagram.png <span class="op">&gt;</span> diagram.puml</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
