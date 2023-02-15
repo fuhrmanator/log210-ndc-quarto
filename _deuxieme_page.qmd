@@ -32,11 +32,11 @@ ressources éducatives libres (REL) le matériel privilégié en
 enseignement supérieur au Québec.
 
 :::: {.callout}
-::: {layout="[12, 40]" layout-valign="center"}
+::: {layout="[12,-1,40]" layout-valign="center"}
 ![](images/CC/by.png)   
 
-\small [Sauf indications contraires, le contenu de ce manuel électronique est disponible 
-en vertu des termes de la [Licence Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.fr).]{fig-align="left"}
+\justifying\small Sauf indications contraires, le contenu de ce manuel électronique est disponible 
+en vertu des termes de la [Licence Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.fr).
 :::
 
 ::: hanging-indent
