@@ -11,7 +11,7 @@ Alors, nous proposons pour cet exercice des modifications au modèle du domaine 
 ```{.plantuml #fig-DCU_ouvrir_la_caisse caption='Diagramme de cas d\'utilisation pour le système NextGen.'}
 @startuml
 !include normal.pumlinclude
-scale 0.5
+scale 1.0
 left to right direction
 skinparam packageStyle rect
 skinparam defaulttextalignment center
@@ -71,6 +71,8 @@ Chaque caissier ou caissière possède un plateau-billets et l'apporte au début
 Son plateau-billets est placé dans le tiroir-caisse, et son identificateur est enregistré.
 Le montant d'argent du plateau est enregistré.
 L'heure de l'arrivée du caissier ou de la caissière est enregistrée.
+
+\filbreak
 
 **Scénario principal (succès)**
 
