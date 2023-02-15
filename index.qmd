@@ -1,3 +1,10 @@
+#     {.unnumbered .unlisted}
+<!-- remonter sur la page (sur le nom blanc du chapitre) -->
+\vspace{-5cm}
+{{< include _deuxieme_page.qmd >}}
+
+\clearpage
+
 ## Préface {.unnumbered}
 
 Ce manuel a commencé comme notes de cours pour le cours _Analyse et conception de logiciels (LOG210)_ dans les programmes de baccalauréat en génie logiciel (LOG) et en génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal, au Québec.

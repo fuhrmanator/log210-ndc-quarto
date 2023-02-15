@@ -91,20 +91,12 @@ format:
 
   html:
     title-block-banner: true
-    header-includes: |
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            rel="stylesheet" data-external="1"/>
-      <style type="text/css">
-        @font-face {
-          font-family: 'xkcd Script';
-          src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
-        }
-      </style>
-    # https://quarto.org/docs/output-formats/html-themes.html#overview
+    include-in-header: 
+      - html-hacks/load-font-awesome.html
+      - html-hacks/load-xkcd-font.html
     resources: web-resources/**
+    # https://quarto.org/docs/output-formats/html-themes.html#overview
     theme: Spacelab
-    include-before-body: 
-      - _deuxieme_page.html
     
   pdf:
     # PRE quarto 1.3: has to be latexmk for .plantuml plugin to work (because it generates .svg files)
@@ -117,17 +109,18 @@ format:
     classoption: 
       # Remove odd-even page breaks (for printing PDF)
       - open=any
+      - twoside=false
       # pass french to book class (babel will see it automatically)
       - french
-    toc: true
-    toc-depth: 2
-    toccolor: blue
+    toc: false
+    # toc-depth: 2
+    # toccolor: blue
+    # lof: true
+    # lot: true
     urlcolor: Green4
     citecolor: violet
     linkcolor: violet
 
-    lof: true
-    lot: true
     hyperrefoptions: 
       - pdfdisplaydoctitle=true
     highlight-style: github
@@ -146,12 +139,11 @@ format:
       - tex-hacks/code-font.tex
       - tex-hacks/fix-unicode-chars.tex
       - tex-hacks/redefine-title-page.tex
-    # header-includes: |
-    #   \frenchsetup{PartNameFull=false}
+      # - tex-hacks/single-side-koma-book.tex
 
     include-before-body: 
       - tex-hacks/redefine-parts-layout.tex
-      - _deuxieme_page.tex
+      # - _deuxieme_page.tex
 
 # filters must be run in the proper order here
 filters:
