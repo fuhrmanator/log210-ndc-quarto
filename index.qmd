@@ -1,6 +1,13 @@
-# Préface {.unnumbered}
+#     {.unnumbered .unlisted}
+<!-- remonter sur la page (sur le nom blanc du chapitre) -->
+\vspace{-5cm}
+{{< include _deuxieme_page.qmd >}}
 
-Cet ouvrage a commencé comme notes de cours pour le cours _Analyse et conception de logiciels (LOG210)_ dans les programmes de baccalauréat en génie logiciel (LOG) et en génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal, au Québec.
+\clearpage
+
+## Préface {.unnumbered}
+
+Ce manuel a commencé comme notes de cours pour le cours _Analyse et conception de logiciels (LOG210)_ dans les programmes de baccalauréat en génie logiciel (LOG) et en génie des technologies de l'information (GTI) de l'École de technologie supérieure (ÉTS) à Montréal, au Québec.
 À l'origine, la communauté étudiante dans ces programmes provenait des collèges d'enseignement général et professionnel (cégeps), ayant donc déjà reçu un diplôme d'études collégiales (DEC) dans un programme technique. 
 Ainsi, ces personnes ont déjà appris à programmer dans un langage orienté objet.
 En effet, cette démarche correspond à l'approche "computer science first" (CS-first) pour enseigner le génie logiciel [@SE_Curriculum_ACM_2014].
@@ -23,16 +30,21 @@ Il est donc naturel d'imaginer une forme analogue pour le contenu de ce manuel, 
 
 Pour favoriser la réutilisation, nous avons utilisé plusieurs logiciels libres:
 
-- Quarto [-@noauthor_quarto_2022] (le langage source du texte est [Markdown](https://quarto.org/docs/authoring/markdown-basics.html));
-- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022], qui font partie des composantes exploitées par Quarto; 
+- Quarto [-@noauthor_quarto_2023] (le langage source du texte est [Markdown](https://quarto.org/docs/authoring/markdown-basics.html));
+- Pandoc [-@noauthor_pandoc_2022] et LaTeX [-@noauthor_latex_2022], et plusieurs filtres de traitement qui font partie des composantes exploitées par Quarto; 
 - PlantUML [-@noauthor_plantuml_2022] pour les figures sous forme de texte (faciles à actualiser).
 
-Autant que possible, les figures sont créées dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche.
+Nous soulignons les retombées sur le plan de logiciels libres lors de la rédaction de ce manuel, car il est important de contribuer aux communautés de logiciels libres.
+Nous avons fourni une rétroaction à des développeurs et développeuses de plusieurs projets utilisés. 
+Par exemple, nous avons identifié plusieurs bogues dans les versions préliminaires de Quarto (qui ont été corrigés rapidement, parfois le lendemain même!).
+Nous avons même créé de nouveaux projets libres, tels qu'un [filtre Pandoc](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) pour faciliter la bonne utilisation d'espaces insécables selon les règles de typographie en français.
+
+Autant que possible, les figures du manuel sont créées dans une forme vectorielle (comme SVG) plutôt que matricielle (comme JPEG ou PNG) afin que le texte dans les figures soit "indexable" par les moteurs de recherche et aussi accessible aux personnes non-voyantes.
 
 Finalement, il y a une tendance à faire des REL pour favoriser l'accès à l'information et pour permettre une meilleure inclusivité des personnes apprenantes et enseignantes.
 Nous avons donc essayé de suivre les directives du [Guide de l'écriture inclusive de l'ÉTS](https://www.etsmtl.ca/docs/ets/a-propos/documents/guide-ecriture-inclusive-complete) lors de la rédaction de ce manuel.
 
-# Prérequis
+## Prérequis
 
 Le contenu de ce manuel est organisé pour les personnes ayant déjà une base et une expérience avec:
 
@@ -79,7 +91,7 @@ Si vous avez une autre édition, comme la 2^e^ du livre en anglais ou même une 
 
 Cependant, dans ce manuel, vous trouverez également d'autres sujets importants pour une personne qui étudie en génie: les notions de complexité, le contexte industriel qui affecte les décisions de conception, l'impact de la conception sur d'autres qualités d'un logiciel, le travail en équipe, etc.
 
-## Remerciements {.unnumbered}
+<!-- ## Remerciements {.unnumbered}
 
 Comme beaucoup de ressources libres, ce manuel existe grâce à une collaboration avec de nombreuses personnes.
 La [fabriqueREL](https://fabriquerel.org) (ressources éducatives libres) a soutenu financièrement et pédagogiquement l'élaboration du manuel lors de la période 2022-2023.
@@ -107,9 +119,9 @@ Nous remercions les membres du comité de révision (2023) pour leurs rétroacti
 - Olivier Brochu, étudiant à la maîtrise en technologies de l'information à l'ÉTS;
 - Clyde Vianney Omog Ntap, étudiant à la maîtrise en génie logiciel à l'ÉTS;
 - Mouna Moumene, bibliothécaire à l'École de technologie supérieure (ÉTS);
-- Roberto Erick Lopez-Herrejon, professeur au département de génie logiciel et des TI à l'ÉTS.
+- Roberto Erick Lopez-Herrejon, professeur au département de génie logiciel et des technologies de l'information à l'ÉTS.
 
-Finalement, nous remercions Katerine Robert, réviseure linguistique à K. R. Révision, pour la révision du manuel.
+Finalement, nous remercions Katerine Robert, réviseure linguistique à K. R. Révision, pour la révision du manuel. -->
 
 ## Sources du manuel
 
@@ -117,7 +129,4 @@ Ce manuel est écrit en Markdown, et le code source est sur GitHub à <https://g
 Les versions Web, PDF et EPUB ont été générées par le logiciel Quarto.
 Pour en savoir plus sur Quarto, visitez <https://quarto.org/docs/books>.
 
-## Licence
-
-À déterminer (le texte est toujours un brouillon).
-<!-- [![Licence Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Cette œuvre est mise à disposition selon les termes de la [Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/). -->
+<!-- On a supprimé l'info sur la licence, puisqu'elle est sur la 2e page. -->

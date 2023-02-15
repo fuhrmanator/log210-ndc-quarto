@@ -22,7 +22,8 @@ Une fois que vous aurez l'habitude d'utiliser les GRASP, vous serez encore rapid
 
 ## Spectre de la conception {#sec-SpectreDeLaConception}
 
-Neal Ford [-@Ford2009] a [proposé](https://www.ibm.com/developerworks/library/j-eaed1/index.html) la notion d'effort pour la conception qu'il a nommée le "Spectre de la conception". La @fig-SpectreConception illustre le principe.
+Neal Ford [-@Ford2009] a proposé la notion d'effort pour la conception qu'il a nommée le "Spectre de la conception".
+La @fig-SpectreConception illustre le principe.
 
 ``` {#fig-SpectreConception .plantuml caption="Spectre de la conception [@Ford2009]."}
 @startuml

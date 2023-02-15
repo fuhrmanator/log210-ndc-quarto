@@ -247,6 +247,9 @@ $if(lang)$
 \usepackage[bidi=default$if(babel-lang)$,$babel-lang$$endif$]{babel}
 %\usepackage[bidi=default]{babel}
 \fi
+
+% Fix indenting 
+\setlength{\descindentFB}{0pt}
 % $if(babel-lang)$
 % \babelprovide[main,import]{$babel-lang$}
 % $endif$
