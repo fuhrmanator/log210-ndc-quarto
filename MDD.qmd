@@ -470,3 +470,41 @@ Vous devez appliquer les directives vues dans le chapitre 9\ {{< fa solid book >
 1. Vérifiez les verbes sur les associations ainsi que le sens de lecture.
 
 :::
+
+::: {#exr-MDD-retroingenierie-discord}
+
+### Création du MDD du logiciel Discord par rétroingénierie
+
+TODO Description de l'exercice
+
+1. Parcourir le logiciel Discord pour en identifier les fonctionnalités. Discord permet de se créer un compte temporaire sans adresse courriel. <!-- TODO expliquer comment se créer un compte temporaire -->
+1. Identifier un minimum de 15 classes conceptuelles de Discord à l'aide de la liste de catégories de classes conceptuelles
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Solution
+
+TODO Expliquer que c'est un MDD incomplet, il y a beaucoup d'autres classes.
+
+**Catégorie** | **Exemples**
+:----------|:----------
+**Transactions d'affaires** | *Message*, *Message épinglé*, *Réaction*, *Post*, *Appel vocal*, *Appel vidéo*, *Partage d'écran*, *Abonnement Nitro*, *Boost (de serveur)*, *Demande d'ami*, *Bannissement*, *Appareil connecté*, *Cadeau*
+**Lignes d'une transaction** | 
+**Produit ou service lié à une transaction ou à une ligne de transaction** | *Application (pour le partage d'écran)*, *Écran (pour le partage d'écran)*
+**Où la transaction est-elle enregistrée?** | 
+**Rôle des personnes liées à la transaction** | *Utilisateur*, *Rôle*
+**Organisations liées à la transaction** | 
+**Lieu de la transaction, lieu du service** | *Salon textuel*, *Salon vocal*, *Salon forum*, *Groupe privé*, *Fil de discussion* 
+**Événements notables, à mémoriser** | *Invitation*
+**Description d'entités** | *Description message*, *Description Émoji*, *Description autocollant*, *Modèle de serveur*, *Nitro*, *Niveau de boost*
+**Catalogues** | 
+**Conteneurs** | *Serveur*, *Catégorie (de salon)*, *Profil*, *Émoji*, *Autocollant*, *Permission*, *Mode de paiement*, *Carte de crédit*, *Compte Paypal*
+**Contenu d'un conteneur** | 
+**Autres systèmes externes** | *Service de paiement par carte de crédit*, *Paypal*
+
+::::
+
+1. Identifier les attributs de chaque classe conceptuelle
+1. Identifier les associations entre les classes conceptuelles et leurs cardinalités
+
+:::
