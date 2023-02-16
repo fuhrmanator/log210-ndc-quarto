@@ -71,7 +71,7 @@ Dépôt légal 2023\
 DOI:\
 Handle (permalien):\
 © Christopher Fuhrman et Yvan Ross (2023)\
-Pour citer cet manuel: Christopher Fuhrman et Yvan Ross. (2023).
+Pour citer ce manuel: Christopher Fuhrman et Yvan Ross. (2023).
 *Analyse et conception de logiciels*. École de technologie supérieure.
 Sous licence CC BY.
 
