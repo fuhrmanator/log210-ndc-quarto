@@ -475,36 +475,120 @@ Vous devez appliquer les directives vues dans le chapitre 9\ {{< fa solid book >
 
 ### Création du MDD du logiciel Discord par rétroingénierie
 
-TODO Description de l'exercice
+Par rétroingénierie, réalisez le modèle du domaine pour une fonctionnalité du logiciel Discord.
 
-1. Parcourir le logiciel Discord pour en identifier les fonctionnalités. Discord permet de se créer un compte temporaire sans adresse courriel. <!-- TODO expliquer comment se créer un compte temporaire -->
-1. Identifier un minimum de 15 classes conceptuelles de Discord à l'aide de la liste de catégories de classes conceptuelles
+1. Connectez vous au logiciel Discord. Si vous n'avez pas de compte Discord, vous pouvez en créer un temporairement. Sur le [site web de Discord](https://discord.com/), cliquez sur "Ouvrir Discord dans ton navigateur".
+1. Dans l'application Discord, créez un nouveau serveur et envoyez un message qui contient un fichier et du texte dans un salon textuel.
+1. À l'aide de la liste de catégories de classes conceptuelles, identifiez les classes conceptuelles qui sont nécessaires pour réaliser la fonctionnalité de l'étape précédente.
 
 :::: {.callout-note collapse="true" icon="false"}
 
 ## Solution
 
-TODO Expliquer que c'est un MDD incomplet, il y a beaucoup d'autres classes.
-
-**Catégorie** | **Exemples**
+**Catégorie** | **Classes conceptuelles**
 :----------|:----------
-**Transactions d'affaires** | *Message*, *Message épinglé*, *Réaction*, *Post*, *Appel vocal*, *Appel vidéo*, *Partage d'écran*, *Abonnement Nitro*, *Boost (de serveur)*, *Demande d'ami*, *Bannissement*, *Appareil connecté*, *Cadeau*
-**Lignes d'une transaction** | 
-**Produit ou service lié à une transaction ou à une ligne de transaction** | *Application (pour le partage d'écran)*, *Écran (pour le partage d'écran)*
-**Où la transaction est-elle enregistrée?** | 
-**Rôle des personnes liées à la transaction** | *Utilisateur*, *Rôle*
-**Organisations liées à la transaction** | 
-**Lieu de la transaction, lieu du service** | *Salon textuel*, *Salon vocal*, *Salon forum*, *Groupe privé*, *Fil de discussion* 
-**Événements notables, à mémoriser** | *Invitation*
-**Description d'entités** | *Description message*, *Description Émoji*, *Description autocollant*, *Modèle de serveur*, *Nitro*, *Niveau de boost*
-**Catalogues** | 
-**Conteneurs** | *Serveur*, *Catégorie (de salon)*, *Profil*, *Émoji*, *Autocollant*, *Permission*, *Mode de paiement*, *Carte de crédit*, *Compte Paypal*
-**Contenu d'un conteneur** | 
-**Autres systèmes externes** | *Service de paiement par carte de crédit*, *Paypal*
+**Transactions d'affaires** | *Message*
+**Rôle des personnes liées à la transaction** | *Utilisateur*
+**Lieu de la transaction, lieu du service** | *Salon textuel*
+**Conteneurs** | *Serveur*, *Profil*, *Fichier*
 
 ::::
 
-1. Identifier les attributs de chaque classe conceptuelle
-1. Identifier les associations entre les classes conceptuelles et leurs cardinalités
+4. Identifiez les attributs de chaque classe conceptuelle qui sont nécessaires pour réaliser la fonctionnalité.
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Solution
+
+```{.plantuml #fig-mdd-retroingenierie-discord-attributs caption="Attributs des classes conceptuelles identifées dans l'exercice."}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+
+class Message {
+  contenu : String
+  horodatage : DateHeure
+}
+
+class Utilisateur {
+  courriel : String
+  nomUtilisateur : String
+  tag : int
+}
+
+class SalonTextuel {
+  nom : String
+  sujet : String
+}
+
+class Serveur {
+  nom : String
+}
+
+class Profil {
+  avatar : File
+}
+
+class Fichier {
+  url : String
+}
+@enduml
+```
+
+::::
+
+5. Identifiez les associations entre les classes conceptuelles ainsi que leurs cardinalités.
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Solution
+
+```{.plantuml #fig-mdd-retroingenierie-discord-associations caption="Associations et cardinalités des classes conceptuelles identifées dans l'exercice."}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+
+Utilisateur "1" -- "0..*" Message : rédige >
+SalonTextuel "1" -- "0..*" Message : publie >
+Profil "1" -- "1" Utilisateur : représente >
+Utilisateur "1..*" -- "0..*" Serveur : est membre >
+Utilisateur "1" -- "0..*" Serveur : est propriétaire >
+Serveur "1" -- "0..*" SalonTextuel : héberge >
+Message "1" -- "0..*" Fichier : contient >
+Utilisateur "1..*" -- "0..*" SalonTextuel : est membre >
+
+class Message {
+  contenu : String
+  horodatage : DateHeure
+}
+
+class Utilisateur {
+  courriel : String
+  nomUtilisateur : String
+  tag : int
+}
+
+class SalonTextuel {
+  nom : String
+  sujet : String
+}
+
+class Serveur {
+  nom : String
+}
+
+class Profil {
+  avatar : File
+}
+
+class Fichier {
+  url : String
+}
+@enduml
+```
+
+::::
 
 :::
