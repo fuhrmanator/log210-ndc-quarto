@@ -473,17 +473,19 @@ Vous devez appliquer les directives vues dans le chapitre 9\ {{< fa solid book >
 
 ::: {#exr-MDD-retroingenierie-discord}
 
-### Création du MDD du logiciel Discord par rétroingénierie
+### Création du MDD du logiciel Discord par rétro-ingénierie
 
-Par rétroingénierie, réalisez le modèle du domaine pour une fonctionnalité du logiciel Discord.
+Par rétro-ingénierie, réalisez le modèle du domaine pour une fonctionnalité du logiciel Discord.
 
-1. Connectez vous au logiciel Discord. Si vous n'avez pas de compte Discord, vous pouvez en créer un temporairement. Sur le [site web de Discord](https://discord.com/), cliquez sur "Ouvrir Discord dans ton navigateur".
+1. Connectez-vous au logiciel Discord. Si vous n'avez pas de compte Discord, vous pouvez en créer un temporairement. Sur le [site web de Discord](https://discord.com/), cliquez sur "Ouvrir Discord dans ton navigateur".
 1. Dans l'application Discord, créez un nouveau serveur et envoyez un message qui contient un fichier et du texte dans un salon textuel.
-1. À l'aide de la liste de catégories de classes conceptuelles, identifiez les classes conceptuelles qui sont nécessaires pour réaliser la fonctionnalité de l'étape précédente.
+1. À l'aide de la liste de catégories de classes conceptuelles, proposez les classes conceptuelles qui sont nécessaires pour réaliser la fonctionnalité de l'étape précédente.
 
 :::: {.callout-note collapse="true" icon="false"}
 
 ## Solution
+
+Voici une solution possible:
 
 **Catégorie** | **Classes conceptuelles**
 :----------|:----------
@@ -494,13 +496,15 @@ Par rétroingénierie, réalisez le modèle du domaine pour une fonctionnalité 
 
 ::::
 
-4. Identifiez les attributs de chaque classe conceptuelle qui sont nécessaires pour réaliser la fonctionnalité.
+4. Proposez les attributs de chaque classe conceptuelle qui sont nécessaires pour réaliser la fonctionnalité.
 
 :::: {.callout-note collapse="true" icon="false"}
 
 ## Solution
 
-```{.plantuml #fig-mdd-retroingenierie-discord-attributs caption="Attributs des classes conceptuelles identifées dans l'exercice."}
+Voici une solution possible qui est cohérente avec l'étape précédente:
+
+```{.plantuml #fig-mdd-retroingenierie-discord-attributs caption="Attributs des classes conceptuelles proposées dans l'exercice."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -538,26 +542,28 @@ class Fichier {
 
 ::::
 
-5. Identifiez les associations entre les classes conceptuelles ainsi que leurs cardinalités.
+5. Proposez les associations entre les classes conceptuelles ainsi que leurs cardinalités.
 
 :::: {.callout-note collapse="true" icon="false"}
 
 ## Solution
 
-```{.plantuml #fig-mdd-retroingenierie-discord-associations caption="Associations et cardinalités des classes conceptuelles identifées dans l'exercice."}
+Voici une solution possible qui est cohérente avec l'étape précédente:
+
+```{.plantuml #fig-mdd-retroingenierie-discord-associations caption="Associations et cardinalités des classes conceptuelles proposées dans l'exercice."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
 hide empty members
 
-Utilisateur "1" -- "0..*" Message : rédige >
-SalonTextuel "1" -- "0..*" Message : publie >
-Profil "1" -- "1" Utilisateur : représente >
-Utilisateur "1..*" -- "0..*" Serveur : est membre >
-Utilisateur "1" -- "0..*" Serveur : est propriétaire >
-Serveur "1" -- "0..*" SalonTextuel : héberge >
-Message "1" -- "0..*" Fichier : contient >
-Utilisateur "1..*" -- "0..*" SalonTextuel : est membre >
+Utilisateur "1" -- "*" Message : Rédige >
+SalonTextuel "1" -- "*" Message : Publie >
+Profil "1" -left- "1" Utilisateur : Représente >
+Utilisateur "1..*" -- "*" Serveur : Est-membre-de >
+Utilisateur "1" -- "*" Serveur : Est-propriétaire-de >
+Serveur "1" -- "*" SalonTextuel : Héberge >
+Message "1" -right- "*" Fichier : < Est-joint-à
+Utilisateur "1..*" -- "*" SalonTextuel : Est-membre-de >
 
 class Message {
   contenu : String
