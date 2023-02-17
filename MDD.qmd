@@ -483,9 +483,7 @@ Par rétro-ingénierie, réalisez le modèle du domaine pour une fonctionnalité
 
 :::: {.callout-note collapse="true" icon="false"}
 
-## Solution
-
-Voici une solution possible:
+## Voici une solution
 
 **Catégorie** | **Classes conceptuelles**
 :----------|:----------
@@ -500,7 +498,7 @@ Voici une solution possible:
 
 :::: {.callout-note collapse="true" icon="false"}
 
-## Solution
+## Voici une solution
 
 Voici une solution possible qui est cohérente avec l'étape précédente:
 
@@ -546,7 +544,7 @@ class Fichier {
 
 :::: {.callout-note collapse="true" icon="false"}
 
-## Solution
+## Voici une solution
 
 Voici une solution possible qui est cohérente avec l'étape précédente:
 
