@@ -291,3 +291,90 @@ class Joueur {
 
 :::
 
+::: {#exr-GRASP_GOF_expert}
+
+### GRASP Expert en information et Forte cohésion
+
+Appliquez le GRASP Expert en information pour améliorer la conception des classes dans le code suivant:
+
+```javascript
+class Point {
+    x:number;
+    y:number;
+
+    constructor(x:number, y:number) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+class Circle {
+    center:Point;
+    radius:number;
+
+    constructor(center:Point, radius:number) {
+        this.center = center;
+        this.radius = radius
+    }
+}
+
+class SomeClass {
+    someMethod() {
+        const center = new Point(0, 12);
+        const c = new Circle(center, 14);
+        
+        const area = Math.PI * c.radius* c.radius;
+        const diameter = c.radius * 2;
+        const circumference = Math.PI * c.radius * 2;
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+Puisque la classe `Circle` possède les informations nécessaires (`radius`) pour calculer `area`, `diameter` et `circumference`, c'est elle qui doit contenir les méthodes pour calculer ces propriétés.
+Cela augmente la cohésion de la classe `SomeClass` puisqu'elle a moins de responsabilités.
+La complétude de la classe `Circle` est améliorée et ses méthodes peuvent être testées et réutilisées dans d'autres classes.
+
+Pour être concis, la classe `Point` est omise puisqu'aucune modification n'y est apportée.
+
+```javascript
+class Circle {
+    center:Point;
+    radius:number;
+
+    constructor(center:Point, radius:number) {
+        this.center = center;
+        this.radius = radius
+    }
+
+    get area():number {
+        return Math.PI * this.radius * this.radius;
+    }
+
+    get diameter():number {
+        return this.radius * 2;
+    }
+
+    get circumference():number {
+        return Math.PI * this.radius * 2;
+    }
+}
+
+class SomeClass {
+    someMethod() {
+        const center = new Point(0, 12);
+        const c = new Circle(center, 14);
+        
+        const area = c.area;
+        const diameter = c.diameter;
+        const circumference = c.circumference;
+    }
+}
+```
+::::
+
+:::
+
