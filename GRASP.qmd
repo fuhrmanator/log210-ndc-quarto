@@ -331,7 +331,7 @@ class SomeClass {
 
 :::: {.callout-note collapse="true" icon="false"}
 
-## Voici la solution
+## Voici une solution
 
 Puisque la classe `Circle` possède les informations nécessaires (`radius`) pour calculer `area`, `diameter` et `circumference`, c'est elle qui doit contenir les méthodes pour calculer ces propriétés.
 Cela augmente la cohésion de la classe `SomeClass` puisqu'elle a moins de responsabilités.
