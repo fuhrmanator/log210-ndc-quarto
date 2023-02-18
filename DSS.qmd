@@ -8,16 +8,16 @@ La modélisation à ce niveau permet de définir plus tard les détails à l'int
 
 Selon l'[Office québécois de la langue française](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8394269/interface-de-programmation), l'interface de programmation est *l'ensemble de routines standards, accessibles et documentées, qui sont destinées à faciliter au programmeur \[et à la programmeuse\] le développement d'applications*.
 Le terme en anglais est *Application Programming Interface* (API).
-En d'autres mots, c'est la façon de communiquer avec un ensemble d'éléments logiciels qu'on utilise pour faire une application utile.
+En d'autres mots, c'est la façon (normalisée et documentée) qu'un programme d'application communique avec un ensemble d'éléments logiciels qu'il utilise pour faire une application utile.
 
 Par exemple, une classe dans un logiciel orienté objet peut être utilisée pour créer une application.
 Les méthodes publiques de la classe composent son interface API, comme le montre la @fig-apiclasse.
 Un logiciel en ligne de commande peut aussi servir pour des applications.
 Les commandes et les paramètres que le logiciel accepte forment son interface API.
+Une commande sous Linux peut avoir une interface API, comme il est illustré dans l'exemple de la @fig-command_line_api.
 Un [service REST](https://fr.wikipedia.org/wiki/Representational_state_transfer)\ {{< fa brands wikipedia-w >}} est une façon de créer une application Web.
 On communique avec le service REST à l'aide de requêtes HTTP.
-La requête HTTP contient l'URI vers la routine à accéder, la [méthode de requête (verbe HTTP)](https://developer.mozilla.org/fr/docs/Web/HTTP/Methods) et les paramètres de la routine, tel qu'illustré sur la @fig-rest_api.
-Une commande sous Linux peut avoir une interface API, comme il est illustré dans l'exemple de la @fig-command_line_api. 
+La requête HTTP contient l'URI vers la routine à accéder, la [méthode de requête (verbe HTTP)](https://developer.mozilla.org/fr/docs/Web/HTTP/Methods) et les paramètres de la routine, tel qu'illustré sur la @fig-rest_api. 
 
 Les interfaces humain-machine (IHM), dont les interfaces graphiques, ne sont pas une interface API puisqu'elles ne peuvent être utilisées de manière logicielle.
 Elles permettent de faire le pont entre les utilisateurs et utilisatrices (qui communiquent par les gestes, par exemple un clic avec une souris) et l'interface API du logiciel afin d'en faciliter l'utilisation.
@@ -27,7 +27,6 @@ Elles permettent de faire le pont entre les utilisateurs et utilisatrices (qui c
 !include normal.pumlinclude
 
 class Point {
-  --
   + getX() : number
   + setX(x : number)
   + getY() : number
@@ -38,25 +37,7 @@ class Point {
 @enduml
 ```
 
-::: {#fig-rest_api }
-
-```bash
-GET https://service.com/api/v1/employee
-
-GET https://service.com/api/v1/employee/{id}
-
-POST https://service.com/api/v1/employee
-{
-  "name": "John Doe",
-  "rate": 20
-}
-```
-
-Exemple d'interface API d'un service REST.
-
-:::
-
-::: {#fig-command_line_api }
+::: {#fig-command_line_api fig-align="left"}
 
 ```{.bash}
 $ pwd --help
@@ -70,6 +51,24 @@ pwd: pwd [-LPW]
 ```
 
 L'interface API de la commande `pwd` sous Linux.
+
+:::
+
+::: {#fig-rest_api fig-align="left"}
+
+```{.bash }
+GET https://service.com/api/v1/employee
+
+GET https://service.com/api/v1/employee/{id}
+
+POST https://service.com/api/v1/employee
+{
+  "name": "John Doe",
+  "rate": 20
+}
+```
+
+Exemple d'interface API d'un service REST.
 
 :::
 
