@@ -18,6 +18,7 @@ lang: fr
 book:
 
   title: "Analyse et conception de logiciels"
+  subtitle: Édition fabriqueREL 2023
   cover-image: images/cover.png
   image: images/wordle_ordre_alph.png
 
@@ -131,7 +132,7 @@ format:
       - tex-hacks/color-tables.tex
       - tex-hacks/code-font.tex
       - tex-hacks/fix-unicode-chars.tex
-      - tex-hacks/redefine-title-page.tex
+      - tex-hacks/image-on-title-page.tex
 
     include-before-body: 
       - tex-hacks/redefine-parts-layout.tex
