@@ -6,36 +6,55 @@ La modélisation à ce niveau permet de définir plus tard les détails à l'int
 
 ## L'interface de programmation (*Application Programming Interface*)
 
-Selon l'[Office québécois de la langue française](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8394269/interface-de-programmation), l'interface de programmation est l'ensemble de routines standards, accessibles et documentées, qui sont destinées à faciliter au programmeur le développement d'applications.
-En d'autres mots, c'est la façon de communiquer avec un système de manière logicielle.
+Selon l'[Office québécois de la langue française](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8394269/interface-de-programmation), l'interface de programmation est *l'ensemble de routines standards, accessibles et documentées, qui sont destinées à faciliter au programmeur \[et à la programmeuse\] le développement d'applications*.
+Le terme en anglais est *Application Programming Interface* (API).
+En d'autres mots, c'est la façon de communiquer avec un ensemble d'éléments logiciels qu'on utilise pour faire une application utile.
 
-Il faut interpréter le mot "système" au sens large.
-Par exemple, une classe dans un logiciel orienté objet est un système.
-Les méthodes publiques de la classe composent son API.
-Un logiciel en ligne de commande est aussi un système.
-Les commandes et les paramètres que le logiciel acceptent forment son API.
-Un [service REST](https://fr.wikipedia.org/wiki/Representational_state_transfer)\ {{< fa brands wikipedia-w >}} est une façon de créer une application web et un autre exemple de système.
+Par exemple, une classe dans un logiciel orienté objet peut être utilisée pour créer une application.
+Les méthodes publiques de la classe composent son interface API, comme le montre la @fig-apiclasse.
+Un logiciel en ligne de commande peut aussi servir pour des applications.
+Les commandes et les paramètres que le logiciel accepte forment son interface API.
+Un [service REST](https://fr.wikipedia.org/wiki/Representational_state_transfer)\ {{< fa brands wikipedia-w >}} est une façon de créer une application Web.
 On communique avec le service REST à l'aide de requêtes HTTP.
-La requête HTTP contient l'URI vers la routine à accéder, la [méthode de requête (verbe HTTP)](https://developer.mozilla.org/fr/docs/Web/HTTP/Methods) et les paramètres de la routine.
+La requête HTTP contient l'URI vers la routine à accéder, la [méthode de requête (verbe HTTP)](https://developer.mozilla.org/fr/docs/Web/HTTP/Methods) et les paramètres de la routine, tel qu'illustré sur la @fig-rest_api.
+Une commande sous Linux peut avoir une interface API, comme il est illustré dans l'exemple de la @fig-command_line_api. 
 
-Les interfaces humain-machine (IHM), dont les interfaces graphiques, ne sont pas un API puisqu'elle ne peuvent être utilisée de manière logicielle.
-Elles permettent de faire le pont entre les utilisateurs et l'API du logiciel afin d'en faciliter l'utilisation.
+Les interfaces humain-machine (IHM), dont les interfaces graphiques, ne sont pas une interface API puisqu'elles ne peuvent être utilisées de manière logicielle.
+Elles permettent de faire le pont entre les utilisateurs et utilisatrices (qui communiquent par les gestes, par exemple un clic avec une souris) et l'interface API du logiciel afin d'en faciliter l'utilisation.
 
-```{.plantuml #fig-apiclasse caption="Les méthodes publiques d'une classe sont un exemple d'API." }
+```{.plantuml #fig-apiclasse caption="Les méthodes publiques d'une classe sont un exemple d'interface API." }
 @startuml
-!include ecriture.pumlinclude
+!include normal.pumlinclude
 
 class Point {
   --
-  + getX():number
-  + setX(x:number)
-  + getY():number
-  + setY(y:number)
-  + distance(point:Point):number
-  {static} + distance(point1:Point, point2:Point):number
+  + getX() : number
+  + setX(x : number)
+  + getY() : number
+  + setY(y : number)
+  + distance(point : Point) : number
+  {static} + distance(point1 : Point, point2 : Point) : number
 }
 @enduml
 ```
+
+::: {#fig-rest_api }
+
+```bash
+GET https://service.com/api/v1/employee
+
+GET https://service.com/api/v1/employee/{id}
+
+POST https://service.com/api/v1/employee
+{
+  "name": "John Doe",
+  "rate": 20
+}
+```
+
+Exemple d'interface API d'un service REST.
+
+:::
 
 ::: {#fig-command_line_api }
 
@@ -50,27 +69,11 @@ pwd: pwd [-LPW]
       -W        print the Win32 value of the physical directory
 ```
 
-L'API de la commande `pwd` sous Linux.
+L'interface API de la commande `pwd` sous Linux.
 
 :::
 
-::: {#fig-rest_api }
-
-```{.bash}
-GET https://service.com/api/v1/employee
-
-GET https://service.com/api/v1/employee/{id}
-
-POST https://service.com/api/v1/employee
-{
-  "name": "John Doe",
-  "rate": 20
-}
-```
-
-Exemple d'API d'un service REST.
-
-:::
+\filbreak
 
 ## La séparation des couches présentation et domaine
 
@@ -197,7 +200,7 @@ NF .. D4
 Raison d'être de la séparation des couches présentation et domaine.
 :::
 
-Le DSS vise à modéliser l'API du système développé, et ce, peu importe la façon dont les utilisateurs et les utilisatrices vont interagir avec celui-ci. Lorsqu'on crée un DSS dans la méthodologie de ce manuel, on propose une conception de haut niveau qui fait un lien direct entre les besoins (les étapes d'un cas d'utilisation) et une solution qui répond à ces besoins, sans aller trop en détail (on fera cela plus tard, justement dans les [RDCU](#sec-rdcu)), tout en respectant la séparation des couches présentation et domaine.
+Le DSS vise à modéliser l'interface API du système développé, et ce, peu importe la façon dont les utilisateurs et les utilisatrices vont interagir avec celui-ci. Lorsqu'on crée un DSS dans la méthodologie de ce manuel, on propose une conception de haut niveau qui fait un lien direct entre les besoins (les étapes d'un cas d'utilisation) et une solution qui répond à ces besoins, sans aller trop en détail (on fera cela plus tard, justement dans les [RDCU](#sec-rdcu)), tout en respectant la séparation des couches présentation et domaine.
 
 Voici d'autres avantages de la séparation des couches présentation et domaine:
 
@@ -205,7 +208,7 @@ Voici d'autres avantages de la séparation des couches présentation et domaine:
 - Un faible couplage entre la couche présentation et la couche domaine.
 - La couche domaine est "protégée" des évolutions du code dans la couche présentation.
 - Il peut y avoir plusieurs couches de présentation (site web, app mobile) pour la même couche domaine.
-- L'API de la couche domaine peut être utilisé par des systèmes externes.
+- L'interface API de la couche domaine peut être utilisé par des systèmes externes.
 - Les classes cohésives peuvent être plus facilement réutilisées dans un autre projet.
 - Les classes cohésives sont plus faciles à tester.
 - Une séparation peut rendre l'application plus simple à comprendre (pour les nouvelles personnes dans l'équipe de développement).
@@ -219,7 +222,7 @@ Les DSS sont expliqués en détail dans le chapitre 10\ {{< fa solid book >}}, m
 - Le DSS a toujours un titre.
 - L'acteur est indiqué dans la notation par un bonhomme et est représenté comme une *instance* de la classe du bonhomme, comme `:Joueur` sur la @fig-dssattaquerunpays (le ":" signifie une instance).
 - Le Système est un objet (une instance `:Système`) et n'est jamais détaillé plus.
-- Le but du DSS est de définir des opérations système, qui deviendront l'API du système; il s'agit d'une conception de haut niveau.
+- Le but du DSS est de définir des opérations système, qui deviendront l'interface API du système; il s'agit d'une conception de haut niveau.
 - Le côté acteur du DSS n'est pas un acteur tout seul, mais une couche logicielle de présentation, comme une interface graphique ou un logiciel qui peut reconnaître la parole. Cette couche reconnaît des gestes de l'acteur et envoie une opération système. Un geste peut être un clic sur un bouton dans l'interface, une demande "Dis Siri", etc.
 - Puisque la couche présentation reçoit des informations des êtres humains, **les opérations système ont des arguments de type primitif**. Il est difficile pour un utilisateur de spécifier une référence (pointeur en mémoire) à un objet. Alors, on peut donner le nom (de type `String`) d'un morceau de musique à jouer, ou spécifier une quantité (de type `Integer`).
 - Puisque les types des arguments sont importants, on les spécifie dans les opérations système du DSS.
@@ -251,7 +254,7 @@ c->s : terminerAttaque()
 
 ## Les DSS font abstraction de la couche présentation
 
-Le but du DSS est de se concentrer sur l'API (les opérations système) de la solution.
+Le but du DSS est de se concentrer sur l'interface API (les opérations système) de la solution.
 Dans ce sens, c'est une conception de haut niveau.
 Le "Système" est modélisé comme une boîte noire.
 Par exemple, sur la @fig-dssabstraction, il y a l'acteur, le Système et une opération système.
@@ -393,7 +396,7 @@ Imaginez un tel contrôleur GRASP si vous aviez trois types d'applications front
 Le contrôleur GRASP recevra des représentations de "formulaire" de chaque couche présentation différente.
 En passant, l'objet `body` n'a rien à voir avec une interface Android!
 Ce pauvre contrôleur serait alors obligé de connaître toutes les trois formes (Web, iOS, Android) et, ainsi, sa cohésion serait beaucoup plus faible.
-Pour respecter les responsabilités, on laisse la couche présentation faire le décorticage et construire une opération système selon l'API définie dans le DSS.
+Pour respecter les responsabilités, on laisse la couche présentation faire le décorticage et construire une opération système selon l'interface API définie dans le DSS.
 Cela simplifie aussi le contrôleur GRASP.
 
 ## Exercices

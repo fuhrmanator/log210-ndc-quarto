@@ -196,7 +196,7 @@ La méthodologie d'analyse et de conception proposée dans ce manuel se base sur
 Voici les éléments importants documentés dans ce manuel (voir la @fig-SurvolMethodologie):
 
 - Il y a une spécification explicite des besoins (@sec-besoins) dans le modèle de cas d'utilisation;
-- À partir de chaque cas d'utilisation (@sec-cu), il y a une conception de haut niveau (l'API du système à développer) documentée sous forme de diagramme de séquence système (DSS) (@sec-dss);
+- À partir de chaque cas d'utilisation (@sec-cu), il y a une conception de haut niveau (l'interface API du système à développer) documentée sous forme de diagramme de séquence système (DSS) (@sec-dss);
 - À partir de chaque DSS, on peut définir un ensemble de contrats d'opération (@sec-contrats), surtout pour les opérations complexes;
 - À partir de l'ensemble des besoins, on construit un modèle du domaine (MDD) (@sec-mdd);
 - Pour faire une conception intuitive et facile à adapter, on propose un modèle de conception sous forme de plusieurs réalisations de cas d'utilisation (RDCU) (@sec-rdcu) qui sont cohérentes avec le MDD (pour diminuer le décalage des représentations) et avec les contrats;
