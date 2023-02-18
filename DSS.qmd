@@ -6,36 +6,20 @@ La modélisation à ce niveau permet de définir plus tard les détails à l'int
 
 ## L'interface de programmation (*Application Programming Interface*)
 
-Selon l'[Office québécois de la langue française](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8394269/interface-de-programmation), l'interface de programmation est l'ensemble de routines standards, accessibles et documentées, qui sont destinées à faciliter au programmeur le développement d'applications. En d'autres mots, c'est la façon de communiquer avec un système.
+Selon l'[Office québécois de la langue française](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8394269/interface-de-programmation), l'interface de programmation est l'ensemble de routines standards, accessibles et documentées, qui sont destinées à faciliter au programmeur le développement d'applications.
+En d'autres mots, c'est la façon de communiquer avec un système de manière logicielle.
 
-Il faut interpréter le mot « système » au sens large. Par exemple, une classe dans un logiciel orienté objet est un système. Les méthodes publiques de la classe composent son API.
+Il faut interpréter le mot "système" au sens large.
+Par exemple, une classe dans un logiciel orienté objet est un système.
+Les méthodes publiques de la classe composent son API.
+Un logiciel en ligne de commande est aussi un système.
+Les commandes et les paramètres que le logiciel acceptent forment son API.
+Un [service REST](https://fr.wikipedia.org/wiki/Representational_state_transfer)\ {{< fa brands wikipedia-w >}} est une façon de créer une application web et un autre exemple de système.
+On communique avec le service REST à l'aide de requêtes HTTP.
+La requête HTTP contient l'URI vers la routine à accéder, la [méthode de requête (verbe HTTP)](https://developer.mozilla.org/fr/docs/Web/HTTP/Methods) et les paramètres de la routine.
 
-Un logiciel en ligne de commande est aussi un système. Les commandes et les paramètres que le logiciel acceptent forment son API.
-
-Un [service REST](https://fr.wikipedia.org/wiki/Representational_state_transfer) est une façon de créer une application web et un autre exemple de système. On communique avec le service REST à l'aide de requêtes HTTP. La requête HTTP contient l'URI vers la routine à accéder, la [méthode de requête (verbe HTTP)](https://developer.mozilla.org/fr/docs/Web/HTTP/Methods) et les paramètres de la routine.
-
-```{#fig-apirest caption="L'API d'un service REST." }
-GET https://service.com/api/v1/employee
-
-GET https://service.com/api/v1/employee/{id}
-
-POST https://service.com/api/v1/employee
-{
-  "name": "John Doe",
-  "rate": 20
-}
-```
-
-```{#fig-apilignecommande caption="L'API de la commande pwd sous Linux." }
-$ pwd --help
-pwd: pwd [-LPW]
-    Print the name of the current working directory.
-
-    Options:
-      -L        print the value of $PWD if it names the current working directory
-      -P        print the physical directory, without any symbolic links
-      -W        print the Win32 value of the physical directory
-```
+Les interfaces humain-machine (IHM), dont les interfaces graphiques, ne sont pas un API puisqu'elle ne peuvent être utilisée de manière logicielle.
+Elles permettent de faire le pont entre les utilisateurs et l'API du logiciel afin d'en faciliter l'utilisation.
 
 ```{.plantuml #fig-apiclasse caption="Les méthodes publiques d'une classe sont un exemple d'API." }
 @startuml
@@ -53,9 +37,40 @@ class Point {
 @enduml
 ```
 
+::: {#fig-command_line_api }
 
-Comparer aux interfaces graphiques
-Donner quelques exemples de systèmes avec un API (une classe, un logiciel en ligne de commande, un logiciel web)
+```{.bash}
+$ pwd --help
+pwd: pwd [-LPW]
+    Print the name of the current working directory.
+
+    Options:
+      -L        print the value of $PWD if it names the current working directory
+      -P        print the physical directory, without any symbolic links
+      -W        print the Win32 value of the physical directory
+```
+
+L'API de la commande `pwd` sous Linux.
+
+:::
+
+::: {#fig-rest_api }
+
+```{.bash}
+GET https://service.com/api/v1/employee
+
+GET https://service.com/api/v1/employee/{id}
+
+POST https://service.com/api/v1/employee
+{
+  "name": "John Doe",
+  "rate": 20
+}
+```
+
+Exemple d'API d'un service REST.
+
+:::
 
 ## La séparation des couches présentation et domaine
 
@@ -64,7 +79,7 @@ Cependant, il sera nécessaire de les comprendre, car certaines règles s'impose
 En plus, dans la partie de la méthodologie où on va rentrer dans les détails ([les réalisations de cas d'utilisation](#sec-rdcu)), il faudra maîtriser le principe de *la séparation des couches présentation et domaine*.
 Commençons par une explication de base de ce principe.
 
-Puisqu'il y a des acteurs humains interagissant avec le système, on doit avoir une interface humain-machine (IHM) dans le système.
+Puisqu'il y a des acteurs humains interagissant avec le système, on doit avoir une IHM dans le système.
 Avec l'évolution rapide des technologies, il y a toujours eu un potentiel de concevoir des IHM de plus en plus conviviales et efficientes.
 Par exemple, les premières versions de Microsoft Word tournaient sur MS-DOS (PC d'IBM) au milieu des années 1980 (la souris n'était même pas nécessaire pour l'utiliser).
 Pourtant, le concept de style nommé (gabarit) pour les paragraphes existait, comme on le trouve dans la version de Word d'aujourd'hui.
@@ -182,7 +197,7 @@ NF .. D4
 Raison d'être de la séparation des couches présentation et domaine.
 :::
 
-Lorsqu'on crée un DSS dans la méthodologie de ce manuel, on propose une conception de haut niveau qui fait un lien direct entre les besoins (les étapes d'un cas d'utilisation) et une solution qui répond à ces besoins, sans aller trop en détail (on fera cela plus tard, justement dans les [RDCU](#sec-rdcu)), tout en respectant la séparation des couches présentation et domaine.
+Le DSS vise à modéliser l'API du système développé, et ce, peu importe la façon dont les utilisateurs et les utilisatrices vont interagir avec celui-ci. Lorsqu'on crée un DSS dans la méthodologie de ce manuel, on propose une conception de haut niveau qui fait un lien direct entre les besoins (les étapes d'un cas d'utilisation) et une solution qui répond à ces besoins, sans aller trop en détail (on fera cela plus tard, justement dans les [RDCU](#sec-rdcu)), tout en respectant la séparation des couches présentation et domaine.
 
 Voici d'autres avantages de la séparation des couches présentation et domaine:
 
@@ -190,7 +205,7 @@ Voici d'autres avantages de la séparation des couches présentation et domaine:
 - Un faible couplage entre la couche présentation et la couche domaine.
 - La couche domaine est "protégée" des évolutions du code dans la couche présentation.
 - Il peut y avoir plusieurs couches de présentation (site web, app mobile) pour la même couche domaine.
-- L'API (*Application Programming Interface*[^API]) de la couche domaine peut être utilisé par des systèmes externes.
+- L'API de la couche domaine peut être utilisé par des systèmes externes.
 - Les classes cohésives peuvent être plus facilement réutilisées dans un autre projet.
 - Les classes cohésives sont plus faciles à tester.
 - Une séparation peut rendre l'application plus simple à comprendre (pour les nouvelles personnes dans l'équipe de développement).
@@ -204,7 +219,7 @@ Les DSS sont expliqués en détail dans le chapitre 10\ {{< fa solid book >}}, m
 - Le DSS a toujours un titre.
 - L'acteur est indiqué dans la notation par un bonhomme et est représenté comme une *instance* de la classe du bonhomme, comme `:Joueur` sur la @fig-dssattaquerunpays (le ":" signifie une instance).
 - Le Système est un objet (une instance `:Système`) et n'est jamais détaillé plus.
-- Le but du DSS est de définir des opérations système, qui deviendront l'interface de programmation API du système; il s'agit d'une conception de haut niveau.
+- Le but du DSS est de définir des opérations système, qui deviendront l'API du système; il s'agit d'une conception de haut niveau.
 - Le côté acteur du DSS n'est pas un acteur tout seul, mais une couche logicielle de présentation, comme une interface graphique ou un logiciel qui peut reconnaître la parole. Cette couche reconnaît des gestes de l'acteur et envoie une opération système. Un geste peut être un clic sur un bouton dans l'interface, une demande "Dis Siri", etc.
 - Puisque la couche présentation reçoit des informations des êtres humains, **les opérations système ont des arguments de type primitif**. Il est difficile pour un utilisateur de spécifier une référence (pointeur en mémoire) à un objet. Alors, on peut donner le nom (de type `String`) d'un morceau de musique à jouer, ou spécifier une quantité (de type `Integer`).
 - Puisque les types des arguments sont importants, on les spécifie dans les opérations système du DSS.
