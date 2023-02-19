@@ -284,10 +284,11 @@ class Joueur {
 
 ::: {#exr-GRASP_GOF_contrôleur}
 
-### GRASP Contrôleur et Fabrication Pure
+### GRASP Contrôleur, Fabrication Pure et Indirection
 
 - Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d'un contrôleur de session (de cas d'utilisation) est une Fabrication Pure.
 - Soit un contrôleur de session `GestionnaireVentes`; quelle est la "situation désespérée" qui est mitigée par ce contrôleur? Astuce: relire la définition de Fabrication Pure.
+- Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d'un contrôleur de session est un exemple d'Indirection.
 
 :::
 
