@@ -383,13 +383,14 @@ class SomeClass {
 
 ### GRASP Fabrication Pure et Indirection
 
-Appliquez le GRASP Fabrication Pure au contrôleur `BirdManager` pour améliorer sa cohésion. Ajoutez une fabrique de `Bird` à qui le contrôleur pourra déléguer la responsabilité de créer les objets `Bird`.
+Appliquez le GRASP Fabrication Pure au contrôleur `BirdManager` pour améliorer sa cohésion.
+Ajoutez une fabrique de `Bird` à qui le contrôleur pourra déléguer la responsabilité de créer les objets `Bird`.
 Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple du GRASP Indirection.
 
 ```javascript
 class BirdManager {
-    addBird(b:{type:String, numberOfCoconuts:number, voltage:number}) {
-        let bird:Bird;
+    addBird(b: {type: String, numberOfCoconuts: number, voltage: number}) {
+        let bird: Bird;
 
         if (b.type == "EuropeanSwallow") {
             bird = new EuropeanSwallow();
@@ -415,20 +416,21 @@ class BirdManager {
 
 L'ajout de la fabrique `BirdFactory` permet d'améliorer la cohésion du contrôleur `BirdManager` puisque ses responsabilités sont réduites.
 La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre le contrôleur `BirdManager` et les différents types de `Bird`.
-Si d'autres types de `Bird` sont ajoutés à l'application, il ne sera pas nécessaire de modifier le contrôleur.
+Si d'autres types de `Bird` sont ajoutés à l'application, l'impact sera moins important sur le contrôleur.
 
 ```javascript
 class BirdManager {
-    addBird(b:{type:String, numberOfCoconuts:number, voltage:number}) {
-        let bird:Bird = BirdFactory.createBird(b);
+    addBird(b: {type: String, numberOfCoconuts: number, voltage: number}) {
+        let bird: Bird = BirdFactory.createBird(b);
 
         // Then, we do something with the bird...
     }
 }
 
 class BirdFactory {
-    public static createBird(b:{type:String, numberOfCoconuts:number, voltage:number}) {
-        let bird:Bird;
+    public static createBird(b: {type: String, numberOfCoconuts: number, 
+                             voltage: number}) {
+        let bird: Bird;
 
         if (b.type == "EuropeanSwallow") {
             bird = new EuropeanSwallow();
