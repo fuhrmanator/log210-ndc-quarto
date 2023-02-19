@@ -62,7 +62,7 @@ Une personne humble pense ainsi [@fitzpatrick_team_2012]:
 L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte les attaques de la part des autres". Voir la section [Proposer des solutions au besoin](#sec-solution_problemes_equipes).
 :::
 
-::: {#fig-humilité layout-ncol=3}
+::: {#fig-humilité layout="[10,-2,10,-2,10]" layout-valign="center"}
 
 ![Éviter d'être le ["Centre de l'univers"](https://www.flickr.com/photos/diamondduste/466060240/) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)) par [Diamondduste](https://www.flickr.com/people/diamondduste/).](images/flickr_diamondduste_center.jpg){#fig-centre-univers width=200px}
 
