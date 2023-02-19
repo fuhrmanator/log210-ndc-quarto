@@ -14,7 +14,8 @@ Il a enseigné LOG210 de nombreuses fois et a contribué à la création d'exerc
 :::
 
 **Remerciements aux personnes suivantes:**
-Conversion Markdown: Clyde Vianney Omog Ntap;
+Conversion Markdown: Clyde Vianney Omog Ntap, Taki Eddine Seghiri;
+Création d'exercices: Olivier Brochu, Clyde Vianney Omog Ntap;
 Révision: Katerine Robert;
 Relecture: Olivier Brochu, Roberto Erick Lopez-Herrejon, Mouna Moumene, Taki Eddine Seghiri.
 
