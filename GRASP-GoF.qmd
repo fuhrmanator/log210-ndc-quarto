@@ -5,8 +5,8 @@ Craig Larman a proposé les GRASP pour faciliter la compréhension des forces es
 ## Exemple avec Adaptateur
 
 Le pattern Adaptateur a été proposé par @GoF1994, et sa structure est illustrée sur la @fig-AdapterGoF.
-La structure de base peut être trompeuse, car elle ne montre qu'une seule classe `Adaptee` qui représente l'API (externe) que l'on ne peut modifier.
-En réalité, ce pattern est plus intéressant lorsqu'on considère *plusieurs* cas de classe `Adaptee`, chacune avec une API différente.
+La structure de base peut être trompeuse, car elle ne montre qu'une seule classe `Adaptee` qui représente l'interface API (externe) que l'on ne peut modifier.
+En réalité, ce pattern est plus intéressant lorsqu'on considère *plusieurs* cas de classe `Adaptee`, chacune avec une interface API différente.
 
 ::: {.callout-note}
 ### Qu'est-ce qu'un calculateur de taxes?
@@ -14,15 +14,15 @@ On rappelle ici le contexte du problème auquel a été appliqué le pattern Ada
 Le logiciel NextGen POS doit calculer les taxes pour les ventes, mais la compagnie vise un marché large (par exemple, les États-unis et le Canada).
 Puisque le calcul des taxes peut être différent selon l'État et même la ville (par exemple [les villes de la Californie](https://www.cdtfa.ca.gov/taxes-and-fees/rates.aspx)), la compagnie qui développe NextGen POS ne veut pas maintenir toute cette information dans une partie du logiciel, car la maintenance ne sera pas rentable.
 La solution est de permettre au système d'exploiter un module externe qui est un "calculateur de taxes", car ce genre de module existe (voir [TaxCloud](https://taxcloud.com/home)).
-Puisque la clientèle du NextGen POS pourrait utiliser des calculateurs différents (selon sa région ou son budget), il faut constater que l'API de chaque calculateur sera *différente* (faute de norme sur les API de calculateurs de taxe) et *immuable* (on ne peut pas s'attendre à ce que le fournisseur de chaque calculateur change son API ou fournisse le code source).
+Puisque la clientèle du NextGen POS pourrait utiliser des calculateurs différents (selon sa région ou son budget), il faut constater que l'interface API de chaque calculateur sera *différente* (faute de norme sur les interfaces API de calculateurs de taxe) et *immuable* (on ne peut pas s'attendre à ce que le fournisseur de chaque calculateur change son interface API ou fournisse le code source).
 Alors, le pattern Adaptateur est proposé comme solution à ce problème.
 @craig_uml_2005 propose aussi que les modules externes soient considérés pour gérer l'inventaire et pour suivre la comptabilité, car ces fonctionnalités sont complexes et difficiles à faire correctement. 
-Encore, si NextGen POS supporte plusieurs choix (fournisseurs) de ces modules externes, il y aura ensuite le problème des API différentes et immuables. Le pattern Adaptateur sera encore utile dans ce contexte. 
+Encore, si NextGen POS supporte plusieurs choix (fournisseurs) de ces modules externes, il y aura ensuite le problème des interfaces API différentes et immuables. Le pattern Adaptateur sera encore utile dans ce contexte. 
 :::
 
 Le chapitre A26/F23\ {{< fa solid book >}}\ présente l'exemple du pattern Adaptateur pour les calculateurs de taxes (figure F23.1/A26.1\ {{< fa solid book >}}).
 On remarque que cette figure dans le livre de Larman ne montre pas les classes adaptées, mais nous les avons ajoutées dans la @fig-Fig23_1.
-Nous faisons une hypothèse sur les noms des méthodes pour l'API des classes adaptées, car cette information n'est pas spécifiée.
+Nous faisons une hypothèse sur les noms des méthodes pour l'interface API des classes adaptées, car cette information n'est pas spécifiée.
 En plus, nous n'avons pas spécifié les arguments (c'est "?"), car les détails ne sont pas connus.
 
 Un autre point à mentionner dans le problème de calcul des taxes est que ça dépend de l'article.
@@ -60,7 +60,7 @@ Client -r-> Target
 ```
 
 
-```{.plantuml #fig-Fig23_1 caption="Le pattern Adaptateur appliqué pour les services externes de calculateurs de taxes. Chaque service externe a une API distincte et immuable. Les adaptateurs concrets permettent de normaliser l'accès à ces API à travers une interface `IAdaptateurCalculTaxes`."}
+```{.plantuml #fig-Fig23_1 caption="Le pattern Adaptateur appliqué pour les services externes de calculateurs de taxes. Chaque service externe a une interface API distincte et immuable. Les adaptateurs concrets permettent de normaliser l'accès à ces interfaces API à travers une interface `IAdaptateurCalculTaxes`."}
 @startuml
 !include normal.pumlinclude
 
@@ -106,7 +106,7 @@ if (calculateurTaxes == "GoodAsGoldTaxPro") {
 Pour supporter un nouveau calculateur de taxes, il faudrait coder une nouvelle branche dans le bloc de `if/then`. 
 Ça nuirait à la clarté du code, et la méthode qui contient tout ce code deviendrait de plus en plus longue.
 Même si l'on faisait une méthode pour encapsuler le code de chaque branche, ça ferait toujours augmenter les responsabilités de la classe Vente.
-Elle est responsable de connaître tous les détails (l'API distincte et immuable) de chaque calculateur de taxes externe, puisqu'elle communique directement (il y a du couplage) avec ces derniers.
+Elle est responsable de connaître tous les détails (l'interface API distincte et immuable) de chaque calculateur de taxes externe, puisqu'elle communique directement (il y a du couplage) avec ces derniers.
 Lorsqu'une classe prend plus de responsabilités, ça porte atteinte à sa cohésion.
 
 Le pattern Adaptateur comprend les principes GRASP Faible Couplage, Forte Cohésion, Polymorphisme, Indirection, Fabrication Pure et Protection des variations.
@@ -231,7 +231,7 @@ Selon @craig_uml_2005:
 **Solution:** Pour éviter le couplage direct, affectez la responsabilité à un objet qui sert d'intermédiaire avec les autres composants ou services.
 :::
 
-Le "couplage direct" qui est évité est le couplage entre la classe Vente et les calculateurs de taxes externes. Le pattern Adaptateur (général) cherche à découpler le Client des classes nommées Adaptee, car chaque Adaptee a une API différente pour le même genre de "service". Alors, la responsabilité de s'adapter aux services différents est affectée à la hiérarchie de "classes intermédiaires", soit l'interface type IAdaptateurCalculTaxes et ses implémentations.
+Le "couplage direct" qui est évité est le couplage entre la classe Vente et les calculateurs de taxes externes. Le pattern Adaptateur (général) cherche à découpler le Client des classes nommées Adaptee, car chaque Adaptee a une interface API différente pour le même genre de "service". Alors, la responsabilité de s'adapter aux services différents est affectée à la hiérarchie de "classes intermédiaires", soit l'interface type IAdaptateurCalculTaxes et ses implémentations.
 
 ### Protection des variations
 
@@ -242,11 +242,11 @@ Selon @craig_uml_2005:
 **Solution:** Identifiez les points de variation ou d'instabilité prévisibles et affectez les responsabilités afin de créer une "interface" stable autour d'eux.
 :::
 
-Les "variations" ou "l'instabilité" sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs et développeuses du projet (ce sont des modules externes ayant chacun une API différente).
-Quant à l'"impact négatif sur les autres", il s'agit des modifications qu'auraient à faire les développeurs et développeuses sur la classe Vente chaque fois que l'on décide de supporter un autre calculateur de taxes (ou si l'API de ce dernier évolue). 
+Les "variations" ou "l'instabilité" sont les calculateurs de taxes qui ne sont pas sous le contrôle des développeurs et développeuses du projet (ce sont des modules externes ayant chacun une interface API différente).
+Quant à l'"impact négatif sur les autres", il s'agit des modifications qu'auraient à faire les développeurs et développeuses sur la classe Vente chaque fois que l'on décide de supporter un autre calculateur de taxes (ou si l'interface API de ce dernier évolue). 
 
 Quant aux "responsabilités" à affecter, c'est la fonctionnalité commune de tous les calculateurs de taxes, soit le calcul de taxes. Pour ce qui est de l'"interface stable", il s'agit de la méthode `getTaxes()`, qui ne changera (probablement) jamais.
-Elle est définie dans l'interface type IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur API). 
+Elle est définie dans l'interface type IAdaptateurCalculTaxes. Cette définition isole (protège) la classe Vente des modifications (ajout de nouveaux calculateurs ou changements de leur interface API). 
 
 ## GRASP et réusinage
 

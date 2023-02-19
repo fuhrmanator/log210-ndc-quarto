@@ -79,7 +79,7 @@ Alors, le "kata TDD" a été proposé par Dave Thomas, et le but est de dévelop
 Un kata TDD se pratique avec un IDE (environnement de développement logiciel) et un support pour les tests (par exemple JUnit).
 Pratiquer le même kata peut améliorer votre habileté de programmation. 
 On peut pratiquer le même kata dans un langage différent, avec un IDE différent ou avec un environnement de test différent.
-Le kata vous permet d'avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour le test et pour l'application, API de l'environnement de test, etc.).
+Le kata vous permet d'avoir une facilité avec les aspects techniques de développement dans plusieurs dimensions (complétion de code pour le test et pour l'application, interface API du cadriciel de test, etc.).
 
 En plus, les activités de réusinage sont normalement intégrées dans un kata.
 Le fait de travailler en *petits pas* peut faire en sorte que la dette technique s'accumule.
