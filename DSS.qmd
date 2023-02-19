@@ -8,7 +8,7 @@ La modélisation à ce niveau permet de définir plus tard les détails à l'int
 
 Selon l'[Office québécois de la langue française](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8394269/interface-de-programmation), l'interface de programmation est *l'ensemble de routines standards, accessibles et documentées, qui sont destinées à faciliter au programmeur \[et à la programmeuse\] le développement d'applications*.
 Le terme en anglais est *Application Programming Interface* (API).
-En d'autres mots, c'est la façon (normalisée et documentée) qu'un programme d'application communique avec un ensemble d'éléments logiciels qu'il utilise pour faire une application utile.
+En d'autres mots, c'est la façon (normalisée et documentée) dont un programme d'application communique avec un ensemble d'éléments logiciels qu'il utilise pour faire une application utile.
 
 Par exemple, une classe dans un logiciel orienté objet peut être utilisée pour créer une application.
 Les méthodes publiques de la classe composent son interface API, comme le montre la @fig-apiclasse.
