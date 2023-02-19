@@ -100,6 +100,10 @@ format:
     # PRE quarto 1.3: has to be latexmk for .plantuml plugin to work (because it generates .svg files)
     pdf-engine: pdflatex
 
+    # Metadata
+    subject: "Ce manuel vise à décrire une méthodologie d'analyse, de conception et de développement de logiciels."
+    keywords: "Analyse du domaine d'affaires; développement itératif et évolutif; design patterns; UML; conception; développement piloté par les tests; réusinage (refactoring)"
+
     template: partials/template.tex
 
     colorlinks: true
@@ -116,7 +120,11 @@ format:
     linkcolor: violet
 
     hyperrefoptions: 
+      - pdfstartview={XYZ null null 0.75}
+      - pdfpagemode=UseOutlines
       - pdfdisplaydoctitle=true
+      - pdfpagelayout=SinglePage
+      - pdfstartpage=1
     highlight-style: github
     geometry:
       - top=30mm
@@ -140,7 +148,20 @@ format:
     # ragged2e is for the \justifying, see https://github.com/quarto-dev/quarto-cli/discussions/1534)
     header-includes: |
       \usepackage{ragged2e}
+      \usepackage[a-1b]{pdfx}
+      \begin{filecontents*}[overwrite]{\jobname.xmpdata}
+      \Title{Analyse et conception de logiciels}
+      \Author{Christopher Fuhrman\sep Yvan Ross}
+      \Language{fr-CA}
+      \Keywords{Analyse du domaine d'affaires\sep développement itératif et évolutif\sep design patterns\sep UML\sep conception\sep développement piloté par les tests\sep réusinage (refactoring)}
+      \Subject{Ce manuel vise à décrire une méthodologie d'analyse, de conception et de développement de logiciels.}
+      \CoverDate{2023-02-18}
+      \CoverDisplayDate{18 février 2023}
+      \Copyright{Sauf indications contraires, le contenu de ce manuel électronique est disponible en vertu des termes de la Licence Creative Commons Attribution 4.0 International}
+      \CopyrightURL{https://creativecommons.org/licenses/by/4.0/deed.fr}
+      \end{filecontents*}
 
+    # keep-tex: true
 
 # filters must be run in the proper order here
 filters:
