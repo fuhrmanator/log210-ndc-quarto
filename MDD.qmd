@@ -601,12 +601,12 @@ class Fichier {
 
 ### Utiliser des verbes plus riches pour décrire les associations
 
-La @fig-mdd-youtube présente une modèle du domaine partiel pour le logiciel YouTube.
+La @fig-mdd_youtube présente une modèle du domaine partiel pour le logiciel YouTube.
 Toutefois, les associations du MDD utilisent des verbes ternes qui n'aident pas à comprendre le domaine.
 Remplacez les verbes des associations par des verbes plus riches.
 Vous pouvez inverser le sens des associations.
 
-```{.plantuml #fig-mdd-youtube caption="Modèle du domaine partiel pour le logiciel YouTube."}
+```{.plantuml #fig-mdd_youtube caption="Modèle du domaine partiel pour le logiciel YouTube."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -657,7 +657,7 @@ class Statistique {
 
 ## Voici une solution
 
-```{.plantuml #fig-mdd-youtube caption="Modèle du domaine partiel pour le logiciel YouTube avec des verbes d'association plus riches."}
+```{.plantuml #fig-mdd_youtube_ameliore caption="Modèle du domaine partiel pour le logiciel YouTube avec des verbes d'association plus riches."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
