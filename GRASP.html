@@ -728,10 +728,11 @@ class Joueur {
 
 ::: -->
 <div id="exr-GRASP_GOF_contrôleur" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 6.2 (GRASP Contrôleur et Fabrication Pure) </strong></span>&nbsp;</p>
+<p><span class="theorem-title"><strong>Exercice 6.2 (GRASP Contrôleur, Fabrication Pure et Indirection) </strong></span>&nbsp;</p>
 <ul>
 <li>Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d’un contrôleur de session (de cas d’utilisation) est une Fabrication Pure.</li>
 <li>Soit un contrôleur de session <code>GestionnaireVentes</code><span style="white-space:nowrap"> ;</span> quelle est la «&nbsp;situation désespérée&nbsp;» qui est mitigée par ce <span style="white-space:nowrap">contrôleur ?</span> Astuce&nbsp;: relire la définition de Fabrication Pure.</li>
+<li>Expliquez pourquoi le principe du GRASP Contrôleur dans le cas d’un contrôleur de session est un exemple du GRASP Indirection.</li>
 </ul>
 </div>
 <div id="exr-GRASP_GOF_expert" class="theorem exercise">
@@ -812,6 +813,74 @@ Voici une solution
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> circumference <span class="op">=</span> c<span class="op">.</span><span class="at">circumference</span><span class="op">;</span></span>
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="exr-GRASP_GOF_fabrication_pure_indirection_fabrique" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 6.4 (GRASP Fabrication Pure et Indirection) </strong></span>Appliquez le GRASP Fabrication Pure au contrôleur <code>BirdManager</code> pour améliorer sa cohésion. Ajoutez une fabrique de <code>Bird</code> à qui le contrôleur pourra déléguer la responsabilité de créer les objets <code>Bird</code>. Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple du GRASP Indirection.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BirdManager {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addBird</span>(<span class="dt">b</span><span class="op">:</span> {<span class="dt">type</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span> <span class="dt">numberOfCoconuts</span><span class="op">:</span> number<span class="op">,</span> <span class="dt">voltage</span><span class="op">:</span> number}) {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> <span class="dt">bird</span><span class="op">:</span> Bird<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (b<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"EuropeanSwallow"</span>) {</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            bird <span class="op">=</span> <span class="kw">new</span> <span class="fu">EuropeanSwallow</span>()<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> (b<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"AfricanSwallow"</span>) {</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            bird <span class="op">=</span> <span class="kw">new</span> <span class="fu">AfricanSwallow</span>(b<span class="op">.</span><span class="at">numberOfCoconuts</span>)<span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> (b<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"NorwegianBlueParrot"</span>) {</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            bird <span class="op">=</span> <span class="kw">new</span> <span class="fu">NorwegianBlueParrot</span>(b<span class="op">.</span><span class="at">voltage</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> {</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"Unsupported bird."</span>)<span class="op">;</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Then, we do something with the bird...</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Voici une solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’ajout de la fabrique <code>BirdFactory</code> permet d’améliorer la cohésion du contrôleur <code>BirdManager</code> puisque ses responsabilités sont réduites. La fabrique est un exemple du GRASP Indirection puisqu’elle élimine le couplage direct entre le contrôleur <code>BirdManager</code> et les différents types de <code>Bird</code>. Si d’autres types de <code>Bird</code> sont ajoutés à l’application, l’impact sera moins important sur le contrôleur.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BirdManager {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addBird</span>(<span class="dt">b</span><span class="op">:</span> {<span class="dt">type</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span> <span class="dt">numberOfCoconuts</span><span class="op">:</span> number<span class="op">,</span> <span class="dt">voltage</span><span class="op">:</span> number}) {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> <span class="dt">bird</span><span class="op">:</span> Bird <span class="op">=</span> BirdFactory<span class="op">.</span><span class="fu">createBird</span>(b)<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Then, we do something with the bird...</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BirdFactory {</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">static</span> <span class="fu">createBird</span>(<span class="dt">b</span><span class="op">:</span> {<span class="dt">type</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span> <span class="dt">numberOfCoconuts</span><span class="op">:</span> number<span class="op">,</span> </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                             <span class="dt">voltage</span><span class="op">:</span> number}) {</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> <span class="dt">bird</span><span class="op">:</span> Bird<span class="op">;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (b<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"EuropeanSwallow"</span>) {</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>            bird <span class="op">=</span> <span class="kw">new</span> <span class="fu">EuropeanSwallow</span>()<span class="op">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> (b<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"AfricanSwallow"</span>) {</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>            bird <span class="op">=</span> <span class="kw">new</span> <span class="fu">AfricanSwallow</span>(b<span class="op">.</span><span class="at">numberOfCoconuts</span>)<span class="op">;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> (b<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"NorwegianBlueParrot"</span>) {</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            bird <span class="op">=</span> <span class="kw">new</span> <span class="fu">NorwegianBlueParrot</span>(b<span class="op">.</span><span class="at">voltage</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> {</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"Unsupported bird."</span>)<span class="op">;</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> bird<span class="op">;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
