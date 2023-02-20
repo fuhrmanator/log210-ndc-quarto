@@ -596,3 +596,114 @@ class Fichier {
 ::::
 
 :::
+
+::: {#exr-MDD-associations-riches}
+
+### Utiliser des verbes plus riches pour décrire les associations
+
+La @fig-mdd_youtube présente une modèle du domaine partiel pour le logiciel YouTube.
+Toutefois, les associations du MDD utilisent des verbes ternes qui n'aident pas à comprendre le domaine.
+Remplacez les verbes des associations par des verbes plus riches.
+Vous pouvez inverser le sens des associations.
+
+```{.plantuml #fig-mdd_youtube caption="Modèle du domaine partiel pour le logiciel YouTube."}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+
+Utilisateur "1" -- "*" Chaîne : Possède >
+Chaîne "1" -- "*" Vidéo : Contient >
+Utilisateur "1" -- "*" ListeDeLecture : Possède >
+ListeDeLecture "*" -- "*" Vidéo : Contient >
+Vidéo "1" -- "*" SousTitre : A >
+Vidéo "1" -- "1" Statistique : Possède >
+
+class Vidéo {
+  titre : String
+  description : String
+  url : String
+}
+
+class Utilisateur {
+  nomUtilisateur : String
+  courriel : String
+}
+
+class ListeDeLecture {
+  nom : String
+  description : String
+  visibilite : String
+}
+
+class Chaîne {
+  description : String
+}
+
+class SousTitre {
+  langue : String
+}
+
+class Statistique {
+  visionnements : int
+  dureeVisionnement : float
+  impressions : int
+}
+
+@enduml
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+```{.plantuml #fig-mdd_youtube_ameliore caption="Modèle du domaine partiel pour le logiciel YouTube avec des verbes d'association plus riches."}
+@startuml
+!include ecriture.pumlinclude
+scale 1
+hide empty members
+
+Utilisateur "1" -- "*" Chaîne : Gère >
+Chaîne "1" -- "*" Vidéo : Publie >
+Utilisateur "1" -- "*" ListeDeLecture : Administre >
+ListeDeLecture "*" -- "*" Vidéo : Enregistre >
+Vidéo "1" -- "*" SousTitre : Est-plus-accessible-avec >
+Statistique "1" -- "1" Vidéo : Mesure-visualisation-de >
+
+class Vidéo {
+  titre : String
+  description : String
+  url : String
+}
+
+class Utilisateur {
+  nomUtilisateur : String
+  courriel : String
+}
+
+class ListeDeLecture {
+  nom : String
+  description : String
+  visibilite : String
+}
+
+class Chaîne {
+  description : String
+}
+
+class SousTitre {
+  langue : String
+}
+
+class Statistique {
+  visionnements : int
+  dureeVisionnement : float
+  impressions : int
+}
+
+@enduml
+```
+
+::::
+
+:::
