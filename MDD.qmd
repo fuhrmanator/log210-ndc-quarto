@@ -667,8 +667,8 @@ Utilisateur "1" -- "*" Chaîne : Gère >
 Chaîne "1" -- "*" Vidéo : Publie >
 Utilisateur "1" -- "*" ListeDeLecture : Administre >
 ListeDeLecture "*" -- "*" Vidéo : Enregistre >
-Vidéo "1" -- "*" SousTitre : Est-sous-titré-par >
-Statistique "1" -- "1" Vidéo : Collecte-des-données-sur >
+Vidéo "1" -- "*" SousTitre : Est-plus-accessible-avec >
+Statistique "1" -- "1" Vidéo : Mesure-visualisation-de >
 
 class Vidéo {
   titre : String
