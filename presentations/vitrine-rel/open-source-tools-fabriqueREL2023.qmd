@@ -1,6 +1,8 @@
 ---
-title: "Création d'une REL avec logiciels libres<br>[Creating an OER with OSS]{.english}"
+lang: fr
+title: "Création d'une REL avec logiciels libres<br>[Creating an OER with Open Source Software]{.english}"
 date: 2023-03-09
+date-format: "DD MMMM YYYY"  # pandoc setting
 format: 
     revealjs: 
         theme: beige
@@ -8,14 +10,27 @@ format:
         #     Christopher Fuhrman ([christopher.fuhrman@etsmtl.ca](christopher.fuhrman@etsmtl.ca))
         # institute: École de technologie supérieure
         # date: 2023-03-09
-        subtitle: "![](images/logo_ets_red_centered.svg){style='width:15%'} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/F-REL_logo-coul-horiz.png){style='width:40%'}"
+        subtitle: "![](images/logo_ets_red_centered.svg){style='width:15%'} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/F-REL_logo-coul-horiz.png){style='width:50%'}"
 ---
 
 # Introduction
 
-REL [OER]{.english}:
+Ressource Educative Libre (REL)  
+[Open Educational Resource (OER)]{.english}:  
 ["Analyse et conception de logiciels (LOG210)"](https://fuhrmanator.github.io/log210-ndc-quarto/)
+
 ![](images/F-REL_logo-coul-horiz.png){style='width:70%'}
+
+## Analyse et conception de logiciels (LOG210)
+
+:::: {.columns}
+::: {.column width="30%"}
+[Software Analysis and Design]{.english}
+:::
+::: {.column width="70%"}
+![](images/REL_LOG210_anim%C3%A9e.gif)
+:::
+::::
 
 # Objectifs [Goals]{.english}
 
@@ -25,7 +40,14 @@ REL [OER]{.english}:
 - Durabilité [Sustainability]{.english}
 - Format Web et PDF
 
+# Solution: Quarto
+
+![](images/quarto.svg)
+
+[Quarto.org](https://quarto.org) $\leftarrow$ R Markdown
+
 ## Fichiers sources accessibles [Accessible source files]{.english}
+
 Format textuel [Markdown](https://quarto.org/docs/authoring/markdown-basics.html)
 
 :::::: {.columns}
@@ -56,41 +78,28 @@ technologie supérieure (ÉTS).
 ::::::
 
 ## [Quarto.org](https://quarto.org/)
-Quarto s'occupe de la transformation. [Quarto handles the transformation]{.english}
+Quarto simplifie la transformation. [Quarto simplifies the transformation.]{.english}
 
-```{.plantuml}
-@startdot
+```{.graphviz}
 digraph mygraph {
-  bgcolor="transparent"
-  rankdir=LR;
-  fontname="Helvetica,Arial,sans-serif"
+  bgcolor="transparent"; rankdir=LR
   node [fontname="Helvetica Bold,Arial Bold,sans-serif"]
-  node [shape=note fillcolor="lightgray" style=filled];
+  node [shape=note fillcolor="lightgray" style=filled height="1"];
 
-  qmd [label=<<br/><br/><B>.qmd</B><br/><br/><br/>>]
-  md [label=<<br/><br/><B>.md</B><br/><br/><br/>>]
-
+  qmd [label=".qmd"]
+  md [label=".md"]
 
   node [shape=rectangle style="rounded,filled"]
-  quarto [fillcolor="lightgreen" label="\nquarto\n\n"]
-  pandoc [fillcolor="pink"label="\npandoc\n\n"]
+  quarto [fillcolor="lightblue" label="Quarto" shape=circle]
+  pandoc [fillcolor="pink" label="Pandoc"]
 
-  node [shape=note fillcolor="white" style=filled];
-  qmd -> quarto -> md -> pandoc -> html;
-  pandoc -> pdf
-  pandoc -> epub
-  pandoc -> word
-  pandoc -> "..."
-
-
+  node [shape=note fillcolor="white" style=filled]; html; pdf
+  qmd -> quarto -> md -> pandoc 
+  -> {html pdf "..."};
 }
-@enddot
 ```
-
-# Outils de logiciels libres [OSS Tools]{.english}
-
-## Éditeur [Editor]{.english}
-[Visual Studio Code](https://code.visualstudio.com/) ![](images/vscode.png){width=50px} 
+Inteface de commande en ligne: [Command-line interface:]{.english}  
+`quarto render --to html` (pdf/epub/docx/etc.)
 
 ## Structure d'un livre Quarto [Book structure]{.english}{.smaller}
 
@@ -121,21 +130,31 @@ format:
     cover-image: cover.png
 ```
 
+# Outils de logiciels libres<br/>[Open Source Software  Tools]{.english}
+
+## Éditeur texte [Text editor]{.english}
+[Visual Studio Code](https://code.visualstudio.com/) IDE + [Extension Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) (.qmd)
+
+![](images/VSCodeQuartoCapture.png)
+
+[RStudio](https://posit.co/products/open-source/rstudio/) IDE
+
 ## Code source diagrammes [Diagram source code]{.english}{.smaller}
 
-[PlantUML.com](https://plantuml.com/starting) (format des diagrammes)
+::::::: {.panel-tabset}
+
+### PlantUML.com
 
 ::: {.columns}
 
-::: {.column width="60%"}
-````{.java code-line-numbers=false}
-```{.plantuml #fig-ddcDes caption="Diagramme de 
-*classes logicielles*."}
+::: {.column width="50%"}
+````{code-line-numbers=false}
+```{.plantuml #fig-ddcDes caption="Diagramme de classes."}
 @startuml
 skinparam style strictuml
 hide empty methods
 class Dé {
-    +face : int
+    + face : int
     brasser()
 }
 class JeuDeDés {
@@ -145,23 +164,23 @@ class JeuDeDés {
     terminerJeu(nom : string)
 }
 class Joueur {
-    +nom : string
+    + nom : string
 }
 JeuDeDés --> "d1" Dé
 JeuDeDés --> "d2" Dé
-JeuDeDés ------r------- "[nom]" Joueur : "             "
+JeuDeDés -right- "[nom]" Joueur : "             "
 @enduml
 ```
 ````
 :::
 
-::: {.column width="40%"}
-```{.plantuml #fig-ddcDes caption="Diagramme de *classes logicielles*."}
+::: {.column width="50%"}
+```{.plantuml #fig-ddcDes caption="Diagramme de classes."}
 @startuml
 skinparam style strictuml
 hide empty methods
 class Dé {
-    +face : int
+    + face : int
     brasser()
 }
 class JeuDeDés {
@@ -171,18 +190,71 @@ class JeuDeDés {
     terminerJeu(nom : string)
 }
 class Joueur {
-    +nom : string
+    + nom : string
 }
 JeuDeDés --> "d1" Dé
 JeuDeDés --> "d2" Dé
-JeuDeDés ------r------- "[nom]" Joueur : "             "
+JeuDeDés -right- "[nom]" Joueur : "             "
 @enduml
 ```
 :::
 
 ::::
 
+[Filtre Pandoc `diagram-generator.lua`](https://github.com/pandoc/lua-filters/tree/master/diagram-generator)
 
+
+### GraphViz
+
+::: {.columns}
+
+::: {.column}
+````{code-line-numbers="false"}
+```{.graphviz}
+digraph mygraph {
+  bgcolor="transparent"; rankdir=LR
+  node [fontname="Helvetica Bold,Arial Bold,sans-serif"]
+  node [shape=note fillcolor="lightgray" style=filled height="1"];
+
+  qmd [label=".qmd"]
+  md [label=".md"]
+
+  node [shape=rectangle style="rounded,filled"]
+  quarto [fillcolor="lightblue" label="Quarto" shape=circle]
+  pandoc [fillcolor="pink" label="Pandoc"]
+
+  node [shape=note fillcolor="white" style=filled]; html; pdf
+  qmd -> quarto -> md -> pandoc 
+  -> {html pdf "..."};
+}
+```
+````
+:::
+
+::: {.column}
+```{.graphviz}
+digraph mygraph {
+  bgcolor="transparent"; rankdir=LR
+  node [fontname="Helvetica Bold,Arial Bold,sans-serif"]
+  node [shape=note fillcolor="lightgray" style=filled height="1"];
+
+  qmd [label=".qmd"]
+  md [label=".md"]
+
+  node [shape=rectangle style="rounded,filled"]
+  quarto [fillcolor="lightblue" label="Quarto" shape=circle]
+  pandoc [fillcolor="pink" label="Pandoc"]
+
+  node [shape=note fillcolor="white" style=filled]; html; pdf
+  qmd -> quarto -> md -> pandoc 
+  -> {html pdf "..."};
+}
+```
+:::
+:::
+
+::::::: 
+<!-- .panel-tabset -->
 
 ## Construction automatisée [Automated build]{.english}
 
@@ -198,8 +270,9 @@ start
 
 ## Facilité de modification [Easy to modify]{.english}
 
-- Typographie française (extrait de <https://fvsch.com/espaces-ponctuation>):
+Complexité de la typographie française (extrait de <https://fvsch.com/espaces-ponctuation>):
 
+::: {.callout-warning appearance="simple"}
 **Nom**|**espace avant**|**signe**|**espace après**
 :-----:|:-----:|:-----:|:-----:
 Point-virgule|fine insécable ‡|;|justifiante *
@@ -208,9 +281,49 @@ Guillemet ouvrant|justifiante *|«|fine insécable ‡
 Guillemet fermant|fine insécable ‡|»|justifiante *
 Point d’interrogation|fine insécable ‡|?|justifiante *
 Point d’exclamation|fine insécable ‡|!|justifiante *
+:::
 
-## blah
+Solution: [Filtre Pandoc `fr-nbsp`](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) disponible sur GitHub
 
-- Filtres pandoc
-    - espaces insécables
-    - diagrammes PlantUML
+## [Filtre fr-nbsp](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) Pandoc
+
+:::: {.columns}
+::: {.column}
+Code en Markdown:
+```{code-line-numbers="false" }
+Descartes a dit: "Je pense, donc je suis."
+```
+:::
+::: {.column}
+
+Résultat:
+
+::: {.callout}
+Descartes a dit: "Je pense, donc je suis."
+:::
+:::
+::::
+
+## Contrôle des versions [Version control]{.english} ⚠
+
+- Git
+- GitHub issues -- système de suivi de problèmes [issue tracking system]{.english} 
+- ["GitHub flow"](https://docs.github.com/en/get-started/quickstart/github-flow) -- collaboration
+
+# Limitations
+
+- Différences entre formats (HTML vs PDF vs EPUB)
+- License MIT (GitHub) vs CC (REL)
+- Réviseurs ne travaillent pas avec Markdown (ou GitHub)
+
+# Conclusion{.volunteering}
+
+La création d'une REL est l'occasion de contribuer à la communauté open source.  
+[Creating an OER is an opportunity to contribute to the open-source community.]{.english}
+
+- GitHub Quarto -- [Contributions](https://github.com/quarto-dev/quarto-cli/issues?q=is%3Aissue+author%3Afuhrmanator), [Discussions](https://github.com/quarto-dev/quarto-cli/discussions?discussions_q=author%3Afuhrmanator)
+
+Crédit image[^volunteering]
+
+[^volunteering]: volunteering par Rusmaniah de [Noun Project](https://thenounproject.com/browse/icons/term/volunteering/)
+
