@@ -1,0 +1,7 @@
+---
+
+---
+
+<!-- Plusieurs entreprises de développement de logiciels et applications telles que : Microsoft, Apple, Bouygues, se sont basées sur le principe d'autoéquipement, aussi appelé « livraison à soi-même », qui consiste à utiliser leurs propres produits pour déceler des erreurs et des fonctionnalités qui posent problème afin de les améliorer et d’avoir de meilleurs produits.  Le fait même d’utiliser des outils et des logiciels libres pour créer une RÉL nous implante dans l’entreprise des produits libres et nous met au cœur de communautés qui contribuent à l’amélioration de ces produits. Autant qu’utilisateurs des outils libres, nous devons aussi ramener une valeur ajoutée et contribuer à leur amélioration. Comment s’impliquer réellement dans le processus d’amélioration de ces outils?
+
+Nous allons présenter cette dimension de notre expérience de création d’une REL - dans le cadre d’un projet avec la fabriqueREL - en tant que membre actif d’une communauté d'outils et de logiciels libres tels que Quarto, pandoc, PlantUML, etc. avec un l’objectif et la perspective d'améliorer ces outils. -->
