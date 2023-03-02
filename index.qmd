@@ -1,6 +1,6 @@
 #     {.unnumbered .unlisted}
 <!-- remonter sur la page (sur le nom blanc du chapitre) -->
-\vspace{-5.2cm}
+\vspace{-5.2cm} 
 {{< include _deuxieme_page.qmd >}}
 
 \clearpage

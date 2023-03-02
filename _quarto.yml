@@ -33,8 +33,10 @@ book:
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
-  date: last-modified
-  date-format: "DD MMMM YYYY à HH:mm:ss Z"
+  # date: last-modified
+  # date-format: "DD MMMM YYYY à HH:mm:ss Z"
+  date: 2023-03-01
+  date-format: "DD MMMM YYYY"
 
   chapters:
   - index.qmd # Preface
@@ -155,8 +157,8 @@ format:
       \Language{fr-CA}
       \Keywords{Analyse du domaine d'affaires\sep développement itératif et évolutif\sep design patterns\sep UML\sep conception\sep développement piloté par les tests\sep réusinage (refactoring)}
       \Subject{Ce manuel vise à décrire une méthodologie d'analyse, de conception et de développement de logiciels.}
-      \CoverDate{2023-02-18}
-      \CoverDisplayDate{18 février 2023}
+      \CoverDate{2023-03-01}
+      \CoverDisplayDate{01 mars 2023}
       \Copyright{Sauf indications contraires, le contenu de ce manuel électronique est disponible en vertu des termes de la Licence Creative Commons Attribution 4.0 International}
       \CopyrightURL{https://creativecommons.org/licenses/by/4.0/deed.fr}
       \end{filecontents*}

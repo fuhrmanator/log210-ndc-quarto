@@ -48,9 +48,8 @@ Vous devez indiquer ces informations par tous les moyens raisonnables, sans tout
 \filbreak
 
 ISBN-13: 978-2-921145-90-9\
-Dépôt légal 2023\
-DOI:\
-Handle (permalien):\
+Dépôt légal, Bibliothèque et Archives nationales du Québec, 2023.\
+Dépôt légal, Bibliothèque et Archives Canada, 2023.\
 © Christopher Fuhrman et Yvan Ross (2023)\
 Pour citer ce manuel: Christopher Fuhrman et Yvan Ross. (2023).
 *Analyse et conception de logiciels*. École de technologie supérieure.
