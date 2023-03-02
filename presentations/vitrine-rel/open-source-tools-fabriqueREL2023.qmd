@@ -304,19 +304,21 @@ Descartes a dit: "Je pense, donc je suis."
 :::
 ::::
 
-## Contrôle des versions [Version control]{.english} ⚠
+## Contrôle des versions [Version control]{.english} 🤓
 
 - Git
 - GitHub issues -- système de suivi de problèmes [issue tracking system]{.english} 
 - ["GitHub flow"](https://docs.github.com/en/get-started/quickstart/github-flow) -- collaboration
 
-# Limitations
+# Limitations 😕
 
 - Différences entre formats (HTML vs PDF vs EPUB)
+- Diagrammes en SVG malgré tout
+- Environnement LaTeX (PDF) complexe
 - License MIT (GitHub) vs CC (REL)
 - Réviseurs ne travaillent pas avec Markdown (ou GitHub)
 
-# Conclusion{.volunteering}
+# Conclusion 😁{.volunteering}
 
 La création d'une REL est l'occasion de contribuer à la communauté open source.  
 [Creating an OER is an opportunity to contribute to the open-source community.]{.english}
