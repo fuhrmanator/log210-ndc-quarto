@@ -26,6 +26,38 @@
   color: blue;
 }
 
+.objectives div.slide-background-content {
+  background-image: url("images/noun-objectives-1392483.svg");
+  background-size: 15%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  /* background-color: lightblue; */
+}
+
+.quarto div.slide-background-content {
+  background-image: url("images/quarto.svg");
+  background-size: 15%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  background-color: lightblue;
+}
+
+.opensourcesoftware div.slide-background-content {
+  background-image: url("images/noun-open-source-software-1326330.svg");
+  background-size: 15%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  background-color: lightgreen;
+}
+
+.challenges div.slide-background-content {
+  background-image: url("images/noun-technical-2927762.svg");
+  background-size: 15%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  background-color: orange;
+}
+
 .volunteering div.slide-background-content {
   background-image: url("images/noun-volunteering-5289543.svg");
   background-size: 20%;

@@ -32,21 +32,24 @@ Ressource Educative Libre (REL)
 :::
 ::::
 
-# Objectifs [Goals]{.english}
+# Objectifs [Goals]{.english}[^objectives] {.objectives}
 
+- Logiciels libres [Open source]{.english}
 - Facilité pour évoluer le contenu (fichiers sources accessibles) [Easy to modify (accessible source files)]{.english}
 - Facilité de construction [Easy to build]{.english}
 - Contrôle de versions [Version control]{.english}
 - Durabilité [Sustainability]{.english}
 - Format Web et PDF
 
-# Solution: Quarto
+[^objectives]: objectives par Creative Mania de [Noun Project](https://thenounproject.com/browse/icons/term/objectives/)
+
+# Solution: Quarto {.quarto}
 
 ![](images/quarto.svg)
 
 [Quarto.org](https://quarto.org) $\leftarrow$ R Markdown
 
-## Fichiers sources accessibles [Accessible source files]{.english}
+## Fichiers sources accessibles [Accessible source files]{.english}{.quarto}
 
 Format textuel [Markdown](https://quarto.org/docs/authoring/markdown-basics.html)
 
@@ -77,7 +80,7 @@ technologie supérieure (ÉTS).
 
 ::::::
 
-## [Quarto.org](https://quarto.org/)
+## [Quarto.org](https://quarto.org/){.quarto}
 Quarto simplifie la transformation. [Quarto simplifies the transformation.]{.english}
 
 ```{.graphviz}
@@ -101,7 +104,7 @@ digraph mygraph {
 Inteface de commande en ligne: [Command-line interface:]{.english}  
 `quarto render --to html` (pdf/epub/docx/etc.)
 
-## Structure d'un livre Quarto [Book structure]{.english}{.smaller}
+## Structure d'un livre Quarto [Book structure]{.english}{.smaller .quarto}
 
 Exemple de [*Creating a book*](https://quarto.org/docs/books/) (Quarto.org)
 
@@ -130,16 +133,18 @@ format:
     cover-image: cover.png
 ```
 
-# Outils de logiciels libres<br/>[Open Source Software  Tools]{.english}
+# Logiciels libres<br/>[Open Source Software]{.english}[^opensourcesoftware] {.opensourcesoftware}
 
-## Éditeur texte [Text editor]{.english}
+[^opensourcesoftware]: open source software par Ralf Schmitzer de [Noun Project](https://thenounproject.com/browse/icons/term/open-source-software/)
+
+## Éditeur texte [Text editor]{.english}{.opensourcesoftware}
 [Visual Studio Code](https://code.visualstudio.com/) IDE + [Extension Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) (.qmd)
 
 ![](images/VSCodeQuartoCapture.png)
 
 [RStudio](https://posit.co/products/open-source/rstudio/) IDE
 
-## Code source diagrammes [Diagram source code]{.english}{.smaller}
+## Code source diagrammes [Diagram source code]{.english}{.opensourcesoftware .smaller}
 
 ::::::: {.panel-tabset}
 
@@ -256,7 +261,7 @@ digraph mygraph {
 ::::::: 
 <!-- .panel-tabset -->
 
-## Construction automatisée [Automated build]{.english}
+## Construction automatisée [Automated build]{.english}{.opensourcesoftware}
 
 - GitHub + [Action GitHub](https://github.com/fuhrmanator/log210-ndc-quarto/blob/main/.github/workflows/quarto-render-publish.yml) (script pour générer la REL avec Quarto en ligne)
 
@@ -264,11 +269,11 @@ digraph mygraph {
 skinparam backgroundcolor transparent
 start
 :Actualiser et soumettre (//commit//) un fichier Markdown sur dépôt GitHub.com;
-:Action GitHub (génération automatique du manuel);
-#lightgreen:Nouvelle version de la REL]
+:Action GitHub + Quarto (génération automatique du manuel HTML et PDF);
+#lightgreen:Nouvelle version de la REL déployée]
 ```
 
-## Facilité de modification [Easy to modify]{.english}
+## Facilité de modification [Easy to modify]{.english}{.opensourcesoftware}
 
 Complexité de la typographie française (extrait de <https://fvsch.com/espaces-ponctuation>):
 
@@ -285,18 +290,19 @@ Point d’exclamation|fine insécable ‡|!|justifiante *
 
 Solution: [Filtre Pandoc `fr-nbsp`](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) disponible sur GitHub
 
-## [Filtre fr-nbsp](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) Pandoc
+## [Filtre fr-nbsp](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) Pandoc{.opensourcesoftware}
 
 :::: {.columns}
 ::: {.column}
-Code en Markdown:
+Code en Markdown (simple à écrire):
 ```{code-line-numbers="false" }
-Descartes a dit: "Je pense, donc je suis."
+Descartes a dit: 
+"Je pense, donc je suis."
 ```
 :::
 ::: {.column}
 
-Résultat:
+Résultat (bonne typographie):
 
 ::: {.callout}
 Descartes a dit: "Je pense, donc je suis."
@@ -304,26 +310,33 @@ Descartes a dit: "Je pense, donc je suis."
 :::
 ::::
 
-## Contrôle des versions [Version control]{.english} 🤓
+## Contrôle des versions [Version control]{.english}{.opensourcesoftware}
+
+🤓
 
 - Git
 - GitHub issues -- système de suivi de problèmes [issue tracking system]{.english} 
 - ["GitHub flow"](https://docs.github.com/en/get-started/quickstart/github-flow) -- collaboration
 
-# Limitations 😕
+# Défis [Challenges]{.english}[^challenges] {.challenges}
 
 - Différences entre formats (HTML vs PDF vs EPUB)
+- Structure "book" trop simple
 - Diagrammes en SVG malgré tout
 - Environnement LaTeX (PDF) complexe
 - License MIT (GitHub) vs CC (REL)
 - Réviseurs ne travaillent pas avec Markdown (ou GitHub)
 
-# Conclusion 😁{.volunteering}
+[^challenges]: technical par Eucalyp de [Noun Project](https://thenounproject.com/browse/icons/term/technical/)
 
-La création d'une REL est l'occasion de contribuer à la communauté open source.  
-[Creating an OER is an opportunity to contribute to the open-source community.]{.english}
+# Conclusion {.volunteering}
 
-- GitHub Quarto -- [Contributions](https://github.com/quarto-dev/quarto-cli/issues?q=is%3Aissue+author%3Afuhrmanator), [Discussions](https://github.com/quarto-dev/quarto-cli/discussions?discussions_q=author%3Afuhrmanator)
+La création d'une REL grâce aux logiciels libres est aussi l'occasion de contribuer à la communauté de logiciels libres.  
+[Creating an OER thanks to OSS is also an opportunity to give back to the open-source community.]{.english}
+
+😁
+
+- GitHub Quarto -- [Issues (10)](https://github.com/quarto-dev/quarto-cli/issues?q=is%3Aissue+author%3Afuhrmanator), [Discussions (25+)](https://github.com/quarto-dev/quarto-cli/discussions?discussions_q=author%3Afuhrmanator)
 
 Crédit image[^volunteering]
 
