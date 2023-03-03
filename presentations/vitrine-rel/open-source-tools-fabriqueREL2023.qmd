@@ -28,7 +28,7 @@ Ressource Educative Libre (REL)
 [Software Analysis and Design]{.english}
 :::
 ::: {.column width="70%"}
-![](images/REL_LOG210_anim%C3%A9e.gif)
+![](images/REL_LOG210_anim%C3%A9e.gif){width=80%}
 :::
 ::::
 
