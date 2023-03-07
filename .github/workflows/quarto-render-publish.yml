@@ -1,7 +1,7 @@
 on:  
   workflow_dispatch:
-  push:
-    branches: [main]
+#   push:
+#     branches: [main]
 # PR will "overwrite" the GitHub pages; not good!
 #   pull_request:
 #     branches: main
