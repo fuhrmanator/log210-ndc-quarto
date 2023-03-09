@@ -13,6 +13,7 @@ format:
     subtitle: "![](images/logo_ets_red_centered.svg){style='width:15%'} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/F-REL_logo-coul-horiz.png){style='width:50%'}"
     # self-contained: true
     toc: false
+    overview: true
     chalkboard: true
 
 ---
