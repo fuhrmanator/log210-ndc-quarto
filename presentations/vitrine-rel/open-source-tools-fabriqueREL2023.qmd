@@ -61,15 +61,25 @@ At the end, I will be happy to take questions in French or English.
 
 [^objectives]: objectives (CC BY) par Creative Mania de [Noun Project](https://thenounproject.com/browse/icons/term/objectives/)
 
-# Solution: Quarto {.quarto}
+# Quarto + GitHub {.quarto}
 
-![](images/quarto.svg)
+::: {.columns}
+::: {.column}
+![](images/quarto.svg){width=50%}
 
 [Quarto.org](https://quarto.org) $\leftarrow$ R Markdown
+:::
+::: {.column}
+![](images/GitHub_Logo.png)
+
+Les "codes sources" de la REL sont dans les fichiers Markdown sur un dépôt GitHub.
+
+:::
+:::
 
 ## Fichiers sources accessibles [Accessible source files]{.english}{.quarto}
 
-Format textuel [Markdown](https://quarto.org/docs/authoring/markdown-basics.html)
+[Markdown](https://quarto.org/docs/authoring/markdown-basics.html) est un langage de balisage léger [lightweight markup language]{.english}
 
 :::::: {.columns}
 
@@ -97,8 +107,10 @@ technologie supérieure (ÉTS).
 :::::
 
 ::::::
+Avantages: Facilité, portabilité, lisibilité, rapidité  
+Inconvénients: Limitation de formatage, de personnalisation, dépendance sur la syntaxe
 
-## [Quarto.org](https://quarto.org/){.quarto}
+## [Quarto.org](https://quarto.org/) {.quarto}
 Quarto simplifie la transformation. [Quarto simplifies the transformation.]{.english}
 
 ```{.graphviz}
@@ -120,7 +132,7 @@ digraph mygraph {
 }
 ```
 Inteface de commande en ligne: [Command-line interface:]{.english}  
-`quarto render --to html` (pdf/epub/docx/etc.)
+`quarto render --to html` (pdf/epub/docx/pptx/etc.)
 
 ## Structure d'un livre Quarto [Book structure]{.english}{.smaller .quarto}
 
@@ -284,7 +296,8 @@ digraph mygraph {
 
 ## Construction automatisée [Automated build]{.english}{.opensourcesoftware}
 
-- GitHub + [Action GitHub](https://github.com/fuhrmanator/log210-ndc-quarto/blob/main/.github/workflows/quarto-render-publish.yml) (script pour générer la REL avec Quarto en ligne)
+GitHub + [Action GitHub](https://github.com/fuhrmanator/log210-ndc-quarto/blob/main/.github/workflows/quarto-render-publish.yml) (script pour générer la REL avec Quarto en ligne)  
+"Déploiement continue [Continuous deployment]{.english}"
 
 ```{.plantuml}
 skinparam backgroundcolor transparent
@@ -294,7 +307,7 @@ start
 #lightgreen:Nouvelle version de la REL déployée (GitHub.io)]
 ```
 
-## Facilité de modification [Easy to modify]{.english}{.opensourcesoftware}
+<!-- ## Facilité de modification [Easy to modify]{.english}{.opensourcesoftware}
 
 Complexité de la typographie française (extrait de <https://fvsch.com/espaces-ponctuation>):
 
@@ -309,7 +322,7 @@ Point d’interrogation|fine insécable ‡|?|justifiante *
 Point d’exclamation|fine insécable ‡|!|justifiante *
 :::
 
-Solution: [Filtre Pandoc `fr-nbsp`](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) disponible sur GitHub
+Solution: [Filtre Pandoc `fr-nbsp`](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) disponible sur GitHub -->
 
 ## [Filtre fr-nbsp](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) Pandoc{.opensourcesoftware}
 
@@ -323,7 +336,7 @@ Descartes a dit:
 :::
 ::: {.column}
 
-Résultat (bonne typographie):
+Résultat (bonne typographie avec espaces insécables [non-breaking spaces]{.englishs}, etc.):
 
 ::: {.callout}
 Descartes a dit: "Je pense, donc je suis."
@@ -333,11 +346,16 @@ Descartes a dit: "Je pense, donc je suis."
 
 ## Contrôle des versions [Version control]{.english}{.opensourcesoftware}
 
-🤓
-
-- Git
+::: {.columns}
+::: {.column}
+- Git 🤓
 - GitHub issues -- système de suivi de problèmes [issue tracking system]{.english} 
 - ["GitHub flow"](https://docs.github.com/en/get-started/quickstart/github-flow) -- collaboration
+::: 
+::: {.column}
+![](images/signaler-un-probleme.gif)
+:::
+:::
 
 # Défis [Challenges]{.english}[^challenges] {.challenges}
 
