@@ -4,22 +4,40 @@ title: "Création d'une REL avec logiciels libres<br>[Creating an OER with Open 
 date: 2023-03-09
 date-format: "DD MMMM YYYY"  # pandoc setting
 format: 
-    revealjs: 
-        theme: beige
-        # author:
-        #     Christopher Fuhrman ([christopher.fuhrman@etsmtl.ca](christopher.fuhrman@etsmtl.ca))
-        # institute: École de technologie supérieure
-        # date: 2023-03-09
-        subtitle: "![](images/logo_ets_red_centered.svg){style='width:15%'} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/F-REL_logo-coul-horiz.png){style='width:50%'}"
+  revealjs: 
+    theme: beige
+    # author:
+    #     Christopher Fuhrman ([christopher.fuhrman@etsmtl.ca](christopher.fuhrman@etsmtl.ca))
+    # institute: École de technologie supérieure
+    # date: 2023-03-09
+    subtitle: "![](images/logo_ets_red_centered.svg){style='width:15%'} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/F-REL_logo-coul-horiz.png){style='width:50%'}"
+    # self-contained: true
+    toc: false
+    chalkboard: true
+
 ---
 
 # Introduction
 
 Ressource Educative Libre (REL)  
 [Open Educational Resource (OER)]{.english}:  
-["Analyse et conception de logiciels (LOG210)"](https://fuhrmanator.github.io/log210-ndc-quarto/)
+Manuel ["Analyse et conception de logiciels (LOG210)"](https://fuhrmanator.github.io/log210-ndc-quarto/)
 
 ![](images/F-REL_logo-coul-horiz.png){style='width:70%'}
+
+Catégorie 1: "Phase 2 de création d'un manuel (complétion d'un projet existant)". Ajouter exercices + normes CC.
+
+::: {.notes}
+
+Je m'appelle Christopher Fuhrman
+Je suis professeur en génie logiciel à l'École de technologie supérieure à Montréal depuis 2001.
+Je suis fier de vous présenter notre expérience avec une REL créée avec le soutien de la fabriqueREL.
+Je tiens à remercier mon binôme Mouna Moumene de la bibliothèque de l'ÉTS
+ainsi que les étudiantes et étudiants ayant contribué à ce projet.
+Aussi, ma présentation est censée être bilingue, mais le temps est très court.
+Alors, je vais présenter en français, but there are translations in dark blue on the slides as needed.
+At the end, I will be happy to take questions in French or English.
+:::
 
 ## Analyse et conception de logiciels (LOG210)
 
@@ -34,14 +52,14 @@ Ressource Educative Libre (REL)
 
 # Objectifs [Goals]{.english}[^objectives] {.objectives}
 
-- Logiciels libres [Open source]{.english}
+- Logiciels libres [Open source software]{.english}
 - Facilité pour évoluer le contenu (fichiers sources accessibles) [Easy to modify (accessible source files)]{.english}
 - Facilité de construction [Easy to build]{.english}
 - Contrôle de versions [Version control]{.english}
 - Durabilité [Sustainability]{.english}
 - Format Web et PDF
 
-[^objectives]: objectives par Creative Mania de [Noun Project](https://thenounproject.com/browse/icons/term/objectives/)
+[^objectives]: objectives (CC BY) par Creative Mania de [Noun Project](https://thenounproject.com/browse/icons/term/objectives/)
 
 # Solution: Quarto {.quarto}
 
@@ -135,7 +153,7 @@ format:
 
 # Logiciels libres<br/>[Open Source Software]{.english}[^opensourcesoftware] {.opensourcesoftware}
 
-[^opensourcesoftware]: open source software par Ralf Schmitzer de [Noun Project](https://thenounproject.com/browse/icons/term/open-source-software/)
+[^opensourcesoftware]: open source software (CC BY) par Ralf Schmitzer de [Noun Project](https://thenounproject.com/browse/icons/term/open-source-software/)
 
 ## Éditeur texte [Text editor]{.english}{.opensourcesoftware}
 [Visual Studio Code](https://code.visualstudio.com/) IDE + [Extension Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) (.qmd)
@@ -157,7 +175,7 @@ format:
 ```{.plantuml #fig-ddcDes caption="Diagramme de classes."}
 @startuml
 skinparam style strictuml
-hide empty methods
+skinparam backgroundcolor transparent
 class Dé {
     + face : int
     brasser()
@@ -183,7 +201,7 @@ JeuDeDés -right- "[nom]" Joueur : "             "
 ```{.plantuml #fig-ddcDes caption="Diagramme de classes."}
 @startuml
 skinparam style strictuml
-hide empty methods
+skinparam backgroundcolor transparent
 class Dé {
     + face : int
     brasser()
@@ -206,16 +224,13 @@ JeuDeDés -right- "[nom]" Joueur : "             "
 
 ::::
 
-[Filtre Pandoc `diagram-generator.lua`](https://github.com/pandoc/lua-filters/tree/master/diagram-generator)
-
-
 ### GraphViz
 
 ::: {.columns}
 
 ::: {.column}
 ````{code-line-numbers="false"}
-```{.graphviz}
+```{.graphviz #fig-tq caption="Transformations de Quarto."}
 digraph mygraph {
   bgcolor="transparent"; rankdir=LR
   node [fontname="Helvetica Bold,Arial Bold,sans-serif"]
@@ -237,7 +252,7 @@ digraph mygraph {
 :::
 
 ::: {.column}
-```{.graphviz}
+```{.graphviz #fig-tq caption="Transformations de Quarto."}
 digraph mygraph {
   bgcolor="transparent"; rankdir=LR
   node [fontname="Helvetica Bold,Arial Bold,sans-serif"]
@@ -261,6 +276,12 @@ digraph mygraph {
 ::::::: 
 <!-- .panel-tabset -->
 
+[Filtre Pandoc `diagram-generator.lua`](https://github.com/pandoc/lua-filters/tree/master/diagram-generator)
+
+::: {.callout-tip appearance="simple"}
+[kroki.io](https://kroki.io/) d'autres possibilités [other ways to produce diagrams]{.english}
+:::
+
 ## Construction automatisée [Automated build]{.english}{.opensourcesoftware}
 
 - GitHub + [Action GitHub](https://github.com/fuhrmanator/log210-ndc-quarto/blob/main/.github/workflows/quarto-render-publish.yml) (script pour générer la REL avec Quarto en ligne)
@@ -270,7 +291,7 @@ skinparam backgroundcolor transparent
 start
 :Actualiser et soumettre (//commit//) un fichier Markdown sur dépôt GitHub.com;
 :Action GitHub + Quarto (génération automatique du manuel HTML et PDF);
-#lightgreen:Nouvelle version de la REL déployée]
+#lightgreen:Nouvelle version de la REL déployée (GitHub.io)]
 ```
 
 ## Facilité de modification [Easy to modify]{.english}{.opensourcesoftware}
@@ -321,15 +342,15 @@ Descartes a dit: "Je pense, donc je suis."
 # Défis [Challenges]{.english}[^challenges] {.challenges}
 
 - Différences entre formats (HTML vs PDF vs EPUB)
-- Structure "book" trop simple
+- Structure "book" trop simple en Quarto
 - Diagrammes en SVG malgré tout
 - Environnement LaTeX (PDF) complexe
-- License MIT (GitHub) vs CC (REL)
+- License MIT (fichier markdown sur GitHub) vs CC (REL)
 - Réviseurs ne travaillent pas avec Markdown (ou GitHub)
 
-[^challenges]: technical par Eucalyp de [Noun Project](https://thenounproject.com/browse/icons/term/technical/)
+[^challenges]: technical (CC BY) par Eucalyp de [Noun Project](https://thenounproject.com/browse/icons/term/technical/)
 
-# Conclusion {.volunteering}
+# Conclusion[^volunteering] {.volunteering}
 
 La création d'une REL grâce aux logiciels libres est aussi l'occasion de contribuer à la communauté de logiciels libres.  
 [Creating an OER thanks to OSS is also an opportunity to give back to the open-source community.]{.english}
@@ -338,7 +359,12 @@ La création d'une REL grâce aux logiciels libres est aussi l'occasion de contr
 
 - GitHub Quarto -- [Issues (10)](https://github.com/quarto-dev/quarto-cli/issues?q=is%3Aissue+author%3Afuhrmanator), [Discussions (25+)](https://github.com/quarto-dev/quarto-cli/discussions?discussions_q=author%3Afuhrmanator)
 
-Crédit image[^volunteering]
+[^volunteering]: volunteering (CC BY) par Rusmaniah de [Noun Project](https://thenounproject.com/browse/icons/term/volunteering/)
 
-[^volunteering]: volunteering par Rusmaniah de [Noun Project](https://thenounproject.com/browse/icons/term/volunteering/)
-
+::: {.notes}
+- Nous avons utilisé plusieurs logiciels libres et nous avons également contribué aux communautés qui les ont créés.
+- Faire une contribution:
+  - donner rétroaction (feedback), 
+  - signaler un bogue,
+  - etc.
+:::

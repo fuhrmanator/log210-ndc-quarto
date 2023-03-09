@@ -23,7 +23,7 @@
 }
 
 .english {
-  color: blue;
+  color:#342D7E;
 }
 
 .objectives div.slide-background-content {
@@ -44,7 +44,7 @@
 
 .opensourcesoftware div.slide-background-content {
   background-image: url("images/noun-open-source-software-1326330.svg");
-  background-size: 15%;
+  background-size: 10%;
   background-position: right 5% top 5%;
   opacity: 0.4;
   background-color: lightgreen;
