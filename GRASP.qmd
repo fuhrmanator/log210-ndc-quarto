@@ -690,4 +690,135 @@ class BookManager {
 ```
 ::::
 
+::: {#exr-GRASP_GOF_polymorphisme_createur_forte_cohesion_faible_couplage}
+
+### GRASP Polymorphisme, créateur, fabrication pure, indirection, forte cohésion et faible couplage
+
+Appliquez les GRASP polymorphisme, créateur, fabrication pure et indirection à la classe `SomeClass` pour améliorer sa cohésion et réduire son couplage.
+Créez une interface `Parser` qui contient les méthodes pertinentes aux parsers et qui sera implémentée par ces derniers.
+Ajoutez un parse pour chaque type de fichier traitée par la méthode `parsePart`.
+Ajoutez une fabrique de `Parser` à qui `SomeClass` pourra déléguer la responsabilité de créer les objets `Parser`.
+
+```javascript
+class Part {
+    name:string
+    description:String
+
+    constructor(name:string, description:String) {
+        this.name = name;
+        this.description = description;
+    }
+}
+
+class SomeClass {
+    public parsePart(fileType:string, content:string) {
+        var part:Part;
+
+        if (fileType == "csv") {
+            const partsInfo = content.split(",");
+
+            part = new Part(partsInfo[0], partsInfo[1]);
+        }
+        else if (fileType == "json") {
+            const part = JSON.parse(content);
+
+            part = new Part(part.name, part.description);
+        }
+        else if (fileType == "xml") {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(content, "application/xml");
+
+            var name = xml.getElementsByTagName("name")[0].childNodes[0].nodeValue || ""; // Return an empty name if it is not in the XML tree
+            var description = xml.getElementsByTagName("description")[0].childNodes[0].nodeValue || ""; // Return an empty description if it is not in the XML tree
+
+            part = new Part(name, description);
+        }
+        else {
+            throw new Error("Unsupported file type");
+        }
+
+        // Then, we do something with the part...
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+La création de l'interface `PartParser` est un exemple de polymorphisme qui permet de réduire le couplage entre `SomeClass` et les différents types de `PartParser`.
+L'ajout de la fabrique `PartFactory` permet d'améliorer la cohésion de la classe `SomeClass` puisque ses responsabilités sont réduites.
+La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre la classe `SomeClass` et les différents types de `PartParser`.
+Si d'autres types de `PartParser` sont ajoutés à l'application, l'impact sera moins important sur le contrôleur.
+
+```javascript
+class Part {
+    name:string
+    description:String
+
+    constructor(name:string, description:String) {
+        this.name = name;
+        this.description = description;
+    }
+}
+
+class SomeClass {
+    public parsePart(fileType:string, content:string) {
+        var part:Part = ParserFactory.createParser(fileType, content).parse();
+
+        // Then, we do something with the part...
+    }
+}
+
+interface PartParser {
+    public parse():Part
+}
+
+class CSVPartParser implements PartParser {
+    public parse():Part {
+        const partsInfo = content.split(",");
+
+        return new Part(partsInfo[0], partsInfo[1]);
+    }
+}
+
+class JSONPartParser implements PartParser {
+    public parse():Part {
+        const part = JSON.parse(content);
+
+        return new Part(part.name, part.description);
+    }
+}
+
+class XMLPartParser implements PartParser {
+    public parse():Part {
+        var parser = new DOMParser();
+        var xml = parser.parseFromString(content, "application/xml");
+
+        var name = xml.getElementsByTagName("name")[0].childNodes[0].nodeValue || ""; // Return an empty name if it is not in the XML tree
+        var description = xml.getElementsByTagName("description")[0].childNodes[0].nodeValue || ""; // Return an empty description if it is not in the XML tree
+
+        return new Part(name, description);
+    }
+}
+
+class ParserFactory {
+    public static createParser(fileType:string, content:string) {
+        if (fileType == "csv") {
+            return new CSVPartParser(content);
+        }
+        else if (fileType == "json") {
+            return new JSONPartParser(content);
+        }
+        else if (fileType == "xml") {
+            return new XMLPartParser(content);
+        }
+        else {
+            throw new Error("Unsupported file type");
+        }
+    }
+}
+```
+::::
+
 :::
