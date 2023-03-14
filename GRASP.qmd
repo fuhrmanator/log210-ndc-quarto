@@ -457,7 +457,7 @@ class BirdFactory {
 
 ### GRASP Expert en information et forte cohésion
 
-Appliquez les GRASP Expert en information aux classes `Movie`, `Person` et `MovieManager` pour améliorer leur cohésion.
+Appliquez le GRASP Expert en information aux classes `Movie`, `Person` et `MovieManager` pour améliorer leur cohésion.
 Pour être concis, les constructeurs, les accesseurs et les mutateurs des classes `Movie` et `Person` sont omis.
 
 ```javascript
@@ -477,8 +477,7 @@ class Person {
 }
 
 class MovieManager {
-    public getMovie(String id)
-    {
+    public getMovie(String id) {
         const movie:Movie = movies.get(id); // We get the movie from the map
 
         // We convert the movie to JSON
@@ -493,8 +492,7 @@ class MovieManager {
         };
 
         // We convert the directors to JSON and we add them to JSON representation of the movie
-        for (var director:Person of movie.directors)
-        {
+        for (var director:Person of movie.directors) {
             var directorJSON = {
                 name: director.name,
                 biography: director.biography
@@ -524,8 +522,7 @@ class Movie {
     _genres:String[]
     _directors:Person[]
 
-    public toJSON()
-    {
+    public toJSON() {
         return {
             id: this._id,
             title: this._title,
@@ -542,8 +539,7 @@ class Person {
     _name:String
     _biography:String
 
-    public toJSON()
-    {
+    public toJSON() {
         return {
             name: this._name,
             biography: this._biography
@@ -552,11 +548,143 @@ class Person {
 }
 
 class MovieManager {
-    public getMovie(String id)
-    {
+    public getMovie(id:String) {
         const movie:Movie = movies.get(id); // We get the movie from the map
 
         return movie.toJSON();
+    }
+}
+```
+::::
+
+:::
+
+::: {#exr-GRASP_GOF_expert_createur_forte_cohesion_2}
+
+### GRASP Expert en information et forte cohésion
+
+Appliquez le GRASP Expert en information aux classes `Book` et `BookManager` pour améliorer leur cohésion.
+Pour être concis, les accesseurs et les mutateurs de la classe `Book` sont omis.
+
+```javascript
+class Book {
+    _title:String
+    _year:number
+    _pages:number
+    _isbn:String
+
+    constructor(title:String, year:number, pages:number, isbn:String) {
+        this._title = title;
+        this._year = year;
+        this._pages = pages;
+        this._isbn = isbn;
+    }
+}
+
+class BookManager {
+    public addBook(title:String, year:number, pages:number, isbn:String) {
+        if (title.trim().length == 0) {
+            throw new Error("The book title must not be empty.");
+        }
+
+        if (year > (new Date()).getFullYear()) {
+            throw new Error("You cannot add a book that will be published in the future.");
+        }
+
+        if (pages <= 0) {
+            throw new Error("The book must contain at least one page.");
+        }
+
+        if (!(isbn.length == 10 || isbn.length == 13)) {
+            throw new Error("ISBN must have 10 or 13 characters.");
+        }
+
+        const book = new Book(title, year, pages, isbn);
+
+        // We add the book to the map
+        books.add(isbn, book);
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+Puisque la classe `Book` contient les propriétés `title`, `year`, `pages` et `isbn`, c'est sa responsabilité de déterminer ce qui est une information erronée et d'effectuer les validations.
+Cela augmente la cohésion de la classe `BookManager` puisqu'elle a moins de responsabilités.
+De plus, si on doit à modifier les informations d'une livre existant, il ne sera pas nécessaire de dupliquer les validations.
+La complétude de la classe `Book` est améliorée et les validations peuvent être testées à l'aide de tests unitaires.
+
+```javascript
+class Book {
+    _title:String
+    _year:number
+    _pages:number
+    _isbn:String
+
+    constructor(title:String, year:number, pages:number, isbn:String) {
+        this._title = title;
+        this._year = year;
+        this._pages = pages;
+        this._isbn = isbn;
+    }
+
+    public get title() {
+        return this._title;
+    }
+
+    public set title(title:String) {
+        if (title.trim().length == 0) {
+            throw new Error("The book title must not be empty.");
+        }
+
+        this._title = title;
+    }
+
+    public get year() {
+        return this._year;
+    }
+
+    public set year(year:number) {
+        if (year > (new Date()).getFullYear()) {
+            throw new Error("You cannot add a book that will be published in the future.");
+        }
+
+        this._year = year;
+    }
+
+    public get pages() {
+        return this._pages;
+    }
+
+    public set pages(pages:number) {
+        if (pages <= 0) {
+            throw new Error("The book must contain at least one page.");
+        }
+
+        this._pages = pages;
+    }
+
+    public get isbn() {
+        return this._isbn;
+    }
+
+    public set isbn(isbn:String) {
+        if (!(isbn.length == 10 || isbn.length == 13)) {
+            throw new Error("ISBN must have 10 or 13 characters.");
+        }
+
+        this._isbn = isbn;
+    }
+}
+
+class BookManager {
+    public addBook(title:String, year:number, pages:number, isbn:String) {
+        const book = new Book(title, year, pages, isbn);
+
+        // We add the book to the map
+        books.add(isbn, book);
     }
 }
 ```
