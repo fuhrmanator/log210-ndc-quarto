@@ -453,3 +453,113 @@ class BirdFactory {
 
 :::
 
+::: {#exr-GRASP_GOF_expert_createur_forte_cohesion}
+
+### GRASP Expert en information et forte cohésion
+
+Appliquez les GRASP Expert en information aux classes `Movie`, `Person` et `MovieManager` pour améliorer leur cohésion.
+Pour être concis, les constructeurs, les accesseurs et les mutateurs des classes `Movie` et `Person` sont omis.
+
+```javascript
+class Movie {
+    _id:String
+    _title:String
+    _synopsis:String
+    _year:number
+    _duration:number
+    _genres:String[]
+    _directors:Person[]
+}
+
+class Person {
+    _name:String
+    _biography:String
+}
+
+class MovieManager {
+    public getMovie(String id)
+    {
+        const movie:Movie = movies.get(id); // We get the movie from the map
+
+        // We convert the movie to JSON
+        var movieJSON = {
+            id: movie.id,
+            title: movie.title,
+            synopsis: movie.synopsis,
+            year: movie.year,
+            duration: movie.duration,
+            genres: movie.genres,
+            directors: []
+        };
+
+        // We convert the directors to JSON and we add them to JSON representation of the movie
+        for (var director:Person of movie.directors)
+        {
+            var directorJSON = {
+                name: director.name,
+                biography: director.biography
+            };
+
+            movieJSON.directors.append(directorJSON);
+        }
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+Puisque les classes `Movie` et `Person` possèdent les informations nécessaires pour se convertir en JSON, ce sont elles qui doivent posséder les méthodes pour effectuer la conversion.
+Cela augmente la cohésion de la classe `MovieManager` puisqu'elle a moins de responsabilités.
+La complétude des classes `Movie` et `Person` est améliorée et leurs méthodes peuvent être testées et réutilisées dans d'autres classes.
+
+```javascript
+class Movie {
+    _id:String
+    _title:String
+    _synopsis:String
+    _year:number
+    _duration:number
+    _genres:String[]
+    _directors:Person[]
+
+    public toJSON()
+    {
+        return {
+            id: this._id,
+            title: this._title,
+            synopsis: this._synopsis,
+            year: this._year,
+            duration: this._duration,
+            genres: this._genres,
+            directors: this._directors // The conversion to JSON will be done automatically
+        };
+    }
+}
+
+class Person {
+    _name:String
+    _biography:String
+
+    public toJSON()
+    {
+        return {
+            name: this._name,
+            biography: this._biography
+        };
+    }
+}
+
+class MovieManager {
+    public getMovie(String id)
+    {
+        const movie:Movie = movies.get(id); // We get the movie from the map
+
+        return movie.toJSON();
+    }
+}
+```
+::::
+
+:::
