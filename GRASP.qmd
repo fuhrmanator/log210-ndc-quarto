@@ -385,7 +385,7 @@ class SomeClass {
 
 Appliquez le GRASP Fabrication Pure au contrôleur `BirdManager` pour améliorer sa cohésion.
 Ajoutez une fabrique de `Bird` à qui le contrôleur pourra déléguer la responsabilité de créer les objets `Bird`.
-Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple du GRASP Indirection.
+Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication pure.
 
 ```javascript
 class BirdManager {
@@ -417,6 +417,7 @@ class BirdManager {
 L'ajout de la fabrique `BirdFactory` permet d'améliorer la cohésion du contrôleur `BirdManager` puisque ses responsabilités sont réduites.
 La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre le contrôleur `BirdManager` et les différents types de `Bird`.
 Si d'autres types de `Bird` sont ajoutés à l'application, l'impact sera moins important sur le contrôleur.
+La fabrique est une fabrication pure, car elle n'existe pas dans le domaine de l'application. Elle a été inventée pour améliorer la cohésion de `BirdManager` et réduire son couplage avec les `Bird` concrets.
 
 ```javascript
 class BirdManager {
@@ -690,14 +691,17 @@ class BookManager {
 ```
 ::::
 
-::: {#exr-GRASP_GOF_polymorphisme_createur_forte_cohesion_faible_couplage}
+:::
 
-### GRASP Polymorphisme, créateur, fabrication pure, indirection, forte cohésion et faible couplage
+::: {#exr-GRASP_GOF_polymorphisme_createur_fabrication_pure_indirection}
 
-Appliquez les GRASP polymorphisme, créateur, fabrication pure et indirection à la classe `SomeClass` pour améliorer sa cohésion et réduire son couplage.
-Créez une interface `Parser` qui contient les méthodes pertinentes aux parsers et qui sera implémentée par ces derniers.
-Ajoutez un parse pour chaque type de fichier traitée par la méthode `parsePart`.
-Ajoutez une fabrique de `Parser` à qui `SomeClass` pourra déléguer la responsabilité de créer les objets `Parser`.
+### GRASP Polymorphisme, créateur, fabrication pure et indirection
+
+Appliquez les GRASP polymorphisme et créateur à la classe `PartManager` pour améliorer sa cohésion et réduire son couplage.
+Créez une interface `PartParser` qui contient les méthodes pertinentes aux parsers et qui sera implémentée par ces derniers.
+Ajoutez un `PartParser` concret pour chaque type de fichier traitée par la méthode `parsePart`.
+Ajoutez une fabrique de `PartParser` à qui `PartManager` pourra déléguer la responsabilité de créer les objets `PartParser`.
+Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication pure.
 
 ```javascript
 class Part {
@@ -710,7 +714,7 @@ class Part {
     }
 }
 
-class SomeClass {
+class PartManager {
     public parsePart(fileType:string, content:string) {
         var part:Part;
 
@@ -746,10 +750,12 @@ class SomeClass {
 
 ## Voici une solution
 
-La création de l'interface `PartParser` est un exemple de polymorphisme qui permet de réduire le couplage entre `SomeClass` et les différents types de `PartParser`.
-L'ajout de la fabrique `PartFactory` permet d'améliorer la cohésion de la classe `SomeClass` puisque ses responsabilités sont réduites.
-La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre la classe `SomeClass` et les différents types de `PartParser`.
+La création de plusieurs `PartParser` permet d'améliorer la cohésion de la classe `PartManager` puisqu'elle a moins de responsabilités.
+Les `PartParser` peuvent être plus facilement réutilisés et testés à l'aide de tests unitaires.
+La création de l'interface `PartParser` permet de créer un API stable pour les `PartParser`, ce qui réduit le couplage entre `PartManager` et les différents types de `PartParser`.
+La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre la classe `PartManager` et les différents types de `PartParser`.
 Si d'autres types de `PartParser` sont ajoutés à l'application, l'impact sera moins important sur le contrôleur.
+La fabrique est une fabrication pure, car elle n'existe pas dans le domaine de l'application. Elle a été inventée pour améliorer la cohésion de `PartManager` et réduire son couplage avec les `PartParser` concrets.
 
 ```javascript
 class Part {
@@ -762,7 +768,7 @@ class Part {
     }
 }
 
-class SomeClass {
+class PartManager {
     public parsePart(fileType:string, content:string) {
         var part:Part = ParserFactory.createParser(fileType, content).parse();
 
