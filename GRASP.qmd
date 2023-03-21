@@ -828,3 +828,69 @@ class ParserFactory {
 ::::
 
 :::
+
+::: {#exr-GRASP_GOF_protection_variations_fabrication_pure}
+
+### GRASP Protection des variations et Fabrication pure
+
+Le code suivant permet de gérer les emprunts de livres pour une bibliothèque.
+À chaque emprunt un événement est ajouté dans le calendrier Google de l'emprunteur pour lui rappeler de retourner le livre à temps.
+Pour ce faire, l'API de Google Calendar est utilisé.
+Appliquez les patrons GRASP Protection des variations et Fabrication pure pour améliorer la cohésion de `ReservationManager`.
+Pour être concis, la gestion des réservations dans l'application est omise.
+
+```javascript
+class ReservationManager {
+    public addReservation(String memberId, String bookCopy, String bookCopyId, Date expiration) {
+        // We get the book info from the map
+        var book = books.get(book);
+        
+        // We assume that we create the reservation for the member some way...
+
+        // Then we add an event to the Google Calendar of the member to remind them to return their book
+        // Reference https://developers.google.com/calendar/api/v3/reference?hl=fr
+        var dateAsString = expiration.toLocaleDateString("fr-CA", {year: "numeric", month: "2-digit", day: "2-digit"});
+        var event = {
+            "summary": `Your reservation for ${book.getTitle()} is expired`,
+            "location": "475 Boul. de Maisonneuve E, Montréal, QC H2L 5C4",
+            "description": "You must return your book tommorow to avoid late fees.",
+            "start": {
+                "date": dateAsString,
+                "timeZone": "America/Toronto"
+            },
+            "end": {
+                "date": dateAsString,
+                "timeZone": "America/Toronto"
+            },
+            "reminders": {
+                "useDefault": false,
+                "overrides": [
+                    // Send a reminder the day before by email and push notification
+                    {"method": "email", "minutes": 24 * 60},
+                    {"method": "popup", "minutes": 24 * 60}
+                ]
+            }
+        };
+
+        var request = gapi.client.calendar.events.insert({
+            "calendarId": "primary",
+            "resource": event
+        });
+
+        request.execute();
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+TODO
+
+```javascript
+TODO
+```
+::::
+
+:::
