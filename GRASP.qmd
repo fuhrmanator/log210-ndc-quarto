@@ -456,7 +456,7 @@ class BirdFactory {
 
 ::: {#exr-GRASP_GOF_expert_createur_forte_cohesion}
 
-### GRASP Expert en information et forte cohésion
+### GRASP Expert en information et Forte cohésion
 
 Appliquez le GRASP Expert en information aux classes `Movie`, `Person` et `MovieManager` pour améliorer leur cohésion.
 Pour être concis, les constructeurs, les accesseurs et les mutateurs des classes `Movie` et `Person` sont omis.
@@ -562,7 +562,7 @@ class MovieManager {
 
 ::: {#exr-GRASP_GOF_expert_createur_forte_cohesion_2}
 
-### GRASP Expert en information et forte cohésion
+### GRASP Expert en information et Forte cohésion
 
 Appliquez le GRASP Expert en information aux classes `Book` et `BookManager` pour améliorer leur cohésion.
 Pour être concis, les accesseurs et les mutateurs de la classe `Book` sont omis.
@@ -584,7 +584,12 @@ class Book {
 
 class BookManager {
     public addBook(title:String, year:number, pages:number, isbn:String) {
-        if (title.trim().length == 0) {
+        title = title.trim();
+        year = parseInt(year);
+        pages = parseInt(pages);
+        isbn = isbn.trim();
+
+        if (title.length == 0) {
             throw new Error("The book title must not be empty.");
         }
 
@@ -636,7 +641,9 @@ class Book {
     }
 
     public set title(title:String) {
-        if (title.trim().length == 0) {
+        title = title.trim();
+
+        if (title.length == 0) {
             throw new Error("The book title must not be empty.");
         }
 
@@ -648,6 +655,8 @@ class Book {
     }
 
     public set year(year:number) {
+        year = parseInt(year);
+
         if (year > (new Date()).getFullYear()) {
             throw new Error("You cannot add a book that will be published in the future.");
         }
@@ -660,6 +669,8 @@ class Book {
     }
 
     public set pages(pages:number) {
+        pages = parseInt(pages);
+
         if (pages <= 0) {
             throw new Error("The book must contain at least one page.");
         }
@@ -672,6 +683,8 @@ class Book {
     }
 
     public set isbn(isbn:String) {
+        isbn = isbn.trim();
+        
         if (!(isbn.length == 10 || isbn.length == 13)) {
             throw new Error("ISBN must have 10 or 13 characters.");
         }
@@ -695,7 +708,7 @@ class BookManager {
 
 ::: {#exr-GRASP_GOF_polymorphisme_createur_fabrication_pure_indirection}
 
-### GRASP Polymorphisme, créateur, fabrication pure et indirection
+### GRASP Polymorphisme, Créateur, Fabrication pure et Indirection
 
 Appliquez les GRASP polymorphisme et créateur à la classe `PartManager` pour améliorer sa cohésion et réduire son couplage.
 Créez une interface `PartParser` qui contient les méthodes pertinentes aux parsers et qui sera implémentée par ces derniers.
@@ -836,24 +849,27 @@ class ParserFactory {
 Le code suivant permet de gérer les emprunts de livres pour une bibliothèque.
 À chaque emprunt un événement est ajouté dans le calendrier Google de l'emprunteur pour lui rappeler de retourner le livre à temps.
 Pour ce faire, l'API de Google Calendar est utilisé.
-Appliquez les patrons GRASP Protection des variations et Fabrication pure pour améliorer la cohésion de `ReservationManager`.
+Appliquez les GRASP Protection des variations et Fabrication pure pour améliorer la cohésion de `ReservationManager`.
 Pour être concis, la gestion des réservations dans l'application est omise.
 
 ```javascript
 class ReservationManager {
-    public addReservation(String memberId, String bookCopy, String bookCopyId, Date expiration) {
-        // We get the book info from the map
-        var book = books.get(book);
+    public addReservation(String memberId, String bookId, String bookCopyId, Date expiration) {
+        var member = members.get(memberId);
+        var book = books.get(bookId);
         
         // We assume that we create the reservation for the member some way...
 
         // Then we add an event to the Google Calendar of the member to remind them to return their book
-        // Reference https://developers.google.com/calendar/api/v3/reference?hl=fr
         var dateAsString = expiration.toLocaleDateString("fr-CA", {year: "numeric", month: "2-digit", day: "2-digit"});
+        
+        // References
+        // https://developers.google.com/calendar/api/v3/reference?hl=fr
+        // https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8
         var event = {
             "summary": `Your reservation for ${book.getTitle()} is expired`,
             "location": "475 Boul. de Maisonneuve E, Montréal, QC H2L 5C4",
-            "description": "You must return your book tommorow to avoid late fees.",
+            "description": "You must return your book today to avoid late fees.",
             "start": {
                 "date": dateAsString,
                 "timeZone": "America/Toronto"
@@ -872,12 +888,24 @@ class ReservationManager {
             }
         };
 
-        var request = gapi.client.calendar.events.insert({
-            "calendarId": "primary",
-            "resource": event
+        // Create a client that we can use to communicate with Google 
+        const client = new JWT({
+            email: member.email,
+            key: member.googlePrivateKey,
+            scopes: [
+                "https://www.googleapis.com/auth/calendar",
+                "https://www.googleapis.com/auth/calendar.events",
+            ],
         });
 
-        request.execute();
+        const calendar = google.calendar({ version: "v3" });
+
+        // We make a request to Google Calendar API.
+        const res = await calendar.events.insert({
+            calendarId: "primary",
+            auth: client,
+            requestBody: event,
+        });
     }
 }
 ```
@@ -886,10 +914,83 @@ class ReservationManager {
 
 ## Voici une solution
 
-TODO
+La classe `GoogleCalendar` est une fabrication pure, car elle n’existe pas dans le domaine de l’application.
+Elle a été ajoutée pour améliorer la cohésion de `ReservationManager`.
+Avec la classe `GoogleCalendar`, il est aussi plus facile de réutiliser la fonctionnalité dans une autre partie de l'application.
+Selon le GRASP Protection des variations, la classe `GoogleCalendar` permet aussi de réduire le couplage entre `ReservationManager` et l'interface API de Google.
+Si Google apporte des changements à son interface API, l'impact sur la classe `ReservationManager` sera moins important.
+
+**Pour améliorer la cohésion de la classe `ReservationManager`, est-il possible de donner la responsabilité de créer l'objet `event` à une autre classe?**
+
+Il serait possible de créer une classe `Event` qui représente un événement de l'interface API de Google.
+La cohésion de la classe `ReservationManager` ne serait pas significativement améliorée, puisqu'elle conserverait toujours la responsabilité de fournir les paramètres de l'événement.
+L'ajout de la classe `Event` permettrait de valider l'utilisation des bonnes propriétés et des bons types lors de la compilation du code.
+Toutefois, puisque les événements de l'interface API de Google sont complexes, l'ajout de la classe `Event` demanderait beaucoup de temps de développement et de tests.
+La pertinence de la classe `Event` dépend du contexte de développement dans lequel vous vous trouvez.
 
 ```javascript
-TODO
+class ReservationManager {
+    public addReservation(String memberId, String bookId, String bookCopyId, Date expiration) {
+        var member = members.get(memberId);
+        var book = books.get(bookId);
+        
+        // We assume that we create the reservation for the member some way...
+
+        // Then we add an event to the Google Calendar of the member to remind them to return their book
+        var dateAsString = expiration.toLocaleDateString("fr-CA", {year: "numeric", month: "2-digit", day: "2-digit"});
+
+        GoogleCalendar.addEvent({
+            "summary": `Your reservation for ${book.getTitle()} is expired`,
+            "location": "475 Boul. de Maisonneuve E, Montréal, QC H2L 5C4",
+            "description": "You must return your book today to avoid late fees.",
+            "start": {
+                "date": dateAsString,
+                "timeZone": "America/Toronto"
+            },
+            "end": {
+                "date": dateAsString,
+                "timeZone": "America/Toronto"
+            },
+            "reminders": {
+                "useDefault": false,
+                "overrides": [
+                    // Send a reminder the day before by email and push notification
+                    {"method": "email", "minutes": 24 * 60},
+                    {"method": "popup", "minutes": 24 * 60}
+                ]
+            }
+        }, member.email, member.googlePrivateKey);
+    }
+}
+
+class GoogleCalendar {
+
+    /*
+     * References
+     * https://developers.google.com/calendar/api/v3/reference?hl=fr
+     * https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8
+     */
+    public static addEvent(event, email, privateKey) {
+        // Create a client that we can use to communicate with Google 
+        const client = new JWT({
+            email: email,
+            key: privateKey,
+            scopes: [
+                "https://www.googleapis.com/auth/calendar",
+                "https://www.googleapis.com/auth/calendar.events",
+            ],
+        });
+
+        const calendar = google.calendar({ version: "v3" });
+
+        // We make a request to Google Calendar API.
+        const res = await calendar.events.insert({
+            calendarId: "primary",
+            auth: client,
+            requestBody: event,
+        });
+    }
+}
 ```
 ::::
 
