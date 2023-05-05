@@ -1,0 +1,68 @@
+
+lang: fr-FR
+author:
+  - name: Christopher Fuhrman
+    email: christopher.fuhrman@etsmtl.ca
+    affiliations:
+      - name: École de technologie supérieure
+        address: 1100, rue Notre-Dame Ouest
+        city: Montréal
+        state: QC
+        postal-code: H3C 1K3
+  - name: Mouna Moumene
+    email: mouna.moumene@etsmtl.ca
+    affiliations:
+      - name: École de technologie supérieure
+        address: 1100, rue Notre-Dame Ouest
+        city: Montréal
+        state: QC
+        postal-code: H3C 1K3
+format:
+  revealjs:
+    template-partials: 
+      - partials/title-slide.html
+    pdf-separate-fragments: false
+    pdf-page-height-offset: 500
+    theme: solarized
+    history: true
+    progress: true
+    controls: true
+    controls-tutorial: true
+    controls-back-arrows: faded
+    center: true
+    transition: convex
+    transition-speed: fast
+    background-transition: slide
+    highlight-style: github
+    # syntax-definitions: 
+    #   - ../syntax-highlighters/smalltalk.xml
+    logo: images/logo_ets_red_centered.svg
+    slide-number: true
+    # margin: 0.05
+    navigation-mode: linear
+    multiplex: false
+    self-contained: false
+    chalkboard: false
+    css: 
+      - styles.css
+      - slide_themes.css
+    view-distance: 3
+    disable-layout: false
+    fig-align: center
+    footer: | 
+      Copyright 2023 © Christopher Fuhrman, École de technologie supérieure
+    toc: true
+    toc-depth: 1
+    toc-title: Survol
+    # title-slide-attributes: 
+    #     data-background-image: assets/logo_ets.svg
+    #     data-background-position: 2% 2%
+    #     data-background-size: 10%
+    reference-location: document
+    scrollable: true
+filters:
+  - ../../filters/diagram-generator.lua
+  - ../../filters/fr-nbsp.lua
+  - ../../filters/inline-svg.lua
+  - ../../filters/pandoc-quotes.lua
+  - quarto

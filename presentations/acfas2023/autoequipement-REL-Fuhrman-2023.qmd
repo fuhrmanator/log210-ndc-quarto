@@ -1,7 +1,145 @@
 ---
+lang: fr
+title: "L'autoéquipement dans la création d'une REL"
+date: 2023-05-12
+date-format: "DD MMMM YYYY"  # pandoc setting
+format: 
+  revealjs: 
+    theme: beige
+    subtitle: "![](images/logo_ets_red_centered.svg){style='width:15%'} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/F-REL_logo-coul-horiz.png){style='width:50%'}"
+    self-contained: true
+    toc: true
+    overview: true
 
 ---
 
+# Contexte
+
+Ressource Educative Libre (REL)  
+Manuel ["Analyse et conception de logiciels (LOG210)"](https://fuhrmanator.github.io/log210-ndc-quarto/)
+
+![](images/F-REL_logo-coul-horiz.png){style='width:70%'}
+
+## Qu'est-ce que l'autoéquipement?
+
+::: {.incremental}
+- Si une entreprise fabrique un produit, elle devrait l'utiliser elle-même plutôt que de simplement le vendre aux clients. 
+  - *To eat your own dog food* ou *dogfooding*.
+  - Utilisation "interne" d'un produit.
+  - Exemples: l'employé(e) Tesla conduit une Tesla, l'ingénieur(e) Google possède un téléphone Android, etc.
+- [**Objectif: améliorer le produit**]{style="color:red"}.
+:::
+
+## Entreprise "produits libres" {background-color="#CCFFCC" background-image="images/noun-creative-commons-data-38250.svg" background-size="400px" background-position="right 2% top 2%" background-opacity="20%"}
+
+::: {.incremental}
+- Produire du contenu libre avec des outils et des logiciels libres nous implante dans l'entreprise des produits libres.
+
+- Nous devons aussi ramener une valeur ajoutée et contribuer à leur amélioration.
+
+- Comment s'impliquer réellement dans le processus d’amélioration de ces outils?
+:::
+
+# Expérience REL
+
+Manuel de cours d'analyse et de conception de logiciels
+![](images/wordle_ordre_alph.png){width=70%}
+
+## Écosystème d'outils "logiciels libres"{.smaller}
+
+|    |        |
+|----|--------|
+|![Quarto](images/quarto.png){width="200"} | Création de documentation (évolution de R Markdown) |
+| Pandoc | Convertisseur de formats, extensions pour supporter formats personnalisés |
+| $\LaTeX$ | Préparation de documents scientifique (PDF) |
+| ![PlantUML](images/Plantuml_Logo.svg){width="100" style="vertical-align:middle"} PlantUML | Création de diagrammes |
+| ![GitHub](images/GitHub_Logo.png){width="200"} | Gestion des versions et suivi des problèmes |
+| ![VisualStudio Code](images/vscode.png){width="70" style="vertical-align:middle"} VisualStudio Code | Rédaction de Markdown, extension pour Quarto, intégration Git, etc. |
+
+# Comment contribuer?
+
+::: {.incremental}
+- Donner une rétroaction aux développeurs
+  - Discussions dans un forum (GitHub)
+  - Système de suivi de problèmes (GitHub)
+- Proposer des changements de documentation (GitHub)
+- 🤓 Coder des corrections de bogues
+- 🤓 Coder de nouvelles fonctionnalités
+:::
+
+::: {.notes}
+
+:::
+
+## Exemple de Discussion (Quarto)
+
+![](images/QuartoFeedback.png)
+
+## Exemple de Discussion (Quarto)
+
+![](images/QuartoDiscussions.png)
+
+## Exemple de bogue
+
+- [quarto-dev/quarto-cli #4145](https://github.com/quarto-dev/quarto-cli/issues/4145)
+- Erreur de référence croisée: "Annexe" plutôt que "Chapitre"
+- Bogue corrigé dans deux jours!
+
+## Quarto: Communauté très active:
+
+![](images/QuartoCodeFrequency.png)
+
+
+# Conclusion[^volunteering]{.volunteering}
+
+La création d'une REL grâce aux logiciels libres est aussi l'occasion de contribuer à la communauté de logiciels libres.  
+
+- GitHub Quarto -- [Bogues *Issues* (10)](https://github.com/quarto-dev/quarto-cli/issues?q=is%3Aissue+author%3Afuhrmanator), [Discussions (25+)](https://github.com/quarto-dev/quarto-cli/discussions?discussions_q=author%3Afuhrmanator)
+- GitHub [fuhrmanator/pandoc-filter-fr-nbsp](https://github.com/fuhrmanator/pandoc-filter-fr-nbsp) - filtre Pandoc pour insérer les espaces insécables (fines) selon la typographie française
+
+
+[^volunteering]: volunteering (CC BY) par Rusmaniah de [Noun Project](https://thenounproject.com/browse/icons/term/volunteering/)
+
+::: {.notes}
+- Nous avons utilisé plusieurs logiciels libres et nous avons également contribué aux communautés qui les ont créés.
+- Faire une contribution:
+  - donner rétroaction (feedback), 
+  - signaler un bogue,
+  - etc.
+:::
 <!-- Plusieurs entreprises de développement de logiciels et applications telles que : Microsoft, Apple, Bouygues, se sont basées sur le principe d'autoéquipement, aussi appelé « livraison à soi-même », qui consiste à utiliser leurs propres produits pour déceler des erreurs et des fonctionnalités qui posent problème afin de les améliorer et d’avoir de meilleurs produits.  Le fait même d’utiliser des outils et des logiciels libres pour créer une RÉL nous implante dans l’entreprise des produits libres et nous met au cœur de communautés qui contribuent à l’amélioration de ces produits. Autant qu’utilisateurs des outils libres, nous devons aussi ramener une valeur ajoutée et contribuer à leur amélioration. Comment s’impliquer réellement dans le processus d’amélioration de ces outils?
 
 Nous allons présenter cette dimension de notre expérience de création d’une REL - dans le cadre d’un projet avec la fabriqueREL - en tant que membre actif d’une communauté d'outils et de logiciels libres tels que Quarto, pandoc, PlantUML, etc. avec un l’objectif et la perspective d'améliorer ces outils. -->
+
+## Manuel écrit dans Quarto (Markdown)
+
+[Markdown](https://quarto.org/docs/authoring/markdown-basics.html) est un langage de balisage léger [lightweight markup language]{.english}
+
+:::::: {.columns}
+
+::::: {.column width="50%"}
+```{.markdown code-line-numbers=false}
+::: hanging-indent
+
+**Ce manuel** a été utilisé dans le 
+cadre du cours *Analyse et conception 
+de logiciels (LOG210)* à l'École de 
+technologie supérieure (ÉTS).
+
+:::
+```
+:::::
+
+::::: {.column width="50%"}
+:::: {.callout}
+::: hanging-indent
+**Ce manuel** a été utilisé dans le cadre du cours
+*Analyse et conception de logiciels (LOG210)* à l'École de technologie supérieure
+(ÉTS).
+:::
+::::
+:::::
+
+::::::
+Avantages: Facilité, portabilité, lisibilité, rapidité  
+Inconvénients: Limitation de formatage, de personnalisation, dépendance sur la syntaxe

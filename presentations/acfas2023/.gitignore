@@ -1,0 +1,6 @@
+
+**/desktop.ini
+**/assets/*.pdf
+**/*.wmf
+**/*.emf
+/.quarto/

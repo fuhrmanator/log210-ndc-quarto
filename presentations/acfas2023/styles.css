@@ -1,0 +1,67 @@
+/* .border {
+  border: 1px solid #dee2e6;
+}
+  
+.border-thick {
+  border-width: 3px;
+} */
+
+.reveal .slide.scrollable {
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+/* .imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
+
+.french {
+  color: green;
+}
+
+.english {
+  color:#342D7E;
+}
+
+.objectives div.slide-background-content {
+  background-image: url("images/noun-objectives-1392483.svg");
+  background-size: 15%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  /* background-color: lightblue; */
+}
+
+.quarto div.slide-background-content {
+  background-image: url("images/quarto.svg");
+  background-size: 15%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  background-color: lightblue;
+}
+
+.opensourcesoftware div.slide-background-content {
+  background-image: url("images/noun-open-source-software-1326330.svg");
+  background-size: 10%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  background-color: lightgreen;
+}
+
+.challenges div.slide-background-content {
+  background-image: url("images/noun-technical-2927762.svg");
+  background-size: 15%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  background-color: orange;
+}
+
+.volunteering div.slide-background-content {
+  background-image: url("images/noun-volunteering-5289543.svg");
+  background-size: 20%;
+  background-position: right 5% top 5%;
+  opacity: 0.4;
+  background-color: yellow;
+}
