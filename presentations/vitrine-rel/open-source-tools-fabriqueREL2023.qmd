@@ -11,10 +11,10 @@ format:
     # institute: École de technologie supérieure
     # date: 2023-03-09
     subtitle: "![](images/logo_ets_red_centered.svg){style='width:15%'} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/F-REL_logo-coul-horiz.png){style='width:50%'}"
-    # self-contained: true
+    self-contained: true
     toc: false
     overview: true
-    chalkboard: true
+    # chalkboard: true
 
 ---
 
