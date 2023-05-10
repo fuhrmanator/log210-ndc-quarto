@@ -20,6 +20,10 @@ Manuel ["Analyse et conception de logiciels (LOG210)"](https://fuhrmanator.githu
 
 ![](images/F-REL_logo-coul-horiz.png){style='width:70%'}
 
+## 
+
+![Aperçu de la REL](images/AnalyseConceptionDeLogiciels-aper%C3%A7u-anim%C3%A9.gif)
+
 ## Qu'est-ce que l'autoéquipement?
 
 ::: {.incremental}
@@ -58,14 +62,32 @@ Manuel de cours d'analyse et de conception de logiciels
 
 # Comment contribuer?
 
-::: {.incremental}
+:::: {.columns}
+::: {.column width="20%"}
+```{.plantuml}
+@startuml
+!include ../../normal.pumlinclude
+skinparam classBorderColor hidden
+skinparam classBackgroundColor transparent
+skinparam classArrowColor black
+skinparam classFontSize 30
+hide stereotypes
+hide empty members
+class "Facile" as facile #aaFFaa
+class "Difficile" as difficile #FFaaaa
+facile <-d-----> difficile
+@enduml
+```
+:::
+::: {.column width="80%"}
 - Donner une rétroaction aux développeurs
   - Discussions dans un forum (GitHub)
   - Système de suivi de problèmes (GitHub)
 - Proposer des changements de documentation (GitHub)
-- 🤓 Coder des corrections de bogues
-- 🤓 Coder de nouvelles fonctionnalités
+- 😣 Coder des corrections de bogues
+- 😣 Coder de nouvelles fonctionnalités
 :::
+::::
 
 ::: {.notes}
 
@@ -79,16 +101,19 @@ Manuel de cours d'analyse et de conception de logiciels
 
 ![](images/QuartoDiscussions.png)
 
-## Exemple de bogue
+## Exemple de correction de bogue rapide
 
 - [quarto-dev/quarto-cli #4145](https://github.com/quarto-dev/quarto-cli/issues/4145)
 - Erreur de référence croisée: "Annexe" plutôt que "Chapitre"
 - Bogue corrigé dans deux jours!
 
+##
+
+![Correction de bogue dans 2 jours](images/QuartoBugFixAnim%C3%A9.gif)
+
 ## Quarto: Communauté très active:
 
 ![](images/QuartoCodeFrequency.png)
-
 
 # Conclusion[^volunteering]{.volunteering}
 
