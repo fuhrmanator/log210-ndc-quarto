@@ -87,7 +87,7 @@ Voici un extrait du livre de @craig_uml_2005.
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Pattern                                                  | Description                                                                                                                                                                                                                                                   |
 +:=========================================================+:==============================================================================================================================================================================================================================================================+
-| Expert en information\                                   | Un principe général de conception d'objets et d'affectation des responsabilités.\newline                                                                                                                                                                      |
+| Expert en Information\                                   | Un principe général de conception d'objets et d'affectation des responsabilités.\newline                                                                                                                                                                      |
 | *F16.11/A17.11*\ {{< fa solid book >}}                   |                                                                                                                                                                                                                                                               |
 |                                                          | Affectez une responsabilité à l'expert -- la classe qui possède les informations nécessaires pour s'en acquitter.\newline                                                                                                                                     |
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -129,7 +129,7 @@ Voici un extrait du livre de @craig_uml_2005.
 | *F22.3/A25.3*\ {{< fa solid book >}}                     |                                                                                                                                                                                                                                                               |
 |                                                          | Affectez la responsabilité à un objet qui sert d'intermédiaire avec les autres composants ou services.\newline                                                                                                                                                |
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Protection des variations\                               | Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l'instabilité de ces éléments n'aient pas d'impact négatif sur les autres?\newline                                                                  |
+| Protection des Variations\                               | Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l'instabilité de ces éléments n'aient pas d'impact négatif sur les autres?\newline                                                                  |
 | *F22.4/A25.4*\ {{< fa solid book >}}                     |                                                                                                                                                                                                                                                               |
 |                                                          | Identifiez les points de variation ou d'instabilité prévisibles et affectez les responsabilités afin de créer une "interface" stable autour d'eux.                                                                                                            |
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -294,9 +294,9 @@ class Joueur {
 
 ::: {#exr-GRASP_GOF_expert}
 
-### GRASP Expert en information et Forte cohésion
+### GRASP Expert en Information et Forte Cohésion
 
-Appliquez le GRASP Expert en information pour améliorer la conception des classes dans le code suivant:
+Appliquez le GRASP Expert en Information pour améliorer la conception des classes dans le code suivant:
 
 ```javascript
 class Point {
@@ -385,7 +385,7 @@ class SomeClass {
 
 Appliquez le GRASP Fabrication Pure au contrôleur `BirdManager` pour améliorer sa cohésion.
 Ajoutez une fabrique de `Bird` à qui le contrôleur pourra déléguer la responsabilité de créer les objets `Bird`.
-Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple du GRASP Indirection.
+Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication Pure.
 
 ```javascript
 class BirdManager {
@@ -417,6 +417,8 @@ class BirdManager {
 L'ajout de la fabrique `BirdFactory` permet d'améliorer la cohésion du contrôleur `BirdManager` puisque ses responsabilités sont réduites.
 La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre le contrôleur `BirdManager` et les différents types de `Bird`.
 Si d'autres types de `Bird` sont ajoutés à l'application, l'impact sera moins important sur le contrôleur.
+La fabrique est une Fabrication Pure, car elle n'existe pas dans le domaine de l'application. 
+Elle a été inventée pour améliorer la cohésion de `BirdManager` et réduire son couplage avec les `Bird` concrets.
 
 ```javascript
 class BirdManager {
@@ -453,3 +455,545 @@ class BirdFactory {
 
 :::
 
+::: {#exr-GRASP_GOF_expert_createur_forte_cohesion}
+
+### GRASP Expert en Information et Forte Cohésion
+
+Appliquez le GRASP Expert en Information aux classes `Movie`, `Person` et `MovieManager` pour améliorer leur cohésion.
+Pour être concis, les constructeurs, les accesseurs et les mutateurs des classes `Movie` et `Person` sont omis.
+
+```javascript
+class Movie {
+    _id:String
+    _title:String
+    _synopsis:String
+    _year:number
+    _duration:number
+    _genres:String[]
+    _directors:Person[]
+}
+
+class Person {
+    _name:String
+    _biography:String
+}
+
+class MovieManager {
+    public getMovie(String id) {
+        const movie:Movie = movies.get(id); // We get the movie from the map
+
+        // We convert the movie to JSON
+        var movieJSON = {
+            id: movie.id,
+            title: movie.title,
+            synopsis: movie.synopsis,
+            year: movie.year,
+            duration: movie.duration,
+            genres: movie.genres,
+            directors: []
+        };
+
+        // We convert the directors to JSON and we add them to JSON representation of the movie
+        for (var director:Person of movie.directors) {
+            var directorJSON = {
+                name: director.name,
+                biography: director.biography
+            };
+
+            movieJSON.directors.append(directorJSON);
+        }
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+Puisque les classes `Movie` et `Person` possèdent les informations nécessaires pour se convertir en JSON, ce sont elles qui doivent posséder les méthodes pour effectuer la conversion.
+Cela augmente la cohésion de la classe `MovieManager` puisqu'elle a moins de responsabilités.
+La complétude des classes `Movie` et `Person` est améliorée et leurs méthodes peuvent être testées et réutilisées dans d'autres classes.
+
+```javascript
+class Movie {
+    _id:String
+    _title:String
+    _synopsis:String
+    _year:number
+    _duration:number
+    _genres:String[]
+    _directors:Person[]
+
+    public toJSON() {
+        return {
+            id: this._id,
+            title: this._title,
+            synopsis: this._synopsis,
+            year: this._year,
+            duration: this._duration,
+            genres: this._genres,
+            directors: this._directors // The conversion to JSON will be done automatically
+        };
+    }
+}
+
+class Person {
+    _name:String
+    _biography:String
+
+    public toJSON() {
+        return {
+            name: this._name,
+            biography: this._biography
+        };
+    }
+}
+
+class MovieManager {
+    public getMovie(id:String) {
+        const movie:Movie = movies.get(id); // We get the movie from the map
+
+        return movie.toJSON();
+    }
+}
+```
+::::
+
+:::
+
+::: {#exr-GRASP_GOF_expert_createur_forte_cohesion_2}
+
+### GRASP Expert en Information et Forte Cohésion
+
+Appliquez le GRASP Expert en information aux classes `Book` et `BookManager` pour améliorer leur cohésion.
+Pour être concis, les accesseurs et les mutateurs de la classe `Book` sont omis.
+
+```javascript
+class Book {
+    _title:String
+    _year:number
+    _pages:number
+    _isbn:String
+
+    constructor(title:String, year:number, pages:number, isbn:String) {
+        this._title = title;
+        this._year = year;
+        this._pages = pages;
+        this._isbn = isbn;
+    }
+}
+
+class BookManager {
+    public addBook(title:String, year:number, pages:number, isbn:String) {
+        title = title.trim();
+        year = parseInt(year);
+        pages = parseInt(pages);
+        isbn = isbn.trim();
+
+        if (title.length == 0) {
+            throw new Error("The book title must not be empty.");
+        }
+
+        if (year > (new Date()).getFullYear()) {
+            throw new Error("You cannot add a book that will be published in the future.");
+        }
+
+        if (pages <= 0) {
+            throw new Error("The book must contain at least one page.");
+        }
+
+        if (!(isbn.length == 10 || isbn.length == 13)) {
+            throw new Error("ISBN must have 10 or 13 characters.");
+        }
+
+        const book = new Book(title, year, pages, isbn);
+
+        // We add the book to the map
+        books.add(isbn, book);
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+Puisque la classe `Book` contient les propriétés `title`, `year`, `pages` et `isbn`, c'est sa responsabilité de déterminer ce qui est une information erronée et d'effectuer les validations.
+Cela augmente la cohésion de la classe `BookManager` puisqu'elle a moins de responsabilités.
+De plus, si on doit à modifier les informations d'une livre existant, il ne sera pas nécessaire de dupliquer les validations.
+La complétude de la classe `Book` est améliorée et les validations peuvent être testées à l'aide de tests unitaires.
+
+```javascript
+class Book {
+    _title:String
+    _year:number
+    _pages:number
+    _isbn:String
+
+    constructor(title:String, year:number, pages:number, isbn:String) {
+        this._title = title;
+        this._year = year;
+        this._pages = pages;
+        this._isbn = isbn;
+    }
+
+    public get title() {
+        return this._title;
+    }
+
+    public set title(title:String) {
+        title = title.trim();
+
+        if (title.length == 0) {
+            throw new Error("The book title must not be empty.");
+        }
+
+        this._title = title;
+    }
+
+    public get year() {
+        return this._year;
+    }
+
+    public set year(year:number) {
+        year = parseInt(year);
+
+        if (year > (new Date()).getFullYear()) {
+            throw new Error("You cannot add a book that will be published in the future.");
+        }
+
+        this._year = year;
+    }
+
+    public get pages() {
+        return this._pages;
+    }
+
+    public set pages(pages:number) {
+        pages = parseInt(pages);
+
+        if (pages <= 0) {
+            throw new Error("The book must contain at least one page.");
+        }
+
+        this._pages = pages;
+    }
+
+    public get isbn() {
+        return this._isbn;
+    }
+
+    public set isbn(isbn:String) {
+        isbn = isbn.trim();
+        
+        if (!(isbn.length == 10 || isbn.length == 13)) {
+            throw new Error("ISBN must have 10 or 13 characters.");
+        }
+
+        this._isbn = isbn;
+    }
+}
+
+class BookManager {
+    public addBook(title:String, year:number, pages:number, isbn:String) {
+        const book = new Book(title, year, pages, isbn);
+
+        // We add the book to the map
+        books.add(isbn, book);
+    }
+}
+```
+::::
+
+:::
+
+::: {#exr-GRASP_GOF_polymorphisme_createur_fabrication_pure_indirection}
+
+### GRASP Polymorphisme, Créateur, Fabrication Pure et Indirection
+
+Appliquez les GRASP Polymorphisme et Créateur à la classe `PartManager` pour améliorer sa cohésion et réduire son couplage.
+Créez une interface `PartParser` qui contient les méthodes pertinentes aux parsers et qui sera implémentée par ces derniers.
+Ajoutez un `PartParser` concret pour chaque type de fichier traitée par la méthode `parsePart`.
+Ajoutez une fabrique de `PartParser` à qui `PartManager` pourra déléguer la responsabilité de créer les objets `PartParser`.
+Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication Pure.
+
+```javascript
+class Part {
+    name:string
+    description:String
+
+    constructor(name:string, description:String) {
+        this.name = name;
+        this.description = description;
+    }
+}
+
+class PartManager {
+    public parsePart(fileType:string, content:string) {
+        var part:Part;
+
+        if (fileType == "csv") {
+            const partsInfo = content.split(",");
+
+            part = new Part(partsInfo[0], partsInfo[1]);
+        }
+        else if (fileType == "json") {
+            const part = JSON.parse(content);
+
+            part = new Part(part.name, part.description);
+        }
+        else if (fileType == "xml") {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(content, "application/xml");
+
+            var name = xml.getElementsByTagName("name")[0].childNodes[0].nodeValue || ""; // Return an empty name if it is not in the XML tree
+            var description = xml.getElementsByTagName("description")[0].childNodes[0].nodeValue || ""; // Return an empty description if it is not in the XML tree
+
+            part = new Part(name, description);
+        }
+        else {
+            throw new Error("Unsupported file type");
+        }
+
+        // Then, we do something with the part...
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+La création de plusieurs `PartParser` permet d'améliorer la cohésion de la classe `PartManager` puisqu'elle a moins de responsabilités.
+Les `PartParser` peuvent être plus facilement réutilisés et testés à l'aide de tests unitaires.
+La création de l'interface `PartParser` permet de créer un API stable pour les `PartParser`, ce qui réduit le couplage entre `PartManager` et les différents types de `PartParser`.
+La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre la classe `PartManager` et les différents types de `PartParser`.
+Si d'autres types de `PartParser` sont ajoutés à l'application, l'impact sera moins important sur le contrôleur.
+La fabrique est une Fabrication Pure, car elle n'existe pas dans le domaine de l'application. 
+Elle a été inventée pour améliorer la cohésion de `PartManager` et réduire son couplage avec les `PartParser` concrets.
+
+```javascript
+class Part {
+    name:string
+    description:String
+
+    constructor(name:string, description:String) {
+        this.name = name;
+        this.description = description;
+    }
+}
+
+class PartManager {
+    public parsePart(fileType:string, content:string) {
+        var part:Part = ParserFactory.createParser(fileType, content).parse();
+
+        // Then, we do something with the part...
+    }
+}
+
+interface PartParser {
+    public parse():Part
+}
+
+class CSVPartParser implements PartParser {
+    public parse():Part {
+        const partsInfo = content.split(",");
+
+        return new Part(partsInfo[0], partsInfo[1]);
+    }
+}
+
+class JSONPartParser implements PartParser {
+    public parse():Part {
+        const part = JSON.parse(content);
+
+        return new Part(part.name, part.description);
+    }
+}
+
+class XMLPartParser implements PartParser {
+    public parse():Part {
+        var parser = new DOMParser();
+        var xml = parser.parseFromString(content, "application/xml");
+
+        var name = xml.getElementsByTagName("name")[0].childNodes[0].nodeValue || ""; // Return an empty name if it is not in the XML tree
+        var description = xml.getElementsByTagName("description")[0].childNodes[0].nodeValue || ""; // Return an empty description if it is not in the XML tree
+
+        return new Part(name, description);
+    }
+}
+
+class ParserFactory {
+    public static createParser(fileType:string, content:string) {
+        if (fileType == "csv") {
+            return new CSVPartParser(content);
+        }
+        else if (fileType == "json") {
+            return new JSONPartParser(content);
+        }
+        else if (fileType == "xml") {
+            return new XMLPartParser(content);
+        }
+        else {
+            throw new Error("Unsupported file type");
+        }
+    }
+}
+```
+::::
+
+:::
+
+::: {#exr-GRASP_GOF_protection_variations_fabrication_pure}
+
+### GRASP Protection des Variations et Fabrication Pure
+
+Le code suivant permet de gérer les emprunts de livres pour une bibliothèque.
+À chaque emprunt un événement est ajouté dans le calendrier Google de l'emprunteur pour lui rappeler de retourner le livre à temps.
+Pour ce faire, l'API de Google Calendar est utilisé.
+Appliquez les GRASP Protection des Variations et Fabrication Pure pour améliorer la cohésion de `ReservationManager`.
+Pour être concis, la gestion des réservations dans l'application est omise.
+
+```javascript
+class ReservationManager {
+    public addReservation(String memberId, String bookId, String bookCopyId, Date expiration) {
+        var member = members.get(memberId);
+        var book = books.get(bookId);
+        
+        // We assume that we create the reservation for the member some way...
+
+        // Then we add an event to the Google Calendar of the member to remind them to return their book
+        var dateAsString = expiration.toLocaleDateString("fr-CA", {year: "numeric", month: "2-digit", day: "2-digit"});
+        
+        // References
+        // https://developers.google.com/calendar/api/v3/reference?hl=fr
+        // https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8
+        var event = {
+            "summary": `Your reservation for ${book.getTitle()} is expired`,
+            "location": "475 Boul. de Maisonneuve E, Montréal, QC H2L 5C4",
+            "description": "You must return your book today to avoid late fees.",
+            "start": {
+                "date": dateAsString,
+                "timeZone": "America/Toronto"
+            },
+            "end": {
+                "date": dateAsString,
+                "timeZone": "America/Toronto"
+            },
+            "reminders": {
+                "useDefault": false,
+                "overrides": [
+                    // Send a reminder the day before by email and push notification
+                    {"method": "email", "minutes": 24 * 60},
+                    {"method": "popup", "minutes": 24 * 60}
+                ]
+            }
+        };
+
+        // Create a client that we can use to communicate with Google 
+        const client = new JWT({
+            email: member.email,
+            key: member.googlePrivateKey,
+            scopes: [
+                "https://www.googleapis.com/auth/calendar",
+                "https://www.googleapis.com/auth/calendar.events",
+            ],
+        });
+
+        const calendar = google.calendar({ version: "v3" });
+
+        // We make a request to Google Calendar API.
+        const res = await calendar.events.insert({
+            calendarId: "primary",
+            auth: client,
+            requestBody: event,
+        });
+    }
+}
+```
+
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+La classe `GoogleCalendar` est une Fabrication Pure, car elle n’existe pas dans le domaine de l’application.
+Elle a été ajoutée pour améliorer la cohésion de `ReservationManager`.
+Avec la classe `GoogleCalendar`, il est aussi plus facile de réutiliser la fonctionnalité dans une autre partie de l'application.
+Selon le GRASP Protection des Variations, la classe `GoogleCalendar` permet aussi de réduire le couplage entre `ReservationManager` et l'interface API de Google.
+Si Google apporte des changements à son interface API, l'impact sur la classe `ReservationManager` sera moins important.
+
+**Pour améliorer la cohésion de la classe `ReservationManager`, est-il possible de donner la responsabilité de créer l'objet `event` à une autre classe?**
+
+Il serait possible de créer une classe `Event` qui représente un événement de l'interface API de Google.
+La cohésion de la classe `ReservationManager` ne serait pas significativement améliorée, puisqu'elle conserverait toujours la responsabilité de fournir les paramètres de l'événement.
+L'ajout de la classe `Event` permettrait de valider l'utilisation des bonnes propriétés et des bons types lors de la compilation du code.
+Toutefois, puisque les événements de l'interface API de Google sont complexes, l'ajout de la classe `Event` demanderait beaucoup de temps de développement et de tests.
+La pertinence de la classe `Event` dépend du contexte de développement dans lequel vous vous trouvez.
+
+```javascript
+class ReservationManager {
+    public addReservation(String memberId, String bookId, String bookCopyId, Date expiration) {
+        var member = members.get(memberId);
+        var book = books.get(bookId);
+        
+        // We assume that we create the reservation for the member some way...
+
+        // Then we add an event to the Google Calendar of the member to remind them to return their book
+        var dateAsString = expiration.toLocaleDateString("fr-CA", {year: "numeric", month: "2-digit", day: "2-digit"});
+
+        GoogleCalendar.addEvent({
+            "summary": `Your reservation for ${book.getTitle()} is expired`,
+            "location": "475 Boul. de Maisonneuve E, Montréal, QC H2L 5C4",
+            "description": "You must return your book today to avoid late fees.",
+            "start": {
+                "date": dateAsString,
+                "timeZone": "America/Toronto"
+            },
+            "end": {
+                "date": dateAsString,
+                "timeZone": "America/Toronto"
+            },
+            "reminders": {
+                "useDefault": false,
+                "overrides": [
+                    // Send a reminder the day before by email and push notification
+                    {"method": "email", "minutes": 24 * 60},
+                    {"method": "popup", "minutes": 24 * 60}
+                ]
+            }
+        }, member.email, member.googlePrivateKey);
+    }
+}
+
+class GoogleCalendar {
+
+    /*
+     * References
+     * https://developers.google.com/calendar/api/v3/reference?hl=fr
+     * https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8
+     */
+    public static addEvent(event, email, privateKey) {
+        // Create a client that we can use to communicate with Google 
+        const client = new JWT({
+            email: email,
+            key: privateKey,
+            scopes: [
+                "https://www.googleapis.com/auth/calendar",
+                "https://www.googleapis.com/auth/calendar.events",
+            ],
+        });
+
+        const calendar = google.calendar({ version: "v3" });
+
+        // We make a request to Google Calendar API.
+        const res = await calendar.events.insert({
+            calendarId: "primary",
+            auth: client,
+            requestBody: event,
+        });
+    }
+}
+```
+::::
+
+:::
