@@ -87,7 +87,7 @@ Voici un extrait du livre de @craig_uml_2005.
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Pattern                                                  | Description                                                                                                                                                                                                                                                   |
 +:=========================================================+:==============================================================================================================================================================================================================================================================+
-| Expert en information\                                   | Un principe général de conception d'objets et d'affectation des responsabilités.\newline                                                                                                                                                                      |
+| Expert en Information\                                   | Un principe général de conception d'objets et d'affectation des responsabilités.\newline                                                                                                                                                                      |
 | *F16.11/A17.11*\ {{< fa solid book >}}                   |                                                                                                                                                                                                                                                               |
 |                                                          | Affectez une responsabilité à l'expert -- la classe qui possède les informations nécessaires pour s'en acquitter.\newline                                                                                                                                     |
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -129,7 +129,7 @@ Voici un extrait du livre de @craig_uml_2005.
 | *F22.3/A25.3*\ {{< fa solid book >}}                     |                                                                                                                                                                                                                                                               |
 |                                                          | Affectez la responsabilité à un objet qui sert d'intermédiaire avec les autres composants ou services.\newline                                                                                                                                                |
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Protection des variations\                               | Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l'instabilité de ces éléments n'aient pas d'impact négatif sur les autres?\newline                                                                  |
+| Protection des Variations\                               | Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l'instabilité de ces éléments n'aient pas d'impact négatif sur les autres?\newline                                                                  |
 | *F22.4/A25.4*\ {{< fa solid book >}}                     |                                                                                                                                                                                                                                                               |
 |                                                          | Identifiez les points de variation ou d'instabilité prévisibles et affectez les responsabilités afin de créer une "interface" stable autour d'eux.                                                                                                            |
 +----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -294,9 +294,9 @@ class Joueur {
 
 ::: {#exr-GRASP_GOF_expert}
 
-### GRASP Expert en information et Forte cohésion
+### GRASP Expert en Information et Forte Cohésion
 
-Appliquez le GRASP Expert en information pour améliorer la conception des classes dans le code suivant:
+Appliquez le GRASP Expert en Information pour améliorer la conception des classes dans le code suivant:
 
 ```javascript
 class Point {
@@ -385,7 +385,7 @@ class SomeClass {
 
 Appliquez le GRASP Fabrication Pure au contrôleur `BirdManager` pour améliorer sa cohésion.
 Ajoutez une fabrique de `Bird` à qui le contrôleur pourra déléguer la responsabilité de créer les objets `Bird`.
-Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication pure.
+Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication Pure.
 
 ```javascript
 class BirdManager {
@@ -417,7 +417,8 @@ class BirdManager {
 L'ajout de la fabrique `BirdFactory` permet d'améliorer la cohésion du contrôleur `BirdManager` puisque ses responsabilités sont réduites.
 La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre le contrôleur `BirdManager` et les différents types de `Bird`.
 Si d'autres types de `Bird` sont ajoutés à l'application, l'impact sera moins important sur le contrôleur.
-La fabrique est une fabrication pure, car elle n'existe pas dans le domaine de l'application. Elle a été inventée pour améliorer la cohésion de `BirdManager` et réduire son couplage avec les `Bird` concrets.
+La fabrique est une Fabrication Pure, car elle n'existe pas dans le domaine de l'application. 
+Elle a été inventée pour améliorer la cohésion de `BirdManager` et réduire son couplage avec les `Bird` concrets.
 
 ```javascript
 class BirdManager {
@@ -456,9 +457,9 @@ class BirdFactory {
 
 ::: {#exr-GRASP_GOF_expert_createur_forte_cohesion}
 
-### GRASP Expert en information et Forte cohésion
+### GRASP Expert en Information et Forte Cohésion
 
-Appliquez le GRASP Expert en information aux classes `Movie`, `Person` et `MovieManager` pour améliorer leur cohésion.
+Appliquez le GRASP Expert en Information aux classes `Movie`, `Person` et `MovieManager` pour améliorer leur cohésion.
 Pour être concis, les constructeurs, les accesseurs et les mutateurs des classes `Movie` et `Person` sont omis.
 
 ```javascript
@@ -562,7 +563,7 @@ class MovieManager {
 
 ::: {#exr-GRASP_GOF_expert_createur_forte_cohesion_2}
 
-### GRASP Expert en information et Forte cohésion
+### GRASP Expert en Information et Forte Cohésion
 
 Appliquez le GRASP Expert en information aux classes `Book` et `BookManager` pour améliorer leur cohésion.
 Pour être concis, les accesseurs et les mutateurs de la classe `Book` sont omis.
@@ -708,13 +709,13 @@ class BookManager {
 
 ::: {#exr-GRASP_GOF_polymorphisme_createur_fabrication_pure_indirection}
 
-### GRASP Polymorphisme, Créateur, Fabrication pure et Indirection
+### GRASP Polymorphisme, Créateur, Fabrication Pure et Indirection
 
-Appliquez les GRASP polymorphisme et créateur à la classe `PartManager` pour améliorer sa cohésion et réduire son couplage.
+Appliquez les GRASP Polymorphisme et Créateur à la classe `PartManager` pour améliorer sa cohésion et réduire son couplage.
 Créez une interface `PartParser` qui contient les méthodes pertinentes aux parsers et qui sera implémentée par ces derniers.
 Ajoutez un `PartParser` concret pour chaque type de fichier traitée par la méthode `parsePart`.
 Ajoutez une fabrique de `PartParser` à qui `PartManager` pourra déléguer la responsabilité de créer les objets `PartParser`.
-Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication pure.
+Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication Pure.
 
 ```javascript
 class Part {
@@ -768,7 +769,8 @@ Les `PartParser` peuvent être plus facilement réutilisés et testés à l'aide
 La création de l'interface `PartParser` permet de créer un API stable pour les `PartParser`, ce qui réduit le couplage entre `PartManager` et les différents types de `PartParser`.
 La fabrique est un exemple du GRASP Indirection puisqu'elle élimine le couplage direct entre la classe `PartManager` et les différents types de `PartParser`.
 Si d'autres types de `PartParser` sont ajoutés à l'application, l'impact sera moins important sur le contrôleur.
-La fabrique est une fabrication pure, car elle n'existe pas dans le domaine de l'application. Elle a été inventée pour améliorer la cohésion de `PartManager` et réduire son couplage avec les `PartParser` concrets.
+La fabrique est une Fabrication Pure, car elle n'existe pas dans le domaine de l'application. 
+Elle a été inventée pour améliorer la cohésion de `PartManager` et réduire son couplage avec les `PartParser` concrets.
 
 ```javascript
 class Part {
@@ -844,12 +846,12 @@ class ParserFactory {
 
 ::: {#exr-GRASP_GOF_protection_variations_fabrication_pure}
 
-### GRASP Protection des variations et Fabrication pure
+### GRASP Protection des Variations et Fabrication Pure
 
 Le code suivant permet de gérer les emprunts de livres pour une bibliothèque.
 À chaque emprunt un événement est ajouté dans le calendrier Google de l'emprunteur pour lui rappeler de retourner le livre à temps.
 Pour ce faire, l'API de Google Calendar est utilisé.
-Appliquez les GRASP Protection des variations et Fabrication pure pour améliorer la cohésion de `ReservationManager`.
+Appliquez les GRASP Protection des Variations et Fabrication Pure pour améliorer la cohésion de `ReservationManager`.
 Pour être concis, la gestion des réservations dans l'application est omise.
 
 ```javascript
@@ -914,10 +916,10 @@ class ReservationManager {
 
 ## Voici une solution
 
-La classe `GoogleCalendar` est une fabrication pure, car elle n’existe pas dans le domaine de l’application.
+La classe `GoogleCalendar` est une Fabrication Pure, car elle n’existe pas dans le domaine de l’application.
 Elle a été ajoutée pour améliorer la cohésion de `ReservationManager`.
 Avec la classe `GoogleCalendar`, il est aussi plus facile de réutiliser la fonctionnalité dans une autre partie de l'application.
-Selon le GRASP Protection des variations, la classe `GoogleCalendar` permet aussi de réduire le couplage entre `ReservationManager` et l'interface API de Google.
+Selon le GRASP Protection des Variations, la classe `GoogleCalendar` permet aussi de réduire le couplage entre `ReservationManager` et l'interface API de Google.
 Si Google apporte des changements à son interface API, l'impact sur la classe `ReservationManager` sera moins important.
 
 **Pour améliorer la cohésion de la classe `ReservationManager`, est-il possible de donner la responsabilité de créer l'objet `event` à une autre classe?**
