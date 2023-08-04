@@ -496,7 +496,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Expert en information<br>
+<td style="text-align: left;">Expert en Information<br>
 <em>F16.11/A17.11</em>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i></td>
 <td style="text-align: left;"><p>Un principe général de conception d’objets et d’affectation des responsabilités.</p>
 <p>Affectez une responsabilité à l’expert – la classe qui possède les informations nécessaires pour s’en acquitter.</p></td>
@@ -556,7 +556,7 @@ Un moyen de gérer cette dette technique est de *réusiner* (anglais refactor). 
 <p>Affectez la responsabilité à un objet qui sert d’intermédiaire avec les autres composants ou services.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Protection des variations<br>
+<td style="text-align: left;">Protection des Variations<br>
 <em>F22.4/A25.4</em>&nbsp;<i class="fa-solid fa-book" aria-label="book"></i></td>
 <td style="text-align: left;"><p>Comment affecter les responsabilités aux objets, sous-systèmes et systèmes de sorte que les variations ou l’instabilité de ces éléments n’aient pas d’impact négatif sur les <span style="white-space:nowrap">autres ?</span></p>
 <p>Identifiez les points de variation ou d’instabilité prévisibles et affectez les responsabilités afin de créer une «&nbsp;interface&nbsp;» stable autour d’eux.</p></td>
@@ -736,7 +736,7 @@ class Joueur {
 </ul>
 </div>
 <div id="exr-GRASP_GOF_expert" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 6.3 (GRASP Expert en information et Forte cohésion) </strong></span>Appliquez le GRASP Expert en information pour améliorer la conception des classes dans le code suivant&nbsp;:</p>
+<p><span class="theorem-title"><strong>Exercice 6.3 (GRASP Expert en Information et Forte Cohésion) </strong></span>Appliquez le GRASP Expert en Information pour améliorer la conception des classes dans le code suivant&nbsp;:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> <span class="bu">Point</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span>number<span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span>number<span class="op">;</span></span>
@@ -818,7 +818,7 @@ Voici une solution
 </div>
 </div>
 <div id="exr-GRASP_GOF_fabrication_pure_indirection_fabrique" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 6.4 (GRASP Fabrication Pure et Indirection) </strong></span>Appliquez le GRASP Fabrication Pure au contrôleur <code>BirdManager</code> pour améliorer sa cohésion. Ajoutez une fabrique de <code>Bird</code> à qui le contrôleur pourra déléguer la responsabilité de créer les objets <code>Bird</code>. Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple du GRASP Indirection.</p>
+<p><span class="theorem-title"><strong>Exercice 6.4 (GRASP Fabrication Pure et Indirection) </strong></span>Appliquez le GRASP Fabrication Pure au contrôleur <code>BirdManager</code> pour améliorer sa cohésion. Ajoutez une fabrique de <code>Bird</code> à qui le contrôleur pourra déléguer la responsabilité de créer les objets <code>Bird</code>. Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication Pure.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BirdManager {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addBird</span>(<span class="dt">b</span><span class="op">:</span> {<span class="dt">type</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span> <span class="dt">numberOfCoconuts</span><span class="op">:</span> number<span class="op">,</span> <span class="dt">voltage</span><span class="op">:</span> number}) {</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> <span class="dt">bird</span><span class="op">:</span> Bird<span class="op">;</span></span>
@@ -851,7 +851,7 @@ Voici une solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>L’ajout de la fabrique <code>BirdFactory</code> permet d’améliorer la cohésion du contrôleur <code>BirdManager</code> puisque ses responsabilités sont réduites. La fabrique est un exemple du GRASP Indirection puisqu’elle élimine le couplage direct entre le contrôleur <code>BirdManager</code> et les différents types de <code>Bird</code>. Si d’autres types de <code>Bird</code> sont ajoutés à l’application, l’impact sera moins important sur le contrôleur.</p>
+<p>L’ajout de la fabrique <code>BirdFactory</code> permet d’améliorer la cohésion du contrôleur <code>BirdManager</code> puisque ses responsabilités sont réduites. La fabrique est un exemple du GRASP Indirection puisqu’elle élimine le couplage direct entre le contrôleur <code>BirdManager</code> et les différents types de <code>Bird</code>. Si d’autres types de <code>Bird</code> sont ajoutés à l’application, l’impact sera moins important sur le contrôleur. La fabrique est une Fabrication Pure, car elle n’existe pas dans le domaine de l’application. Elle a été inventée pour améliorer la cohésion de <code>BirdManager</code> et réduire son couplage avec les <code>Bird</code> concrets.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BirdManager {</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addBird</span>(<span class="dt">b</span><span class="op">:</span> {<span class="dt">type</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span> <span class="dt">numberOfCoconuts</span><span class="op">:</span> number<span class="op">,</span> <span class="dt">voltage</span><span class="op">:</span> number}) {</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> <span class="dt">bird</span><span class="op">:</span> Bird <span class="op">=</span> BirdFactory<span class="op">.</span><span class="fu">createBird</span>(b)<span class="op">;</span></span>
@@ -881,6 +881,510 @@ Voici une solution
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> bird<span class="op">;</span></span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="exr-GRASP_GOF_expert_createur_forte_cohesion" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 6.5 (GRASP Expert en Information et Forte Cohésion) </strong></span>Appliquez le GRASP Expert en Information aux classes <code>Movie</code>, <code>Person</code> et <code>MovieManager</code> pour améliorer leur cohésion. Pour être concis, les constructeurs, les accesseurs et les mutateurs des classes <code>Movie</code> et <code>Person</code> sont omis.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Movie {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_id</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_title</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_synopsis</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_year</span><span class="op">:</span>number</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_duration</span><span class="op">:</span>number</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_genres</span><span class="op">:</span><span class="bu">String</span>[]</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_directors</span><span class="op">:</span>Person[]</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person {</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_name</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_biography</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MovieManager {</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">getMovie</span>(<span class="bu">String</span> id) {</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> <span class="dt">movie</span><span class="op">:</span>Movie <span class="op">=</span> movies<span class="op">.</span><span class="fu">get</span>(id)<span class="op">;</span> <span class="co">// We get the movie from the map</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="co">// We convert the movie to JSON</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> movieJSON <span class="op">=</span> {</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>            <span class="dt">id</span><span class="op">:</span> movie<span class="op">.</span><span class="at">id</span><span class="op">,</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>            <span class="dt">title</span><span class="op">:</span> movie<span class="op">.</span><span class="at">title</span><span class="op">,</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>            <span class="dt">synopsis</span><span class="op">:</span> movie<span class="op">.</span><span class="at">synopsis</span><span class="op">,</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>            <span class="dt">year</span><span class="op">:</span> movie<span class="op">.</span><span class="at">year</span><span class="op">,</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>            <span class="dt">duration</span><span class="op">:</span> movie<span class="op">.</span><span class="at">duration</span><span class="op">,</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>            <span class="dt">genres</span><span class="op">:</span> movie<span class="op">.</span><span class="at">genres</span><span class="op">,</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>            <span class="dt">directors</span><span class="op">:</span> []</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>        <span class="co">// We convert the directors to JSON and we add them to JSON representation of the movie</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> (<span class="kw">var</span> <span class="dt">director</span><span class="op">:</span>Person <span class="kw">of</span> movie<span class="op">.</span><span class="at">directors</span>) {</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span> directorJSON <span class="op">=</span> {</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>                <span class="dt">name</span><span class="op">:</span> director<span class="op">.</span><span class="at">name</span><span class="op">,</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>                <span class="dt">biography</span><span class="op">:</span> director<span class="op">.</span><span class="at">biography</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>            }<span class="op">;</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>            movieJSON<span class="op">.</span><span class="at">directors</span><span class="op">.</span><span class="fu">append</span>(directorJSON)<span class="op">;</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Voici une solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Puisque les classes <code>Movie</code> et <code>Person</code> possèdent les informations nécessaires pour se convertir en JSON, ce sont elles qui doivent posséder les méthodes pour effectuer la conversion. Cela augmente la cohésion de la classe <code>MovieManager</code> puisqu’elle a moins de responsabilités. La complétude des classes <code>Movie</code> et <code>Person</code> est améliorée et leurs méthodes peuvent être testées et réutilisées dans d’autres classes.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Movie {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_id</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_title</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_synopsis</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_year</span><span class="op">:</span>number</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_duration</span><span class="op">:</span>number</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_genres</span><span class="op">:</span><span class="bu">String</span>[]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_directors</span><span class="op">:</span>Person[]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">toJSON</span>() {</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> {</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>            <span class="dt">id</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_id</span><span class="op">,</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>            <span class="dt">title</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_title</span><span class="op">,</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            <span class="dt">synopsis</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_synopsis</span><span class="op">,</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>            <span class="dt">year</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_year</span><span class="op">,</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>            <span class="dt">duration</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_duration</span><span class="op">,</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>            <span class="dt">genres</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_genres</span><span class="op">,</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>            <span class="dt">directors</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_directors</span> <span class="co">// The conversion to JSON will be done automatically</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person {</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_name</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_biography</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">toJSON</span>() {</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> {</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>            <span class="dt">name</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_name</span><span class="op">,</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>            <span class="dt">biography</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">_biography</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MovieManager {</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">getMovie</span>(<span class="dt">id</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> <span class="dt">movie</span><span class="op">:</span>Movie <span class="op">=</span> movies<span class="op">.</span><span class="fu">get</span>(id)<span class="op">;</span> <span class="co">// We get the movie from the map</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> movie<span class="op">.</span><span class="fu">toJSON</span>()<span class="op">;</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="exr-GRASP_GOF_expert_createur_forte_cohesion_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 6.6 (GRASP Expert en Information et Forte Cohésion) </strong></span>Appliquez le GRASP Expert en information aux classes <code>Book</code> et <code>BookManager</code> pour améliorer leur cohésion. Pour être concis, les accesseurs et les mutateurs de la classe <code>Book</code> sont omis.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Book {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_title</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_year</span><span class="op">:</span>number</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_pages</span><span class="op">:</span>number</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_isbn</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">constructor</span>(<span class="dt">title</span><span class="op">:</span><span class="bu">String</span><span class="op">,</span> <span class="dt">year</span><span class="op">:</span>number<span class="op">,</span> <span class="dt">pages</span><span class="op">:</span>number<span class="op">,</span> <span class="dt">isbn</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_title</span> <span class="op">=</span> title<span class="op">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_year</span> <span class="op">=</span> year<span class="op">;</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_pages</span> <span class="op">=</span> pages<span class="op">;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_isbn</span> <span class="op">=</span> isbn<span class="op">;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BookManager {</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">addBook</span>(<span class="dt">title</span><span class="op">:</span><span class="bu">String</span><span class="op">,</span> <span class="dt">year</span><span class="op">:</span>number<span class="op">,</span> <span class="dt">pages</span><span class="op">:</span>number<span class="op">,</span> <span class="dt">isbn</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> title<span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        year <span class="op">=</span> <span class="pp">parseInt</span>(year)<span class="op">;</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        pages <span class="op">=</span> <span class="pp">parseInt</span>(pages)<span class="op">;</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        isbn <span class="op">=</span> isbn<span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (title<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">0</span>) {</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"The book title must not be empty."</span>)<span class="op">;</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (year <span class="op">&gt;</span> (<span class="kw">new</span> <span class="bu">Date</span>())<span class="op">.</span><span class="fu">getFullYear</span>()) {</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"You cannot add a book that will be published in the future."</span>)<span class="op">;</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (pages <span class="op">&lt;=</span> <span class="dv">0</span>) {</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"The book must contain at least one page."</span>)<span class="op">;</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span>(isbn<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">10</span> <span class="op">||</span> isbn<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">13</span>)) {</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"ISBN must have 10 or 13 characters."</span>)<span class="op">;</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> book <span class="op">=</span> <span class="kw">new</span> <span class="fu">Book</span>(title<span class="op">,</span> year<span class="op">,</span> pages<span class="op">,</span> isbn)<span class="op">;</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>        <span class="co">// We add the book to the map</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>        books<span class="op">.</span><span class="fu">add</span>(isbn<span class="op">,</span> book)<span class="op">;</span></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Voici une solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Puisque la classe <code>Book</code> contient les propriétés <code>title</code>, <code>year</code>, <code>pages</code> et <code>isbn</code>, c’est sa responsabilité de déterminer ce qui est une information erronée et d’effectuer les validations. Cela augmente la cohésion de la classe <code>BookManager</code> puisqu’elle a moins de responsabilités. De plus, si on doit à modifier les informations d’une livre existant, il ne sera pas nécessaire de dupliquer les validations. La complétude de la classe <code>Book</code> est améliorée et les validations peuvent être testées à l’aide de tests unitaires.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Book {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_title</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_year</span><span class="op">:</span>number</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_pages</span><span class="op">:</span>number</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_isbn</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">constructor</span>(<span class="dt">title</span><span class="op">:</span><span class="bu">String</span><span class="op">,</span> <span class="dt">year</span><span class="op">:</span>number<span class="op">,</span> <span class="dt">pages</span><span class="op">:</span>number<span class="op">,</span> <span class="dt">isbn</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_title</span> <span class="op">=</span> title<span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_year</span> <span class="op">=</span> year<span class="op">;</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_pages</span> <span class="op">=</span> pages<span class="op">;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_isbn</span> <span class="op">=</span> isbn<span class="op">;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> get <span class="fu">title</span>() {</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">_title</span><span class="op">;</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> set <span class="fu">title</span>(<span class="dt">title</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> title<span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (title<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">0</span>) {</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"The book title must not be empty."</span>)<span class="op">;</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_title</span> <span class="op">=</span> title<span class="op">;</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> get <span class="fu">year</span>() {</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">_year</span><span class="op">;</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> set <span class="fu">year</span>(<span class="dt">year</span><span class="op">:</span>number) {</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        year <span class="op">=</span> <span class="pp">parseInt</span>(year)<span class="op">;</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (year <span class="op">&gt;</span> (<span class="kw">new</span> <span class="bu">Date</span>())<span class="op">.</span><span class="fu">getFullYear</span>()) {</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"You cannot add a book that will be published in the future."</span>)<span class="op">;</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_year</span> <span class="op">=</span> year<span class="op">;</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> get <span class="fu">pages</span>() {</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">_pages</span><span class="op">;</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> set <span class="fu">pages</span>(<span class="dt">pages</span><span class="op">:</span>number) {</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>        pages <span class="op">=</span> <span class="pp">parseInt</span>(pages)<span class="op">;</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (pages <span class="op">&lt;=</span> <span class="dv">0</span>) {</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"The book must contain at least one page."</span>)<span class="op">;</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_pages</span> <span class="op">=</span> pages<span class="op">;</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> get <span class="fu">isbn</span>() {</span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">_isbn</span><span class="op">;</span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> set <span class="fu">isbn</span>(<span class="dt">isbn</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>        isbn <span class="op">=</span> isbn<span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span>(isbn<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">10</span> <span class="op">||</span> isbn<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">13</span>)) {</span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"ISBN must have 10 or 13 characters."</span>)<span class="op">;</span></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">_isbn</span> <span class="op">=</span> isbn<span class="op">;</span></span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BookManager {</span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">addBook</span>(<span class="dt">title</span><span class="op">:</span><span class="bu">String</span><span class="op">,</span> <span class="dt">year</span><span class="op">:</span>number<span class="op">,</span> <span class="dt">pages</span><span class="op">:</span>number<span class="op">,</span> <span class="dt">isbn</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> book <span class="op">=</span> <span class="kw">new</span> <span class="fu">Book</span>(title<span class="op">,</span> year<span class="op">,</span> pages<span class="op">,</span> isbn)<span class="op">;</span></span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a>        <span class="co">// We add the book to the map</span></span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a>        books<span class="op">.</span><span class="fu">add</span>(isbn<span class="op">,</span> book)<span class="op">;</span></span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="exr-GRASP_GOF_polymorphisme_createur_fabrication_pure_indirection" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 6.7 (GRASP Polymorphisme, Créateur, Fabrication Pure et Indirection) </strong></span>Appliquez les GRASP Polymorphisme et Créateur à la classe <code>PartManager</code> pour améliorer sa cohésion et réduire son couplage. Créez une interface <code>PartParser</code> qui contient les méthodes pertinentes aux parsers et qui sera implémentée par ces derniers. Ajoutez un <code>PartParser</code> concret pour chaque type de fichier traitée par la méthode <code>parsePart</code>. Ajoutez une fabrique de <code>PartParser</code> à qui <code>PartManager</code> pourra déléguer la responsabilité de créer les objets <code>PartParser</code>. Par la suite, expliquez pourquoi la fabrique que vous avez ajoutée est un exemple des GRASP Indirection et Fabrication Pure.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Part {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span>string</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">constructor</span>(<span class="dt">name</span><span class="op">:</span>string<span class="op">,</span> <span class="dt">description</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">name</span> <span class="op">=</span> name<span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">description</span> <span class="op">=</span> description<span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PartManager {</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">parsePart</span>(<span class="dt">fileType</span><span class="op">:</span>string<span class="op">,</span> <span class="dt">content</span><span class="op">:</span>string) {</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> <span class="dt">part</span><span class="op">:</span>Part<span class="op">;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (fileType <span class="op">==</span> <span class="st">"csv"</span>) {</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> partsInfo <span class="op">=</span> content<span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)<span class="op">;</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>            part <span class="op">=</span> <span class="kw">new</span> <span class="fu">Part</span>(partsInfo[<span class="dv">0</span>]<span class="op">,</span> partsInfo[<span class="dv">1</span>])<span class="op">;</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> (fileType <span class="op">==</span> <span class="st">"json"</span>) {</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> part <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(content)<span class="op">;</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>            part <span class="op">=</span> <span class="kw">new</span> <span class="fu">Part</span>(part<span class="op">.</span><span class="at">name</span><span class="op">,</span> part<span class="op">.</span><span class="at">description</span>)<span class="op">;</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> (fileType <span class="op">==</span> <span class="st">"xml"</span>) {</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span> parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">DOMParser</span>()<span class="op">;</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span> xml <span class="op">=</span> parser<span class="op">.</span><span class="fu">parseFromString</span>(content<span class="op">,</span> <span class="st">"application/xml"</span>)<span class="op">;</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span> name <span class="op">=</span> xml<span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">"name"</span>)[<span class="dv">0</span>]<span class="op">.</span><span class="at">childNodes</span>[<span class="dv">0</span>]<span class="op">.</span><span class="at">nodeValue</span> <span class="op">||</span> <span class="st">""</span><span class="op">;</span> <span class="co">// Return an empty name if it is not in the XML tree</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span> description <span class="op">=</span> xml<span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">"description"</span>)[<span class="dv">0</span>]<span class="op">.</span><span class="at">childNodes</span>[<span class="dv">0</span>]<span class="op">.</span><span class="at">nodeValue</span> <span class="op">||</span> <span class="st">""</span><span class="op">;</span> <span class="co">// Return an empty description if it is not in the XML tree</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>            part <span class="op">=</span> <span class="kw">new</span> <span class="fu">Part</span>(name<span class="op">,</span> description)<span class="op">;</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> {</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"Unsupported file type"</span>)<span class="op">;</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Then, we do something with the part...</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Voici une solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La création de plusieurs <code>PartParser</code> permet d’améliorer la cohésion de la classe <code>PartManager</code> puisqu’elle a moins de responsabilités. Les <code>PartParser</code> peuvent être plus facilement réutilisés et testés à l’aide de tests unitaires. La création de l’interface <code>PartParser</code> permet de créer un API stable pour les <code>PartParser</code>, ce qui réduit le couplage entre <code>PartManager</code> et les différents types de <code>PartParser</code>. La fabrique est un exemple du GRASP Indirection puisqu’elle élimine le couplage direct entre la classe <code>PartManager</code> et les différents types de <code>PartParser</code>. Si d’autres types de <code>PartParser</code> sont ajoutés à l’application, l’impact sera moins important sur le contrôleur. La fabrique est une Fabrication Pure, car elle n’existe pas dans le domaine de l’application. Elle a été inventée pour améliorer la cohésion de <code>PartManager</code> et réduire son couplage avec les <code>PartParser</code> concrets.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Part {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span>string</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span><span class="bu">String</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">constructor</span>(<span class="dt">name</span><span class="op">:</span>string<span class="op">,</span> <span class="dt">description</span><span class="op">:</span><span class="bu">String</span>) {</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">name</span> <span class="op">=</span> name<span class="op">;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">description</span> <span class="op">=</span> description<span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PartManager {</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">parsePart</span>(<span class="dt">fileType</span><span class="op">:</span>string<span class="op">,</span> <span class="dt">content</span><span class="op">:</span>string) {</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> <span class="dt">part</span><span class="op">:</span>Part <span class="op">=</span> ParserFactory<span class="op">.</span><span class="fu">createParser</span>(fileType<span class="op">,</span> content)<span class="op">.</span><span class="fu">parse</span>()<span class="op">;</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Then, we do something with the part...</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="kw">interface</span> PartParser {</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">parse</span>()<span class="op">:</span>Part</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CSVPartParser <span class="kw">implements</span> PartParser {</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">parse</span>()<span class="op">:</span>Part {</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> partsInfo <span class="op">=</span> content<span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)<span class="op">;</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">new</span> <span class="fu">Part</span>(partsInfo[<span class="dv">0</span>]<span class="op">,</span> partsInfo[<span class="dv">1</span>])<span class="op">;</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> JSONPartParser <span class="kw">implements</span> PartParser {</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">parse</span>()<span class="op">:</span>Part {</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> part <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(content)<span class="op">;</span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">new</span> <span class="fu">Part</span>(part<span class="op">.</span><span class="at">name</span><span class="op">,</span> part<span class="op">.</span><span class="at">description</span>)<span class="op">;</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> XMLPartParser <span class="kw">implements</span> PartParser {</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">parse</span>()<span class="op">:</span>Part {</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> parser <span class="op">=</span> <span class="kw">new</span> <span class="fu">DOMParser</span>()<span class="op">;</span></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> xml <span class="op">=</span> parser<span class="op">.</span><span class="fu">parseFromString</span>(content<span class="op">,</span> <span class="st">"application/xml"</span>)<span class="op">;</span></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> name <span class="op">=</span> xml<span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">"name"</span>)[<span class="dv">0</span>]<span class="op">.</span><span class="at">childNodes</span>[<span class="dv">0</span>]<span class="op">.</span><span class="at">nodeValue</span> <span class="op">||</span> <span class="st">""</span><span class="op">;</span> <span class="co">// Return an empty name if it is not in the XML tree</span></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> description <span class="op">=</span> xml<span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">"description"</span>)[<span class="dv">0</span>]<span class="op">.</span><span class="at">childNodes</span>[<span class="dv">0</span>]<span class="op">.</span><span class="at">nodeValue</span> <span class="op">||</span> <span class="st">""</span><span class="op">;</span> <span class="co">// Return an empty description if it is not in the XML tree</span></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">new</span> <span class="fu">Part</span>(name<span class="op">,</span> description)<span class="op">;</span></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ParserFactory {</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">static</span> <span class="fu">createParser</span>(<span class="dt">fileType</span><span class="op">:</span>string<span class="op">,</span> <span class="dt">content</span><span class="op">:</span>string) {</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (fileType <span class="op">==</span> <span class="st">"csv"</span>) {</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">new</span> <span class="fu">CSVPartParser</span>(content)<span class="op">;</span></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> (fileType <span class="op">==</span> <span class="st">"json"</span>) {</span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">new</span> <span class="fu">JSONPartParser</span>(content)<span class="op">;</span></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> (fileType <span class="op">==</span> <span class="st">"xml"</span>) {</span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">new</span> <span class="fu">XMLPartParser</span>(content)<span class="op">;</span></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> {</span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">"Unsupported file type"</span>)<span class="op">;</span></span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="exr-GRASP_GOF_protection_variations_fabrication_pure" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercice 6.8 (GRASP Protection des Variations et Fabrication Pure) </strong></span>Le code suivant permet de gérer les emprunts de livres pour une bibliothèque. À chaque emprunt un événement est ajouté dans le calendrier Google de l’emprunteur pour lui rappeler de retourner le livre à temps. Pour ce faire, l’API de Google Calendar est utilisé. Appliquez les GRASP Protection des Variations et Fabrication Pure pour améliorer la cohésion de <code>ReservationManager</code>. Pour être concis, la gestion des réservations dans l’application est omise.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ReservationManager {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">addReservation</span>(<span class="bu">String</span> memberId<span class="op">,</span> <span class="bu">String</span> bookId<span class="op">,</span> <span class="bu">String</span> bookCopyId<span class="op">,</span> <span class="bu">Date</span> expiration) {</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> member <span class="op">=</span> members<span class="op">.</span><span class="fu">get</span>(memberId)<span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> book <span class="op">=</span> books<span class="op">.</span><span class="fu">get</span>(bookId)<span class="op">;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">// We assume that we create the reservation for the member some way...</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Then we add an event to the Google Calendar of the member to remind them to return their book</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> dateAsString <span class="op">=</span> expiration<span class="op">.</span><span class="fu">toLocaleDateString</span>(<span class="st">"fr-CA"</span><span class="op">,</span> {<span class="dt">year</span><span class="op">:</span> <span class="st">"numeric"</span><span class="op">,</span> <span class="dt">month</span><span class="op">:</span> <span class="st">"2-digit"</span><span class="op">,</span> <span class="dt">day</span><span class="op">:</span> <span class="st">"2-digit"</span>})<span class="op">;</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        <span class="co">// References</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">// https://developers.google.com/calendar/api/v3/reference?hl=fr</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">// https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> <span class="bu">event</span> <span class="op">=</span> {</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">"summary"</span><span class="op">:</span> <span class="vs">`Your reservation for </span><span class="sc">${</span>book<span class="op">.</span><span class="fu">getTitle</span>()<span class="sc">}</span><span class="vs"> is expired`</span><span class="op">,</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>            <span class="st">"location"</span><span class="op">:</span> <span class="st">"475 Boul. de Maisonneuve E, Montréal, QC H2L 5C4"</span><span class="op">,</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>            <span class="st">"description"</span><span class="op">:</span> <span class="st">"You must return your book today to avoid late fees."</span><span class="op">,</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>            <span class="st">"start"</span><span class="op">:</span> {</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>                <span class="st">"date"</span><span class="op">:</span> dateAsString<span class="op">,</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>                <span class="st">"timeZone"</span><span class="op">:</span> <span class="st">"America/Toronto"</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>            <span class="st">"end"</span><span class="op">:</span> {</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>                <span class="st">"date"</span><span class="op">:</span> dateAsString<span class="op">,</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>                <span class="st">"timeZone"</span><span class="op">:</span> <span class="st">"America/Toronto"</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>            <span class="st">"reminders"</span><span class="op">:</span> {</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>                <span class="st">"useDefault"</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>                <span class="st">"overrides"</span><span class="op">:</span> [</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// Send a reminder the day before by email and push notification</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>                    {<span class="st">"method"</span><span class="op">:</span> <span class="st">"email"</span><span class="op">,</span> <span class="st">"minutes"</span><span class="op">:</span> <span class="dv">24</span> <span class="op">*</span> <span class="dv">60</span>}<span class="op">,</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>                    {<span class="st">"method"</span><span class="op">:</span> <span class="st">"popup"</span><span class="op">,</span> <span class="st">"minutes"</span><span class="op">:</span> <span class="dv">24</span> <span class="op">*</span> <span class="dv">60</span>}</span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Create a client that we can use to communicate with Google </span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> client <span class="op">=</span> <span class="kw">new</span> <span class="fu">JWT</span>({</span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>            <span class="dt">email</span><span class="op">:</span> member<span class="op">.</span><span class="at">email</span><span class="op">,</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>            <span class="dt">key</span><span class="op">:</span> member<span class="op">.</span><span class="at">googlePrivateKey</span><span class="op">,</span></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scopes</span><span class="op">:</span> [</span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>                <span class="st">"https://www.googleapis.com/auth/calendar"</span><span class="op">,</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>                <span class="st">"https://www.googleapis.com/auth/calendar.events"</span><span class="op">,</span></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>            ]<span class="op">,</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>        })<span class="op">;</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> calendar <span class="op">=</span> google<span class="op">.</span><span class="fu">calendar</span>({ <span class="dt">version</span><span class="op">:</span> <span class="st">"v3"</span> })<span class="op">;</span></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>        <span class="co">// We make a request to Google Calendar API.</span></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> res <span class="op">=</span> <span class="cf">await</span> calendar<span class="op">.</span><span class="at">events</span><span class="op">.</span><span class="fu">insert</span>({</span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>            <span class="dt">calendarId</span><span class="op">:</span> <span class="st">"primary"</span><span class="op">,</span></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>            <span class="dt">auth</span><span class="op">:</span> client<span class="op">,</span></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>            <span class="dt">requestBody</span><span class="op">:</span> <span class="bu">event</span><span class="op">,</span></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>        })<span class="op">;</span></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Voici une solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La classe <code>GoogleCalendar</code> est une Fabrication Pure, car elle n’existe pas dans le domaine de l’application. Elle a été ajoutée pour améliorer la cohésion de <code>ReservationManager</code>. Avec la classe <code>GoogleCalendar</code>, il est aussi plus facile de réutiliser la fonctionnalité dans une autre partie de l’application. Selon le GRASP Protection des Variations, la classe <code>GoogleCalendar</code> permet aussi de réduire le couplage entre <code>ReservationManager</code> et l’interface API de Google. Si Google apporte des changements à son interface API, l’impact sur la classe <code>ReservationManager</code> sera moins important.</p>
+<p><strong>Pour améliorer la cohésion de la classe <code>ReservationManager</code>, est-il possible de donner la responsabilité de créer l’objet <code>event</code> à une autre <span style="white-space:nowrap">classe ?</span></strong></p>
+<p>Il serait possible de créer une classe <code>Event</code> qui représente un événement de l’interface API de Google. La cohésion de la classe <code>ReservationManager</code> ne serait pas significativement améliorée, puisqu’elle conserverait toujours la responsabilité de fournir les paramètres de l’événement. L’ajout de la classe <code>Event</code> permettrait de valider l’utilisation des bonnes propriétés et des bons types lors de la compilation du code. Toutefois, puisque les événements de l’interface API de Google sont complexes, l’ajout de la classe <code>Event</code> demanderait beaucoup de temps de développement et de tests. La pertinence de la classe <code>Event</code> dépend du contexte de développement dans lequel vous vous trouvez.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ReservationManager {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">addReservation</span>(<span class="bu">String</span> memberId<span class="op">,</span> <span class="bu">String</span> bookId<span class="op">,</span> <span class="bu">String</span> bookCopyId<span class="op">,</span> <span class="bu">Date</span> expiration) {</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> member <span class="op">=</span> members<span class="op">.</span><span class="fu">get</span>(memberId)<span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> book <span class="op">=</span> books<span class="op">.</span><span class="fu">get</span>(bookId)<span class="op">;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">// We assume that we create the reservation for the member some way...</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Then we add an event to the Google Calendar of the member to remind them to return their book</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> dateAsString <span class="op">=</span> expiration<span class="op">.</span><span class="fu">toLocaleDateString</span>(<span class="st">"fr-CA"</span><span class="op">,</span> {<span class="dt">year</span><span class="op">:</span> <span class="st">"numeric"</span><span class="op">,</span> <span class="dt">month</span><span class="op">:</span> <span class="st">"2-digit"</span><span class="op">,</span> <span class="dt">day</span><span class="op">:</span> <span class="st">"2-digit"</span>})<span class="op">;</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        GoogleCalendar<span class="op">.</span><span class="fu">addEvent</span>({</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">"summary"</span><span class="op">:</span> <span class="vs">`Your reservation for </span><span class="sc">${</span>book<span class="op">.</span><span class="fu">getTitle</span>()<span class="sc">}</span><span class="vs"> is expired`</span><span class="op">,</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>            <span class="st">"location"</span><span class="op">:</span> <span class="st">"475 Boul. de Maisonneuve E, Montréal, QC H2L 5C4"</span><span class="op">,</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">"description"</span><span class="op">:</span> <span class="st">"You must return your book today to avoid late fees."</span><span class="op">,</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">"start"</span><span class="op">:</span> {</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>                <span class="st">"date"</span><span class="op">:</span> dateAsString<span class="op">,</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>                <span class="st">"timeZone"</span><span class="op">:</span> <span class="st">"America/Toronto"</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>            <span class="st">"end"</span><span class="op">:</span> {</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>                <span class="st">"date"</span><span class="op">:</span> dateAsString<span class="op">,</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>                <span class="st">"timeZone"</span><span class="op">:</span> <span class="st">"America/Toronto"</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">"reminders"</span><span class="op">:</span> {</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>                <span class="st">"useDefault"</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>                <span class="st">"overrides"</span><span class="op">:</span> [</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// Send a reminder the day before by email and push notification</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>                    {<span class="st">"method"</span><span class="op">:</span> <span class="st">"email"</span><span class="op">,</span> <span class="st">"minutes"</span><span class="op">:</span> <span class="dv">24</span> <span class="op">*</span> <span class="dv">60</span>}<span class="op">,</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>                    {<span class="st">"method"</span><span class="op">:</span> <span class="st">"popup"</span><span class="op">,</span> <span class="st">"minutes"</span><span class="op">:</span> <span class="dv">24</span> <span class="op">*</span> <span class="dv">60</span>}</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span> member<span class="op">.</span><span class="at">email</span><span class="op">,</span> member<span class="op">.</span><span class="at">googlePrivateKey</span>)<span class="op">;</span></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> GoogleCalendar {</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">/*</span></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="co">     * References</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="co">     * https://developers.google.com/calendar/api/v3/reference?hl=fr</span></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a><span class="co">     * https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8</span></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a><span class="co">     */</span></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">static</span> <span class="fu">addEvent</span>(<span class="bu">event</span><span class="op">,</span> email<span class="op">,</span> privateKey) {</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Create a client that we can use to communicate with Google </span></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> client <span class="op">=</span> <span class="kw">new</span> <span class="fu">JWT</span>({</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>            <span class="dt">email</span><span class="op">:</span> email<span class="op">,</span></span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>            <span class="dt">key</span><span class="op">:</span> privateKey<span class="op">,</span></span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scopes</span><span class="op">:</span> [</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>                <span class="st">"https://www.googleapis.com/auth/calendar"</span><span class="op">,</span></span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>                <span class="st">"https://www.googleapis.com/auth/calendar.events"</span><span class="op">,</span></span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>            ]<span class="op">,</span></span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>        })<span class="op">;</span></span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> calendar <span class="op">=</span> google<span class="op">.</span><span class="fu">calendar</span>({ <span class="dt">version</span><span class="op">:</span> <span class="st">"v3"</span> })<span class="op">;</span></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>        <span class="co">// We make a request to Google Calendar API.</span></span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> res <span class="op">=</span> <span class="cf">await</span> calendar<span class="op">.</span><span class="at">events</span><span class="op">.</span><span class="fu">insert</span>({</span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>            <span class="dt">calendarId</span><span class="op">:</span> <span class="st">"primary"</span><span class="op">,</span></span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a>            <span class="dt">auth</span><span class="op">:</span> client<span class="op">,</span></span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>            <span class="dt">requestBody</span><span class="op">:</span> <span class="bu">event</span><span class="op">,</span></span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a>        })<span class="op">;</span></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
