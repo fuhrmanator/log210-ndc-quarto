@@ -185,6 +185,62 @@ get plumage() {
 }
 ```
 
+:::: {.callout-note collapse="true" icon="false"}
+
+## Voici une solution
+
+Puisque le comportement de `getPlumage` change en fonction du type de l'oiseau, il est préférable de créer une classe concrète pour chaque oiseau (`EuropeanSwallow`, `AfricanSwallow`, `NorwegianBlueParrot`) afin d'améliorer la cohésion du code.
+L'utilisation d'une classe abstraite `Bird` permet de garder un faible couplage malgré l'ajout de plusieurs nouvelles classes.
+Par le principe de polymorphisme, les oiseaux concrets sont aussi considérés comme des `Bird`.
+Puisque les oiseaux ne partagent pas de propriétés ou d'implémentation, il aurait aussi été possible d'utiliser une interface pour la classe `Bird`.
+
+```javascript
+abstract class Bird {
+    abstract get plumage(): string
+}
+
+class EuropeanSwallow extends Bird {
+    get plumage() {
+        return "average" 
+    }
+}
+
+class AfricanSwallow extends Bird {
+    _numberOfCoconuts: number;
+
+    constructor(numberOfCoconuts: number) {
+        super();
+        this._numberOfCoconuts = numberOfCoconuts;
+    }
+  
+    get plumage() {
+        return (this.numberOfCoconuts > 2) ? "tired" : "average";
+    }
+
+    get numberOfCoconuts() {
+        return this._numberOfCoconuts;
+    }
+}
+
+class NorwegianBlueParrot extends Bird {
+    _voltage: number;
+
+    constructor(voltage: number) {
+        super();
+        this._voltage = voltage;
+    }
+
+    get plumage() {
+        return (this.voltage > 100) ? "scorched" : "beautiful";
+    }
+
+    get voltage() {
+        return this._voltage;
+    }
+}
+```
+::::
+
 :::
 
 <!-- ::: {#exr-GRASP_GOF_cohesion}
