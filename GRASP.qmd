@@ -194,6 +194,27 @@ L'utilisation d'une classe abstraite `Bird` permet de garder un faible couplage 
 Par le principe de polymorphisme, les oiseaux concrets sont aussi considérés comme des `Bird`.
 Puisque les oiseaux ne partagent pas de propriétés ou d'implémentation, il aurait aussi été possible d'utiliser une interface pour la classe `Bird`.
 
+```{.plantuml #fig-GRASP_polymorphisme_sol caption='Classes "Bird" auxquelles on a appliqué le principe GRASP Polymorphisme.'}
+@startuml
+!include normal.pumlinclude
+hide empty members
+
+abstract Bird {
+    {abstract} getPlumage() : String
+}
+
+class EuropeanSwallow extends Bird
+
+class AfricanSwallow extends Bird {
+    numberOfCoconuts : number
+}
+
+class NorwegianBlueParrot extends Bird {
+    voltage : number
+}
+@enduml
+```
+
 ```javascript
 abstract class Bird {
     abstract get plumage(): string
