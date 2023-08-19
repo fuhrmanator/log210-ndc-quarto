@@ -78,6 +78,10 @@ Pensez à la **mémorabilité** d'une association dans le contexte du logiciel �
   - Une flèche (triangle) de "sens de lecture" optionnelle indique la direction dans laquelle lire l'association. Si la flèche est absente, on lit l'association de gauche à droite ou de haut en bas.
   - Les extrémités des associations ont une expression de la multiplicité indiquant une relation numérique entre les instances des classes.
   Vous pouvez en trouver plusieurs exemples sur la @fig-MDD-jeu-de-risk.
+- Les associations ne doivent pas être représentées avec des attributs.
+Les associations servent à représenter les relations purement conceptuelles afin de documenter le domaine.
+Elles ne visent pas à documenter la structure des données ou les instances de variables qu'on retrouve dans le logiciel.
+Contrairement aux associations des diagrammes de classes logicielles, ce ne sont pas toutes les associations conceptuelles que seront implémentées dans le logiciel.
 
 : Extrait du tableau 9.2\ {{< fa solid book >}} (liste d'associations courantes) {#tbl-associations-courantes}
 
