@@ -502,6 +502,8 @@ class MovieManager {
 
             movieJSON.directors.append(directorJSON);
         }
+
+        return movieJSON;
     }
 }
 ```
