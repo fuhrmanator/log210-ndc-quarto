@@ -81,7 +81,7 @@ Pensez à la **mémorabilité** d'une association dans le contexte du logiciel �
 - Les associations ne doivent pas être représentées avec des attributs.
 Les associations servent à représenter les relations purement conceptuelles afin de documenter le domaine.
 Elles ne visent pas à documenter la structure des données ou les instances de variables qu'on retrouve dans le logiciel.
-Contrairement aux associations des diagrammes de classes logicielles, ce ne sont pas toutes les associations conceptuelles que seront implémentées dans le logiciel.
+Contrairement aux associations des diagrammes de classes logicielles, ce ne sont pas toutes les associations conceptuelles qui seront implémentées dans le logiciel.
 
 : Extrait du tableau 9.2\ {{< fa solid book >}} (liste d'associations courantes) {#tbl-associations-courantes}
 
