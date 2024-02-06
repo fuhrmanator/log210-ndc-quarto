@@ -33,10 +33,10 @@ book:
   author: 
     - "Christopher Fuhrman"
     - "Yvan Ross"
-  # date: last-modified
-  # date-format: "DD MMMM YYYY à HH:mm:ss Z"
-  date: 2023-03-01
-  date-format: "DD MMMM YYYY"
+  date: last-modified
+  date-format: "DD MMMM YYYY à HH:mm:ss Z"
+  # date: 2023-03-01
+  # date-format: "DD MMMM YYYY"
 
   chapters:
   - index.qmd # Preface
