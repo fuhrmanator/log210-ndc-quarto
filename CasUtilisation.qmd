@@ -79,7 +79,7 @@ Sur la @fig-uc, le cas d'utilisation "..." signifie qu'il y a d'autres cas d'uti
 Le cas d'utilisation *Démarrer* n'est pas normalement indiqué dans un diagramme.
 C'est une astuce pédagogique proposée par @craig_uml_2005, car il faudra concevoir et coder ce scénario, bien qu'il ne soit pas une fonctionnalité connue par l'utilisateur.
 
-```{.plantuml #fig-uc caption="Diagramme de cas d'utilisation." }
+```{.plantuml genurl="true" #fig-uc caption="Diagramme de cas d'utilisation." }
 @startuml
 !include ecriture.pumlinclude
 skinparam usecase<<blah>> {

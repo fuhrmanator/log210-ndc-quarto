@@ -125,7 +125,7 @@ Ils sont indiqués par le symbole **`/`** devant leur nom.
 
 L'exemple à la @fig-MDD-attribut-derive s'applique à la règle du jeu Risk spécifiant qu'un joueur reçoit un certain nombre de renforts selon le nombre de pays occupés. La classe Joueur pourrait avoir un attribut dérivé `/nbPaysOccupés` qui est calculé selon le nombre de Pays contrôlés par le joueur.
 
-```{.plantuml #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l'association."}
+```{.plantuml genurl="true" #fig-MDD-attribut-derive caption="`nbPaysOccupés` est un attribut dérivé. Sa valeur sera calculée selon le nombre de pays de l'association."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -152,7 +152,7 @@ L'association entre `Joueur` et `Pays` a un verbe "contrôle", qui est un exempl
 L'association entre `Continent` et `Pays` représente la composition des territoires (un synonyme pour pays) des différents continents, soit 4 (pour l'Amérique du sud et l'Océanie), 6 (pour l'Afrique), 7 (pour l'Europe), 9 (pour l'Amérique du nord) et 12 (pour l'Asie).
 Si vous regardez tout le modèle, vous verrez qu'il représente visuellement beaucoup d'éléments du jeu.
 
-```{.plantuml #fig-MDD-jeu-de-risk caption="Modèle du domaine du jeu Risk."}
+```{.plantuml genurl="true" #fig-MDD-jeu-de-risk caption="Modèle du domaine du jeu Risk."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -215,7 +215,7 @@ Alors, une classe Cours (qui joue le rôle de description) sert pour spécifier 
 
 La @fig-MDD-CoursGroupeCoursDescription présente une classe de description pour le contexte de cours et de groupe-cours.
 
-```{.plantuml #fig-MDD-CoursGroupeCoursDescription caption="La classe Cours joue le rôle de description d'entités (les groupes-cours)."}
+```{.plantuml genurl="true" #fig-MDD-CoursGroupeCoursDescription caption="La classe Cours joue le rôle de description d'entités (les groupes-cours)."}
 @startuml
 !include normal.pumlinclude
 hide empty members
@@ -250,7 +250,7 @@ Attention de ne pas faire l'erreur naïve d'utiliser une classe de description s
 :::
 
 
-```{.plantuml #fig-MDD-ErreurDescription caption="Illustration d'une erreur fréquente: utiliser une classe de description sans justification."}
+```{.plantuml genurl="true" #fig-MDD-ErreurDescription caption="Illustration d'une erreur fréquente: utiliser une classe de description sans justification."}
 @startuml
 !include normal.pumlinclude
 hide empty members
@@ -302,7 +302,7 @@ Alors, la durée de vie de cette instance dépend de l'association.
 
 Voir le livre de @craig_uml_2005 pour plus d'exemples.
 
-```{.plantuml #fig-MDD-classe-association caption="Classe d'association dans le MDD Jeu Risk."}
+```{.plantuml genurl="true" #fig-MDD-classe-association caption="Classe d'association dans le MDD Jeu Risk."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -506,7 +506,7 @@ Par rétro-ingénierie, réalisez le modèle du domaine pour une fonctionnalité
 
 Voici une solution possible qui est cohérente avec l'étape précédente:
 
-```{.plantuml #fig-mdd-retroingenierie-discord-attributs caption="Attributs des classes conceptuelles proposées dans l'exercice."}
+```{.plantuml genurl="true" #fig-mdd-retroingenierie-discord-attributs caption="Attributs des classes conceptuelles proposées dans l'exercice."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -555,7 +555,7 @@ class Fichier {
 
 Voici une solution possible qui est cohérente avec l'étape précédente:
 
-```{.plantuml #fig-mdd-retroingenierie-discord-associations caption="Associations et cardinalités des classes conceptuelles proposées dans l'exercice."}
+```{.plantuml genurl="true" #fig-mdd-retroingenierie-discord-associations caption="Associations et cardinalités des classes conceptuelles proposées dans l'exercice."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -616,7 +616,7 @@ Toutefois, les associations du MDD utilisent des verbes ternes qui n'aident pas 
 Remplacez les verbes des associations par des verbes plus riches.
 Vous pouvez inverser le sens des associations.
 
-```{.plantuml #fig-mdd_youtube caption="Modèle du domaine partiel pour le logiciel YouTube."}
+```{.plantuml genurl="true" #fig-mdd_youtube caption="Modèle du domaine partiel pour le logiciel YouTube."}
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -667,7 +667,7 @@ class Statistique {
 
 ## Voici une solution
 
-```{.plantuml #fig-mdd_youtube_ameliore caption="Modèle du domaine partiel pour le logiciel YouTube avec des verbes d'association plus riches."}
+```{.plantuml genurl="true" #fig-mdd_youtube_ameliore caption="Modèle du domaine partiel pour le logiciel YouTube avec des verbes d'association plus riches."}
 @startuml
 !include ecriture.pumlinclude
 scale 1

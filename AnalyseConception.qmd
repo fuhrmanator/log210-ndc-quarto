@@ -23,7 +23,7 @@ La **conception** sous-entend l'élaboration d'une solution conceptuelle répond
 
 <!-- Pour plus de détails, vous pouvez consulter le chapitre 1\ {{< fa solid book >}}. -->
 
-```{.plantuml #fig-mddDes caption="Diagramme de *classes conceptuelles* décrivant (modélisant) le *problème* d'un jeu de dés (figure 1.3\ {{< fa solid book >}}) avec des statistiques. Ceci est élaboré lors d'une activité d'analyse."}
+```{#fig-mddDes .plantuml genurl="true" caption="Diagramme de *classes conceptuelles* décrivant (modélisant) le *problème* d'un jeu de dés (figure 1.3\ {{< fa solid book >}}) avec des statistiques. Ceci est élaboré lors d'une activité d'analyse. "}
 @startuml
 !include ecriture.pumlinclude
 'left to right direction
@@ -43,7 +43,7 @@ Joueur "*" -l- "1" JeuDeDés : joue >
 @enduml
 ```
 
-```{.plantuml #fig-ddcDes caption="Diagramme de *classes logicielles* décrivant une *solution* au problème du jeu de dés. La conception s'inspire du modèle du problème, afin de faciliter sa compréhension."}
+```{.plantuml genurl="true" #fig-ddcDes caption="Diagramme de *classes logicielles* décrivant une *solution* au problème du jeu de dés. La conception s'inspire du modèle du problème, afin de faciliter sa compréhension."}
 @startuml
 !include ecriture.pumlinclude
 'left to right direction
@@ -160,7 +160,7 @@ Cette forme de complexité comprend des aspects d'une solution qui ne sont pas s
 Dans un environnement d'exécution, il y a des dimensions comme le ramasse-miettes (*garbage collection*), l'ordonnancement des fils d'exécution (*threads*) sur un serveur, l'utilisation de *conteneurs* (à la Docker), etc. qui peuvent affecter la qualité d'un logiciel.
 Les ingénieures et ingénieurs doivent gérer ces formes de complexité, mais il n'y a pas beaucoup de stratégies évidentes face aux technologies qui évoluent à grande vitesse.
 
-```{.plantuml #fig-complexitySources caption="Sources de complexité (inhérente, circonstancielle et environnementale) par rapport au processus de développement (analyse, conception et implémentation)."}
+```{.plantuml genurl="true" #fig-complexitySources caption="Sources de complexité (inhérente, circonstancielle et environnementale) par rapport au processus de développement (analyse, conception et implémentation)."}
 @startuml
 scale 0.8
 !include normal.pumlinclude
@@ -223,7 +223,7 @@ Avec la rétroaction du client et l'adaptation, le système à développer conve
 Cette instabilité peut être particulièrement prononcée dans un contexte d'entreprise en démarrage.
 - Dans une itération, la modélisation (par exemple avec l'UML) se fait au début et devrait prendre beaucoup moins de temps (quelques heures) que la programmation, qui n'est pas triviale (voir la @fig-AnalyseConceptionDansLesIterations). Selon le contexte du projet (voir le [Spectre de la conception](#sec-SpectreDeLaConception)), on peut décider de ne pas faire de modélisation. Cependant, en fonction de la complexité du projet à réaliser, cela peut amener des risques, ce que l'on appelle la [dette technique](#sec-DetteTechnique).
 
-```{.plantuml #fig-Modèle_processus_itératif caption="Un processus itératif permet de gérer les complexités, car la planification d'une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent."}
+```{.plantuml genurl="true" #fig-Modèle_processus_itératif caption="Un processus itératif permet de gérer les complexités, car la planification d'une itération peut viser une partie du système et le système évolue à mesure que les itérations avancent."}
 @startuml Iteration
 !include normal.pumlinclude
 skinparam defaultTextAlignment center

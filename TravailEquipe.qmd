@@ -68,7 +68,7 @@ L'humilité ne veut pas dire "je n'ai pas de valeur" ou "j'accepte les attaques 
 
 ![Savoir qu'on n'est pas infaillible. ["Brown Eyed Susan"](https://www.flickr.com/photos/dbarronoss/14660203846/) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)) par [dbarronoss](https://www.flickr.com/people/dbarronoss/).](images/flickr_dbarronoss_Brown_Eyed_Susan.jpg){#fig-pas-infaillible width=200px}
 
-```{.plantuml #fig-moi_inf_equipe caption="Une personne humble va accepter une décision prise par l'équipe, même si elle n'est pas en accord à 100%." width=200px}
+```{.plantuml genurl="true" #fig-moi_inf_equipe caption="Une personne humble va accepter une décision prise par l'équipe, même si elle n'est pas en accord à 100%." width=200px}
 @startuml
 !include ecriture.pumlinclude
 skinparam rectangleBorderColor transparent

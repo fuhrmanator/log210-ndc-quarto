@@ -25,7 +25,7 @@ Une fois que vous aurez l'habitude d'utiliser les GRASP, vous serez encore rapid
 Neal Ford [-@Ford2009] a proposé la notion d'effort pour la conception qu'il a nommée le "Spectre de la conception".
 La @fig-SpectreConception illustre le principe.
 
-``` {#fig-SpectreConception .plantuml caption="Spectre de la conception [@Ford2009]."}
+``` {#fig-SpectreConception .plantuml genurl="true" caption="Spectre de la conception [@Ford2009]."}
 @startuml
 !include ecriture.pumlinclude
 scale 1.2
@@ -152,7 +152,7 @@ On peut voir les principes GRASP comme des généralisations (principes de base)
 
 Soit le diagramme de classe sur la @fig-GRASP_polymorphisme_ex modélisant l'exemple de @Fowl18a à [*Replace Conditional with Polymorphism*](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html).
 
-```{.plantuml #fig-GRASP_polymorphisme_ex caption='Classe "Bird" à laquelle on peut appliquer le principe GRASP Polymorphisme.'}
+```{.plantuml genurl="true" #fig-GRASP_polymorphisme_ex caption='Classe "Bird" à laquelle on peut appliquer le principe GRASP Polymorphisme.'}
 @startuml
 !include normal.pumlinclude
 class Bird {
@@ -194,7 +194,7 @@ L'utilisation d'une classe abstraite `Bird` permet de garder un faible couplage 
 Par le principe de polymorphisme, les oiseaux concrets sont aussi considérés comme des `Bird`.
 Puisque les oiseaux ne partagent pas de propriétés ou d'implémentation, il aurait aussi été possible d'utiliser une interface pour la classe `Bird`.
 
-```{.plantuml #fig-GRASP_polymorphisme_sol caption='Classes "Bird" auxquelles on a appliqué le principe GRASP Polymorphisme.'}
+```{.plantuml genurl="true" #fig-GRASP_polymorphisme_sol caption='Classes "Bird" auxquelles on a appliqué le principe GRASP Polymorphisme.'}
 @startuml
 !include normal.pumlinclude
 hide empty members
@@ -273,7 +273,7 @@ Cet exercice est inspiré d'un exemple donné dans le livre *Head First Design P
 - Quelles classes sur la @fig-GRASP_cohesion_ex1 ont de multiples responsabilités?
 - Déterminez si les classes sur la @fig-GRASP_cohesion_ex2 ont une cohésion forte ou faible.
 
-```{.plantuml #fig-GRASP_cohesion_ex1 caption="Quelles classes ont de multiples responsabilités?"}
+```{.plantuml genurl="true" #fig-GRASP_cohesion_ex1 caption="Quelles classes ont de multiples responsabilités?"}
 @startuml
 !include normal.pumlinclude
 class Jeu {
@@ -325,7 +325,7 @@ class Iterator {
 @enduml
 ```
 
-```{.plantuml #fig-GRASP_cohesion_ex2 caption="Quelles classes ont une cohésion forte? Une cohésion faible?"}
+```{.plantuml genurl="true" #fig-GRASP_cohesion_ex2 caption="Quelles classes ont une cohésion forte? Une cohésion faible?"}
 @startuml
 !include normal.pumlinclude
 class Jeu {

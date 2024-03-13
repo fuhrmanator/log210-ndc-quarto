@@ -17,7 +17,7 @@ Les points importants sont les suivants (les détails se trouvent dans le livre)
 
 La @fig-DiagrammePackage est un exemple d'un diagramme de packages.
 
-```{.plantuml #fig-DiagrammePackage caption="Diagramme de packages (tiré de la figure F12.6\ {{< fa solid book >}})."  }
+```{.plantuml genurl="true" #fig-DiagrammePackage caption="Diagramme de packages (tiré de la figure F12.6\ {{< fa solid book >}})."  }
 @startuml
 !include ecriture.pumlinclude
 scale 0.8

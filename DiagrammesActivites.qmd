@@ -17,7 +17,7 @@ Voici les éléments importants d'un diagramme d'activités:
 
 La @fig-ActivityDiagramExampleGitCommit présente un exemple de diagramme d'activité décrivant de manière générale une partie du processus de travail d'une personne utilisant `git` pour la gestion de code source. 
 
-```{.plantuml #fig-ActivityDiagramExampleGitCommit caption="Diagramme d'activité pour un processus simple avec Git."  }
+```{.plantuml genurl="true" #fig-ActivityDiagramExampleGitCommit caption="Diagramme d'activité pour un processus simple avec Git."  }
 @startuml
 !include normal.pumlinclude
 skinparam DefaultTextAlignment center
@@ -53,7 +53,7 @@ Il ne s'agit pas de l'UML, mais cette notation est encore utilisée (depuis les 
 Un exemple de diagramme d'activités dans le cadre d'un cours de programmation utilisant GitHub Classroom est illustré sur la @fig-GitHubClassroomActivities.
 Ce diagramme explique comment GitHub Classroom permet à l'étudiant ou étudiante qui accepte un devoir (*assignment* en anglais) sur GitHub Classroom de choisir son identité universitaire (activité en couleur rose), mais seulement si l'enseignant ou enseignante a téléversé la liste de classe (activité en couleur rose) *avant* d'envoyer les invitations à la communauté étudiante.
 
-```{.plantuml #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classroom (contexte de l'ÉTS avec Moodle)."  }
+```{.plantuml genurl="true" #fig-GitHubClassroomActivities caption="Diagramme d'activités pour les activités séquentielles de GitHub Classroom (contexte de l'ÉTS avec Moodle)."  }
 @startuml
 !include normal.pumlinclude
 skinparam DefaultTextAlignment center

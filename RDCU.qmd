@@ -34,7 +34,7 @@ Alors, votre RDCU sera incertaine jusqu'à ce que vous la traduisiez en code ex�
 
 Tout le processus de proposition d'une solution (RDCU) peut être visualisé comme un diagramme d'activités, comme illustré sur la @fig-RDCU_Aide_Memoire.
 
-```{.plantuml #fig-RDCU_Aide_Memoire caption="Aide-mémoire pour faire une RDCU. L'étape en rouge nécessite beaucoup de pratique, selon la complexité des postconditions. Vous pouvez vous attendre à ne pas la réussir du premier coup."  }
+```{.plantuml genurl="true" #fig-RDCU_Aide_Memoire caption="Aide-mémoire pour faire une RDCU. L'étape en rouge nécessite beaucoup de pratique, selon la complexité des postconditions. Vous pouvez vous attendre à ne pas la réussir du premier coup."  }
 @startuml 
 !include normal.pumlinclude
 ' get font awesome icon
@@ -116,7 +116,7 @@ Attention à la [visibilité](#sec-Visibilite)\ {{< fa solid low-vision >}}.
 
 Lorsque l'attribut d'un objet doit être modifié juste après la création de ce dernier, ça peut se faire dans le constructeur, comme illustré sur la @fig-RDCU_Constructeur_Modification.
 
-```{.plantuml #fig-RDCU_Constructeur_Modification  caption="Combiner la création d'une instance et une modification de son attribut dans un constructeur." }
+```{.plantuml genurl="true" #fig-RDCU_Constructeur_Modification  caption="Combiner la création d'une instance et une modification de son attribut dans un constructeur." }
 @startuml
 !include ecriture.pumlinclude
 scale 1.3
@@ -157,7 +157,7 @@ Par exemple, sur la @fig-RDCU_Visibilite1, la référence à *b* peut être:
 
 Pour plus de détails, voir le chapitre sur la Visibilité (F18/A19)\ {{< fa solid book >}}.
 
-```{.plantuml #fig-RDCU_Visibilite1  caption="L'objet *b* doit être visible à l'objet *a* si *a* veut lui envoyer un message." }
+```{.plantuml genurl="true" #fig-RDCU_Visibilite1  caption="L'objet *b* doit être visible à l'objet *a* si *a* veut lui envoyer un message." }
 @startuml
 !include ecriture.pumlinclude
 scale 1.3
@@ -180,7 +180,7 @@ Il y a un exemple à la @fig-RDCU_ID_en_objets provenant du chapitre sur **l'App
 Un autre exemple du livre de @craig_uml_2005 est l'identifiant `codeArticle` transformé en objet `DescriptionProduit` par la méthode  
 `CatalogueProduits.getDescProduit(codeArticle:String):DescriptionProduit`.
 
-```{.plantuml #fig-RDCU_ID_en_objets caption="Un identifiant `idClient:String` est transformé en objet `c:Client`, qui est ensuite envoyé à la Vente en cours."  }
+```{.plantuml genurl="true" #fig-RDCU_ID_en_objets caption="Un identifiant `idClient:String` est transformé en objet `c:Client`, qui est ensuite envoyé à la Vente en cours."  }
 @startuml
 !include ecriture.pumlinclude
 scale 1.1
@@ -207,7 +207,7 @@ Notez que les exemples de @craig_uml_2005 ne montrent qu'un seul *type* dans le 
 
 Un tableau associatif fournit une méthode `get` ou `find` pour rechercher un objet à partir de sa clé (son identifiant). La @fig-Map_Case_Monopoly en est un exemple.
 
-```{.plantuml #fig-Map_Case_Monopoly  caption="Exemple de l'utilisation d'un tableau associatif pour trouver une Case Monopoly à partir de son nom." }
+```{.plantuml genurl="true" #fig-Map_Case_Monopoly  caption="Exemple de l'utilisation d'un tableau associatif pour trouver une Case Monopoly à partir de son nom." }
 @startuml
 !include ecriture.pumlinclude
 scale 1.1
@@ -236,7 +236,7 @@ Voici quelques points importants:
 - Il faut choisir l'objet du domaine initial, qui est souvent l'objet racine, mais ça dépend du domaine. Cet objet aura la responsabilité, lors de sa création, de générer ses "enfants" directs, puis chaque "enfant" aura à faire la même chose selon la structure. Par exemple, selon le MDD pour le jeu Risk à la @fig-MDD-jeu-de-risk, `JeuRisk` pourrait être l'objet racine, qui devra créer l'objet `PlateauRisk` et les cinq instances de `Dé`. L'objet `PlateauRisk`, lors de son initialisation, pourra instancier les 42 objets `Pays` et les six objets `Continent`, en passant à chaque `Continent` ses objets `Pays` lors de son initialisation. Si `PlateauRisk` fournit une méthode `getPays(nom)` qui dépend d'un tableau associatif selon [Transformer les identifiants en objets](#sec-TransformerIDenObjets), alors c'est dans l'initialisation de cette classe que l'instance de `Map<String,Pays>` sera créée.
 - Selon l'application, les objets peuvent être chargés en mémoire à partir d'un système de persistance, par exemple une base de données ou un fichier. Pour l'exemple de Risk, `PlateauRisk` pourrait charger, à partir d'un fichier JSON, des données pour initialiser toutes les instances de `Pays`. Pour une application d'inscription de cours à l'université, il se peut que toutes les descriptions de cours soient chargées en mémoire à partir d'une base de données. Une base de données amène un lot d'avantages et d'inconvénients, et elle n'est pas toujours nécessaire. Dans la méthodologie de ce manuel, on n'aborde pas le problème des bases de données (c'est le sujet d'un autre cours).
 
-```{.plantuml #fig-DemarrerRisk  caption="Exemple de l'initialisation partielle du jeu Risk, avec les principes GRASP et les tableaux associatifs pour faciliter la transformation d'identifiants en objets." }
+```{.plantuml genurl="true" #fig-DemarrerRisk  caption="Exemple de l'initialisation partielle du jeu Risk, avec les principes GRASP et les tableaux associatifs pour faciliter la transformation d'identifiants en objets." }
 @startuml
 !include ecriture.pumlinclude
 scale 0.75
@@ -306,7 +306,7 @@ Dans la section F30.8/A33.7\ {{< fa solid book >}}, Larman mentionne le pattern 
 
 ![Dés dans la vraie vie (["Hand of chance"](https://www.flickr.com/photos/aerust/9590772048/) [(CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/) par [Alexandra E Rust](https://www.flickr.com/people/aerust/)).](images/flickr_aerust_hand_of_chance.jpg){width=80% #fig-main_des}
 
-```{#fig-de_logiciel .plantuml caption="Dé dans un logiciel selon *Faire soi-même*." }
+```{#fig-de_logiciel .plantuml genurl="true" caption="Dé dans un logiciel selon *Faire soi-même*." }
 !include ecriture.pumlinclude
 hide empty methods
 class Dé {
@@ -332,7 +332,7 @@ Pour chacun des diagrammes suivants, écrivez les classes TypeScript avec les m�
 Vous pouvez utiliser VS Code pour vous aider avec le TypeScript, mais cet outil ne sera pas forcément permis lors d'un examen.
 :::
 
-```{.plantuml #fig-coder_sequence_modele caption="Exemple de diagramme de séquence." }
+```{.plantuml genurl="true" #fig-coder_sequence_modele caption="Exemple de diagramme de séquence." }
 @startuml
 scale 1.0
 !include normal.pumlinclude
@@ -432,7 +432,7 @@ Pour cet exercice, nous examinerons une conception orientée objet réelle du je
 
 Pour visualiser la conception, nous avons généré un diagramme de classes en UML sur la @fig-Emojiopoly_classes avec l'outil [tplant](https://github.com/bafolts/tplant).
 
-```{.plantuml caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly](https://github.com/Chuzzy/Emojiopoly)." #fig-Emojiopoly_classes}
+```{.plantuml genurl="true" caption="Diagramme de classes logicielles (TypeScript) pour le projet [Emojiopoly](https://github.com/Chuzzy/Emojiopoly)." #fig-Emojiopoly_classes}
 @startuml
 ' généré avec tplant a partir d'un clone de https://github.com/Chuzzy/Emojiopoly :
 ' tplant --input src/monopoly/**/*.ts --output Emojiopoly.puml -A

@@ -4,7 +4,7 @@ Voici des artefacts en PlantUML proposés pour le cas d'utilisation *Traiter une
 
 ## DSS {#sec-DSS_traiter_vente}
 
-```{.plantuml caption="DSS pour le scénario _Traiter une vente_ de @craig_uml_2005."}
+```{.plantuml genurl="true" caption="DSS pour le scénario _Traiter une vente_ de @craig_uml_2005."}
 @startuml
 !include normal.pumlinclude
 skinparam SequenceMessageAlign center
@@ -25,7 +25,7 @@ c<<--s : remise de la monnaie, du reçu
 
 ## MDD partiel
 
-```{.plantuml caption="MDD pour le scénario _Traiter une vente_ de @craig_uml_2005."}
+```{.plantuml genurl="true" caption="MDD pour le scénario _Traiter une vente_ de @craig_uml_2005."}
 @startuml
 !include normal.pumlinclude
 hide methods

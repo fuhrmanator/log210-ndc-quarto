@@ -185,7 +185,7 @@ format:
 
 ::: {.column width="50%"}
 ````{code-line-numbers=false}
-```{.plantuml #fig-ddcDes caption="Diagramme de classes."}
+```{.plantuml genurl="true" #fig-ddcDes caption="Diagramme de classes."}
 @startuml
 skinparam style strictuml
 skinparam backgroundcolor transparent
@@ -211,7 +211,7 @@ JeuDeDés -right- "[nom]" Joueur : "             "
 :::
 
 ::: {.column width="50%"}
-```{.plantuml #fig-ddcDes caption="Diagramme de classes."}
+```{.plantuml genurl="true" #fig-ddcDes caption="Diagramme de classes."}
 @startuml
 skinparam style strictuml
 skinparam backgroundcolor transparent

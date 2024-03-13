@@ -24,7 +24,7 @@ Voici les éléments importants:
 La @fig-DiagrammeDeploiement est un exemple de diagramme de déploiement (laboratoire). 
 La @fig-iTunesDiagrammeDeploiement est un exemple de diagramme de déploiement pour le logiciel iTunes d'Apple. 
 
-```{.plantuml #fig-DiagrammeDeploiement caption="Diagramme de déploiement du système à développer pour le laboratoire." }
+```{.plantuml genurl="true" #fig-DiagrammeDeploiement caption="Diagramme de déploiement du système à développer pour le laboratoire." }
 @startuml
 !include normal.pumlinclude
 skinparam componentStyle uml2
@@ -75,7 +75,7 @@ NP1 .up. SGB
 @enduml
 ```
 
-```{.plantuml #fig-iTunesDiagrammeDeploiement caption="Diagramme de déploiement pour iTunes d'Apple avec un ordinateur, un iPad et le service Web d'Apple, selon [ce modèle UML](https://www.uml-diagrams.org/apple-itunes-uml-deployment-diagram-example.html) de Kirill Fakhroutdinov (utilisé avec permission)."}
+```{.plantuml genurl="true" #fig-iTunesDiagrammeDeploiement caption="Diagramme de déploiement pour iTunes d'Apple avec un ordinateur, un iPad et le service Web d'Apple, selon [ce modèle UML](https://www.uml-diagrams.org/apple-itunes-uml-deployment-diagram-example.html) de Kirill Fakhroutdinov (utilisé avec permission)."}
 @startuml
 scale 0.7
 left to right direction

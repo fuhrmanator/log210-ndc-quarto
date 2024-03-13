@@ -22,7 +22,7 @@ La requête HTTP contient l'URI vers la routine à accéder, la [méthode de req
 Les interfaces humain-machine (IHM), dont les interfaces graphiques, ne sont pas une interface API puisqu'elles ne peuvent être utilisées de manière logicielle.
 Elles permettent de faire le pont entre les utilisateurs et utilisatrices (qui communiquent par les gestes, par exemple un clic avec une souris) et l'interface API du logiciel afin d'en faciliter l'utilisation.
 
-```{.plantuml #fig-apiclasse caption="Les méthodes publiques d'une classe sont un exemple d'interface API." }
+```{.plantuml genurl="true" #fig-apiclasse caption="Les méthodes publiques d'une classe sont un exemple d'interface API." }
 @startuml
 !include normal.pumlinclude
 
@@ -96,7 +96,7 @@ Il y a d'autres bénéfices de cette séparation, mais elle impose certaines rè
 
 ::: {#fig-separation_couches layout-ncol=2}
 
-```{.plantuml caption="Sans séparation, les éléments de l'IHM sont fortement couplés aux éléments de la logique de l'application. Ce genre de solution peut être créé rapidement. Cependant, si le code de l'IHM doit changer pour accommoder une nouvelle technologie, ces changements peuvent affecter le reste du système." #fig-sans_separation}
+```{.plantuml genurl="true" caption="Sans séparation, les éléments de l'IHM sont fortement couplés aux éléments de la logique de l'application. Ce genre de solution peut être créé rapidement. Cependant, si le code de l'IHM doit changer pour accommoder une nouvelle technologie, ces changements peuvent affecter le reste du système." #fig-sans_separation}
 @startuml
 !include normal.pumlinclude
 hide empty members
@@ -139,7 +139,7 @@ P3 -d- D6
 @enduml
 ```
 
-```{.plantuml caption="La définition et la séparation des couches présentation et domaine permettent de minimiser l'impact des changements dus aux évolutions dans les technologies liées à l'IHM et d'avoir une conception plus cohésive. Cependant, cette séparation requiert un respect de l'architecture par les développeurs et développeuses." #fig-avec_separation}
+```{.plantuml genurl="true" caption="La définition et la séparation des couches présentation et domaine permettent de minimiser l'impact des changements dus aux évolutions dans les technologies liées à l'IHM et d'avoir une conception plus cohésive. Cependant, cette séparation requiert un respect de l'architecture par les développeurs et développeuses." #fig-avec_separation}
 @startuml
 !include normal.pumlinclude
 hide empty members
@@ -233,7 +233,7 @@ La @fig-dssattaquerunpays est un exemple de DSS pour le cas d'utilisation *Attaq
 Dans cet exemple, il y a quatre opérations système (avec les arguments de type primitif, sauf la dernière qui n'a aucun argument) et un message de retour.
 Vous pouvez noter tous les détails (titre, arguments, types).
 
-```{.plantuml #fig-dssattaquerunpays caption="Diagramme de séquence système pour le scénario *Attaquer un pays*."  }
+```{.plantuml genurl="true" #fig-dssattaquerunpays caption="Diagramme de séquence système pour le scénario *Attaquer un pays*."  }
 @startuml
 !include ecriture.pumlinclude
 scale 1
@@ -259,7 +259,7 @@ Le "Système" est modélisé comme une boîte noire.
 Par exemple, sur la @fig-dssabstraction, il y a l'acteur, le Système et une opération système.
 On ne rentre pas dans les détails, bien qu'ils existent et soient importants.
 
-```{.plantuml #fig-dssabstraction caption="Une opération système dans un DSS. C'est une abstraction."  }
+```{.plantuml genurl="true" #fig-dssabstraction caption="Une opération système dans un DSS. C'est une abstraction."  }
 @startuml
 !include ecriture.pumlinclude
 scale 1.3
@@ -279,7 +279,7 @@ Par exemple, la @fig-dssdetails rentre dans les détails de ce qui se passe rée
 - Un routeur transforme l'appel REST en une opération système envoyée à un contrôleur GRASP. Notez que c'est un **objet du domaine qui reçoit l'opération système** -- c'est l'essence du principe GRASP Contrôleur;
 - Le contrôleur GRASP dirige la suite, selon la solution proposée dans la réalisation de cas d'utilisation (RDCU).
 
-```{.plantuml #fig-dssdetails caption="Une opération système est envoyée par la couche présentation et elle est reçue dans la couche domaine par son contrôleur GRASP. Ceci est un exemple avec un navigateur Web, mais d'autres possibilités existent pour la couche présentation."}
+```{.plantuml genurl="true" #fig-dssdetails caption="Une opération système est envoyée par la couche présentation et elle est reçue dans la couche domaine par son contrôleur GRASP. Ceci est un exemple avec un navigateur Web, mais d'autres possibilités existent pour la couche présentation."}
 @startuml
 !include normal.pumlinclude
 scale 1

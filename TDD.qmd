@@ -35,7 +35,7 @@ L'exécution de tests peut même être faite à chaque *commit* du code dans un 
 
 Il est possible de mesurer la [couverture de code](https://fr.wikipedia.org/wiki/Couverture_de_code)\ {{< fa brands wikipedia-w >}}\ atteinte par les tests (mais ce sujet sort du cadre de la matière de ce manuel).
 
-```{.plantuml #fig-TDD_states caption="États du développement piloté par les tests." }
+```{.plantuml genurl="true" #fig-TDD_states caption="États du développement piloté par les tests." }
 @startuml
 !include normal.pumlinclude
 hide empty description
