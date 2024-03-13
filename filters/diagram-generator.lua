@@ -78,7 +78,13 @@ elseif FORMAT == "pptx" then
 elseif FORMAT == "rtf" then
   filetype = "png"
   mimetype = "image/png"
+elseif FORMAT == "revealjs" then
+  filetype = "svg"
+  mimetype = "image/svg"
 end
+
+-- The generated URL for PlantUML images
+local generated_url = ""
 
 -- Execute the meta data table to determine the paths. This function
 -- must be called first to get the desired path. If one of these
@@ -310,6 +316,10 @@ local function asymptote(code, filetype)
   end)
 end
 
+function temp_filename()
+  return os.time() .. math.random(1000) .. ".txt"
+end
+
 -- Executes each document's code block to find matching code blocks:
 function CodeBlock(block)
   -- Using a table with all known generators i.e. converters:
@@ -326,6 +336,36 @@ function CodeBlock(block)
   local img_converter = converters[block.classes[1]]
   if not img_converter then
     return nil
+  end
+
+  -- Check if genurl attribute exists and is true, and if the converter is plantuml
+  local genurl = block.attributes["genurl"]
+  if genurl and img_converter == plantuml then
+    -- create a temporary file to store the plantuml code
+    local temp_file = temp_filename()
+    -- Write the block's content to the temporary file
+    local file = io.open(temp_file, "w")
+    file:write(block.text)
+    file:close()
+
+    local args = {"-jar", plantuml_path, "-encodeurl", "-charset", "UTF8", temp_file}
+    local text = ""
+    
+    local ok, encoded_source = pcall(pandoc.pipe, java_path, args, text)
+
+    if not ok or not encoded_source then
+      error('Error running plantuml: no output')
+    end
+
+    -- strip cr/lf from encoded source ending if it's there
+    encoded_source = string.gsub(encoded_source, "[\r\n]+$", "")
+
+    -- Create the URL
+    generated_url = "https://www.plantuml.com/plantuml/uml/" .. encoded_source
+
+    -- Delete the temporary file
+    os.remove(temp_file)
+
   end
 
   -- Call the correct converter which belongs to the used class:
@@ -355,6 +395,13 @@ function CodeBlock(block)
   local caption = block.attributes.caption
     and pandoc.read(block.attributes.caption).blocks[1].content
     or {}
+
+  -- append the generated URL (as a link) to the caption (which is a table value)
+  if genurl and img_converter == plantuml then
+    -- insert a blank space to separate the caption from the URL
+    table.insert(caption, pandoc.Str(" "))
+    table.insert(caption, pandoc.Link("(PlantUML)", generated_url))
+  end
 
   -- A non-empty caption means that this image is a figure. We have to
   -- set the image title to "fig:" for pandoc to treat it as such.
