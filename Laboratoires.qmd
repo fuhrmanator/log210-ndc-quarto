@@ -147,7 +147,77 @@ Il n'est pas nécessaire de tout comprendre pour commencer.
 Il existe un outil nommé `gitinspector` qui peut indiquer le niveau d'implication des membres de l'équipe dans un projet sur GitHub.
 Étant donné que les laboratoires de ce manuel utilisent un squelette avec les tests, les fichiers `src` de TypeScript, les modèles PlantUML et le README.md, il est possible d'utiliser `gitinspector` pour voir des rapports de contribution sur chacun des volets.
 
-Pour faciliter l'utilisation de l'outil, le professeur Fuhrman a créé un [script en bash](https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853). Voici comment l'utiliser:
+Pour faciliter l'utilisation de l'outil, le professeur Fuhrman a créé un [script en bash](https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853). 
+
+<details>
+<summary><b>Voici comment l'utiliser sur Windows</b></summary>
+- Installer `gitinspector` dans npm avec la commande `npm install -g gitinspector`;
+- Télécharger le script bash du professeur Fuhrman:
+```bash
+git clone https://gist.github.com/fuhrmanator/b5b098470e7ec4536c35ca1ce3592853 contributions
+```
+```
+Cloning into 'contributions'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 10 (delta 3), reused 7 (delta 2), pack-reused 0
+Unpacking objects: 100% (10/10), 2.02 KiB | 82.00 KiB/s, done.
+```
+
+Les scripts .sh sont écrits pour être exécutés dans un environnement Unix/Linux. Il est nécessaire d'utiliser WSL (Windows Subsystem for Linux) pour exécuter des lignes de commande qui ne sont pas nativement disponibles sur Windows.
+Ce lien indique les instructions pour installer WSL: [Comment installer Linux sur Windows avec WSL](https://learn.microsoft.com/fr-ca/windows/wsl/install)
+
+Pour exécuter le fichier contributions.sh avec WSL (Windows Subsystem for Linux), vous devez suivre ces étapes :
+
+1. Ouvrez le terminal intégré de Visual Studio Code.
+2. Changez le terminal par défaut en WSL en tapant simplement "wsl" dans le terminal.
+3. Naviguez jusqu'au répertoire contenant le fichier contributions.sh en utilisant la commande cd.
+4. Exécutez le fichier contributions.sh en utilisant la commande ./.
+```bash
+./contributions.sh ../
+```
+
+**Q: En exécutant le script, j'ai ce message d'erreur: "exec: python: not found"**
+
+**R:** Ce message d'erreur indique que le script tente d'exécuter python, mais ne le trouve pas dans le chemin d'accès système. Cela peut se produire si Python n'est pas installé ou si le chemin vers l'interpréteur Python n'est pas correctement configuré.
+
+Pour résoudre ce problème, vous pouvez installer Python et vous assurer qu'il est correctement ajouté à votre PATH. Voici comment vous pouvez faire cela dans votre terminal WSL :
+
+```bash
+# Mettre à jour la liste des paquets disponibles
+sudo apt-get update
+
+# Installer Python
+sudo apt-get install python3
+
+# Créer un lien symbolique pour python
+sudo ln -s /usr/bin/python3 /usr/bin/python
+```
+
+**Q: En exécutant le script, j'ai ce message d'erreur: "TypeError: 'bool' object is not iterable"**
+
+**R:** Gitinspector n'est malheureusement pas compatible avec les versions récentes de Python (>3.7). Un [issue](https://github.com/ejwa/gitinspector/issues/226) a été créé dans ce projet.
+
+Une solution simple est de modifier le fichier gitinspector/localization.py. Sous Windows, le fichier se trouve probablement dans:
+
+```
+C:\User\[Votre nom d'utilisateur]\AppData\Roaming\npm\node_modules\gitinspector\gitinspector\localization.py
+```
+
+et remplacer aux lignes 71 et 106
+```bash
+install(True)
+```
+par
+```bash
+install(None)
+```
+
+</details>
+
+<details>
+<summary><b>Voici comment l'utiliser sur Mac ou Linux</b></summary>
 
 - Installer `gitinspector` dans npm avec la commande `npm install -g gitinspector`;
 - Télécharger le script:
@@ -178,6 +248,12 @@ ContributionsÉquipeDocs.html
 ContributionsÉquipeTypeScript.html
 ContributionsÉquipeViews.html
 ```
+
+</details>
+
+
+
+
 
 Les fichiers `.html` sont créés pour les contributions `Test`, `Modèles`, `Docs`, `TypeScript` et `Views`. Chaque rapport indique les contributions selon deux perspectives:
 
