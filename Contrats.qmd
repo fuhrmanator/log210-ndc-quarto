@@ -61,7 +61,7 @@ Si une opération n'effectue aucun de ces changements, comme une opération de l
 
 **2. Exprimez les postconditions au passé**
 
-Il est nécessaire de décrire les changements dans l'état du système après l'exécution de l'opération. Ce ne sont pas qui ont lieu ou qui doivent avoir lieu. L'utilisation d'expressions au passé tel que: "a été créé", "a été associé", "est ajusté" sont donc fréquentes.
+Il est nécessaire de décrire les changements dans l'état du système après l'exécution de l'opération. Ce ne sont pas qui ont lieu ou qui doivent avoir lieu. L'utilisation d'expressions au passé telles que: "a été créé", "a été associé", "est ajusté" sont donc fréquentes.
 
 **3. Rédigez des phrases courtes et concises**
 
