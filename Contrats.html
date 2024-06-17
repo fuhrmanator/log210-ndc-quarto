@@ -301,9 +301,10 @@ src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
    
   <ul>
   <li><a href="#les-contrats-en-bref" id="toc-les-contrats-en-bref" class="nav-link active" data-scroll-target="#les-contrats-en-bref"><span class="toc-section-number">8.1</span>  Les contrats en bref</a></li>
-  <li><a href="#sec-contrat_exemple" id="toc-sec-contrat_exemple" class="nav-link" data-scroll-target="#sec-contrat_exemple"><span class="toc-section-number">8.2</span>  Exemple&nbsp;: Contrats d’opération pour Attaquer un pays</a></li>
-  <li><a href="#feuille-de-référence" id="toc-feuille-de-référence" class="nav-link" data-scroll-target="#feuille-de-référence"><span class="toc-section-number">8.3</span>  Feuille de référence</a></li>
-  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">8.4</span>  Exercices</a></li>
+  <li><a href="#la-rédaction-des-postconditions" id="toc-la-rédaction-des-postconditions" class="nav-link" data-scroll-target="#la-rédaction-des-postconditions"><span class="toc-section-number">8.2</span>  La rédaction des postconditions</a></li>
+  <li><a href="#sec-contrat_exemple" id="toc-sec-contrat_exemple" class="nav-link" data-scroll-target="#sec-contrat_exemple"><span class="toc-section-number">8.3</span>  Exemple&nbsp;: Contrats d’opération pour Attaquer un pays</a></li>
+  <li><a href="#feuille-de-référence" id="toc-feuille-de-référence" class="nav-link" data-scroll-target="#feuille-de-référence"><span class="toc-section-number">8.4</span>  Feuille de référence</a></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices"><span class="toc-section-number">8.5</span>  Exercices</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fuhrmanator/log210-ndc-quarto/issues/new" class="toc-action">Signaler un problème</a></p></div></div></nav>
     </div>
@@ -360,8 +361,53 @@ Important
 <li>Quand on rédige les contrats, il est normal de découvrir dans le modèle du domaine des incohérences ou des éléments manquants. Il faut les corriger (il faut donc changer le MDD), car cela fait partie d’un processus itératif et évolutif.</li>
 </ul>
 </section>
-<section id="sec-contrat_exemple" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-contrat_exemple"><span class="header-section-number">8.2</span> Exemple&nbsp;: Contrats d’opération pour Attaquer un pays</h2>
+<section id="la-rédaction-des-postconditions" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="la-rédaction-des-postconditions"><span class="header-section-number">8.2</span> La rédaction des postconditions</h2>
+<p>Voici quelques consignes pour la rédaction des postconditions dans les contrats d’opération.</p>
+<p><strong>1. Les postconditions doivent décrire les effets de l’opération sur l’état du système.</strong></p>
+<p>Cela inclut les modifications apportées aux objets, la création ou la suppression d’objets, et les changements de relations entre les objets.</p>
+<p>Une postcondition doit donc décrire un des changements suivants&nbsp;:</p>
+<ul>
+<li>création (ou suppression) <span style="white-space:nowrap">d’instances ;</span></li>
+<li>modification des valeurs des <span style="white-space:nowrap">attributs ;</span></li>
+<li>formation (ou rupture) d’associations.</li>
+</ul>
+<p>Si une opération n’effectue aucun de ces changements, comme une opération de lecture ou d’affichage d’information, il n’y a donc pas de postcondition à indiquer. Il suffit alors d’écrire «&nbsp;Aucune&nbsp;» dans la section des postconditions.</p>
+<p><strong>2. Exprimez les postconditions au passé</strong></p>
+<p>Il est nécessaire de décrire les changements dans l’état du système après l’exécution de l’opération. Ce ne sont pas ceux qui ont lieu ou qui doivent avoir lieu. L’utilisation d’expressions au passé telles que&nbsp;: «&nbsp;a été créé&nbsp;», «&nbsp;a été associé&nbsp;», «&nbsp;est devenu&nbsp;» sont donc fréquentes.</p>
+<p><strong>3. Rédigez des phrases courtes et concises</strong></p>
+<p>Il est important de formuler des phrases courtes et concises, en se concentrant sur les changements essentiels de l’état du système sans ajouter d’informations superflues. Cela rend les postconditions plus faciles à vérifier lors des tests et de la validation des exigences. Chaque postcondition doit être traitée comme une assertion distincte pour assurer une meilleure clarté et précision.</p>
+<p><strong>4. Utiliser le vocabulaire du modèle du domaine dans les postconditions</strong></p>
+<p>Cela implique de parler des instances de classes conceptuelles, de leurs attributs et des associations entre ces classes. Par exemple, si le MDD possède une classe «&nbsp;Client&nbsp;», il ne faut pas utiliser le terme «&nbsp;Utilisateur&nbsp;» pour représenter cette classe dans une postcondition, même si un client pourrait être un utilisateur. Il est important de réutiliser les termes du MDD pour assurer la cohérence entre les différents documents de conception. Les postconditions seront utilisées par les développeurs pour concevoir et implémenter le système.</p>
+<div class="callout callout-style-default callout-tip callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le but est de garder un faible écart entre le modèle du monde réel (classes conceptuelles dans le MDD) et les solutions en programmation orientée objet (classes logicielles).</p>
+</div>
+</div>
+<p><strong>5. Utiliser des noms d’instances pour simplifier les références</strong></p>
+<p>Utiliser des noms d’instances dans les postconditions est utile pour simplifier les références et rendre les postconditions plus claires et précises.</p>
+<p>Par exemple, voici une première condition d’une opération&nbsp;:</p>
+<ul>
+<li><em>Une instance lar de LigneArticles a été créée.</em></li>
+</ul>
+<p>Le nom de l’instance lar est destiné à simplifier les références à cette nouvelle instance dans les autres postconditions.</p>
+<p>Les autres conditions peuvent donc être rédigées comme suit&nbsp;:</p>
+<ul>
+<li><em>lar.quantité est devenu la valeur du paramètre quantité.</em></li>
+<li><em>lar a été associé à la Vente en cours.</em></li>
+</ul>
+<p>En utilisant un nom d’instance spécifique, il devient facile de suivre et de comprendre les modifications apportées à cet objet particulier. Cela élimine les ambiguïtés sur quel objet est modifié.</p>
+</section>
+<section id="sec-contrat_exemple" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="sec-contrat_exemple"><span class="header-section-number">8.3</span> Exemple&nbsp;: Contrats d’opération pour Attaquer un pays</h2>
 <p>Voir la <a href="#fig-MDD-risk-objets">figure&nbsp;<span>8.2</span></a> pour les changements dans les objets du modèle du domaine correspondant aux postconditions.</p>
 <section id="attaquer-un-pays" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="attaquer-un-pays">Attaquer un pays</h3>
@@ -419,8 +465,8 @@ Important
 </section>
 </section>
 </section>
-<section id="feuille-de-référence" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="feuille-de-référence"><span class="header-section-number">8.3</span> Feuille de référence</h2>
+<section id="feuille-de-référence" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="feuille-de-référence"><span class="header-section-number">8.4</span> Feuille de référence</h2>
 <p>Pour faire des contrats, voici une démarche générale&nbsp;:</p>
 <ol type="1">
 <li>Faire un contrat pour chaque opération système.</li>
@@ -436,13 +482,13 @@ Important
 <li>Ne rien oublier. Marquer le MDD ou dessiner un diagramme d’objets, comme à la partie inférieure de la <a href="#fig-MDD-risk-objets">figure&nbsp;<span>8.2</span></a> si nécessaire.</li>
 </ol>
 </section>
-<section id="exercices" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="exercices"><span class="header-section-number">8.4</span> Exercices</h2>
+<section id="exercices" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="exercices"><span class="header-section-number">8.5</span> Exercices</h2>
 <div id="exr-contrat_Terminer_attaque" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 8.1 (<code>terminerAttaque()</code>) </strong></span>Rédigez le contrat d’opération pour <code>terminerAttaque()</code>. Il faut considérer les règles d’attaque (voir <a href="https://fr.wikihow.com/jouer-%C3%A0-Risk">la page de wikiHow</a>) et les cas où une attaque a réussi, c’est-à-dire que le <code>paysDéfenseur</code> change de Joueur (celui du <code>paysAttaquant</code>). Suivez les exemples de contrats d’opération présentés à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 8.1 (<code>terminerAttaque()</code>) </strong></span>Rédigez le contrat d’opération pour <code>terminerAttaque()</code>. Il faut considérer les règles d’attaque (voir <a href="https://fr.wikihow.com/jouer-%C3%A0-Risk">la page de wikiHow</a>) et les cas où une attaque a réussi, c’est-à-dire que le <code>paysDéfenseur</code> change de Joueur (celui du <code>paysAttaquant</code>). Suivez les exemples de contrats d’opération présentés à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.3</span></a>.</p>
 </div>
 <div id="exr-contrats-Traiter-vente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 8.2 (Contrats d’opération pour <em>Traiter une vente</em>) </strong></span>Rédigez <strong>un contrat d’opération pour chacune des opérations système</strong> dans le DSS (et qui doit être cohérent avec le MDD) de la <a href="Annexe_Cas_utilisation_Traiter_vente.html#sec-DSS_traiter_vente"><span>Section&nbsp;B.1</span></a>. Suivez les exemples de contrats d’opération à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercice 8.2 (Contrats d’opération pour <em>Traiter une vente</em>) </strong></span>Rédigez <strong>un contrat d’opération pour chacune des opérations système</strong> dans le DSS (et qui doit être cohérent avec le MDD) de la <a href="Annexe_Cas_utilisation_Traiter_vente.html#sec-DSS_traiter_vente"><span>Section&nbsp;B.1</span></a>. Suivez les exemples de contrats d’opération à la <a href="#sec-contrat_exemple"><span>Section&nbsp;8.3</span></a>.</p>
 </div>
 
 

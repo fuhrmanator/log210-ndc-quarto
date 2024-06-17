@@ -583,7 +583,7 @@ Mise en garde
 <ul>
 <li>S’il y a une agrégation entre les objets, il s’agit probablement d’une méthode <code>add()</code> sur l’objet qui agrège.</li>
 <li>S’il y a une association simple, il faut considérer la navigabilité de l’association. Est-ce qu’il faut pouvoir retrouver l’objet <em>a</em> à partir de l’objet <em>b</em>, ou <span style="white-space:nowrap">vice-versa ?</span> Il s’agira d’une méthode <code>setB(b)</code> sur l’objet <code>a</code> (pour trouver <em>b</em> à partir de <em>a</em>), etc.</li>
-<li>S’il faut former une association entre un objet et un autre «&nbsp;sur une base de correspondance avec&nbsp;» ou «&nbsp;correspondant à&nbsp;» un identifiant passé comme argument (voir les postconditions de l’exemple à la section <a href="Contrats.html#sec-contrat_exemple"><span>Section&nbsp;8.2</span></a>), alors il faut repérer le bon objet d’abord. Voir la section <a href="#sec-TransformerIDenObjets">Transformer identifiants en objets</a>.</li>
+<li>S’il faut former une association entre un objet et un autre «&nbsp;sur une base de correspondance avec&nbsp;» ou «&nbsp;correspondant à&nbsp;» un identifiant passé comme argument (voir les postconditions de l’exemple à la section <a href="Contrats.html#sec-contrat_exemple"><span>Section&nbsp;8.3</span></a>), alors il faut repérer le bon objet d’abord. Voir la section <a href="#sec-TransformerIDenObjets">Transformer identifiants en objets</a>.</li>
 </ul>
 <p>Dans la plupart des cas, la justification pour former une association est GRASP Expert, défini dans le <a href="GRASP.html#tbl-tableGRASP">tableau&nbsp;<span>6.1</span></a>. Il faut faire attention à la <a href="#sec-Visibilite">visibilité</a>&nbsp;<i class="fa-solid fa-low-vision" aria-label="low-vision"></i>.</p>
 </section>
