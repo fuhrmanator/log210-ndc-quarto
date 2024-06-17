@@ -80,9 +80,9 @@ Par exemple, voici une première condition d'une opération:
 
 Le nom de l’instance lar est destiné à simplifier les références à cette nouvelle instance dans les autres postconditions.
 
-Les autres conditions peuvent donc êre rédigés comme suit:
+Les autres conditions peuvent donc être rédigés comme suit:
 
-- *lar.quantité est modifié pour devenir la valeur du paramètre quantité.*
+- *lar.quantité est devenu la valeur du paramètre quantité.*
 - *lar a été associé à la Vente en cours.*
 
 En utilisant un nom d'instance spécifique, il devient facile de suivre et de comprendre les modifications apportées à cet objet particulier. Cela élimine les ambiguïtés sur quel objet est modifié.
