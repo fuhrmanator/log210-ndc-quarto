@@ -44,6 +44,49 @@ Voici les points importants pour la méthodologie enseignée dans le présent ma
 - Quand on rédige les contrats, il est normal de découvrir dans le modèle du domaine des incohérences ou des éléments manquants.
 Il faut les corriger (il faut donc changer le MDD), car cela fait partie d'un processus itératif et évolutif.
 
+## La rédaction des postconditions
+
+Voici quelques consignes pour la rédaction des postconditions dans les contrats d'opérations.
+
+**1. Les postconditions doivent décrire les effets de l'opération sur l'état du système.**
+
+Cela inclut les modifications apportées aux objets, la création ou la suppression d'objets, et les changements de relations entre les objets.
+
+Une postcondition doit donc décrire un des changements suivants:
+- création (ou suppression) d'instances;
+- modification des valeurs des attributs;
+- formation (ou rupture) d'associations.
+
+Si une opération n'effectue aucun de ces changements, comme une opération de lecture ou d'affichage d'information, il n'y a donc pas de postcondition à indiquer. Il suffit alors d'écrire "Aucune" dans la section des postconditions.
+
+**2. Exprimez les postconditions au passé**
+
+Il est nécessaire de décrire les changements dans l'état du système après l'exécution de l'opération. Ce ne sont pas qui ont lieu ou qui doivent avoir lieu. L'utilisation d'expressions au passé tels que: "a été créé", "a été associé", "est ajusté" sont donc fréquentes.
+
+**3. Rédigez des phrases courtes et concises**
+
+Il est important de formuler des phrases courtes et concises, en se concentrant sur les changements essentiels de l'état du système sans ajouter d’informations superflues. Cela rend les postconditions plus faciles à vérifier lors des tests et de la validation des exigences. Chaque postcondition doit être traitée comme une assertion distincte pour assurer une meilleure clarté et précision.
+
+**4. Utiliser le vocabulaire du modèle du domaine dans les postconditions**
+
+Cela implique de parler des instances de classes conceptuelles, de leurs attributs et des associations entre ces classes. Par exemple, si le MDD possède une classe "Client", il ne faut pas utiliser le terme "Utilisateur" pour représenter cette classe dans une postcondition, même si un client pourrait être un utilisateur. Il est important de réutiliser les termes du MDD pour assurer la cohérence entre les différents documents de conception.
+
+**5. Utiliser des noms d'instances pour simplifier les références**
+Utiliser des noms d'instances dans les postconditions est utile pour simplifier les références et rendre les postconditions plus claires et précises. 
+
+Par exemple, voici une première condition d'une opération:
+
+- *Une instance lar de LigneArticles a été créée.*
+
+Le nom de l’instance lar est destiné à simplifier les références à cette nouvelle instance dans les autres postconditions.
+
+Les autres conditions peuvent donc êre rédigés comme suit:
+
+- *lar.quantité est modifié pour devenir la valeur du paramètre quantité.*
+- *lar a été associé à la Vente en cours.*
+
+En utilisant un nom d'instance spécifique, il devient facile de suivre et de comprendre les modifications apportées à cet objet particulier. Cela élimine les ambiguïtés sur quel objet est modifié.
+
 ## Exemple: Contrats d'opération pour Attaquer un pays {#sec-contrat_exemple}
 
 Voir la @fig-MDD-risk-objets pour les changements dans les objets du modèle du domaine correspondant aux postconditions.
