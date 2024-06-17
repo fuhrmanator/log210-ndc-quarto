@@ -61,7 +61,7 @@ Si une opération n'effectue aucun de ces changements, comme une opération de l
 
 **2. Exprimez les postconditions au passé**
 
-Il est nécessaire de décrire les changements dans l'état du système après l'exécution de l'opération. Ce ne sont pas qui ont lieu ou qui doivent avoir lieu. L'utilisation d'expressions au passé tels que: "a été créé", "a été associé", "est ajusté" sont donc fréquentes.
+Il est nécessaire de décrire les changements dans l'état du système après l'exécution de l'opération. Ce ne sont pas qui ont lieu ou qui doivent avoir lieu. L'utilisation d'expressions au passé tel que: "a été créé", "a été associé", "est ajusté" sont donc fréquentes.
 
 **3. Rédigez des phrases courtes et concises**
 
@@ -80,7 +80,7 @@ Par exemple, voici une première condition d'une opération:
 
 Le nom de l’instance lar est destiné à simplifier les références à cette nouvelle instance dans les autres postconditions.
 
-Les autres conditions peuvent donc être rédigés comme suit:
+Les autres conditions peuvent donc être rédigées comme suit:
 
 - *lar.quantité est devenu la valeur du paramètre quantité.*
 - *lar a été associé à la Vente en cours.*
