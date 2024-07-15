@@ -2,8 +2,11 @@
 
 Les MDD sont expliqués en détail dans le chapitre 9\ {{< fa solid book >}}, mais voici des points importants:
 
+- Un **modèle du domaine** est un modèle conceptuel qui représente les concepts importants, modélisés comme classes conceptuelles, du domaine de l'application.
+- Une classe conceptuelle selon Craig Larman est une abstraction qui aide à modéliser et à comprendre les entités et leurs propriétés dans un domaine spécifique, fournissant une base pour la conception ultérieure du système.
+- Il peut y avoir des relations entre les classes conceptuelles, appelées **associations**.
 - Les classes conceptuelles ne sont pas des classes logicielles. Ainsi, selon la méthodologie de Larman, *elles n'ont pas de méthodes*.
-- Les classes ont des noms commençant avec une lettre majuscule, par exemple `Joueur`, et elles ne sont jamais au pluriel; par exemple, une classe ne peut pas prendre le nom ~~`Joueurs`~~.
+- Les classes conceptuelles ont des noms commençant avec une lettre majuscule, par exemple `Joueur`, et elles ne sont jamais au pluriel; par exemple, une classe ne peut pas prendre le nom ~~`Joueurs`~~.
 
 ## Classes conceptuelles
 
