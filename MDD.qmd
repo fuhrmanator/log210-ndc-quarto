@@ -338,8 +338,9 @@ Voici un résumé des points importants traités dans ce chapitre, dont quelques
   - il existe un assemblage logique ou physique évident entre le tout et les parties (on ne peut construire un Continent sans les Pays);
   - certaines propriétés du composite, comme son emplacement, s'étendent aux composants;
   - les opérations que l'on peut appliquer au composite, telles que destruction, déplacement et enregistrement, se propagent aux composants.
-- Généralisation/spécialisation [voir @craig_uml_2005 pour les exemples et les directives], notamment la règle des 100% (conformité à la définition) et la règle "est-un" (appartenance à l'ensemble).
+- Généralisation et spécialisation (super classes conceptuelles et sous-classes conceptuelles) [voir @craig_uml_2005 pour les exemples et les directives], notamment la règle des 100% (conformité à la définition) et la règle "est-un" (appartenance à l'ensemble).
 - Attribut dérivé, par exemple, `/nbPaysOccupés` dans la classe Joueur est un attribut dérivé de l'association entre Joueur et Pays (@fig-MDD-attribut-derive).
+- Classes conceptuelles abstraites, dont une instance n'existe pas dans la vraie vie, mais qui servent à regrouper des classes conceptuelles similaires.
 - Hiérarchies dans un MDD et héritage dans l'implémentation.
 - Noms de rôles.
 - Organisation des classes conceptuelles en packages (surtout lorsque le MDD contient un nombre important de classes conceptuelles).
