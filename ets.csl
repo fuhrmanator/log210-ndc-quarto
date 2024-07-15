@@ -124,23 +124,28 @@
           <if variable="DOI">
             <text variable="DOI" prefix="https://doi.org/"/>
           </if>
-          <else>
+            <else>
             <choose>
               <if type="webpage">
-                <group delimiter=" ">
-                  <text term="retrieved" text-case="capitalize-first" suffix=" "/>
-                  <text term="from"/>
-                  <text variable="URL"/>
-                </group>
+              <group delimiter=" ">
+                <text term="retrieved" text-case="capitalize-first" suffix=" ">
+                <date variable="URLDATE" form="text" date-parts="day month year" prefix="le "/>
+                </text>
+                <text term="from"/>
+                <text variable="URL"/>
+              </group>
               </if>
               <else>
-                <group>
-                  <text term="retrieved" text-case="capitalize-first" suffix=" "/>
-                  <text term="from" suffix=" "/>
-                  <text variable="URL"/>
-                </group>
+              <group>
+                <text term="retrieved" text-case="capitalize-first" suffix=" ">
+                <date variable="URLDATE" form="text" date-parts="day month year" prefix="le "/>
+                </text>
+                <text term="from" suffix=" "/>
+                <text variable="URL"/>
+              </group>
               </else>
             </choose>
+            </else>
           </else>
         </choose>
       </else>
