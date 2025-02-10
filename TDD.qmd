@@ -140,7 +140,7 @@ Pour respecter la philosophie de *petits pas,* il vaut mieux:
 #### Kata pour FizzBuzz
 
 Les étapes sont simples et précises.
-Il s'agit de créer une classe ayant une méthode acceptant un entier et retournant une valeur selon les exigences de FizzBuzz décrites plus haut.
+Il s'agit de créer une classe ayant une méthode acceptant un entier et retournant une valeur selon les exigences de FizzBuzz décrites plus haut, tout en supportant de nouvelles exigences (point 9) dans le cas où un nombre contient un chiffre particulier.
 
 1. Un argument de 1 retourne `1`.
 2. Un argument de 2 retourne `2`.
