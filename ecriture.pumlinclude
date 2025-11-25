@@ -7,4 +7,4 @@ skinparam backgroundcolor transparent
 'skinparam defaultfontname Ink Journal
 skinparam defaultfontname xkcd Script
 'skinparam defaultfontname Petters
-skinparam handwritten true
+option handwritten true
